@@ -1,0 +1,24 @@
+; 40207.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define BOOMERANG_N      13)
+(define CHARGED_N        10)
+(define DARKEDGE_N       14)
+(define EMPOWER_N         4)
+(define ENCHANTED_N       9)
+(define FROZEN_N          7)
+(define HASTEN_N          3)
+(define INVISIBLE_N       1)
+(define INVULNERABLE_N    8)
+(define JAIL_N           16)
+(define MYSTICLOCK_N     11)
+(define POISON_N          2)
+(define SEEINVISIBLE_N   12)
+(define SLOW_N            5)
+(define VENOM_N          15)
+(define WEAK_N            6)
+
+; CASES
+

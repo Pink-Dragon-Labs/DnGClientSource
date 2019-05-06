@@ -1,0 +1,30 @@
+[Windows]
+title=The Realm World Editor
+wwidth=640
+asyncCheckFreq=60
+enableMidi=True
+;monodisp=1
+firstRoom 10002
+
+pic             =m:\games\netadv\art\newview;m:\games\netadv\prog\wrldedit;m:\games\netadv\art\pic;m:\games\netadv\art\dungeon
+;pic             =m:\games\netadv\prog\wrldedit;m:\games\netadv\art\pic
+bitmap          =m:\games\netadv\prog\wrldedit;m:\games\netadv\art\pic
+view            =m:\games\netadv\prog\wrldedit;m:\games\netadv\art\newview;m:\games\netadv\prog\wrldedit;m:\games\netadv\art\view;m:\games\netadv\art\dungeon
+;view            =m:\games\netadv\prog\wrldedit;m:\games\netadv\art\view
+sound           =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\sound
+audio           =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\sound
+patch           =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\sound
+palette         =m:\games\netadv\prog\wrldedit;m:\games\netadv\art\view;m:\games\netadv\art\newview
+vocab           =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\module;m:\games\netadv\scisys32
+script          =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\module;m:\games\netadv\scisys32
+heap            =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\module;m:\games\netadv\scisys32
+text            =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\module;m:\games\netadv\scisys32
+font            =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\module;m:\games\netadv\art\font
+message         =m:\games\netadv\prog\wrldedit;m:\games\netadv\prog\msg;m:\games\netadv\scisys32
+data				 =m:\games\netadv\prog\data
+mouse           = YES
+minHunk         = 1k
+playerNum       = 1
+soundDir = m:\games\netadv\prog\sound
+
+

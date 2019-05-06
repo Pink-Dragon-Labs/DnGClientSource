@@ -1,0 +1,17 @@
+; 103.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define BEACH_N           1)
+(define LAKE1_N           5)
+(define LAKE2_N           6)
+(define LAKE3_N           7)
+(define LAKE4_N           8)
+(define LAKE_BACK_N       2)
+(define LAKE_FRONT_N      3)
+(define LAKE_SIDE_N       4)
+(define SPRING_N          9)
+
+; CASES
+

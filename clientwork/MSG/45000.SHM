@@ -1,0 +1,21 @@
+; 45000.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define EXIT_H            9)
+(define MAIN_H            7)
+(define NEXT_ATTRIB       4)
+(define NEXT_BIO          6)
+(define NEXT_MAKE         8)
+(define NEXT_PROF        13)
+(define NEXT_SKILL       15)
+(define PREV_ATTRIB       5)
+(define PREV_BIO         16)
+(define PREV_MAKE         2)
+(define PREV_PROF        17)
+(define PREV_SKILL       14)
+(define SAVE_H            1)
+
+; CASES
+

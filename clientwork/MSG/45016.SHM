@@ -1,0 +1,12 @@
+; 45016.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ADVENTURER        1)
+(define THIEF             4)
+(define WARRIOR           2)
+(define WIZARD            3)
+
+; CASES
+

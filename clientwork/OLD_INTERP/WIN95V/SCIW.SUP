@@ -1,0 +1,7 @@
+//SUPPRESSIONPROJ:sciw
+//ENABLE:Yes
+!include RTL.SUP
+ignore resource_leak(19,0) malloc in everywhere 
+ignore resource_leak(19,0) realloc in everywhere 
+ignore resource_leak(19,0) strdup in everywhere 
+

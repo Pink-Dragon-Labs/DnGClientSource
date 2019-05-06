@@ -1,0 +1,16 @@
+; 350.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define BLANKET_N         3)
+(define CANDLE_HLD_N      8)
+(define CANDLE_N          7)
+(define COAT_HOOK_N       1)
+(define COAT_RACK_N       2)
+(define MATTRESS_N        4)
+(define PILLOW_N          5)
+(define SHELF_N           6)
+
+; CASES
+

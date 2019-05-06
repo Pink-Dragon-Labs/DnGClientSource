@@ -1,0 +1,163 @@
+#ifndef POLYGON_HPP
+#define POLYGON_HPP
+
+// HOOK
+//#define SHOWMERGE
+
+#include "plane.hpp"
+#include "point.hpp"
+#include "list.hpp"
+
+#ifdef AVOIDPATH
+	#define BASECODE
+#endif
+
+#ifdef MERGEPOLYGONS
+	#define BASECODE
+#endif
+
+class MemID;
+
+class	SOL_Polygon
+{
+public:
+	SCI_Point*  polyPoints; // points of polygon
+   uchar       type;       // polygon type
+	uchar	      info;		   // bit flag info	
+   int         n;          // number of nodes in polygon
+};
+
+class PolyNode
+{
+public:
+   PolyNode*   next;		// pointer to next path in list
+   PolyNode* 	prev;		// pointer to previous path in list
+   SCI_Point   I1;		// intersection nearest to A
+   SCI_Point   I2;		// intersection nearest to B
+   int         d;       // direction to travel on polygon
+   int         n1;      // first node encountered when traversing polygon
+   int         n2;      // last node encountered when traversing polygon
+   SCI_Point*  poly;    // points to polygon
+   int         n;       // number of nodes in polygon
+   int         i;       // index into polylist for this polygon
+
+
+   PolyNode(SCI_Point theI1,
+            SCI_Point theI2,
+            int theD,
+            int theN1,
+            int theN2,
+            SCI_Point* thePoints,
+            int theN)
+	{
+      I1 = theI1;
+      I2 = theI2;
+      d = theD;
+      n1 = theN1;
+      n2 = theN2;
+      poly = thePoints;
+      n = theN;
+      next = 0;
+      prev = 0;
+   }
+};
+
+class	PolyPatch
+{
+public:
+   int         P_i;     // Intersection node of given polygon
+	int      	Q_i;		// start intersection node of patch loop
+	SCI_Point   P_U;		// start intersection point of patch loop
+   int         P_j;     // end intersection node of given polygon
+   int         Q_j;     // end intersection node of patch loop
+   SCI_Point   Q_U;     // end intersection point of patch loop
+	int			deleteIt;
+};
+
+#define sign(x) (x>0 ? 1:x<0 ? -1:0)
+#define signF(x) (x>0.0 ? 1.0:x<0.0 ? -1.0:0.0)
+#define ENDOFPATH    0x7777
+#define ENDOFPATHF   7777.0
+#define NOINTERSECT  -1
+#define INTERSECT    1
+#define COLINEAR     0
+#define INTERSECTA   2
+#define INTERSECTB   4
+#define INTERSECTC   8
+#define INTERSECTD   16
+#define INTERSECTI   32
+#define MAXPOLYGONS  100 	
+#define MAXPOLYPATH  250
+
+/* Types of polygons */
+#define TAP 	0  // Total access polygon
+#define NAP 	1  // Near point access polygon
+#define BAP 	2  // Barred access polygon
+#define CAP 	3  // Contained accessable polygon
+#define MERGED 4  // Merge this barred access polygon
+
+#define MAXOPTIMIZEDNODES 3
+// allows 1 x and/or y delta error
+// Used to test for line segment intersections being at the end points
+#define CLOSETOLINE        2
+// Used to remove duplicate points
+#define CLOSETOF           1.00
+// Used to push intersection points external to polygons
+#define PUSHEXTERNAL       0.0001
+
+// Prototypes
+// The three main routines
+MemID GetPath(SCI_Point& A,SCI_Point& B,SOL_Polygon* polylist,int opt,SCI_Point& planeDim);
+int   PointInterior(SCI_Point& M,SCI_Point* polygon,int n);
+MemID MergePoly(SCI_Point* polygon,SOL_Polygon* polylist);
+
+#ifdef FLOATINGPOINT
+MemID       BuildPolygonListF(SOL_ListID theList,int listSize);
+int         IntersectSegmentsF(FPoint& A,FPoint& B,FPoint& C,FPoint& D,FPoint* intersection,Boolean external = False);
+Boolean     PointInteriorF(FPoint& M,FPoint* polygon,int n);
+
+enum {NotContained,PContainsQ,QContainsP};
+int         PolyIsInPolyF(FPoint* P,int Ppoints,FPoint* Q,int Qpoints);
+
+void        RemoveColinearLinesF(FPoint* P,int* n);
+void        RemoveDuplicatePointsF(FPoint* P,int* n);
+#else
+void        RemoveDuplicatePoints(SCI_Point* P,int* n);
+#endif
+
+void			AddPolygon(MemID polyListID,SCI_Point* points,int size,uchar type);
+void        AvoidPath(SCI_Point&,SCI_Point&,SOL_Polygon*,int,SCI_Point*);
+PolyNode*   AvoidPolygons(SCI_Point&,SCI_Point&,SOL_Polygon*);
+MemID       BuildPolygonList(SOL_ListID,int);
+MemID       CopyPath(SCI_Point*);
+void        DeletePolygon(SOL_Polygon*,int);
+int         DistanceEstimate(SCI_Point&,SCI_Point&,Boolean*);
+Boolean     Dominates(PolyPatch&,PolyPatch&,SCI_Point*);
+void        EndPath(SCI_Point&,SCI_Point*);
+void        FreeNodePath(PolyNode*);
+int         GetPolyDirections(PolyNode*);
+int         GetPolyDistance(SCI_Point*);
+int         IntersectPolygon(SCI_Point&,SCI_Point&,SCI_Point*,int,SCI_Point*,SCI_Point*,int*,int*);
+int         IntersectSegments(SCI_Point&,SCI_Point&,SCI_Point&,SCI_Point&,SCI_Point*);
+void        InvertPolygon(SCI_Point*,int);
+int         LineOnPlaneEdge(SCI_Point&,SCI_Point&);
+MemID       MergePolygons(SCI_Point*,int,SOL_Polygon*);
+void        MergePolygon(SCI_Point*,int,SOL_Polygon&);
+int         NearPoint(SCI_Point&,SCI_Point*,int,SCI_Point*,Boolean);
+int         NodeTest(SCI_Point&,SCI_Point&,SCI_Point&,SCI_Point&);
+void        OptimizePath(SCI_Point&,SCI_Point&,SCI_Point*,PolyNode*,SOL_Polygon*,int);
+Boolean     PatchNode(PolyPatch&,int,SCI_Point*);
+int         PolygonPath(SCI_Point&,SCI_Point&,SCI_Point*,int,SCI_Point*,SCI_Point*,int*,int*);
+void        ReducePolygonList(SOL_Polygon*,PolyNode*);
+void        RemoveColinearLines(SCI_Point*,int*);
+void        RemoveNode(SOL_Polygon*,int);
+void        SetPolyDirections(PolyNode*,int,int);
+void        StartPath(SCI_Point&,SCI_Point*);
+Boolean     TestClockwise(SCI_Point*,int);
+int         NodeDistance(int,int,int,SCI_Point*,int,SCI_Point&,SCI_Point&,Boolean*);
+
+#ifdef SHOWMERGE
+   extern SOL_Plane* polyPlane;
+#endif
+
+#endif

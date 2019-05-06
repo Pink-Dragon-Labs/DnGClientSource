@@ -1,0 +1,45 @@
+; 201.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define BEAM2_VERT_N      3)
+(define BEAM_HRZ_N        1)
+(define BEAM_VERT_N       2)
+(define BRICK_CRACK_N     4)
+(define CRACK_BRICKS_N   10)
+(define FOUNTAIN_WALL_N   6)
+(define GARGOYLE_N        7)
+(define RUIN_BEAM_N       8)
+(define RUIN_BRICKS_N     9)
+(define RUIN_BUSH2_N     36)
+(define RUIN_BUSH_N      35)
+(define RUIN_CRACK_N     11)
+(define RUIN_EAVES_N     12)
+(define RUIN_ROOF_N      13)
+(define RUIN_RUBBLE_N    14)
+(define RUIN_SCORCH_N     5)
+(define RUIN_TREE2_N     34)
+(define RUIN_TREE_N      33)
+(define RUIN_TWN_WL_N    15)
+(define RUIN_WALL_N      16)
+(define RUIN_WINDOW_N    17)
+(define SIGN_ACAD_N      18)
+(define SIGN_ARMOR_N     19)
+(define SIGN_BOOK_N      20)
+(define SIGN_CHAPEL_N    37)
+(define SIGN_CLOTHES_N   21)
+(define SIGN_DRAGON_N    22)
+(define SIGN_FOOD_N      23)
+(define SIGN_FRAME_N     24)
+(define SIGN_LADY_N      25)
+(define SIGN_LION_N      26)
+(define SIGN_MERMAID_N   27)
+(define SIGN_N           28)
+(define SIGN_POTION_N    29)
+(define SIGN_SWAN_N      30)
+(define SIGN_TAVERN_N    31)
+(define SIGN_TEMPLE_N    32)
+
+; CASES
+

@@ -1,0 +1,26 @@
+Watcom Make Version 11.0
+Copyright by Sybase, Inc., and its subsidiaries, 1988, 1997.
+All rights reserved.  Watcom is a trademark of Sybase, Inc.
+Current system time:  Thursday 10-15-98 5:21:45 pm
+	wpp386 /dWIN /dWIN32S /zW /4s /j /s /zp4 /ox /hc /fh /fhq /bt=NT /r /d1 /dHR /dNW ..\networkw.cpp
+Watcom C++32 Optimizing Compiler  Version 11.0 
+Copyright by Sybase, Inc., and its subsidiaries, 1989, 1997.
+All rights reserved.  Watcom is a trademark of Sybase, Inc.
+..\networkw.cpp(576): Warning! W665: col(78) temporary object used to initialize a non-constant reference 
+..\networkw.cpp(576): Note! N630: col(78) source conversion type is "MemID (lvalue)" 
+..\networkw.cpp(576): Note! N631: col(78) target conversion type is "MemID (lvalue)" 
+..\networkw.cpp: 649 lines, included 118483, 1 warning, no errors
+	wlink name sciw system nt_win  		debug codeview file {hotkey.obj arglist.obj array.obj asm2cpp.obj bufferd.obj bufferw.obj breakpt.obj celasm.obj celobj.obj celobj1.obj celobj2.obj celobja.obj config.obj criterr.obj criterrw.obj cursorw.obj dcomp.obj debug.obj debugdsp.obj debugmnu.obj dialog.obj dos.obj drawlist.obj event.obj eventw.obj except.obj font.obj fonti.obj graph.obj graphmgr.obj graphmw.obj info.obj integ.obj intrptw.obj kbdmgr.obj kbdmgrw.obj kbdw.obj kernel.obj language.obj line.obj list.obj longint.obj lzss.obj magnify.obj math.obj memid.obj memmgr.obj memmgre.obj memmgrw.obj memtype.obj message.obj motion.obj mouse.obj moview.obj msg.obj msgw.obj networkw.obj new.obj newroom.obj object.obj packdata.obj palette.obj palmgri.obj palmgrt.obj palmgrw.obj picture.obj plane.obj platfrmw.obj plist.obj pmachine.obj polygon.obj polyfuse.obj ratio.obj rect.obj rectlist.obj remap.obj resource.obj restype.obj sci.obj screen.obj script.obj sendstac.obj shiftpal.obj shwstyle.obj si.obj silist.obj sound.obj stampver.obj string.obj table.obj textid.obj time.obj timew.obj vocab.obj windll.obj window.obj winfuncs.obj mousew.obj sciw.obj sciwin.obj winthunk.obj} library mss32.lib
+WATCOM Linker Version 11.0
+Copyright by Sybase, Inc., and its subsidiaries, 1985, 1997.
+All rights reserved.  Watcom is a trademark of Sybase, Inc.
+loading object files
+searching libraries
+creating a Windows NT windowed executable
+	cvpack sciw
+Watcom (R) CV4 Symbolic Debugging Information Compactor Version 1.00
+Copyright (c) Watcom International Corp. 1995.  All rights reserved.
+
+	dbg2map sciw.exe
+	del ._
+

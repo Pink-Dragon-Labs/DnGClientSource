@@ -1,0 +1,190 @@
+// memid.hpp
+
+#ifndef MEMID_HPP
+#define MEMID_HPP
+
+#include <string.h>
+
+#ifndef MEMMGR_HPP
+#include "memmgr.hpp"
+#endif
+
+class MemID {
+public:
+	MemID() : handle(0)
+	{
+	}
+
+	MemID(const MemID& id) : handle(id.handle)
+	{
+	}
+	
+	MemID(SOL_Handle h) : handle(h)
+	{
+	}
+
+	MemAttrs	Attrs() const;
+	void		Clear() const;
+	void		Critical(Bool = True) const;
+	void		Fill(uchar) const;
+
+	void Free()
+	{
+		if (handle) {
+			memMgr->Free(handle);
+			handle = 0;
+		}
+	}
+
+	void Get(MemType type, size_t size, MemAttrs a = MOVEABLE,
+				unsigned num = 0, MemClient* client = 0, char initChar = 0,
+				ReservedHandle h = IllegalHandle)
+	{
+		handle = memMgr->Alloc(type | a, size, num, client, initChar, h);
+	}
+
+	void Get(MemType type, size_t size, ReservedHandle h, MemAttrs a = 0)
+	{
+		Get(type, size, a | PERSIST, 0, 0, 0, h);
+	}
+
+	void Get(MemType type, MemID id, size_t ofs, size_t size,
+				MemAttrs a = MOVEABLE)
+	{
+		Get(type, size, a);
+		memcpy(**this, &id[ofs], size);
+	}
+	
+	MemType			GetMemType() const;
+	const char*		GetMemTypeStr() const;
+
+	Bool IsValid() const
+	{
+		return memMgr->IsValid(handle);
+	}
+
+	// create a new MemID and copy my contents into it
+	MemID Duplicate ( void )
+	{
+		MemID newID;
+
+ 		newID.Get ( GetMemType(), Size() );
+		memcpy ( *newID, **this, Size() );
+
+		return newID;
+	}
+
+	
+	void*		Lock() const;
+	void*		Unlock() const;
+	void		SetDiscardable() const;
+	void		SetNotDiscardable() const;
+	void*		Realloc(size_t) const;
+	int		Read(int fd) const;
+	int		Read(int fd, size_t ofs, size_t size) const;
+	int		Load(MemType, char* fileName, MemAttrs = MOVEABLE, ReservedHandle h = IllegalHandle);
+	size_t	Size() const;
+#ifdef DEBUG
+	void		SetChecksum(Bool = True) const;
+#endif
+
+	operator SOL_Handle() const
+	{
+		return handle;
+	}
+
+	inline void* MemID::operator*() const
+	{
+		return memMgr->GetAddr(handle);
+	}
+
+	inline char& MemID::operator[](size_t s) const
+	{
+		return *((char*) memMgr->GetAddr(handle) + s);
+	}
+
+	Bool operator==(const MemID& id) const
+	{
+		return handle == id.handle;
+	}
+
+	Bool operator !=(const MemID& id) const
+	{
+		return !(*this == id);
+	}
+
+	Bool operator !() const
+	{
+		return handle == 0;
+	}
+
+protected:
+	SOL_Handle	handle;
+};
+
+// this garbage simulates templates
+
+#define FakeTemplateID(name, T, type)\
+struct name : public MemID {\
+	name##() {}\
+	name##(const MemID& id) : MemID(id) {}\
+	name##(SOL_Handle h) : MemID(h) {}\
+\
+	void\
+	Get()\
+	{\
+		MemID::Get(type, sizeof(T));\
+		new(handle) T;\
+	}\
+\
+	void\
+	Get(size_t size, MemAttrs attrs = MOVEABLE, unsigned num = 0,\
+			MemClient* client = 0, char initChar = 0,\
+			ReservedHandle h = IllegalHandle)\
+	{\
+		MemID::Get(type, size, attrs, num, client, initChar, h);\
+	}\
+\
+	void\
+	Get(size_t size, ReservedHandle h, MemAttrs attrs = 0)\
+	{\
+		MemID::Get(type, size, attrs | PERSIST, 0, 0, 0, h);\
+	}\
+\
+	void\
+	Get(MemID id, size_t ofs, size_t size)\
+	{\
+		MemID::Get(type, id, ofs, size);\
+	}\
+\
+	T*\
+	Lock() const\
+	{\
+		return (T*) MemID::Lock();\
+	}\
+\
+	T*\
+	Unlock() const\
+	{\
+		return (T*) MemID::Unlock();\
+	}\
+\
+	T*\
+	Realloc(size_t size) const\
+	{\
+		return (T*) MemID::Realloc(size);\
+	}\
+\
+	T* operator *() const	{ return (T*) MemID::operator*(); }\
+	T*	operator->() const	{ return (T*) MemID::operator*(); }\
+};
+
+#pragma warning(disable:4291)
+inline void*
+operator new(size_t, SOL_Handle handle)
+{
+	return memMgr->GetAddr(handle);
+	//return (char*) memMgr->desc[handle].data;
+}
+
+#endif

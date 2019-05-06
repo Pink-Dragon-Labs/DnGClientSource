@@ -1,0 +1,677 @@
+//	restype.cpp
+
+#include <stdio.h>
+#include <string.h>
+
+#include "sol.hpp"
+#include "sciwin.hpp"
+
+// VC FIX #include "audio.hpp"
+#include "config.hpp"
+#include "dos.hpp"
+#include "msg.hpp"
+#include "resource.hpp"
+#include "dcomp.hpp"
+#include "newroom.hpp"
+#include "memtype.hpp"
+
+extern void *gFontTable[];
+
+extern long lseek(int __handle,long __offset,int __origin);
+#define SEEK_SET    0
+#define SEEK_CUR    1           /* Seek relative to current position    */
+
+//#define UPDATE_CHECKSUM
+
+void ValidateView ( MemID viewID, int v, char *file, int line );
+int CheckView ( MemID viewID );
+
+#if 0
+unsigned int gViewCheckSum[65535];
+unsigned int gViewCmpCheckSum[65535];
+int gSumsLoaded = 0;
+
+void LoadChecksums ( void )
+{
+	if ( !gSumsLoaded ) {
+		FILE *file = fopen ( "views.bin", "rb" );
+
+		if ( file ) {
+			fread ( &gViewCheckSum, sizeof ( gViewCheckSum ), 1, file );
+			fclose ( file );
+			gSumsLoaded = 1;
+		} else {
+			gSumsLoaded = -1;
+		}
+
+		file = fopen ( "viewscmp.bin", "rb" );
+
+		if ( file ) {
+			fread ( &gViewCmpCheckSum, sizeof ( gViewCmpCheckSum ), 1, file );
+			fclose ( file );
+		} else {
+			gSumsLoaded = -1;
+		}
+	}
+}
+
+void ValidateChecksum ( unsigned short view, MemID viewID, char *file, int line )
+{
+	LoadChecksums();
+
+	if ( (gSumsLoaded == 1) && viewID.GetMemType() == MemResView ) {
+		uchar *ptr = (uchar *)*viewID;
+		unsigned int sum = 0;
+
+		int resLength = viewID.Size() - 5;
+
+		for ( int i=0; i<resLength; i++ ) {
+			sum += *ptr++;
+			sum += i;
+		}
+
+#ifdef UPDATE_CHECKSUM
+		gViewCheckSum[view] = sum;
+
+		FILE *file = fopen ( "views.bin", "wb" );
+		fwrite ( &gViewCheckSum, sizeof ( gViewCheckSum ), 1, file );
+		fclose ( file );
+#endif
+
+		if ( gViewCheckSum[view] != sum ) 
+			msgMgr->Fatal ( "Checksum failure for decompressed view %u! (%u, %u) %s(%d)", view, sum, gViewCheckSum[view], file, line );
+	}
+}
+#endif
+
+int	SOL_ResType::fd = -1;
+int	SOL_ResType::resLength;
+int	SOL_ResType::compressedLength;
+int	SOL_ResType::resOffset;
+
+#pragma pack(1)
+// VC FIX _Packed 
+struct VolEntryHeader {
+	uchar 	type;
+	ResNum	resId;
+	int		compressedLength;
+	int		expandedLength;
+	ushort	compressUsed;
+} static volEntryHeader;
+#pragma pack
+
+SOL_ResType::SOL_ResType(char *extension, char* label) :
+	label(label)
+{
+	strcpy(ext, extension);
+}
+
+Bool
+SOL_ResType::Check(ResNum resNum)
+{
+	int	found;
+
+	Close(found = Open(resNum));
+	if (found != -1)
+		return True;
+	
+//	if ((GetType() == MemResAudio || GetType() == MemResWAVE) &&
+//			FindAudEntry(resNum) != -1L)
+//		return True;
+
+	return False;
+}
+
+void
+SOL_ResType::Load(ResTag& tag, Bool lock)
+{
+	MemAttrs attrs = lock ? GetAttrs() & ~MOVEABLE : GetAttrs();
+	fd = Open(tag.resNum);
+
+#if 0
+	if (fd == -1 && GetType() == MemResView) {
+//* * * LOAD DUMY VIEW 777
+		fd = Open(777);
+		attrs |= SWAPMEMORY;
+	}
+#endif
+
+	if (fd == -1) {
+#ifdef DEBUG
+		Bool tryAgain = True;
+		while (tryAgain) {
+			tryAgain = msgMgr->Alert("Error opening resource %u%s\nUse ENTER to retry\n ESC to quit",tag.resNum,GetExtension());
+			if (tryAgain)
+	  			if ((fd = Open(tag.resNum)) != -1)
+					break;
+		}
+#endif
+
+	  	if (fd == -1)
+			msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+	}
+	if (GetType() == MemResMap)
+		attrs |= TRANSITORY;
+	tag.id.Get(GetType(), resLength + 1, attrs, tag.resNum, resMgr);
+
+	int result = 0;
+	if (!resMgr->VolumeOpen(fd)) {
+		result = tag.id.Read(fd);
+		Close(fd);
+	} else if (volEntryHeader.compressUsed == 0x20) {
+		if(volEntryHeader.resId != tag.resNum)
+			msgMgr->Fatal(SrcLoc,Msg_ResourceData);
+		tag.id.SetNotDiscardable();
+		Decompress(tag);
+		tag.id.SetDiscardable();
+	} else {
+		if(volEntryHeader.resId != tag.resNum)
+			msgMgr->Fatal(SrcLoc,Msg_ResourceData);
+
+		result = ::ReadMemID(fd, tag.id, resLength);
+		if (result != resLength)
+			msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+		if (tag.id[0] == 0xff) {
+//			tag.id.Realloc(resLength);
+			return;
+		}
+	}
+
+	if (result == -1)
+		msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+
+	if ( GetType() == MemResFont ) {
+		tag.id.Lock();
+		gFontTable[tag.resNum] = *tag.id;
+	}
+
+//	tag.id.Realloc(resLength);
+}
+
+extern void CheckHeap ( char *file, int line );
+
+void
+SOL_ResType::Decompress(ResTag& tag) const
+{
+	int i;
+	char *resourceData = (char *)malloc ( compressedLength );
+	char *workBuffer = (char *)malloc ( 11 * 1024 );
+
+	if ( ::Read ( fd, resourceData, compressedLength ) != compressedLength )
+		msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+
+	// if this for only a resource.win change.
+	//
+	if ( configMgr->Get( configMgr->ResourceChecking ) ) {
+		// check the sum on the resource data
+		unsigned short sum = 0;
+		char *ptr = resourceData;
+
+		for ( int i=0; i<compressedLength; i++ )
+			sum += *ptr++;
+
+		// find the sum data
+		unsigned short *sumID = resMgr->resSumID[tag.id.GetMemType()];
+		unsigned short *sums = resMgr->resSums[tag.id.GetMemType()];
+		unsigned short count = resMgr->resCounts[tag.id.GetMemType()];
+
+		if ( !sumID || !sums )
+			msgMgr->Fatal ( "Could not find the file RESSUMS.DAT.  Please check your installation and try again." );
+
+		for ( i=0; i<count; i++ ) {
+			if ( sumID[i] == tag.resNum ) {
+				unsigned short theSum = sums[i];
+
+				if ( sum != theSum )
+					msgMgr->Fatal ( "There was a failure reading a required resource from disk.  The resource on your disk has been corrupted.  You can continue to play, but the game may well crash horribly.  Please send the following information to our tech support group.\nresource type = %d, resource id = %d, resource sum = %d, required sum = %d", tag.id.GetMemType(), tag.resNum, sum, theSum );
+
+				break;
+			}
+		}
+
+		if ( i==count ) 
+			msgMgr->Fatal ( "RESSUMS.DAT is corrupted.  Please check your installation and try again. (%d, %d)", tag.id.GetMemType(), tag.resNum );
+	}
+	//
+	// if this for only a resource.win change.
+
+
+	char *in = resourceData;
+	char *out = (char *) *tag.id;
+
+	ulong destLength = resLength;
+	ulong sourceLength = compressedLength;
+	ulong flushIt = 0;
+
+	Initcompress(workBuffer);
+
+	while ( sourceLength && destLength ) {
+		::Decompress ( &in, &out, &sourceLength, &destLength, workBuffer );
+		::Decompress ( &in, &out, &sourceLength, &flushIt, workBuffer );
+	}
+
+#if 0
+	if ( tag.id.GetMemType() == MemResView && !CheckView ( tag.id ) ) {
+		char filename[1024];
+		sprintf ( filename, "%u.cmp", (unsigned short)tag.resNum );
+		FILE *file = fopen ( filename, "wb" );
+		fwrite ( resourceData, compressedLength, 1, file );
+		fclose ( file );
+		msgMgr->Fatal ( "View data is not valid after decompressing it.  The file %s has been written out in the directory where The Realm is installed.  Please hold onto that file and tell Stephen about it. ;)", filename );
+	}
+#endif
+
+	free ( resourceData );
+	free ( workBuffer );
+}
+
+int
+SOL_ResType::Open(ResNum num, char* path)
+{
+	char		nameBuf[MaxPath + 1];
+	MemType	type;
+	int		hdrLength,t;
+
+	// check the language directory for MAP resources
+	if (langPath[0] && GetFileType() == MemResMap) {
+		MakeName(nameBuf, langPath, num);
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			if (path)
+				strcpy(path, nameBuf);
+			Read(&type, 1);
+			ConfirmType((MemType)(type & 0xff));
+			resOffset = SeekToData();
+			resLength = GetFileSize() - resOffset;
+#ifdef DEBUG	
+		   if (tracking)
+				rmResList->Add(GetType(), num, resLength);
+#endif
+			return fd;
+		}
+	}
+
+	// check patch table
+	int dirNum = FindPatchEntry(num);
+	int dirNum36 = FindPatch36Entry(path);
+
+	// if patched resource found, use it
+	if (dirNum != -1) {
+		MakeName(nameBuf, configMgr->Get("patchDir",dirNum), num);
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			if (path)
+				strcpy(path, nameBuf);
+			Read(&type, 1);
+			ConfirmType((MemType)(type & 0xff));
+			resOffset = SeekToData();
+			if (GetType() == MemResAudio || GetType() == MemResWAVE)
+				LSeek(fd,resOffset,SEEK_SET);
+			resLength = GetFileSize() - resOffset;
+#ifdef DEBUG	
+		   if (tracking)
+				rmResList->Add(GetType(), num, resLength);
+#endif
+			return fd;
+		}
+	}
+
+	// if found in patch36 table use it
+	if (dirNum36 != -1) {
+		strcpy(nameBuf, configMgr->Get("patchDir",dirNum36));
+		strcat(nameBuf, "\\");
+		strcat(nameBuf, path);
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			strcpy(path, nameBuf);
+			Read(&type, 1);
+			ConfirmType((MemType)(type & 0xff));
+			resOffset = SeekToData();
+			resLength = GetFileSize() - resOffset;
+#ifdef DEBUG	
+		   if (tracking)
+				rmResList->Add(GetType(), num, resLength);
+#endif
+			return fd;
+		}
+	}
+
+	// check resource-config file path(s)...
+	for (int i = 0; i < configMgr->GetNTokens(GetType()); i++) {
+		if (path && *path)
+			MakeName(nameBuf, configMgr->Get(GetType(), i), path);
+		else
+			MakeName(nameBuf, configMgr->Get(GetType(), i), num);
+
+//		msgMgr->Alert ( "Opening %s", nameBuf );
+
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			if (path)
+				strcpy(path, nameBuf);
+			if (GetType() != MemResAudio && GetType() != MemResAudio36 && GetType() != MemResWAVE) {
+				Read(&type, 1);
+				ConfirmType((MemType)(type & 0xff));
+				resOffset = SeekToData();
+			} else
+				resOffset = 0;
+			resLength = GetFileSize() - resOffset;
+#ifdef DEBUG	
+		   if (tracking)
+				rmResList->Add(GetType(), num, resLength);
+#endif
+			return fd;
+		}
+	}
+
+	// check resource volume...
+
+	if ((resOffset = FindDirEntry(num,&fd)) != -1) {
+		// requested resource is volume-resident
+		LSeek(fd,resOffset,SEEK_SET);
+		Read(&volEntryHeader, sizeof volEntryHeader);
+		ConfirmType((MemType)volEntryHeader.type);
+		resOffset += sizeof(volEntryHeader);
+		resLength = volEntryHeader.expandedLength;
+		compressedLength = volEntryHeader.compressedLength;
+
+#ifdef DEBUG	
+	   if (tracking)
+			rmResList->Add(GetType(), num, resLength);
+#endif
+		return fd;
+	}
+
+	return -1;
+}
+
+int
+SOL_ResType::CanOpen(ResNum num, char* path)
+{
+	char		nameBuf[MaxPath + 1];
+	MemType	type;
+	int		hdrLength,t;
+
+	// check the language directory for MAP resources
+	if (langPath[0] && GetFileType() == MemResMap) {
+		MakeName(nameBuf, langPath, num);
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			Close ( fd );
+			if (path)
+				strcpy(path, nameBuf);
+			return fd;
+		}
+	}
+
+	// check patch table
+	int dirNum = FindPatchEntry(num);
+	int dirNum36 = FindPatch36Entry(path);
+
+	// if patched resource found, use it
+	if (dirNum != -1) {
+		MakeName(nameBuf, configMgr->Get("patchDir",dirNum), num);
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			Close ( fd );
+			if (path)
+				strcpy(path, nameBuf);
+			return fd;
+		}
+	}
+
+	// if found in patch36 table use it
+	if (path && dirNum36 != -1) {
+		strcpy(nameBuf, configMgr->Get("patchDir",dirNum36));
+		strcat(nameBuf, "\\");
+		strcat(nameBuf, path);
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			Close ( fd );
+			strcpy(path, nameBuf);
+			return fd;
+		}
+	}
+
+	// check resource-config file path(s)...
+	for (int i = 0; i < configMgr->GetNTokens(GetType()); i++) {
+		if (path && *path)
+			MakeName(nameBuf, configMgr->Get(GetType(), i), path);
+		else
+			MakeName(nameBuf, configMgr->Get(GetType(), i), num);
+
+//		msgMgr->Alert ( "Opening %s", nameBuf );
+
+		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+			Close ( fd );
+			if (path)
+				strcpy(path, nameBuf);
+			return fd;
+		}
+	}
+
+	// check resource volume...
+
+	if ((resOffset = FindDirEntry(num,&fd)) != -1) {
+		Close ( fd );
+		// requested resource is volume-resident
+		return fd;
+	}
+
+	return 0;
+}
+
+int
+SOL_ResType::Close(int fd) const
+{
+	if (fd != -1 && !resMgr->VolumeOpen(fd) )
+		return ::Close(fd);
+	return -1;
+}
+
+void
+SOL_ResType::MakeName(char *buf, char* fileSpec, ResNum num) const
+{
+	char	rootName[MaxFName + 1];
+
+	sprintf(rootName, "%u", num);
+	MakeName(buf, fileSpec, rootName);
+}
+
+void
+SOL_ResType::MakeName(char* buf, char* fileSpec, char* rootName) const
+{
+	char	drive[MaxDrive + 1];
+	char	dir[MaxDir + 1];
+	char	ext[MaxExt + 1];
+	char	fullName[MaxPath + 1];
+	
+	//	if there are no wildcard characters in fileSpec, assume it's a dir and
+	// slap on a backslash so _splitpath knows it, unless it's just a drive
+	//	or the last char is already a backslash
+	if (!strchr(fileSpec, '*') && fileSpec[strlen(fileSpec) - 1] != ':' &&
+	    fileSpec[strlen(fileSpec) - 1] != '\\') {
+		strcpy(fullName, fileSpec);
+		strcat(fullName, "\\");
+		fileSpec = fullName;
+	}
+	
+	//	get the drive, directory and extension
+	_splitpath(fileSpec, drive, dir, 0, ext);
+	
+	//	and add the name and extension
+	_makepath(buf, drive, dir, rootName, *ext ? ext : GetExtension());
+}
+
+void
+SOL_ResType::MakeWildName(char *buf, char* fileSpec) const
+{
+	MakeName(buf, fileSpec, "*");
+}
+
+long
+SOL_ResType::GetFileSize() const
+{
+	if (fd != -1)
+		return FileLength(fd);
+	else
+		msgMgr->Fatal(SrcLoc, Msg_InvalidResFileHandle, label);
+	return 0;
+}
+
+void
+SOL_ResType::ConfirmType(MemType type) const
+{
+	if(fd == -1)
+		msgMgr->Fatal(SrcLoc, Msg_InvalidResFileHandle, label);
+
+	if (GetFileType() == MemResAudio || GetFileType() == MemResVMD)
+		return;
+
+// Delete the next line when robot resources are converted to the proper type
+	if (GetFileType() == MemResRobot) return;
+
+	//	allow 0x80-based or 0-based numbers
+	if((MemType)(type & ~0x80) != GetFileType())
+		msgMgr->Fatal(Msg_WrongResType, label);
+}
+
+int
+SOL_ResType::Read(void* dest, int size) const
+{
+	return ::Read(fd, dest, size);
+}
+
+int
+SOL_ResType::SeekToData() const
+{
+	char	len;
+
+	LSeek(fd,1,SEEK_SET);
+	Read(&len, 1);
+	return LSeek(fd,len,SEEK_CUR);
+}
+
+int
+SOL_ResType::FindDirEntry(ResNum resId, int *fd) const
+{
+	for (int n = 0; n < maxVolumes; n++) {
+
+		MemID resMap = resMgr->GetResMapID(n);
+
+		// find the resource type in the resource map header
+		ResDirHdrEntry* header = (ResDirHdrEntry*) *resMap;
+		MemType theType = GetType();
+		while ((uchar)(header->resType & ~0x80) != theType) {
+			if (header->resType == 255)
+				break;
+			++header;
+		}
+		if (header->resType == 255)
+			continue;
+		int firstOffset = header->resTypeOffset;
+		int lastOffset = (header+1)->resTypeOffset - sizeof(ResDirEntry);
+	
+		// utilize a binary search to locate the resource id
+		while (firstOffset <= lastOffset) {
+			int midOffset = (lastOffset - firstOffset) / 2
+				/ sizeof(ResDirEntry) * sizeof(ResDirEntry) + firstOffset;
+			ResDirEntry* entry = (ResDirEntry *) ((char *) *resMap + midOffset); 
+			if (entry->resId == resId) {
+				*fd = resMgr->OpenVolume(n);
+				return entry->volOffset;
+			}
+			if (entry->resId < resId)
+				firstOffset = midOffset + sizeof(ResDirEntry);
+			else
+				lastOffset = midOffset - sizeof(ResDirEntry);
+		}
+	}
+
+	return -1;
+}
+
+int
+SOL_ResType::FindPatchEntry(ResNum resId) const
+{
+	ResPatchEntry*	entry;
+
+	if (!resPatches)
+		return -1;
+
+	for (entry = (ResPatchEntry*) *resPatches; (uchar) entry->resType != 0xff; ++entry)
+		if (entry->resType == GetType() && entry->resId == resId)
+			return (int) entry->patchDir;
+	return -1;
+}
+
+int
+SOL_ResType::FindPatch36Entry(char* name) const
+{
+	ResPatch36Entry*	entry36;
+
+	if (!resPatches36 || !name || strlen(name) != 12)
+		return -1;
+
+	for (entry36 = (ResPatch36Entry*) *resPatches36; entry36->resName[0]; ++entry36)
+		if (!stricmp(entry36->resName,name))
+			return (int) entry36->patchDir;
+	return -1;
+}
+
+Bool
+SOL_ResType::CheckPatches(ResNum num) const
+{
+	// check patch table
+	return FindPatchEntry(num) != -1;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+int
+ResView::SeekToData() const
+{
+	char	len;
+
+	LSeek(fd,3,SEEK_SET);
+	Read(&len, 1);
+	return LSeek(fd,len + 22,SEEK_CUR);
+}
+
+int
+ResPic::SeekToData() const
+{
+	char	len;
+
+	LSeek(fd,3,SEEK_SET);
+	Read(&len, 1);
+	return LSeek(fd,0,SEEK_CUR);
+}
+
+int
+ResPal::SeekToData() const
+{
+	char	len;
+
+	LSeek(fd,3,SEEK_SET);
+	Read(&len, 1);
+	return LSeek(fd,len,SEEK_CUR);
+}
+
+int
+ResWave::SeekToData() const
+{
+	return 0;
+}
+
+int
+ResAudio::SeekToData() const
+{
+	return 0;
+}
+
+int
+ResAudio36::SeekToData() const
+{
+	return 0;
+}
+
+int
+ResVMD::SeekToData() const
+{
+	LSeek(fd,0,SEEK_SET);
+	return 0;
+}

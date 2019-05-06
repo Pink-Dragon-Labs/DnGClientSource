@@ -1,0 +1,452 @@
+Object              ;netobj.sc
+  Collection        ;collect.sc
+    List            ;collect.sc
+      Set           ;collect.sc
+        Dialog      ;dialog.sc
+          ScreenDialog;game.sc
+          FancyDialog;dialog.sc
+            VerbDialog;wdialog.sc
+            ContainerDisplay;bcontain.sc
+            SpellDialog;spells.sc
+            TradeDlg;shop.sc
+            MessagerDialog;messager.sc
+          IconBar   ;iconbar.sc
+            RealmIconBar;gamebar.sc
+          RealmMap  ;classdef.sc
+          ViewButtonDlg;classdef.sc
+          RealmPanel;gamebar.sc
+        EventHandler;evthndlr.sc
+          Cast      ;evthndlr.sc
+        GlobalTimers;timer.sc
+        WaitingTimers;timer.sc
+        BtnList     ;btnlist.sc
+        WinDialogSet;dlghndlr.sc
+        DialogHandler;dlghndlr.sc
+        GlobalDemons;game.sc
+        CueSet      ;roommgr.sc
+        MovieCmdList;wmovie.sc
+        gApproveGiveList;classdef.sc
+        StockCharacters;classdef.sc
+        DeadObjects ;classdef.sc
+        DisposeNotifyList;wobject.sc
+        VerbList    ;wobject.sc
+        gTeleportList;classdef.sc
+        InfoQueue   ;infoq.sc
+        ActionQueue ;actionq.sc
+        ActionQMgr  ;actionq.sc
+        gDialogList ;wdialog.sc
+        GroupList   ;group.sc
+        CombatWaitingList;wmovie.sc
+        ActiveMovieCmdList;wmovie.sc
+        MovieSet    ;wmovie.sc
+        PicInfoList ;picinfo.sc
+        CDSlotList  ;bcontain.sc
+        CursorRegionController;cursreg.sc
+      Queue         ;queue.sc
+      Stack         ;stack.sc
+      MenuBar       ;menubar.sc
+      MenuList      ;menubar.sc
+      MovieCmd      ;wmovie.sc
+      SpellList     ;spells.sc
+      Remaps        ;remap.sc
+      SortedList    ;sortlist.sc
+      ShopList      ;shop.sc
+      FavoriteSpells;spells.sc
+      SorcerySpells ;spells.sc
+      ElementalismSpells;spells.sc
+      MysticismSpells;spells.sc
+      ThaumaturgySpells;spells.sc
+      NecromancySpells;spells.sc
+      WObjectList   ;rlmroom.sc
+  WDragger          ;wdragger.sc
+  Code              ;netobj.sc
+    Scaler          ;scaler.sc
+      ScaleTo       ;scaleto.sc
+    Actions         ;feature.sc
+    GradualLooper   ;grooper.sc
+    SmoothLooper    ;smooper.sc
+    PAvoider        ;pavoid.sc
+    NetMsgProcessor ;netmsgpr.sc
+    RestoreMusic    ;classdef.sc
+    QuitGameHandler ;wactor.sc
+    DeadQuitHandler ;classdef.sc
+    SaveSpellList   ;classdef.sc
+    CreateLookDialog;classdef.sc
+    GetCombatAction ;cmbtroom.sc
+    ScriptPrompt    ;wdialog.sc
+    SetScale        ;colortbl.sc
+    RoundTimer      ;wmovie.sc
+    TakeItemCode    ;wmovie.sc
+    MakeTreasureDialog;wmovie.sc
+    CategoryInput   ;shop.sc
+    MakeItemCode    ;wactor.sc
+    GotoVisibleLocation;wactor.sc
+    LoadFavoriteSpells;spells.sc
+    BasicCursorController;cmbtroom.sc
+  Sequence          ;sequence.sc
+  Event             ;event.sc
+  Script            ;script.sc
+    DemonsScript    ;script.sc
+      SpecialEffect ;spells.sc
+        SpecialEffectTarget;spells.sc
+          SEFlash   ;spells.sc
+          SEFlashGrow;spells.sc
+          SEFlashFade;spells.sc
+          SEGreenCloud;spells.sc
+          SERedCloud;spells.sc
+          SEBlueCloud;spells.sc
+          SEYellowCloud;spells.sc
+          SEWhiteCloud;spells.sc
+          SEPurpleCloud;spells.sc
+          SEGreenFade;spells.sc
+          SERedFade ;spells.sc
+          SEBlueFade;spells.sc
+          SEYellowFade;spells.sc
+          SEWhiteFade;spells.sc
+          SEPurpleFade;spells.sc
+          SEHealBurst;classdef.sc
+          SEDrainMagic;spells.sc
+          SEShieldUp;spells.sc
+          SEShieldDown;spells.sc
+          SEPoof    ;spells.sc
+          SEUnlock  ;spells.sc
+          SEMagicDust;spells.sc
+          SELevitate;spells.sc
+          SEHeal    ;spells.sc
+          SEPurify  ;spells.sc
+          SEGreaterHeal;spells.sc
+          SECurePoison;spells.sc
+          SEShield  ;spells.sc
+          SEGreaterShield;spells.sc
+          SEInvulnerability;spells.sc
+          SEFireShield;spells.sc
+          SEColdShield;spells.sc
+          SELightningShield;spells.sc
+          SEPoisonShield;spells.sc
+          SEAcidShield;spells.sc
+          SEFireCurse;spells.sc
+          SEColdCurse;spells.sc
+          SELightningCurse;spells.sc
+          SEPoisonCurse;spells.sc
+          SEAcidCurse;spells.sc
+          SEMissileResistance;spells.sc
+          SEEmpower ;spells.sc
+          SEEnfeeble;spells.sc
+          SEStealLife;spells.sc
+          SENimbility;spells.sc
+          SEClumsiness;spells.sc
+          SEImmolation;spells.sc
+          SEWarpMind;spells.sc
+          SEDrainLife;spells.sc
+          SEDeathWish;spells.sc
+          SESpark   ;spells.sc
+          SEDeathTouch;spells.sc
+          SEExtension;spells.sc
+          SESeeInvisibility;spells.sc
+          SEShift   ;spells.sc
+          SEInvisibility;spells.sc
+          SEAntiMagicAura;spells.sc
+          SEDefenselessness;spells.sc
+          SEImprovedInvisibility;spells.sc
+          SEEnchantItem;spells.sc
+          SEEngrave ;spells.sc
+          SECornucopia;spells.sc
+          SEDispelMagic;spells.sc
+          SERemoveCurse;spells.sc
+          SEImproveArmor;spells.sc
+          SEFireGrasp;spells.sc
+          SEArticGrasp;spells.sc
+          SEVenomousTouch;spells.sc
+          SEFlameBlade;spells.sc
+          SEElectricCharge;spells.sc
+          SEColdSteel;spells.sc
+          SEVenom   ;spells.sc
+          SEGatherTheFellowship;spells.sc
+          SEPermanency;spells.sc
+          SEIndestruction;spells.sc
+          SESingleFumble;spells.sc
+          SEMassFumble;spells.sc
+          SEBang    ;spells.sc
+          SEBangViolet;spells.sc
+          SEBangGreen;spells.sc
+          SEBangYellow;spells.sc
+          SEBangOrange;spells.sc
+          SEBangTeal;spells.sc
+          SEBangBlue;spells.sc
+          SESlideCombatant;spells.sc
+          SEPoisonCloudTarget;spells.sc
+          SEFlameTarget;spells.sc
+        SpecialEffectSourceTarget;spells.sc
+          SEDeathCloud;spells.sc
+          SEFlameOrb;spells.sc
+          SELightning;spells.sc
+          SEWhirlwind;spells.sc
+          SEDeathBlade;spells.sc
+          SEPoisonBolt;spells.sc
+          SEHoldMonster;spells.sc
+          SEBerserk ;spells.sc
+          SEEnidsBlessing;spells.sc
+          SEIncinerate;spells.sc
+          SEFreeze  ;spells.sc
+          SEStun    ;spells.sc
+          SEConfusion;spells.sc
+          SEMindShackle;spells.sc
+          SELoyaltyShift;spells.sc
+          SEFear    ;spells.sc
+          SEMassDrain;spells.sc
+          SEWrathOfTheGods;spells.sc
+          SEElphamesJustice;spells.sc
+          SESandStorm;spells.sc
+          SEGustOfWind;spells.sc
+          SEElectricFury;spells.sc
+          SEColdSnap;spells.sc
+          SESpellBlast;spells.sc
+          SEForcedFlee;spells.sc
+          SEBanishment;spells.sc
+          SEIceOrb  ;spells.sc
+          SEEarthquake;spells.sc
+          SESummonZombie;spells.sc
+          SESummonWraith;spells.sc
+          SESummonUndead;spells.sc
+          SESummonNightFriends;spells.sc
+          SESummonDaemon;spells.sc
+          SESummonPixie;spells.sc
+          SEPsychicOrb;spells.sc
+          SELightDart;spells.sc
+          SEAcidSphere;spells.sc
+          SECrushingBoulder;spells.sc
+          SEDuachsVengeance;spells.sc
+          SEHeadOfDeath;spells.sc
+          SERust    ;spells.sc
+          SEMultiBlade;spells.sc
+          SESingleFlameOrb;spells.sc
+          SESinglePoisonBolt;spells.sc
+          SESingleHoldMonster;spells.sc
+          SESingleBerserk;spells.sc
+          SESingleSnap;spells.sc
+          SESingleBlast;spells.sc
+          SESingleFlee;spells.sc
+          SESingleBlessing;spells.sc
+          SESingleIncinerate;spells.sc
+          SESingleFreeze;spells.sc
+          SESingleStun;spells.sc
+          SESingleConfusion;spells.sc
+          SESingleMindShackle;spells.sc
+          SESingleLoyaltyShift;spells.sc
+          SESingleFear;spells.sc
+          SESingleDrain;spells.sc
+          SESingleWrath;spells.sc
+          SESingleJustice;spells.sc
+          SESingleFury;spells.sc
+          SESingleBanish;spells.sc
+          SESingleRust;spells.sc
+          SESingleIceOrb;spells.sc
+          SESingleLightDart;spells.sc
+          SESingleAcidSphere;spells.sc
+          SESinglePsychicOrb;spells.sc
+        SpecialEffectArea;spells.sc
+          SEIceStorm;spells.sc
+          SESummon  ;spells.sc
+          SEFireBall;spells.sc
+          SELightningBolt;spells.sc
+          SEStoning ;spells.sc
+          SEAcidRain;spells.sc
+          SEPoisonCloudArea;spells.sc
+          SEFlameArea;spells.sc
+        SoundEffect ;spells.sc
+          SESound   ;spells.sc
+          SEMusic   ;spells.sc
+      ApproachScript;wobject.sc
+    WAScript        ;wactor.sc
+      WANetScript   ;wactor.sc
+        WAExitScript;wactor.sc
+        WANetNewPassScript;bpass.sc
+        WALookScript;wactor.sc
+        WANetSpellScript;spells.sc
+      WACastBeginScript;spells.sc
+      WACastEndScript;spells.sc
+      WASpellScript ;spells.sc
+    newPassScript   ;classdef.sc
+    NetDeadDemon    ;wactor.sc
+    WAReady         ;wactor.sc
+    GSActionScript  ;classdef.sc
+    GetAmount       ;wdialog.sc
+    GetManaAmount   ;wdialog.sc
+  Cue               ;script.sc
+  Array             ;array.sc
+    IntArray        ;array.sc
+      ATPViewArray  ;atparray.sc
+      ATPRoomTypeArray;atparray.sc
+      ATPFileArray  ;atparray.sc
+      ATPNounArray  ;atparray.sc
+      ATPFlagsArray ;atparray.sc
+      ATPRandRoomArray;atparray.sc
+    IDArray         ;array.sc
+      ATPDescr1Array;atparray.sc
+      ATPDescr2Array;atparray.sc
+    ByteArray       ;array.sc
+      String        ;string.sc
+        FileNameStr ;filesel.sc
+      Clut          ;clut.sc
+        ClutOverride;classdef.sc
+        InvisibleClut;classdef.sc
+        FrozenClut  ;classdef.sc
+      PackedData    ;packdata.sc
+        NetMsg      ;netmsg.sc
+      VerbArray     ;wobject.sc
+  Rectangle         ;rect.sc
+    BitMap          ;bitmap.sc
+      Feature       ;feature.sc
+        View        ;view.sc
+          Prop      ;prop.sc
+            Actor   ;actor.sc
+              Ego   ;ego.sc
+              WorldObject;wobject.sc
+               WorldActor;wactor.sc
+               WorldEgo;wego.sc
+               Projectile;classdef.sc
+               Money;wego.sc
+               Mana;wego.sc
+               MagicActor;spells.sc
+               PileOJunk;wpile.sc
+          Heraldry  ;classdef.sc
+          GPolyBitmap;wobject.sc
+      Item          ;item.sc
+        TextItem    ;textitem.sc
+          TitleItem ;textitem.sc
+          Button    ;button.sc
+            IconButton;iconbar.sc
+            ViewButton;spells.sc
+            SpellButton;spells.sc
+            gameBarBtn;gamebar.sc
+            ContainerButton;bcontain.sc
+            CombatDragItem;cmbtroom.sc
+          MenuOption;menubar.sc
+          ShadowText;shadow.sc
+            CombatWaitText;wmovie.sc
+        IconItem    ;iconitem.sc
+          UnderlineItem;print.sc
+        EditItem    ;edititem.sc
+          SetMoneyEditItem;wedit.sc
+          SetManaEditItem;wedit.sc
+        Slider      ;slider.sc
+        Selector    ;selector.sc
+          TextSelector;selector.sc
+          FileSelector;filesel.sc
+      SelectorText  ;selector.sc
+      Spell         ;spells.sc
+      FastScrollWindow;scroll.sc
+      TreasureDisplay;wmovie.sc
+      StoreItem     ;shop.sc
+        CategoryItem;shop.sc
+        TradeItem   ;shop.sc
+    Cursor          ;cursor.sc
+    Plane           ;plane.sc
+      Window        ;window.sc
+      RlmInfoBar    ;infobar.sc
+    PolyRect        ;rlmroom.sc
+    CursorRegion    ;cursreg.sc
+  Timer             ;timer.sc
+    GlobalTimer     ;timer.sc
+    DisplayTimer    ;wmovie.sc
+  TimeOut           ;timer.sc
+  LongInt           ;longint.sc
+  Sound             ;sound.sc
+    MusicMgr        ;sound.sc
+    GSound          ;gsound.sc
+  PanHandler        ;sound.sc
+  SoundMgr          ;sound.sc
+  Styler            ;styler.sc
+  Motion            ;motion.sc
+    MoveTo          ;motion.sc
+      Orbit         ;orbit.sc
+      Path          ;path.sc
+      DPath         ;dpath.sc
+        RelDPath    ;dpath.sc
+      Strike        ;spells.sc
+      StrikeGround  ;spells.sc
+      Miss          ;spells.sc
+    Chase           ;chase.sc
+      Follow        ;follow.sc
+      Approach      ;approach.sc
+    Wander          ;wander.sc
+    PolyPath        ;polypath.sc
+      MoveFwd       ;movefwd.sc
+      PChase        ;pchase.sc
+      PFollow       ;pfollow.sc
+    Jump            ;jump.sc
+      JumpTo        ;jump.sc
+    NullMover       ;wego.sc
+  Cycle             ;cycle.sc
+    Forward         ;cycle.sc
+      Walk          ;cycle.sc
+      StopWalk      ;stopwalk.sc
+    CycleTo         ;cycleto.sc
+      EndLoop       ;cycleto.sc
+      BegLoop       ;cycleto.sc
+    Reverse         ;reverse.sc
+    MouthSync       ;sync.sc
+    GradualCycler   ;grooper.sc
+    MoveCycle       ;movecyc.sc
+    RandCycle       ;randcyc.sc
+    Oscillate       ;osc.sc
+  Point             ;points.sc
+  Line              ;points.sc
+  Polygon           ;polygon.sc
+  Magnifier         ;magnify.sc
+  WinDialogHandler  ;dlghndlr.sc
+    MakeItemDialog  ;wactor.sc
+  User              ;user.sc
+    NetUser         ;netuser.sc
+  Sync              ;sync.sc
+  ScriptSync        ;sync.sc
+  Game              ;game.sc
+  File              ;file.sc
+    FormattedFile   ;formfile.sc
+  Messager          ;messager.sc
+  Flags             ;flags.sc
+  ManagedRoom       ;roommgr.sc
+    StaticRoom      ;roommgr.sc
+    RealmRoom       ;rlmroom.sc
+      NetRoom       ;netroom.sc
+        CombatRoom  ;cmbtroom.sc
+      StaticRealmRoom;rlmroom.sc
+  RoomMgr           ;roommgr.sc
+  Server            ;server.sc
+  ScrollableWindow  ;scrolwin.sc
+  WorldObjectBase   ;wbase.sc
+    BDescribed      ;bdescr.sc
+    BCarryable      ;bcarry.sc
+    BConsume        ;bconsume.sc
+    BContainer      ;bcontain.sc
+    BOpenable       ;bopen.sc
+    BLockable       ;bopen.sc
+    BCharacter      ;bchar.sc
+    BUse            ;buse.sc
+    BSwitch         ;bswitch.sc
+    BKey            ;bopen.sc
+    BWearable       ;bwear.sc
+      BWeapon       ;bweapon.sc
+      BLinkedWearable;bwear.sc
+      BHead         ;bhead.sc
+    BTalk           ;btalk.sc
+    BCycle          ;bcycle.sc
+    BEntry          ;bentry.sc
+    BNPC            ;bnpc.sc
+    BPassword       ;bpass.sc
+    BShop           ;bshop.sc
+    BMix            ;bmix.sc
+    BSit            ;bsit.sc
+    BDye            ;bdye.sc
+    BGatekeeper     ;bgate.sc
+    BScroll         ;bscroll.sc
+  CharInfo          ;classdef.sc
+  ArmorInfo         ;classdef.sc
+  RemapObj          ;remap.sc
+  Mutex             ;lockmgr.sc
+  LockMgr           ;lockmgr.sc
+  GroupMember       ;group.sc
+  Combatant         ;wmovie.sc
+  PicInfo           ;picinfo.sc
+  CWindowPage       ;cwndpage.sc
+  CDSlot            ;bcontain.sc

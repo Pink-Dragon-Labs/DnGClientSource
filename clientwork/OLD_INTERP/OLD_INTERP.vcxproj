@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{62A6D9A9-114C-443C-83C0-4DDE162F0411}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\OLD_INTERP___Win32_Debug\</OutDir>
+    <IntDir>.\OLD_INTERP___Win32_Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\OLD_INTERP.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\OLD_INTERP.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\OLD_INTERP.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\OLD_INTERP.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\OLD_INTERP___Win32_Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\OLD_INTERP___Win32_Debug\OLD_INTERP.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\OLD_INTERP___Win32_Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\OLD_INTERP___Win32_Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\OLD_INTERP___Win32_Debug\OLD_INTERP.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\OLD_INTERP___Win32_Debug\OLD_INTERP.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\OLD_INTERP___Win32_Debug\OLD_INTERP.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ARGLIST.CPP" />
+    <ClCompile Include="ARRAY.CPP" />
+    <ClCompile Include="ASM2CPP.CPP" />
+    <ClCompile Include="AUDIO.CPP" />
+    <ClCompile Include="AUDIOD.CPP" />
+    <ClCompile Include="AUDIOW.CPP" />
+    <ClCompile Include="AUDIOWIN.CPP" />
+    <ClCompile Include="BLOB.CPP" />
+    <ClCompile Include="BREAKPT.CPP" />
+    <ClCompile Include="BUFFERD.CPP" />
+    <ClCompile Include="BUFFERW.CPP" />
+    <ClCompile Include="CELOBJ.CPP" />
+    <ClCompile Include="CELOBJ1.CPP" />
+    <ClCompile Include="CELOBJ2.CPP" />
+    <ClCompile Include="CELOBJA.CPP" />
+    <ClCompile Include="CONFIG.CPP" />
+    <ClCompile Include="CRITERR.CPP" />
+    <ClCompile Include="CRITERRD.CPP" />
+    <ClCompile Include="CRITERRW.CPP" />
+    <ClCompile Include="CURSORD.CPP" />
+    <ClCompile Include="CURSORW.CPP" />
+    <ClCompile Include="DEBUG.CPP" />
+    <ClCompile Include="DEBUGDSP.CPP" />
+    <ClCompile Include="DEBUGMNU.CPP" />
+    <ClCompile Include="DIALOG.CPP" />
+    <ClCompile Include="DOS.CPP" />
+    <ClCompile Include="DRAWLIST.CPP" />
+    <ClCompile Include="ERRORMGR.CPP" />
+    <ClCompile Include="EVENT.CPP" />
+    <ClCompile Include="EVENTD.CPP" />
+    <ClCompile Include="EVENTW.CPP" />
+    <ClCompile Include="EXCEPT.CPP" />
+    <ClCompile Include="FONT.CPP" />
+    <ClCompile Include="FONTI.CPP" />
+    <ClCompile Include="GRAPH.CPP" />
+    <ClCompile Include="GRAPHBUF.CPP" />
+    <ClCompile Include="GRAPHMD.CPP" />
+    <ClCompile Include="GRAPHMGR.CPP" />
+    <ClCompile Include="GRAPHMW.CPP" />
+    <ClCompile Include="HOTKEY.CPP" />
+    <ClCompile Include="INFO.CPP" />
+    <ClCompile Include="INTEG.CPP" />
+    <ClCompile Include="INTRPT.CPP" />
+    <ClCompile Include="INTRPTW.CPP" />
+    <ClCompile Include="KBDD.CPP" />
+    <ClCompile Include="KBDMGR.CPP" />
+    <ClCompile Include="KBDMGRD.CPP" />
+    <ClCompile Include="KBDMGRW.CPP" />
+    <ClCompile Include="KBDW.CPP" />
+    <ClCompile Include="KERNEL.CPP" />
+    <ClCompile Include="LANGUAGE.CPP" />
+    <ClCompile Include="LINE.CPP" />
+    <ClCompile Include="LIST.CPP" />
+    <ClCompile Include="LONGINT.CPP" />
+    <ClCompile Include="LZSS.CPP" />
+    <ClCompile Include="MAGNIFY.CPP" />
+    <ClCompile Include="MATH.CPP" />
+    <ClCompile Include="MEMID.CPP" />
+    <ClCompile Include="MEMMGR.CPP" />
+    <ClCompile Include="MEMMGRD.CPP" />
+    <ClCompile Include="MEMMGRE.CPP" />
+    <ClCompile Include="MEMMGRW.CPP" />
+    <ClCompile Include="MEMTYPE.CPP" />
+    <ClCompile Include="MENU.CPP" />
+    <ClCompile Include="MESSAGE.CPP" />
+    <ClCompile Include="MOTION.CPP" />
+    <ClCompile Include="MOUSE.CPP" />
+    <ClCompile Include="MOUSED.CPP" />
+    <ClCompile Include="MOUSEW.CPP" />
+    <ClCompile Include="MOVIE.CPP" />
+    <ClCompile Include="MOVIEW.CPP" />
+    <ClCompile Include="MSG.CPP" />
+    <ClCompile Include="MSGD.CPP" />
+    <ClCompile Include="MSGW.CPP" />
+    <ClCompile Include="NETMGR.CPP" />
+    <ClCompile Include="NETWORK.CPP" />
+    <ClCompile Include="NETWORKW.CPP" />
+    <ClCompile Include="NEW.CPP" />
+    <ClCompile Include="NEWROOM.CPP" />
+    <ClCompile Include="NEWW.CPP" />
+    <ClCompile Include="OBJECT.CPP" />
+    <ClCompile Include="OPCODES.CPP" />
+    <ClCompile Include="PACKDATA.CPP" />
+    <ClCompile Include="PALETTE.CPP" />
+    <ClCompile Include="PALMGRD.CPP" />
+    <ClCompile Include="PALMGRI.CPP" />
+    <ClCompile Include="PALMGRT.CPP" />
+    <ClCompile Include="PALMGRW.CPP" />
+    <ClCompile Include="PICTURE.CPP" />
+    <ClCompile Include="PLANE.CPP" />
+    <ClCompile Include="PLATFRMD.CPP" />
+    <ClCompile Include="PLATFRMW.CPP" />
+    <ClCompile Include="PLAYVMD.CPP" />
+    <ClCompile Include="PLIST.CPP" />
+    <ClCompile Include="PMachine.cpp" />
+    <ClCompile Include="POLYFUSE.CPP" />
+    <ClCompile Include="POLYGON.CPP" />
+    <ClCompile Include="PROFILE.CPP" />
+    <ClCompile Include="QMSG.CPP" />
+    <ClCompile Include="QUEUE.CPP" />
+    <ClCompile Include="RATIO.CPP" />
+    <ClCompile Include="RECORD.CPP" />
+    <ClCompile Include="RECT.CPP" />
+    <ClCompile Include="RECTLIST.CPP" />
+    <ClCompile Include="REMAP.CPP" />
+    <ClCompile Include="RESOURCE.CPP" />
+    <ClCompile Include="RESTART.CPP" />
+    <ClCompile Include="RESTYPE.CPP" />
+    <ClCompile Include="ROBOT.CPP" />
+    <ClCompile Include="SCI.CPP" />
+    <ClCompile Include="SCID.CPP" />
+    <ClCompile Include="SCIW.CPP" />
+    <ClCompile Include="SCIWIN.CPP" />
+    <ClCompile Include="SCREEN.CPP" />
+    <ClCompile Include="SCRIPT.CPP" />
+    <ClCompile Include="SENDSTAC.CPP" />
+    <ClCompile Include="SERIAL.CPP" />
+    <ClCompile Include="SHIFTPAL.CPP" />
+    <ClCompile Include="SHWSTYLE.CPP" />
+    <ClCompile Include="SI.CPP" />
+    <ClCompile Include="SILIST.CPP" />
+    <ClCompile Include="SOUND.CPP" />
+    <ClCompile Include="SOUNDD.CPP" />
+    <ClCompile Include="SOUNDW.CPP" />
+    <ClCompile Include="SOUNDWIN.CPP" />
+    <ClCompile Include="STAMPVER.CPP" />
+    <ClCompile Include="STRING.CPP" />
+    <ClCompile Include="SYNC.CPP" />
+    <ClCompile Include="TABLE.CPP" />
+    <ClCompile Include="TEXTID.CPP" />
+    <ClCompile Include="TIME.CPP" />
+    <ClCompile Include="TIMED.CPP" />
+    <ClCompile Include="TIMEW.CPP" />
+    <ClCompile Include="VGA.CPP" />
+    <ClCompile Include="VMD.CPP" />
+    <ClCompile Include="VMDBASE.CPP" />
+    <ClCompile Include="VMDCACHE.CPP" />
+    <ClCompile Include="VMDIMD.CPP" />
+    <ClCompile Include="VMDLOOP.CPP" />
+    <ClCompile Include="VMDMORE.CPP" />
+    <ClCompile Include="VMDSOUND.CPP" />
+    <ClCompile Include="VMDTRACK.CPP" />
+    <ClCompile Include="VMDVESA.CPP" />
+    <ClCompile Include="VMDVIEW.CPP" />
+    <ClCompile Include="VOCAB.CPP" />
+    <ClCompile Include="WINDLL.CPP" />
+    <ClCompile Include="WINDOW.CPP" />
+    <ClCompile Include="WINFUNCS.CPP" />
+    <ClCompile Include="WINGFUNC.CPP" />
+    <ClCompile Include="WINHELP.CPP" />
+    <ClCompile Include="WINTEST.CPP" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ARRAY.HPP" />
+    <ClInclude Include="ASM2CPP.HPP" />
+    <ClInclude Include="AUDIO.HPP" />
+    <ClInclude Include="AUDIOW.HPP" />
+    <ClInclude Include="BLOB.HPP" />
+    <ClInclude Include="BREAKPT.HPP" />
+    <ClInclude Include="BUFFER.HPP" />
+    <ClInclude Include="BUFFERD.HPP" />
+    <ClInclude Include="BUFFERW.HPP" />
+    <ClInclude Include="CELASM.HPP" />
+    <ClInclude Include="CELOBJ.HPP" />
+    <ClInclude Include="COMPILER.HPP" />
+    <ClInclude Include="CONFIG.HPP" />
+    <ClInclude Include="CRITERR.HPP" />
+    <ClInclude Include="CRITERRD.HPP" />
+    <ClInclude Include="CRITERRW.HPP" />
+    <ClInclude Include="CURSOR.HPP" />
+    <ClInclude Include="CURSORD.HPP" />
+    <ClInclude Include="CURSORW.HPP" />
+    <ClInclude Include="DCOMP.HPP" />
+    <ClInclude Include="DEBUG.HPP" />
+    <ClInclude Include="DEBUGDSP.HPP" />
+    <ClInclude Include="DEBUGMNU.HPP" />
+    <ClInclude Include="DIALOG.HPP" />
+    <ClInclude Include="DOS.HPP" />
+    <ClInclude Include="DRAWLIST.HPP" />
+    <ClInclude Include="DRIVER.HPP" />
+    <ClInclude Include="ERRORMGR.HPP" />
+    <ClInclude Include="EVENT.HPP" />
+    <ClInclude Include="EVENTD.HPP" />
+    <ClInclude Include="EVENTW.HPP" />
+    <ClInclude Include="EXCEPT.HPP" />
+    <ClInclude Include="FAULT.HPP" />
+    <ClInclude Include="FONT.HPP" />
+    <ClInclude Include="GLOBALS.HPP" />
+    <ClInclude Include="GRAPH.HPP" />
+    <ClInclude Include="GRAPHBUF.HPP" />
+    <ClInclude Include="GRAPHMD.HPP" />
+    <ClInclude Include="GRAPHMGR.HPP" />
+    <ClInclude Include="GRAPHMW.HPP" />
+    <ClInclude Include="HEAPLEAK.HPP" />
+    <ClInclude Include="HOTKEY.HPP" />
+    <ClInclude Include="INFO.HPP" />
+    <ClInclude Include="INTEG.HPP" />
+    <ClInclude Include="INTFLAG.HPP" />
+    <ClInclude Include="INTRPT.HPP" />
+    <ClInclude Include="KBD.HPP" />
+    <ClInclude Include="KBDD.HPP" />
+    <ClInclude Include="KBDMGR.HPP" />
+    <ClInclude Include="KBDMGRD.HPP" />
+    <ClInclude Include="KBDMGRW.HPP" />
+    <ClInclude Include="KBDW.HPP" />
+    <ClInclude Include="KERNEL.HPP" />
+    <ClInclude Include="LANGUAGE.HPP" />
+    <ClInclude Include="LINE.HPP" />
+    <ClInclude Include="LIST.HPP" />
+    <ClInclude Include="LZSS.HPP" />
+    <ClInclude Include="MAGNIFY.HPP" />
+    <ClInclude Include="MATH.HPP" />
+    <ClInclude Include="MBOX.HPP" />
+    <ClInclude Include="MEMID.HPP" />
+    <ClInclude Include="MEMMGR.HPP" />
+    <ClInclude Include="MEMMGRD.HPP" />
+    <ClInclude Include="MEMMGRW.HPP" />
+    <ClInclude Include="MEMTYPE.HPP" />
+    <ClInclude Include="MESSAGE.HPP" />
+    <ClInclude Include="MIDI.HPP" />
+    <ClInclude Include="MONO.HPP" />
+    <ClInclude Include="MOUSE.HPP" />
+    <ClInclude Include="MOUSED.HPP" />
+    <ClInclude Include="MOUSEW.HPP" />
+    <ClInclude Include="MOVIE.HPP" />
+    <ClInclude Include="MOVIEW.HPP" />
+    <ClInclude Include="MSG.HPP" />
+    <ClInclude Include="MSGD.HPP" />
+    <ClInclude Include="MSGW.HPP" />
+    <ClInclude Include="NETMGR.HPP" />
+    <ClInclude Include="NETWORK.HPP" />
+    <ClInclude Include="NETWORKW.HPP" />
+    <ClInclude Include="NEWROOM.HPP" />
+    <ClInclude Include="NEWW.HPP" />
+    <ClInclude Include="OBJECT.HPP" />
+    <ClInclude Include="OBJINFO.HPP" />
+    <ClInclude Include="OPCODES.HPP" />
+    <ClInclude Include="PACKDATA.HPP" />
+    <ClInclude Include="PALETTE.HPP" />
+    <ClInclude Include="PALMGR.HPP" />
+    <ClInclude Include="PALMGRD.HPP" />
+    <ClInclude Include="PALMGRI.HPP" />
+    <ClInclude Include="PALMGRT.HPP" />
+    <ClInclude Include="PALMGRW.HPP" />
+    <ClInclude Include="PDEVICE.HPP" />
+    <ClInclude Include="PLANE.HPP" />
+    <ClInclude Include="PLIST.HPP" />
+    <ClInclude Include="PMACHINE.HPP" />
+    <ClInclude Include="POINT.HPP" />
+    <ClInclude Include="POLYFUSE.HPP" />
+    <ClInclude Include="POLYGON.HPP" />
+    <ClInclude Include="PTRDEV.HPP" />
+    <ClInclude Include="QUEUE.HPP" />
+    <ClInclude Include="RATIO.HPP" />
+    <ClInclude Include="RECORD.HPP" />
+    <ClInclude Include="RECT.HPP" />
+    <ClInclude Include="RECTLIST.HPP" />
+    <ClInclude Include="REMAP.HPP" />
+    <ClInclude Include="RESOURCE.HPP" />
+    <ClInclude Include="RESTART.HPP" />
+    <ClInclude Include="RESTYPE.HPP" />
+    <ClInclude Include="RGB.HPP" />
+    <ClInclude Include="ROBOT.HPP" />
+    <ClInclude Include="SAVEABLE.HPP" />
+    <ClInclude Include="SAVEGAME.HPP" />
+    <ClInclude Include="SCALE.HPP" />
+    <ClInclude Include="SCI.HPP" />
+    <ClInclude Include="SCID.HPP" />
+    <ClInclude Include="SCIDLG.HPP" />
+    <ClInclude Include="SCIDLL.HPP" />
+    <ClInclude Include="SCII.HPP" />
+    <ClInclude Include="SCIWIN.HPP" />
+    <ClInclude Include="SCREEN.HPP" />
+    <ClInclude Include="SCRIPT.HPP" />
+    <ClInclude Include="SELECT.HPP" />
+    <ClInclude Include="SELECTOR.HPP" />
+    <ClInclude Include="SENDSTAC.HPP" />
+    <ClInclude Include="SERIAL.HPP" />
+    <ClInclude Include="SHIFTPAL.HPP" />
+    <ClInclude Include="SHWSTYLE.HPP" />
+    <ClInclude Include="SI.HPP" />
+    <ClInclude Include="SILIST.HPP" />
+    <ClInclude Include="SOL.HPP" />
+    <ClInclude Include="SOUND.HPP" />
+    <ClInclude Include="SOUNDWIN.HPP" />
+    <ClInclude Include="STAMPVER.HPP" />
+    <ClInclude Include="STRING.HPP" />
+    <ClInclude Include="SYNC.HPP" />
+    <ClInclude Include="TEXTID.HPP" />
+    <ClInclude Include="TIME.HPP" />
+    <ClInclude Include="TIMED.HPP" />
+    <ClInclude Include="TIMEW.HPP" />
+    <ClInclude Include="VGA.HPP" />
+    <ClInclude Include="VIDEO.HPP" />
+    <ClInclude Include="VMD.HPP" />
+    <ClInclude Include="VMDIBM.HPP" />
+    <ClInclude Include="VMDLIBS.HPP" />
+    <ClInclude Include="VMDMDO.HPP" />
+    <ClInclude Include="VOCAB.HPP" />
+    <ClInclude Include="WINCLASS.HPP" />
+    <ClInclude Include="WINDOW.HPP" />
+    <ClInclude Include="WINGFUNC.HPP" />
+    <ClInclude Include="WINODEF.HPP" />
+    <ClInclude Include="WINTHUNK.HPP" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

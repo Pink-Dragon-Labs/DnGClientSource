@@ -1,0 +1,83 @@
+File AUDIO.CPP:
+        map = resMgr->Get(MemResMap, SFXMODNUM);
+        map = resMgr->Get(MemResMap, module);
+File AUDIOWIN.CPP:
+        mapID = resMgr->Get(MemResMap, SFXMODNUM);
+        mapID = resMgr->Get(MemResMap, module);
+File NEWROOM.CPP:
+                        resMgr->Get(MemResChunk, roomNum);
+File CURSORW.CPP:
+        resMgr->Get ( MemResView, v );
+                resMgr->Get ( MemResView, v );
+File OBJECT.CPP:
+        SCIWord* op = (SCIWord*) *resMgr->Get(MemResVocab, PROPOFS_VOCAB);
+File RESOURCE.CPP:
+        MemType resType = resMgr->GetExtType(ext);
+                MemID resID = resMgr->Get(resType, resNum);
+                pm.acc = (Acc) resMgr->Get((MemType) arg(1), (ResNum) arg(count));
+                        resMgr->Get(resType, resId);
+File VOCAB.CPP:
+        MemID dh = resMgr->Get(MemResVocab, moduleNum);
+File SYNC.CPP:
+        syncID = resMgr->Get(MemResSync, num);
+        map = resMgr->Get(MemResMap, module);
+File SI.CPP:
+           viewID = resMgr->Get(MemResView, newView);
+                MemID viewID = resMgr->Get(MemResView, newView);
+File SOUND.CPP:
+                                resMgr->Get(MemResSound, soundNum);
+                                sHandle = resMgr->Get(MemResSound, soundNum);
+                resMgr->Get(MemResSound,soundNum);
+                        if(!(sHandle = resMgr->Get(MemResSound,soundNum))) {
+                                                    !(sHandle = resMgr->Get(MemResWAVE,soundNum)))
+                                                            !(sHandle = resMgr->Get(MemResAudio,soundNum)))
+File SOUNDD.CPP:
+                patchID = resMgr->Get(MemResPatch, patchNum & 0x7F, patchNum & 0x80);
+File SCRIPT.CPP:
+        ScriptHeapID heap = resMgr->Get(MemResHeap, n, lock);
+        ScriptHunkID hunk = resMgr->Get(MemResHunk, n, lock);
+        ScriptHunkID hunk = resMgr->Get(MemResHunk, script->number, lock);
+        MemID sciClassTblID = resMgr->Get(MemResVocab, CLASSTBL_VOCAB);
+File RESTYPE.CPP:
+                MemID resMap = resMgr->GetResMapID(n);
+File SAVEGAME.CPP:
+                                MemID id = resMgr->Get(type,lockedResNum[lockedCount],False);
+File MOTION.CPP:
+                int nLoops = GetNumLoops(resMgr->Get(MemResView,
+File MESSAGE.CPP:
+        MemID                   id = resMgr->Get(MemResMsg, stack.module);
+        MemID                   id = resMgr->Get(MemResMsgTranslation, curModule);
+File FONT.CPP:
+        resMgr->Get ( MemResView, bitmap.View() );
+        MemID fontID = resMgr->Get(MemResFont,font);
+                MemID fontID = resMgr->Get(MemResFont,font);
+        MemID fontID = resMgr->Get(MemResFont,font);
+                MemID fontID = resMgr->Get(MemResFont,font);
+File GRAPH.CPP:
+        resMgr->Get ( MemResView, view );
+                        resMgr->Get(MemResView, arg(2));
+                        resMgr->Get(MemResView, arg(3));
+                        if ( GetNumLoops ( resMgr->Get ( MemResView, view + action ) ) > 4 ) {
+                                if ( GetNumLoops ( resMgr->Get ( MemResView, view + action ) ) > 8 ) {
+        pm.acc = GetNumLoops(resMgr->Get(MemResView,view));
+        pm.acc = GetNumCels(resMgr->Get(MemResView,view),loop);
+                resMgr->Get ( MemResView, viewB );
+        resMgr->Get ( MemResView, viewA );
+File CELOBJ.CPP:
+        MemID viewID = resMgr->Get(MemResView, bitmap.View());
+        MemID viewID = resMgr->Get(MemResView, bitmap.View());
+        MemID viewID = resMgr->Get(MemResView, bitmap.View());
+                viewID = resMgr->Get(MemResView, 0);
+                viewID = resMgr->Get(MemResView, bitmap.View());
+        MemID viewID = resMgr->Get(MemResView, bitmap.View());
+        MemID picID = resMgr->Get(MemResPic, bitmap.Pic());
+        MemID picID = resMgr->Get(MemResPic, bitmap.Pic());
+File PALETTE.CPP:
+                                palID = resMgr->Get(MemResPalette, arg(2));
+                                palID = resMgr->Get(MemResPalette, arg(2));
+                                palID = resMgr->Get(MemResPalette, arg(2));
+                                palID = resMgr->Get(MemResPalette, arg(2));
+                                palID = resMgr->Get(MemResPalette, arg(2));
+                        MemID palID = resMgr->Get(MemResPalette, arg(2));
+File PALMGRI.CPP:
+        MemID palID = resMgr->Get(MemResPalette, 999);

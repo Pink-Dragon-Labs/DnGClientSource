@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f48b2415-c3ff-428d-abb1-cb6c79456cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f05bed5c-2100-431b-89c7-51d3c4701537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="New Interface Code">
+      <UniqueIdentifier>{135c7a4c-90c7-4c34-b836-ecc9e6387969}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="New Interface Code\Header Files No. 1">
+      <UniqueIdentifier>{e6b62a5b-d059-4ce2-be6d-476c30bb482f}</UniqueIdentifier>
+      <Extensions>hpp</Extensions>
+    </Filter>
+    <Filter Include="New Interface Code\Resource Files">
+      <UniqueIdentifier>{0f98106b-3dd1-4e6c-aa92-7e3d40b6840a}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{c674c79d-fca4-4c0e-9d17-a205e6ad3759}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Arglist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Breakpt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bufferd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bufferw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Celobj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Celobj1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Celobj2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Celobja.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursorw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debugdsp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debugmnu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Drawlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Eventw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fonti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphmw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hotkey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Integ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kbdmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kbdmgrw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kbdw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Language.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Longint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lzss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Magnify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memmgre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memmgrw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memtype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mousew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Moview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Msg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Msgw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Networkw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Newroom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Packdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Palette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Palmgri.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Palmgrt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Palmgrw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Picture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Platfrmw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Polyfuse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Polygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ratio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Remap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Restype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sciw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sciwin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sendstac.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shiftpal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shwstyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Si.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Silist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Textid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vocab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Winfuncs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Winthunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arrayC.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="BuyDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="C++SCI.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="chanlist.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="charmake.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="charsel.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="chatdisplay.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="chatpanel.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatSettings.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="chatverbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="ChngPass.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="combatverbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredclick.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="diskid32.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgWnd.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="drag-n-drop.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="dragworldobject.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="EventVerbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="evict.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="friendmgr.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSettings.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupList.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupVerbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="GspSettings.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpVerbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="inventorydlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="invlistctrl.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemList.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="LogInDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="loginwnd.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="LookAt.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="MailMgr.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="MailPanel.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="MailVerbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="mainpanel.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="MakeItemDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="minrestoreclose.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="mousewheel.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="msgfunctions.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="namehealth.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionVerbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="packdataC.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivateTells.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="QuantityDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="RepairDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="scimfc.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="sciwnd.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SellDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleInstance.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinAlert.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinattr.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinbitmap.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinbtn.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinctrl.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinedit.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinform.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinlistctrl.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinobj.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinPassword.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinscroll.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinspcbtn.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skintglbtn.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="skinwindow.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SpellDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SpellVerbs.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TabCtrl.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TalkDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TeleportDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="ToonSettings.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TreasureDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDialog.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbQueue.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="WhatsNewDlg.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="wholist.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+    <ClCompile Include="windowmgr.cpp">
+      <Filter>New Interface Code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sciw.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Array.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BASETSD.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files\Microsoft Visual Studio\VC98\Include\BASETSD.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Breakpt.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bufferd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bufferw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Celasm.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Celobj.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursord.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursorw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dcomp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debugdsp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Debugmnu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dos.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Drawlist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Eventw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FGWIN.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphmgr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphmw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hotkey.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Integ.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kbd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kbdmgr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kbdmgrw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kbdw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="List.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lzss.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Magnify.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mbox.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memid.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memmgr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memmgrw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memtype.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mmail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mousew.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Moview.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Msg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Msgw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Networkw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Newroom.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Objinfo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Opcodes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Packdata.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Palette.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Palmgr.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Palmgri.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Palmgrt.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Palmgrw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Plist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pmachine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Polyfuse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Polygon.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ptrdev.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ratio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectlist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Remap.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Restype.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rgb.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scale.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sci.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scidlg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scidllws.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sciwin.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Selector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sendstac.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shiftpal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shwstyle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Si.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Silist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sol.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="String.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sync.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Textid.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timew.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vocab.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="W32sut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Winodef.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Winthunk.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arrayC.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="BuyDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="C++SCI.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="chanlist.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="charmake.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="charsel.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="chatdisplay.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="chatpanel.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatSettings.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="chatverbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="ChngPass.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="combatverbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredclick.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskID32.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="dlgevents.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgWnd.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="drag-n-drop.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="dragworldobject.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="EventVerbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="evict.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="friendmgr.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSettings.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupList.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupVerbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="GspSettings.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpVerbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="inventorydlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="invlistctrl.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemList.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="LogInDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="loginwnd.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="LookAt.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="mailmgr.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="MailPanel.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="MailVerbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="mainpanel.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="MakeItemDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="minrestoreclose.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="mousewheel.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="msgfunctions.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="namehealth.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionVerbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="packdataC.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateTells.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="QuantityDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="RepairDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="scimfc.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="sciwnd.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="SellDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleInstance.h">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinAlert.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinattr.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinbitmap.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinbtn.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinctrl.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinedit.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinform.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinlistctrl.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinobj.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinPassword.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinscroll.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinspcbtn.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skintextfield.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skintglbtn.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="skinwindow.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellVerbs.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="TabCtrl.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="TalkDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="TeleportDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="ToonSettings.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="TreasureDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDialog.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbQueue.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="WhatsNewDlg.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="wholist.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="windowmgr.hpp">
+      <Filter>New Interface Code\Header Files No. 1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\blank.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\FriendBusy.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\FriendGo.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\FriendStop.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\gobuttons.bmp">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\icon1.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\Realm.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\spelliconbar.bmp">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\wearing.ico">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Library\misc.lib">
+      <Filter>Libraries</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Res\do.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\drop.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\exitdown.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\exitleft.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\exitlright.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\exitup.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\putin.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\spell.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\sword.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\verb.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Res\walk.cur">
+      <Filter>New Interface Code\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\WINNT\system32\activeskin.ocx">
+      <Filter>Libraries</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+DLGINCLUDE RCDATA DISCARDABLE
+BEGIN
+    "SCIDLG.H\0"
+END
+
+DLG_CONFIRMMIDI DIALOG FIXED 20, 70, 245, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "MS Sans Serif"
+BEGIN
+    CONTROL         " Check here if you do not wish to see this message again.", 
+                    DLG_CHECKBOX, "Button", BS_AUTOCHECKBOX, 11, 66, 211, 16
+    PUSHBUTTON      "Continue", IDOK, 60, 95, 40, 14
+    PUSHBUTTON      "Quit", IDCANCEL, 125, 95, 40, 14
+    LTEXT           "An incorrect MIDI device driver installation has been detected.  You can install a driver by selecting the drivers option from the control panel and making the appropriate driver selection for your sound card and then setting up the MIDI Mapper.", 
+                    -1, 18, 9, 218, 36
+    LTEXT           "If you continue, then MIDI music will play through the PC speaker.", 
+                    101, 17, 48, 216, 20
+END
+
+DLG_CONFIRMDAC DIALOG FIXED 25, 70, 233, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "MS Sans Serif"
+BEGIN
+    CONTROL         " Check here if you do not wish to see this message again.", 
+                    DLG_CHECKBOX, "Button", BS_AUTOCHECKBOX, 11, 66, 211, 16
+    PUSHBUTTON      "Continue", IDOK, 60, 95, 40, 14
+    PUSHBUTTON      "Quit", IDCANCEL, 125, 95, 40, 14
+    LTEXT           "You do not have a wave output device driver installed.  You can install a driver by selecting the drivers option from the control panel and making the appropriate driver selection for your sound board.", 
+                    -1, 18, 14, 201, 33
+    LTEXT           "If you continue, digitized sound effects will not be heard.", 
+                    101, 19, 49, 199, 15
+END
+
+DLG_REQUIREDAC DIALOG FIXED 25, 70, 233, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "MS Sans Serif"
+BEGIN
+    CONTROL         " Check here if you do not wish to see this message again.", 
+                    DLG_CHECKBOX, "Button", BS_AUTOCHECKBOX | NOT WS_VISIBLE, 
+                    7, 61, 207, 16
+    PUSHBUTTON      "Continue", IDOK, 5, 77, 40, 14, NOT WS_VISIBLE
+    PUSHBUTTON      "Quit", IDCANCEL, 96, 77, 40, 14
+    LTEXT           "Your system does not have a wave output device driver installed.  You can install a driver by selecting the drivers option from the control panel and making the appropriate driver selection for your sound card.", 
+                    -1, 18, 14, 203, 33
+    LTEXT           "This game requires a wave output device driver.", 101, 
+                    18, 51, 181, 15
+END

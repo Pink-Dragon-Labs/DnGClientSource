@@ -1,0 +1,40 @@
+; 203.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ARCH_DUN_N       15)
+(define ARCH_N           10)
+(define BACK_N            6)
+(define BONES_N          13)
+(define COLUMN_DUN_N     16)
+(define CRACK_DUN_N      17)
+(define EDGE_N           12)
+(define FLOOR_DUN_N      18)
+(define FLOOR_N           9)
+(define MOSS1_DUN_N      21)
+(define MOSS1_N          19)
+(define MOSS2_DUN_N      22)
+(define MOSS2_N          20)
+(define MOSS_N           11)
+(define MUSHRMS_DUN_N    23)
+(define MUSHRM_DUN_N     24)
+(define MUSH_N            5)
+(define ROCK_DUN_N       25)
+(define ROCK_EDGE_DUN_N  26)
+(define ROCK_N            8)
+(define SIDE_N            7)
+(define SKULL_DUN_N      27)
+(define SKULL_N          14)
+(define STALACTITE_N     28)
+(define STALAGMITE_N     29)
+(define STALC_N           2)
+(define STALG_N           3)
+(define WALL_DUN_N       30)
+(define WALL_N            1)
+(define WEB1_DUN_N       31)
+(define WEB2_DUN_N       32)
+(define WEB_N             4)
+
+; CASES
+

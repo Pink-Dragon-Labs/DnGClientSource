@@ -1,0 +1,34 @@
+; 23.SHM -- Produced by SCI Message Editor 4.010
+; This file should only be edited with ME
+
+; NOUNS
+
+(define PEOPLE            1)
+(define TXT               2)
+
+; CASES
+
+
+(define ALL1              8)
+
+(define ALL2              9)
+
+(define ALL3             10)
+
+(define C_ASK_ABOUT       1)
+
+(define C_ELSE            2)
+
+(define C_ENOUGH          3)
+
+(define C_GIFT            4)
+
+(define C_SPELL           7)
+
+(define C_UNWANTED        5)
+
+(define C_UNWANTED2      11)
+
+(define C_UNWANTED3      12)
+
+(define C_WEAPON          6)

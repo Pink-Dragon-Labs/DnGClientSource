@@ -1,0 +1,3471 @@
+(classdef Object
+	script# 60000
+	class# 0
+	super# 65535
+	file# "netobj.sc"
+
+	(properties
+		-objID- 4660
+		-size- 12
+		-propDict- 0
+		-methDict- 0
+		-classScript- 0
+		-script- 0
+		-super- -1
+		-info- -32768
+		name 0
+		scratch 0
+		pModule -1
+		pLine -1
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		show
+		perform
+		isClass
+		isKindOf
+		isMemberOf
+		respondsTo
+		yourself
+		handleMsg
+		handleError
+	)
+)
+
+
+(classdef Collection
+	script# 60004
+	class# 1
+	super# 0
+	file# "collect.sc"
+
+	(properties
+		-size- 15
+		-script- 1
+		-super- 0
+		elements 0
+		size 0
+		nextNode 0
+	)
+
+	(methods
+		new
+		doit
+		dispose
+		add
+		delete
+		eachElementDo
+		firstTrue
+		firstEqual
+		allTrue
+		contains
+		isEmpty
+		first
+		next
+		release
+		isDuplicate
+	)
+)
+
+
+(classdef List
+	script# 60004
+	class# 2
+	super# 1
+	file# "collect.sc"
+
+	(properties
+		-script- 2
+		-super- 1
+	)
+
+	(methods
+		at
+		last
+		prev
+		addToFront
+		addToEnd
+		addAfter
+		addBefore
+		indexOf
+		union
+		intersection
+		duplicate
+		replace
+	)
+)
+
+
+(classdef WDragger
+	script# 60099
+	class# 3
+	super# 0
+	file# "classdef.sc"
+
+	(properties
+		-size- 9
+		-script- 3
+		-super- 0
+		pObj 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Code
+	script# 60000
+	class# 4
+	super# 0
+	file# "netobj.sc"
+
+	(properties
+		-script- 4
+		-super- 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Set
+	script# 60004
+	class# 5
+	super# 2
+	file# "collect.sc"
+
+	(properties
+		-script- 5
+		-super- 2
+	)
+
+	(methods
+		isDuplicate
+	)
+)
+
+
+(classdef Dialog
+	script# 60013
+	class# 6
+	super# 5
+	file# "dialog.sc"
+
+	(properties
+		-size- 36
+		-script- 6
+		-super- 5
+		title 0
+		font 0
+		plane 0
+		curItem 0
+		caller 0
+		seconds 0
+		lastSeconds 0
+		ticks 0
+		state 0
+		eatTheMice 0
+		modal 1
+		hidden 0
+		keepDialog 0
+		priority 0
+		savedCursor 0
+		prevItem 0
+		selectHandler 0
+		curShowMouseObj 0
+		retObject 0
+		retSelector 0
+		disposeList 0
+	)
+
+	(methods
+		new
+		doit
+		dispose
+		show
+		delete
+		open
+		handleEvent
+		process
+		returnHandler
+		draw
+		erase
+		addItem
+		posnItem
+		selectItem
+		advance
+		retreat
+		check
+		cue
+		setSize
+		expand
+		contract
+		center
+		moveTo
+		addToDisposeList
+		hide
+		setBackground
+		isHidden
+	)
+)
+
+
+(classdef ScreenDialog
+	script# 60020
+	class# 7
+	super# 6
+	file# "game.sc"
+
+	(properties
+		-script- 7
+		-super- 6
+	)
+
+	(methods
+		dispose
+		open
+		handleEvent
+		returnHandler
+		draw
+	)
+)
+
+
+(classdef Sequence
+	script# 60028
+	class# 8
+	super# 0
+	file# "sequence.sc"
+
+	(properties
+		-size- 14
+		-script- 8
+		-super- 0
+		data 0
+		nextNode 0
+	)
+
+	(methods
+		new
+		next
+		prev
+		begin
+		end
+		set
+		value
+	)
+)
+
+
+(classdef Queue
+	script# 60097
+	class# 9
+	super# 2
+	file# "queue.sc"
+
+	(properties
+		-script- 9
+		-super- 2
+	)
+
+	(methods
+		dispose
+		put
+		get
+		peek
+	)
+)
+
+
+(classdef Event
+	script# 60005
+	class# 10
+	super# 0
+	file# "event.sc"
+
+	(properties
+		-size- 23
+		-script- 10
+		-super- 0
+		type 0
+		message 0
+		modifiers 0
+		x 0
+		y 0
+		z 0
+		yaw 0
+		pitch 0
+		roll 0
+		claimed 0
+		plane 0
+	)
+
+	(methods
+		new
+		localize
+		globalize
+	)
+)
+
+
+(classdef Script
+	script# 60007
+	class# 11
+	super# 0
+	file# "script.sc"
+
+	(properties
+		-size- 27
+		-script- 11
+		-super- 0
+		client 0
+		state -1
+		start 0
+		timer 0
+		cycles 0
+		seconds 0
+		lastSeconds 0
+		ticks 0
+		lastTicks 0
+		register 0
+		script 0
+		caller 0
+		next 0
+		number 0
+		pRoom 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		changeState
+		cue
+		handleEvent
+		setScript
+	)
+)
+
+
+(classdef DemonsScript
+	script# 60007
+	class# 12
+	super# 11
+	file# "script.sc"
+
+	(properties
+		-script- 12
+		-super- 11
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef Cue
+	script# 60007
+	class# 13
+	super# 0
+	file# "script.sc"
+
+	(properties
+		-size- 16
+		-script- 13
+		-super- 0
+		cuee 0
+		cuer 0
+		register 0
+		pList 0
+	)
+
+	(methods
+		doit
+		dispose
+		handleError
+	)
+)
+
+
+(classdef EventHandler
+	script# 60080
+	class# 14
+	super# 5
+	file# "evthndlr.sc"
+
+	(properties
+		-script- 14
+		-super- 5
+	)
+
+	(methods
+		handleEvent
+	)
+)
+
+
+(classdef Cast
+	script# 60080
+	class# 15
+	super# 14
+	file# "evthndlr.sc"
+
+	(properties
+		-size- 16
+		-script- 15
+		-super- 14
+		plane 0
+	)
+
+	(methods
+		dispose
+	)
+)
+
+
+(classdef Array
+	script# 60002
+	class# 16
+	super# 0
+	file# "array.sc"
+
+	(properties
+		-size- 14
+		-script- 16
+		-super- 0
+		data 0
+		type -1
+	)
+
+	(methods
+		new
+		init
+		dispose
+		with
+		newWith
+		at
+		copyToFrom
+		copy
+		compToFrom
+		compare
+		fill
+		move
+		size
+		indexOf
+		callKernel
+	)
+)
+
+
+(classdef IntArray
+	script# 60002
+	class# 17
+	super# 16
+	file# "array.sc"
+
+	(properties
+		-script- 17
+		-super- 16
+		type 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef IDArray
+	script# 60002
+	class# 18
+	super# 16
+	file# "array.sc"
+
+	(properties
+		-script- 18
+		-super- 16
+		type 1
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ByteArray
+	script# 60002
+	class# 19
+	super# 16
+	file# "array.sc"
+
+	(properties
+		-script- 19
+		-super- 16
+		type 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Rectangle
+	script# 60003
+	class# 20
+	super# 0
+	file# "rect.sc"
+
+	(properties
+		-size- 19
+		-script- 20
+		-super- 0
+		top 0
+		left 0
+		bottom 0
+		right 0
+		canTrack 0
+		canDrag 0
+		state 0
+	)
+
+	(methods
+		init
+		with
+		set
+		copy
+		moveTo
+		posn
+		moveBy
+		center
+		centerIn
+		centerOn
+		width
+		widen
+		height
+		heighten
+		expand
+		contract
+		sizeToStr
+		sizeToCel
+		celRect
+		contains
+		intersects
+		intersection
+		union
+		isEmpty
+		howFar
+		midPoint
+		handleEvent
+		onMe
+		track
+		trackDoit
+		drag
+		dragDoit
+		drawSelected
+		scale
+	)
+)
+
+
+(classdef String
+	script# 60001
+	class# 21
+	super# 19
+	file# "string.sc"
+
+	(properties
+		-script- 21
+		-super- 19
+		type 3
+	)
+
+	(methods
+		init
+		with
+		newWith
+		at
+		compToFrom
+		compare
+		size
+		indexOf
+		callKernel
+		format
+		newCopies
+		cat
+		translate
+		all
+		upper
+		lower
+		subStr
+		left
+		right
+		getToken
+		strip
+		strIndex
+		asInteger
+		strMax
+		weigh
+	)
+)
+
+
+(classdef GlobalTimers
+	script# 60022
+	class# 22
+	super# 5
+	file# "timer.sc"
+
+	(properties
+		-script- 22
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef WaitingTimers
+	script# 60022
+	class# 23
+	super# 5
+	file# "timer.sc"
+
+	(properties
+		-script- 23
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Timer
+	script# 60022
+	class# 24
+	super# 0
+	file# "timer.sc"
+
+	(properties
+		-size- 19
+		-script- 24
+		-super- 0
+		cycleCnt -1
+		seconds -1
+		ticks -1
+		lastTime -1
+		client 0
+		cueSelector 199
+		pRoom 0
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		set
+		setCycle
+		setReal
+		delete
+		setTicks
+		cue
+	)
+)
+
+
+(classdef GlobalTimer
+	script# 60022
+	class# 25
+	super# 24
+	file# "timer.sc"
+
+	(properties
+		-script- 25
+		-super- 24
+	)
+
+	(methods
+		init
+		delete
+	)
+)
+
+
+(classdef TimeOut
+	script# 60022
+	class# 26
+	super# 0
+	file# "timer.sc"
+
+	(properties
+		-size- 13
+		-script- 26
+		-super- 0
+		timeLeft 0
+	)
+
+	(methods
+		doit
+		set
+	)
+)
+
+
+(classdef Stack
+	script# 60096
+	class# 27
+	super# 2
+	file# "stack.sc"
+
+	(properties
+		-size- 16
+		-script- 27
+		-super- 2
+		top 0
+	)
+
+	(methods
+		push
+		pop
+	)
+)
+
+
+(classdef Clut
+	script# 60018
+	class# 28
+	super# 19
+	file# "clut.sc"
+
+	(properties
+		-script- 28
+		-super- 19
+	)
+
+	(methods
+		new
+		init
+		map
+	)
+)
+
+
+(classdef LongInt
+	script# 60098
+	class# 29
+	super# 0
+	file# "longint.sc"
+
+	(properties
+		-size- 14
+		-script- 29
+		-super- 0
+		lowWord 0
+		hiWord 0
+	)
+
+	(methods
+		new
+		set
+		setLong
+		add
+		addLong
+		sub
+		subLong
+		mul
+		mulLong
+		div
+		divLong
+		bitAND
+		bitANDLong
+		bitOR
+		bitORLong
+		bitXOR
+		bitXORLong
+		bitNOT
+		bitSHL
+		bitSHR
+		setBit
+		resetBit
+		toggleBit
+		getBit
+		swap
+		negate
+		abs
+		equal
+		equalLong
+		less
+		lessLong
+		lessEqual
+		lessEqualLong
+		greater
+		greaterLong
+		greaterEqual
+		greaterEqualLong
+		asStr
+		fromStr
+	)
+)
+
+
+(classdef PackedData
+	script# 60092
+	class# 30
+	super# 19
+	file# "packdata.sc"
+
+	(properties
+		-size- 19
+		-script- 30
+		-super- 19
+		getIndex 0
+		putIndex 0
+		bitPutIndex 0
+		bitGetIndex 0
+		pIsBigEndian 0
+	)
+
+	(methods
+		new
+		dispose
+		getByte
+		getWord
+		getLong
+		getArray
+		getBits
+		getString
+		putByte
+		putWord
+		putLong
+		putArray
+		putBits
+		putString
+		peek
+	)
+)
+
+
+(classdef Sound
+	script# 60012
+	class# 31
+	super# 0
+	file# "sound.sc"
+
+	(properties
+		-size- 25
+		-script- 31
+		-super- 0
+		pHandle -1
+		handle 0
+		number 0
+		nodePtr 0
+		loop 0
+		priority 0
+		vol 0
+		signal 0
+		min 0
+		sec 0
+		frame 0
+		flags 0
+		dataInc 0
+	)
+
+	(methods
+		dispose
+		play
+		stop
+	)
+)
+
+
+(classdef MusicMgr
+	script# 60012
+	class# 32
+	super# 31
+	file# "sound.sc"
+
+	(properties
+		-script- 32
+		-super- 31
+	)
+
+	(methods
+	)
+)
+
+
+(classdef PanHandler
+	script# 60012
+	class# 33
+	super# 0
+	file# "sound.sc"
+
+	(properties
+		-size- 14
+		-script- 33
+		-super- 0
+		pObject 0
+		pSoundID 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef SoundMgr
+	script# 60012
+	class# 34
+	super# 0
+	file# "sound.sc"
+
+	(properties
+		-script- 34
+		-super- 0
+	)
+
+	(methods
+		doit
+		play
+	)
+)
+
+
+(classdef Styler
+	script# 60038
+	class# 35
+	super# 0
+	file# "styler.sc"
+
+	(properties
+		-size- 21
+		-script- 35
+		-super- 0
+		style 0
+		plane 0
+		seconds 1
+		back -1
+		priority 200
+		animate 0
+		refFrame 0
+		divisions 0
+		captureList 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Scaler
+	script# 60036
+	class# 36
+	super# 4
+	file# "scaler.sc"
+
+	(properties
+		-size- 21
+		-script- 36
+		-super- 4
+		client 0
+		frontY 190
+		backY 0
+		frontSize 100
+		backSize 0
+		slopeNum 0
+		slopeDen 0
+		const 0
+		yLast -999
+	)
+
+	(methods
+		init
+		doit
+	)
+)
+
+
+(classdef Motion
+	script# 60008
+	class# 37
+	super# 0
+	file# "motion.sc"
+
+	(properties
+		-size- 28
+		-script- 37
+		-super- 0
+		client 0
+		caller 0
+		x 0
+		y 0
+		dx 0
+		dy 0
+		b_moveCnt 0
+		b_i1 0
+		b_i2 0
+		b_di 0
+		b_xAxis 0
+		b_incr 0
+		completed 0
+		xLast 0
+		yLast 0
+		pImmediateCue 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveDone
+		setTarget
+		onTarget
+		motionCue
+	)
+)
+
+
+(classdef MoveTo
+	script# 60008
+	class# 38
+	super# 37
+	file# "motion.sc"
+
+	(properties
+		-script- 38
+		-super- 37
+	)
+
+	(methods
+		onTarget
+	)
+)
+
+
+(classdef Cycle
+	script# 60044
+	class# 39
+	super# 0
+	file# "cycle.sc"
+
+	(properties
+		-size- 18
+		-script- 39
+		-super- 0
+		client 0
+		caller 0
+		cycleDir 1
+		cycleCnt 0
+		completed 0
+		clientLastCel 0
+	)
+
+	(methods
+		init
+		dispose
+		nextCel
+		cycleDone
+		motionCue
+	)
+)
+
+
+(classdef Forward
+	script# 60044
+	class# 40
+	super# 39
+	file# "cycle.sc"
+
+	(properties
+		-script- 40
+		-super- 39
+	)
+
+	(methods
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef Walk
+	script# 60044
+	class# 41
+	super# 40
+	file# "cycle.sc"
+
+	(properties
+		-script- 41
+		-super- 40
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef CycleTo
+	script# 60045
+	class# 42
+	super# 39
+	file# "cycleto.sc"
+
+	(properties
+		-size- 19
+		-script- 42
+		-super- 39
+		endCel 0
+	)
+
+	(methods
+		init
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef EndLoop
+	script# 60045
+	class# 43
+	super# 42
+	file# "cycleto.sc"
+
+	(properties
+		-script- 43
+		-super- 42
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef BegLoop
+	script# 60045
+	class# 44
+	super# 42
+	file# "cycleto.sc"
+
+	(properties
+		-script- 44
+		-super- 42
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef Reverse
+	script# 60046
+	class# 45
+	super# 39
+	file# "reverse.sc"
+
+	(properties
+		-script- 45
+		-super- 39
+		cycleDir -1
+	)
+
+	(methods
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef Chase
+	script# 60042
+	class# 46
+	super# 37
+	file# "chase.sc"
+
+	(properties
+		-size- 30
+		-script- 46
+		-super- 37
+		who 0
+		distance 0
+	)
+
+	(methods
+		init
+		doit
+		setTarget
+		onTarget
+	)
+)
+
+
+(classdef Follow
+	script# 60052
+	class# 47
+	super# 46
+	file# "follow.sc"
+
+	(properties
+		-script- 47
+		-super- 46
+		distance 20
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Approach
+	script# 60053
+	class# 48
+	super# 46
+	file# "approach.sc"
+
+	(properties
+		-script- 48
+		-super- 46
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Wander
+	script# 60043
+	class# 49
+	super# 37
+	file# "wander.sc"
+
+	(properties
+		-size- 29
+		-script- 49
+		-super- 37
+		distance 30
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+		setTarget
+		onTarget
+	)
+)
+
+
+(classdef Point
+	script# 60100
+	class# 50
+	super# 0
+	file# "points.sc"
+
+	(properties
+		-size- 14
+		-script- 50
+		-super- 0
+		x -1
+		y -1
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Line
+	script# 60100
+	class# 51
+	super# 0
+	file# "points.sc"
+
+	(properties
+		-size- 16
+		-script- 51
+		-super- 0
+		pX1 -1
+		pY1 -1
+		pX2 -1
+		pY2 -1
+	)
+
+	(methods
+		new
+		init
+		clip
+		basicClip
+	)
+)
+
+
+(classdef Polygon
+	script# 60081
+	class# 52
+	super# 0
+	file# "polygon.sc"
+
+	(properties
+		-size- 17
+		-script- 52
+		-super- 0
+		size 0
+		points 0
+		type 1
+		dynamic 0
+		pDispose 0
+	)
+
+	(methods
+		new
+		init
+		dispose
+		onMe
+		copy
+		scale
+		moveBy
+		display
+		clipTo
+		fromRect
+	)
+)
+
+
+(classdef PolyPath
+	script# 60082
+	class# 53
+	super# 37
+	file# "polypath.sc"
+
+	(properties
+		-size- 33
+		-script- 53
+		-super- 37
+		value 2
+		points 0
+		finalX 0
+		finalY 0
+		obstacles 0
+	)
+
+	(methods
+		init
+		dispose
+		moveDone
+		setTarget
+	)
+)
+
+
+(classdef Jump
+	script# 60048
+	class# 54
+	super# 37
+	file# "jump.sc"
+
+	(properties
+		-size- 35
+		-script- 54
+		-super- 37
+		x 20000
+		y 20000
+		gx 0
+		gy 3
+		xStep 20000
+		yStep 0
+		signal 0
+		waitApogeeX 1
+		waitApogeeY 1
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+		motionCue
+		setTest
+	)
+)
+
+
+(classdef JumpTo
+	script# 60048
+	class# 55
+	super# 54
+	file# "jump.sc"
+
+	(properties
+		-script- 55
+		-super- 54
+	)
+
+	(methods
+		init
+		moveDone
+	)
+)
+
+
+(classdef BitMap
+	script# 60037
+	class# 56
+	super# 20
+	file# "bitmap.sc"
+
+	(properties
+		-size- 38
+		-script- 56
+		-super- 20
+		priority 0
+		plane 0
+		x 0
+		y 0
+		z 0
+		scaleX 128
+		scaleY 128
+		maxScale 128
+		fixPriority 0
+		seenRect 0
+		view -1
+		loop 0
+		cel 0
+		bitmap 0
+		scaleSignal 0
+		magnifier 0
+		signal 0
+		client 0
+		clut 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		moveTo
+		width
+		height
+		handleEvent
+		addToCast
+		isNotHidden
+		addItem
+		hide
+		setPri
+		draw
+	)
+)
+
+
+(classdef Feature
+	script# 60031
+	class# 57
+	super# 56
+	file# "feature.sc"
+
+	(properties
+		-size- 53
+		-script- 57
+		-super- 56
+		heading 0
+		noun 0
+		case 0
+		modNum -1
+		sightAngle 40
+		actions 0
+		onMeCheck 0
+		approachX 0
+		approachY 0
+		approachDist 0
+		_approachVerbs 0
+		_actionVerbs 0
+		xScaleAdj 100
+		yScaleAdj 100
+		doBaseLine 0
+	)
+
+	(methods
+		dispose
+		handleEvent
+		onMe
+		trackDoit
+		dragDoit
+		doVerb
+		approachVerbs
+		actionVerbs
+		notFacing
+		facingMe
+		setPolygon
+		createPoly
+		help
+		getName
+	)
+)
+
+
+(classdef Actions
+	script# 60031
+	class# 58
+	super# 4
+	file# "feature.sc"
+
+	(properties
+		-script- 58
+		-super- 4
+	)
+
+	(methods
+		doVerb
+	)
+)
+
+
+(classdef View
+	script# 60032
+	class# 59
+	super# 57
+	file# "view.sc"
+
+	(properties
+		-size- 59
+		-script- 59
+		-super- 57
+		scaleSignal 8
+		signal 20513
+		yStep 2
+		brLeft 0
+		brTop 0
+		brRight 0
+		brBottom 0
+		baseSetter 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		posn
+		celRect
+		onMe
+		dragDoit
+		setLoop
+		setCel
+		ignoreActors
+		lastLoop
+		lastCel
+		motionCue
+		checkDetail
+		setScale
+		setMagnifier
+		doBaseRect
+		setSignal
+	)
+)
+
+
+(classdef Prop
+	script# 60033
+	class# 60
+	super# 59
+	file# "prop.sc"
+
+	(properties
+		-size- 65
+		-script- 60
+		-super- 59
+		signal 33
+		cycleSpeed 6
+		script 0
+		cycler 0
+		timer 0
+		scaler 0
+		detailLevel 0
+	)
+
+	(methods
+		doit
+		dispose
+		handleEvent
+		setLoop
+		motionCue
+		checkDetail
+		setCycle
+		setScript
+		cue
+	)
+)
+
+
+(classdef Actor
+	script# 60034
+	class# 61
+	super# 60
+	file# "actor.sc"
+
+	(properties
+		-size- 76
+		-script- 61
+		-super- 60
+		xLast 0
+		yLast 0
+		xStep 3
+		origStep 770
+		moveSpeed 6
+		blocks 0
+		mover 0
+		looper 0
+		viewer 0
+		avoider 0
+		code 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		posn
+		motionCue
+		checkDetail
+		setScale
+		setMotion
+		setAvoider
+		ignoreHorizon
+		observeBlocks
+		ignoreBlocks
+		isStopped
+		isBlocked
+		inRect
+		distanceTo
+		cantBeHere
+		setStep
+		setDirection
+		setHeading
+		setSpeed
+		setLooper
+		update
+	)
+)
+
+
+(classdef Ego
+	script# 60035
+	class# 62
+	super# 61
+	file# "ego.sc"
+
+	(properties
+		-size- 77
+		-script- 62
+		-super- 61
+		state 1
+		signal 8225
+		edgeHit 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+	)
+)
+
+
+(classdef Cursor
+	script# 60078
+	class# 63
+	super# 20
+	file# "cursor.sc"
+
+	(properties
+		-size- 27
+		-script- 63
+		-super- 20
+		bottom 200
+		right 320
+		client 0
+		view 0
+		loop 0
+		cel 0
+		x 0
+		y 0
+		hotX -1
+		hotY -1
+	)
+
+	(methods
+		init
+		dispose
+		show
+		posn
+		draw
+		setCursor
+		enable
+		disable
+	)
+)
+
+
+(classdef Magnifier
+	script# 60039
+	class# 64
+	super# 0
+	file# "magnify.sc"
+
+	(properties
+		-size- 20
+		-script- 64
+		-super- 0
+		x 0
+		y 0
+		view -1
+		loop 0
+		cel 0
+		power 0
+		skip 0
+		client 0
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef Plane
+	script# 60011
+	class# 65
+	super# 20
+	file# "plane.sc"
+
+	(properties
+		-size- 33
+		-script- 65
+		-super- 20
+		back 0
+		resX 640
+		resY 480
+		vanishingX 0
+		vanishingY 0
+		coordType 0
+		picture -1
+		style 0
+		priority 0
+		bitmap 0
+		casts 0
+		mirrored 0
+		fore 0
+		pOldPri 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		posn
+		addCast
+		deleteCast
+		draw
+		erase
+		drawPic
+		scaleBitmap
+		setBitmap
+		setSize
+		hide
+		isHidden
+	)
+)
+
+
+(classdef Window
+	script# 60010
+	class# 66
+	super# 65
+	file# "window.sc"
+
+	(properties
+		-size- 38
+		-script- 66
+		-super- 65
+		container 0
+		borderSize 1
+		shadowSize 3
+		fixedWidth 0
+		fixedHeight 0
+	)
+
+	(methods
+		new
+		init
+		center
+	)
+)
+
+
+(classdef Item
+	script# 60060
+	class# 67
+	super# 56
+	file# "item.sc"
+
+	(properties
+		-size- 51
+		-script- 67
+		-super- 56
+		canTrack 1
+		value 0
+		font 0
+		dimmed 0
+		fore -1
+		back 254
+		skip 254
+		borderColor -1
+		hiColor 0
+		borderSize 0
+		drawCode 0
+		handler 0
+		helpStr 0
+		key 0
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		show
+		handleEvent
+		track
+		trackDoit
+		drawSelected
+		hide
+		draw
+		highlight
+		enable
+		select
+		choose
+		checkState
+		setSize
+		cycle
+		help
+		process
+		showMouseOver
+	)
+)
+
+
+(classdef TextItem
+	script# 60061
+	class# 68
+	super# 67
+	file# "textitem.sc"
+
+	(properties
+		-size- 53
+		-script- 68
+		-super- 67
+		text 0
+		mode 0
+	)
+
+	(methods
+		dispose
+		draw
+		setSize
+	)
+)
+
+
+(classdef TitleItem
+	script# 60061
+	class# 69
+	super# 68
+	file# "textitem.sc"
+
+	(properties
+		-script- 69
+		-super- 68
+	)
+
+	(methods
+	)
+)
+
+
+(classdef IconItem
+	script# 60062
+	class# 70
+	super# 67
+	file# "iconitem.sc"
+
+	(properties
+		-size- 53
+		-script- 70
+		-super- 67
+		cycler 0
+		cycleSpeed 6
+	)
+
+	(methods
+		init
+		dispose
+		contains
+		handleEvent
+		draw
+		setSize
+		cycle
+		process
+		showMouseOver
+		lastCel
+	)
+)
+
+
+(classdef EditItem
+	script# 60063
+	class# 71
+	super# 67
+	file# "edititem.sc"
+
+	(properties
+		-size- 63
+		-script- 71
+		-super- 67
+		state 1
+		text 0
+		mode 0
+		max 0
+		cursor 0
+		crIsChar 0
+		numLines 1
+		editID 0
+		activeState 9
+		matchSelector 0
+		advanceSelect 1
+		exitOnEnter 1
+		pRightMargin 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		track
+		drawSelected
+		hide
+		draw
+		setSize
+		clear
+		matchSelected
+		validKey
+		isControl
+	)
+)
+
+
+(classdef Button
+	script# 60065
+	class# 72
+	super# 68
+	file# "button.sc"
+
+	(properties
+		-size- 67
+		-script- 72
+		-super- 68
+		state 3
+		back -1
+		borderSize 1
+		mode 1
+		wide 0
+		btnType 0
+		textRect 0
+		iconView 0
+		normalColor -1
+		selectColor -1
+		chosenColor -1
+		dimColor -1
+		buttonSet 0
+		buttonPtr 0
+		checkMark 0
+		lastState 0
+		textOffsetX 0
+		textOffsetY 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		drawSelected
+		draw
+		highlight
+		select
+		choose
+		setSize
+		process
+		drawText
+		drawIcon
+		refresh
+		setView
+		setIcon
+		setText
+		makeActionBtn
+		makeCheckBtn
+		makeRadioBtn
+		makeListBtn
+	)
+)
+
+
+(classdef Slider
+	script# 60067
+	class# 73
+	super# 67
+	file# "slider.sc"
+
+	(properties
+		-size- 67
+		-script- 73
+		-super- 67
+		state 1
+		maximum 0
+		minimum 0
+		stepSize 1
+		topValue 0
+		bottomValue 0
+		thumb 0
+		thumbView 0
+		thumbLoop 0
+		thumbCel 0
+		thumbSize 0
+		vTracking 1
+		theObj 0
+		theSelector 0
+		pCast 0
+		pSnapTo 0
+		pIsTracking 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveTo
+		handleEvent
+		draw
+		highlight
+		setSize
+		drawThumb
+		trackSlider
+		move
+		posnToValue
+		valueToPosn
+		update
+		advance
+		retreat
+		updateThumb
+	)
+)
+
+
+(classdef Selector
+	script# 60068
+	class# 74
+	super# 67
+	file# "selector.sc"
+
+	(properties
+		-size- 68
+		-script- 74
+		-super- 67
+		state 1
+		type 6
+		elements 0
+		curItem 0
+		start 0
+		itemsPerPage 9
+		itemHeight 9
+		itemWidth 64
+		itemColor -1
+		selectColor 0
+		upArrow 0
+		downArrow 0
+		scrollBox 0
+		scrollBar 0
+		displayList 0
+		allowDoubleClick 0
+		doubleClickTime 0
+		doubleClickObj 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveTo
+		moveBy
+		handleEvent
+		draw
+		select
+		setSize
+		drawItem
+		updateItem
+		selectItem
+		update
+		move
+		setList
+		makeDisplayItem
+	)
+)
+
+
+(classdef TextSelector
+	script# 60068
+	class# 75
+	super# 74
+	file# "selector.sc"
+
+	(properties
+		-script- 75
+		-super- 74
+	)
+
+	(methods
+		dispose
+		setList
+	)
+)
+
+
+(classdef SelectorText
+	script# 60068
+	class# 76
+	super# 56
+	file# "selector.sc"
+
+	(properties
+		-size- 40
+		-script- 76
+		-super- 56
+		text 0
+		pSelector 0
+	)
+
+	(methods
+		init
+		dispose
+		addToCast
+		draw
+	)
+)
+
+
+(classdef FileSelector
+	script# 60066
+	class# 77
+	super# 74
+	file# "filesel.sc"
+
+	(properties
+		-size- 79
+		-script- 77
+		-super- 74
+		itemsPerPage 8
+		allowDoubleClick 1
+		searchStr 0
+		homeStr 0
+		curDirStr 0
+		curFileStr 0
+		directoryI 0
+		fileNameI 0
+		homeBtn 0
+		okBtn 0
+		cancelBtn 0
+		fileMaskBtn 0
+		upDirBtn 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveTo
+		handleEvent
+		draw
+		setSize
+		selectItem
+		update
+		readDirectory
+		sort
+	)
+)
+
+
+(classdef FileNameStr
+	script# 60066
+	class# 78
+	super# 21
+	file# "filesel.sc"
+
+	(properties
+		-size- 15
+		-script- 78
+		-super- 21
+		state 0
+	)
+
+	(methods
+		compare
+		set
+		clear
+		test
+	)
+)
+
+
+(classdef BtnList
+	script# 60069
+	class# 79
+	super# 5
+	file# "btnlist.sc"
+
+	(properties
+		-size- 33
+		-script- 79
+		-super- 5
+		client 0
+		start 0
+		end 0
+		startVal 1
+		row 0
+		col 0
+		buttonW 0
+		buttonH 0
+		margin 6
+		upButton 0
+		downButton 0
+		x 0
+		y 0
+		dontSave 0
+		keep 0
+		itemList 0
+		pRect 0
+		pInitted 0
+	)
+
+	(methods
+		init
+		dispose
+		add
+		delete
+		draw
+		erase
+		update
+		addPaging
+		addList
+		posn
+	)
+)
+
+
+(classdef FancyDialog
+	script# 60013
+	class# 80
+	super# 6
+	file# "dialog.sc"
+
+	(properties
+		-script- 80
+		-super- 6
+	)
+
+	(methods
+		new
+	)
+)
+
+
+(classdef UnderlineItem
+	script# 60029
+	class# 81
+	super# 70
+	file# "print.sc"
+
+	(properties
+		-script- 81
+		-super- 70
+	)
+
+	(methods
+		draw
+		setSize
+	)
+)
+
+
+(classdef WinDialogSet
+	script# 60088
+	class# 82
+	super# 5
+	file# "dlghndlr.sc"
+
+	(properties
+		-script- 82
+		-super- 5
+	)
+
+	(methods
+		add
+	)
+)
+
+
+(classdef WinDialogHandler
+	script# 60088
+	class# 83
+	super# 0
+	file# "dlghndlr.sc"
+
+	(properties
+		-size- 13
+		-script- 83
+		-super- 0
+		pWindow 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		disable
+		enable
+	)
+)
+
+
+(classdef DialogHandler
+	script# 60088
+	class# 84
+	super# 5
+	file# "dlghndlr.sc"
+
+	(properties
+		-script- 84
+		-super- 5
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		cue
+		handleEvent
+	)
+)
+
+
+(classdef IconBar
+	script# 60071
+	class# 85
+	super# 6
+	file# "iconbar.sc"
+
+	(properties
+		-size- 42
+		-script- 85
+		-super- 6
+		y 0
+		x 0
+		curIcon 0
+		openRect 0
+		inventoryIcon 0
+		messageQue 0
+	)
+
+	(methods
+		init
+		show
+		open
+		handleEvent
+		hide
+		close
+		keepUp
+		enable
+		disable
+		advanceCurIcon
+		shouldOpen
+		shouldClose
+		setOpenRect
+	)
+)
+
+
+(classdef IconButton
+	script# 60071
+	class# 86
+	super# 72
+	file# "iconbar.sc"
+
+	(properties
+		-size- 78
+		-script- 86
+		-super- 72
+		state 1027
+		dontSave 1
+		cursor 0
+		verb 0
+		type 16384
+		noun 0
+		modNum 0
+		helpVerb 0
+		pFallThru 0
+		cursorView -1
+		cursorLoop -1
+		cursorCel -1
+	)
+
+	(methods
+		doit
+		choose
+		setSize
+		isCursor
+	)
+)
+
+
+(classdef User
+	script# 60019
+	class# 87
+	super# 0
+	file# "user.sc"
+
+	(properties
+		-size- 20
+		-script- 87
+		-super- 0
+		alterEgo 0
+		input 0
+		controls 0
+		prevDir 0
+		x -1
+		y -1
+		mapKeyToDir 0
+		curEvent 0
+	)
+
+	(methods
+		init
+		doit
+		nextEvent
+		handleEvent
+		canControl
+		canInput
+	)
+)
+
+
+(classdef Sync
+	script# 60091
+	class# 88
+	super# 0
+	file# "sync.sc"
+
+	(properties
+		-size- 16
+		-script- 88
+		-super- 0
+		syncTime -1
+		syncCue -1
+		prevCue -1
+		syncNum -1
+	)
+
+	(methods
+		syncStart
+		syncCheck
+		syncStop
+	)
+)
+
+
+(classdef ScriptSync
+	script# 60091
+	class# 89
+	super# 0
+	file# "sync.sc"
+
+	(properties
+		-size- 14
+		-script- 89
+		-super- 0
+		prevSignal -1
+		playing 0
+	)
+
+	(methods
+		init
+		doit
+		cue
+		handleEvent
+	)
+)
+
+
+(classdef MouthSync
+	script# 60091
+	class# 90
+	super# 39
+	file# "sync.sc"
+
+	(properties
+		-script- 90
+		-super- 39
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		cue
+	)
+)
+
+
+(classdef GlobalDemons
+	script# 60020
+	class# 91
+	super# 5
+	file# "game.sc"
+
+	(properties
+		-script- 91
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Game
+	script# 60020
+	class# 92
+	super# 0
+	file# "game.sc"
+
+	(properties
+		-size- 18
+		-script- 92
+		-super- 0
+		script 0
+		printLang 1
+		_detailLevel 3
+		handsOffCode 0
+		handsOnCode 0
+		handsLevel 0
+	)
+
+	(methods
+		init
+		doit
+		play
+		newRoom
+		startRoom
+		replay
+		restart
+		restore
+		save
+		handleEvent
+		quitGame
+		masterVolume
+		detailLevel
+		setCursor
+		pragmaFail
+		notify
+		setScript
+		cue
+		handsOff
+		handsOn
+		controlOff
+		controlOn
+	)
+)
+
+
+(classdef File
+	script# 60009
+	class# 93
+	super# 0
+	file# "file.sc"
+
+	(properties
+		-size- 13
+		-script- 93
+		-super- 0
+		handle 0
+	)
+
+	(methods
+		dispose
+		open
+		readString
+		writeString
+		write
+		read
+		seek
+		close
+		delete
+		rename
+		getByte
+		putByte
+		getWord
+		putWord
+	)
+)
+
+
+(classdef Messager
+	script# 60090
+	class# 94
+	super# 0
+	file# "messager.sc"
+
+	(properties
+		-size- 18
+		-script- 94
+		-super- 0
+		caller 0
+		disposeWhenDone 1
+		oneOnly 0
+		killed 0
+		curSequence 0
+		lastSequence 0
+	)
+
+	(methods
+		dispose
+		cue
+		say
+		sayRange
+		sayNext
+		sayFormat
+		nextMsg
+	)
+)
+
+
+(classdef Orbit
+	script# 60051
+	class# 95
+	super# 38
+	file# "orbit.sc"
+
+	(properties
+		-size- 35
+		-script- 95
+		-super- 38
+		centerObj 0
+		radius 50
+		xTilt 0
+		yTilt 0
+		angleStep 10
+		winding 1
+		curAngle 0
+	)
+
+	(methods
+		init
+		moveDone
+	)
+)
+
+
+(classdef Path
+	script# 60055
+	class# 96
+	super# 38
+	file# "path.sc"
+
+	(properties
+		-size- 29
+		-script- 96
+		-super- 38
+		points 0
+	)
+
+	(methods
+		init
+		dispose
+		moveDone
+		atEnd
+	)
+)
+
+
+(classdef StopWalk
+	script# 60049
+	class# 97
+	super# 40
+	file# "stopwalk.sc"
+
+	(properties
+		-size- 22
+		-script- 97
+		-super- 40
+		vWalking 0
+		vStopped 0
+		stopped 0
+		skipTime 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+	)
+)
+
+
+(classdef GradualLooper
+	script# 60073
+	class# 98
+	super# 4
+	file# "grooper.sc"
+
+	(properties
+		-size- 17
+		-script- 98
+		-super- 4
+		client 0
+		oldCycler 0
+		oldMover 0
+		caller 0
+		numLoops 4
+	)
+
+	(methods
+		doit
+		dispose
+		cue
+	)
+)
+
+
+(classdef GradualCycler
+	script# 60073
+	class# 99
+	super# 39
+	file# "grooper.sc"
+
+	(properties
+		-size- 20
+		-script- 99
+		-super- 39
+		loopIndex 0
+		numOfLoops 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		nextCel
+		cycleDone
+		loopIsCorrect
+	)
+)
+
+
+(classdef SmoothLooper
+	script# 60074
+	class# 100
+	super# 4
+	file# "smooper.sc"
+
+	(properties
+		-size- 22
+		-script- 100
+		-super- 4
+		nextLoop 0
+		client 0
+		oldCycler 0
+		oldMover 0
+		newMover 0
+		oldCycleSpeed 0
+		cycleSpeed 0
+		inProgress 0
+		vNormal 0
+		vChangeDir 0
+	)
+
+	(methods
+		doit
+		dispose
+		cue
+	)
+)
+
+
+(classdef DPath
+	script# 60050
+	class# 101
+	super# 38
+	file# "dpath.sc"
+
+	(properties
+		-size- 30
+		-script- 101
+		-super- 38
+		points 0
+		value 0
+	)
+
+	(methods
+		init
+		dispose
+		moveDone
+		setTarget
+	)
+)
+
+
+(classdef RelDPath
+	script# 60050
+	class# 102
+	super# 101
+	file# "dpath.sc"
+
+	(properties
+		-script- 102
+		-super- 101
+	)
+
+	(methods
+		setTarget
+	)
+)
+
+
+(classdef MoveFwd
+	script# 60054
+	class# 103
+	super# 53
+	file# "movefwd.sc"
+
+	(properties
+		-script- 103
+		-super- 53
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef MoveCycle
+	script# 60076
+	class# 104
+	super# 39
+	file# "movecyc.sc"
+
+	(properties
+		-size- 21
+		-script- 104
+		-super- 39
+		value 0
+		points 0
+		size 0
+	)
+
+	(methods
+		init
+		doit
+		nextCel
+		cycleDone
+	)
+)
+
+
+(classdef RandCycle
+	script# 60077
+	class# 105
+	super# 39
+	file# "randcyc.sc"
+
+	(properties
+		-size- 20
+		-script- 105
+		-super- 39
+		count -1
+		reset 0
+	)
+
+	(methods
+		init
+		doit
+		nextCel
+		cycleDone
+	)
+)
+
+
+(classdef Oscillate
+	script# 60075
+	class# 106
+	super# 39
+	file# "osc.sc"
+
+	(properties
+		-size- 21
+		-script- 106
+		-super- 39
+		howManyCycles -1
+		startCel 0
+		endCel 0
+	)
+
+	(methods
+		init
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef PChase
+	script# 60083
+	class# 107
+	super# 53
+	file# "pchase.sc"
+
+	(properties
+		-size- 37
+		-script- 107
+		-super- 53
+		who 0
+		distance 0
+		targetX 0
+		targetY 0
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+	)
+)
+
+
+(classdef PFollow
+	script# 60084
+	class# 108
+	super# 53
+	file# "pfollow.sc"
+
+	(properties
+		-size- 37
+		-script- 108
+		-super- 53
+		who 0
+		distance 0
+		targetX 0
+		targetY 0
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+	)
+)
+
+
+(classdef PAvoider
+	script# 60085
+	class# 109
+	super# 4
+	file# "pavoid.sc"
+
+	(properties
+		-size- 17
+		-script- 109
+		-super- 4
+		client 0
+		oldBlocker 0
+		oldBlockerMover 0
+		oldMoverX -99
+		oldMoverY -99
+	)
+
+	(methods
+		init
+		doit
+		dispose
+	)
+)
+
+
+(classdef ScaleTo
+	script# 60089
+	class# 110
+	super# 36
+	file# "scaleto.sc"
+
+	(properties
+		-size- 27
+		-script- 110
+		-super- 36
+		caller 0
+		endScale 0
+		step 6
+		waitCount 1
+		scaleDir 0
+		saveWaitCount 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+	)
+)
+
+
+(classdef Flags
+	script# 60087
+	class# 111
+	super# 0
+	file# "flags.sc"
+
+	(properties
+		-size- 14
+		-script- 111
+		-super- 0
+		size 0
+		array 0
+	)
+
+	(methods
+		init
+		dispose
+		setSize
+		set
+		clear
+		test
+	)
+)
+
+
+(classdef MenuBar
+	script# 60021
+	class# 112
+	super# 2
+	file# "menubar.sc"
+
+	(properties
+		-size- 27
+		-script- 112
+		-super- 2
+		state 1
+		plane 0
+		casts 0
+		margin 10
+		left 0
+		top 0
+		right 639
+		bottom 10
+		font 999
+		back 0
+		xMargin 2
+		yMargin 1
+	)
+
+	(methods
+		init
+		dispose
+		show
+		construct
+		onMe
+		handleEvent
+		hide
+		select
+	)
+)
+
+
+(classdef MenuList
+	script# 60021
+	class# 113
+	super# 2
+	file# "menubar.sc"
+
+	(properties
+		-size- 25
+		-script- 113
+		-super- 2
+		state 0
+		client 0
+		plane 0
+		casts 0
+		left 0
+		top 0
+		right 0
+		bottom 0
+		text 0
+		value 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		construct
+		highlight
+		onMe
+		handleEvent
+		select
+		hide
+	)
+)
+
+
+(classdef MenuOption
+	script# 60021
+	class# 114
+	super# 68
+	file# "menubar.sc"
+
+	(properties
+		-size- 56
+		-script- 114
+		-super- 68
+		state 1
+		theObj 0
+		selector 0
+		hotKey 0
+	)
+
+	(methods
+		handleEvent
+		onMe
+		highlight
+		select
+	)
+)
+
+
+(classdef CueSet
+	script# 60093
+	class# 115
+	super# 5
+	file# "roommgr.sc"
+
+	(properties
+		-script- 115
+		-super- 5
+	)
+
+	(methods
+		add
+		delete
+	)
+)
+
+
+(classdef ManagedRoom
+	script# 60093
+	class# 116
+	super# 0
+	file# "roommgr.sc"
+
+	(properties
+		-size- 35
+		-script- 116
+		-super- 0
+		script 0
+		plane 0
+		obstacles 0
+		scaler 0
+		pCast 0
+		pFeatures 0
+		pSounds 0
+		pTimers 0
+		pDemons 0
+		pTalkers 0
+		pScreen 0
+		pCuees 0
+		picture 0
+		style -1
+		exitStyle -1
+		horizon 0
+		picAngle 0
+		vanishingX 160
+		vanishingY 0
+		pVisible 1
+		pInitted 0
+		pType 1
+		frontSize 128
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		show
+		setScript
+		handleEvent
+		newRoom
+		virtualize
+		hide
+		drawPic
+		addPolygon
+		deletePolygon
+		setScale
+		isMatch
+		setInfo
+	)
+)
+
+
+(classdef StaticRoom
+	script# 60093
+	class# 117
+	super# 116
+	file# "roommgr.sc"
+
+	(properties
+		-size- 36
+		-script- 117
+		-super- 116
+		pType 0
+		modNum 0
+	)
+
+	(methods
+		dispose
+		setInfo
+	)
+)
+
+
+(classdef RoomMgr
+	script# 60093
+	class# 118
+	super# 0
+	file# "roommgr.sc"
+
+	(properties
+		-size- 17
+		-script- 118
+		-super- 0
+		pRoomList 0
+		pFocusedRoom 0
+		pVirtualType 0
+		pNextRoom 0
+		pRestart 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+		newRoom
+		createRoom
+		findRoom
+		spawnRoom
+		add
+		delete
+	)
+)
+
+
+(classdef Server
+	script# 62005
+	class# 119
+	super# 0
+	file# "server.sc"
+
+	(properties
+		-size- 14
+		-script- 119
+		-super- 0
+		script 0
+		pServID 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		add
+		delete
+		lookup
+		lookupObj
+		setScript
+	)
+)
+
+
+(classdef ScrollableWindow
+	script# 60094
+	class# 120
+	super# 0
+	file# "scrolwin.sc"
+
+	(properties
+		-size- 34
+		-script- 120
+		-super- 0
+		plane 0
+		fore 0
+		back 0
+		font 999
+		mode 0
+		borderColor 0
+		left 75
+		top 50
+		right 275
+		bottom 150
+		maxItems 20
+		kWindow 0
+		state 0
+		itemList 0
+		seconds 0
+		lastSecond 0
+		scrollSpeed 0
+		numLines 0
+		lineCount 0
+		scrollLeft 0
+		lineHeight 0
+		pChanged 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		show
+		hide
+		addString
+		deleteString
+		modifyString
+		insertString
+		erase
+		scrollTo
+		move
+		resize
+		where
+		handleEvent
+		setSize
+		draw
+		contains
+	)
+)
+
+
+(classdef NetMsg
+	script# 62003
+	class# 121
+	super# 30
+	file# "netmsg.sc"
+
+	(properties
+		-size- 28
+		-script- 121
+		-super- 30
+		_len_ 0
+		pCommand 0
+		claimed 0
+		to 0
+		pAckCmd 0
+		pNakCmd 0
+		pInfo 0
+		pToID 0
+		pFromID 0
+	)
+
+	(methods
+		init
+		dispose
+		with
+		size
+		getString
+		wordAt
+		stringAt
+		arrayAt
+		wordArrayAt
+		longAt
+		clone
+	)
+)
+
+
+(classdef NetMsgProcessor
+	script# 62004
+	class# 122
+	super# 4
+	file# "netmsgpr.sc"
+
+	(properties
+		-size- 16
+		-script- 122
+		-super- 4
+		nmpQueue 0
+		lastMsg 0
+		paused 0
+		processing 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleMsg
+		getMsg
+		putMsg
+		processMsg
+	)
+)
+
+
+(classdef NetUser
+	script# 62000
+	class# 123
+	super# 87
+	file# "netuser.sc"
+
+	(properties
+		-size- 22
+		-script- 123
+		-super- 87
+		curMsg 0
+		autoTimeOut 15
+	)
+
+	(methods
+		init
+		doit
+		nextNetMsg
+	)
+)
+
+

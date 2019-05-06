@@ -1,0 +1,25 @@
+; 15000.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define CLERK             7)
+(define CLERK1            6)
+(define CLERK1_N          2)
+(define CLERKN            5)
+(define CLERK_1_N         3)
+(define CLERK_2_N         4)
+(define CLERK_N           1)
+
+; CASES
+
+
+(define TELL1             1)
+
+(define TELL2             2)
+
+(define TELL2.1           3)
+
+(define TELL2.2           4)
+
+(define TELL2.3           5)

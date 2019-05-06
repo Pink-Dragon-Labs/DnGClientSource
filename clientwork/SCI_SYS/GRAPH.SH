@@ -1,0 +1,90 @@
+;;;;
+;;;; GRAPH.SH: Defines for graphics.
+;;;;
+;;;;
+
+;; Screen colors
+(define	BLACK			0)
+
+;; Screen dimensions
+(define	SCRNWIDE		640)
+(define	SCRNHIGH		480)
+(define RESX			(- SCRNWIDE 1))
+(define RESY			(- SCRNHIGH 1))
+
+;ษออออออออออออออออออออป
+;บ            		    บ
+;บ Show Style Defines บ
+;บ               		 บ
+;ศออออออออออออออออออออผ
+(enum
+	SHOW_PLAIN
+	SHOW_HSHUTTER_OUT
+	SHOW_HSHUTTER_IN
+	SHOW_VSHUTTER_OUT
+	SHOW_VSHUTTER_IN
+	SHOW_WIPE_LEFT
+	SHOW_WIPE_RIGHT
+	SHOW_WIPE_UP
+	SHOW_WIPE_DOWN
+	SHOW_IRIS_OUT
+	SHOW_IRIS_IN
+	SHOW_DISSOLVE
+	SHOW_PIXEL_DISSOLVE
+	SHOW_FADE_OUT
+	SHOW_FADE_IN
+	SHOW_SCROLL_LEFT
+	SHOW_SCROLL_RIGHT
+	SHOW_SCROLL_UP
+	SHOW_SCROLL_DOWN
+)
+(define	SHOW_BLACKOUT	$0100)
+(define	SHOW_WHITEOUT	$0200)
+(define	SHOW_MIRRORED	$0400)
+(define	SHOW_SCROLLS	SHOW_SCROLL_LEFT SHOW_SCROLL_RIGHT SHOW_SCROLL_UP SHOW_SCROLL_DOWN)
+(define	SHOW_WIPES		SHOW_WIPE_LEFT SHOW_WIPE_RIGHT SHOW_WIPE_DOWN SHOW_WIPE_UP)
+(define	SHOW_DISSOLVES	SHOW_PIXEL_DISSOLVE SHOW_DISSOLVE)
+(define	SHOW_SHUTTERS	SHOW_HSHUTTER_OUT SHOW_HSHUTTER_IN SHOW_VSHUTTER_OUT SHOW_VSHUTTER_IN)
+
+
+;; VISUAL colors
+(enum
+	vBLACK		;	0
+	vBLUE			;	1
+	vGREEN		;	2
+	vCYAN			;	3
+	vRED			;	4
+	vMAGENTA		;	5
+	vBROWN		;	6
+	vLGREY		;	7
+	vGREY			;	8
+	vLBLUE		;	9
+	vLGREEN		;	10
+	vLCYAN		;	11
+	vLRED			;	12
+	vLMAGENTA	;	13
+	vYELLOW		;	14
+	vWHITE		;	15
+)
+
+;; PRIORITY colors
+(enum						
+	pBLACK		;	0
+	pBLUE			;	1
+	pGREEN		;	2
+	pCYAN			;	3
+	pRED			;	4
+	pMAGENTA		;	5
+	pBROWN		;	6
+	pLGREY		;	7
+	pGREY			;	8
+	pLBLUE		;	9
+	pLGREEN		;	10
+	pLCYAN		;	11
+	pLRED			;	12
+	pLMAGENTA	;	13
+	pYELLOW		;	14
+	pWHITE		;	15
+)
+
+

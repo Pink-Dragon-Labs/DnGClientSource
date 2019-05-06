@@ -1,0 +1,9 @@
+; 100.SHM -- Produced by SCI Message Editor 4.341
+; This file should only be edited with ME
+
+; NOUNS
+
+(define DUMMY_NOUN       20)
+
+
+

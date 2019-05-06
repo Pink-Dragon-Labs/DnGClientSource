@@ -1,0 +1,20 @@
+; 100.SHM -- Produced by SCI Message Editor 4.341
+; This file should only be edited with ME
+
+; NOUNS
+
+(define DUMMY_NOUN1       1)
+(define DUMMY_NOUN2       2)
+
+; CASES
+
+
+(define BUTTON_C          2)
+
+(define DEFAULT_C         1)
+
+(define NOT_OWN_C         5)
+
+(define OWN_C             4)
+
+(define UH_C              3)

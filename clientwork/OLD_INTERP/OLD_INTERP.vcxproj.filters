@@ -1,0 +1,927 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0f7ecc46-edb0-40f7-a8f2-79a0575f82b1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a1d5d392-3586-4aef-ad1d-6bdcf1c0206c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{b565cce4-8d12-4aed-abb8-cd87a5cfddb2}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ARGLIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ARRAY.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ASM2CPP.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AUDIO.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AUDIOD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AUDIOW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AUDIOWIN.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BLOB.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BREAKPT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BUFFERD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BUFFERW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CELOBJ.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CELOBJ1.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CELOBJ2.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CELOBJA.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CONFIG.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRITERR.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRITERRD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRITERRW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CURSORD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CURSORW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DEBUG.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DEBUGDSP.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DEBUGMNU.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DIALOG.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOS.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRAWLIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ERRORMGR.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVENT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVENTD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EVENTW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EXCEPT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FONT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FONTI.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRAPH.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRAPHBUF.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRAPHMD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRAPHMGR.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRAPHMW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HOTKEY.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INFO.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INTEG.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INTRPT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INTRPTW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KBDD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KBDMGR.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KBDMGRD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KBDMGRW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KBDW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KERNEL.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LANGUAGE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LINE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LONGINT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LZSS.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MAGNIFY.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MATH.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MEMID.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MEMMGR.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MEMMGRD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MEMMGRE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MEMMGRW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MEMTYPE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MESSAGE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOTION.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOUSE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOUSED.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOUSEW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOVIE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOVIEW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MSG.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MSGD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MSGW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NETMGR.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NETWORK.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NETWORKW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NEW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NEWROOM.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NEWW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJECT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OPCODES.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PACKDATA.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PALETTE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PALMGRD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PALMGRI.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PALMGRT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PALMGRW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PICTURE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PLANE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PLATFRMD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PLATFRMW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PLAYVMD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PLIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POLYFUSE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POLYGON.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PROFILE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QMSG.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QUEUE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RATIO.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RECORD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RECT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RECTLIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="REMAP.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RESOURCE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RESTART.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RESTYPE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ROBOT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCI.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCID.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCIW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCIWIN.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCREEN.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCRIPT.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SENDSTAC.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SERIAL.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SHIFTPAL.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SHWSTYLE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SI.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SILIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SOUND.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SOUNDD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SOUNDW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SOUNDWIN.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="STAMPVER.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="STRING.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SYNC.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TABLE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TEXTID.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TIME.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TIMED.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TIMEW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VGA.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDBASE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDCACHE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDIMD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDLOOP.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDMORE.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDSOUND.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDTRACK.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDVESA.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VMDVIEW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VOCAB.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WINDLL.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WINDOW.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WINFUNCS.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WINGFUNC.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WINHELP.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WINTEST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ARRAY.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ASM2CPP.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AUDIO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AUDIOW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BLOB.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BREAKPT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BUFFER.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BUFFERD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BUFFERW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CELASM.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CELOBJ.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="COMPILER.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CONFIG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CRITERR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CRITERRD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CRITERRW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CURSOR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CURSORD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CURSORW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCOMP.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEBUG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEBUGDSP.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEBUGMNU.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DIALOG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOS.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRAWLIST.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRIVER.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ERRORMGR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EVENT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EVENTD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EVENTW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EXCEPT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FAULT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FONT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLOBALS.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRAPH.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRAPHBUF.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRAPHMD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRAPHMGR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRAPHMW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HEAPLEAK.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HOTKEY.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INFO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INTEG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INTFLAG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INTRPT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KBD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KBDD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KBDMGR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KBDMGRD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KBDMGRW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KBDW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KERNEL.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LANGUAGE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LINE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LIST.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LZSS.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MAGNIFY.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MATH.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MBOX.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MEMID.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MEMMGR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MEMMGRD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MEMMGRW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MEMTYPE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MESSAGE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MIDI.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MONO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MOUSE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MOUSED.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MOUSEW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MOVIE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MOVIEW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MSG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MSGD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MSGW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NETMGR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NETWORK.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NETWORKW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NEWROOM.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NEWW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJECT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJINFO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OPCODES.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PACKDATA.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PALETTE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PALMGR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PALMGRD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PALMGRI.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PALMGRT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PALMGRW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PDEVICE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PLANE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PLIST.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PMACHINE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POINT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POLYFUSE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POLYGON.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PTRDEV.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QUEUE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RATIO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RECORD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RECT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RECTLIST.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="REMAP.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RESOURCE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RESTART.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RESTYPE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RGB.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ROBOT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SAVEABLE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SAVEGAME.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCALE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCI.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCID.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCIDLG.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCIDLL.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCII.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCIWIN.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCREEN.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCRIPT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SELECT.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SELECTOR.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SENDSTAC.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SERIAL.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SHIFTPAL.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SHWSTYLE.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SI.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SILIST.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SOL.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SOUND.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SOUNDWIN.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STAMPVER.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STRING.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SYNC.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TEXTID.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TIME.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TIMED.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TIMEW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VGA.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VIDEO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VMD.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VMDIBM.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VMDLIBS.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VMDMDO.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VOCAB.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WINCLASS.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WINDOW.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WINGFUNC.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WINODEF.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WINTHUNK.HPP">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,92 @@
+
+Module: dilib1
+
+Segment: .text  PARA USE32  00000088 bytes  
+ 0000  00 00 00 00                       DD      _GUID_XAxis
+ 0004  00 00                             add     [eax],al
+ 0006  00 00                             add     [eax],al
+ 0008  03 ff                             add     edi,edi
+ 000a  ff 00                             inc     dword ptr [eax]
+ 000c  00 00                             add     [eax],al
+ 000e  00 00                             add     [eax],al
+ 0010  00 00 00 00                       DD      _GUID_YAxis
+ 0014  04 00                             add     al,00H
+ 0016  00 00                             add     [eax],al
+ 0018  03 ff                             add     edi,edi
+ 001a  ff 00                             inc     dword ptr [eax]
+ 001c  00 00                             add     [eax],al
+ 001e  00 00                             add     [eax],al
+ 0020  00 00 00 00                       DD      _GUID_ZAxis
+ 0024  08 00                             or      [eax],al
+ 0026  00 00                             add     [eax],al
+ 0028  03 ff                             add     edi,edi
+ 002a  ff 80 00 00 00 00                 inc     dword ptr +0H[eax]
+ 0030  00 00                             add     [eax],al
+ 0032  00 00                             add     [eax],al
+ 0034  0c 00                             or      al,00H
+ 0036  00 00                             add     [eax],al
+ 0038  0c ff                             or      al,0ffH
+ 003a  ff 00                             inc     dword ptr [eax]
+ 003c  00 00                             add     [eax],al
+ 003e  00 00                             add     [eax],al
+ 0040  00 00                             add     [eax],al
+ 0042  00 00                             add     [eax],al
+ 0044  0d 00 00 00 0c                    or      eax,0c000000H
+ 0049  ff                                ?????
+ 004a  ff 00                             inc     dword ptr [eax]
+ 004c  00 00                             add     [eax],al
+ 004e  00 00                             add     [eax],al
+ 0050  00 00                             add     [eax],al
+ 0052  00 00                             add     [eax],al
+ 0054  0e                                push    cs
+ 0055  00 00                             add     [eax],al
+ 0057  00 0c ff                          add     [edi+edi*8],cl
+ 005a  ff 80 00 00 00 00                 inc     dword ptr +0H[eax]
+ 0060  00 00                             add     [eax],al
+ 0062  00 00                             add     [eax],al
+ 0064  0f 00 00                          sldt    word ptr [eax]
+ 0067  00 0c ff                          add     [edi+edi*8],cl
+ 006a  ff 80 00 00 00 00                 inc     dword ptr +0H[eax]
+ 0070  18 00             _c_dfDIMouse    sbb     [eax],al
+ 0072  00 00                             add     [eax],al
+ 0074  10 00                             adc     [eax],al
+ 0076  00 00                             add     [eax],al
+ 0078  02 00                             add     al,[eax]
+ 007a  00 00                             add     [eax],al
+ 007c  10 00                             adc     [eax],al
+ 007e  00 00                             add     [eax],al
+ 0080  07                                pop     es
+ 0081  00 00                             add     [eax],al
+ 0083  00 00                             add     [eax],al
+ 0085  00 00                             add     [eax],al
+ 0087  00                                add     [eax],al
+
+No disassembly errors
+
+------------------------------------------------------------
+
+Segment: .rel  BYTE USE32  00000028 bytes  
+ 0000  00 00 00 00 08 00 00 00                 - ........
+ 0008  06 00 10 00 00 00 07 00                 - ........
+ 0010  00 00 06 00 20 00 00 00                 - .... ...
+ 0018  06 00 00 00 06 00 84 00                 - ........
+ 0020  00 00 05 00 00 00 06 00                 - ........
+
+No disassembly errors
+
+------------------------------------------------------------
+
+Segment: .strtab  BYTE USE32  00000048 bytes  
+ 0000  5f 63 5f 64 66 44 49 4d                 - _c_dfDIM
+ 0008  6f 75 73 65 00 5f 63 5f                 - ouse._c_
+ 0010  72 67 6f 64 66 44 49 4d                 - rgodfDIM
+ 0018  6f 75 73 65 24 53 32 32                 - ouse$S22
+ 0020  37 35 34 00 5f 47 55 49                 - 754._GUI
+ 0028  44 5f 5a 41 78 69 73 00                 - D_ZAxis.
+ 0030  5f 47 55 49 44 5f 59 41                 - _GUID_YA
+ 0038  78 69 73 00 5f 47 55 49                 - xis._GUI
+ 0040  44 5f 58 41 78 69 73 00                 - D_XAxis.
+
+No disassembly errors
+
+------------------------------------------------------------

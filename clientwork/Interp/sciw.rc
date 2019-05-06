@@ -1,0 +1,103 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINFRAME           ICON    DISCARDABLE     "res\\Realm.ico"
+IDI_FRIEND_STOP         ICON    DISCARDABLE     "res\\FriendStop.ico"
+IDI_FRIEND_GO           ICON    DISCARDABLE     "res\\FriendGo.ico"
+IDI_FRIEND_BUSY         ICON    DISCARDABLE     "res\\FriendBusy.ico"
+IDI_INV_BLANK           ICON    DISCARDABLE     "res\\blank.ico"
+IDI_INV_WORN            ICON    DISCARDABLE     "res\\wearing.ico"
+IDI_ENEMY_PERMENANT     ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPELL_LIST          BITMAP  DISCARDABLE     "res\\spelliconbar.bmp"
+IDB_BUY_LIST            BITMAP  DISCARDABLE     "res\\gobuttons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_WALK                CURSOR  DISCARDABLE     "res\\walk.cur"
+IDC_PUTIN               CURSOR  DISCARDABLE     "res\\putin.cur"
+IDC_DROP                CURSOR  DISCARDABLE     "res\\drop.cur"
+IDC_DO                  CURSOR  DISCARDABLE     "res\\do.cur"
+IDC_SPELL               CURSOR  DISCARDABLE     "res\\spell.cur"
+IDC_SWORD               CURSOR  DISCARDABLE     "res\\sword.cur"
+IDC_EXITLEFT            CURSOR  DISCARDABLE     "res\\exitleft.cur"
+IDC_EXITRIGHT           CURSOR  DISCARDABLE     "res\\exitlright.cur"
+IDC_EXITUP              CURSOR  DISCARDABLE     "res\\exitup.cur"
+IDC_EXITDOWN            CURSOR  DISCARDABLE     "res\\exitdown.cur"
+IDC_VERB                CURSOR  DISCARDABLE     "res\\verb.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

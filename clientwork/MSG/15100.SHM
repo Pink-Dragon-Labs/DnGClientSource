@@ -1,0 +1,124 @@
+; 30000.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define GUARD_N           1)
+(define GUARD_R2_N        4)
+(define GUARD_R3_N        3)
+(define GUARD_R4_N        6)
+(define GUARD_R5_N        7)
+(define GUARD_R6_N        8)
+(define GUARD_R_N         2)
+(define GUARD_TELL_N      5)
+
+; CASES
+
+
+(define SUBTELL1         10)
+
+(define SUBTELL1.1       13)
+
+(define SUBTELL1.1.1     25)
+
+(define SUBTELL1.1.2     26)
+
+(define SUBTELL1.1.3     27)
+
+(define SUBTELL1.1.4     28)
+
+(define SUBTELL1.1.5     29)
+
+(define SUBTELL1.1.6     30)
+
+(define SUBTELL1.2       14)
+
+(define SUBTELL1.2.1     31)
+
+(define SUBTELL1.2.2     32)
+
+(define SUBTELL1.2.3     33)
+
+(define SUBTELL1.2.4     34)
+
+(define SUBTELL1.2.5     35)
+
+(define SUBTELL1.2.6     36)
+
+(define SUBTELL1.3       24)
+
+(define SUBTELL1.4        4)
+
+(define SUBTELL1.5        5)
+
+(define SUBTELL2         11)
+
+(define SUBTELL2.1       37)
+
+(define SUBTELL2.1.1     38)
+
+(define SUBTELL2.1.2     39)
+
+(define SUBTELL2.1.3     41)
+
+(define SUBTELL2.1.4     42)
+
+(define SUBTELL2.1.5     43)
+
+(define SUBTELL2.2       40)
+
+(define SUBTELL2.2.1     44)
+
+(define SUBTELL2.2.2     45)
+
+(define SUBTELL2.2.3     46)
+
+(define SUBTELL2.2.4     47)
+
+(define SUBTELL2.2.5     48)
+
+(define SUBTELL2.2.6     49)
+
+(define SUBTELL2.2.7     50)
+
+(define SUBTELL2.2.8     54)
+
+(define SUBTELL2.3        1)
+
+(define SUBTELL2.3.1     51)
+
+(define SUBTELL2.3.2     52)
+
+(define SUBTELL2.3.3     53)
+
+(define SUBTELL2.4        2)
+
+(define SUBTELL2.5        3)
+
+(define SUBTELL2.6        6)
+
+(define SUBTELL2.7        9)
+
+(define SUBTELL3         12)
+
+(define SUBTELL3.1       15)
+
+(define SUBTELL3.2       16)
+
+(define SUBTELL3.3       23)
+
+(define SUBTELL4         17)
+
+(define SUBTELL5         18)
+
+(define SUBTELL6         19)
+
+(define SUBTELL7         20)
+
+(define SUBTELL8         21)
+
+(define SUBTELL9         22)
+
+(define TELL1             7)
+
+(define TELL2             8)

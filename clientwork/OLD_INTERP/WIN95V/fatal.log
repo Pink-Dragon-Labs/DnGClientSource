@@ -1,0 +1,7 @@
+Fatal exception encountered: ILLEGAL MEMORY ACCESS
+Crash address: 0x0023:0x000579d5 (local)
+
+Register Dump:
+EAX = 0x0084739f  EBX = 0x00400000  ECX = 0x00100020  EDX = 0x00100011
+ESI = 0x0045d5b0  EDI = 0x0045d5b0  ESP = 0x000dfa04  EBP = 0x000dfe54
+CS = 0x0023  DS = 0x002b  ES = 0x002b  FS = 0x0053  GS = 0x002b

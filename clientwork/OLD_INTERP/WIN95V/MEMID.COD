@@ -1,0 +1,536 @@
+
+Module: c:\sys\sci\memid.cpp
+Group: 'DGROUP' CONST,CONST2,_DATA,_BSS
+
+Segment: _TEXT  DWORD USE32  00000373 bytes  
+
+// memid.cpp
+
+#include "sol.hpp"
+
+#include "dos.hpp"
+#include "memid.hpp"
+
+MemAttrs
+MemID::Attrs() const
+{
+	return memMgr->GetMemAttrs(*this);
+ 0000                    int unsigned near MemID::Attrs() const:
+ 0000  8b 54 24 04                       mov     edx,+4H[esp]
+ 0004  a1 00 00 00 00                    mov     eax,memMgr
+ 0009  66 8b 12                          mov     dx,[edx]
+ 000c  81 e2 ff ff 00 00                 and     edx,0000ffffH
+ 0012  8b 40 04                          mov     eax,+4H[eax]
+ 0015  c1 e2 04                          shl     edx,04H
+ 0018  8b 04 02                          mov     eax,[edx+eax]
+
+}
+
+MemType
+MemID::GetMemType() const
+{
+ 001b  c3                                ret     
+
+	return memMgr->GetMemType(*this);
+ 001c                    MemType near MemID::GetMemType() const:
+ 001c  8b 54 24 04                       mov     edx,+4H[esp]
+ 0020  a1 00 00 00 00                    mov     eax,memMgr
+ 0025  66 8b 12                          mov     dx,[edx]
+ 0028  81 e2 ff ff 00 00                 and     edx,0000ffffH
+ 002e  8b 40 04                          mov     eax,+4H[eax]
+ 0031  c1 e2 04                          shl     edx,04H
+ 0034  8a 04 02                          mov     al,[edx+eax]
+
+}
+
+const char*
+ 0037  c3                                ret     
+
+MemID::GetMemTypeStr() const
+{
+ 0038                    char const near * near MemID::GetMemTypeStr() const:
+ 0038  55                                push    ebp
+ 0039  89 e5                             mov     ebp,esp
+
+	return memMgr->GetMemTypeStr(*this);
+ 003b  8b 45 08                          mov     eax,+8H[ebp]
+ 003e  66 8b 00                          mov     ax,[eax]
+ 0041  25 ff ff 00 00                    and     eax,0000ffffH
+ 0046  50                                push    eax
+ 0047  8b 15 00 00 00 00                 mov     edx,memMgr
+ 004d  52                                push    edx
+ 004e  e8 00 00 00 00                    call    char const near * near MemoryMgr::GetMemTypeStr( short unsigned )
+ 0053  83 c4 08                          add     esp,00000008H
+
+}
+
+void
+ 0056  5d                                pop     ebp
+ 0057  c3                                ret     
+
+MemID::Clear() const
+{
+ 0058                    void near MemID::Clear() const:
+ 0058  55                                push    ebp
+ 0059  89 e5                             mov     ebp,esp
+
+	Fill(0);
+ 005b  6a 00                             push    00000000H
+ 005d  8b 55 08                          mov     edx,+8H[ebp]
+ 0060  52                                push    edx
+ 0061  e8 00 00 00 00                    call    void near MemID::Fill( char unsigned ) const
+ 0066  83 c4 08                          add     esp,00000008H
+
+}
+
+void
+ 0069  5d                                pop     ebp
+ 006a  c3                                ret     
+
+MemID::Critical(Bool on) const
+{
+ 006b                    void near MemID::Critical( int ) const:
+ 006b  53                                push    ebx
+
+	memMgr->Critical(handle, on);
+ 006c  8b 54 24 08                       mov     edx,+8H[esp]
+ 0070  a1 00 00 00 00                    mov     eax,memMgr
+ 0075  66 8b 12                          mov     dx,[edx]
+ 0078  81 e2 ff ff 00 00                 and     edx,0000ffffH
+ 007e  8b 40 04                          mov     eax,+4H[eax]
+ 0081  c1 e2 04                          shl     edx,04H
+ 0084  01 d0                             add     eax,edx
+ 0086  8a 58 01                          mov     bl,+1H[eax]
+ 0089  8b 54 24 0c                       mov     edx,+0cH[esp]
+ 008d  80 e3 fe                          and     bl,0feH
+ 0090  83 e2 01                          and     edx,00000001H
+ 0093  88 58 01                          mov     +1H[eax],bl
+ 0096  c1 e2 08                          shl     edx,08H
+ 0099  09 10                             or      [eax],edx
+
+}
+
+void
+ 009b  5b                                pop     ebx
+ 009c  c3                                ret     
+
+MemID::Fill(uchar c) const
+{
+ 009d                    void near MemID::Fill( char unsigned ) const:
+ 009d  55                                push    ebp
+ 009e  89 e5                             mov     ebp,esp
+ 00a0  53                                push    ebx
+
+	memset(**this, c, (size_t) memMgr->GetSize(*this));
+ 00a1  8b 55 08                          mov     edx,+8H[ebp]
+ 00a4  31 db                             xor     ebx,ebx
+ 00a6  66 8b 12                          mov     dx,[edx]
+ 00a9  a1 00 00 00 00                    mov     eax,memMgr
+ 00ae  66 89 d3                          mov     bx,dx
+ 00b1  8b 40 04                          mov     eax,+4H[eax]
+ 00b4  c1 e3 04                          shl     ebx,04H
+ 00b7  8b 44 03 08                       mov     eax,+8H[ebx+eax]
+ 00bb  50                                push    eax
+ 00bc  31 c0                             xor     eax,eax
+ 00be  8a 45 0c                          mov     al,+0cH[ebp]
+ 00c1  50                                push    eax
+ 00c2  31 c0                             xor     eax,eax
+ 00c4  66 89 d0                          mov     ax,dx
+ 00c7  8b 04 85 00 00 00 
+       00                                mov     eax,_descPtrTable[eax*4]
+ 00ce  50                                push    eax
+ 00cf  e8 00 00 00 00                    call    memset
+ 00d4  83 c4 0c          L1              add     esp,0000000cH
+
+}
+
+void*
+ 00d7  5b                                pop     ebx
+ 00d8  5d                                pop     ebp
+ 00d9  c3                                ret     
+
+MemID::Lock() const
+{
+ 00da                    void near * near MemID::Lock() const:
+ 00da  55                                push    ebp
+ 00db  89 e5                             mov     ebp,esp
+
+	return memMgr->Lock(*this);
+ 00dd  8b 45 08                          mov     eax,+8H[ebp]
+ 00e0  66 8b 00                          mov     ax,[eax]
+ 00e3  25 ff ff 00 00                    and     eax,0000ffffH
+ 00e8  50                                push    eax
+ 00e9  8b 15 00 00 00 00                 mov     edx,memMgr
+ 00ef  52                                push    edx
+ 00f0  e8 00 00 00 00                    call    void near * near MemoryMgr::Lock( short unsigned )
+ 00f5  83 c4 08                          add     esp,00000008H
+
+}
+
+void*
+ 00f8  5d                                pop     ebp
+ 00f9  c3                                ret     
+
+MemID::Unlock() const
+{
+ 00fa                    void near * near MemID::Unlock() const:
+ 00fa  55                                push    ebp
+ 00fb  89 e5                             mov     ebp,esp
+
+	return memMgr->Unlock(*this);
+ 00fd  8b 45 08                          mov     eax,+8H[ebp]
+ 0100  66 8b 00                          mov     ax,[eax]
+ 0103  25 ff ff 00 00                    and     eax,0000ffffH
+ 0108  50                                push    eax
+ 0109  8b 15 00 00 00 00                 mov     edx,memMgr
+ 010f  52                                push    edx
+ 0110  e8 00 00 00 00                    call    void near * near MemoryMgr::Unlock( short unsigned )
+ 0115  83 c4 08                          add     esp,00000008H
+
+}
+
+void
+ 0118  5d                                pop     ebp
+ 0119  c3                                ret     
+
+MemID::SetDiscardable() const
+{
+ 011a                    void near MemID::SetDiscardable() const:
+ 011a  55                                push    ebp
+ 011b  89 e5                             mov     ebp,esp
+ 011d  53                                push    ebx
+ 011e  56                                push    esi
+ 011f  57                                push    edi
+
+	memMgr->SetDiscardable(*this);
+ 0120  8b 45 08                          mov     eax,+8H[ebp]
+ 0123  8b 1d 00 00 00 00                 mov     ebx,memMgr
+ 0129  66 8b 00                          mov     ax,[eax]
+ 012c  89 d9                             mov     ecx,ebx
+ 012e  89 c6                             mov     esi,eax
+ 0130  89 c2                             mov     edx,eax
+ 0132  66 85 c0                          test    ax,ax
+ 0135  74 29                             je      L2
+ 0137  31 ff                             xor     edi,edi
+ 0139  66 89 c7                          mov     di,ax
+ 013c  3b 3b                             cmp     edi,[ebx]
+ 013e  73 20                             jae     L2
+ 0140  25 ff ff 00 00                    and     eax,0000ffffH
+ 0145  8b 7b 04                          mov     edi,+4H[ebx]
+ 0148  c1 e0 04                          shl     eax,04H
+ 014b  01 f8                             add     eax,edi
+ 014d  f6 40 02 02                       test    byte ptr +2H[eax],02H
+ 0151  75 0d                             jne     L2
+ 0153  f6 40 01 08                       test    byte ptr +1H[eax],08H
+ 0157  75 07                             jne     L2
+ 0159  b8 01 00 00 00                    mov     eax,00000001H
+ 015e  eb 02                             jmp     L3
+ 0160  31 c0             L2              xor     eax,eax
+ 0162  85 c0             L3              test    eax,eax
+ 0164  75 0d                             jne     L4
+ 0166  66 89 d0                          mov     ax,dx
+ 0169  50                                push    eax
+ 016a  51                                push    ecx
+ 016b  e8 00 00 00 00                    call    void near MemoryMgr::NotValid( short unsigned )
+ 0170  83 c4 08                          add     esp,00000008H
+ 0173  31 d2             L4              xor     edx,edx
+ 0175  66 89 f2                          mov     dx,si
+ 0178  8b 43 04                          mov     eax,+4H[ebx]
+ 017b  c1 e2 04                          shl     edx,04H
+ 017e  80 64 02 02 ef                    and     byte ptr +2H[edx+eax],0efH
+ 0183  8b 43 04                          mov     eax,+4H[ebx]
+ 0186  80 4c 02 01 04                    or      byte ptr +1H[edx+eax],04H
+
+}
+
+void
+ 018b  5f                                pop     edi
+ 018c  5e                                pop     esi
+ 018d  5b                                pop     ebx
+ 018e  5d                                pop     ebp
+ 018f  c3                                ret     
+
+MemID::SetNotDiscardable() const
+{
+ 0190                    void near MemID::SetNotDiscardable() const:
+ 0190  55                                push    ebp
+ 0191  89 e5                             mov     ebp,esp
+ 0193  53                                push    ebx
+ 0194  56                                push    esi
+ 0195  57                                push    edi
+
+	memMgr->SetNotDiscardable(*this);
+ 0196  8b 45 08                          mov     eax,+8H[ebp]
+ 0199  8b 1d 00 00 00 00                 mov     ebx,memMgr
+ 019f  66 8b 00                          mov     ax,[eax]
+ 01a2  89 d9                             mov     ecx,ebx
+ 01a4  89 c6                             mov     esi,eax
+ 01a6  89 c2                             mov     edx,eax
+ 01a8  66 85 c0                          test    ax,ax
+ 01ab  74 29                             je      L5
+ 01ad  31 ff                             xor     edi,edi
+ 01af  66 89 c7                          mov     di,ax
+ 01b2  3b 3b                             cmp     edi,[ebx]
+ 01b4  73 20                             jae     L5
+ 01b6  25 ff ff 00 00                    and     eax,0000ffffH
+ 01bb  8b 7b 04                          mov     edi,+4H[ebx]
+ 01be  c1 e0 04                          shl     eax,04H
+ 01c1  01 f8                             add     eax,edi
+ 01c3  f6 40 02 02                       test    byte ptr +2H[eax],02H
+ 01c7  75 0d                             jne     L5
+ 01c9  f6 40 01 08                       test    byte ptr +1H[eax],08H
+ 01cd  75 07                             jne     L5
+ 01cf  b8 01 00 00 00                    mov     eax,00000001H
+ 01d4  eb 02                             jmp     L6
+ 01d6  31 c0             L5              xor     eax,eax
+ 01d8  85 c0             L6              test    eax,eax
+ 01da  75 0d                             jne     L7
+ 01dc  66 89 d0                          mov     ax,dx
+ 01df  50                                push    eax
+ 01e0  51                                push    ecx
+ 01e1  e8 00 00 00 00                    call    void near MemoryMgr::NotValid( short unsigned )
+ 01e6  83 c4 08                          add     esp,00000008H
+ 01e9  31 d2             L7              xor     edx,edx
+ 01eb  66 89 f2                          mov     dx,si
+ 01ee  8b 43 04                          mov     eax,+4H[ebx]
+ 01f1  c1 e2 04                          shl     edx,04H
+ 01f4  80 64 02 01 fb                    and     byte ptr +1H[edx+eax],0fbH
+ 01f9  8b 43 04                          mov     eax,+4H[ebx]
+ 01fc  80 4c 02 02 10                    or      byte ptr +2H[edx+eax],10H
+
+}
+
+void*
+ 0201  5f                                pop     edi
+ 0202  5e                                pop     esi
+ 0203  5b                                pop     ebx
+ 0204  5d                                pop     ebp
+ 0205  c3                                ret     
+
+MemID::Realloc(size_t size) const
+{
+ 0206                    void near * near MemID::Realloc( int unsigned ) const:
+ 0206  55                                push    ebp
+ 0207  89 e5                             mov     ebp,esp
+ 0209  53                                push    ebx
+ 020a  8b 5d 08                          mov     ebx,+8H[ebp]
+
+	memMgr->Realloc(*this, size);
+ 020d  8b 55 0c                          mov     edx,+0cH[ebp]
+ 0210  66 8b 03                          mov     ax,[ebx]
+ 0213  52                                push    edx
+ 0214  25 ff ff 00 00                    and     eax,0000ffffH
+ 0219  50                                push    eax
+ 021a  8b 0d 00 00 00 00                 mov     ecx,memMgr
+ 0220  51                                push    ecx
+ 0221  e8 00 00 00 00                    call    void near MemoryMgr::Realloc( short unsigned, int unsigned )
+ 0226  83 c4 0c                          add     esp,0000000cH
+
+	return **this;
+ 0229  66 8b 03                          mov     ax,[ebx]
+ 022c  25 ff ff 00 00                    and     eax,0000ffffH
+ 0231  8b 04 85 00 00 00 
+       00                                mov     eax,_descPtrTable[eax*4]
+
+}
+
+int
+ 0238  5b                                pop     ebx
+ 0239  5d                                pop     ebp
+ 023a  c3                                ret     
+
+MemID::Read(int fd) const
+{
+ 023b                    int near MemID::Read( int ) const:
+ 023b  55                                push    ebp
+ 023c  89 e5                             mov     ebp,esp
+ 023e  53                                push    ebx
+ 023f  83 ec 04                          sub     esp,00000004H
+
+	return ReadMemID(fd, *this, Size());
+ 0242  8b 55 08                          mov     edx,+8H[ebp]
+ 0245  52                                push    edx
+ 0246  e8 00 00 00 00                    call    int unsigned near MemID::Size() const
+ 024b  83 c4 04                          add     esp,00000004H
+ 024e  50                                push    eax
+ 024f  8b 45 08                          mov     eax,+8H[ebp]
+ 0252  66 8b 00                          mov     ax,[eax]
+ 0255  66 89 45 f8                       mov     -8H[ebp],ax
+ 0259  8d 45 f8                          lea     eax,-8H[ebp]
+ 025c  50                                push    eax
+ 025d  8b 5d 0c                          mov     ebx,+0cH[ebp]
+ 0260  53                                push    ebx
+ 0261  e8 00 00 00 00                    call    int near ReadMemID( int, MemID, int )
+ 0266  83 c4 0c                          add     esp,0000000cH
+
+}
+
+int
+ 0269  8d 65 fc                          lea     esp,-4H[ebp]
+ 026c  5b                                pop     ebx
+ 026d  5d                                pop     ebp
+ 026e  c3                                ret     
+
+MemID::Read(int fd, size_t ofs, size_t size) const
+{
+ 026f                    int near MemID::Read( int, int unsigned, int unsigned ) const:
+ 026f  55                                push    ebp
+ 0270  89 e5                             mov     ebp,esp
+ 0272  53                                push    ebx
+
+	return ::Read(fd, &(*this)[ofs], size);
+}
+
+int
+ 0273  8b 55 14                          mov     edx,+14H[ebp]
+ 0276  8b 45 08                          mov     eax,+8H[ebp]
+ 0279  52                                push    edx
+ 027a  66 8b 00                          mov     ax,[eax]
+ 027d  25 ff ff 00 00                    and     eax,0000ffffH
+ 0282  8b 5d 10                          mov     ebx,+10H[ebp]
+ 0285  8b 04 85 00 00 00 
+       00                                mov     eax,_descPtrTable[eax*4]
+ 028c  01 d8                             add     eax,ebx
+ 028e  50                                push    eax
+ 028f  8b 4d 0c                          mov     ecx,+0cH[ebp]
+ 0292  51                                push    ecx
+ 0293  e8 00 00 00 00                    call    int near Read( int, void near *, int )
+ 0298  e9 37 fe ff ff                    jmp     L1
+
+MemID::Load(MemType type, char* fileName, MemAttrs attrs, ReservedHandle h)
+{
+	int fd;
+
+ 029d                    int near MemID::Load( MemType, char near *, int unsigned, ReservedHandle ):
+ 029d  55                                push    ebp
+ 029e  89 e5                             mov     ebp,esp
+ 02a0  53                                push    ebx
+ 02a1  56                                push    esi
+ 02a2  57                                push    edi
+ 02a3  83 ec 04                          sub     esp,00000004H
+ 02a6  8b 5d 08                          mov     ebx,+8H[ebp]
+
+	if ((fd = Open(fileName, O_RDONLY | O_BINARY)) == -1)
+ 02a9  68 00 02 00 00                    push    00000200H
+ 02ae  8b 55 10                          mov     edx,+10H[ebp]
+ 02b1  52                                push    edx
+ 02b2  e8 00 00 00 00                    call    int near Open( char const near *, int unsigned )
+ 02b7  89 c6                             mov     esi,eax
+ 02b9  83 c4 08                          add     esp,00000008H
+ 02bc  89 45 f0                          mov     -10H[ebp],eax
+ 02bf  83 f8 ff                          cmp     eax,0ffffffffH
+ 02c2  75 07                             jne     L8
+
+		return 0;
+
+ 02c4  31 c0                             xor     eax,eax
+ 02c6  e9 7b 00 00 00                    jmp     L11
+
+	int size = FileLength(fd);
+ 02cb  50                L8              push    eax
+ 02cc  e8 00 00 00 00                    call    long unsigned near FileLength( int )
+ 02d1  83 c4 04                          add     esp,00000004H
+ 02d4  0f be 55 18                       movsx   edx,byte ptr +18H[ebp]
+ 02d8  52                                push    edx
+ 02d9  6a 00                             push    00000000H
+ 02db  89 c7                             mov     edi,eax
+ 02dd  6a 00                             push    00000000H
+
+	Get(type, size, h, attrs);
+
+ 02df  8b 45 14                          mov     eax,+14H[ebp]
+ 02e2  31 d2                             xor     edx,edx
+ 02e4  6a 00                             push    00000000H
+ 02e6  0d 00 00 08 00                    or      eax,00080000H
+ 02eb  8a 55 0c                          mov     dl,+0cH[ebp]
+ 02ee  57                                push    edi
+ 02ef  09 d0                             or      eax,edx
+ 02f1  50                                push    eax
+ 02f2  8b 0d 00 00 00 00                 mov     ecx,memMgr
+ 02f8  51                                push    ecx
+ 02f9  e8 00 00 00 00                    call    short unsigned near MemoryMgr::Alloc( int unsigned, int unsigned, int unsigned, MemClient near *, char, ReservedHandle )
+ 02fe  83 c4 1c                          add     esp,0000001cH
+
+	int rc = Read(fd);
+ 0301  56                                push    esi
+ 0302  53                                push    ebx
+ 0303  66 89 03                          mov     [ebx],ax
+ 0306  e8 00 00 00 00                    call    int near MemID::Read( int ) const
+ 030b  83 c4 08                          add     esp,00000008H
+ 030e  89 c6                             mov     esi,eax
+
+	if (rc != size) {
+ 0310  39 f8                             cmp     eax,edi
+ 0312  74 24                             je      L10
+
+		Free();
+ 0314  66 8b 13                          mov     dx,[ebx]
+ 0317  66 85 d2                          test    dx,dx
+ 031a  74 1a                             je      L9
+ 031c  31 c0                             xor     eax,eax
+ 031e  66 89 d0                          mov     ax,dx
+ 0321  50                                push    eax
+ 0322  8b 35 00 00 00 00                 mov     esi,memMgr
+ 0328  56                                push    esi
+ 0329  e8 00 00 00 00                    call    void near MemoryMgr::Free( short unsigned )
+ 032e  83 c4 08                          add     esp,00000008H
+ 0331  66 c7 03 00 00                    mov     word ptr [ebx],0000H
+
+		rc = 0;
+	}
+	
+ 0336  31 f6             L9              xor     esi,esi
+
+	Close(fd);
+	
+ 0338  8b 7d f0          L10             mov     edi,-10H[ebp]
+ 033b  57                                push    edi
+ 033c  e8 00 00 00 00                    call    int near Close( int )
+ 0341  83 c4 04                          add     esp,00000004H
+
+	return rc;
+ 0344  89 f0                             mov     eax,esi
+
+}
+
+size_t
+ 0346  8d 65 f4          L11             lea     esp,-0cH[ebp]
+ 0349  5f                                pop     edi
+ 034a  5e                                pop     esi
+ 034b  5b                                pop     ebx
+ 034c  5d                                pop     ebp
+ 034d  c3                                ret     
+
+MemID::Size() const
+{
+ 034e                    int unsigned near MemID::Size() const:
+ 034e  8b 44 24 04                       mov     eax,+4H[esp]
+
+	return handle ? (size_t) memMgr->GetSize(*this) : 0;
+ 0352  66 8b 10                          mov     dx,[eax]
+ 0355  66 85 d2                          test    dx,dx
+ 0358  74 16                             je      L12
+ 035a  a1 00 00 00 00                    mov     eax,memMgr
+ 035f  81 e2 ff ff 00 00                 and     edx,0000ffffH
+ 0365  8b 40 04                          mov     eax,+4H[eax]
+ 0368  c1 e2 04                          shl     edx,04H
+ 036b  8b 44 02 08                       mov     eax,+8H[edx+eax]
+ 036f  c3                                ret     
+ 0370  31 c0             L12             xor     eax,eax
+
+}
+
+#ifdef DEBUG
+void
+MemID::SetChecksum(Bool onoff) const
+{
+	memMgr->SetChecksum(*this, (int)onoff);
+}
+#endif
+
+
+ 0372  c3                                ret     
+
+No disassembly errors
+
+------------------------------------------------------------

@@ -1,0 +1,107 @@
+void
+FontMgr::DrawChar(uchar theChar)
+{
+	// Draw a font character into the created BM at 
+	// the given pen location with the given color
+
+	// Address the character pattern
+	FontHeader * fontHeader;
+
+#ifdef MACINTOSH
+
+	MemID fontID = resMgr->Get(MemResFont,font);
+	fontHeader = (FontHeader *) memMgr->GetAddr(fontID);
+
+#else
+
+	if(font == SYSTEMFONT) {
+		fontHeader = (FontHeader *) sciSystemFont;
+	} else {
+		MemID fontID = resMgr->Get(MemResFont,font);
+		fontHeader = (FontHeader *) memMgr->GetAddr(fontID);
+	}
+
+#endif
+
+	// Check for a valid character
+	if ((theChar >= highChar) || (theChar < lowChar))
+		return;
+	// Get the characters dimensions
+	Int16* charRecsAddr = (Int16*) &fontHeader->charRecs;
+	uchar * charAddr = (uchar*) fontHeader + charRecsAddr[theChar];
+	int cWide =     *charAddr++;
+	int cHigh =     *charAddr++;
+	// charAddr now points to the characters line patterns
+
+	// check to see if this character is outside of the bitmap
+	if ( penX < 0 || penX > BMWidth || penY < 0 || penY > BMHeight || (penX + cWide) > BMWidth || (penY + cHigh) > BMHeight ) {
+#ifdef DEBUG
+		msgMgr->Mono ( "clipped char '%c'\n", theChar );
+#endif
+		return;
+	}
+
+	// start drawing into the BM at:
+	//      penY*width + penX + BMaddress
+	uchar* penAddr = (uchar*) memMgr->GetAddr(BM);
+	penAddr += (penY * BMWidth) + penX + CELHEADERSIZE;
+
+	// the skip to the next line of the character
+	int skip = BMWidth - cWide;
+
+	int inCharPenY = penY;
+
+//	#ifdef DEBUG
+		// Lets check for writing outside of the bitmap
+		uchar* bitMapEnd = (uchar*) memMgr->GetAddr(BM);
+		bitMapEnd += BMWidth*BMHeight + CELHEADERSIZE;
+		if ((penAddr + (cHigh-1)*BMWidth + cWide) >= bitMapEnd) {
+//			msgMgr->Alert ("Character \"%c\" height exceeds font %d's point size",theChar,font);
+			// Let's shorten the character
+			cHigh = (bitMapEnd-1-cWide-penAddr)/BMWidth + 1;
+			if (cHigh < 0)
+				// This could happen if the cWide was
+				// greater than the bitmap width
+				cHigh = 0;
+		}
+//	#endif
+
+	while (cHigh) {
+		// Draw a line of pattern
+		signed char mask = 0xff;
+		if (dim) { 
+			if (inCharPenY & 1)
+				mask = 0xaa;
+			else
+				mask = 0x55;
+		}
+		// the current dot position in the character
+		int dotPos = 0;
+		// get the next byte of pattern
+		signed char pattern = (signed char) *charAddr++ & mask;
+		while (dotPos < cWide) {
+			if (pattern < 0)
+				*penAddr        = fore;
+			penAddr++;
+			dotPos++;
+			// shift the dot out the left
+			pattern = pattern << 1;
+
+			// Following line prevents skiping a 
+			// byte of pattern when cWide == 8
+			if (dotPos == cWide) break;
+
+			// check for byte reload
+			if (!(dotPos & 7))
+				pattern = (signed char) *charAddr++ & mask;
+
+		}
+		// a line of pattern done get to the next line in the BM
+		penAddr += skip;
+		++inCharPenY;
+		--cHigh;
+	}
+	// put the pen in place for the next character
+	penX += cWide;
+}
+

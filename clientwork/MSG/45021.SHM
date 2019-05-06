@@ -1,0 +1,20 @@
+; 45021.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define AXE               6)
+(define DAGGER            4)
+(define DARKMAGIC         2)
+(define DEFENSE          11)
+(define DETECTTRAP        8)
+(define EARTHMAGIC        3)
+(define LIGHTMAGIC        1)
+(define PICKLOCK          9)
+(define STEAL            12)
+(define STEALTH          10)
+(define SWORD             5)
+(define UNARMED           7)
+
+; CASES
+

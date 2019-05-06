@@ -1,0 +1,13 @@
+; 45011.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define CREATE_H          2)
+(define ERASE_H           4)
+(define EXIT_MAIN_H       5)
+(define LOOK_H            3)
+(define PLAY_H            1)
+
+; CASES
+

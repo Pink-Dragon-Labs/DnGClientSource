@@ -1,0 +1,14 @@
+; 45013.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define AGE_H             1)
+(define DWARF_H           4)
+(define ELF_H             3)
+(define GIANT_H           5)
+(define HUMAN_H           2)
+(define RACE_H            6)
+
+; CASES
+

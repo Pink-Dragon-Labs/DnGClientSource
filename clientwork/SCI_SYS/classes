@@ -1,0 +1,124 @@
+Object              ;netobj.sc
+  Collection        ;collect.sc
+    List            ;collect.sc
+      Set           ;collect.sc
+        Dialog      ;dialog.sc
+          ScreenDialog;game.sc
+          FancyDialog;dialog.sc
+          IconBar   ;iconbar.sc
+        EventHandler;evthndlr.sc
+          Cast      ;evthndlr.sc
+        GlobalTimers;timer.sc
+        WaitingTimers;timer.sc
+        BtnList     ;btnlist.sc
+        WinDialogSet;dlghndlr.sc
+        DialogHandler;dlghndlr.sc
+        GlobalDemons;game.sc
+        CueSet      ;roommgr.sc
+      Queue         ;queue.sc
+      Stack         ;stack.sc
+      MenuBar       ;menubar.sc
+      MenuList      ;menubar.sc
+  WDragger          ;classdef.sc
+  Code              ;netobj.sc
+    Scaler          ;scaler.sc
+      ScaleTo       ;scaleto.sc
+    Actions         ;feature.sc
+    GradualLooper   ;grooper.sc
+    SmoothLooper    ;smooper.sc
+    PAvoider        ;pavoid.sc
+    NetMsgProcessor ;netmsgpr.sc
+  Sequence          ;sequence.sc
+  Event             ;event.sc
+  Script            ;script.sc
+    DemonsScript    ;script.sc
+  Cue               ;script.sc
+  Array             ;array.sc
+    IntArray        ;array.sc
+    IDArray         ;array.sc
+    ByteArray       ;array.sc
+      String        ;string.sc
+        FileNameStr ;filesel.sc
+      Clut          ;clut.sc
+      PackedData    ;packdata.sc
+        NetMsg      ;netmsg.sc
+  Rectangle         ;rect.sc
+    BitMap          ;bitmap.sc
+      Feature       ;feature.sc
+        View        ;view.sc
+          Prop      ;prop.sc
+            Actor   ;actor.sc
+              Ego   ;ego.sc
+      Item          ;item.sc
+        TextItem    ;textitem.sc
+          TitleItem ;textitem.sc
+          Button    ;button.sc
+            IconButton;iconbar.sc
+          MenuOption;menubar.sc
+        IconItem    ;iconitem.sc
+          UnderlineItem;print.sc
+        EditItem    ;edititem.sc
+        Slider      ;slider.sc
+        Selector    ;selector.sc
+          TextSelector;selector.sc
+          FileSelector;filesel.sc
+      SelectorText  ;selector.sc
+    Cursor          ;cursor.sc
+    Plane           ;plane.sc
+      Window        ;window.sc
+  Timer             ;timer.sc
+    GlobalTimer     ;timer.sc
+  TimeOut           ;timer.sc
+  LongInt           ;longint.sc
+  Sound             ;sound.sc
+    MusicMgr        ;sound.sc
+  PanHandler        ;sound.sc
+  SoundMgr          ;sound.sc
+  Styler            ;styler.sc
+  Motion            ;motion.sc
+    MoveTo          ;motion.sc
+      Orbit         ;orbit.sc
+      Path          ;path.sc
+      DPath         ;dpath.sc
+        RelDPath    ;dpath.sc
+    Chase           ;chase.sc
+      Follow        ;follow.sc
+      Approach      ;approach.sc
+    Wander          ;wander.sc
+    PolyPath        ;polypath.sc
+      MoveFwd       ;movefwd.sc
+      PChase        ;pchase.sc
+      PFollow       ;pfollow.sc
+    Jump            ;jump.sc
+      JumpTo        ;jump.sc
+  Cycle             ;cycle.sc
+    Forward         ;cycle.sc
+      Walk          ;cycle.sc
+      StopWalk      ;stopwalk.sc
+    CycleTo         ;cycleto.sc
+      EndLoop       ;cycleto.sc
+      BegLoop       ;cycleto.sc
+    Reverse         ;reverse.sc
+    MouthSync       ;sync.sc
+    GradualCycler   ;grooper.sc
+    MoveCycle       ;movecyc.sc
+    RandCycle       ;randcyc.sc
+    Oscillate       ;osc.sc
+  Point             ;points.sc
+  Line              ;points.sc
+  Polygon           ;polygon.sc
+  Magnifier         ;magnify.sc
+  WinDialogHandler  ;dlghndlr.sc
+  User              ;user.sc
+    NetUser         ;netuser.sc
+  Sync              ;sync.sc
+  ScriptSync        ;sync.sc
+  Game              ;game.sc
+  File              ;file.sc
+  Messager          ;messager.sc
+  Flags             ;flags.sc
+  ManagedRoom       ;roommgr.sc
+    StaticRoom      ;roommgr.sc
+  RoomMgr           ;roommgr.sc
+  Server            ;server.sc
+  ScrollableWindow  ;scrolwin.sc

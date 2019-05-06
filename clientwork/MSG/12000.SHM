@@ -1,0 +1,21 @@
+; 12000.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define BOB_N             1)
+
+; CASES
+
+
+(define POS_CASE1_C       1)
+
+(define NEG_CASE3_C       2)
+
+(define NEG_CASE2_C       3)
+
+(define NEG_CASE1_C       4)
+
+(define POS_CASE2_C       5)
+
+(define POS_CASE3_C       6)

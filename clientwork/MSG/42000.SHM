@@ -1,0 +1,41 @@
+; 42000.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define CAST             22)
+(define COMBAT_EXIT      27)
+(define CONTROL_1         3)
+(define CONTROL_2         1)
+(define CONTROL_3         2)
+(define CONTROL_4         4)
+(define CONTROL_5         5)
+(define CONTROL_6        21)
+(define GROUP_1          17)
+(define GROUP_2          18)
+(define GROUP_3          19)
+(define GROUP_4          20)
+(define GROUP_5          32)
+(define GROUP_ICON       29)
+(define HELP_1           14)
+(define HELP_2           15)
+(define HELP_3           24)
+(define HELP_4           16)
+(define INVENTORY        25)
+(define MAP              28)
+(define OPTIONS          30)
+(define PREF_1            9)
+(define PREF_2           10)
+(define PREF_3           11)
+(define PREF_4           12)
+(define PREF_5           13)
+(define SURRENDER        26)
+(define SWORD            23)
+(define SYSTEM_1          7)
+(define SYSTEM_2         31)
+(define SYSTEM_3         33)
+(define SYSTEM_5          8)
+(define TOP               6)
+
+; CASES
+

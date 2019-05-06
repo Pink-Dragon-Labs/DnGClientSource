@@ -1,0 +1,9 @@
+; 11001.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ABOOK_N           1)
+
+; CASES
+

@@ -1,0 +1,15 @@
+; TOWNMAP.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define GUILDHALL         4)
+(define INN               6)
+(define MARKETPLACE       1)
+(define PORTALBLDG        7)
+(define RESIDENTIAL       5)
+(define TAVERN            2)
+(define TOWNHALL          3)
+
+; CASES
+

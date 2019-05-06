@@ -1,0 +1,55 @@
+srcDir = ..\
+
+cpp		= *wpp386
+cppOpts	= /dWIN /dWIN32S /zW /4s /j /s /zp4 /hc /fh /fhq /bt=NT /r 
+
+c               = *wcc386
+cOpts		= /dWIN /zw /zp4 /hc /fh /r
+#cOpts	= /dWIN /zW /3s /j /s 
+
+asm		= ml
+asmOpts	= /DWINDOWS /c /Cp /Zm /Zp4
+
+.BEFORE
+	# check to see if a make is already in progress
+	@set alreadyMaking=0
+	@if exist *._ @set alreadyMaking=1
+	@if $(%alreadyMaking)==1 @echo.
+	@if $(%alreadyMaking)==1 @echo Make in progress by
+	@if $(%alreadyMaking)==1 @dir *._
+	@if $(%alreadyMaking)==1 @echo.
+	@if $(%alreadyMaking)==1 @%abort
+	#
+        #%create $(%vcsid)._     
+#	@fixtime
+	@set include=$(include)
+
+.ERROR
+	del $(%vcsid)._
+	@echo 
+
+.AFTER
+	@del $(%vcsid)._
+
+.EXTENSIONS: 
+.EXTENSIONS: .obd .obj .asm .cpp .c .exe .rc .ico .cur .res
+
+.asm : $(srcDir)
+.asm.obj:
+	$(asm) $(asmOpts) $(debugAsmOpts) $[@
+
+.cpp: $(srcDir)
+.cpp.obj: .AUTODEPEND
+	$(cpp) $(cppOpts) /d1 $(debugOpt) $[@
+
+.cpp.obd: .AUTODEPEND
+	$(cpp) $(cppOpts) /d2 $(debugOpt) $[@ /fo$[&.obd
+
+.c: $(srcDir)
+.c.obj: .AUTODEPEND
+	$(c) $(cOpts) $[@
+
+.rc:$(srcDir)
+.ico:$(srcDir)
+.cur:$(srcDir)
+#.res:$(srcDir)

@@ -1,0 +1,2835 @@
+.387
+.386p
+.model flat
+		PUBLIC	`W?$ct:Object$n($MemID$$$1$uiui)_`
+		PUBLIC	`W?$ct:Object$n($MemID$$$1$)_`
+		PUBLIC	`W?$dt:Object$n()_`
+		PUBLIC	`W?AddToObjects$:Object$n()v`
+		PUBLIC	`W?DeleteFromObjects$:Object$n()v`
+		PUBLIC	`W?Name$:Object$n()pnxa`
+		PUBLIC	`W?RespondsTo$:Object$n(us)i`
+		PUBLIC	`W?Get$:ObjectID$n($MemID$$uiui)v`
+		PUBLIC	`W?Get$:ObjectID$n($1$)v`
+		PUBLIC	`W?Free$:ObjectID$n()v`
+		PUBLIC	`W?Clone$:ObjectID$n()$1$`
+		PUBLIC	`W?$ct:SelectorDict$n()_`
+		PUBLIC	`W?$dt:SelectorDict$n()_`
+		PUBLIC	`W?add$:SelectorDict$n(usuiui)v`
+		PUBLIC	`W?get$:SelectorDict$n(us)i`
+		PUBLIC	`W?copy$:SelectorDict$n(pn$1$)v`
+		PUBLIC	`W?GetClass$n(pnxa)$ObjectID$$`
+		PUBLIC	`W?GetSelector$n(pnxa)us`
+		PUBLIC	`W?GetSelectorName$n(uspna)pnxa`
+		PUBLIC	LoadPropOffsets
+		PUBLIC	`W?KIsObject$n(pns)v`
+		PUBLIC	`W?KRespondsTo$n(pns)v`
+		PUBLIC	`W?KClone$n(pns)v`
+		PUBLIC	`W?KDisposeClone$n(pns)v`
+		PUBLIC	`W?KFindSelector$n(pns)v`
+		PUBLIC	`W?KFindClass$n(pns)v`
+		PUBLIC	`W?KIsKindOf$n(pns)v`
+		PUBLIC	W?objInfo$npn$ObjectInfo$$
+		PUBLIC	`W?indexedPropertyOffsets$n[]ui`
+		PUBLIC	W?gSelectorDictSize$ni
+		PUBLIC	W?objectMgr$n$ObjectMgr$$
+		EXTRN	memMgr:BYTE
+		EXTRN	W?msgMgr$npn$MsgMgr$$:BYTE
+		EXTRN	`W?Fatal$:MsgMgr$n(pnae)v`:BYTE
+		EXTRN	_descPtrTable:BYTE
+		EXTRN	`W?$nwn(ui)pnv`:BYTE
+		EXTRN	`W?GetMemType$:MemID$n.x()$MemType$$`:BYTE
+		EXTRN	`W?Fatal$:MsgMgr$n(ie)v`:BYTE
+		EXTRN	`W?Alert$:MsgMgr$n(pnae)i`:BYTE
+		EXTRN	`W?$dln(pnv)v`:BYTE
+		EXTRN	malloc:BYTE
+		EXTRN	free:BYTE
+		EXTRN	`W?$ct:TextID$n(us)_`:BYTE
+		EXTRN	`W?Alloc$:MemoryMgr$n(uiuiuipn$MemClient$$a$ReservedHandle$$)us`:BYTE
+		EXTRN	`W?Free$:MemoryMgr$n(us)v`:BYTE
+		EXTRN	strcmp:BYTE
+		EXTRN	`W?GetVocabStr$n(iipna)i`:BYTE
+		EXTRN	sprintf:BYTE
+		EXTRN	W?resMgr$npn$ResourceMgr$$:BYTE
+		EXTRN	pm:BYTE
+		EXTRN	`W?$ct:TextID$n(rnx$MemID$$)_`:BYTE
+DGROUP		GROUP	CONST,CONST2,_DATA,_BSS
+_TEXT		SEGMENT	BYTE PUBLIC USE32 'CODE'
+		ASSUME CS:_TEXT, DS:DGROUP, SS:DGROUP
+
+; //	object.cpp
+; 
+; #include <windows.h>
+; #include <stdio.h>
+; #include <string.h>
+; 
+; #include "sol.hpp"
+; 
+; #include "kernel.hpp"
+; #include "memmgr.hpp"
+; #include "msg.hpp"
+; #include "object.hpp"
+; #include "pmachine.hpp"
+; #include "resource.hpp"
+; #include "script.hpp"
+; #include "sendstac.hpp"
+; #include "string.hpp"
+; #include "textid.hpp"
+; #include "vocab.hpp"
+; #include "objinfo.hpp"
+; 
+; ObjectInfo *objInfo = NULL;
+; size_t indexedPropertyOffsets[MaxIndexedProperty];
+; 
+; int gSelectorDictSize = 0;
+; 
+; ////////////////////////////////////////////////////////////////////////////
+; 
+; Object::Object(MemID id, MemID source, size_t offset, size_t sz)
+`W?$ct:Object$n($MemID$$$1$uiui)_`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    mov       ebx,dword ptr 8H[ebp]
+    mov       esi,dword ptr 10H[ebp]
+    mov       word ptr [ebx],0000H
+    add       ebx,0000000aH
+    mov       word ptr [ebx],0000H
+    add       ebx,00000002H
+    mov       word ptr [ebx],0000H
+    sub       ebx,0000000cH
+
+; {
+; 	//	create an Object from the Object found in an .HEP file
+; 	if ( !id.IsValid() )
+    mov       eax,dword ptr FLAT:memMgr
+    mov       edx,dword ptr 0cH[ebp]
+    mov       dx,word ptr [edx]
+    test      dx,dx
+    je        L$1
+    xor       ecx,ecx
+    mov       cx,dx
+    cmp       ecx,dword ptr [eax]
+    jae       L$1
+    and       edx,0000ffffH
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$1
+    test      byte ptr 1H[eax],08H
+    je        L$2
+
+; 		msgMgr->Fatal ( "Object::Object called with invalid id handle of 0x%x", (ushort)id );
+L$1:
+    mov       eax,dword ptr 0cH[ebp]
+    mov       ax,word ptr [eax]
+    and       eax,0000ffffH
+    push      eax
+    push      offset FLAT:L$112
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,0000000cH
+
+; 
+; 	if ( !source.IsValid() )
+L$2:
+    mov       eax,dword ptr FLAT:memMgr
+    mov       dx,word ptr [esi]
+    test      dx,dx
+    je        L$3
+    xor       ecx,ecx
+    mov       cx,dx
+    cmp       ecx,dword ptr [eax]
+    jae       L$3
+    and       edx,0000ffffH
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$3
+    test      byte ptr 1H[eax],08H
+    je        L$4
+
+; 		msgMgr->Fatal ( "Object::Object called with invalid source handle of 0x%x", (ushort)source );
+L$3:
+    mov       ax,word ptr [esi]
+    and       eax,0000ffffH
+    push      eax
+    push      offset FLAT:L$113
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,0000000cH
+
+; 
+; 	Object* obj = (Object*) &source[offset];
+L$4:
+    mov       ax,word ptr [esi]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       edx,dword ptr 14H[ebp]
+    add       eax,edx
+    mov       edi,eax
+
+; 
+; 	//	initialize the fixed properties
+; 	size 		= obj->size;
+    mov       dx,word ptr 2H[eax]
+    mov       word ptr 2H[ebx],dx
+
+; //	methDict	= obj->methDict;
+; 	classNum	= obj->classNum;
+    mov       dx,word ptr 8H[eax]
+    mov       word ptr 8H[ebx],dx
+
+; 	script	= obj->script;
+    lea       edx,0aH[ebx]
+    lea       esi,0aH[eax]
+    mov       cx,word ptr [esi]
+    mov       word ptr [edx],cx
+
+; 	super		= obj->super;
+    lea       ecx,0cH[ebx]
+    lea       edx,0cH[eax]
+    mov       dx,word ptr [edx]
+    mov       word ptr [ecx],dx
+
+; 	info		= obj->info;
+    mov       ax,word ptr 0eH[eax]
+    mov       word ptr 0eH[ebx],ax
+
+; 	
+; 	_selectorDict = New SelectorDict;
+    push      00000018H
+    call      near ptr FLAT:`W?$nwn(ui)pnv`
+    add       esp,00000004H
+    test      eax,eax
+    je        L$5
+    push      eax
+    call      near ptr FLAT:`W?$ct:SelectorDict$n()_`
+    add       esp,00000004H
+L$5:
+    mov       dword ptr 4H[ebx],eax
+
+; 	_selectorDict->nRefs = 1;
+    mov       dword ptr 0cH[eax],00000001H
+
+; 
+; 	//	copy the rest of the data from the end of the object to the end of us
+; 	memcpy(this + 1, obj + 1, sz - sizeof(*obj));
+    mov       ecx,dword ptr 18H[ebp]
+    sub       ecx,00000010H
+    lea       esi,10H[edi]
+    lea       edi,10H[ebx]
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 
+; 	this->id = id;
+    mov       eax,dword ptr 0cH[ebp]
+    mov       ax,word ptr [eax]
+    mov       word ptr [ebx],ax
+
+; 
+; 	AddToObjects();
+    push      ebx
+    call      near ptr FLAT:`W?AddToObjects$:Object$n()v`
+    add       esp,00000004H
+
+; }
+    mov       eax,ebx
+    pop       edi
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; Object::Object(MemID id, MemID clonee) :
+`W?$ct:Object$n($MemID$$$1$)_`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000004H
+    mov       ebx,dword ptr 8H[ebp]
+    mov       edi,dword ptr 10H[ebp]
+
+; 	id(id), size(0), classNum(0), info(0)
+    mov       eax,dword ptr 0cH[ebp]
+    mov       ax,word ptr [eax]
+    mov       word ptr [ebx],ax
+    mov       word ptr 2H[ebx],0000H
+    mov       word ptr 8H[ebx],0000H
+    add       ebx,0000000aH
+    mov       word ptr [ebx],0000H
+    add       ebx,00000002H
+    mov       word ptr [ebx],0000H
+    sub       ebx,0000000cH
+    mov       word ptr 0eH[ebx],0000H
+
+; {
+; 	//	clone an object
+; 
+; 	ObjectID obj = (ObjectID) clonee;
+    mov       ax,word ptr [edi]
+    mov       dword ptr -10H[ebp],eax
+
+; 	obj.AssureValid();
+    mov       eax,dword ptr FLAT:memMgr
+    mov       edx,dword ptr -10H[ebp]
+    test      dx,dx
+    je        L$6
+    xor       ecx,ecx
+    mov       cx,dx
+    cmp       ecx,dword ptr [eax]
+    jae       L$6
+    xor       ecx,ecx
+    mov       cx,word ptr -10H[ebp]
+    shl       ecx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,ecx
+    test      byte ptr 2H[eax],02H
+    jne       L$6
+    test      byte ptr 1H[eax],08H
+    jne       L$6
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$7
+L$6:
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    push      eax
+    push      0000002fH
+    mov       ecx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      ecx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+
+; 
+; 	size 		= obj->size;
+L$7:
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       ax,word ptr 2H[eax]
+    mov       word ptr 2H[ebx],ax
+
+; //	methDict	= obj->methDict;
+; 	classNum	= obj->classNum;
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       ax,word ptr 8H[eax]
+    mov       word ptr 8H[ebx],ax
+
+; 	script	= obj->script;
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       esi,dword ptr FLAT:_descPtrTable[eax*4]
+    lea       eax,0aH[ebx]
+    mov       cx,word ptr 0aH[esi]
+    mov       word ptr [eax],cx
+
+; 	super		= obj->super;
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       ecx,dword ptr FLAT:_descPtrTable[eax*4]
+    lea       eax,0cH[ebx]
+    mov       cx,word ptr 0cH[ecx]
+    mov       word ptr [eax],cx
+
+; 	info		= obj->info;
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       ax,word ptr 0eH[eax]
+    mov       word ptr 0eH[ebx],ax
+
+; 
+; 	_selectorDict = obj->_selectorDict;
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       eax,dword ptr 4H[eax]
+    mov       dword ptr 4H[ebx],eax
+
+; 
+; 	if ( !_selectorDict )
+    test      eax,eax
+    jne       L$8
+
+; 		msgMgr->Fatal ( "Selector dictionary is not valid on Object::Object ( id, clonee )" );
+    push      offset FLAT:L$114
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,00000008H
+
+; 
+;  	_selectorDict->nRefs++;
+L$8:
+    mov       eax,dword ptr 4H[ebx]
+    inc       dword ptr 0cH[eax]
+
+; 
+; 	//	copy the variable length portion
+; 	memcpy(this + 1, (Object*) *clonee + 1,
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    movsx     eax,word ptr 2H[eax]
+    add       eax,eax
+    lea       ecx,-10H[eax]
+    mov       ax,word ptr [edi]
+    and       eax,0000ffffH
+    mov       esi,dword ptr FLAT:_descPtrTable[eax*4]
+    add       esi,00000010H
+    lea       edi,10H[ebx]
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 		obj->size * sizeof(Property) - sizeof(Object));
+; 
+; 	//	if we're copying from a class, set our super to the class and turn off
+; 	//	our class bit
+; 	if (obj->info & CLASSBIT) {
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    movsx     ecx,word ptr 0eH[eax]
+    test      ecx,0ffff8000H
+    je        L$9
+
+; 		super = obj->id;
+    lea       esi,0cH[ebx]
+    mov       ax,word ptr [eax]
+    mov       word ptr [esi],ax
+
+; 		info &= ~CLASSBIT;
+    and       byte ptr 0fH[ebx],7fH
+
+; 	}
+; 
+; 	//	mark the object as cloned
+; 	info |= CLONEBIT;
+L$9:
+    or        byte ptr 0eH[ebx],01H
+
+; 
+; 	//	increment script's reference count
+; 	((ScriptID) script)->nRefs++;
+    lea       eax,0aH[ebx]
+    mov       ax,word ptr [eax]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+
+; 
+; 	AddToObjects();
+    push      ebx
+    inc       dword ptr [eax]
+    call      near ptr FLAT:`W?AddToObjects$:Object$n()v`
+    add       esp,00000004H
+
+; }
+L$10:
+    mov       eax,ebx
+    jmp       near ptr L$95
+
+; 
+; Object::~Object()
+`W?$dt:Object$n()_`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000004H
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	ObjectID obj = (ObjectID)id;
+    mov       ax,word ptr [ebx]
+    mov       dword ptr -10H[ebp],eax
+
+; 
+; 	if ( !obj.IsObject() ) {
+    mov       eax,dword ptr FLAT:memMgr
+    cmp       word ptr -10H[ebp],0000H
+    je        L$11
+    xor       edx,edx
+    mov       dx,word ptr -10H[ebp]
+    cmp       edx,dword ptr [eax]
+    jae       L$11
+    xor       edx,edx
+    mov       dx,word ptr -10H[ebp]
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$11
+    test      byte ptr 1H[eax],08H
+    jne       L$11
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$12
+
+; 		msgMgr->Alert ( "Object::~Object called with invalid id member of 0x%x", (short)id );
+L$11:
+    mov       ax,word ptr [ebx]
+    cwde      
+    push      eax
+    push      offset FLAT:L$115
+    mov       esi,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      esi
+    call      near ptr FLAT:`W?Alert$:MsgMgr$n(pnae)i`
+    add       esp,0000000cH
+
+; 		return;
+    jmp       L$10
+
+; 	}
+; 
+; 	DeleteFromObjects();
+L$12:
+    push      ebx
+    call      near ptr FLAT:`W?DeleteFromObjects$:Object$n()v`
+    add       esp,00000004H
+
+; 
+; 	id = 0;
+    mov       word ptr [ebx],0000H
+
+; 
+; 	if ( !--_selectorDict->nRefs ) {
+    mov       eax,dword ptr 4H[ebx]
+    mov       edi,dword ptr 0cH[eax]
+    dec       edi
+    mov       dword ptr 0cH[eax],edi
+    jne       L$14
+
+; 		delete _selectorDict;
+    mov       eax,dword ptr 4H[ebx]
+    test      eax,eax
+    je        L$13
+    push      edi
+    push      eax
+    call      near ptr FLAT:`W?$dt:SelectorDict$n()_`
+    add       esp,00000008H
+    push      eax
+    call      near ptr FLAT:`W?$dln(pnv)v`
+    add       esp,00000004H
+
+; 		_selectorDict = NULL;
+L$13:
+    mov       dword ptr 4H[ebx],00000000H
+
+; 	}
+; 
+; 	((ScriptID) script)->nRefs--;
+L$14:
+    lea       eax,0aH[ebx]
+    mov       ax,word ptr [eax]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    dec       dword ptr [eax]
+
+; }
+    jmp       near ptr L$10
+
+; 
+; void
+; Object::AddToObjects()
+`W?AddToObjects$:Object$n()v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    mov       esi,dword ptr 8H[ebp]
+
+; {
+; 	//	add to objects list
+; 
+; #ifdef DEBUG
+; 	if ( id ) {
+    mov       ax,word ptr [esi]
+    test      ax,ax
+    je        L$16
+
+; 		ObjectInfo *info = (ObjectInfo *)malloc ( sizeof ( ObjectInfo ) );
+    push      00000008H
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       ebx,eax
+
+; 
+; 		if ( !info )
+    test      eax,eax
+    jne       L$15
+
+; 			msgMgr->Fatal ( "Could not allocate object information." );
+    push      offset FLAT:L$116
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,00000008H
+
+; 
+; 		info->id = id;
+L$15:
+    mov       si,word ptr [esi]
+    lea       eax,4H[ebx]
+    mov       word ptr [eax],si
+
+; 		info->next = objInfo;
+    mov       eax,dword ptr FLAT:W?objInfo$npn$ObjectInfo$$
+    mov       dword ptr [ebx],eax
+
+; 		objInfo = info;
+    mov       dword ptr FLAT:W?objInfo$npn$ObjectInfo$$,ebx
+
+; 	}
+; #endif
+; }
+L$16:
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; void
+; Object::DeleteFromObjects()
+`W?DeleteFromObjects$:Object$n()v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    mov       esi,dword ptr 8H[ebp]
+
+; {
+; 	//	remove from objects list
+; 
+; #ifdef DEBUG
+; 	ObjectInfo *info = objInfo, *lastInfo = NULL;
+    mov       ebx,dword ptr FLAT:W?objInfo$npn$ObjectInfo$$
+    xor       edx,edx
+
+; 
+; 	while ( info ) {
+L$17:
+    test      ebx,ebx
+    je        L$21
+
+; 		if ( info->id == id ) {
+    lea       eax,4H[ebx]
+    mov       ax,word ptr [eax]
+    cmp       ax,word ptr [esi]
+    jne       L$20
+
+; 			if ( lastInfo )
+    test      edx,edx
+    je        L$18
+
+; 				lastInfo->next = info->next;
+    mov       eax,dword ptr [ebx]
+    mov       dword ptr [edx],eax
+    jmp       L$19
+
+; 			else
+; 				objInfo = objInfo->next;
+L$18:
+    mov       eax,dword ptr FLAT:W?objInfo$npn$ObjectInfo$$
+    mov       eax,dword ptr [eax]
+    mov       dword ptr FLAT:W?objInfo$npn$ObjectInfo$$,eax
+
+; 
+; 			free ( info );
+L$19:
+    push      ebx
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 			break;
+    jmp       L$21
+
+; 		}
+; 
+; 		lastInfo = info;
+L$20:
+    mov       edx,ebx
+
+; 		info = info->next;
+    mov       ebx,dword ptr [ebx]
+
+; 	}
+    jmp       L$17
+
+; 
+; 	if ( !info )
+L$21:
+    test      ebx,ebx
+    jne       L$22
+
+; 		msgMgr->Alert ( "DeleteFromObjects failed for id of 0x%x", (short)id );
+    mov       ax,word ptr [esi]
+    cwde      
+    push      eax
+    push      offset FLAT:L$117
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Alert$:MsgMgr$n(pnae)i`
+    add       esp,0000000cH
+
+; #endif
+; }
+L$22:
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; const char*
+; Object::Name()
+`W?Name$:Object$n()pnxa`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    sub       esp,00000004H
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	//	return object's name, or "" if object doesn't have a name property
+; 
+; 	const Property* nameProp;
+; 	if (!(nameProp = GetPropAddr(s_name)))
+    push      00000020H
+    mov       eax,dword ptr 4H[ebx]
+    push      eax
+    call      near ptr FLAT:`W?get$:SelectorDict$n(us)i`
+    add       esp,00000008H
+    cmp       eax,0ffffffffH
+    je        L$23
+    mov       eax,dword ptr 4H[ebx]
+    cmp       word ptr 16H[eax],0000H
+    jne       L$23
+    mov       ax,word ptr 14H[eax]
+    and       eax,0000ffffH
+    add       eax,eax
+    add       eax,ebx
+    jmp       L$24
+L$23:
+    xor       eax,eax
+L$24:
+    mov       ecx,eax
+    jne       L$25
+
+; 		return "";
+    mov       eax,offset FLAT:L$118
+    jmp       near ptr L$30
+
+; 
+; 	if ( !((MemID)*nameProp).IsValid() )
+L$25:
+    mov       dx,word ptr [eax]
+    mov       eax,dword ptr FLAT:memMgr
+    test      dx,dx
+    je        L$26
+    xor       ebx,ebx
+    mov       bx,dx
+    cmp       ebx,dword ptr [eax]
+    jae       L$26
+    xor       ebx,ebx
+    mov       bx,dx
+    shl       ebx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,ebx
+    test      byte ptr 2H[eax],02H
+    jne       L$26
+    test      byte ptr 1H[eax],08H
+    je        L$27
+
+; 		return "";
+L$26:
+    mov       eax,offset FLAT:L$119
+    jmp       L$30
+
+; 
+; 	const char* name = *(TextID) *nameProp;
+L$27:
+    xor       eax,eax
+    mov       ax,word ptr [ecx]
+    push      eax
+    lea       eax,-8H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?$ct:TextID$n(us)_`
+    add       esp,00000008H
+    mov       bx,word ptr [eax]
+    test      bx,bx
+    je        L$28
+    mov       eax,ebx
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    jmp       L$29
+L$28:
+    mov       eax,offset FLAT:L$120
+
+; 	if (!name)
+L$29:
+    test      eax,eax
+    jne       L$30
+
+; 		return "";
+    mov       eax,offset FLAT:L$121
+
+; 		
+; 	return name;
+; }
+L$30:
+    lea       esp,-4H[ebp]
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; Bool
+; Object::RespondsTo(Selector selector)
+`W?RespondsTo$:Object$n(us)i`:
+    push      ebp
+    mov       ebp,esp
+
+; {
+; 	//	return whether 'selector' is a property or method of us or our
+; 	//	superclasses
+; 	if ( selectorDict()->get ( selector ) != -1 )
+    xor       eax,eax
+    mov       ax,word ptr 0cH[ebp]
+    push      eax
+    mov       eax,dword ptr 8H[ebp]
+    mov       eax,dword ptr 4H[eax]
+    push      eax
+    call      near ptr FLAT:`W?get$:SelectorDict$n(us)i`
+    add       esp,00000008H
+    cmp       eax,0ffffffffH
+    setne     al
+    and       eax,000000ffH
+
+; 		return True;
+; 
+; 	return False;
+; }
+    pop       ebp
+    ret       
+
+; 
+; ////////////////////////////////////////////////////////////////////////////
+; 
+; void
+; ObjectID::Get(MemID id, size_t ofs, size_t size)
+`W?Get$:ObjectID$n($MemID$$uiui)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000008H
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	//	get memory to read an .HEP object into
+; 
+; 	FakeObjectID::Get(size);
+    push      00000000H
+    push      00000000H
+    push      00000000H
+    push      00000000H
+    mov       edx,dword ptr 14H[ebp]
+    push      edx
+    push      00000234H
+    mov       ecx,dword ptr FLAT:memMgr
+    push      ecx
+    call      near ptr FLAT:`W?Alloc$:MemoryMgr$n(uiuiuipn$MemClient$$a$ReservedHandle$$)us`
+    add       esp,0000001cH
+    mov       word ptr [ebx],ax
+
+; 
+; //	Object *obj = (Object *)**this;
+; //	obj->_selectorDict.Get ( MemDictionary, sizeof ( SelectorDict ) );
+; 
+; 	new(handle) Object(*this, id, ofs, size);
+    and       eax,0000ffffH
+    mov       edx,dword ptr FLAT:_descPtrTable[eax*4]
+    test      edx,edx
+    je        L$95
+    mov       esi,dword ptr 14H[ebp]
+    push      esi
+    mov       edi,dword ptr 10H[ebp]
+    push      edi
+    mov       eax,dword ptr 0cH[ebp]
+    mov       ax,word ptr [eax]
+    mov       dword ptr -10H[ebp],eax
+    lea       eax,-10H[ebp]
+    push      eax
+    mov       ax,word ptr [ebx]
+    mov       dword ptr -14H[ebp],eax
+    lea       eax,-14H[ebp]
+    push      eax
+    push      edx
+    call      near ptr FLAT:`W?$ct:Object$n($MemID$$$1$uiui)_`
+    add       esp,00000014H
+
+; }
+    jmp       near ptr L$95
+
+; 
+; void
+; ObjectID::Get(ObjectID clonee)
+`W?Get$:ObjectID$n($1$)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    sub       esp,00000008H
+    mov       ebx,dword ptr 8H[ebp]
+    mov       esi,dword ptr 0cH[ebp]
+
+; {
+; 	//	clone an Object
+; 
+; 	FakeObjectID::Get(clonee->size * sizeof(Property));
+    mov       ax,word ptr [esi]
+    xor       edx,edx
+    mov       dx,ax
+    mov       edx,dword ptr FLAT:_descPtrTable[edx*4]
+    movsx     edx,word ptr 2H[edx]
+    add       edx,edx
+    push      00000000H
+    push      00000000H
+    push      00000000H
+    push      00000000H
+    push      edx
+    push      00000234H
+    mov       edx,dword ptr FLAT:memMgr
+    push      edx
+    call      near ptr FLAT:`W?Alloc$:MemoryMgr$n(uiuiuipn$MemClient$$a$ReservedHandle$$)us`
+    add       esp,0000001cH
+    mov       word ptr [ebx],ax
+
+; 	new(handle) Object(*this, clonee);
+    xor       edx,edx
+    mov       dx,ax
+    mov       edx,dword ptr FLAT:_descPtrTable[edx*4]
+    test      edx,edx
+    je        L$31
+    mov       ax,word ptr [esi]
+    mov       dword ptr -10H[ebp],eax
+    lea       eax,-10H[ebp]
+    push      eax
+    mov       ax,word ptr [ebx]
+    mov       dword ptr -0cH[ebp],eax
+    lea       eax,-0cH[ebp]
+    push      eax
+    push      edx
+    call      near ptr FLAT:`W?$ct:Object$n($MemID$$$1$)_`
+    add       esp,0000000cH
+
+; }
+L$31:
+    lea       esp,-8H[ebp]
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; void
+; ObjectID::Free()
+`W?Free$:ObjectID$n()v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	//	this is necessary because of a bug in WATCOM 9.5 (see MEMID.HPP)
+; 	if (handle) {
+    mov       dx,word ptr [ebx]
+    test      dx,dx
+    je        L$34
+
+; 		if ( !IsObject() )
+    mov       ecx,ebx
+    mov       eax,dword ptr FLAT:memMgr
+    je        L$32
+    xor       esi,esi
+    mov       si,dx
+    cmp       esi,dword ptr [eax]
+    jae       L$32
+    and       edx,0000ffffH
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$32
+    test      byte ptr 1H[eax],08H
+    jne       L$32
+    push      ebx
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$33
+
+; 			msgMgr->Fatal ( "ObjectID::Free called on non-object (MemID = 0x%x).", handle );
+L$32:
+    xor       eax,eax
+    mov       ax,word ptr [ebx]
+    push      eax
+    push      offset FLAT:L$122
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,0000000cH
+
+; 
+; 		(**this)->~Object();
+L$33:
+    push      00000000H
+    mov       ax,word ptr [ebx]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    push      eax
+    call      near ptr FLAT:`W?$dt:Object$n()_`
+    add       esp,00000008H
+
+; 	}
+; 
+; 	FakeObjectID::Free();
+L$34:
+    mov       cx,word ptr [ebx]
+    test      cx,cx
+    je        L$35
+    xor       eax,eax
+    mov       ax,cx
+    push      eax
+    mov       edx,dword ptr FLAT:memMgr
+    push      edx
+    call      near ptr FLAT:`W?Free$:MemoryMgr$n(us)v`
+    add       esp,00000008H
+    mov       word ptr [ebx],0000H
+
+; }
+L$35:
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; ObjectID
+; ObjectID::Clone()
+`W?Clone$:ObjectID$n()$1$`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    sub       esp,00000004H
+    mov       ebx,dword ptr 0cH[ebp]
+
+; {
+; 	//	return pointer to copy of an object or class
+; 
+; 	//	get memory and copy into it
+; 	ObjectID newObject;
+    mov       word ptr [ebx],0000H
+
+; 	newObject.Get(*this);
+    mov       eax,dword ptr 8H[ebp]
+    mov       ax,word ptr [eax]
+    mov       dword ptr -8H[ebp],eax
+    lea       eax,-8H[ebp]
+    push      eax
+    push      ebx
+    call      near ptr FLAT:`W?Get$:ObjectID$n($1$)v`
+
+; 
+; 	return newObject;
+; }
+    add       esp,00000008H
+
+    mov       eax,ebx
+    jmp       near ptr L$30
+
+; 
+; ///////////////////////////////////////////////////////////////////////////
+; 
+; SelectorDict::SelectorDict()
+`W?$ct:SelectorDict$n()_`:
+    mov       eax,dword ptr 4H[esp]
+
+; {
+; 	size = 0;
+    mov       dword ptr 10H[eax],00000000H
+
+; 	selectors = NULL;
+    mov       dword ptr [eax],00000000H
+
+; 	offsets = NULL;
+    mov       dword ptr 4H[eax],00000000H
+
+; 	scripts = NULL;
+    mov       dword ptr 8H[eax],00000000H
+
+; }
+    ret       
+
+; 
+; SelectorDict::~SelectorDict()
+`W?$dt:SelectorDict$n()_`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      edi
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	if ( selectors ) {
+    mov       edx,dword ptr [ebx]
+    test      edx,edx
+    je        L$36
+
+; 		free ( selectors );
+    push      edx
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 		gSelectorDictSize -= selectorsSize();
+    mov       eax,dword ptr 10H[ebx]
+    add       eax,eax
+    add       eax,00000010H
+    sub       dword ptr FLAT:W?gSelectorDictSize$ni,eax
+
+; 	}
+; 
+; 	if ( offsets ) {
+L$36:
+    mov       edi,dword ptr 4H[ebx]
+    test      edi,edi
+    je        L$37
+
+; 		free ( offsets );
+    push      edi
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 		gSelectorDictSize -= offsetsSize();
+    mov       eax,dword ptr 10H[ebx]
+    shl       eax,00000002H
+    add       eax,00000010H
+    sub       dword ptr FLAT:W?gSelectorDictSize$ni,eax
+
+; 	}
+; 
+; 	if ( scripts ) {
+L$37:
+    mov       ecx,dword ptr 8H[ebx]
+    test      ecx,ecx
+    je        L$38
+
+; 		free ( scripts );
+    push      ecx
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 		gSelectorDictSize -= scriptsSize();
+    mov       eax,dword ptr 10H[ebx]
+    shl       eax,00000002H
+    add       eax,00000010H
+    sub       dword ptr FLAT:W?gSelectorDictSize$ni,eax
+
+; 	}
+; 
+; 	size = 0;
+L$38:
+    mov       dword ptr 10H[ebx],00000000H
+
+; 	selectors = NULL;
+    mov       dword ptr [ebx],00000000H
+
+; 	offsets = NULL;
+    mov       dword ptr 4H[ebx],00000000H
+
+; 	scripts = NULL;
+    mov       dword ptr 8H[ebx],00000000H
+    mov       eax,ebx
+    pop       edi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; }
+; 
+; // add a new selector to this dictionary
+; void SelectorDict::add ( Selector selector, unsigned int offset, unsigned int script )
+`W?add$:SelectorDict$n(usuiui)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000008H
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	int index = get ( selector );
+    xor       eax,eax
+    mov       ax,word ptr 0cH[ebp]
+    push      eax
+    push      ebx
+    call      near ptr FLAT:`W?get$:SelectorDict$n(us)i`
+    add       esp,00000008H
+    mov       dword ptr -14H[ebp],eax
+
+; 
+; 	if ( index == -1 ) {
+    cmp       eax,0ffffffffH
+    jne       L$44
+
+; 		index = size;
+    mov       eax,dword ptr 10H[ebx]
+    mov       dword ptr -14H[ebp],eax
+
+; 		size++;
+    inc       eax
+    mov       dword ptr 10H[ebx],eax
+    add       eax,eax
+    add       eax,00000010H
+    push      eax
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       dword ptr -10H[ebp],eax
+
+; 
+; 		void *ptr = NULL;
+; 
+; 		ptr = malloc ( selectorsSize() );
+; 
+; 		if ( selectors ) {
+    mov       edx,dword ptr [ebx]
+    test      edx,edx
+    je        L$39
+
+; 			memcpy ( ptr, selectors, selectorsSize() - sizeof ( Selector ) );
+    mov       ecx,dword ptr 10H[ebx]
+    add       ecx,ecx
+    add       ecx,0000000eH
+    mov       esi,edx
+    mov       edi,eax
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 			free ( selectors );
+    mov       ecx,dword ptr [ebx]
+    push      ecx
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 		}
+; 
+; 		selectors = (Selector *)ptr;
+L$39:
+    mov       eax,dword ptr -10H[ebp]
+    mov       dword ptr [ebx],eax
+
+; 
+; 		ptr = malloc ( offsetsSize() );
+    mov       eax,dword ptr 10H[ebx]
+    shl       eax,00000002H
+    add       eax,00000010H
+    push      eax
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       dword ptr -10H[ebp],eax
+
+; 
+; 		if ( offsets ) {
+    mov       esi,dword ptr 4H[ebx]
+    test      esi,esi
+    je        L$40
+
+; 			memcpy ( ptr, offsets, offsetsSize() - sizeof ( unsigned int ) );
+    mov       ecx,dword ptr 10H[ebx]
+    shl       ecx,00000002H
+    add       ecx,0000000cH
+    mov       edi,eax
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 			free ( offsets );
+    mov       edi,dword ptr 4H[ebx]
+    push      edi
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 		}
+; 
+; 		offsets = (unsigned int *)ptr;
+L$40:
+    mov       eax,dword ptr -10H[ebp]
+    mov       dword ptr 4H[ebx],eax
+
+; 
+; 		ptr = malloc ( scriptsSize() );
+    mov       eax,dword ptr 10H[ebx]
+    shl       eax,00000002H
+    add       eax,00000010H
+    push      eax
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       dword ptr -10H[ebp],eax
+
+; 
+; 		if ( scripts ) {
+    mov       edx,dword ptr 8H[ebx]
+    test      edx,edx
+    je        L$41
+
+; 			memcpy ( ptr, scripts, scriptsSize() - sizeof ( unsigned int ) );
+    mov       ecx,dword ptr 10H[ebx]
+    shl       ecx,00000002H
+    add       ecx,0000000cH
+    mov       esi,edx
+    mov       edi,eax
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 			free ( scripts );
+    mov       ecx,dword ptr 8H[ebx]
+    push      ecx
+    call      near ptr FLAT:free
+    add       esp,00000004H
+
+; 		}
+; 
+; 		scripts = (unsigned int *)ptr;
+L$41:
+    mov       eax,dword ptr -10H[ebp]
+    mov       dword ptr 8H[ebx],eax
+
+; 
+; 		if ( !selectors || !offsets || !scripts )
+    cmp       dword ptr [ebx],00000000H
+    je        L$42
+    cmp       dword ptr 4H[ebx],00000000H
+    je        L$42
+    test      eax,eax
+    jne       L$43
+
+; 			msgMgr->Fatal ( "Could not reallocate selector dictionary on add." );
+L$42:
+    push      offset FLAT:L$123
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,00000008H
+
+; 
+; 		gSelectorDictSize += sizeof ( Selector ) + sizeof ( unsigned int ) + sizeof ( unsigned int );
+L$43:
+    add       dword ptr FLAT:W?gSelectorDictSize$ni,0000000aH
+
+; 	}
+; 
+; 	selectors[index] = selector;
+L$44:
+    mov       eax,dword ptr -14H[ebp]
+    add       eax,eax
+    mov       ecx,dword ptr [ebx]
+    add       eax,ecx
+    mov       ecx,dword ptr 0cH[ebp]
+    mov       word ptr [eax],cx
+
+; 	offsets[index] = offset;
+    mov       ecx,dword ptr -14H[ebp]
+    shl       ecx,00000002H
+    mov       eax,dword ptr 4H[ebx]
+    mov       esi,dword ptr 10H[ebp]
+    mov       dword ptr [ecx+eax],esi
+
+; 	scripts[index] = script;
+    mov       eax,dword ptr 8H[ebx]
+    add       eax,ecx
+    mov       ecx,dword ptr 14H[ebp]
+    mov       dword ptr [eax],ecx
+    jmp       near ptr L$95
+
+; }
+; 
+; int SelectorDict::get ( Selector selector ) 
+`W?get$:SelectorDict$n(us)i`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    mov       edi,dword ptr 8H[ebp]
+
+; {
+; 	Selector *ptr = selectors;
+    mov       ebx,dword ptr [edi]
+
+; 
+; 	for ( int i=0; i<size; i++ ) {
+    xor       esi,esi
+    jmp       L$46
+L$45:
+    inc       esi
+L$46:
+    cmp       esi,dword ptr 10H[edi]
+    jge       L$48
+
+; 		if ( !ptr ) 
+    test      ebx,ebx
+    jne       L$47
+
+; 			msgMgr->Fatal ( "SelectorDict::get called with no selectors allocated." );
+    push      offset FLAT:L$124
+    mov       ecx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      ecx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,00000008H
+
+; 
+; 		if ( *ptr++ == selector ) {
+L$47:
+    mov       eax,ebx
+    add       ebx,00000002H
+    mov       ax,word ptr [eax]
+    cmp       ax,word ptr 0cH[ebp]
+    jne       L$45
+
+; 			script = scripts[i];
+    mov       ebx,esi
+    mov       eax,dword ptr 8H[edi]
+    mov       ax,word ptr [eax+ebx*4]
+    mov       word ptr 16H[edi],ax
+
+; 			offset = offsets[i];
+    mov       eax,dword ptr 4H[edi]
+    mov       ax,word ptr [eax+ebx*4]
+    mov       word ptr 14H[edi],ax
+
+; 			return i;
+    mov       eax,esi
+    pop       edi
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 		}
+; 	}
+; 
+; 	return -1;
+L$48:
+    mov       eax,0ffffffffH
+
+; }
+    pop       edi
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; // copy another dictionary's data
+; void SelectorDict::copy ( SelectorDict *dict )
+`W?copy$:SelectorDict$n(pn$1$)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	size = dict->size;
+    mov       eax,dword ptr 0cH[ebp]
+    mov       eax,dword ptr 10H[eax]
+    mov       dword ptr 10H[ebx],eax
+
+; 
+; 	selectors = (Selector *) malloc ( selectorsSize() );
+    add       eax,eax
+    add       eax,00000010H
+    push      eax
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       dword ptr [ebx],eax
+
+; 	offsets = (unsigned int *) malloc ( offsetsSize() );
+    mov       eax,dword ptr 10H[ebx]
+    shl       eax,00000002H
+    add       eax,00000010H
+    push      eax
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       dword ptr 4H[ebx],eax
+
+; 	scripts = (unsigned int *) malloc ( scriptsSize() );
+    mov       eax,dword ptr 10H[ebx]
+    shl       eax,00000002H
+    add       eax,00000010H
+    push      eax
+    call      near ptr FLAT:malloc
+    add       esp,00000004H
+    mov       dword ptr 8H[ebx],eax
+
+; 
+; 	if ( !selectors || !offsets || !scripts )
+    cmp       dword ptr [ebx],00000000H
+    je        L$49
+    cmp       dword ptr 4H[ebx],00000000H
+    je        L$49
+    test      eax,eax
+    jne       L$50
+
+; 		msgMgr->Fatal ( "Could not allocate selector dictionary on copy." );
+L$49:
+    push      offset FLAT:L$125
+    mov       edi,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edi
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(pnae)v`
+    add       esp,00000008H
+
+; 
+; 	gSelectorDictSize += selectorsSize() + offsetsSize() + scriptsSize();
+L$50:
+    mov       eax,dword ptr 10H[ebx]
+    add       eax,eax
+    add       eax,00000010H
+    mov       ecx,dword ptr 10H[ebx]
+    shl       ecx,00000002H
+    add       ecx,00000010H
+    add       eax,ecx
+    add       eax,ecx
+    add       dword ptr FLAT:W?gSelectorDictSize$ni,eax
+
+; 
+; 	memcpy ( selectors, dict->selectors, selectorsSize() );
+    mov       ecx,dword ptr 10H[ebx]
+    add       ecx,ecx
+    add       ecx,00000010H
+    mov       esi,dword ptr 0cH[ebp]
+    mov       esi,dword ptr [esi]
+    mov       edi,dword ptr [ebx]
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 	memcpy ( offsets, dict->offsets, offsetsSize() );
+    mov       ecx,dword ptr 10H[ebx]
+    shl       ecx,00000002H
+    add       ecx,00000010H
+    mov       esi,dword ptr 0cH[ebp]
+    mov       esi,dword ptr 4H[esi]
+    mov       edi,dword ptr 4H[ebx]
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; 	memcpy ( scripts, dict->scripts, scriptsSize() );
+    mov       ecx,dword ptr 10H[ebx]
+    shl       ecx,00000002H
+    add       ecx,00000010H
+    mov       esi,dword ptr 0cH[ebp]
+    mov       esi,dword ptr 8H[esi]
+    mov       edi,dword ptr 8H[ebx]
+    push      edi
+    mov       eax,ecx
+    shr       ecx,00000002H
+    repne movsd 
+    mov       cl,al
+    and       cl,03H
+    repne movsb 
+    pop       edi
+
+; }
+    pop       edi
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; ////////////////////////////////////////////////////////////////////////////
+; 
+; ObjectID
+; GetClass(const char* name)
+`W?GetClass$n(pnxa)$ObjectID$$`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000004H
+    mov       edi,dword ptr 8H[ebp]
+    mov       esi,dword ptr 0cH[ebp]
+
+; {
+; 	//	return the class object with a given name
+; 	ObjectID obj;
+    xor       edx,edx
+    mov       dword ptr -10H[ebp],edx
+
+; 	ObjectInfo *info = objInfo;
+    mov       ebx,dword ptr FLAT:W?objInfo$npn$ObjectInfo$$
+
+; 
+; 	while ( info ) {
+L$51:
+    test      ebx,ebx
+    je        L$56
+
+; 		obj = info->id;
+    lea       eax,4H[ebx]
+    mov       ax,word ptr [eax]
+    mov       dword ptr -10H[ebp],eax
+
+; 
+; 		if (!strcmp(obj.Name(), name))
+    push      esi
+    mov       eax,dword ptr FLAT:memMgr
+    mov       ecx,dword ptr -10H[ebp]
+    test      cx,cx
+    je        L$52
+    xor       edx,edx
+    mov       dx,cx
+    cmp       edx,dword ptr [eax]
+    jae       L$52
+    xor       edx,edx
+    mov       dx,word ptr -10H[ebp]
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$52
+    test      byte ptr 1H[eax],08H
+    jne       L$52
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$53
+L$52:
+    mov       eax,offset FLAT:L$126
+    jmp       L$54
+L$53:
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    push      eax
+    call      near ptr FLAT:`W?Name$:Object$n()pnxa`
+    add       esp,00000004H
+L$54:
+    push      eax
+    call      near ptr FLAT:strcmp
+    add       esp,00000008H
+    test      eax,eax
+    jne       L$55
+
+; 			return obj;
+    mov       eax,dword ptr -10H[ebp]
+    mov       word ptr [edi],ax
+    jmp       L$57
+
+; 
+; 		info = info->next;
+L$55:
+    mov       ebx,dword ptr [ebx]
+
+; 	}
+    jmp       near ptr L$51
+
+; 
+; 	return 0;
+L$56:
+    mov       word ptr [edi],0000H
+
+; }
+L$57:
+    mov       eax,edi
+    jmp       near ptr L$95
+
+; 
+; Selector
+; GetSelector(const char* name)
+`W?GetSelector$n(pnxa)us`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    sub       esp,0000001cH
+    mov       esi,dword ptr 8H[ebp]
+
+; {
+; 	//	find the selector number for a selector name
+; 
+;  	char buf[MaxSelectorName + 1];
+;  	for (int i = 0; GetVocabStr(SELECTOR_VOCAB, i, buf); i++)
+    xor       ebx,ebx
+    jmp       L$59
+L$58:
+    inc       ebx
+L$59:
+    lea       eax,-24H[ebp]
+    push      eax
+    push      ebx
+    push      000003e5H
+    call      near ptr FLAT:`W?GetVocabStr$n(iipna)i`
+    add       esp,0000000cH
+    test      eax,eax
+    je        L$60
+
+; 		if (!strcmp(name, buf))
+    lea       eax,-24H[ebp]
+    push      eax
+    push      esi
+    call      near ptr FLAT:strcmp
+    add       esp,00000008H
+    test      eax,eax
+    jne       L$58
+
+; 			return i;
+    mov       eax,ebx
+    jmp       near ptr L$31
+
+; 	return 0;
+L$60:
+    xor       eax,eax
+
+; }
+    jmp       near ptr L$31
+
+; 
+; const char*
+; GetSelectorName(Selector selector, char* str)
+`W?GetSelectorName$n(uspna)pnxa`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    mov       esi,dword ptr 0cH[ebp]
+
+; {
+; 	if (!GetVocabStr(SELECTOR_VOCAB, selector, str))
+    push      esi
+    xor       ebx,ebx
+    mov       bx,word ptr 8H[ebp]
+    push      ebx
+    push      000003e5H
+    call      near ptr FLAT:`W?GetVocabStr$n(iipna)i`
+    add       esp,0000000cH
+    test      eax,eax
+    jne       L$61
+
+; 		sprintf(str, "%x", selector);
+    push      ebx
+    push      offset FLAT:L$127
+    push      esi
+    call      near ptr FLAT:sprintf
+    add       esp,0000000cH
+
+; 	return str;
+; }
+L$61:
+    mov       eax,esi
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; 
+; void
+; LoadPropOffsets()
+LoadPropOffsets:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    sub       esp,00000004H
+
+; {
+; 	// Load the offsets to indexed object properties from a file.
+; 
+; 	SCIWord* op = (SCIWord*) *resMgr->Get(MemResVocab, PROPOFS_VOCAB);
+    mov       eax,dword ptr FLAT:W?resMgr$npn$ResourceMgr$$
+    mov       edx,dword ptr [eax]
+    push      00000000H
+    push      000003e2H
+    push      00000006H
+    lea       ecx,-8H[ebp]
+    push      ecx
+    push      eax
+    call      dword ptr 24H[edx]
+    add       esp,00000014H
+    mov       ax,word ptr [eax]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+
+; 
+; 	// Read and store each offset.
+; 	for (int i = 0 ; i < MaxIndexedProperty ; ++i)
+    xor       edx,edx
+
+; 		indexedPropertyOffsets[i] = *op++;
+L$62:
+    movsx     ebx,word ptr [eax]
+    mov       dword ptr FLAT:`W?indexedPropertyOffsets$n[]ui`[edx*4],ebx
+    add       eax,00000002H
+    inc       edx
+    cmp       edx,0000004cH
+    jl        L$62
+
+; }
+    jmp       near ptr L$30
+
+; 
+; ///////////////////////////////////////////////////////////////////////////
+; 
+; ObjectMgr objectMgr;
+; 
+; ///////////////////////////////////////////////////////////////////////////
+; 
+; void
+; KIsObject(argList)
+`W?KIsObject$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    sub       esp,00000004H
+
+; {
+; 	pm.acc = (Acc) ((ObjectID) arg(1)).IsObject();
+    mov       eax,dword ptr 8H[ebp]
+    mov       ax,word ptr 2H[eax]
+    mov       dword ptr -8H[ebp],eax
+    lea       ebx,-8H[ebp]
+    mov       edx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$63
+    xor       ecx,ecx
+    mov       cx,ax
+    cmp       ecx,dword ptr [edx]
+    jae       L$63
+    mov       ecx,eax
+    and       ecx,0000ffffH
+    shl       ecx,00000004H
+    mov       eax,dword ptr 4H[edx]
+    add       eax,ecx
+    test      byte ptr 2H[eax],02H
+    jne       L$63
+    test      byte ptr 1H[eax],08H
+    jne       L$63
+    push      ebx
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    jne       L$63
+    mov       eax,00000001H
+    jmp       L$64
+L$63:
+    xor       eax,eax
+L$64:
+    mov       dword ptr FLAT:pm+4H,eax
+    jmp       near ptr L$30
+
+; }
+; 
+; void
+; KRespondsTo(argList)
+`W?KRespondsTo$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000008H
+    mov       edx,dword ptr 8H[ebp]
+
+; {
+; 	pm.acc = (Acc) ((ObjectID) arg(1)).RespondsTo(arg(2));
+    mov       ax,word ptr 2H[edx]
+    mov       dword ptr -14H[ebp],eax
+    lea       ebx,-14H[ebp]
+    mov       dx,word ptr 4H[edx]
+    mov       dword ptr -10H[ebp],edx
+    lea       esi,-14H[ebp]
+    lea       ecx,-14H[ebp]
+    mov       edx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$65
+    xor       edi,edi
+    mov       di,ax
+    cmp       edi,dword ptr [edx]
+    jae       L$65
+    and       eax,0000ffffH
+    shl       eax,00000004H
+    mov       edx,dword ptr 4H[edx]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$65
+    test      byte ptr 1H[eax],08H
+    jne       L$65
+    push      ebx
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$66
+L$65:
+    mov       ax,word ptr [esi]
+    and       eax,0000ffffH
+    push      eax
+    push      0000002fH
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$66:
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    push      eax
+    mov       ax,word ptr [ebx]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    push      eax
+    call      near ptr FLAT:`W?RespondsTo$:Object$n(us)i`
+    add       esp,00000008H
+    jmp       near ptr L$94
+
+; }
+; 
+; void
+; KClone(argList)
+`W?KClone$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000020H
+    mov       esi,dword ptr 8H[ebp]
+
+; {
+; 	// Get a clone of the object.
+; 
+; 	ObjectID theSource = (ObjectID) arg(1);
+    mov       ax,word ptr 2H[esi]
+    mov       dword ptr -14H[ebp],eax
+
+; 
+; 	ObjectID theClone = ((ObjectID) arg(1)).Clone();
+    lea       eax,-10H[ebp]
+    push      eax
+    mov       ax,word ptr 2H[esi]
+    mov       dword ptr -28H[ebp],eax
+    lea       eax,-28H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?Clone$:ObjectID$n()$1$`
+    add       esp,00000008H
+
+; 
+; 	// Set any properties
+; 	int numArgs;
+; 	for (numArgs = argCount - 1, args += 2;
+    movsx     eax,word ptr [esi]
+    dec       eax
+    mov       dword ptr -2cH[ebp],eax
+    jmp       L$71
+
+; 		  numArgs > 0;
+; 		  numArgs -= 2, args += 2)
+; 		theClone.SetProperty(arg(0), arg(1));
+L$67:
+    xor       eax,eax
+L$68:
+    mov       ebx,eax
+    jne       L$69
+    mov       ax,word ptr -20H[ebp]
+    push      eax
+    push      00000029H
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$69:
+    mov       ecx,ebx
+    mov       edx,ebx
+    sub       edx,edi
+    mov       eax,edx
+    sar       edx,0000001fH
+    sub       eax,edx
+    sar       eax,00000001H
+    cmp       eax,0000002bH
+    jg        L$70
+    cmp       eax,00000018H
+    jl        L$70
+    or        byte ptr 0eH[edi],08H
+L$70:
+    mov       eax,dword ptr -1cH[ebp]
+    mov       word ptr [ecx],ax
+    sub       dword ptr -2cH[ebp],00000002H
+L$71:
+    add       esi,00000004H
+    cmp       dword ptr -2cH[ebp],00000000H
+    jle       L$74
+    mov       ax,word ptr [esi]
+    mov       dword ptr -24H[ebp],eax
+    mov       ax,word ptr 2H[esi]
+    mov       dword ptr -18H[ebp],eax
+    mov       eax,dword ptr FLAT:memMgr
+    mov       edi,dword ptr -10H[ebp]
+    test      di,di
+    je        L$72
+    xor       edx,edx
+    mov       dx,di
+    cmp       edx,dword ptr [eax]
+    jae       L$72
+    xor       edx,edx
+    mov       dx,di
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$72
+    test      byte ptr 1H[eax],08H
+    jne       L$72
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$73
+L$72:
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    push      eax
+    push      0000002fH
+    mov       ebx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      ebx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$73:
+    xor       ebx,ebx
+    mov       bx,word ptr -10H[ebp]
+    mov       ebx,dword ptr FLAT:_descPtrTable[ebx*4]
+    mov       edi,ebx
+    mov       eax,dword ptr -18H[ebp]
+    mov       dword ptr -1cH[ebp],eax
+    mov       eax,dword ptr -24H[ebp]
+    mov       dword ptr -20H[ebp],eax
+    xor       eax,eax
+    mov       ax,word ptr -24H[ebp]
+    push      eax
+    mov       eax,dword ptr 4H[ebx]
+    push      eax
+    call      near ptr FLAT:`W?get$:SelectorDict$n(us)i`
+    add       esp,00000008H
+    cmp       eax,0ffffffffH
+    je        L$67
+    mov       eax,dword ptr 4H[ebx]
+    cmp       word ptr 16H[eax],0000H
+    jne       L$67
+    mov       ax,word ptr 14H[eax]
+    and       eax,0000ffffH
+    add       eax,eax
+    add       eax,ebx
+    jmp       near ptr L$68
+
+; 
+; 	// clear out the module and line number properties
+; #ifdef DEBUG
+; 	theSource.SetIndexedProperty ( objModule, -1 );
+L$74:
+    mov       ebx,00000049H
+    mov       esi,0000ffffH
+    mov       eax,dword ptr FLAT:memMgr
+    cmp       word ptr -14H[ebp],0000H
+    je        L$75
+    xor       edx,edx
+    mov       dx,word ptr -14H[ebp]
+    cmp       edx,dword ptr [eax]
+    jae       L$75
+    xor       edx,edx
+    mov       dx,word ptr -14H[ebp]
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$75
+    test      byte ptr 1H[eax],08H
+    jne       L$75
+    lea       eax,-14H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$76
+L$75:
+    xor       eax,eax
+    mov       ax,word ptr -14H[ebp]
+    push      eax
+    push      0000002fH
+    mov       edi,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edi
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$76:
+    xor       eax,eax
+    mov       ax,word ptr -14H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       ecx,esi
+    mov       edx,dword ptr FLAT:`W?indexedPropertyOffsets$n[]ui`[ebx*4]
+    add       edx,edx
+    mov       esi,eax
+    mov       ebx,edx
+    cmp       edx,00000056H
+    ja        L$77
+    cmp       edx,00000030H
+    jb        L$77
+    or        byte ptr 0eH[eax],08H
+L$77:
+    lea       eax,[esi+ebx]
+    mov       word ptr [eax],cx
+
+; 	theSource.SetIndexedProperty ( objLine, -1 );
+    mov       ebx,0000004aH
+    mov       esi,0000ffffH
+    mov       eax,dword ptr FLAT:memMgr
+    mov       ecx,dword ptr -14H[ebp]
+    test      cx,cx
+    je        L$78
+    xor       edx,edx
+    mov       dx,cx
+    cmp       edx,dword ptr [eax]
+    jae       L$78
+    xor       edx,edx
+    mov       dx,word ptr -14H[ebp]
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$78
+    test      byte ptr 1H[eax],08H
+    jne       L$78
+    lea       eax,-14H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$79
+L$78:
+    xor       eax,eax
+    mov       ax,word ptr -14H[ebp]
+    push      eax
+    push      0000002fH
+    mov       edi,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edi
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$79:
+    xor       eax,eax
+    mov       ax,word ptr -14H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       ecx,esi
+    mov       edx,dword ptr FLAT:`W?indexedPropertyOffsets$n[]ui`[ebx*4]
+    add       edx,edx
+    mov       ebx,eax
+    mov       edi,edx
+    cmp       edx,00000056H
+    ja        L$80
+    cmp       edx,00000030H
+    jb        L$80
+    or        byte ptr 0eH[eax],08H
+L$80:
+    lea       eax,[ebx+edi]
+    mov       word ptr [eax],cx
+
+; #endif
+; 
+; 	pm.acc = (Acc) theClone;
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    jmp       near ptr L$94
+
+; }
+; 
+; void
+; KDisposeClone(argList)
+`W?KDisposeClone$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      esi
+    sub       esp,00000004H
+
+; {
+; 	//	if the object was cloned, free it
+; 
+; 	ObjectID obj = arg(1);
+    mov       eax,dword ptr 8H[ebp]
+    mov       ax,word ptr 2H[eax]
+    mov       dword ptr -8H[ebp],eax
+
+; //	msgMgr->Mono ( "arg = 0x%x %s(%d)\n", (SOL_Handle)obj, __FILE__, __LINE__ );
+; 	obj.AssureValid();
+    mov       edx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$81
+    xor       ecx,ecx
+    mov       cx,ax
+    cmp       ecx,dword ptr [edx]
+    jae       L$81
+    mov       ecx,eax
+    and       ecx,0000ffffH
+    shl       ecx,00000004H
+    mov       eax,dword ptr 4H[edx]
+    add       eax,ecx
+    test      byte ptr 2H[eax],02H
+    jne       L$81
+    test      byte ptr 1H[eax],08H
+    jne       L$81
+    lea       eax,-8H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$82
+L$81:
+    xor       eax,eax
+    mov       ax,word ptr -8H[ebp]
+    push      eax
+    push      0000002fH
+    mov       esi,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      esi
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+
+; //	msgMgr->Mono ( "%s(%d)\n", __FILE__, __LINE__ );
+; 	if ((obj->Info() & (CLONEBIT | NODISPOSE)) == CLONEBIT) {
+L$82:
+    xor       eax,eax
+    mov       ax,word ptr -8H[ebp]
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    mov       ax,word ptr 0eH[eax]
+    xor       ah,ah
+    and       al,03H
+    cmp       ax,0001H
+    jne       L$83
+
+; //		msgMgr->Mono ( "%s(%d)\n", __FILE__, __LINE__ );
+; 		obj.Free();
+    lea       eax,-8H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?Free$:ObjectID$n()v`
+    add       esp,00000004H
+
+; //		msgMgr->Mono ( "%s(%d)\n", __FILE__, __LINE__ );
+; 	}
+; //	msgMgr->Mono ( "%s(%d)\n", __FILE__, __LINE__ );
+; }
+L$83:
+    lea       esp,-4H[ebp]
+    pop       esi
+    pop       ebp
+    ret       
+
+; 
+; void
+; KFindSelector(argList)
+`W?KFindSelector$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000010H
+
+; {
+; 	//	find the selector number for a selector name
+; 
+;  	pm.acc = GetSelector(*StrGetData(arg(1)));
+    mov       eax,dword ptr 8H[ebp]
+    mov       ax,word ptr 2H[eax]
+    mov       dword ptr -14H[ebp],eax
+    lea       esi,-18H[ebp]
+    lea       edi,-14H[ebp]
+    mov       dword ptr -10H[ebp],eax
+    mov       ebx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$89
+    xor       edx,edx
+    mov       dx,ax
+    cmp       edx,dword ptr [ebx]
+    jae       L$89
+    mov       edx,eax
+    and       edx,0000ffffH
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[ebx]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$89
+    test      byte ptr 1H[eax],08H
+    jne       L$89
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    jne       L$89
+    mov       edi,00000071H
+    mov       eax,dword ptr FLAT:memMgr
+    cmp       word ptr -10H[ebp],0000H
+    je        L$84
+    xor       edx,edx
+    mov       dx,word ptr -10H[ebp]
+    cmp       edx,dword ptr [eax]
+    jae       L$84
+    xor       ebx,ebx
+    mov       bx,dx
+    shl       ebx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,ebx
+    test      byte ptr 2H[eax],02H
+    jne       L$84
+    test      byte ptr 1H[eax],08H
+    jne       L$84
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$85
+L$84:
+    xor       eax,eax
+    mov       ax,word ptr -10H[ebp]
+    push      eax
+    push      0000002fH
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$85:
+    xor       ebx,ebx
+    mov       bx,word ptr -10H[ebp]
+    mov       ebx,dword ptr FLAT:_descPtrTable[ebx*4]
+    mov       dword ptr -1cH[ebp],edi
+    xor       eax,eax
+    mov       ax,di
+    push      eax
+    mov       eax,dword ptr 4H[ebx]
+    push      eax
+    call      near ptr FLAT:`W?get$:SelectorDict$n(us)i`
+    add       esp,00000008H
+    cmp       eax,0ffffffffH
+    je        L$86
+    mov       eax,dword ptr 4H[ebx]
+    cmp       word ptr 16H[eax],0000H
+    jne       L$86
+    mov       ax,word ptr 14H[eax]
+    and       eax,0000ffffH
+    add       eax,eax
+    add       eax,ebx
+    jmp       L$87
+L$86:
+    xor       eax,eax
+L$87:
+    mov       ebx,eax
+    jne       L$88
+    mov       ax,word ptr -1cH[ebp]
+    push      eax
+    push      00000029H
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$88:
+    mov       ax,word ptr [ebx]
+    and       eax,0000ffffH
+    push      eax
+    lea       eax,-18H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?$ct:TextID$n(us)_`
+    jmp       L$90
+L$89:
+    push      edi
+    lea       eax,-18H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?$ct:TextID$n(rnx$MemID$$)_`
+L$90:
+    add       esp,00000008H
+    mov       di,word ptr [esi]
+    test      di,di
+    je        L$91
+    mov       eax,edi
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    jmp       L$92
+L$91:
+    mov       eax,offset FLAT:L$120
+L$92:
+    push      eax
+    call      near ptr FLAT:`W?GetSelector$n(pnxa)us`
+    add       esp,00000004H
+L$93:
+    and       eax,0000ffffH
+L$94:
+    mov       dword ptr FLAT:pm+4H,eax
+L$95:
+    lea       esp,-0cH[ebp]
+    pop       edi
+    pop       esi
+    pop       ebx
+    pop       ebp
+    ret       
+
+; }
+; 
+; void
+; KFindClass(argList)
+`W?KFindClass$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000014H
+
+; {
+; 	//	return the class object for a given name
+; 
+;  	pm.acc = GetClass(*StrGetData(arg(1)));
+    mov       eax,dword ptr 8H[ebp]
+    mov       ax,word ptr 2H[eax]
+    mov       dword ptr -14H[ebp],eax
+    lea       esi,-18H[ebp]
+    lea       edi,-14H[ebp]
+    mov       dword ptr -1cH[ebp],eax
+    mov       ebx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$101
+    xor       edx,edx
+    mov       dx,ax
+    cmp       edx,dword ptr [ebx]
+    jae       L$101
+    and       eax,0000ffffH
+    shl       eax,00000004H
+    mov       edx,dword ptr 4H[ebx]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$101
+    test      byte ptr 1H[eax],08H
+    jne       L$101
+    lea       eax,-1cH[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    jne       L$101
+    mov       edi,00000071H
+    mov       eax,dword ptr FLAT:memMgr
+    cmp       word ptr -1cH[ebp],0000H
+    je        L$96
+    xor       edx,edx
+    mov       dx,word ptr -1cH[ebp]
+    cmp       edx,dword ptr [eax]
+    jae       L$96
+    xor       edx,edx
+    mov       dx,word ptr -1cH[ebp]
+    shl       edx,00000004H
+    mov       eax,dword ptr 4H[eax]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$96
+    test      byte ptr 1H[eax],08H
+    jne       L$96
+    lea       eax,-1cH[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$97
+L$96:
+    xor       eax,eax
+    mov       ax,word ptr -1cH[ebp]
+    push      eax
+    push      0000002fH
+    mov       eax,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      eax
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$97:
+    xor       ebx,ebx
+    mov       bx,word ptr -1cH[ebp]
+    mov       ebx,dword ptr FLAT:_descPtrTable[ebx*4]
+    mov       dword ptr -20H[ebp],edi
+    xor       eax,eax
+    mov       ax,di
+    push      eax
+    mov       eax,dword ptr 4H[ebx]
+    push      eax
+    call      near ptr FLAT:`W?get$:SelectorDict$n(us)i`
+    add       esp,00000008H
+    cmp       eax,0ffffffffH
+    je        L$98
+    mov       eax,dword ptr 4H[ebx]
+    cmp       word ptr 16H[eax],0000H
+    jne       L$98
+    mov       ax,word ptr 14H[eax]
+    and       eax,0000ffffH
+    add       eax,eax
+    add       eax,ebx
+    jmp       L$99
+L$98:
+    xor       eax,eax
+L$99:
+    mov       ebx,eax
+    jne       L$100
+    mov       ax,word ptr -20H[ebp]
+    push      eax
+    push      00000029H
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+L$100:
+    mov       ax,word ptr [ebx]
+    and       eax,0000ffffH
+    push      eax
+    lea       eax,-18H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?$ct:TextID$n(us)_`
+    jmp       L$102
+L$101:
+    push      edi
+    lea       eax,-18H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?$ct:TextID$n(rnx$MemID$$)_`
+L$102:
+    add       esp,00000008H
+    mov       di,word ptr [esi]
+    test      di,di
+    je        L$103
+    mov       eax,edi
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+    jmp       L$104
+L$103:
+    mov       eax,offset FLAT:L$120
+L$104:
+    push      eax
+    lea       eax,-10H[ebp]
+    push      eax
+    call      near ptr FLAT:`W?GetClass$n(pnxa)$ObjectID$$`
+    add       esp,00000008H
+    mov       ax,word ptr [eax]
+    jmp       near ptr L$93
+
+; }
+; 
+; void 
+; KIsKindOf(argList)
+`W?KIsKindOf$n(pns)v`:
+    push      ebp
+    mov       ebp,esp
+    push      ebx
+    push      esi
+    push      edi
+    sub       esp,00000008H
+    mov       ebx,dword ptr 8H[ebp]
+
+; {
+; 	((ObjectID)arg(1)).AssureValid();
+    mov       ax,word ptr 2H[ebx]
+    mov       dword ptr -10H[ebp],eax
+    lea       esi,-10H[ebp]
+    lea       ecx,-10H[ebp]
+    mov       edx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$105
+    xor       edi,edi
+    mov       di,ax
+    cmp       edi,dword ptr [edx]
+    jae       L$105
+    and       eax,0000ffffH
+    shl       eax,00000004H
+    mov       edx,dword ptr 4H[edx]
+    add       eax,edx
+    test      byte ptr 2H[eax],02H
+    jne       L$105
+    test      byte ptr 1H[eax],08H
+    jne       L$105
+    push      esi
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$106
+L$105:
+    mov       ax,word ptr [esi]
+    and       eax,0000ffffH
+    push      eax
+    push      0000002fH
+    mov       edx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      edx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+
+; 	((ObjectID)arg(2)).AssureValid();
+L$106:
+    mov       ax,word ptr 4H[ebx]
+    mov       dword ptr -14H[ebp],eax
+    lea       esi,-14H[ebp]
+    lea       ecx,-14H[ebp]
+    mov       edx,dword ptr FLAT:memMgr
+    test      ax,ax
+    je        L$107
+    xor       edi,edi
+    mov       di,ax
+    cmp       edi,dword ptr [edx]
+    jae       L$107
+    mov       edi,eax
+    and       edi,0000ffffH
+    shl       edi,00000004H
+    mov       eax,dword ptr 4H[edx]
+    add       eax,edi
+    test      byte ptr 2H[eax],02H
+    jne       L$107
+    test      byte ptr 1H[eax],08H
+    jne       L$107
+    push      esi
+    call      near ptr FLAT:`W?GetMemType$:MemID$n.x()$MemType$$`
+    add       esp,00000004H
+    cmp       al,34H
+    je        L$108
+L$107:
+    mov       ax,word ptr [esi]
+    and       eax,0000ffffH
+    push      eax
+    push      0000002fH
+    mov       ecx,dword ptr FLAT:W?msgMgr$npn$MsgMgr$$
+    push      ecx
+    call      near ptr FLAT:`W?Fatal$:MsgMgr$n(ie)v`
+    add       esp,0000000cH
+
+; 
+; 	Object *src = (Object *)*(ObjectID)arg(1);
+L$108:
+    mov       ax,word ptr 2H[ebx]
+    xor       edx,edx
+    mov       dx,ax
+    mov       edx,dword ptr FLAT:_descPtrTable[edx*4]
+
+; 	Object *dst = (Object *)*(ObjectID)arg(2);
+    mov       ax,word ptr 4H[ebx]
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+
+; 
+; 	SelectorDict *dict = src->selectorDict();
+    mov       ecx,dword ptr 4H[edx]
+
+; 
+; 	while ( dst->selectorDict() != dict ) {
+L$109:
+    mov       edx,dword ptr 4H[eax]
+    cmp       edx,ecx
+    je        L$111
+
+; 		if ( dst->super ) {
+    mov       ax,word ptr 0cH[eax]
+    test      ax,ax
+    jne       L$110
+
+; 			dst = (Object *)*(dst->super);
+; 		} else {
+; 			pm.acc = 0;
+    xor       esi,esi
+    mov       dword ptr FLAT:pm+4H,esi
+
+; 			return;
+    jmp       near ptr L$95
+
+L$110:
+    and       eax,0000ffffH
+    mov       eax,dword ptr FLAT:_descPtrTable[eax*4]
+
+; 		}
+; 	}
+    jmp       L$109
+
+; 
+; 	pm.acc = 1;
+L$111:
+    mov       dword ptr FLAT:pm+4H,00000001H
+
+; }
+    jmp       near ptr L$95
+_TEXT		ENDS
+CONST		SEGMENT	BYTE PUBLIC USE32 'DATA'
+L$112:
+    DB	4fH, 62H, 6aH, 65H, 63H, 74H, 3aH, 3aH
+    DB	4fH, 62H, 6aH, 65H, 63H, 74H, 20H, 63H
+    DB	61H, 6cH, 6cH, 65H, 64H, 20H, 77H, 69H
+    DB	74H, 68H, 20H, 69H, 6eH, 76H, 61H, 6cH
+    DB	69H, 64H, 20H, 69H, 64H, 20H, 68H, 61H
+    DB	6eH, 64H, 6cH, 65H, 20H, 6fH, 66H, 20H
+    DB	30H, 78H, 25H, 78H, 00H
+L$113:
+    DB	4fH, 62H, 6aH, 65H, 63H, 74H, 3aH, 3aH
+    DB	4fH, 62H, 6aH, 65H, 63H, 74H, 20H, 63H
+    DB	61H, 6cH, 6cH, 65H, 64H, 20H, 77H, 69H
+    DB	74H, 68H, 20H, 69H, 6eH, 76H, 61H, 6cH
+    DB	69H, 64H, 20H, 73H, 6fH, 75H, 72H, 63H
+    DB	65H, 20H, 68H, 61H, 6eH, 64H, 6cH, 65H
+    DB	20H, 6fH, 66H, 20H, 30H, 78H, 25H, 78H
+    DB	00H
+L$114:
+    DB	53H, 65H, 6cH, 65H, 63H, 74H, 6fH, 72H
+    DB	20H, 64H, 69H, 63H, 74H, 69H, 6fH, 6eH
+    DB	61H, 72H, 79H, 20H, 69H, 73H, 20H, 6eH
+    DB	6fH, 74H, 20H, 76H, 61H, 6cH, 69H, 64H
+    DB	20H, 6fH, 6eH, 20H, 4fH, 62H, 6aH, 65H
+    DB	63H, 74H, 3aH, 3aH, 4fH, 62H, 6aH, 65H
+    DB	63H, 74H, 20H, 28H, 20H, 69H, 64H, 2cH
+    DB	20H, 63H, 6cH, 6fH, 6eH, 65H, 65H, 20H
+    DB	29H, 00H
+L$115:
+    DB	4fH, 62H, 6aH, 65H, 63H, 74H, 3aH, 3aH
+    DB	7eH, 4fH, 62H, 6aH, 65H, 63H, 74H, 20H
+    DB	63H, 61H, 6cH, 6cH, 65H, 64H, 20H, 77H
+    DB	69H, 74H, 68H, 20H, 69H, 6eH, 76H, 61H
+    DB	6cH, 69H, 64H, 20H, 69H, 64H, 20H, 6dH
+    DB	65H, 6dH, 62H, 65H, 72H, 20H, 6fH, 66H
+    DB	20H, 30H, 78H, 25H, 78H, 00H
+L$116:
+    DB	43H, 6fH, 75H, 6cH, 64H, 20H, 6eH, 6fH
+    DB	74H, 20H, 61H, 6cH, 6cH, 6fH, 63H, 61H
+    DB	74H, 65H, 20H, 6fH, 62H, 6aH, 65H, 63H
+    DB	74H, 20H, 69H, 6eH, 66H, 6fH, 72H, 6dH
+    DB	61H, 74H, 69H, 6fH, 6eH, 2eH, 00H
+L$117:
+    DB	44H, 65H, 6cH, 65H, 74H, 65H, 46H, 72H
+    DB	6fH, 6dH, 4fH, 62H, 6aH, 65H, 63H, 74H
+    DB	73H, 20H, 66H, 61H, 69H, 6cH, 65H, 64H
+    DB	20H, 66H, 6fH, 72H, 20H, 69H, 64H, 20H
+    DB	6fH, 66H, 20H, 30H, 78H, 25H, 78H, 00H
+L$118:
+    DB	00H
+L$119:
+    DB	00H
+L$120:
+    DB	00H
+L$121:
+    DB	00H
+L$122:
+    DB	4fH, 62H, 6aH, 65H, 63H, 74H, 49H, 44H
+    DB	3aH, 3aH, 46H, 72H, 65H, 65H, 20H, 63H
+    DB	61H, 6cH, 6cH, 65H, 64H, 20H, 6fH, 6eH
+    DB	20H, 6eH, 6fH, 6eH, 2dH, 6fH, 62H, 6aH
+    DB	65H, 63H, 74H, 20H, 28H, 4dH, 65H, 6dH
+    DB	49H, 44H, 20H, 3dH, 20H, 30H, 78H, 25H
+    DB	78H, 29H, 2eH, 00H
+L$123:
+    DB	43H, 6fH, 75H, 6cH, 64H, 20H, 6eH, 6fH
+    DB	74H, 20H, 72H, 65H, 61H, 6cH, 6cH, 6fH
+    DB	63H, 61H, 74H, 65H, 20H, 73H, 65H, 6cH
+    DB	65H, 63H, 74H, 6fH, 72H, 20H, 64H, 69H
+    DB	63H, 74H, 69H, 6fH, 6eH, 61H, 72H, 79H
+    DB	20H, 6fH, 6eH, 20H, 61H, 64H, 64H, 2eH
+    DB	00H
+L$124:
+    DB	53H, 65H, 6cH, 65H, 63H, 74H, 6fH, 72H
+    DB	44H, 69H, 63H, 74H, 3aH, 3aH, 67H, 65H
+    DB	74H, 20H, 63H, 61H, 6cH, 6cH, 65H, 64H
+    DB	20H, 77H, 69H, 74H, 68H, 20H, 6eH, 6fH
+    DB	20H, 73H, 65H, 6cH, 65H, 63H, 74H, 6fH
+    DB	72H, 73H, 20H, 61H, 6cH, 6cH, 6fH, 63H
+    DB	61H, 74H, 65H, 64H, 2eH, 00H
+L$125:
+    DB	43H, 6fH, 75H, 6cH, 64H, 20H, 6eH, 6fH
+    DB	74H, 20H, 61H, 6cH, 6cH, 6fH, 63H, 61H
+    DB	74H, 65H, 20H, 73H, 65H, 6cH, 65H, 63H
+    DB	74H, 6fH, 72H, 20H, 64H, 69H, 63H, 74H
+    DB	69H, 6fH, 6eH, 61H, 72H, 79H, 20H, 6fH
+    DB	6eH, 20H, 63H, 6fH, 70H, 79H, 2eH, 00H
+L$126:
+    DB	00H
+L$127:
+    DB	25H, 78H, 00H
+
+CONST		ENDS
+CONST2		SEGMENT	DWORD PUBLIC USE32 'DATA'
+CONST2		ENDS
+_DATA		SEGMENT	BYTE PUBLIC USE32 'DATA'
+_DATA		ENDS
+_BSS		SEGMENT	DWORD PUBLIC USE32 'BSS'
+    ORG 00000000H
+W?objInfo$npn$ObjectInfo$$    LABEL	BYTE
+    ORG 00000004H
+`W?indexedPropertyOffsets$n[]ui`    LABEL	BYTE
+    ORG 00000134H
+W?gSelectorDictSize$ni    LABEL	BYTE
+    ORG 00000138H
+W?objectMgr$n$ObjectMgr$$    LABEL	BYTE
+    ORG 00000139H
+_BSS		ENDS
+
+		END

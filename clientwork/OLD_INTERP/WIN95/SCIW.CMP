@@ -1,0 +1,150 @@
+Win32 Compliance Check
+
+File: C:\sys\SCI\win95\sciw.EXE
+
+Windows NT only functions: 0
+Windows NT 4.0 only functions: 0
+Windows NT and Windows 95 only functions: 14
+Windows NT 4.0 and Windows 95 only functions: 0
+Windows 95 only functions: 0
+Win32s functions: 92
+ANSI C functions: 0
+ANSI C extensions: 0
+
+======================
+Windows NT Only Functions Used
+
+
+======================
+Windows NT 4.0 Only Functions Used
+
+
+======================
+Windows 95 Only Functions Used
+
+
+======================
+Windows NT and Windows 95 Only Functions Used
+
+CreateEventA
+CreateMutexA
+CreateThread
+GetCPInfo
+GetConsoleMode
+GetLocalTime
+GetTimeZoneInformation
+ReadConsoleInputA
+ReleaseMutex
+SetConsoleCtrlHandler
+SetConsoleMode
+SetEvent
+WaitForSingleObject
+WriteConsoleA
+
+======================
+Windows NT 4.0 and Windows 95 Only Functions Used
+
+
+======================
+Win32s Functions Used
+
+CloseHandle
+CreateFileA
+DeleteFileA
+ExitProcess
+ExitThread
+FindClose
+FindFirstFileA
+FindNextFileA
+GetCommandLineA
+GetCurrentDirectoryA
+GetCurrentProcessId
+GetCurrentThread
+GetCurrentThreadId
+GetDiskFreeSpaceA
+GetEnvironmentStrings
+GetFileAttributesA
+GetFileType
+GetFullPathNameA
+GetLastError
+GetModuleFileNameA
+GetModuleHandleA
+GetPrivateProfileIntA
+GetPrivateProfileStringA
+GetProcAddress
+GetStdHandle
+GetVersion
+GetVolumeInformationA
+LoadLibraryA
+lstrlenA
+MoveFileA
+OutputDebugStringA
+ReadFile
+RtlUnwind
+SetCurrentDirectoryA
+SetFilePointer
+SetStdHandle
+TlsAlloc
+TlsFree
+TlsGetValue
+TlsSetValue
+VirtualAlloc
+VirtualFree
+WriteFile
+WritePrivateProfileStringA
+AdjustWindowRect
+BeginPaint
+ClientToScreen
+CreateCursor
+CreateWindowExA
+DefWindowProcA
+DestroyCursor
+DialogBoxParamA
+DispatchMessageA
+EndDialog
+EndPaint
+GetActiveWindow
+GetClientRect
+GetDC
+GetDlgItem
+GetFocus
+GetKeyState
+GetSystemMetrics
+LoadCursorA
+LoadIconA
+MessageBoxA
+OemToCharBuffA
+PeekMessageA
+RegisterClassA
+ReleaseCapture
+ReleaseDC
+SendMessageA
+SetCapture
+SetCursor
+SetCursorPos
+SetFocus
+SetWindowPos
+ShowCursor
+ShowWindow
+TranslateMessage
+UpdateWindow
+WinHelpA
+wsprintfA
+AnimatePalette
+CreateICA
+CreatePalette
+DeleteDC
+DeleteObject
+GetDeviceCaps
+GetStockObject
+RealizePalette
+SelectPalette
+SetDIBitsToDevice
+
+======================
+ANSI C Functions Used
+
+
+======================
+ANSI C Extension Functions Used
+

@@ -1,0 +1,32 @@
+; 250.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ARCH_STONE_N      1)
+(define CORNER_STONE_N    2)
+(define EAVES_LEFT_N      7)
+(define EAVES_MDL_N       8)
+(define EAVES_RIGHT_N     9)
+(define FENCE_N           3)
+(define LAMP_WALL_N       4)
+(define ROOF_SLATE_N     10)
+(define ROOF_STRAW_N     11)
+(define ROOF_TILE_N      12)
+(define TABLE_N          13)
+(define TREE_TOWN_N       5)
+(define WALK_BRICK_N     14)
+(define WALK_STONE_N     15)
+(define WALL1_DARK_N     16)
+(define WALL1_LT_N       17)
+(define WALL1_MED_N      18)
+(define WALL2_DARK_N     19)
+(define WALL2_LT_N       20)
+(define WALL2_MED_N      21)
+(define WALL_STONE_N      6)
+(define WINDOW_CLOSED_N  22)
+(define WINDOW_FRAME_N   23)
+(define WINDOW_OPEN_N    24)
+
+; CASES
+

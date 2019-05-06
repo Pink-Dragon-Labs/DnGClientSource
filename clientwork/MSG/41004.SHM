@@ -1,0 +1,12 @@
+; 41004.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ATAVERN_N         1)
+(define GAMING_N          4)
+(define PRIVATE_N         3)
+(define PUBLIC_N          2)
+
+; CASES
+

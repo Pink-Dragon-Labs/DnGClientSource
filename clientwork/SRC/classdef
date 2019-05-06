@@ -1,0 +1,11217 @@
+(classdef Object
+	script# 60000
+	class# 0
+	super# 65535
+	file# "netobj.sc"
+
+	(properties
+		-objID- 4660
+		-size- 12
+		-propDict- 0
+		-methDict- 0
+		-classScript- 0
+		-script- 0
+		-super- -1
+		-info- -32768
+		name 0
+		scratch 0
+		pModule -1
+		pLine -1
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		show
+		perform
+		isClass
+		isKindOf
+		isMemberOf
+		respondsTo
+		yourself
+		handleMsg
+		handleError
+	)
+)
+
+
+(classdef Collection
+	script# 60004
+	class# 1
+	super# 0
+	file# "collect.sc"
+
+	(properties
+		-size- 15
+		-script- 1
+		-super- 0
+		elements 0
+		size 0
+		nextNode 0
+	)
+
+	(methods
+		new
+		doit
+		dispose
+		add
+		delete
+		eachElementDo
+		firstTrue
+		firstEqual
+		allTrue
+		contains
+		isEmpty
+		first
+		next
+		release
+		isDuplicate
+	)
+)
+
+
+(classdef List
+	script# 60004
+	class# 2
+	super# 1
+	file# "collect.sc"
+
+	(properties
+		-script- 2
+		-super- 1
+	)
+
+	(methods
+		at
+		last
+		prev
+		addToFront
+		addToEnd
+		addAfter
+		addBefore
+		indexOf
+		union
+		intersection
+		duplicate
+		replace
+	)
+)
+
+
+(classdef WDragger
+	script# 40001
+	class# 3
+	super# 0
+	file# "wdragger.sc"
+
+	(properties
+		-size- 20
+		-script- 3
+		-super- 0
+		pObj 0
+		pView 0
+		pPlane 0
+		x 0
+		y 0
+		pOfsX 0
+		pOfsY 0
+		pDragging 0
+	)
+
+	(methods
+		dispose
+		startDragging
+		stopDragging
+		handleEvent
+	)
+)
+
+
+(classdef Code
+	script# 60000
+	class# 4
+	super# 0
+	file# "netobj.sc"
+
+	(properties
+		-script- 4
+		-super- 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Set
+	script# 60004
+	class# 5
+	super# 2
+	file# "collect.sc"
+
+	(properties
+		-script- 5
+		-super- 2
+	)
+
+	(methods
+		isDuplicate
+	)
+)
+
+
+(classdef Dialog
+	script# 60013
+	class# 6
+	super# 5
+	file# "dialog.sc"
+
+	(properties
+		-size- 36
+		-script- 6
+		-super- 5
+		title 0
+		font 0
+		plane 0
+		curItem 0
+		caller 0
+		seconds 0
+		lastSeconds 0
+		ticks 0
+		state 0
+		eatTheMice 0
+		modal 1
+		hidden 0
+		keepDialog 0
+		priority 0
+		savedCursor 0
+		prevItem 0
+		selectHandler 0
+		curShowMouseObj 0
+		retObject 0
+		retSelector 0
+		disposeList 0
+	)
+
+	(methods
+		new
+		doit
+		dispose
+		show
+		delete
+		open
+		handleEvent
+		process
+		returnHandler
+		draw
+		erase
+		addItem
+		posnItem
+		selectItem
+		advance
+		retreat
+		check
+		cue
+		setSize
+		expand
+		contract
+		center
+		moveTo
+		addToDisposeList
+		hide
+		setBackground
+		isHidden
+	)
+)
+
+
+(classdef ScreenDialog
+	script# 60020
+	class# 7
+	super# 6
+	file# "game.sc"
+
+	(properties
+		-script- 7
+		-super- 6
+	)
+
+	(methods
+		dispose
+		open
+		handleEvent
+		returnHandler
+		draw
+	)
+)
+
+
+(classdef Sequence
+	script# 60028
+	class# 8
+	super# 0
+	file# "sequence.sc"
+
+	(properties
+		-size- 14
+		-script- 8
+		-super- 0
+		data 0
+		nextNode 0
+	)
+
+	(methods
+		new
+		next
+		prev
+		begin
+		end
+		set
+		value
+	)
+)
+
+
+(classdef Queue
+	script# 60097
+	class# 9
+	super# 2
+	file# "queue.sc"
+
+	(properties
+		-script- 9
+		-super- 2
+	)
+
+	(methods
+		dispose
+		put
+		get
+		peek
+	)
+)
+
+
+(classdef Event
+	script# 60005
+	class# 10
+	super# 0
+	file# "event.sc"
+
+	(properties
+		-size- 23
+		-script- 10
+		-super- 0
+		type 0
+		message 0
+		modifiers 0
+		x 0
+		y 0
+		z 0
+		yaw 0
+		pitch 0
+		roll 0
+		claimed 0
+		plane 0
+	)
+
+	(methods
+		new
+		localize
+		globalize
+	)
+)
+
+
+(classdef Script
+	script# 60007
+	class# 11
+	super# 0
+	file# "script.sc"
+
+	(properties
+		-size- 27
+		-script- 11
+		-super- 0
+		client 0
+		state -1
+		start 0
+		timer 0
+		cycles 0
+		seconds 0
+		lastSeconds 0
+		ticks 0
+		lastTicks 0
+		register 0
+		script 0
+		caller 0
+		next 0
+		number 0
+		pRoom 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		changeState
+		cue
+		handleEvent
+		setScript
+	)
+)
+
+
+(classdef DemonsScript
+	script# 60007
+	class# 12
+	super# 11
+	file# "script.sc"
+
+	(properties
+		-script- 12
+		-super- 11
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef Cue
+	script# 60007
+	class# 13
+	super# 0
+	file# "script.sc"
+
+	(properties
+		-size- 16
+		-script- 13
+		-super- 0
+		cuee 0
+		cuer 0
+		register 0
+		pList 0
+	)
+
+	(methods
+		doit
+		dispose
+		handleError
+	)
+)
+
+
+(classdef EventHandler
+	script# 60080
+	class# 14
+	super# 5
+	file# "evthndlr.sc"
+
+	(properties
+		-script- 14
+		-super- 5
+	)
+
+	(methods
+		handleEvent
+	)
+)
+
+
+(classdef Cast
+	script# 60080
+	class# 15
+	super# 14
+	file# "evthndlr.sc"
+
+	(properties
+		-size- 16
+		-script- 15
+		-super- 14
+		plane 0
+	)
+
+	(methods
+		dispose
+	)
+)
+
+
+(classdef Array
+	script# 60002
+	class# 16
+	super# 0
+	file# "array.sc"
+
+	(properties
+		-size- 14
+		-script- 16
+		-super- 0
+		data 0
+		type -1
+	)
+
+	(methods
+		new
+		init
+		dispose
+		with
+		newWith
+		at
+		copyToFrom
+		copy
+		compToFrom
+		compare
+		fill
+		move
+		size
+		indexOf
+		callKernel
+	)
+)
+
+
+(classdef IntArray
+	script# 60002
+	class# 17
+	super# 16
+	file# "array.sc"
+
+	(properties
+		-script- 17
+		-super- 16
+		type 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef IDArray
+	script# 60002
+	class# 18
+	super# 16
+	file# "array.sc"
+
+	(properties
+		-script- 18
+		-super- 16
+		type 1
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ByteArray
+	script# 60002
+	class# 19
+	super# 16
+	file# "array.sc"
+
+	(properties
+		-script- 19
+		-super- 16
+		type 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Rectangle
+	script# 60003
+	class# 20
+	super# 0
+	file# "rect.sc"
+
+	(properties
+		-size- 19
+		-script- 20
+		-super- 0
+		top 0
+		left 0
+		bottom 0
+		right 0
+		canTrack 0
+		canDrag 0
+		state 0
+	)
+
+	(methods
+		init
+		with
+		set
+		copy
+		moveTo
+		posn
+		moveBy
+		center
+		centerIn
+		centerOn
+		width
+		widen
+		height
+		heighten
+		expand
+		contract
+		sizeToStr
+		sizeToCel
+		celRect
+		contains
+		intersects
+		intersection
+		union
+		isEmpty
+		howFar
+		midPoint
+		handleEvent
+		onMe
+		track
+		trackDoit
+		drag
+		dragDoit
+		drawSelected
+		scale
+	)
+)
+
+
+(classdef String
+	script# 60001
+	class# 21
+	super# 19
+	file# "string.sc"
+
+	(properties
+		-script- 21
+		-super- 19
+		type 3
+	)
+
+	(methods
+		init
+		with
+		newWith
+		at
+		compToFrom
+		compare
+		size
+		indexOf
+		callKernel
+		format
+		newCopies
+		cat
+		translate
+		all
+		upper
+		lower
+		subStr
+		left
+		right
+		getToken
+		strip
+		strIndex
+		asInteger
+		strMax
+		weigh
+	)
+)
+
+
+(classdef GlobalTimers
+	script# 60022
+	class# 22
+	super# 5
+	file# "timer.sc"
+
+	(properties
+		-script- 22
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef WaitingTimers
+	script# 60022
+	class# 23
+	super# 5
+	file# "timer.sc"
+
+	(properties
+		-script- 23
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Timer
+	script# 60022
+	class# 24
+	super# 0
+	file# "timer.sc"
+
+	(properties
+		-size- 19
+		-script- 24
+		-super- 0
+		cycleCnt -1
+		seconds -1
+		ticks -1
+		lastTime -1
+		client 0
+		cueSelector 199
+		pRoom 0
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		set
+		setCycle
+		setReal
+		delete
+		setTicks
+		cue
+	)
+)
+
+
+(classdef GlobalTimer
+	script# 60022
+	class# 25
+	super# 24
+	file# "timer.sc"
+
+	(properties
+		-script- 25
+		-super- 24
+	)
+
+	(methods
+		init
+		delete
+	)
+)
+
+
+(classdef TimeOut
+	script# 60022
+	class# 26
+	super# 0
+	file# "timer.sc"
+
+	(properties
+		-size- 13
+		-script- 26
+		-super- 0
+		timeLeft 0
+	)
+
+	(methods
+		doit
+		set
+	)
+)
+
+
+(classdef Stack
+	script# 60096
+	class# 27
+	super# 2
+	file# "stack.sc"
+
+	(properties
+		-size- 16
+		-script- 27
+		-super- 2
+		top 0
+	)
+
+	(methods
+		push
+		pop
+	)
+)
+
+
+(classdef Clut
+	script# 60018
+	class# 28
+	super# 19
+	file# "clut.sc"
+
+	(properties
+		-script- 28
+		-super- 19
+	)
+
+	(methods
+		new
+		init
+		map
+	)
+)
+
+
+(classdef LongInt
+	script# 60098
+	class# 29
+	super# 0
+	file# "longint.sc"
+
+	(properties
+		-size- 14
+		-script- 29
+		-super- 0
+		lowWord 0
+		hiWord 0
+	)
+
+	(methods
+		new
+		set
+		setLong
+		add
+		addLong
+		sub
+		subLong
+		mul
+		mulLong
+		div
+		divLong
+		bitAND
+		bitANDLong
+		bitOR
+		bitORLong
+		bitXOR
+		bitXORLong
+		bitNOT
+		bitSHL
+		bitSHR
+		setBit
+		resetBit
+		toggleBit
+		getBit
+		swap
+		negate
+		abs
+		equal
+		equalLong
+		less
+		lessLong
+		lessEqual
+		lessEqualLong
+		greater
+		greaterLong
+		greaterEqual
+		greaterEqualLong
+		asStr
+		fromStr
+	)
+)
+
+
+(classdef PackedData
+	script# 60092
+	class# 30
+	super# 19
+	file# "packdata.sc"
+
+	(properties
+		-size- 19
+		-script- 30
+		-super- 19
+		getIndex 0
+		putIndex 0
+		bitPutIndex 0
+		bitGetIndex 0
+		pIsBigEndian 0
+	)
+
+	(methods
+		new
+		dispose
+		getByte
+		getWord
+		getLong
+		getArray
+		getBits
+		getString
+		putByte
+		putWord
+		putLong
+		putArray
+		putBits
+		putString
+		peek
+	)
+)
+
+
+(classdef Sound
+	script# 60012
+	class# 31
+	super# 0
+	file# "sound.sc"
+
+	(properties
+		-size- 25
+		-script- 31
+		-super- 0
+		pHandle -1
+		handle 0
+		number 0
+		nodePtr 0
+		loop 0
+		priority 0
+		vol 0
+		signal 0
+		min 0
+		sec 0
+		frame 0
+		flags 0
+		dataInc 0
+	)
+
+	(methods
+		dispose
+		play
+		stop
+	)
+)
+
+
+(classdef MusicMgr
+	script# 60012
+	class# 32
+	super# 31
+	file# "sound.sc"
+
+	(properties
+		-script- 32
+		-super- 31
+	)
+
+	(methods
+	)
+)
+
+
+(classdef PanHandler
+	script# 60012
+	class# 33
+	super# 0
+	file# "sound.sc"
+
+	(properties
+		-size- 14
+		-script- 33
+		-super- 0
+		pObject 0
+		pSoundID 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef SoundMgr
+	script# 60012
+	class# 34
+	super# 0
+	file# "sound.sc"
+
+	(properties
+		-script- 34
+		-super- 0
+	)
+
+	(methods
+		doit
+		play
+	)
+)
+
+
+(classdef Styler
+	script# 60038
+	class# 35
+	super# 0
+	file# "styler.sc"
+
+	(properties
+		-size- 21
+		-script- 35
+		-super- 0
+		style 0
+		plane 0
+		seconds 1
+		back -1
+		priority 200
+		animate 0
+		refFrame 0
+		divisions 0
+		captureList 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Scaler
+	script# 60036
+	class# 36
+	super# 4
+	file# "scaler.sc"
+
+	(properties
+		-size- 21
+		-script- 36
+		-super- 4
+		client 0
+		frontY 190
+		backY 0
+		frontSize 100
+		backSize 0
+		slopeNum 0
+		slopeDen 0
+		const 0
+		yLast -999
+	)
+
+	(methods
+		init
+		doit
+	)
+)
+
+
+(classdef Motion
+	script# 60008
+	class# 37
+	super# 0
+	file# "motion.sc"
+
+	(properties
+		-size- 28
+		-script- 37
+		-super- 0
+		client 0
+		caller 0
+		x 0
+		y 0
+		dx 0
+		dy 0
+		b_moveCnt 0
+		b_i1 0
+		b_i2 0
+		b_di 0
+		b_xAxis 0
+		b_incr 0
+		completed 0
+		xLast 0
+		yLast 0
+		pImmediateCue 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveDone
+		setTarget
+		onTarget
+		motionCue
+	)
+)
+
+
+(classdef MoveTo
+	script# 60008
+	class# 38
+	super# 37
+	file# "motion.sc"
+
+	(properties
+		-script- 38
+		-super- 37
+	)
+
+	(methods
+		onTarget
+	)
+)
+
+
+(classdef Cycle
+	script# 60044
+	class# 39
+	super# 0
+	file# "cycle.sc"
+
+	(properties
+		-size- 18
+		-script- 39
+		-super- 0
+		client 0
+		caller 0
+		cycleDir 1
+		cycleCnt 0
+		completed 0
+		clientLastCel 0
+	)
+
+	(methods
+		init
+		dispose
+		nextCel
+		cycleDone
+		motionCue
+	)
+)
+
+
+(classdef Forward
+	script# 60044
+	class# 40
+	super# 39
+	file# "cycle.sc"
+
+	(properties
+		-script- 40
+		-super- 39
+	)
+
+	(methods
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef Walk
+	script# 60044
+	class# 41
+	super# 40
+	file# "cycle.sc"
+
+	(properties
+		-script- 41
+		-super- 40
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef CycleTo
+	script# 60045
+	class# 42
+	super# 39
+	file# "cycleto.sc"
+
+	(properties
+		-size- 19
+		-script- 42
+		-super- 39
+		endCel 0
+	)
+
+	(methods
+		init
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef EndLoop
+	script# 60045
+	class# 43
+	super# 42
+	file# "cycleto.sc"
+
+	(properties
+		-script- 43
+		-super- 42
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef BegLoop
+	script# 60045
+	class# 44
+	super# 42
+	file# "cycleto.sc"
+
+	(properties
+		-script- 44
+		-super- 42
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef Reverse
+	script# 60046
+	class# 45
+	super# 39
+	file# "reverse.sc"
+
+	(properties
+		-script- 45
+		-super- 39
+		cycleDir -1
+	)
+
+	(methods
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef Chase
+	script# 60042
+	class# 46
+	super# 37
+	file# "chase.sc"
+
+	(properties
+		-size- 30
+		-script- 46
+		-super- 37
+		who 0
+		distance 0
+	)
+
+	(methods
+		init
+		doit
+		setTarget
+		onTarget
+	)
+)
+
+
+(classdef Follow
+	script# 60052
+	class# 47
+	super# 46
+	file# "follow.sc"
+
+	(properties
+		-script- 47
+		-super- 46
+		distance 20
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Approach
+	script# 60053
+	class# 48
+	super# 46
+	file# "approach.sc"
+
+	(properties
+		-script- 48
+		-super- 46
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Wander
+	script# 60043
+	class# 49
+	super# 37
+	file# "wander.sc"
+
+	(properties
+		-size- 29
+		-script- 49
+		-super- 37
+		distance 30
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+		setTarget
+		onTarget
+	)
+)
+
+
+(classdef Point
+	script# 60100
+	class# 50
+	super# 0
+	file# "points.sc"
+
+	(properties
+		-size- 14
+		-script- 50
+		-super- 0
+		x -1
+		y -1
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Line
+	script# 60100
+	class# 51
+	super# 0
+	file# "points.sc"
+
+	(properties
+		-size- 16
+		-script- 51
+		-super- 0
+		pX1 -1
+		pY1 -1
+		pX2 -1
+		pY2 -1
+	)
+
+	(methods
+		new
+		init
+		clip
+		basicClip
+	)
+)
+
+
+(classdef Polygon
+	script# 60081
+	class# 52
+	super# 0
+	file# "polygon.sc"
+
+	(properties
+		-size- 17
+		-script- 52
+		-super- 0
+		size 0
+		points 0
+		type 1
+		dynamic 0
+		pDispose 0
+	)
+
+	(methods
+		new
+		init
+		dispose
+		onMe
+		copy
+		scale
+		moveBy
+		display
+		clipTo
+		fromRect
+	)
+)
+
+
+(classdef PolyPath
+	script# 60082
+	class# 53
+	super# 37
+	file# "polypath.sc"
+
+	(properties
+		-size- 33
+		-script- 53
+		-super- 37
+		value 2
+		points 0
+		finalX 0
+		finalY 0
+		obstacles 0
+	)
+
+	(methods
+		init
+		dispose
+		moveDone
+		setTarget
+	)
+)
+
+
+(classdef Jump
+	script# 60048
+	class# 54
+	super# 37
+	file# "jump.sc"
+
+	(properties
+		-size- 35
+		-script- 54
+		-super- 37
+		x 20000
+		y 20000
+		gx 0
+		gy 3
+		xStep 20000
+		yStep 0
+		signal 0
+		waitApogeeX 1
+		waitApogeeY 1
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+		motionCue
+		setTest
+	)
+)
+
+
+(classdef JumpTo
+	script# 60048
+	class# 55
+	super# 54
+	file# "jump.sc"
+
+	(properties
+		-script- 55
+		-super- 54
+	)
+
+	(methods
+		init
+		moveDone
+	)
+)
+
+
+(classdef BitMap
+	script# 60037
+	class# 56
+	super# 20
+	file# "bitmap.sc"
+
+	(properties
+		-size- 38
+		-script- 56
+		-super- 20
+		priority 0
+		plane 0
+		x 0
+		y 0
+		z 0
+		scaleX 128
+		scaleY 128
+		maxScale 128
+		fixPriority 0
+		seenRect 0
+		view -1
+		loop 0
+		cel 0
+		bitmap 0
+		scaleSignal 0
+		magnifier 0
+		signal 0
+		client 0
+		clut 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		moveTo
+		width
+		height
+		handleEvent
+		addToCast
+		isNotHidden
+		addItem
+		hide
+		setPri
+		draw
+	)
+)
+
+
+(classdef Feature
+	script# 60031
+	class# 57
+	super# 56
+	file# "feature.sc"
+
+	(properties
+		-size- 53
+		-script- 57
+		-super- 56
+		heading 0
+		noun 0
+		case 0
+		modNum -1
+		sightAngle 40
+		actions 0
+		onMeCheck 0
+		approachX 0
+		approachY 0
+		approachDist 0
+		_approachVerbs 0
+		_actionVerbs 0
+		xScaleAdj 100
+		yScaleAdj 100
+		doBaseLine 0
+	)
+
+	(methods
+		dispose
+		handleEvent
+		onMe
+		trackDoit
+		dragDoit
+		doVerb
+		approachVerbs
+		actionVerbs
+		notFacing
+		facingMe
+		setPolygon
+		createPoly
+		help
+		getName
+	)
+)
+
+
+(classdef Actions
+	script# 60031
+	class# 58
+	super# 4
+	file# "feature.sc"
+
+	(properties
+		-script- 58
+		-super- 4
+	)
+
+	(methods
+		doVerb
+	)
+)
+
+
+(classdef View
+	script# 60032
+	class# 59
+	super# 57
+	file# "view.sc"
+
+	(properties
+		-size- 59
+		-script- 59
+		-super- 57
+		scaleSignal 8
+		signal 20513
+		yStep 2
+		brLeft 0
+		brTop 0
+		brRight 0
+		brBottom 0
+		baseSetter 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		posn
+		celRect
+		onMe
+		dragDoit
+		setLoop
+		setCel
+		ignoreActors
+		lastLoop
+		lastCel
+		motionCue
+		checkDetail
+		setScale
+		setMagnifier
+		doBaseRect
+		setSignal
+	)
+)
+
+
+(classdef Prop
+	script# 60033
+	class# 60
+	super# 59
+	file# "prop.sc"
+
+	(properties
+		-size- 65
+		-script- 60
+		-super- 59
+		signal 33
+		cycleSpeed 6
+		script 0
+		cycler 0
+		timer 0
+		scaler 0
+		detailLevel 0
+	)
+
+	(methods
+		doit
+		dispose
+		handleEvent
+		setLoop
+		motionCue
+		checkDetail
+		setCycle
+		setScript
+		cue
+	)
+)
+
+
+(classdef Actor
+	script# 60034
+	class# 61
+	super# 60
+	file# "actor.sc"
+
+	(properties
+		-size- 76
+		-script- 61
+		-super- 60
+		xLast 0
+		yLast 0
+		xStep 3
+		origStep 770
+		moveSpeed 6
+		blocks 0
+		mover 0
+		looper 0
+		viewer 0
+		avoider 0
+		code 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		posn
+		motionCue
+		checkDetail
+		setScale
+		setMotion
+		setAvoider
+		ignoreHorizon
+		observeBlocks
+		ignoreBlocks
+		isStopped
+		isBlocked
+		inRect
+		distanceTo
+		cantBeHere
+		setStep
+		setDirection
+		setHeading
+		setSpeed
+		setLooper
+		update
+	)
+)
+
+
+(classdef Ego
+	script# 60035
+	class# 62
+	super# 61
+	file# "ego.sc"
+
+	(properties
+		-size- 77
+		-script- 62
+		-super- 61
+		state 1
+		signal 8225
+		edgeHit 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+	)
+)
+
+
+(classdef Cursor
+	script# 60078
+	class# 63
+	super# 20
+	file# "cursor.sc"
+
+	(properties
+		-size- 27
+		-script- 63
+		-super- 20
+		bottom 200
+		right 320
+		client 0
+		view 0
+		loop 0
+		cel 0
+		x 0
+		y 0
+		hotX -1
+		hotY -1
+	)
+
+	(methods
+		init
+		dispose
+		show
+		posn
+		draw
+		setCursor
+		enable
+		disable
+	)
+)
+
+
+(classdef Magnifier
+	script# 60039
+	class# 64
+	super# 0
+	file# "magnify.sc"
+
+	(properties
+		-size- 20
+		-script- 64
+		-super- 0
+		x 0
+		y 0
+		view -1
+		loop 0
+		cel 0
+		power 0
+		skip 0
+		client 0
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef Plane
+	script# 60011
+	class# 65
+	super# 20
+	file# "plane.sc"
+
+	(properties
+		-size- 33
+		-script- 65
+		-super- 20
+		back 0
+		resX 640
+		resY 480
+		vanishingX 0
+		vanishingY 0
+		coordType 0
+		picture -1
+		style 0
+		priority 0
+		bitmap 0
+		casts 0
+		mirrored 0
+		fore 0
+		pOldPri 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		posn
+		addCast
+		deleteCast
+		draw
+		erase
+		drawPic
+		scaleBitmap
+		setBitmap
+		setSize
+		hide
+		isHidden
+	)
+)
+
+
+(classdef Window
+	script# 60010
+	class# 66
+	super# 65
+	file# "window.sc"
+
+	(properties
+		-size- 38
+		-script- 66
+		-super- 65
+		container 0
+		borderSize 1
+		shadowSize 3
+		fixedWidth 0
+		fixedHeight 0
+	)
+
+	(methods
+		new
+		init
+		center
+	)
+)
+
+
+(classdef Item
+	script# 60060
+	class# 67
+	super# 56
+	file# "item.sc"
+
+	(properties
+		-size- 51
+		-script- 67
+		-super- 56
+		canTrack 1
+		value 0
+		font 0
+		dimmed 0
+		fore -1
+		back 254
+		skip 254
+		borderColor -1
+		hiColor 0
+		borderSize 0
+		drawCode 0
+		handler 0
+		helpStr 0
+		key 0
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		show
+		handleEvent
+		track
+		trackDoit
+		drawSelected
+		hide
+		draw
+		highlight
+		enable
+		select
+		choose
+		checkState
+		setSize
+		cycle
+		help
+		process
+		showMouseOver
+	)
+)
+
+
+(classdef TextItem
+	script# 60061
+	class# 68
+	super# 67
+	file# "textitem.sc"
+
+	(properties
+		-size- 53
+		-script- 68
+		-super- 67
+		text 0
+		mode 0
+	)
+
+	(methods
+		dispose
+		draw
+		setSize
+	)
+)
+
+
+(classdef TitleItem
+	script# 60061
+	class# 69
+	super# 68
+	file# "textitem.sc"
+
+	(properties
+		-script- 69
+		-super- 68
+	)
+
+	(methods
+	)
+)
+
+
+(classdef IconItem
+	script# 60062
+	class# 70
+	super# 67
+	file# "iconitem.sc"
+
+	(properties
+		-size- 53
+		-script- 70
+		-super- 67
+		cycler 0
+		cycleSpeed 6
+	)
+
+	(methods
+		init
+		dispose
+		contains
+		handleEvent
+		draw
+		setSize
+		cycle
+		process
+		showMouseOver
+		lastCel
+	)
+)
+
+
+(classdef EditItem
+	script# 60063
+	class# 71
+	super# 67
+	file# "edititem.sc"
+
+	(properties
+		-size- 63
+		-script- 71
+		-super- 67
+		state 1
+		text 0
+		mode 0
+		max 0
+		cursor 0
+		crIsChar 0
+		numLines 1
+		editID 0
+		activeState 9
+		matchSelector 0
+		advanceSelect 1
+		exitOnEnter 1
+		pRightMargin 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		track
+		drawSelected
+		hide
+		draw
+		setSize
+		clear
+		matchSelected
+		validKey
+		isControl
+	)
+)
+
+
+(classdef Button
+	script# 60065
+	class# 72
+	super# 68
+	file# "button.sc"
+
+	(properties
+		-size- 67
+		-script- 72
+		-super- 68
+		state 3
+		back -1
+		borderSize 1
+		mode 1
+		wide 0
+		btnType 0
+		textRect 0
+		iconView 0
+		normalColor -1
+		selectColor -1
+		chosenColor -1
+		dimColor -1
+		buttonSet 0
+		buttonPtr 0
+		checkMark 0
+		lastState 0
+		textOffsetX 0
+		textOffsetY 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		drawSelected
+		draw
+		highlight
+		select
+		choose
+		setSize
+		process
+		drawText
+		drawIcon
+		refresh
+		setView
+		setIcon
+		setText
+		makeActionBtn
+		makeCheckBtn
+		makeRadioBtn
+		makeListBtn
+	)
+)
+
+
+(classdef Slider
+	script# 60067
+	class# 73
+	super# 67
+	file# "slider.sc"
+
+	(properties
+		-size- 67
+		-script- 73
+		-super- 67
+		state 1
+		maximum 0
+		minimum 0
+		stepSize 1
+		topValue 0
+		bottomValue 0
+		thumb 0
+		thumbView 0
+		thumbLoop 0
+		thumbCel 0
+		thumbSize 0
+		vTracking 1
+		theObj 0
+		theSelector 0
+		pCast 0
+		pSnapTo 0
+		pIsTracking 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveTo
+		handleEvent
+		draw
+		highlight
+		setSize
+		drawThumb
+		trackSlider
+		move
+		posnToValue
+		valueToPosn
+		update
+		advance
+		retreat
+		updateThumb
+	)
+)
+
+
+(classdef Selector
+	script# 60068
+	class# 74
+	super# 67
+	file# "selector.sc"
+
+	(properties
+		-size- 68
+		-script- 74
+		-super- 67
+		state 1
+		type 6
+		elements 0
+		curItem 0
+		start 0
+		itemsPerPage 9
+		itemHeight 9
+		itemWidth 64
+		itemColor -1
+		selectColor 0
+		upArrow 0
+		downArrow 0
+		scrollBox 0
+		scrollBar 0
+		displayList 0
+		allowDoubleClick 0
+		doubleClickTime 0
+		doubleClickObj 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveTo
+		moveBy
+		handleEvent
+		draw
+		select
+		setSize
+		drawItem
+		updateItem
+		selectItem
+		update
+		move
+		setList
+		makeDisplayItem
+	)
+)
+
+
+(classdef TextSelector
+	script# 60068
+	class# 75
+	super# 74
+	file# "selector.sc"
+
+	(properties
+		-script- 75
+		-super- 74
+	)
+
+	(methods
+		dispose
+		setList
+	)
+)
+
+
+(classdef SelectorText
+	script# 60068
+	class# 76
+	super# 56
+	file# "selector.sc"
+
+	(properties
+		-size- 40
+		-script- 76
+		-super- 56
+		text 0
+		pSelector 0
+	)
+
+	(methods
+		init
+		dispose
+		addToCast
+		draw
+	)
+)
+
+
+(classdef FileSelector
+	script# 60066
+	class# 77
+	super# 74
+	file# "filesel.sc"
+
+	(properties
+		-size- 79
+		-script- 77
+		-super- 74
+		itemsPerPage 8
+		allowDoubleClick 1
+		searchStr 0
+		homeStr 0
+		curDirStr 0
+		curFileStr 0
+		directoryI 0
+		fileNameI 0
+		homeBtn 0
+		okBtn 0
+		cancelBtn 0
+		fileMaskBtn 0
+		upDirBtn 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		moveTo
+		handleEvent
+		draw
+		setSize
+		selectItem
+		update
+		readDirectory
+		sort
+	)
+)
+
+
+(classdef FileNameStr
+	script# 60066
+	class# 78
+	super# 21
+	file# "filesel.sc"
+
+	(properties
+		-size- 15
+		-script- 78
+		-super- 21
+		state 0
+	)
+
+	(methods
+		compare
+		set
+		clear
+		test
+	)
+)
+
+
+(classdef BtnList
+	script# 60069
+	class# 79
+	super# 5
+	file# "btnlist.sc"
+
+	(properties
+		-size- 33
+		-script- 79
+		-super- 5
+		client 0
+		start 0
+		end 0
+		startVal 1
+		row 0
+		col 0
+		buttonW 0
+		buttonH 0
+		margin 6
+		upButton 0
+		downButton 0
+		x 0
+		y 0
+		dontSave 0
+		keep 0
+		itemList 0
+		pRect 0
+		pInitted 0
+	)
+
+	(methods
+		init
+		dispose
+		add
+		delete
+		draw
+		erase
+		update
+		addPaging
+		addList
+		posn
+	)
+)
+
+
+(classdef FancyDialog
+	script# 60013
+	class# 80
+	super# 6
+	file# "dialog.sc"
+
+	(properties
+		-script- 80
+		-super- 6
+	)
+
+	(methods
+		new
+	)
+)
+
+
+(classdef UnderlineItem
+	script# 60029
+	class# 81
+	super# 70
+	file# "print.sc"
+
+	(properties
+		-script- 81
+		-super- 70
+	)
+
+	(methods
+		draw
+		setSize
+	)
+)
+
+
+(classdef WinDialogSet
+	script# 60088
+	class# 82
+	super# 5
+	file# "dlghndlr.sc"
+
+	(properties
+		-script- 82
+		-super- 5
+	)
+
+	(methods
+		add
+	)
+)
+
+
+(classdef WinDialogHandler
+	script# 60088
+	class# 83
+	super# 0
+	file# "dlghndlr.sc"
+
+	(properties
+		-size- 13
+		-script- 83
+		-super- 0
+		pWindow 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		disable
+		enable
+	)
+)
+
+
+(classdef DialogHandler
+	script# 60088
+	class# 84
+	super# 5
+	file# "dlghndlr.sc"
+
+	(properties
+		-script- 84
+		-super- 5
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		cue
+		handleEvent
+	)
+)
+
+
+(classdef IconBar
+	script# 60071
+	class# 85
+	super# 6
+	file# "iconbar.sc"
+
+	(properties
+		-size- 42
+		-script- 85
+		-super- 6
+		y 0
+		x 0
+		curIcon 0
+		openRect 0
+		inventoryIcon 0
+		messageQue 0
+	)
+
+	(methods
+		init
+		show
+		open
+		handleEvent
+		hide
+		close
+		keepUp
+		enable
+		disable
+		advanceCurIcon
+		shouldOpen
+		shouldClose
+		setOpenRect
+	)
+)
+
+
+(classdef IconButton
+	script# 60071
+	class# 86
+	super# 72
+	file# "iconbar.sc"
+
+	(properties
+		-size- 78
+		-script- 86
+		-super- 72
+		state 1027
+		dontSave 1
+		cursor 0
+		verb 0
+		type 16384
+		noun 0
+		modNum 0
+		helpVerb 0
+		pFallThru 0
+		cursorView -1
+		cursorLoop -1
+		cursorCel -1
+	)
+
+	(methods
+		doit
+		choose
+		setSize
+		isCursor
+	)
+)
+
+
+(classdef User
+	script# 60019
+	class# 87
+	super# 0
+	file# "user.sc"
+
+	(properties
+		-size- 20
+		-script- 87
+		-super- 0
+		alterEgo 0
+		input 0
+		controls 0
+		prevDir 0
+		x -1
+		y -1
+		mapKeyToDir 0
+		curEvent 0
+	)
+
+	(methods
+		init
+		doit
+		nextEvent
+		handleEvent
+		canControl
+		canInput
+	)
+)
+
+
+(classdef Sync
+	script# 60091
+	class# 88
+	super# 0
+	file# "sync.sc"
+
+	(properties
+		-size- 16
+		-script- 88
+		-super- 0
+		syncTime -1
+		syncCue -1
+		prevCue -1
+		syncNum -1
+	)
+
+	(methods
+		syncStart
+		syncCheck
+		syncStop
+	)
+)
+
+
+(classdef ScriptSync
+	script# 60091
+	class# 89
+	super# 0
+	file# "sync.sc"
+
+	(properties
+		-size- 14
+		-script- 89
+		-super- 0
+		prevSignal -1
+		playing 0
+	)
+
+	(methods
+		init
+		doit
+		cue
+		handleEvent
+	)
+)
+
+
+(classdef MouthSync
+	script# 60091
+	class# 90
+	super# 39
+	file# "sync.sc"
+
+	(properties
+		-script- 90
+		-super- 39
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		cue
+	)
+)
+
+
+(classdef GlobalDemons
+	script# 60020
+	class# 91
+	super# 5
+	file# "game.sc"
+
+	(properties
+		-script- 91
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef Game
+	script# 60020
+	class# 92
+	super# 0
+	file# "game.sc"
+
+	(properties
+		-size- 18
+		-script- 92
+		-super- 0
+		script 0
+		printLang 1
+		_detailLevel 3
+		handsOffCode 0
+		handsOnCode 0
+		handsLevel 0
+	)
+
+	(methods
+		init
+		doit
+		play
+		newRoom
+		startRoom
+		replay
+		restart
+		restore
+		save
+		handleEvent
+		quitGame
+		masterVolume
+		detailLevel
+		setCursor
+		pragmaFail
+		notify
+		setScript
+		cue
+		handsOff
+		handsOn
+		controlOff
+		controlOn
+	)
+)
+
+
+(classdef File
+	script# 60009
+	class# 93
+	super# 0
+	file# "file.sc"
+
+	(properties
+		-size- 13
+		-script- 93
+		-super- 0
+		handle 0
+	)
+
+	(methods
+		dispose
+		open
+		readString
+		writeString
+		write
+		read
+		seek
+		close
+		delete
+		rename
+		getByte
+		putByte
+		getWord
+		putWord
+	)
+)
+
+
+(classdef Messager
+	script# 60090
+	class# 94
+	super# 0
+	file# "messager.sc"
+
+	(properties
+		-size- 18
+		-script- 94
+		-super- 0
+		caller 0
+		disposeWhenDone 1
+		oneOnly 0
+		killed 0
+		pCurSequence 0
+		pLastSequence 0
+	)
+
+	(methods
+		dispose
+		cue
+		say
+		sayRange
+		sayNext
+		sayFormat
+		nextMsg
+		getSeqSize
+	)
+)
+
+
+(classdef Orbit
+	script# 60051
+	class# 95
+	super# 38
+	file# "orbit.sc"
+
+	(properties
+		-size- 35
+		-script- 95
+		-super- 38
+		centerObj 0
+		radius 50
+		xTilt 0
+		yTilt 0
+		angleStep 10
+		winding 1
+		curAngle 0
+	)
+
+	(methods
+		init
+		moveDone
+	)
+)
+
+
+(classdef Path
+	script# 60055
+	class# 96
+	super# 38
+	file# "path.sc"
+
+	(properties
+		-size- 29
+		-script- 96
+		-super- 38
+		points 0
+	)
+
+	(methods
+		init
+		dispose
+		moveDone
+		atEnd
+	)
+)
+
+
+(classdef StopWalk
+	script# 60049
+	class# 97
+	super# 40
+	file# "stopwalk.sc"
+
+	(properties
+		-size- 22
+		-script- 97
+		-super- 40
+		vWalking 0
+		vStopped 0
+		stopped 0
+		skipTime 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+	)
+)
+
+
+(classdef GradualLooper
+	script# 60073
+	class# 98
+	super# 4
+	file# "grooper.sc"
+
+	(properties
+		-size- 17
+		-script- 98
+		-super- 4
+		client 0
+		oldCycler 0
+		oldMover 0
+		caller 0
+		numLoops 4
+	)
+
+	(methods
+		doit
+		dispose
+		cue
+	)
+)
+
+
+(classdef GradualCycler
+	script# 60073
+	class# 99
+	super# 39
+	file# "grooper.sc"
+
+	(properties
+		-size- 20
+		-script- 99
+		-super- 39
+		loopIndex 0
+		numOfLoops 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		nextCel
+		cycleDone
+		loopIsCorrect
+	)
+)
+
+
+(classdef SmoothLooper
+	script# 60074
+	class# 100
+	super# 4
+	file# "smooper.sc"
+
+	(properties
+		-size- 22
+		-script- 100
+		-super- 4
+		nextLoop 0
+		client 0
+		oldCycler 0
+		oldMover 0
+		newMover 0
+		oldCycleSpeed 0
+		cycleSpeed 0
+		inProgress 0
+		vNormal 0
+		vChangeDir 0
+	)
+
+	(methods
+		doit
+		dispose
+		cue
+	)
+)
+
+
+(classdef DPath
+	script# 60050
+	class# 101
+	super# 38
+	file# "dpath.sc"
+
+	(properties
+		-size- 30
+		-script- 101
+		-super- 38
+		points 0
+		value 0
+	)
+
+	(methods
+		init
+		dispose
+		moveDone
+		setTarget
+	)
+)
+
+
+(classdef RelDPath
+	script# 60050
+	class# 102
+	super# 101
+	file# "dpath.sc"
+
+	(properties
+		-script- 102
+		-super- 101
+	)
+
+	(methods
+		setTarget
+	)
+)
+
+
+(classdef MoveFwd
+	script# 60054
+	class# 103
+	super# 53
+	file# "movefwd.sc"
+
+	(properties
+		-script- 103
+		-super- 53
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef MoveCycle
+	script# 60076
+	class# 104
+	super# 39
+	file# "movecyc.sc"
+
+	(properties
+		-size- 21
+		-script- 104
+		-super- 39
+		value 0
+		points 0
+		size 0
+	)
+
+	(methods
+		init
+		doit
+		nextCel
+		cycleDone
+	)
+)
+
+
+(classdef RandCycle
+	script# 60077
+	class# 105
+	super# 39
+	file# "randcyc.sc"
+
+	(properties
+		-size- 20
+		-script- 105
+		-super- 39
+		count -1
+		reset 0
+	)
+
+	(methods
+		init
+		doit
+		nextCel
+		cycleDone
+	)
+)
+
+
+(classdef Oscillate
+	script# 60075
+	class# 106
+	super# 39
+	file# "osc.sc"
+
+	(properties
+		-size- 21
+		-script- 106
+		-super- 39
+		howManyCycles -1
+		startCel 0
+		endCel 0
+	)
+
+	(methods
+		init
+		doit
+		cycleDone
+	)
+)
+
+
+(classdef PChase
+	script# 60083
+	class# 107
+	super# 53
+	file# "pchase.sc"
+
+	(properties
+		-size- 37
+		-script- 107
+		-super- 53
+		who 0
+		distance 0
+		targetX 0
+		targetY 0
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+	)
+)
+
+
+(classdef PFollow
+	script# 60084
+	class# 108
+	super# 53
+	file# "pfollow.sc"
+
+	(properties
+		-size- 37
+		-script- 108
+		-super- 53
+		who 0
+		distance 0
+		targetX 0
+		targetY 0
+	)
+
+	(methods
+		init
+		doit
+		moveDone
+	)
+)
+
+
+(classdef PAvoider
+	script# 60085
+	class# 109
+	super# 4
+	file# "pavoid.sc"
+
+	(properties
+		-size- 17
+		-script- 109
+		-super- 4
+		client 0
+		oldBlocker 0
+		oldBlockerMover 0
+		oldMoverX -99
+		oldMoverY -99
+	)
+
+	(methods
+		init
+		doit
+		dispose
+	)
+)
+
+
+(classdef ScaleTo
+	script# 60089
+	class# 110
+	super# 36
+	file# "scaleto.sc"
+
+	(properties
+		-size- 27
+		-script- 110
+		-super- 36
+		caller 0
+		endScale 0
+		step 6
+		waitCount 1
+		scaleDir 0
+		saveWaitCount 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+	)
+)
+
+
+(classdef Flags
+	script# 60087
+	class# 111
+	super# 0
+	file# "flags.sc"
+
+	(properties
+		-size- 14
+		-script- 111
+		-super- 0
+		size 0
+		array 0
+	)
+
+	(methods
+		init
+		dispose
+		setSize
+		set
+		clear
+		test
+	)
+)
+
+
+(classdef MenuBar
+	script# 60021
+	class# 112
+	super# 2
+	file# "menubar.sc"
+
+	(properties
+		-size- 27
+		-script- 112
+		-super- 2
+		state 1
+		plane 0
+		casts 0
+		margin 10
+		left 0
+		top 0
+		right 639
+		bottom 10
+		font 999
+		back 0
+		xMargin 2
+		yMargin 1
+	)
+
+	(methods
+		init
+		dispose
+		show
+		construct
+		onMe
+		handleEvent
+		hide
+		select
+	)
+)
+
+
+(classdef MenuList
+	script# 60021
+	class# 113
+	super# 2
+	file# "menubar.sc"
+
+	(properties
+		-size- 25
+		-script- 113
+		-super- 2
+		state 0
+		client 0
+		plane 0
+		casts 0
+		left 0
+		top 0
+		right 0
+		bottom 0
+		text 0
+		value 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		construct
+		highlight
+		onMe
+		handleEvent
+		select
+		hide
+	)
+)
+
+
+(classdef MenuOption
+	script# 60021
+	class# 114
+	super# 68
+	file# "menubar.sc"
+
+	(properties
+		-size- 56
+		-script- 114
+		-super- 68
+		state 1
+		theObj 0
+		selector 0
+		hotKey 0
+	)
+
+	(methods
+		handleEvent
+		onMe
+		highlight
+		select
+	)
+)
+
+
+(classdef CueSet
+	script# 60093
+	class# 115
+	super# 5
+	file# "roommgr.sc"
+
+	(properties
+		-script- 115
+		-super- 5
+	)
+
+	(methods
+		add
+		delete
+	)
+)
+
+
+(classdef ManagedRoom
+	script# 60093
+	class# 116
+	super# 0
+	file# "roommgr.sc"
+
+	(properties
+		-size- 35
+		-script- 116
+		-super- 0
+		script 0
+		plane 0
+		obstacles 0
+		scaler 0
+		pCast 0
+		pFeatures 0
+		pSounds 0
+		pTimers 0
+		pDemons 0
+		pTalkers 0
+		pScreen 0
+		pCuees 0
+		picture 0
+		style -1
+		exitStyle -1
+		horizon 0
+		picAngle 0
+		vanishingX 160
+		vanishingY 0
+		pVisible 1
+		pInitted 0
+		pType 1
+		frontSize 128
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		show
+		setScript
+		handleEvent
+		newRoom
+		virtualize
+		hide
+		drawPic
+		addPolygon
+		deletePolygon
+		setScale
+		isMatch
+		setInfo
+	)
+)
+
+
+(classdef StaticRoom
+	script# 60093
+	class# 117
+	super# 116
+	file# "roommgr.sc"
+
+	(properties
+		-size- 36
+		-script- 117
+		-super- 116
+		pType 0
+		modNum 0
+	)
+
+	(methods
+		dispose
+		setInfo
+	)
+)
+
+
+(classdef RoomMgr
+	script# 60093
+	class# 118
+	super# 0
+	file# "roommgr.sc"
+
+	(properties
+		-size- 17
+		-script- 118
+		-super- 0
+		pRoomList 0
+		pFocusedRoom 0
+		pVirtualType 0
+		pNextRoom 0
+		pRestart 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+		newRoom
+		createRoom
+		findRoom
+		spawnRoom
+		add
+		delete
+	)
+)
+
+
+(classdef Server
+	script# 62005
+	class# 119
+	super# 0
+	file# "server.sc"
+
+	(properties
+		-size- 14
+		-script- 119
+		-super- 0
+		script 0
+		pServID 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		add
+		delete
+		lookup
+		lookupObj
+		setScript
+	)
+)
+
+
+(classdef ScrollableWindow
+	script# 60094
+	class# 120
+	super# 0
+	file# "scrolwin.sc"
+
+	(properties
+		-size- 34
+		-script- 120
+		-super- 0
+		plane 0
+		fore 0
+		back 0
+		font 999
+		mode 0
+		borderColor 0
+		left 75
+		top 50
+		right 275
+		bottom 150
+		maxItems 20
+		kWindow 0
+		state 0
+		itemList 0
+		seconds 0
+		lastSecond 0
+		scrollSpeed 0
+		numLines 0
+		lineCount 0
+		scrollLeft 0
+		lineHeight 0
+		pChanged 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		show
+		hide
+		addString
+		deleteString
+		modifyString
+		insertString
+		erase
+		scrollTo
+		move
+		resize
+		where
+		handleEvent
+		setSize
+		draw
+		contains
+	)
+)
+
+
+(classdef NetMsg
+	script# 62003
+	class# 121
+	super# 30
+	file# "netmsg.sc"
+
+	(properties
+		-size- 28
+		-script- 121
+		-super- 30
+		_len_ 0
+		pCommand 0
+		claimed 0
+		to 0
+		pAckCmd 0
+		pNakCmd 0
+		pInfo 0
+		pToID 0
+		pFromID 0
+	)
+
+	(methods
+		init
+		dispose
+		with
+		size
+		getString
+		wordAt
+		stringAt
+		arrayAt
+		wordArrayAt
+		longAt
+		clone
+	)
+)
+
+
+(classdef NetMsgProcessor
+	script# 62004
+	class# 122
+	super# 4
+	file# "netmsgpr.sc"
+
+	(properties
+		-size- 16
+		-script- 122
+		-super- 4
+		nmpQueue 0
+		lastMsg 0
+		paused 0
+		processing 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleMsg
+		getMsg
+		putMsg
+		processMsg
+	)
+)
+
+
+(classdef NetUser
+	script# 62000
+	class# 123
+	super# 87
+	file# "netuser.sc"
+
+	(properties
+		-size- 22
+		-script- 123
+		-super- 87
+		curMsg 0
+		autoTimeOut 15
+	)
+
+	(methods
+		init
+		doit
+		nextNetMsg
+	)
+)
+
+
+(classdef RestoreMusic
+	script# 59954
+	class# 124
+	super# 4
+	file# "gameserv.sc"
+
+	(properties
+		-script- 124
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef MovieCmdList
+	script# 40101
+	class# 125
+	super# 5
+	file# "wmovie.sc"
+
+	(properties
+		-script- 125
+		-super- 5
+	)
+
+	(methods
+		add
+	)
+)
+
+
+(classdef RealmRoom
+	script# 58002
+	class# 126
+	super# 116
+	file# "rlmroom.sc"
+
+	(properties
+		-size- 39
+		-script- 126
+		-super- 116
+		pUpdateStates 0
+		pWObjectList 0
+		pShowGameBar 1
+		pRectList 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		virtualize
+		hide
+		delete
+	)
+)
+
+
+(classdef gApproveGiveList
+	script# 0
+	class# 127
+	super# 5
+	file# "roomzero.sc"
+
+	(properties
+		-script- 127
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef NetRoom
+	script# 58004
+	class# 128
+	super# 126
+	file# "netroom.sc"
+
+	(properties
+		-size- 50
+		-script- 128
+		-super- 126
+		pRoomType 0
+		pNumber 0
+		pExits 0
+		pExitDir 0
+		pExitScript 0
+		pFlags 0
+		pMakePile 0
+		pPendingActionQ 0
+		pDefunct 0
+		pSafeX 320
+		pSafeY 200
+	)
+
+	(methods
+		new
+		init
+		doit
+		dispose
+		show
+		isMatch
+		setInfo
+		generate
+	)
+)
+
+
+(classdef VerbDialog
+	script# 40100
+	class# 129
+	super# 80
+	file# "wdialog.sc"
+
+	(properties
+		-size- 37
+		-script- 129
+		-super- 80
+		pObject 0
+	)
+
+	(methods
+		new
+		dispose
+	)
+)
+
+
+(classdef RealmMap
+	script# 40000
+	class# 130
+	super# 6
+	file# "classdef.sc"
+
+	(properties
+		-script- 130
+		-super- 6
+	)
+
+	(methods
+		zoom
+		unzoom
+	)
+)
+
+
+(classdef WorldObjectBase
+	script# 40009
+	class# 131
+	super# 0
+	file# "wbase.sc"
+
+	(properties
+		-size- 15
+		-script- 131
+		-super- 0
+		pName 0
+		pSelf 0
+		pType 0
+	)
+
+	(methods
+		dispose
+		buildVerbList
+		handlesAction
+		modifyProp
+		getProp
+		updateDisplay
+		updateAction
+		fromPacket
+		getServIDs
+		preDispose
+		editProps
+		readProps
+		writeProps
+		getPropList
+	)
+)
+
+
+(classdef BDescribed
+	script# 40016
+	class# 132
+	super# 131
+	file# "bdescr.sc"
+
+	(properties
+		-size- 17
+		-script- 132
+		-super- 131
+		pType 22
+		pText 0
+		pIsBook 0
+	)
+
+	(methods
+		init
+		dispose
+		handlesAction
+		fromPacket
+		see
+		setText
+	)
+)
+
+
+(classdef BCarryable
+	script# 40013
+	class# 133
+	super# 131
+	file# "bcarry.sc"
+
+	(properties
+		-size- 20
+		-script- 133
+		-super- 131
+		pWeight 0
+		pBulk 0
+		pShow 1
+		pOwner 0
+		pContainerButton 0
+	)
+
+	(methods
+		dispose
+		buildVerbList
+		fromPacket
+		preDispose
+		setOwner
+		canApproach
+		canFace
+		generatePolygon
+		updateContainerButton
+	)
+)
+
+
+(classdef BConsume
+	script# 40022
+	class# 134
+	super# 131
+	file# "bconsume.sc"
+
+	(properties
+		-size- 17
+		-script- 134
+		-super- 131
+		pType 13
+		pEffect 0
+		pState 0
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BContainer
+	script# 40014
+	class# 135
+	super# 131
+	file# "bcontain.sc"
+
+	(properties
+		-size- 21
+		-script- 135
+		-super- 131
+		pType 1
+		pContents 0
+		pDisplay 0
+		pBulk 1
+		pWeight 1
+		pBulkCap 5
+		pWeightCap 5
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		buildVerbList
+		handlesAction
+		fromPacket
+		getServIDs
+		give
+		take
+		drop
+		beExamined
+		add
+		delete
+		addBulk
+		addWeight
+		subBulk
+		subWeight
+		tooBulky
+		tooHeavy
+		showContents
+		hideContents
+	)
+)
+
+
+(classdef BOpenable
+	script# 40010
+	class# 136
+	super# 131
+	file# "bopen.sc"
+
+	(properties
+		-size- 18
+		-script- 136
+		-super- 131
+		pType 4
+		pOpen 0
+		pDestX -1
+		pDestY -1
+	)
+
+	(methods
+		buildVerbList
+		handlesAction
+		fromPacket
+		open
+		close
+		take
+		give
+		drop
+		lock
+		unlock
+	)
+)
+
+
+(classdef BLockable
+	script# 40010
+	class# 137
+	super# 131
+	file# "bopen.sc"
+
+	(properties
+		-size- 21
+		-script- 137
+		-super- 131
+		pType 7
+		pLocked 0
+		pAutoLock 0
+		pLockValue 0
+		pUnlockValue 0
+		pSkeletonLock 0
+		pSkeletonUnlock 0
+	)
+
+	(methods
+		buildVerbList
+		handlesAction
+		fromPacket
+		lock
+		unlock
+	)
+)
+
+
+(classdef BCharacter
+	script# 40019
+	class# 138
+	super# 131
+	file# "bchar.sc"
+
+	(properties
+		-size- 31
+		-script- 138
+		-super- 131
+		pType 6
+		pProfession 0
+		pExperience 0
+		pRace 0
+		pSex 0
+		pBuildPoints 0
+		pHomeTown 0
+		pSkillArray 0
+		pSpellArray 0
+		pProperName 0
+		pTitle 0
+		pBiography 0
+		pStealingCount 0
+		pStealingUnserved 0
+		pKillingCount 0
+		pKillingUnserved 0
+		pPeaceful 0
+	)
+
+	(methods
+		init
+		dispose
+		buildVerbList
+		fromPacket
+		setProperName
+		setTitle
+		setBiography
+		fromFullPacket
+	)
+)
+
+
+(classdef BUse
+	script# 40030
+	class# 139
+	super# 131
+	file# "buse.sc"
+
+	(properties
+		-size- 20
+		-script- 139
+		-super- 131
+		pType 19
+		pOwner 0
+		pApproach 0
+		pVerb 0
+		pSpell 0
+		pTheurgism 0
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BSwitch
+	script# 40031
+	class# 140
+	super# 131
+	file# "bswitch.sc"
+
+	(properties
+		-size- 18
+		-script- 140
+		-super- 131
+		pType 21
+		pOwner 0
+		pApproach 1
+		pOpen 0
+	)
+
+	(methods
+		buildVerbList
+		handlesAction
+		open
+		close
+	)
+)
+
+
+(classdef BKey
+	script# 40010
+	class# 141
+	super# 131
+	file# "bopen.sc"
+
+	(properties
+		-size- 19
+		-script- 141
+		-super- 131
+		pType 8
+		pLockValue 0
+		pUnlockValue 0
+		pSkeletonLock 0
+		pSkeletonUnlock 0
+	)
+
+	(methods
+		fromPacket
+	)
+)
+
+
+(classdef BWearable
+	script# 40012
+	class# 142
+	super# 131
+	file# "bwear.sc"
+
+	(properties
+		-size- 23
+		-script- 142
+		-super- 131
+		pType 3
+		pAreaWorn 0
+		pDamageMod 0
+		pIsWorn 0
+		pWearer 0
+		pLayer 0
+		pActionOffset 0
+		pMask 0
+		pContainerButton 0
+	)
+
+	(methods
+		init
+		buildVerbList
+		handlesAction
+		updateDisplay
+		updateAction
+		fromPacket
+		preDispose
+		setAreaWorn
+		bePutOn
+		beTakenOff
+		updateContainerButton
+	)
+)
+
+
+(classdef BWeapon
+	script# 40011
+	class# 143
+	super# 142
+	file# "bweapon.sc"
+
+	(properties
+		-size- 27
+		-script- 143
+		-super- 142
+		pType 9
+		pAreaWorn 100
+		pSize 1
+		pDamageType 2
+		pSpeed 5
+		pPointBonus 0
+	)
+
+	(methods
+		fromPacket
+		bePutOn
+	)
+)
+
+
+(classdef BLinkedWearable
+	script# 40012
+	class# 144
+	super# 142
+	file# "bwear.sc"
+
+	(properties
+		-size- 26
+		-script- 144
+		-super- 142
+		pLinkPoint 1
+		pGrabLoop 1
+		pGrabAction -1
+	)
+
+	(methods
+		updateDisplay
+		updateAction
+	)
+)
+
+
+(classdef BTalk
+	script# 40029
+	class# 145
+	super# 131
+	file# "btalk.sc"
+
+	(properties
+		-script- 145
+		-super- 131
+		pType 18
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BCycle
+	script# 40017
+	class# 146
+	super# 131
+	file# "bcycle.sc"
+
+	(properties
+		-size- 17
+		-script- 146
+		-super- 131
+		pType 5
+		pCycleType 0
+		pCycleSpeed 6
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef BEntry
+	script# 40018
+	class# 147
+	super# 131
+	file# "bentry.sc"
+
+	(properties
+		-size- 16
+		-script- 147
+		-super- 131
+		pType 10
+		pDest -1
+	)
+
+	(methods
+		dispose
+		buildVerbList
+		fromPacket
+	)
+)
+
+
+(classdef BNPC
+	script# 40021
+	class# 148
+	super# 131
+	file# "bnpc.sc"
+
+	(properties
+		-script- 148
+		-super- 131
+		pType 12
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef BPassword
+	script# 40025
+	class# 149
+	super# 131
+	file# "bpass.sc"
+
+	(properties
+		-script- 149
+		-super- 131
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BShop
+	script# 40020
+	class# 150
+	super# 131
+	file# "bshop.sc"
+
+	(properties
+		-script- 150
+		-super- 131
+		pType 11
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BMix
+	script# 40032
+	class# 151
+	super# 131
+	file# "bmix.sc"
+
+	(properties
+		-size- 18
+		-script- 151
+		-super- 131
+		pType 20
+		pSkill 0
+		pSkillLevel 0
+		pVerb 0
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BSit
+	script# 40027
+	class# 152
+	super# 131
+	file# "bsit.sc"
+
+	(properties
+		-size- 16
+		-script- 152
+		-super- 131
+		pType 16
+		pOwner 0
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef PolyRect
+	script# 58002
+	class# 153
+	super# 20
+	file# "rlmroom.sc"
+
+	(properties
+		-script- 153
+		-super- 20
+	)
+
+	(methods
+		checkPolyKludge
+	)
+)
+
+
+(classdef BHead
+	script# 40015
+	class# 154
+	super# 142
+	file# "bhead.sc"
+
+	(properties
+		-size- 46
+		-script- 154
+		-super- 142
+		pType 2
+		pAreaWorn 6969
+		pLayer 100
+		pHeadNum 0
+		pHairNum 0
+		pBrowNum 0
+		pEyeNum 0
+		pNoseNum 0
+		pEarNum 0
+		pMouthNum 0
+		pFaceHairNum 0
+		pSkinColor 1
+		pHairColor 0
+		pEyeColor 0
+		pRace 1
+		pSex 1
+		pHeadView -1
+		pHairView -1
+		pBrowView -1
+		pEyeView -1
+		pNoseView -1
+		pEarView -1
+		pMouthView -1
+		pFaceHairView -1
+		pBitmapArray 0
+		pOriginPoints 0
+	)
+
+	(methods
+		init
+		dispose
+		handlesAction
+		updateDisplay
+		updateAction
+		fromPacket
+		calcViews
+		calcView
+		setHairColor
+		setEyeColor
+		setSkinColor
+		setSex
+		setRace
+		nextFeature
+		prevFeature
+		deltaFeatureSelect
+		checkExclusion
+		checkExclusions
+		checkFeatureRanges
+		checkFeatureRange
+		updateFeature
+		fixExclusions
+		updateBitmaps
+		generateBitmap
+		buildPacket
+		copy
+	)
+)
+
+
+(classdef WorldObject
+	script# 40005
+	class# 155
+	super# 61
+	file# "wobject.sc"
+
+	(properties
+		-size- 143
+		-script- 155
+		-super- 61
+		approachDist 50
+		pName 0
+		pBaseList 0
+		pMsgStr 0
+		pIDName 0
+		pDirectObject 0
+		pIndirectObject 0
+		pDispose 0
+		pMover 0
+		pLastMover 0
+		pUser 0
+		pUpdatorList 0
+		pUpdateClient 0
+		pUpdateObj 0
+		pColor 0
+		pClutStart 0
+		pPaused 0
+		pMode 1
+		pLastMode 1
+		pAction 29
+		pBaseView -1
+		pServIDLo -1
+		pServIDHi -1
+		pPlayMovie 1
+		pSendMovie 1
+		pMovieDelay 0
+		pLastTicks 0
+		pAffectedLo 0
+		pAffectedHi 0
+		pPolygon 0
+		pAddedPolygon 0
+		pOutgoingMovie 0
+		pRoom 0
+		pRoomNum -1
+		pMovieCmd 0
+		pBitmapBased 0
+		pDoScaler 1
+		pHidden 0
+		pStrength 0
+		pDexterity 0
+		pIntelligence 0
+		pEndurance 0
+		pValue 0
+		pManaValue 0
+		pLevel 0
+		pMana 0
+		pManaMax 0
+		pHealth 0
+		pHealthHi 0
+		pHealthMax 0
+		pHealthMaxHi 0
+		pStamina 0
+		pStaminaMax 0
+		pAlignment 128
+		pArmorClass 0
+		pApproachScript 0
+		pMoney 0
+		pRecordMotion 0
+		pWeapon 0
+		pCombatGroup 0
+		pInvisibleClut 0
+		pFrozenClut 0
+		pMsgFile 0
+		pDestLoop -1
+		pHeadingCue 0
+		pBaseBitsLo 0
+		pBaseBitsHi 0
+		pSoundGroup 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		show
+		perform
+		handleEvent
+		onMe
+		addToCast
+		hide
+		getName
+		lastCel
+		cue
+		setHeading
+		update
+		getBase
+		getBaseCharacter
+		hasBase
+		addBase
+		deleteBase
+		buildBaseList
+		buildVerbList
+		handleVerb
+		getVerb
+		dispatchVerb
+		setMessage
+		open
+		close
+		lock
+		unlock
+		take
+		give
+		drop
+		look
+		see
+		putOn
+		bePutOn
+		takeOff
+		beTakenOff
+		eat
+		beEaten
+		drink
+		beDrunk
+		trigger
+		goto
+		approach
+		face
+		examine
+		beExamined
+		buy
+		sell
+		nextFeature
+		prevFeature
+		showContents
+		hideContents
+		modifyProp
+		getProp
+		stopAction
+		getOwner
+		getBaseOwner
+		owns
+		isOwnedBy
+		updateDisplay
+		createDisplay
+		createClut
+		inheritClut
+		removeClut
+		setColor
+		createBitmap
+		disposeBitmap
+		remapBitmap
+		addBitmap
+		addCel
+		addLinkedCel
+		addLinkedBitmap
+		insertLinkedBitmap
+		insertLinkedCel
+		addUpdator
+		deleteUpdator
+		setMode
+		clearMode
+		saveMode
+		restoreMode
+		saveMover
+		restoreMover
+		pause
+		unpause
+		setAction
+		generatePolygon
+		submitPolygon
+		removePolygon
+		addToRoom
+		deleteFromRoom
+		deleteFromCast
+		matchScaler
+		fromPacket
+		fromExtendedPacket
+		buildExtendedPacket
+		getServIDs
+		setView
+		changed
+		sendMovie
+		moveDone
+		recordPosn
+		recordMotion
+		recordHide
+		recordShow
+		recordHeading
+		setAffectedState
+		getAffectedState
+		clearAffectedState
+		setValue
+		addValue
+		subValue
+		setManaValue
+		addManaValue
+		subManaValue
+		setName
+		deleteFromServer
+		addToServer
+		matchServID
+		setCombatGroup
+		servIDEquals
+		setServID
+		setVisible
+		validatePosn
+		getBitmap
+	)
+)
+
+
+(classdef WorldActor
+	script# 40002
+	class# 156
+	super# 155
+	file# "wactor.sc"
+
+	(properties
+		-size- 169
+		-script- 156
+		-super- 155
+		pAction 1
+		pPolygon -1
+		pHead 0
+		pSittingOn 0
+		pCombatX 0
+		pCombatY 0
+		pStep 0
+		pEntryX -1
+		pEntryY -1
+		pWhoToFollow 0
+		pReady 1
+		pHeadOrigin 0
+		pHeadBitmaps 0
+		pShirtView -1
+		pPantsView -1
+		pShoesView -1
+		pBeltView -1
+		pWristView -1
+		pBaldricView -1
+		pRobeView -1
+		pCowlView -1
+		pSkirtView -1
+		pWeaponView -1
+		pShieldView -1
+		pHelmetView -1
+		pFriend 0
+		pPeaceful 1
+		pBarIndex -1
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		setMotion
+		buildVerbList
+		handleVerb
+		goto
+		updateDisplay
+		setColor
+		setAction
+		generatePolygon
+		getBitmap
+		setHead
+		setSex
+		setRace
+		getSex
+		getRace
+		gotoVisibleLocation
+		saveStep
+		restoreStep
+	)
+)
+
+
+(classdef WorldEgo
+	script# 40004
+	class# 157
+	super# 156
+	file# "wego.sc"
+
+	(properties
+		-size- 179
+		-script- 157
+		-super- 156
+		pPlayMovie 0
+		pRecordMotion 1
+		edgeHit 0
+		pChatTarget 0
+		pInit 1
+		pMsgCount 0
+		pLastNoun -1
+		pLastVerb -1
+		pMoneyObj 0
+		pManaObj 0
+		pTargetting 0
+		pClient 0
+	)
+
+	(methods
+		init
+		doit
+		handleEvent
+		hide
+		buildVerbList
+		handleVerb
+		see
+		showContents
+		stopAction
+		setMode
+		clearMode
+		restoreMode
+		fromPacket
+		setValue
+		setManaValue
+		isWizard
+		startTargetting
+		stopTargetting
+		setPassword
+	)
+)
+
+
+(classdef Money
+	script# 40004
+	class# 158
+	super# 155
+	file# "wego.sc"
+
+	(properties
+		-size- 146
+		-script- 158
+		-super- 155
+		view -15036
+		pMoney 1
+		pDenomination 0
+		pContainerButton 0
+		pOwner 0
+	)
+
+	(methods
+		buildBaseList
+		buildVerbList
+		see
+	)
+)
+
+
+(classdef Mana
+	script# 40004
+	class# 159
+	super# 155
+	file# "wego.sc"
+
+	(properties
+		-size- 146
+		-script- 159
+		-super- 155
+		view -14936
+		pBaseView -14936
+		pMoney 1
+		pDenomination 0
+		pContainerButton 0
+		pOwner 0
+	)
+
+	(methods
+		buildBaseList
+		buildVerbList
+		see
+	)
+)
+
+
+(classdef ContainerDisplay
+	script# 40014
+	class# 160
+	super# 80
+	file# "bcontain.sc"
+
+	(properties
+		-size- 42
+		-script- 160
+		-super- 80
+		pContainer 0
+		pBtnList 0
+		pSlot 0
+		pIsRoot 0
+		pDispose 0
+		pCloseBtn 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		process
+		setSize
+		addObj
+		deleteObj
+		accept
+		getVerb
+		buttonsDoit
+	)
+)
+
+
+(classdef Projectile
+	script# 40000
+	class# 161
+	super# 156
+	file# "classdef.sc"
+
+	(properties
+		-size- 80
+		-script- 161
+		-super- 156
+		name 0
+		approachDist 0
+		pServID 0
+	)
+
+	(methods
+		doAttack
+	)
+)
+
+
+(classdef Heraldry
+	script# 45011
+	class# 162
+	super# 59
+	file# "charpart.sc"
+
+	(properties
+		-size- 75
+		-script- 162
+		-super- 59
+		view 9301
+		pBend 9302
+		pBanner 9309
+		pCrest 9311
+		pAffiliation 9321
+		pSupporter 9341
+		pPlaces 9351
+		pAbility 9391
+		pSupporterR 0
+		pSupporterL 0
+		pCrestView 0
+		pBannerView 0
+		pClutStart 48
+		pColor 99
+		pMotto1 0
+		pMotto2 0
+		pMotto3 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		hide
+		setInfo
+		setColor
+	)
+)
+
+
+(classdef ClutOverride
+	script# 40116
+	class# 163
+	super# 28
+	file# "clutover.sc"
+
+	(properties
+		-size- 17
+		-script- 163
+		-super- 28
+		pClut 0
+		pClient 0
+		pPriority 0
+	)
+
+	(methods
+		new
+		init
+		dispose
+		at
+		selfAt
+	)
+)
+
+
+(classdef InvisibleClut
+	script# 40116
+	class# 164
+	super# 28
+	file# "clutover.sc"
+
+	(properties
+		-script- 164
+		-super- 28
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef FrozenClut
+	script# 40116
+	class# 165
+	super# 28
+	file# "clutover.sc"
+
+	(properties
+		-script- 165
+		-super- 28
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef CombatRoom
+	script# 40111
+	class# 166
+	super# 128
+	file# "cmbtroom.sc"
+
+	(properties
+		-size- 58
+		-script- 166
+		-super- 128
+		pType 0
+		pMovieParams 0
+		prevX 0
+		prevY 0
+		pLeftGroup 0
+		pRightGroup 0
+		pDeadGroup 0
+		pServID 0
+		pRandomSeed 1
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+		delete
+		addCombatant
+		delCombatant
+		restoreCombatant
+		endCombatMode
+		isLegalMove
+		posnOnGrid
+		getXFromGrid
+		getYFromGrid
+		getGridX
+		getGridY
+		getGridNum
+	)
+)
+
+
+(classdef WAScript
+	script# 40002
+	class# 167
+	super# 11
+	file# "wactor.sc"
+
+	(properties
+		-size- 34
+		-script- 167
+		-super- 11
+		pDirectObject 0
+		pIndirectObject 0
+		pMovieCmd 0
+		pClient 0
+		pDoAnimation 0
+		pDone 0
+		pHandsOff 0
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef WANetScript
+	script# 40002
+	class# 168
+	super# 167
+	file# "wactor.sc"
+
+	(properties
+		-size- 37
+		-script- 168
+		-super- 167
+		pMutex 0
+		x 0
+		y 0
+	)
+
+	(methods
+		init
+		dispose
+		handleError
+		defaultError
+	)
+)
+
+
+(classdef WAExitScript
+	script# 40002
+	class# 169
+	super# 168
+	file# "wactor.sc"
+
+	(properties
+		-size- 38
+		-script- 169
+		-super- 168
+		pDirection -1
+	)
+
+	(methods
+		dispose
+		handleError
+		changeState
+	)
+)
+
+
+(classdef WANetNewPassScript
+	script# 40025
+	class# 170
+	super# 168
+	file# "bpass.sc"
+
+	(properties
+		-script- 170
+		-super- 168
+	)
+
+	(methods
+		init
+		dispose
+		handleError
+		changeState
+	)
+)
+
+
+(classdef ViewButton
+	script# 40200
+	class# 171
+	super# 72
+	file# "spells.sc"
+
+	(properties
+		-script- 171
+		-super- 72
+	)
+
+	(methods
+		init
+		draw
+		setSize
+		refresh
+	)
+)
+
+
+(classdef ViewButtonDlg
+	script# 40000
+	class# 172
+	super# 6
+	file# "classdef.sc"
+
+	(properties
+		-script- 172
+		-super- 6
+	)
+
+	(methods
+	)
+)
+
+
+(classdef SpellDialog
+	script# 40200
+	class# 173
+	super# 80
+	file# "spells.sc"
+
+	(properties
+		-size- 38
+		-script- 173
+		-super- 80
+		pLineList 0
+		pCircleList 0
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef StockCharacters
+	script# 45011
+	class# 174
+	super# 5
+	file# "charpart.sc"
+
+	(properties
+		-script- 174
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef RlmInfoBar
+	script# 40109
+	class# 175
+	super# 65
+	file# "infobar.sc"
+
+	(properties
+		-size- 41
+		-script- 175
+		-super- 65
+		priority 500
+		pBar 0
+		pEgoBoxSet 0
+		pLeftBoxSet 0
+		pRightBoxSet 0
+		pLeftBoxSize 0
+		pRightBoxSize 0
+		pCast 0
+		pText 0
+	)
+
+	(methods
+		init
+		dispose
+		setBarText
+		updateBar
+		deleteStatusBox
+	)
+)
+
+
+(classdef DeadObjects
+	script# 0
+	class# 176
+	super# 5
+	file# "roomzero.sc"
+
+	(properties
+		-script- 176
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef MagicActor
+	script# 40200
+	class# 177
+	super# 155
+	file# "spells.sc"
+
+	(properties
+		-size- 147
+		-script- 177
+		-super- 155
+		moveSpeed 1
+		pActor 0
+		pFollow 0
+		pLastX 0
+		pLastY 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		setCycle
+		cue
+		setHeading
+		buildVerbList
+		stopAction
+		linkToCenter
+		linkToActor
+		linkToCaster
+	)
+)
+
+
+(classdef WACastBeginScript
+	script# 40200
+	class# 178
+	super# 167
+	file# "spells.sc"
+
+	(properties
+		-script- 178
+		-super- 167
+		name 0
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef WACastEndScript
+	script# 40200
+	class# 179
+	super# 167
+	file# "spells.sc"
+
+	(properties
+		-script- 179
+		-super- 167
+		name 0
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SpecialEffect
+	script# 40200
+	class# 180
+	super# 12
+	file# "spells.sc"
+
+	(properties
+		-size- 28
+		-script- 180
+		-super- 12
+		pWhoToCue 0
+	)
+
+	(methods
+		init
+		dispose
+		fromPacket
+	)
+)
+
+
+(classdef SpecialEffectTarget
+	script# 40200
+	class# 181
+	super# 180
+	file# "spells.sc"
+
+	(properties
+		-size- 32
+		-script- 181
+		-super- 180
+		pActor 0
+		pActor2 0
+		pTarget 0
+		pHitList 0
+	)
+
+	(methods
+		init
+		dispose
+		handleError
+		fromPacket
+	)
+)
+
+
+(classdef SpecialEffectSourceTarget
+	script# 40200
+	class# 182
+	super# 180
+	file# "spells.sc"
+
+	(properties
+		-size- 34
+		-script- 182
+		-super- 180
+		pActor 0
+		pActor2 0
+		pSource 0
+		pTarget 0
+		pHitList 0
+		pDidHit 1
+	)
+
+	(methods
+		init
+		dispose
+		handleError
+		fromPacket
+	)
+)
+
+
+(classdef SpecialEffectArea
+	script# 40200
+	class# 183
+	super# 180
+	file# "spells.sc"
+
+	(properties
+		-size- 33
+		-script- 183
+		-super- 180
+		pActor 0
+		pActor2 0
+		pSource 0
+		x 0
+		y 0
+	)
+
+	(methods
+		init
+		dispose
+		fromPacket
+	)
+)
+
+
+(classdef SoundEffect
+	script# 40200
+	class# 184
+	super# 180
+	file# "spells.sc"
+
+	(properties
+		-size- 31
+		-script- 184
+		-super- 180
+		pSound 0
+		pNumber 0
+		pShouldLoop 1
+	)
+
+	(methods
+		init
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEDeathCloud
+	script# 40200
+	class# 185
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 185
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFlameOrb
+	script# 40200
+	class# 186
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 186
+		-super- 182
+	)
+
+	(methods
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEFlash
+	script# 40200
+	class# 187
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 187
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFlashGrow
+	script# 40200
+	class# 188
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 188
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFlashFade
+	script# 40200
+	class# 189
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 189
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SELightning
+	script# 40200
+	class# 190
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 190
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEGreenCloud
+	script# 40200
+	class# 191
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 191
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SERedCloud
+	script# 40200
+	class# 192
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 192
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBlueCloud
+	script# 40200
+	class# 193
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 193
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEYellowCloud
+	script# 40200
+	class# 194
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 194
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEWhiteCloud
+	script# 40200
+	class# 195
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 195
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPurpleCloud
+	script# 40200
+	class# 196
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 196
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEIceStorm
+	script# 40200
+	class# 197
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 197
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESummon
+	script# 40200
+	class# 198
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 198
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEGreenFade
+	script# 40200
+	class# 199
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 199
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SERedFade
+	script# 40200
+	class# 200
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 200
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBlueFade
+	script# 40200
+	class# 201
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 201
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEYellowFade
+	script# 40200
+	class# 202
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 202
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEWhiteFade
+	script# 40200
+	class# 203
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 203
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPurpleFade
+	script# 40200
+	class# 204
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 204
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEHealBurst
+	script# 40000
+	class# 205
+	super# 181
+	file# "classdef.sc"
+
+	(properties
+		-size- 28
+		-script- 205
+		-super- 181
+	)
+
+	(methods
+	)
+)
+
+
+(classdef SEDrainMagic
+	script# 40200
+	class# 206
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 206
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEWhirlwind
+	script# 40200
+	class# 207
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 207
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEShieldUp
+	script# 40200
+	class# 208
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 208
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEShieldDown
+	script# 40200
+	class# 209
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 209
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPoof
+	script# 40200
+	class# 210
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 210
+		-super- 181
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SEDeathBlade
+	script# 40200
+	class# 211
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 211
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SEUnlock
+	script# 40200
+	class# 212
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 212
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEMagicDust
+	script# 40200
+	class# 213
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 213
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SELevitate
+	script# 40200
+	class# 214
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 214
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFireBall
+	script# 40200
+	class# 215
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 215
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESound
+	script# 40200
+	class# 216
+	super# 184
+	file# "spells.sc"
+
+	(properties
+		-script- 216
+		-super- 184
+	)
+
+	(methods
+	)
+)
+
+
+(classdef SEMusic
+	script# 40200
+	class# 217
+	super# 184
+	file# "spells.sc"
+
+	(properties
+		-script- 217
+		-super- 184
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef QuitGameHandler
+	script# 40002
+	class# 218
+	super# 4
+	file# "wactor.sc"
+
+	(properties
+		-script- 218
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef DeadQuitHandler
+	script# 40000
+	class# 219
+	super# 4
+	file# "classdef.sc"
+
+	(properties
+		-script- 219
+		-super- 4
+	)
+
+	(methods
+	)
+)
+
+
+(classdef DisposeNotifyList
+	script# 40005
+	class# 220
+	super# 5
+	file# "wobject.sc"
+
+	(properties
+		-script- 220
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef VerbList
+	script# 40005
+	class# 221
+	super# 5
+	file# "wobject.sc"
+
+	(properties
+		-script- 221
+		-super- 5
+	)
+
+	(methods
+		add
+		release
+	)
+)
+
+
+(classdef MovieCmd
+	script# 40101
+	class# 222
+	super# 2
+	file# "wmovie.sc"
+
+	(properties
+		-size- 54
+		-script- 222
+		-super- 2
+		pClient 0
+		script 0
+		pCmd -1
+		pDestX 0
+		pDestY 0
+		pLoop 0
+		pQueue 0
+		pHeading 0
+		pObject 0
+		pDirectObject 0
+		pIndirectObject 0
+		pType -1
+		pEffect 0
+		pNumber 0
+		pStepX 0
+		pStepY 0
+		pAttack 0
+		pResult 0
+		pDamage 0
+		pState 0
+		pMutex 0
+		pLeftGroup 0
+		pRightGroup 0
+		pRoomPic 0
+		pCloudX 0
+		pCloudY 0
+		pPackData 0
+		pNumTicks 0
+		pPerformOnEgo 0
+		pCombatants 0
+		pSpellName 0
+		pActionQueue 0
+		pDone 0
+		pDoit 0
+		pMagic 0
+		pSpell 0
+		pCmdNumber 0
+		pIsDependent 0
+		pIntrusive 0
+	)
+
+	(methods
+		new
+		doit
+		dispose
+		process
+		setScript
+		buildPacket
+		fromPacket
+		cue
+		addPoint
+		addDependency
+		isDependent
+	)
+)
+
+
+(classdef newPassScript
+	script# 40000
+	class# 223
+	super# 11
+	file# "classdef.sc"
+
+	(properties
+		-script- 223
+		-super- 11
+	)
+
+	(methods
+	)
+)
+
+
+(classdef GPolyBitmap
+	script# 40005
+	class# 224
+	super# 59
+	file# "wobject.sc"
+
+	(properties
+		-script- 224
+		-super- 59
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef Strike
+	script# 40200
+	class# 225
+	super# 38
+	file# "spells.sc"
+
+	(properties
+		-size- 30
+		-script- 225
+		-super- 38
+		pZIncrement 0
+		pZCurrent 0
+	)
+
+	(methods
+		init
+		doit
+	)
+)
+
+
+(classdef StrikeGround
+	script# 40200
+	class# 226
+	super# 38
+	file# "spells.sc"
+
+	(properties
+		-size- 30
+		-script- 226
+		-super- 38
+		pZIncrement 0
+		pZCurrent 0
+	)
+
+	(methods
+		init
+		doit
+	)
+)
+
+
+(classdef gTeleportList
+	script# 0
+	class# 227
+	super# 5
+	file# "roomzero.sc"
+
+	(properties
+		-script- 227
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef NetDeadDemon
+	script# 40002
+	class# 228
+	super# 11
+	file# "wactor.sc"
+
+	(properties
+		-script- 228
+		-super- 11
+	)
+
+	(methods
+		init
+		dispose
+		perform
+		handleError
+		changeState
+	)
+)
+
+
+(classdef WAReady
+	script# 40002
+	class# 229
+	super# 11
+	file# "wactor.sc"
+
+	(properties
+		-script- 229
+		-super- 11
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SpellList
+	script# 40200
+	class# 230
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 230
+		-super- 2
+	)
+
+	(methods
+		add
+		delete
+		release
+	)
+)
+
+
+(classdef SaveSpellList
+	script# 40000
+	class# 231
+	super# 4
+	file# "classdef.sc"
+
+	(properties
+		-script- 231
+		-super- 4
+	)
+
+	(methods
+	)
+)
+
+
+(classdef CreateLookDialog
+	script# 40207
+	class# 232
+	super# 4
+	file# "lookdlg.sc"
+
+	(properties
+		-script- 232
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef GetCombatAction
+	script# 40111
+	class# 233
+	super# 4
+	file# "cmbtroom.sc"
+
+	(properties
+		-script- 233
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Spell
+	script# 40200
+	class# 234
+	super# 56
+	file# "spells.sc"
+
+	(properties
+		-size- 51
+		-script- 234
+		-super- 56
+		view 0
+		pID 0
+		pCost 0
+		pIcon 0
+		pText 0
+		pType 0
+		pCircle 0
+		pSkill 0
+		pTargetObj 0
+		pTargetX 0
+		pTargetY 0
+		pString 0
+		pWhoToCue 0
+		pCaster 0
+	)
+
+	(methods
+		init
+		dispose
+		addToCast
+		draw
+		fromPacket
+		known
+		doNetAction
+		doAnimation
+		cast
+		canCast
+		cue
+		writeToFile
+	)
+)
+
+
+(classdef CharInfo
+	script# 40207
+	class# 235
+	super# 0
+	file# "lookdlg.sc"
+
+	(properties
+		-size- 76
+		-script- 235
+		-super- 0
+		pIsSelf 0
+		pName 0
+		pTitle 0
+		pProfession 0
+		pBiography 0
+		pLevel 0
+		pStrength 0
+		pDexterity 0
+		pIntelligence 0
+		pEndurance 0
+		pHealth 0
+		pHealthHi 0
+		pHealthMax 0
+		pHealthMaxHi 0
+		pKnowledge 0
+		pKnowledgeMax 0
+		pCarry 0
+		pCarryMax 0
+		pExperience 0
+		pBuildPoints 0
+		pArmorRating 0
+		pPvp 0
+		pAlignment 0
+		pWanted 0
+		pBounty 0
+		pFace 0
+		pFaceWidth 0
+		pFaceHeight 0
+		pAttackStance 0
+		pAttackWidth 0
+		pAttackHeight 0
+		pStand 0
+		pArmorInfoList 0
+		pWeaponName 0
+		pWeaponDamageMin 0
+		pWeaponDamageMax 0
+		pWeaponCondition 0
+		pAttacksPerRound 0
+		pDodgesPerRound 0
+		pBlocksPerRound 0
+		pAttackDamageMin 0
+		pAttackDamageMax 0
+		pMovementRate 0
+		pSkillArray 0
+		pStatusArray 0
+		pNPCKills 0
+		pPKills 0
+		pManaDrain 0
+		pMeleeArmorPierce 0
+		pEvilMDM 0
+		pGoodMDM 0
+		pAccountType 0
+		pBillingDate 0
+		pAccountID 0
+		pCredits 0
+		pCoppers 0
+		pCastResist 0
+		pSpellResist 0
+		nRights 0
+		pMeleeMod 0
+		pSpellMod 0
+		pOldLevel 0
+		pUpdateBio 0
+		pUpdateTitle 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		getAffectedState
+	)
+)
+
+
+(classdef ArmorInfo
+	script# 40207
+	class# 236
+	super# 0
+	file# "lookdlg.sc"
+
+	(properties
+		-size- 15
+		-script- 236
+		-super- 0
+		pType 0
+		pRating 0
+		pCondition 0
+	)
+
+	(methods
+		dispose
+	)
+)
+
+
+(classdef SpellButton
+	script# 40200
+	class# 237
+	super# 72
+	file# "spells.sc"
+
+	(properties
+		-script- 237
+		-super- 72
+	)
+
+	(methods
+		new
+		choose
+		showMouseOver
+	)
+)
+
+
+(classdef GSActionScript
+	script# 59954
+	class# 238
+	super# 11
+	file# "gameserv.sc"
+
+	(properties
+		-size- 53
+		-script- 238
+		-super- 11
+		pObj 0
+		pShop 0
+		pName 0
+		pTitle 0
+		pText 0
+		pObjectList 0
+		pCharacter 0
+		pList 0
+		pLoginName 0
+		pPassword 0
+		pLongInt 0
+		pLoginErrorStr 0
+		pNumber 0
+		pFirstRoom 0
+		pServID -1
+		pDirection 0
+		pUID 0
+		pVerb -1
+		pDirectObj -1
+		pIndirectObj -1
+		pProfession 0
+		pRace 0
+		pSex 0
+		pPeaceful 0
+		pGotoX -1
+		pGotoY -1
+	)
+
+	(methods
+		init
+		dispose
+		handleError
+	)
+)
+
+
+(classdef GameVersion
+	script# 40202
+	class# 239
+	super# 65535
+	file# "version.sc"
+
+	(properties
+		-objID- 4660
+		-size- 10
+		-propDict- 0
+		-methDict- 0
+		-classScript- 0
+		-script- 239
+		-super- -1
+		-info- -32768
+		pMajorVersion 3
+		pMinorVersion 448
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ATPViewArray
+	script# 40217
+	class# 240
+	super# 17
+	file# "atparray.sc"
+
+	(properties
+		-script- 240
+		-super- 17
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ATPRoomTypeArray
+	script# 40217
+	class# 241
+	super# 17
+	file# "atparray.sc"
+
+	(properties
+		-script- 241
+		-super- 17
+	)
+
+	(methods
+		isRoomType
+	)
+)
+
+
+(classdef ATPFileArray
+	script# 40217
+	class# 242
+	super# 17
+	file# "atparray.sc"
+
+	(properties
+		-script- 242
+		-super- 17
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ATPNounArray
+	script# 40217
+	class# 243
+	super# 17
+	file# "atparray.sc"
+
+	(properties
+		-script- 243
+		-super- 17
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ATPFlagsArray
+	script# 40217
+	class# 244
+	super# 17
+	file# "atparray.sc"
+
+	(properties
+		-script- 244
+		-super- 17
+	)
+
+	(methods
+		hasPolygon
+		doScaler
+		getVersion
+	)
+)
+
+
+(classdef ATPRandRoomArray
+	script# 40217
+	class# 245
+	super# 17
+	file# "atparray.sc"
+
+	(properties
+		-script- 245
+		-super- 17
+	)
+
+	(methods
+		isUncommon
+		getPlacement
+	)
+)
+
+
+(classdef ATPDescr1Array
+	script# 40217
+	class# 246
+	super# 18
+	file# "atparray.sc"
+
+	(properties
+		-script- 246
+		-super- 18
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ATPDescr2Array
+	script# 40217
+	class# 247
+	super# 18
+	file# "atparray.sc"
+
+	(properties
+		-script- 247
+		-super- 18
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ShadowText
+	script# 40203
+	class# 248
+	super# 68
+	file# "shadow.sc"
+
+	(properties
+		-size- 57
+		-script- 248
+		-super- 68
+		font 666
+		fore 255
+		pShadowColor 0
+		caller 0
+		pTimer 0
+		pObj 0
+	)
+
+	(methods
+		init
+		dispose
+		centerOn
+		draw
+		setSize
+		follow
+	)
+)
+
+
+(classdef RemapObj
+	script# 45102
+	class# 249
+	super# 0
+	file# "remap.sc"
+
+	(properties
+		-size- 15
+		-script- 249
+		-super- 0
+		pColor -1
+		pPercent 0
+		pCount 1
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef Remaps
+	script# 45102
+	class# 250
+	super# 2
+	file# "remap.sc"
+
+	(properties
+		-script- 250
+		-super- 2
+	)
+
+	(methods
+		add
+		delete
+	)
+)
+
+
+(classdef InfoQueue
+	script# 40204
+	class# 251
+	super# 5
+	file# "infoq.sc"
+
+	(properties
+		-size- 22
+		-script- 251
+		-super- 5
+		pText 0
+		pDelay 5
+		pEnabled 1
+		pChannel 0
+		pShutUp 1
+		pObj 0
+		pColor 255
+	)
+
+	(methods
+		add
+		cue
+		clear
+	)
+)
+
+
+(classdef SetMoneyEditItem
+	script# 40119
+	class# 252
+	super# 71
+	file# "wedit.sc"
+
+	(properties
+		-script- 252
+		-super- 71
+		bottom 20
+		right 180
+		max 10
+	)
+
+	(methods
+		new
+		init
+		dispose
+		validKey
+	)
+)
+
+
+(classdef SetManaEditItem
+	script# 40119
+	class# 253
+	super# 71
+	file# "wedit.sc"
+
+	(properties
+		-script- 253
+		-super- 71
+		bottom 20
+		right 180
+		max 10
+	)
+
+	(methods
+		new
+		init
+		dispose
+		validKey
+	)
+)
+
+
+(classdef ActionQueue
+	script# 40201
+	class# 254
+	super# 5
+	file# "actionq.sc"
+
+	(properties
+		-script- 254
+		-super- 5
+	)
+
+	(methods
+		dispose
+		delete
+		cue
+		isDependent
+	)
+)
+
+
+(classdef ActionQMgr
+	script# 40201
+	class# 255
+	super# 5
+	file# "actionq.sc"
+
+	(properties
+		-size- 16
+		-script- 255
+		-super- 5
+		pHandleActions 1
+	)
+
+	(methods
+		doit
+		addAction
+		delAction
+		flush
+	)
+)
+
+
+(classdef SortedList
+	script# 58003
+	class# 256
+	super# 2
+	file# "sortlist.sc"
+
+	(properties
+		-size- 17
+		-script- 256
+		-super- 2
+		pSortSelector 0
+		pSortDirection 1
+	)
+
+	(methods
+		add
+		findSlot
+	)
+)
+
+
+(classdef Mutex
+	script# 40112
+	class# 257
+	super# 0
+	file# "lockmgr.sc"
+
+	(properties
+		-size- 16
+		-script- 257
+		-super- 0
+		pClient 0
+		pOwner 0
+		pObjects 0
+		pActive 0
+	)
+
+	(methods
+		init
+		dispose
+		hasConflict
+		hasNoConflict
+	)
+)
+
+
+(classdef LockMgr
+	script# 40112
+	class# 258
+	super# 0
+	file# "lockmgr.sc"
+
+	(properties
+		-size- 14
+		-script- 258
+		-super- 0
+		pLockedList 0
+		pPendingList 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		lock
+	)
+)
+
+
+(classdef FastScrollWindow
+	script# 45020
+	class# 259
+	super# 56
+	file# "scroll.sc"
+
+	(properties
+		-size- 44
+		-script- 259
+		-super- 56
+		pTextList 0
+		pStart 0
+		pNumLines 9
+		pBufferSize 100
+		pStartOverride 0
+		pIndex 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		draw
+		clear
+		add
+	)
+)
+
+
+(classdef gDialogList
+	script# 40100
+	class# 260
+	super# 5
+	file# "wdialog.sc"
+
+	(properties
+		-script- 260
+		-super- 5
+	)
+
+	(methods
+		dispose
+		add
+	)
+)
+
+
+(classdef GetAmount
+	script# 40100
+	class# 261
+	super# 11
+	file# "wdialog.sc"
+
+	(properties
+		-size- 28
+		-script- 261
+		-super- 11
+		pDirectObject 0
+	)
+
+	(methods
+		new
+		changeState
+		handleEvent
+	)
+)
+
+
+(classdef GetManaAmount
+	script# 40100
+	class# 262
+	super# 11
+	file# "wdialog.sc"
+
+	(properties
+		-size- 28
+		-script- 262
+		-super- 11
+		pDirectObject 0
+	)
+
+	(methods
+		new
+		changeState
+		handleEvent
+	)
+)
+
+
+(classdef ScriptPrompt
+	script# 40100
+	class# 263
+	super# 4
+	file# "wdialog.sc"
+
+	(properties
+		-size- 17
+		-script- 263
+		-super- 4
+		pMax 0
+		pPrint 0
+		pStr 0
+		pPrompt 0
+		pClient 0
+	)
+
+	(methods
+		doit
+		dispose
+	)
+)
+
+
+(classdef GroupMember
+	script# 40113
+	class# 264
+	super# 0
+	file# "group.sc"
+
+	(properties
+		-size- 14
+		-script- 264
+		-super- 0
+		pName 0
+		pServID 0
+	)
+
+	(methods
+		init
+		dispose
+		servIDEquals
+	)
+)
+
+
+(classdef GroupList
+	script# 40113
+	class# 265
+	super# 5
+	file# "group.sc"
+
+	(properties
+		-size- 16
+		-script- 265
+		-super- 5
+		pLeader 0
+	)
+
+	(methods
+		add
+		delete
+		findByServID
+	)
+)
+
+
+(classdef SetScale
+	script# 40206
+	class# 266
+	super# 4
+	file# "colortbl.sc"
+
+	(properties
+		-script- 266
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef BDye
+	script# 40033
+	class# 267
+	super# 131
+	file# "bdye.sc"
+
+	(properties
+		-size- 16
+		-script- 267
+		-super- 131
+		pType 23
+		pHairDye 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef VerbArray
+	script# 40005
+	class# 268
+	super# 19
+	file# "wobject.sc"
+
+	(properties
+		-script- 268
+		-super- 19
+	)
+
+	(methods
+		fill
+		setBit
+		clearBit
+		getBit
+	)
+)
+
+
+(classdef ApproachScript
+	script# 40005
+	class# 269
+	super# 12
+	file# "wobject.sc"
+
+	(properties
+		-size- 32
+		-script- 269
+		-super- 12
+		pApproachX -1
+		pApproachY -1
+		pDistance 0
+		pObject 0
+		pClient 0
+	)
+
+	(methods
+		init
+		dispose
+		changeState
+	)
+)
+
+
+(classdef CombatWaitingList
+	script# 40101
+	class# 270
+	super# 5
+	file# "wmovie.sc"
+
+	(properties
+		-script- 270
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ActiveMovieCmdList
+	script# 40101
+	class# 271
+	super# 5
+	file# "wmovie.sc"
+
+	(properties
+		-script- 271
+		-super- 5
+	)
+
+	(methods
+	)
+)
+
+
+(classdef CombatWaitText
+	script# 40101
+	class# 272
+	super# 248
+	file# "wmovie.sc"
+
+	(properties
+		-script- 272
+		-super- 248
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef Combatant
+	script# 40101
+	class# 273
+	super# 0
+	file# "wmovie.sc"
+
+	(properties
+		-size- 15
+		-script- 273
+		-super- 0
+		pCharID 0
+		pCombatX 0
+		pCombatY 0
+	)
+
+	(methods
+		dispose
+	)
+)
+
+
+(classdef MovieSet
+	script# 40101
+	class# 274
+	super# 5
+	file# "wmovie.sc"
+
+	(properties
+		-size- 16
+		-script- 274
+		-super- 5
+		pHandsOff 0
+	)
+
+	(methods
+		add
+		delete
+		buildPacket
+		toss
+	)
+)
+
+
+(classdef DisplayTimer
+	script# 40101
+	class# 275
+	super# 24
+	file# "wmovie.sc"
+
+	(properties
+		-size- 21
+		-script- 275
+		-super- 24
+		pDisplay 0
+		pSeconds -1
+	)
+
+	(methods
+		init
+		doit
+		delete
+	)
+)
+
+
+(classdef RoundTimer
+	script# 40101
+	class# 276
+	super# 4
+	file# "wmovie.sc"
+
+	(properties
+		-size- 15
+		-script- 276
+		-super- 4
+		pWhoToCue 0
+		pTimer 0
+		pForefit 0
+	)
+
+	(methods
+		cue
+	)
+)
+
+
+(classdef TreasureDisplay
+	script# 40101
+	class# 277
+	super# 56
+	file# "wmovie.sc"
+
+	(properties
+		-script- 277
+		-super- 56
+	)
+
+	(methods
+		init
+		draw
+	)
+)
+
+
+(classdef TakeItemCode
+	script# 40101
+	class# 278
+	super# 4
+	file# "wmovie.sc"
+
+	(properties
+		-script- 278
+		-super- 4
+	)
+
+	(methods
+		doit
+		cue
+	)
+)
+
+
+(classdef MakeTreasureDialog
+	script# 40101
+	class# 279
+	super# 4
+	file# "wmovie.sc"
+
+	(properties
+		-script- 279
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef PileOJunk
+	script# 40205
+	class# 280
+	super# 155
+	file# "wpile.sc"
+
+	(properties
+		-size- 147
+		-script- 280
+		-super- 155
+		pMergeDistance 50
+		pMergeCount 3
+		pThresholdCount 2
+		pOwner 0
+	)
+
+	(methods
+		centerOn
+		buildBaseList
+		give
+		updateDisplay
+		makePiles
+		unMakePile
+	)
+)
+
+
+(classdef GSound
+	script# 59960
+	class# 281
+	super# 31
+	file# "gsound.sc"
+
+	(properties
+		-script- 281
+		-super- 31
+	)
+
+	(methods
+		dispose
+	)
+)
+
+
+(classdef PicInfo
+	script# 40110
+	class# 282
+	super# 0
+	file# "picinfo.sc"
+
+	(properties
+		-size- 22
+		-script- 282
+		-super- 0
+		number 0
+		roomType 0
+		picture 0
+		horizon 130
+		polyList 0
+		pScaled 1
+		pBackY 140
+		pBackSize 40
+		pFrontY 310
+		pFrontSize 128
+	)
+
+	(methods
+	)
+)
+
+
+(classdef PicInfoList
+	script# 40110
+	class# 283
+	super# 5
+	file# "picinfo.sc"
+
+	(properties
+		-script- 283
+		-super- 5
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef FormattedFile
+	script# 40107
+	class# 284
+	super# 93
+	file# "formfile.sc"
+
+	(properties
+		-size- 15
+		-script- 284
+		-super- 93
+		pTabs 0
+		pUseTabs 1
+	)
+
+	(methods
+		writeString
+		incTabs
+		decTabs
+	)
+)
+
+
+(classdef CWindowPage
+	script# 45021
+	class# 285
+	super# 0
+	file# "cwndpage.sc"
+
+	(properties
+		-script- 285
+		-super- 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+	)
+)
+
+
+(classdef ATPNode
+	script# 40105
+	class# 286
+	super# 0
+	file# "atplist.sc"
+
+	(properties
+		-size- 28
+		-script- 286
+		-super- 0
+		number 0
+		roomType 0
+		noun 0
+		view 0
+		pCategory 0
+		pDescriber 0
+		x 0
+		y 0
+		z 0
+		pPolygon 0
+		pDoScaler 0
+		priority 0
+		pVersion 1
+		pPlacement 0
+		pUncommon 0
+		pMsgFile 0
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef ATPList
+	script# 40105
+	class# 287
+	super# 5
+	file# "atplist.sc"
+
+	(properties
+		-script- 287
+		-super- 5
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef gameBarBtn
+	script# 42000
+	class# 288
+	super# 72
+	file# "gamebar.sc"
+
+	(properties
+		-script- 288
+		-super- 72
+		view 9002
+	)
+
+	(methods
+		init
+		doit
+		handleError
+		hide
+		cue
+	)
+)
+
+
+(classdef RealmPanel
+	script# 42000
+	class# 289
+	super# 6
+	file# "gamebar.sc"
+
+	(properties
+		-script- 289
+		-super- 6
+		modal 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+	)
+)
+
+
+(classdef RealmIconBar
+	script# 42000
+	class# 290
+	super# 85
+	file# "gamebar.sc"
+
+	(properties
+		-size- 48
+		-script- 290
+		-super- 85
+		curPanel 0
+		pToRoom 0
+		pPanels 0
+		pLastIcon 0
+		pLastPanel 0
+		pNewLines 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		handleEvent
+		hide
+		advanceCurIcon
+		swapIcons
+		replaceIcons
+		setIcon
+		showInventoryPanel
+		showPanel
+		disablePanel
+		restorePanel
+		replacePanel
+		addPanel
+		deletePanel
+		updatePanel
+		newLinesShow
+		newLinesHide
+		validTextColor
+	)
+)
+
+
+(classdef ShopList
+	script# 40117
+	class# 291
+	super# 2
+	file# "shop.sc"
+
+	(properties
+		-size- 16
+		-script- 291
+		-super- 2
+		pOwner 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef TradeDlg
+	script# 40117
+	class# 292
+	super# 80
+	file# "shop.sc"
+
+	(properties
+		-size- 45
+		-script- 292
+		-super- 80
+		pItemList 0
+		pItemSelector 0
+		pHandleInput 0
+		pAssets 0
+		pPoints 0
+		pItemAmt 0
+		pShopId 0
+		pNameText 0
+		pPriceText 0
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		fromPacket
+		buildList
+		buildSelector
+		newList
+		buildDlg
+		getAssets
+		getBuildPoints
+		createHandler
+	)
+)
+
+
+(classdef CategoryInput
+	script# 40117
+	class# 293
+	super# 4
+	file# "shop.sc"
+
+	(properties
+		-size- 13
+		-script- 293
+		-super- 4
+		pDlg 0
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef StoreItem
+	script# 40117
+	class# 294
+	super# 56
+	file# "shop.sc"
+
+	(properties
+		-size- 43
+		-script- 294
+		-super- 56
+		pOwner 0
+		pName 0
+		pClutStart 0
+		pColor 0
+		pClut 0
+	)
+
+	(methods
+		init
+		dispose
+		width
+		height
+		addToCast
+		draw
+		setName
+	)
+)
+
+
+(classdef CategoryItem
+	script# 40117
+	class# 295
+	super# 294
+	file# "shop.sc"
+
+	(properties
+		-size- 44
+		-script- 295
+		-super- 294
+		pList 0
+	)
+
+	(methods
+		init
+		dispose
+	)
+)
+
+
+(classdef TradeItem
+	script# 40117
+	class# 296
+	super# 294
+	file# "shop.sc"
+
+	(properties
+		-size- 46
+		-script- 296
+		-super- 294
+		pPrice 0
+		pIndex 0
+		pType 0
+	)
+
+	(methods
+		dispose
+		draw
+	)
+)
+
+
+(classdef CDSlot
+	script# 40014
+	class# 297
+	super# 0
+	file# "bcontain.sc"
+
+	(properties
+		-size- 15
+		-script- 297
+		-super- 0
+		x 0
+		y 0
+		pOwner 0
+	)
+
+	(methods
+		init
+		setOwner
+	)
+)
+
+
+(classdef CDSlotList
+	script# 40014
+	class# 298
+	super# 5
+	file# "bcontain.sc"
+
+	(properties
+		-script- 298
+		-super- 5
+	)
+
+	(methods
+		init
+		findSlot
+		findClosestSlot
+	)
+)
+
+
+(classdef ContainerButton
+	script# 40014
+	class# 299
+	super# 72
+	file# "bcontain.sc"
+
+	(properties
+		-size- 69
+		-script- 299
+		-super- 72
+		pObj 0
+		pOldBM 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+		onMe
+		hide
+		draw
+	)
+)
+
+
+(classdef BGatekeeper
+	script# 40026
+	class# 300
+	super# 131
+	file# "bgate.sc"
+
+	(properties
+		-script- 300
+		-super- 131
+		pType 15
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef BScroll
+	script# 40028
+	class# 301
+	super# 131
+	file# "bscroll.sc"
+
+	(properties
+		-script- 301
+		-super- 131
+		pType 17
+	)
+
+	(methods
+		buildVerbList
+	)
+)
+
+
+(classdef WALookScript
+	script# 40002
+	class# 302
+	super# 168
+	file# "wactor.sc"
+
+	(properties
+		-script- 302
+		-super- 168
+	)
+
+	(methods
+		handleError
+		changeState
+	)
+)
+
+
+(classdef MakeItemDialog
+	script# 40002
+	class# 303
+	super# 83
+	file# "wactor.sc"
+
+	(properties
+		-size- 14
+		-script- 303
+		-super- 83
+		pObject 0
+	)
+
+	(methods
+		init
+		perform
+		handleEvent
+	)
+)
+
+
+(classdef MakeItemCode
+	script# 40002
+	class# 304
+	super# 4
+	file# "wactor.sc"
+
+	(properties
+		-script- 304
+		-super- 4
+	)
+
+	(methods
+		doit
+		perform
+	)
+)
+
+
+(classdef GotoVisibleLocation
+	script# 40002
+	class# 305
+	super# 4
+	file# "wactor.sc"
+
+	(properties
+		-script- 305
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef FavoriteSpells
+	script# 40200
+	class# 306
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 306
+		-super- 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef SorcerySpells
+	script# 40200
+	class# 307
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 307
+		-super- 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ElementalismSpells
+	script# 40200
+	class# 308
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 308
+		-super- 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef MysticismSpells
+	script# 40200
+	class# 309
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 309
+		-super- 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ThaumaturgySpells
+	script# 40200
+	class# 310
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 310
+		-super- 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef NecromancySpells
+	script# 40200
+	class# 311
+	super# 2
+	file# "spells.sc"
+
+	(properties
+		-script- 311
+		-super- 2
+	)
+
+	(methods
+	)
+)
+
+
+(classdef WASpellScript
+	script# 40200
+	class# 312
+	super# 167
+	file# "spells.sc"
+
+	(properties
+		-size- 35
+		-script- 312
+		-super- 167
+		name 0
+		pSpell 0
+	)
+
+	(methods
+		dispose
+	)
+)
+
+
+(classdef WANetSpellScript
+	script# 40200
+	class# 313
+	super# 168
+	file# "spells.sc"
+
+	(properties
+		-size- 38
+		-script- 313
+		-super- 168
+		name 0
+		pSpell 0
+	)
+
+	(methods
+		dispose
+		handleError
+	)
+)
+
+
+(classdef LoadFavoriteSpells
+	script# 40200
+	class# 314
+	super# 4
+	file# "spells.sc"
+
+	(properties
+		-script- 314
+		-super- 4
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef Miss
+	script# 40200
+	class# 315
+	super# 38
+	file# "spells.sc"
+
+	(properties
+		-size- 30
+		-script- 315
+		-super- 38
+		pZIncrement 0
+		pZCurrent 0
+	)
+
+	(methods
+		init
+		doit
+	)
+)
+
+
+(classdef SEPoisonBolt
+	script# 40200
+	class# 316
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 316
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEHoldMonster
+	script# 40200
+	class# 317
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 317
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEBerserk
+	script# 40200
+	class# 318
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 318
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEEnidsBlessing
+	script# 40200
+	class# 319
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 319
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEIncinerate
+	script# 40200
+	class# 320
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 320
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEFreeze
+	script# 40200
+	class# 321
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 321
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEStun
+	script# 40200
+	class# 322
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 322
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEConfusion
+	script# 40200
+	class# 323
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 323
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEMindShackle
+	script# 40200
+	class# 324
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 324
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SELoyaltyShift
+	script# 40200
+	class# 325
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 325
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEFear
+	script# 40200
+	class# 326
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 326
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEMassDrain
+	script# 40200
+	class# 327
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 327
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEWrathOfTheGods
+	script# 40200
+	class# 328
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 328
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEElphamesJustice
+	script# 40200
+	class# 329
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 329
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESandStorm
+	script# 40200
+	class# 330
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 330
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SEGustOfWind
+	script# 40200
+	class# 331
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 331
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SEElectricFury
+	script# 40200
+	class# 332
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 332
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEColdSnap
+	script# 40200
+	class# 333
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 333
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESpellBlast
+	script# 40200
+	class# 334
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 334
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEForcedFlee
+	script# 40200
+	class# 335
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 335
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEBanishment
+	script# 40200
+	class# 336
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 336
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEIceOrb
+	script# 40200
+	class# 337
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 337
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEEarthquake
+	script# 40200
+	class# 338
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 338
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESummonZombie
+	script# 40200
+	class# 339
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 339
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESummonWraith
+	script# 40200
+	class# 340
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 340
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESummonUndead
+	script# 40200
+	class# 341
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 341
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESummonNightFriends
+	script# 40200
+	class# 342
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 342
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESummonDaemon
+	script# 40200
+	class# 343
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 343
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESummonPixie
+	script# 40200
+	class# 344
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 344
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEPsychicOrb
+	script# 40200
+	class# 345
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 345
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SELightDart
+	script# 40200
+	class# 346
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 346
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEAcidSphere
+	script# 40200
+	class# 347
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 347
+		-super- 182
+	)
+
+	(methods
+		init
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SECrushingBoulder
+	script# 40200
+	class# 348
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 348
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEDuachsVengeance
+	script# 40200
+	class# 349
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 349
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEHeadOfDeath
+	script# 40200
+	class# 350
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 350
+		-super- 182
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SELightningBolt
+	script# 40200
+	class# 351
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 351
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEStoning
+	script# 40200
+	class# 352
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 352
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEAcidRain
+	script# 40200
+	class# 353
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 353
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEHeal
+	script# 40200
+	class# 354
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 354
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPurify
+	script# 40200
+	class# 355
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 355
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEGreaterHeal
+	script# 40200
+	class# 356
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 356
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SECurePoison
+	script# 40200
+	class# 357
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 357
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEShield
+	script# 40200
+	class# 358
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 358
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEGreaterShield
+	script# 40200
+	class# 359
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 359
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEInvulnerability
+	script# 40200
+	class# 360
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 360
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFireShield
+	script# 40200
+	class# 361
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 361
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEColdShield
+	script# 40200
+	class# 362
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 362
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SELightningShield
+	script# 40200
+	class# 363
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 363
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPoisonShield
+	script# 40200
+	class# 364
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 364
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEAcidShield
+	script# 40200
+	class# 365
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 365
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFireCurse
+	script# 40200
+	class# 366
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 366
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEColdCurse
+	script# 40200
+	class# 367
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 367
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SELightningCurse
+	script# 40200
+	class# 368
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 368
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPoisonCurse
+	script# 40200
+	class# 369
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 369
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEAcidCurse
+	script# 40200
+	class# 370
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 370
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEMissileResistance
+	script# 40200
+	class# 371
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 371
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEEmpower
+	script# 40200
+	class# 372
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 372
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEEnfeeble
+	script# 40200
+	class# 373
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 373
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEStealLife
+	script# 40200
+	class# 374
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 374
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SENimbility
+	script# 40200
+	class# 375
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 375
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEClumsiness
+	script# 40200
+	class# 376
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 376
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEImmolation
+	script# 40200
+	class# 377
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 377
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEWarpMind
+	script# 40200
+	class# 378
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 378
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEDrainLife
+	script# 40200
+	class# 379
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 379
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEDeathWish
+	script# 40200
+	class# 380
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 380
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESpark
+	script# 40200
+	class# 381
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 381
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEDeathTouch
+	script# 40200
+	class# 382
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 382
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEExtension
+	script# 40200
+	class# 383
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 383
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESeeInvisibility
+	script# 40200
+	class# 384
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 384
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEShift
+	script# 40200
+	class# 385
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 385
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEInvisibility
+	script# 40200
+	class# 386
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 386
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEAntiMagicAura
+	script# 40200
+	class# 387
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 387
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SERust
+	script# 40200
+	class# 388
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 388
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEDefenselessness
+	script# 40200
+	class# 389
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 389
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEImprovedInvisibility
+	script# 40200
+	class# 390
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 390
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEEnchantItem
+	script# 40200
+	class# 391
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 391
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEMultiBlade
+	script# 40200
+	class# 392
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 392
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SESingleFlameOrb
+	script# 40200
+	class# 393
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 393
+		-super- 182
+	)
+
+	(methods
+		init
+		changeState
+	)
+)
+
+
+(classdef SESinglePoisonBolt
+	script# 40200
+	class# 394
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 394
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleHoldMonster
+	script# 40200
+	class# 395
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 395
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleBerserk
+	script# 40200
+	class# 396
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 396
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleSnap
+	script# 40200
+	class# 397
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 397
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleBlast
+	script# 40200
+	class# 398
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 398
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleFlee
+	script# 40200
+	class# 399
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 399
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleBlessing
+	script# 40200
+	class# 400
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 400
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleIncinerate
+	script# 40200
+	class# 401
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 401
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleFreeze
+	script# 40200
+	class# 402
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 402
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleStun
+	script# 40200
+	class# 403
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 403
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleConfusion
+	script# 40200
+	class# 404
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 404
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleMindShackle
+	script# 40200
+	class# 405
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 405
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleLoyaltyShift
+	script# 40200
+	class# 406
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 406
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleFear
+	script# 40200
+	class# 407
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 407
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleDrain
+	script# 40200
+	class# 408
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 408
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleWrath
+	script# 40200
+	class# 409
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 409
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleJustice
+	script# 40200
+	class# 410
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 410
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleFury
+	script# 40200
+	class# 411
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 411
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleBanish
+	script# 40200
+	class# 412
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 412
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleRust
+	script# 40200
+	class# 413
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 413
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleIceOrb
+	script# 40200
+	class# 414
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 414
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleLightDart
+	script# 40200
+	class# 415
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 415
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESingleAcidSphere
+	script# 40200
+	class# 416
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 416
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SESinglePsychicOrb
+	script# 40200
+	class# 417
+	super# 182
+	file# "spells.sc"
+
+	(properties
+		-script- 417
+		-super- 182
+	)
+
+	(methods
+		dispose
+		changeState
+	)
+)
+
+
+(classdef SEEngrave
+	script# 40200
+	class# 418
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 418
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SECornucopia
+	script# 40200
+	class# 419
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 419
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEDispelMagic
+	script# 40200
+	class# 420
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 420
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SERemoveCurse
+	script# 40200
+	class# 421
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 421
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEImproveArmor
+	script# 40200
+	class# 422
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 422
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFireGrasp
+	script# 40200
+	class# 423
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 423
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEArticGrasp
+	script# 40200
+	class# 424
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 424
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEVenomousTouch
+	script# 40200
+	class# 425
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 425
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFlameBlade
+	script# 40200
+	class# 426
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 426
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEElectricCharge
+	script# 40200
+	class# 427
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 427
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEColdSteel
+	script# 40200
+	class# 428
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 428
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEVenom
+	script# 40200
+	class# 429
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 429
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEGatherTheFellowship
+	script# 40200
+	class# 430
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 430
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPermanency
+	script# 40200
+	class# 431
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 431
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEIndestruction
+	script# 40200
+	class# 432
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 432
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESingleFumble
+	script# 40200
+	class# 433
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 433
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEMassFumble
+	script# 40200
+	class# 434
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 434
+		-super- 181
+	)
+
+	(methods
+		dispose
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEBang
+	script# 40200
+	class# 435
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-size- 33
+		-script- 435
+		-super- 181
+		pColor 68
+	)
+
+	(methods
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEBangViolet
+	script# 40200
+	class# 436
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 436
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBangGreen
+	script# 40200
+	class# 437
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 437
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBangYellow
+	script# 40200
+	class# 438
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 438
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBangOrange
+	script# 40200
+	class# 439
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 439
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBangTeal
+	script# 40200
+	class# 440
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 440
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEBangBlue
+	script# 40200
+	class# 441
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 441
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SESlideCombatant
+	script# 40200
+	class# 442
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-size- 37
+		-script- 442
+		-super- 181
+		pTargetObj 0
+		pDestX 0
+		pDestY 0
+		pScreenX 0
+		pScreenY 0
+	)
+
+	(methods
+		changeState
+		fromPacket
+	)
+)
+
+
+(classdef SEPoisonCloudTarget
+	script# 40200
+	class# 443
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 443
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEPoisonCloudArea
+	script# 40200
+	class# 444
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 444
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFlameTarget
+	script# 40200
+	class# 445
+	super# 181
+	file# "spells.sc"
+
+	(properties
+		-script- 445
+		-super- 181
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef SEFlameArea
+	script# 40200
+	class# 446
+	super# 183
+	file# "spells.sc"
+
+	(properties
+		-script- 446
+		-super- 183
+	)
+
+	(methods
+		changeState
+	)
+)
+
+
+(classdef CVerbRequest
+	script# 40004
+	class# 447
+	super# 65535
+	file# "wego.sc"
+
+	(properties
+		-objID- 4660
+		-size- 11
+		-propDict- 0
+		-methDict- 0
+		-classScript- 0
+		-script- 447
+		-super- -1
+		-info- 32768
+		pVerbID 0
+		pDirectObject 0
+		pIndirectObject 0
+	)
+
+	(methods
+		getNextVerb
+		clearQueue
+	)
+)
+
+
+(classdef NullMover
+	script# 40004
+	class# 448
+	super# 37
+	file# "wego.sc"
+
+	(properties
+		-script- 448
+		-super- 37
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef CursorRegionController
+	script# 59961
+	class# 449
+	super# 5
+	file# "cursreg.sc"
+
+	(properties
+		-size- 17
+		-script- 449
+		-super- 5
+		curRect 0
+		specialCursorInUse 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		reset
+	)
+)
+
+
+(classdef CursorRegion
+	script# 59961
+	class# 450
+	super# 20
+	file# "cursreg.sc"
+
+	(properties
+		-size- 21
+		-script- 450
+		-super- 20
+		aCursor 0
+		list 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		add
+		delete
+		eachElementDo
+		inWhichList
+		setCursor
+	)
+)
+
+
+(classdef MessagerDialog
+	script# 60090
+	class# 451
+	super# 80
+	file# "messager.sc"
+
+	(properties
+		-size- 38
+		-script- 451
+		-super- 80
+		modal 2
+		pMessager 0
+		margin 6
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+		process
+	)
+)
+
+
+(classdef WObjectList
+	script# 58002
+	class# 452
+	super# 2
+	file# "rlmroom.sc"
+
+	(properties
+		-size- 16
+		-script- 452
+		-super- 2
+		pRoom 0
+	)
+
+	(methods
+		add
+		delete
+	)
+)
+
+
+(classdef StaticRealmRoom
+	script# 58002
+	class# 453
+	super# 126
+	file# "rlmroom.sc"
+
+	(properties
+		-size- 40
+		-script- 453
+		-super- 126
+		pType 0
+		modNum 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		setInfo
+		cue
+	)
+)
+
+
+(classdef BasicCursorController
+	script# 40111
+	class# 454
+	super# 4
+	file# "cmbtroom.sc"
+
+	(properties
+		-size- 15
+		-script- 454
+		-super- 4
+		pOnScreen -1
+		pActiveCursor -1
+		pLastCursor -1
+	)
+
+	(methods
+		doit
+	)
+)
+
+
+(classdef CombatDragItem
+	script# 40111
+	class# 455
+	super# 72
+	file# "cmbtroom.sc"
+
+	(properties
+		-size- 69
+		-script- 455
+		-super- 72
+		state 1025
+		view 9002
+		loop 9
+		fore 43
+		selectColor 43
+		pOfsX 0
+		pOfsY 0
+	)
+
+	(methods
+		track
+		trackDoit
+	)
+)
+
+
+(classdef GSCombatExitScript
+	script# 59954
+	class# 456
+	super# 238
+	file# "gameserv.sc"
+
+	(properties
+		-script- 456
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSRequestPatchScript
+	script# 59954
+	class# 457
+	super# 238
+	file# "gameserv.sc"
+
+	(properties
+		-script- 457
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSGetRouteScript
+	script# 59954
+	class# 458
+	super# 238
+	file# "gameserv.sc"
+
+	(properties
+		-script- 458
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSGetRouteListScript
+	script# 59954
+	class# 459
+	super# 238
+	file# "gameserv.sc"
+
+	(properties
+		-script- 459
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSGetPatchInfoScript
+	script# 59954
+	class# 460
+	super# 238
+	file# "gameserv.sc"
+
+	(properties
+		-script- 460
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GameServer
+	script# 59954
+	class# 461
+	super# 119
+	file# "gameserv.sc"
+
+	(properties
+		-size- 20
+		-script- 461
+		-super- 119
+		pLocked 0
+		pConnected 0
+		pSendTime 0
+		pScripts 0
+		pSecured 0
+		pNakStr 0
+	)
+
+	(methods
+		init
+		doit
+		perform
+		handleMsg
+		login
+		requestServID
+		destroyObject
+		createCharacter
+		destroyCharacter
+		queryCharacters
+		loginCharacter
+		newRoom
+		shiftRoom
+		firstRoom
+		restartGame
+		performPass
+		performXY
+		lock
+		unlock
+		roomChat
+		playerChat
+		notify
+		page
+		getBiography
+		setBiography
+		getDescription
+		getExtendedProps
+		setHeadData
+		getCharacterInfo
+		checkLogin
+		combatBegin
+		combatMove
+		getShopInfo
+		buyShopItem
+		buyBulk
+		examineShopItem
+		getShopItemImage
+		sellObject
+		sellCrystals
+		getPrice
+		getRechargePrice
+		recharge
+		getRepairPrice
+		repair
+		dropMoney
+		putMoney
+		giveMoney
+		takeMoney
+		castLocaleSpell
+		castTargetSpell
+		castSpell
+		exitCombat
+		requestPatch
+		getPatchInfo
+		getPatchBlock
+		getRoute
+		getRouteList
+		getBookInfo
+		getBookPage
+		sendFatalData
+		joinGroup
+		leaveGroup
+		kickGroup
+		getStartingPosn
+		changePassword
+		queryHouse
+		fleeCombat
+		getEntryInfo
+		talkTo
+		forefitTurn
+		updatePingText
+		setTitle
+		getTopic
+		lastTopic
+		getTopicText
+		acceptQuest
+		declineQuest
+		getQuestList
+		mixObject
+		getMail
+		getMailMessage
+		eraseMailMessage
+		sendMail
+		registerPlayer
+		sendRegistration
+		getLookInfo
+		updateCharacter
+		connect
+	)
+)
+
+
+(classdef GSGetMailScript
+	script# 59963
+	class# 462
+	super# 238
+	file# "mailserv.sc"
+
+	(properties
+		-script- 462
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSSendMailScript
+	script# 59963
+	class# 463
+	super# 238
+	file# "mailserv.sc"
+
+	(properties
+		-script- 463
+		-super- 238
+	)
+
+	(methods
+		dispose
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSGetMailMsgScript
+	script# 59963
+	class# 464
+	super# 238
+	file# "mailserv.sc"
+
+	(properties
+		-script- 464
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef GSEraseMailMsgScript
+	script# 59963
+	class# 465
+	super# 238
+	file# "mailserv.sc"
+
+	(properties
+		-script- 465
+		-super- 238
+	)
+
+	(methods
+		handleMsg
+		changeState
+	)
+)
+
+
+(classdef StoreHandler
+	script# 59959
+	class# 466
+	super# 0
+	file# "fakeserv.sc"
+
+	(properties
+		-size- 13
+		-script- 466
+		-super- 0
+		pStoreID 0
+	)
+
+	(methods
+		enter
+		exit
+		newObjects
+	)
+)
+
+
+(classdef FakeServer
+	script# 59959
+	class# 467
+	super# 119
+	file# "fakeserv.sc"
+
+	(properties
+		-size- 15
+		-script- 467
+		-super- 119
+		pStoreHandler 0
+	)
+
+	(methods
+		enterStore
+		leaveStore
+	)
+)
+
+
+(classdef RoomZero
+	script# 0
+	class# 468
+	super# 92
+	file# "roomzero.sc"
+
+	(properties
+		-size- 22
+		-script- 468
+		-super- 92
+		number 1
+		majorVer 2
+		minorVer 1
+		revision 0
+	)
+
+	(methods
+		init
+		doit
+		dispose
+		handleEvent
+		handsOff
+		handsOn
+		controlOff
+		controlOn
+	)
+)
+
+
+(classdef BorderedPlane
+	script# 0
+	class# 469
+	super# 65
+	file# "roomzero.sc"
+
+	(properties
+		-size- 34
+		-script- 469
+		-super- 65
+		pCast 0
+	)
+
+	(methods
+		init
+	)
+)
+
+
+(classdef FancyWindow
+	script# 0
+	class# 470
+	super# 66
+	file# "roomzero.sc"
+
+	(properties
+		-size- 42
+		-script- 470
+		-super- 66
+		back 236
+		picture -2
+		pBorderView 9007
+		pBorderPlane 0
+		pCast 0
+		pInitted 0
+	)
+
+	(methods
+		init
+		dispose
+		show
+		erase
+		hide
+		posnOnScreen
+	)
+)
+
+
+(classdef CharButton
+	script# 45010
+	class# 471
+	super# 72
+	file# "charbtn.sc"
+
+	(properties
+		-script- 471
+		-super- 72
+		view 9010
+		font 20
+		dimColor 7
+	)
+
+	(methods
+		init
+		hide
+		draw
+	)
+)
+
+
+(classdef NextPrevButton
+	script# 45010
+	class# 472
+	super# 72
+	file# "charbtn.sc"
+
+	(properties
+		-size- 70
+		-script- 472
+		-super- 72
+		pDirection 1
+		pFeature 0
+		pCenterButton 0
+	)
+
+	(methods
+		choose
+	)
+)
+
+
+(classdef GroupedButton
+	script# 45010
+	class# 473
+	super# 471
+	file# "charbtn.sc"
+
+	(properties
+		-size- 72
+		-script- 473
+		-super- 471
+		pButtonType 0
+		pCenterButton 0
+		pLeftButton 0
+		pRightButton 0
+		pMakeButtons 1
+	)
+
+	(methods
+		init
+		show
+		hide
+	)
+)
+
+
+(classdef TextButton
+	script# 45010
+	class# 474
+	super# 72
+	file# "charbtn.sc"
+
+	(properties
+		-size- 79
+		-script- 474
+		-super- 72
+		pButtonType 0
+		pCenterButton 0
+		pLeftButton 0
+		pRightButton 0
+		pMakeButtons 0
+		pHelpButton 0
+		pHelpX 0
+		pHelpY 0
+		pHelpW 0
+		pHelpH 0
+		pBase 0
+		pProperty 0
+	)
+
+	(methods
+		init
+		show
+		onMe
+		hide
+	)
+)
+
+
+(classdef IncDecButton
+	script# 45010
+	class# 475
+	super# 72
+	file# "charbtn.sc"
+
+	(properties
+		-size- 78
+		-script- 475
+		-super- 72
+		pAvailableText 0
+		pTextItem 0
+		pBase 0
+		pSelector 0
+		pPoints 0
+		pPointSelector 0
+		pPlusMinus 0
+		pMin 0
+		pMax 0
+		pSkillCount 0
+		pCenterButton 0
+	)
+
+	(methods
+		new
+		choose
+	)
+)
+
+
+(classdef AttributeObj
+	script# 45011
+	class# 476
+	super# 0
+	file# "charpart.sc"
+
+	(properties
+		-size- 16
+		-script- 476
+		-super- 0
+		pMin 0
+		pMax 0
+		pStart 0
+		pDelta 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef fNFace
+	script# 45011
+	class# 477
+	super# 155
+	file# "charpart.sc"
+
+	(properties
+		-script- 477
+		-super- 155
+		pClutStart 104
+		pAction 0
+		pBaseView 4000
+	)
+
+	(methods
+		new
+		buildBaseList
+	)
+)
+
+
+(classdef fNBody
+	script# 45011
+	class# 478
+	super# 157
+	file# "charpart.sc"
+
+	(properties
+		-script- 478
+		-super- 157
+		name 0
+		pClutStart 104
+		pBaseView 100
+		pInit 0
+	)
+
+	(methods
+		new
+		buildBaseList
+		showContents
+		getHeadBitmap
+		getStanceBitmap
+		getAttackBitmap
+	)
+)
+
+
+(classdef FaceView
+	script# 45011
+	class# 479
+	super# 59
+	file# "charpart.sc"
+
+	(properties
+		-size- 60
+		-script- 479
+		-super- 59
+		x 160
+		y 80
+		pClutStart 104
+	)
+
+	(methods
+	)
+)
+
+
+(classdef CToonMake
+	script# 45015
+	class# 480
+	super# 285
+	file# "charmake.sc"
+
+	(properties
+		-script- 480
+		-super- 285
+	)
+
+	(methods
+		init
+		dispose
+		handleEvent
+	)
+)
+
+
+(classdef ServerInfo
+	script# 45012
+	class# 481
+	super# 0
+	file# "start.sc"
+
+	(properties
+		-size- 17
+		-script- 481
+		-super- 0
+		pServerName 0
+		pStatus 0
+		pNumberOfUsers 0
+		pIP 0
+		pPort 0
+	)
+
+	(methods
+	)
+)
+
+
+(classdef ProgressItem
+	script# 45012
+	class# 482
+	super# 70
+	file# "start.sc"
+
+	(properties
+		-size- 57
+		-script- 482
+		-super- 70
+		fore 43
+		pValue 0
+		pMax 0
+		text 879
+		mode 1
+	)
+
+	(methods
+		draw
+		setValue
+		addValue
+		subValue
+	)
+)
+
+
+(classdef GetPatchScript
+	script# 45012
+	class# 483
+	super# 11
+	file# "start.sc"
+
+	(properties
+		-size- 35
+		-script- 483
+		-super- 11
+		pSize 0
+		pDialog 0
+		pItem 0
+		pFile 0
+		pBlockSize 0
+		pBlockNum 0
+		pBlockList 0
+		pBlock 0
+	)
+
+	(methods
+		init
+		dispose
+		perform
+		changeState
+	)
+)
+
+

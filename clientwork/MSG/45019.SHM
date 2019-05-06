@@ -1,0 +1,21 @@
+; 45019.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define AFFECT_H         12)
+(define ATTRIB_H          6)
+(define BIOEXIT_H         2)
+(define BIO_H             1)
+(define CANCEL_H          3)
+(define CANCEL_TITLE     11)
+(define EDIT_H            4)
+(define EDIT_TITLE        9)
+(define HERALD_H          8)
+(define SAVE_TITLE       10)
+(define SKILL_H           7)
+(define UPDATE_H          5)
+(define UPTITLE_H        13)
+
+; CASES
+

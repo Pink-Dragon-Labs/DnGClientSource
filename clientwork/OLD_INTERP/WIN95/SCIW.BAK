@@ -1,0 +1,289 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "mmail.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+MAGICMAIL DIALOG DISCARDABLE  103, 163, 272, 121
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Magic Mail"
+FONT 8, "Helv"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,7,98,40,14
+    LISTBOX         ID_LISTBOX,7,21,258,73,LBS_HASSTRINGS | LBS_USETABSTOPS | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Send Mail",ID_SEND_MAIL,53,98,40,14
+    CTEXT           "You have no mail waiting.",ID_BANNER,7,6,258,9,
+                    SS_SUNKEN | NOT WS_GROUP
+END
+
+WHOLIST DIALOG DISCARDABLE  318, 169, 302, 121
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Who's On-line"
+FONT 8, "Helv"
+BEGIN
+    LISTBOX         ID_LISTBOX,7,7,288,92,LBS_SORT | LBS_HASSTRINGS | 
+                    LBS_NOSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,76,105,149,13
+END
+
+MAILMESSAGE DIALOG DISCARDABLE  125, 138, 272, 246
+STYLE DS_LOCALEDIT | DS_MODALFRAME | DS_3DLOOK | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Magic Mail Message"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "To:",ID_TO_BANNER,4,4,13,8,NOT WS_GROUP
+    EDITTEXT        ID_TO_TEXT,34,4,231,12,ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_READONLY | ES_WANTRETURN
+    LTEXT           "From:",ID_FROM_BANNER,4,16,19,8,NOT WS_GROUP
+    EDITTEXT        ID_FROM_TEXT,34,16,231,12,ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_READONLY | ES_WANTRETURN
+    LTEXT           "Subject:",ID_SUBJECT_BANNER,4,28,26,8,NOT WS_GROUP
+    EDITTEXT        ID_SUBJECT_TEXT,34,28,231,12,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL | ES_READONLY
+    EDITTEXT        ID_BODY_TEXT,5,43,260,120,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "Next",ID_NEXT,5,225,40,14
+    PUSHBUTTON      "Previous",ID_PREVIOUS,49,225,40,14
+    PUSHBUTTON      "Done",IDOK,93,225,40,14
+    PUSHBUTTON      "Reply",ID_REPLY,137,225,40,14
+    PUSHBUTTON      "Forward",ID_FORWARD,181,225,40,14
+    PUSHBUTTON      "Erase",ID_ERASE,225,225,40,14
+    LTEXT           "Please be sure to include your character's name who received the Magic Mail.",
+                    IDC_STATIC,5,210,260,10
+    LTEXT           "To: customerservice@realmserver.com\nSubject: URGENT, Password Scam",
+                    IDC_STATIC,5,190,260,15
+    LTEXT           "Note: no one from The Realm team will ask you for your login name or password!   If asked, please DO NOT erase the letter. Send us EMAIL immediately!",
+                    IDC_STATIC,5,170,260,20
+END
+
+SENDMAIL DIALOG DISCARDABLE  31, 36, 272, 179
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Magic Mail Message"
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        ID_TO_TEXT,34,4,231,10,ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    WS_GROUP
+    EDITTEXT        ID_SUBJECT_TEXT,34,16,231,10,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL | WS_GROUP
+    EDITTEXT        ID_BODY_TEXT,5,31,260,120,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "Send",ID_SEND,5,160,40,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,49,160,40,14,WS_GROUP
+    LTEXT           "To:",ID_TO_BANNER,4,4,13,8,NOT WS_GROUP
+    LTEXT           "Subject:",ID_SUBJECT_BANNER,4,16,26,8,NOT WS_GROUP
+END
+
+ERRORDIALOG DIALOG DISCARDABLE  10, 10, 197, 111
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Error"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,68,80,50,14
+    LTEXT           "Static",ID_BANNER,7,7,173,64,SS_SUNKEN | WS_BORDER
+END
+
+MAILDELIVERED DIALOG DISCARDABLE  0, 0, 199, 48
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Mail Delivered"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,74,27,50,14
+    LTEXT           "Your mail message has been delivered successfully!",
+                    ID_BANNER,21,7,158,8
+END
+
+ABOUTBOX DIALOG DISCARDABLE  0, 0, 187, 140
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Credits"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,119,50,14,BS_CENTER
+    LISTBOX         ID_LIST1,7,7,173,103,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+TESTDIALOG DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+END
+
+WHATSNEW DIALOG DISCARDABLE  0, 0, 244, 135
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "What's New?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,97,114,50,14
+    EDITTEXT        ID_BODY_TEXT,7,7,230,98,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+CHANNELS DIALOG DISCARDABLE  0, 0, 282, 119
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Channels"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         ID_LISTBOX,6,5,268,93,LBS_HASSTRINGS | LBS_NOSEL | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,66,100,149,14
+END
+
+NETFAILURE DIALOG DISCARDABLE  0, 0, 187, 111
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Possible Network Failure"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Yes",IDOK,98,90,50,14
+    PUSHBUTTON      "No",IDCANCEL,39,90,50,14
+    LTEXT           "The Realm's server is taking longer than expected to respond to your computer.  This may indicate a failure in the connection between your computer and The Realm's server.",
+                    IDC_STATIC,7,7,173,34
+    LTEXT           "NOTE: If you choose to exit in this manner while in combat, you will NOT die.",
+                    IDC_STATIC,7,45,173,18
+    LTEXT           "Do you want to make an emergency exit?",IDC_STATIC,7,71,
+                    141,8
+END
+
+CREATEITEM DIALOG DISCARDABLE  0, 0, 196, 138
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Make An Item"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Make It!",IDOK,44,117,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,103,117,50,14
+    LTEXT           "Choose the item you want to create from the list box below and click on the ""Make It!"" button.",
+                    IDC_STATIC,7,7,182,18
+    LISTBOX         ID_LISTBOX,7,32,182,77,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+REGISTRATION DIALOGEX 0, 0, 239, 218
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Account Holder Registration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Submit",ID_SEND,5,200,90,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,200,85,14
+    LTEXT           "First and Last Name:",IDC_STATIC,9,87,70,8,0,
+                    WS_EX_RIGHT
+    LTEXT           "Street Address:",IDC_STATIC,30,101,49,8,0,WS_EX_RIGHT
+    LTEXT           "City:",IDC_STATIC,65,116,14,8,0,WS_EX_RIGHT
+    EDITTEXT        ID_NAME,85,85,150,12,ES_AUTOHSCROLL
+    EDITTEXT        ID_ADD1,85,99,150,12,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        ID_ADD2,85,114,150,12,ES_AUTOHSCROLL
+    EDITTEXT        ID_ADD3,85,128,150,12,ES_AUTOHSCROLL
+    LTEXT           "State, if US or Country:",IDC_STATIC,6,130,73,8,0,
+                    WS_EX_RIGHT
+    LTEXT           "Voice Phone Number:",IDC_STATIC,9,161,70,8,0,
+                    WS_EX_RIGHT
+    LTEXT           "Email Address:",IDC_STATIC,32,176,47,8,0,WS_EX_RIGHT
+    CTEXT           "Welcome to the Realm! ",IDC_STATIC,81,5,77,8
+    LTEXT           "Please take a moment now to fill out this required information for our records. This serves as your registration for The Realm and is held in strict confidentiality. Press Submit only when you have completed the entire form. If no Zip, enter ""none"".",
+                    IDC_STATIC,9,20,221,38,0,WS_EX_DLGMODALFRAME
+    LTEXT           "If you do not complete the form, you may be denied access!",
+                    IDC_STATIC,25,70,188,8
+    LTEXT           "Please Note!",IDC_STATIC,98,60,42,8
+    EDITTEXT        ID_ZIP,85,142,150,14,ES_AUTOHSCROLL
+    LTEXT           "Zip or Country Code:",IDC_STATIC,13,145,66,8,0,
+                    WS_EX_RIGHT
+    EDITTEXT        ID_PHONE,85,158,150,14,ES_AUTOHSCROLL
+    EDITTEXT        ID_EMAIL,85,175,150,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+NULLCUR                 CURSOR  DISCARDABLE     "null.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+MYICON                  ICON    DISCARDABLE     "sciw.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""mmail.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

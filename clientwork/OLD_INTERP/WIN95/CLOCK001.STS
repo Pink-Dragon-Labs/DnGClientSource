@@ -1,0 +1,39 @@
+
+Name of sample file = C:\sys\SCI\win95\Clock001.tbs
+QsortCmpCalls = 184202
+QsortNumElements = 14880
+Average number Qsort passes =  12.38
+QsortCalls = 96
+num_code_table_creates = 46
+num_mte_info_creates = 249
+num_Mte_creates = 641
+num_SearchCalls = 13209
+num_SearchLinear = 0
+num_FoundLinear = 0
+num_SearchCmps = 90911
+Average num compares per Mte search = 6.88
+num_SearchFound = 12671
+num_SearchNotFound = 538
+num_SearchCacheHits = 6371
+Average Mte search cache hits = 48.23%
+num_eipIndexFind = 262527
+num_eipFindCmps = 361227
+Average num compares per eip_table find = 1.38
+num_eipDeferredMteS = 249319
+num_eipTableCreates = 12815
+num_modV86 = 10
+num_mod16 = 162
+num_mod32 = 469
+num Mte's reported as 16Bit that were converted to 32Bit = 1
+
+number of samples = 262527,  TBS file size = 8.43 Mb
+Average seconds per TBS file megabyte = 1.47, average megabytes per second = 0.68
+
+Analyzer run time = 12.38 seconds
+
+Average microseconds per sample = 48
+
+Samples per second = 21198.9
+
+peak storage used = 943096
+number of mallocs=60, number of frees=0

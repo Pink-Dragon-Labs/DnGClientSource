@@ -1,0 +1,13 @@
+; 10000.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define BLACK_BOOTS_N     1)
+(define DAGGERS_N         3)
+(define DAGGER_N          2)
+
+; CASES
+
+
+(define PLURAL_C          1)

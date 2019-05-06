@@ -1,0 +1,23 @@
+; 45017.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ALIGN             9)
+(define ALIGNEVIL        13)
+(define ALIGNGOOD        15)
+(define ALIGNNEUT        14)
+(define COMBAT            8)
+(define DEXTE             2)
+(define ENDUR             5)
+(define INTEL             3)
+(define MAGEEVIL         12)
+(define MAGEGOOD         10)
+(define MAGENEUT         11)
+(define MAGRESIST         7)
+(define PSNRESIST         6)
+(define SPEED             4)
+(define STRENGTH          1)
+
+; CASES
+

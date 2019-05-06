@@ -1,0 +1,75 @@
+
+ Volume in drive C is DRIVE C    
+ Volume Serial Number is 0101-0101
+ Directory of C:\
+
+WINDOWS        <DIR>        07-15-96  5:31a WINDOWS
+COMMAND  COM        92,870  01-16-96  4:53a COMMAND.COM
+MSVC20         <DIR>        09-19-96 12:17p MSVC20
+BACKUP         <DIR>        07-15-96  6:05a BACKUP
+AUTOEXEC BAT         1,070  02-24-97  3:33p AUTOEXEC.BAT
+LOGO     SYS       129,078  07-14-95 12:00a LOGO.SYS
+DELL           <DIR>        07-15-96  5:46a DELL
+DOS            <DIR>        07-15-96  5:46a DOS
+MOUSE          <DIR>        07-15-96  5:46a MOUSE
+WAR2           <DIR>        09-12-96  3:17p WAR2
+VIBRA16        <DIR>        07-15-96  5:48a VIBRA16
+W              <DIR>        09-12-96  3:21p w
+BAT            <DIR>        09-12-96  3:23p bat
+TREEINFO NCD        16,523  12-19-96  1:36p TREEINFO.NCD
+REFRESH  EXE        77,268  07-15-96  5:51a REFRESH.EXE
+LICENSE  TXT         5,157  03-01-96  2:39p LICENSE.TXT
+DEV            <DIR>        07-15-96  5:50a DEV
+BRIEF          <DIR>        09-12-96  3:24p brief
+ZTECH          <DIR>        09-12-96  3:32p ztech
+FT             <DIR>        09-12-96  3:33p ft
+NUMBER9             10,396  01-09-97 10:04a NUMBER9
+SAMPLE02 BMP         1,174  08-21-96  2:58p SAMPLE02.BMP
+PROGRA~1       <DIR>        07-15-96  5:44a Program Files
+REALM          <DIR>        09-12-96  3:34p realm
+SYS            <DIR>        09-12-96  3:41p sys
+PATCH          <DIR>        09-12-96  3:44p patch
+NORTON         <DIR>        09-12-96  3:46p norton
+MYDOCU~1       <DIR>        09-12-96  1:37p My Documents
+MSOFFICE       <DIR>        09-12-96  1:37p MSOffice
+SCANDISK LOG           814  02-24-97  8:26p SCANDISK.LOG
+WATCOM         <DIR>        09-19-96  4:37p WATCOM
+LOCAL    LVL        74,896  08-15-96  2:09p local.lvl
+ARENA    LST           223  09-10-96 12:19p arena.lst
+DRWATCOM       <DIR>        09-19-96 12:14p drwatcom
+AUTOEXEC 000         1,041  09-19-96  1:05p AUTOEXEC.000
+CONFIG   000           877  09-12-96  6:12p CONFIG.000
+INTRLIST       <DIR>        09-20-96  3:14p intrlist
+TEMP           <DIR>        09-28-96  1:02a temp
+SIW95          <DIR>        09-20-96  2:22p SIW95
+AUTOEXEC BAK         1,040  09-20-96  2:25p AUTOEXEC.BAK
+WVEBACK        <DIR>        10-09-96  7:28p WVEBACK
+AOL30          <DIR>        10-10-96  4:10p AOL30
+NOTES          <DIR>        10-02-96  3:03p notes
+MERIDIAN       <DIR>        10-02-96 11:01a meridian
+AOLREALM       <DIR>        10-10-96  4:20p aolrealm
+TMP            <DIR>        10-17-96 10:31a tmp
+REALMS         <DIR>        10-28-96 10:29a REALMS
+POWWOW         <DIR>        11-05-96  7:16p powwow
+DOC            <DIR>        11-08-96  8:39a doc
+WEBSHARE       <DIR>        12-19-96  2:37p WEBSHARE
+EXCHANGE       <DIR>        11-11-96  8:57a Exchange
+PCX            <DIR>        11-13-96  9:09a pcx
+RELAM                3,460  11-13-96  5:27p relam
+REALM1         <DIR>        11-18-96 11:17a realm1
+DRWATCOM LOG             0  11-18-96  7:21p drwatcom.log
+REALMCD        <DIR>        11-26-96  9:28a realmcd
+HEAPAGNT       <DIR>        11-19-96  5:30p heapagnt
+FATAL    LOG            88  12-05-96  5:55p FATAL.LOG
+FLOOD          <DIR>        12-10-96  4:50p flood
+DIABLO         <DIR>        01-08-97 11:30a Diablo
+CONFIG   SYS           897  02-24-97  8:51p CONFIG.SYS
+RESULT               1,433  02-06-97  5:31p result
+SIERRA         <DIR>        12-05-96  3:43p SIERRA
+AUTOEXEC CYB         1,070  01-15-97  4:57p AUTOEXEC.CYB
+_ISTMP1  DIR   <DIR>        02-24-97  4:42p _ISTMP1.DIR
+_ISTMP0  DIR   <DIR>        02-24-97  3:12p _ISTMP0.DIR
+S3VV2603 1               0  02-18-97  9:47a s3vv2603.1
+BIN                 51,000  03-03-94  2:39p bin
+        22 file(s)        470,375 bytes
+        46 dir(s)      71,303,168 bytes free

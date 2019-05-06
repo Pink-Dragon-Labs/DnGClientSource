@@ -1,0 +1,30 @@
+; 106.SHM -- Produced by SCI Message Editor 5.000
+; This file should only be edited with ME
+
+; NOUNS
+
+(define ALKALI_N          1)
+(define BUSH1_DES_N       2)
+(define BUSH2_DES_N       3)
+(define CACT_FL_N         4)
+(define CACT_SEG_N        5)
+(define CACT_SML_N        6)
+(define CACT_TALL_N       7)
+(define CENT_PLANT_N      8)
+(define DIRT_CRACK_N      9)
+(define DIRT_DES_N       10)
+(define DRIFTWOOD_N      16)
+(define DUNE_N           11)
+(define GRASS_DES_N      12)
+(define HORIZON_DES_N    21)
+(define OCATILLA_N       13)
+(define PALM_TOP1_N      18)
+(define PALM_TOP2_N      19)
+(define PALM_TRUNK_N     20)
+(define ROWBOAT_N        17)
+(define SAGE_LG_N        14)
+(define SAGE_SM_N        15)
+(define SHADE_N          22)
+
+; CASES
+
