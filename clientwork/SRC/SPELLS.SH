@@ -143,8 +143,6 @@
 (define SImmolationPoison		(ModuleID SPELLS 146))
 (define SImmolationLightning	(ModuleID SPELLS 147))
 (define SRepel              	(ModuleID SPELLS 148))
-(define SSummonFlyingImp        (ModuleID SPELLS 149))
-(define SSummonHellSoul         (ModuleID SPELLS 150))
 
 (define _SEDeathCloud	0)
 (define _SEFlameOrb		1)

@@ -175,8 +175,6 @@
 	SImmolationPoison			146
 	SImmolationLightning		147
 	SRepel						148
-	SSummonFlyingImp			149
-	SSummonHellSoul				150
 )
 
 (local
@@ -2888,34 +2886,6 @@
 		int	loop	4
 		int 	pCost	250
 		int 	pIcon	5
-	)
-)
-(instance SSummonFlyingImp of Spell
-	(properties
-		int	pCircle	_SKILL_NECROMANCY
-		int	pSkill	_SKILL_GRAND_MASTER
-		int	pID	_SPELL_SUMMON_FLYING_IMP
-		int	pType   (| fSpellCombat fSpellArea)
-
-		id	pText       "Random Flying Imp"
-		int	view	vNecromancySpell
-		int	loop	13
-		int pCost	400
-		int pIcon	55
-	)
-)
-(instance SSummonHellSoul of Spell
-	(properties
-		int	pCircle	_SKILL_NECROMANCY
-		int	pSkill	_SKILL_GRAND_MASTER
-		int	pID	_SPELL_SUMMON_HELL_SOUL
-		int	pType   (| fSpellCombat fSpellArea)
-
-		id	pText       "Random Hell Soul"
-		int	view	vNecromancySpell
-		int	loop	13
-		int pCost	400
-		int pIcon	48
 	)
 )
 ;----------------------------------------------------
