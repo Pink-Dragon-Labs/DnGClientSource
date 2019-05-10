@@ -38,3 +38,6 @@
 
 # All Release files
 Interp/Release
+
+# .vscode
+.vscode
