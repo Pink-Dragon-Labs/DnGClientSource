@@ -175,6 +175,7 @@
 	SImmolationPoison			146
 	SImmolationLightning		147
 	SRepel						148
+	SRemote						149
 )
 
 (local
@@ -865,15 +866,15 @@
 (instance SCloudOfFog of Spell
 	(properties
 		int	pCircle	_SKILL_SORCERY
-		int	pSkill	_SKILL_PROFICIENT
-		int	pID		_SPELL_CLOUD_OF_FOG
-		int	pType	(| fSpellCombat fSpellArea)
+		int	pSkill	_SKILL_GRAND_MASTER
+		int	pID	_SPELL_CLOUD_OF_FOG
+		int	pType	(| fSpellNonCombat fSpellCaster)
 
-		id	pText	"Cloud Of Fog"
+		id	pText	"Cloud of Fog"
 		int	view	vSorcerySpell
 		int	loop	1
 		int pCost	3
-		int pIcon	22
+		int pIcon	24
 	)
 )
 
