@@ -64,24 +64,24 @@ LINK32=link.exe
 # PROP BASE Output_Dir "Debug"
 # PROP BASE Intermediate_Dir "Debug"
 # PROP BASE Target_Dir ""
-# PROP Use_MFC 1
+# PROP Use_MFC 2
 # PROP Use_Debug_Libraries 1
 # PROP Output_Dir "Debug"
 # PROP Intermediate_Dir "Debug"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /YX /FD /GZ /c
-# ADD CPP /nologo /G5 /MTd /w /W0 /Gm /Gi /GX /Zi /Od /D "DEBUG" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "WIN32S" /D "WIN" /D "_VC_" /D "VISUALCPP" /D "NETWORK" /Fr /YX /FD /GZ /c
+# ADD CPP /nologo /G5 /MDd /w /W0 /Gm /Gi /GX /ZI /Od /D "DEBUG" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "WIN32S" /D "WIN" /D "_VC_" /D "VISUALCPP" /D "NETWORK" /D "_AFXDLL" /Fr /YX /FD /GZ /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0x409 /d "_DEBUG"
-# ADD RSC /l 0x409 /d "_DEBUG"
+# ADD RSC /l 0x409 /d "_DEBUG" /d "_AFXDLL"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 library/fgwvc32.lib library/mss32.lib winmm.lib wsock32.lib mfc42d.lib /nologo /subsystem:windows /incremental:no /map /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 library/fgwvc32.lib library/mss32.lib winmm.lib wsock32.lib mfc42d.lib /nologo /subsystem:windows /map /debug /machine:I386
 # SUBTRACT LINK32 /pdb:none
 
 !ENDIF 
@@ -1410,11 +1410,11 @@ SOURCE=.\Array.hpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\BASETSD.H
+SOURCE="C:\Program Files\Microsoft Visual Studio\VC98\Include\BASETSD.H"
 # End Source File
 # Begin Source File
 
-SOURCE="C:\Program Files\Microsoft Visual Studio\VC98\Include\BASETSD.H"
+SOURCE=.\BASETSD.H
 # End Source File
 # Begin Source File
 

@@ -1,0 +1,3886 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Array.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0CF@MPFB@?$CFs?$CI?$CFd?$CJ?3?5array?5handle?50x?$CFx?5is?5inv@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Free@MemID@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@MemID@@QAE?AV1@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?memType@Array@@QAE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@ObjectID@@QBEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DTextID@@QAEPADXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@TextID@@QAEXII@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?ValidateArray@@YAXVMemID@@PADH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?ArrayElementSize@@3PAHA			; ArrayElementSize
+_DATA	SEGMENT
+?ArrayElementSize@@3PAHA DD 02H				; ArrayElementSize
+	DD	02H
+	DD	01H
+	DD	01H
+	DD	04H
+_DATA	ENDS
+PUBLIC	?KArray@@YAXPAF@Z				; KArray
+PUBLIC	?Get@TextID@@QAEXII@Z				; TextID::Get
+PUBLIC	?ValidateArray@@YAXVMemID@@PADH@Z		; ValidateArray
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+PUBLIC	??0MemID@@QAE@G@Z				; MemID::MemID
+PUBLIC	?Free@MemID@@QAEXXZ				; MemID::Free
+PUBLIC	?Duplicate@MemID@@QAE?AV1@XZ			; MemID::Duplicate
+PUBLIC	??BMemID@@QBEGXZ				; MemID::operator unsigned short
+PUBLIC	??0ArrayID@@QAE@XZ				; ArrayID::ArrayID
+PUBLIC	??0ArrayID@@QAE@G@Z				; ArrayID::ArrayID
+PUBLIC	??0ArrayID@@QAE@HW4ArrayType@@@Z		; ArrayID::ArrayID
+PUBLIC	??0Array@@QAE@XZ				; Array::Array
+PUBLIC	??1Array@@QAE@XZ				; Array::~Array
+PUBLIC	?dataID@Array@@QAEXVMemID@@@Z			; Array::dataID
+PUBLIC	?size@Array@@QAEGXZ				; Array::size
+PUBLIC	?at@Array@@QAEHH@Z				; Array::at
+PUBLIC	?at@Array@@QAEXHHPAX@Z				; Array::at
+PUBLIC	?fill@Array@@QAEXHHH@Z				; Array::fill
+PUBLIC	?copy@Array@@QAEXHVMemID@@HH@Z			; Array::copy
+PUBLIC	??0ObjectID@@QAE@XZ				; ObjectID::ObjectID
+PUBLIC	??0ObjectID@@QAE@G@Z				; ObjectID::ObjectID
+PUBLIC	?IsObject@ObjectID@@QBEHXZ			; ObjectID::IsObject
+PUBLIC	?GetProperty@ObjectID@@QBEFG@Z			; ObjectID::GetProperty
+EXTRN	?pm@@3VPMachine@@A:BYTE				; pm
+EXTRN	??0TextID@@QAE@XZ:NEAR				; TextID::TextID
+EXTRN	__except_list:DWORD
+EXTRN	___CxxFrameHandler:NEAR
+_DATA	SEGMENT
+$SG58798 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+$SG58807 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+$SG58817 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+$SG58824 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+$SG58832 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+$SG58840 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+$SG58852 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Array.'
+	DB	'cpp', 00H
+_DATA	ENDS
+xdata$x	SEGMENT
+$T59225	DD	019930520H
+	DD	01H
+	DD	FLAT:$T59229
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T59229	DD	0ffffffffH
+	DD	FLAT:$L59221
+xdata$x	ENDS
+_TEXT	SEGMENT
+_args$ = 8
+_objID$ = -16
+_arrayID$ = -24
+_array$ = -20
+_text$58783 = -28
+$T59188 = -32
+$T59189 = -36
+$T59190 = -40
+$T59191 = -44
+$T59192 = -48
+$T59193 = -52
+$T59194 = -56
+$T59195 = -60
+$T59196 = -64
+$T59197 = -68
+$T59198 = -72
+$T59199 = -76
+$T59200 = -80
+$T59201 = -84
+$T59202 = -88
+$T59203 = -92
+$T59204 = -96
+$T59205 = -100
+$T59206 = -104
+$T59207 = -108
+$T59208 = -112
+$T59209 = -116
+$T59210 = -120
+$T59211 = -124
+$T59212 = -128
+$T59213 = -132
+$T59214 = -136
+$T59215 = -140
+$T59216 = -144
+$T59217 = -148
+$T59218 = -152
+$T59219 = -156
+$T59220 = -160
+__$EHRec$ = -12
+?KArray@@YAXPAF@Z PROC NEAR				; KArray
+
+; 35   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	6a ff		 push	 -1
+  00005	68 00 00 00 00	 push	 $L59226
+  0000a	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00010	50		 push	 eax
+  00011	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  00018	81 ec 98 00 00
+	00		 sub	 esp, 152		; 00000098H
+
+; 36   : 	ObjectID	objID;
+
+  0001e	8d 4d f0	 lea	 ecx, DWORD PTR _objID$[ebp]
+  00021	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@XZ	; ObjectID::ObjectID
+
+; 37   : 	ArrayID arrayID;
+
+  00026	8d 4d e8	 lea	 ecx, DWORD PTR _arrayID$[ebp]
+  00029	e8 00 00 00 00	 call	 ??0ArrayID@@QAE@XZ	; ArrayID::ArrayID
+
+; 38   : 	Array	array;
+
+  0002e	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00031	e8 00 00 00 00	 call	 ??0Array@@QAE@XZ	; Array::Array
+  00036	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+
+; 39   : 
+; 40   : 	switch (arg(1)) {
+
+  0003d	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00040	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00044	89 8d 5c ff ff
+	ff		 mov	 DWORD PTR -164+[ebp], ecx
+  0004a	83 bd 5c ff ff
+	ff 09		 cmp	 DWORD PTR -164+[ebp], 9
+  00051	0f 87 14 04 00
+	00		 ja	 $L58778
+  00057	8b 95 5c ff ff
+	ff		 mov	 edx, DWORD PTR -164+[ebp]
+  0005d	ff 24 95 00 00
+	00 00		 jmp	 DWORD PTR $L59228[edx*4]
+$L58781:
+
+; 41   : 		case ARRAYNEW:
+; 42   : 			// arg(2) = array size
+; 43   : 			// arg(3) = array type
+; 44   : 			if ( arg(3) == STRARRAY ) {
+
+  00064	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00067	0f bf 48 06	 movsx	 ecx, WORD PTR [eax+6]
+  0006b	83 f9 03	 cmp	 ecx, 3
+  0006e	75 34		 jne	 SHORT $L58782
+
+; 45   : 				TextID text;
+
+  00070	8d 4d e4	 lea	 ecx, DWORD PTR _text$58783[ebp]
+  00073	e8 00 00 00 00	 call	 ??0TextID@@QAE@XZ	; TextID::TextID
+
+; 46   : 				text.Get ( arg(2) + 1 );
+
+  00078	68 00 02 01 00	 push	 66048			; 00010200H
+  0007d	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00080	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  00084	83 c0 01	 add	 eax, 1
+  00087	50		 push	 eax
+  00088	8d 4d e4	 lea	 ecx, DWORD PTR _text$58783[ebp]
+  0008b	e8 00 00 00 00	 call	 ?Get@TextID@@QAEXII@Z	; TextID::Get
+
+; 47   : 				pm.acc = (Acc)(SOL_Handle)text;
+
+  00090	8d 4d e4	 lea	 ecx, DWORD PTR _text$58783[ebp]
+  00093	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  00098	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0009d	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 48   : 			} else {
+
+  000a2	eb 29		 jmp	 SHORT $L58786
+$L58782:
+
+; 49   : 				pm.acc = (Acc)(SOL_Handle)ArrayID ( arg(2), (ArrayType)arg(3) );
+
+  000a4	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  000a7	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  000ab	52		 push	 edx
+  000ac	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  000af	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  000b3	51		 push	 ecx
+  000b4	8d 4d e0	 lea	 ecx, DWORD PTR $T59188[ebp]
+  000b7	e8 00 00 00 00	 call	 ??0ArrayID@@QAE@HW4ArrayType@@@Z ; ArrayID::ArrayID
+  000bc	8b c8		 mov	 ecx, eax
+  000be	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  000c3	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  000c8	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L58786:
+
+; 51   : 
+; 52   : 			break;
+
+  000cd	e9 99 03 00 00	 jmp	 $L58778
+$L58791:
+
+; 53   : 
+; 54   : 		case ARRAYSIZE:
+; 55   : 			// arg(2) = array datablock
+; 56   : 			array.dataID ( (MemID)arg(2) );
+
+  000d2	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  000d5	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  000d9	50		 push	 eax
+  000da	8d 4d d8	 lea	 ecx, DWORD PTR $T59190[ebp]
+  000dd	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  000e2	51		 push	 ecx
+  000e3	8b cc		 mov	 ecx, esp
+  000e5	89 65 dc	 mov	 DWORD PTR $T59189[ebp], esp
+  000e8	50		 push	 eax
+  000e9	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  000ee	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  000f1	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 57   : 
+; 58   : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  000f6	6a 3a		 push	 58			; 0000003aH
+  000f8	68 00 00 00 00	 push	 OFFSET FLAT:$SG58798
+  000fd	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00100	66 8b 51 04	 mov	 dx, WORD PTR [ecx+4]
+  00104	52		 push	 edx
+  00105	8d 4d d0	 lea	 ecx, DWORD PTR $T59192[ebp]
+  00108	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0010d	51		 push	 ecx
+  0010e	8b cc		 mov	 ecx, esp
+  00110	89 65 d4	 mov	 DWORD PTR $T59191[ebp], esp
+  00113	50		 push	 eax
+  00114	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00119	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  0011e	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 59   : 
+; 60   : 			pm.acc = (Acc) array.size();
+
+  00121	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00124	e8 00 00 00 00	 call	 ?size@Array@@QAEGXZ	; Array::size
+  00129	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0012e	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 61   : 
+; 62   : 			break;
+
+  00133	e9 33 03 00 00	 jmp	 $L58778
+$L58800:
+
+; 63   : 
+; 64   : 		case ARRAYAT:
+; 65   : 			// arg(2) = array datablock
+; 66   : 			// arg(3) = position in array
+; 67   : 			array.dataID ( (MemID)arg(2) );
+
+  00138	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0013b	66 8b 48 04	 mov	 cx, WORD PTR [eax+4]
+  0013f	51		 push	 ecx
+  00140	8d 4d c8	 lea	 ecx, DWORD PTR $T59194[ebp]
+  00143	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00148	51		 push	 ecx
+  00149	8b cc		 mov	 ecx, esp
+  0014b	89 65 cc	 mov	 DWORD PTR $T59193[ebp], esp
+  0014e	50		 push	 eax
+  0014f	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00154	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00157	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 68   : 
+; 69   : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  0015c	6a 45		 push	 69			; 00000045H
+  0015e	68 00 00 00 00	 push	 OFFSET FLAT:$SG58807
+  00163	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00166	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  0016a	50		 push	 eax
+  0016b	8d 4d c0	 lea	 ecx, DWORD PTR $T59196[ebp]
+  0016e	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00173	51		 push	 ecx
+  00174	8b cc		 mov	 ecx, esp
+  00176	89 65 c4	 mov	 DWORD PTR $T59195[ebp], esp
+  00179	50		 push	 eax
+  0017a	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0017f	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  00184	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 70   : 
+; 71   : 			pm.acc = (Acc)(unsigned int)array.at ( arg(3) );
+
+  00187	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  0018a	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  0018e	52		 push	 edx
+  0018f	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00192	e8 00 00 00 00	 call	 ?at@Array@@QAEHH@Z	; Array::at
+  00197	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 72   : 
+; 73   : 			break;
+
+  0019c	e9 ca 02 00 00	 jmp	 $L58778
+$L58810:
+
+; 74   : 
+; 75   : 		case ARRAYATPUT:
+; 76   : 			// arg(2) = array datablock
+; 77   : 			// arg(3) = position in array
+; 78   : 			// arg(4) = new value for position
+; 79   : 			array.dataID ( (MemID)arg(2) );
+
+  001a1	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  001a4	66 8b 48 04	 mov	 cx, WORD PTR [eax+4]
+  001a8	51		 push	 ecx
+  001a9	8d 4d b8	 lea	 ecx, DWORD PTR $T59198[ebp]
+  001ac	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  001b1	51		 push	 ecx
+  001b2	8b cc		 mov	 ecx, esp
+  001b4	89 65 bc	 mov	 DWORD PTR $T59197[ebp], esp
+  001b7	50		 push	 eax
+  001b8	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  001bd	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  001c0	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 80   : 
+; 81   : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  001c5	6a 51		 push	 81			; 00000051H
+  001c7	68 00 00 00 00	 push	 OFFSET FLAT:$SG58817
+  001cc	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  001cf	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  001d3	50		 push	 eax
+  001d4	8d 4d b0	 lea	 ecx, DWORD PTR $T59200[ebp]
+  001d7	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  001dc	51		 push	 ecx
+  001dd	8b cc		 mov	 ecx, esp
+  001df	89 65 b4	 mov	 DWORD PTR $T59199[ebp], esp
+  001e2	50		 push	 eax
+  001e3	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  001e8	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  001ed	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 82   : 
+; 83   : 			array.at ( arg(3), argCount - 3, &arg(4) );
+
+  001f0	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  001f3	83 c1 08	 add	 ecx, 8
+  001f6	51		 push	 ecx
+  001f7	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  001fa	0f bf 02	 movsx	 eax, WORD PTR [edx]
+  001fd	83 e8 03	 sub	 eax, 3
+  00200	50		 push	 eax
+  00201	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00204	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  00208	52		 push	 edx
+  00209	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  0020c	e8 00 00 00 00	 call	 ?at@Array@@QAEXHHPAX@Z	; Array::at
+
+; 84   : 
+; 85   : 			pm.acc = arg(2);
+
+  00211	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00214	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  00218	89 0d 04 00 00
+	00		 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, ecx
+
+; 86   : 
+; 87   : 			break;
+
+  0021e	e9 48 02 00 00	 jmp	 $L58778
+$L58818:
+
+; 88   : 
+; 89   : 		case ARRAYFREE:
+; 90   : 			// arg(2) = array datablock
+; 91   : 			arrayID = (ArrayID)arg(2);
+
+  00223	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00226	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  0022a	50		 push	 eax
+  0022b	8d 4d ac	 lea	 ecx, DWORD PTR $T59201[ebp]
+  0022e	e8 00 00 00 00	 call	 ??0ArrayID@@QAE@G@Z	; ArrayID::ArrayID
+  00233	66 8b 08	 mov	 cx, WORD PTR [eax]
+  00236	66 89 4d e8	 mov	 WORD PTR _arrayID$[ebp], cx
+
+; 92   : 
+; 93   : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  0023a	6a 5d		 push	 93			; 0000005dH
+  0023c	68 00 00 00 00	 push	 OFFSET FLAT:$SG58824
+  00241	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00244	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  00248	50		 push	 eax
+  00249	8d 4d a4	 lea	 ecx, DWORD PTR $T59203[ebp]
+  0024c	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00251	51		 push	 ecx
+  00252	8b cc		 mov	 ecx, esp
+  00254	89 65 a8	 mov	 DWORD PTR $T59202[ebp], esp
+  00257	50		 push	 eax
+  00258	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0025d	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  00262	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 94   : 
+; 95   : 			arrayID.Free();
+
+  00265	8d 4d e8	 lea	 ecx, DWORD PTR _arrayID$[ebp]
+  00268	e8 00 00 00 00	 call	 ?Free@MemID@@QAEXXZ	; MemID::Free
+
+; 96   : 
+; 97   : 			break;
+
+  0026d	e9 f9 01 00 00	 jmp	 $L58778
+$L58825:
+
+; 98   : 
+; 99   : 		case ARRAYFILL:
+; 100  : 			// arg(2) = array datablock
+; 101  : 			// arg(3) = position in array to start fill
+; 102  : 			// arg(4) = length to fill
+; 103  : 			// arg(5) = value to fill with
+; 104  : 			array.dataID ( (MemID)arg(2) );
+
+  00272	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00275	66 8b 51 04	 mov	 dx, WORD PTR [ecx+4]
+  00279	52		 push	 edx
+  0027a	8d 4d 9c	 lea	 ecx, DWORD PTR $T59205[ebp]
+  0027d	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00282	51		 push	 ecx
+  00283	8b cc		 mov	 ecx, esp
+  00285	89 65 a0	 mov	 DWORD PTR $T59204[ebp], esp
+  00288	50		 push	 eax
+  00289	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0028e	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00291	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 105  : 
+; 106  : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  00296	6a 6a		 push	 106			; 0000006aH
+  00298	68 00 00 00 00	 push	 OFFSET FLAT:$SG58832
+  0029d	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  002a0	66 8b 48 04	 mov	 cx, WORD PTR [eax+4]
+  002a4	51		 push	 ecx
+  002a5	8d 4d 94	 lea	 ecx, DWORD PTR $T59207[ebp]
+  002a8	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  002ad	51		 push	 ecx
+  002ae	8b cc		 mov	 ecx, esp
+  002b0	89 65 98	 mov	 DWORD PTR $T59206[ebp], esp
+  002b3	50		 push	 eax
+  002b4	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  002b9	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  002be	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 107  : 
+; 108  : 			// fill a portion of the passed array with a specific value
+; 109  : 			array.fill ( arg(3), arg(4), arg(5) );
+
+  002c1	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  002c4	0f bf 42 0a	 movsx	 eax, WORD PTR [edx+10]
+  002c8	50		 push	 eax
+  002c9	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  002cc	0f bf 51 08	 movsx	 edx, WORD PTR [ecx+8]
+  002d0	52		 push	 edx
+  002d1	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  002d4	0f bf 48 06	 movsx	 ecx, WORD PTR [eax+6]
+  002d8	51		 push	 ecx
+  002d9	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  002dc	e8 00 00 00 00	 call	 ?fill@Array@@QAEXHHH@Z	; Array::fill
+
+; 110  : 			pm.acc = arg(2);
+
+  002e1	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  002e4	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  002e8	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 111  : 
+; 112  : 			break;
+
+  002ed	e9 79 01 00 00	 jmp	 $L58778
+$L58833:
+
+; 113  : 
+; 114  : 		case ARRAYCPY:
+; 115  : 			// arg(2) = destination array datablock
+; 116  : 			// arg(3) = position in destination array to start copy
+; 117  : 			// arg(4) = source array datablock
+; 118  : 			// arg(5) = position in source array to start copy
+; 119  : 			// arg(6) = length to copy
+; 120  : 			array.dataID ( (MemID)arg(2) );
+
+  002f2	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  002f5	66 8b 51 04	 mov	 dx, WORD PTR [ecx+4]
+  002f9	52		 push	 edx
+  002fa	8d 4d 8c	 lea	 ecx, DWORD PTR $T59209[ebp]
+  002fd	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00302	51		 push	 ecx
+  00303	8b cc		 mov	 ecx, esp
+  00305	89 65 90	 mov	 DWORD PTR $T59208[ebp], esp
+  00308	50		 push	 eax
+  00309	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0030e	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00311	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 121  : 
+; 122  : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  00316	6a 7a		 push	 122			; 0000007aH
+  00318	68 00 00 00 00	 push	 OFFSET FLAT:$SG58840
+  0031d	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00320	66 8b 48 04	 mov	 cx, WORD PTR [eax+4]
+  00324	51		 push	 ecx
+  00325	8d 4d 84	 lea	 ecx, DWORD PTR $T59211[ebp]
+  00328	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0032d	51		 push	 ecx
+  0032e	8b cc		 mov	 ecx, esp
+  00330	89 65 88	 mov	 DWORD PTR $T59210[ebp], esp
+  00333	50		 push	 eax
+  00334	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00339	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  0033e	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 123  : 
+; 124  : 			// copy data between two arrays
+; 125  : 			array.copy ( arg(3), (MemID)arg(4), arg(5), arg(6) );
+
+  00341	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00344	0f bf 42 0c	 movsx	 eax, WORD PTR [edx+12]
+  00348	50		 push	 eax
+  00349	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  0034c	0f bf 51 0a	 movsx	 edx, WORD PTR [ecx+10]
+  00350	52		 push	 edx
+  00351	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00354	66 8b 48 08	 mov	 cx, WORD PTR [eax+8]
+  00358	51		 push	 ecx
+  00359	8d 8d 7c ff ff
+	ff		 lea	 ecx, DWORD PTR $T59213[ebp]
+  0035f	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00364	51		 push	 ecx
+  00365	8b cc		 mov	 ecx, esp
+  00367	89 65 80	 mov	 DWORD PTR $T59212[ebp], esp
+  0036a	50		 push	 eax
+  0036b	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00370	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00373	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00377	50		 push	 eax
+  00378	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  0037b	e8 00 00 00 00	 call	 ?copy@Array@@QAEXHVMemID@@HH@Z ; Array::copy
+
+; 126  : 			pm.acc = arg(2);
+
+  00380	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00383	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00387	89 15 04 00 00
+	00		 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, edx
+
+; 127  : 
+; 128  : 			break;
+
+  0038d	e9 d9 00 00 00	 jmp	 $L58778
+$L58845:
+
+; 129  : 
+; 130  : 		case ARRAYCMP:
+; 131  : 			break;
+; 132  : 
+; 133  : 		case ARRAYDUP:
+; 134  : 			array.dataID ( (MemID)arg(2) );
+
+  00392	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00395	66 8b 48 04	 mov	 cx, WORD PTR [eax+4]
+  00399	51		 push	 ecx
+  0039a	8d 8d 74 ff ff
+	ff		 lea	 ecx, DWORD PTR $T59215[ebp]
+  003a0	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  003a5	51		 push	 ecx
+  003a6	8b cc		 mov	 ecx, esp
+  003a8	89 a5 78 ff ff
+	ff		 mov	 DWORD PTR $T59214[ebp], esp
+  003ae	50		 push	 eax
+  003af	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  003b4	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  003b7	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 135  : 
+; 136  : 			// duplicate the original ArrayID
+; 137  : 			ValidateArray ( (MemID)arg(2), __FILE__, __LINE__ );
+
+  003bc	68 89 00 00 00	 push	 137			; 00000089H
+  003c1	68 00 00 00 00	 push	 OFFSET FLAT:$SG58852
+  003c6	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  003c9	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  003cd	50		 push	 eax
+  003ce	8d 8d 6c ff ff
+	ff		 lea	 ecx, DWORD PTR $T59217[ebp]
+  003d4	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  003d9	51		 push	 ecx
+  003da	8b cc		 mov	 ecx, esp
+  003dc	89 a5 70 ff ff
+	ff		 mov	 DWORD PTR $T59216[ebp], esp
+  003e2	50		 push	 eax
+  003e3	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  003e8	e8 00 00 00 00	 call	 ?ValidateArray@@YAXVMemID@@PADH@Z ; ValidateArray
+  003ed	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 138  : 
+; 139  : 			pm.acc = (Acc) ((ArrayID)arg(2)).Duplicate();
+
+  003f0	8d 8d 64 ff ff
+	ff		 lea	 ecx, DWORD PTR $T59219[ebp]
+  003f6	51		 push	 ecx
+  003f7	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  003fa	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  003fe	50		 push	 eax
+  003ff	8d 8d 68 ff ff
+	ff		 lea	 ecx, DWORD PTR $T59218[ebp]
+  00405	e8 00 00 00 00	 call	 ??0ArrayID@@QAE@G@Z	; ArrayID::ArrayID
+  0040a	8b c8		 mov	 ecx, eax
+  0040c	e8 00 00 00 00	 call	 ?Duplicate@MemID@@QAE?AV1@XZ ; MemID::Duplicate
+  00411	8b c8		 mov	 ecx, eax
+  00413	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  00418	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0041d	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 140  : 
+; 141  : 			break;
+
+  00422	eb 47		 jmp	 SHORT $L58778
+$L58857:
+
+; 142  : 
+; 143  : 		case ARRAYGETDATA:
+; 144  : 			// arg(2) = SCI object or handle to array block
+; 145  : 			objID = (ObjectID) arg(2);
+
+  00424	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00427	66 8b 51 04	 mov	 dx, WORD PTR [ecx+4]
+  0042b	52		 push	 edx
+  0042c	8d 8d 60 ff ff
+	ff		 lea	 ecx, DWORD PTR $T59220[ebp]
+  00432	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@G@Z	; ObjectID::ObjectID
+  00437	66 8b 00	 mov	 ax, WORD PTR [eax]
+  0043a	66 89 45 f0	 mov	 WORD PTR _objID$[ebp], ax
+
+; 146  : 
+; 147  : 			if (objID.IsObject())
+
+  0043e	8d 4d f0	 lea	 ecx, DWORD PTR _objID$[ebp]
+  00441	e8 00 00 00 00	 call	 ?IsObject@ObjectID@@QBEHXZ ; ObjectID::IsObject
+  00446	85 c0		 test	 eax, eax
+  00448	74 15		 je	 SHORT $L58860
+
+; 148  : 				pm.acc = objID.GetProperty(s_data);
+
+  0044a	6a 71		 push	 113			; 00000071H
+  0044c	8d 4d f0	 lea	 ecx, DWORD PTR _objID$[ebp]
+  0044f	e8 00 00 00 00	 call	 ?GetProperty@ObjectID@@QBEFG@Z ; ObjectID::GetProperty
+  00454	0f bf c8	 movsx	 ecx, ax
+  00457	89 0d 04 00 00
+	00		 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, ecx
+
+; 149  : 			else
+
+  0045d	eb 0c		 jmp	 SHORT $L58861
+$L58860:
+
+; 150  : 				pm.acc = arg(2);
+
+  0045f	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00462	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  00466	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L58861:
+$L58778:
+
+; 154  : }
+
+  0046b	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00472	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00475	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  0047a	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0047d	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  00484	8b e5		 mov	 esp, ebp
+  00486	5d		 pop	 ebp
+  00487	c3		 ret	 0
+$L59228:
+  00488	00 00 00 00	 DD	 $L58781
+  0048c	00 00 00 00	 DD	 $L58791
+  00490	00 00 00 00	 DD	 $L58800
+  00494	00 00 00 00	 DD	 $L58810
+  00498	00 00 00 00	 DD	 $L58818
+  0049c	00 00 00 00	 DD	 $L58825
+  004a0	00 00 00 00	 DD	 $L58833
+  004a4	00 00 00 00	 DD	 $L58778
+  004a8	00 00 00 00	 DD	 $L58845
+  004ac	00 00 00 00	 DD	 $L58857
+_TEXT	ENDS
+text$x	SEGMENT
+$L59221:
+  00000	8d 4d ec	 lea	 ecx, DWORD PTR _array$[ebp]
+  00003	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  00008	c3		 ret	 0
+$L59226:
+  00009	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T59225
+  0000e	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?KArray@@YAXPAF@Z ENDP					; KArray
+PUBLIC	??_C@_0CF@MPFB@?$CFs?$CI?$CFd?$CJ?3?5array?5handle?50x?$CFx?5is?5inv@ ; `string'
+PUBLIC	?IsValid@MemID@@QBEHXZ				; MemID::IsValid
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+EXTRN	?GetMemType@MemID@@QBE?AW4MemType@@XZ:NEAR	; MemID::GetMemType
+;	COMDAT ??_C@_0CF@MPFB@?$CFs?$CI?$CFd?$CJ?3?5array?5handle?50x?$CFx?5is?5inv@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Array.cpp
+_DATA	SEGMENT
+??_C@_0CF@MPFB@?$CFs?$CI?$CFd?$CJ?3?5array?5handle?50x?$CFx?5is?5inv@ DB '%'
+	DB	's(%d): array handle 0x%x is invalid', 00H	; `string'
+_DATA	ENDS
+;	COMDAT ?ValidateArray@@YAXVMemID@@PADH@Z
+_TEXT	SEGMENT
+_id$ = 8
+_file$ = 12
+_line$ = 16
+?ValidateArray@@YAXVMemID@@PADH@Z PROC NEAR		; ValidateArray, COMDAT
+
+; 28   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+
+; 29   : 	if ( !id.IsValid() || (id.GetMemType() != MemArray && id.GetMemType() != MemText) )  
+
+  00003	8d 4d 08	 lea	 ecx, DWORD PTR _id$[ebp]
+  00006	e8 00 00 00 00	 call	 ?IsValid@MemID@@QBEHXZ	; MemID::IsValid
+  0000b	85 c0		 test	 eax, eax
+  0000d	74 1a		 je	 SHORT $L58768
+  0000f	8d 4d 08	 lea	 ecx, DWORD PTR _id$[ebp]
+  00012	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  00017	83 f8 35	 cmp	 eax, 53			; 00000035H
+  0001a	74 37		 je	 SHORT $L58767
+  0001c	8d 4d 08	 lea	 ecx, DWORD PTR _id$[ebp]
+  0001f	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  00024	83 f8 33	 cmp	 eax, 51			; 00000033H
+  00027	74 2a		 je	 SHORT $L58767
+$L58768:
+
+; 30   : 		msgMgr->Fatal ( "%s(%d): array handle 0x%x is invalid", file, line, (SOL_Handle)id );
+
+  00029	8d 4d 08	 lea	 ecx, DWORD PTR _id$[ebp]
+  0002c	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  00031	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00036	50		 push	 eax
+  00037	8b 45 10	 mov	 eax, DWORD PTR _line$[ebp]
+  0003a	50		 push	 eax
+  0003b	8b 4d 0c	 mov	 ecx, DWORD PTR _file$[ebp]
+  0003e	51		 push	 ecx
+  0003f	68 00 00 00 00	 push	 OFFSET FLAT:??_C@_0CF@MPFB@?$CFs?$CI?$CFd?$CJ?3?5array?5handle?50x?$CFx?5is?5inv@ ; `string'
+  00044	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0004a	52		 push	 edx
+  0004b	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00050	83 c4 14	 add	 esp, 20			; 00000014H
+$L58767:
+
+; 31   : }
+
+  00053	5d		 pop	 ebp
+  00054	c3		 ret	 0
+?ValidateArray@@YAXVMemID@@PADH@Z ENDP			; ValidateArray
+_TEXT	ENDS
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+PUBLIC	?memType@Array@@QAE?AW4MemType@@XZ		; Array::memType
+PUBLIC	?dataID@Array@@QAE?AVMemID@@XZ			; Array::dataID
+EXTRN	?Size@MemID@@QBEIXZ:NEAR			; MemID::Size
+_TEXT	SEGMENT
+_this$ = -12
+$T59233 = -4
+$T59234 = -8
+?size@Array@@QAEGXZ PROC NEAR				; Array::size
+
+; 157  : SCIUWord Array::size ( void ) {
+
+  004b0	55		 push	 ebp
+  004b1	8b ec		 mov	 ebp, esp
+  004b3	83 ec 10	 sub	 esp, 16			; 00000010H
+  004b6	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 158  : 	switch ( memType() ) {
+
+  004b9	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  004bc	e8 00 00 00 00	 call	 ?memType@Array@@QAE?AW4MemType@@XZ ; Array::memType
+  004c1	89 45 f0	 mov	 DWORD PTR -16+[ebp], eax
+  004c4	83 7d f0 35	 cmp	 DWORD PTR -16+[ebp], 53	; 00000035H
+  004c8	74 02		 je	 SHORT $L58870
+  004ca	eb 19		 jmp	 SHORT $L58873
+$L58870:
+
+; 160  : 			return ((ArrayHeader *)*dataID())->size;
+
+  004cc	8d 45 fc	 lea	 eax, DWORD PTR $T59233[ebp]
+  004cf	50		 push	 eax
+  004d0	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  004d3	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  004d8	8b c8		 mov	 ecx, eax
+  004da	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  004df	66 8b 40 02	 mov	 ax, WORD PTR [eax+2]
+  004e3	eb 13		 jmp	 SHORT $L58867
+$L58873:
+
+; 164  : 			return dataID().Size();
+
+  004e5	8d 4d f8	 lea	 ecx, DWORD PTR $T59234[ebp]
+  004e8	51		 push	 ecx
+  004e9	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  004ec	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  004f1	8b c8		 mov	 ecx, eax
+  004f3	e8 00 00 00 00	 call	 ?Size@MemID@@QBEIXZ	; MemID::Size
+$L58867:
+
+; 167  : }
+
+  004f8	8b e5		 mov	 esp, ebp
+  004fa	5d		 pop	 ebp
+  004fb	c3		 ret	 0
+?size@Array@@QAEGXZ ENDP				; Array::size
+_TEXT	ENDS
+PUBLIC	?elementSize@Array@@QAEGXZ			; Array::elementSize
+_TEXT	SEGMENT
+_this$ = -8
+$T59236 = -4
+?elementSize@Array@@QAEGXZ PROC NEAR			; Array::elementSize
+
+; 170  : SCIUWord Array::elementSize ( void ) {
+
+  004fc	55		 push	 ebp
+  004fd	8b ec		 mov	 ebp, esp
+  004ff	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00502	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 171  : 	switch ( memType() ) {
+
+  00505	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00508	e8 00 00 00 00	 call	 ?memType@Array@@QAE?AW4MemType@@XZ ; Array::memType
+  0050d	89 45 f4	 mov	 DWORD PTR -12+[ebp], eax
+  00510	83 7d f4 35	 cmp	 DWORD PTR -12+[ebp], 53	; 00000035H
+  00514	74 02		 je	 SHORT $L58883
+  00516	eb 18		 jmp	 SHORT $L58886
+$L58883:
+
+; 173  : 			return ((ArrayHeader *)*dataID())->elementSize;
+
+  00518	8d 45 fc	 lea	 eax, DWORD PTR $T59236[ebp]
+  0051b	50		 push	 eax
+  0051c	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0051f	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00524	8b c8		 mov	 ecx, eax
+  00526	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0052b	66 8b 00	 mov	 ax, WORD PTR [eax]
+  0052e	eb 04		 jmp	 SHORT $L58880
+$L58886:
+
+; 177  : 			return 1;
+
+  00530	66 b8 01 00	 mov	 ax, 1
+$L58880:
+
+; 180  : }
+
+  00534	8b e5		 mov	 esp, ebp
+  00536	5d		 pop	 ebp
+  00537	c3		 ret	 0
+?elementSize@Array@@QAEGXZ ENDP				; Array::elementSize
+_TEXT	ENDS
+PUBLIC	?checkBounds@Array@@QAEHH@Z			; Array::checkBounds
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+?checkBounds@Array@@QAEHH@Z PROC NEAR			; Array::checkBounds
+
+; 184  : int Array::checkBounds ( int index ) {
+
+  00538	55		 push	 ebp
+  00539	8b ec		 mov	 ebp, esp
+  0053b	83 ec 08	 sub	 esp, 8
+  0053e	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 185  :  	return (int)( index >= 0 && index <= size() );
+
+  00541	83 7d 08 00	 cmp	 DWORD PTR _index$[ebp], 0
+  00545	7c 1b		 jl	 SHORT $L59238
+  00547	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0054a	e8 00 00 00 00	 call	 ?size@Array@@QAEGXZ	; Array::size
+  0054f	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00554	39 45 08	 cmp	 DWORD PTR _index$[ebp], eax
+  00557	7f 09		 jg	 SHORT $L59238
+  00559	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+  00560	eb 07		 jmp	 SHORT $L59239
+$L59238:
+  00562	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+$L59239:
+  00569	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 186  : }
+
+  0056c	8b e5		 mov	 esp, ebp
+  0056e	5d		 pop	 ebp
+  0056f	c2 04 00	 ret	 4
+?checkBounds@Array@@QAEHH@Z ENDP			; Array::checkBounds
+_TEXT	ENDS
+PUBLIC	?calcAddress@Array@@QAEPAXH@Z			; Array::calcAddress
+_DATA	SEGMENT
+$SG58897 DB	'Array::calcAddress ( %d ): passed index is negative.', 00H
+	ORG $+3
+$SG58917 DB	'Array addressing error. (i=%d, d=0x%x, b=0x%x, e=0x%x)', 00H
+	ORG $+1
+$SG58918 DB	'Array with no DataID set has been addressed.', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -32
+_base$58900 = -12
+_end$58903 = -8
+_data$58905 = -4
+_header$58911 = -16
+$T59241 = -20
+$T59242 = -24
+$T59243 = -28
+?calcAddress@Array@@QAEPAXH@Z PROC NEAR			; Array::calcAddress
+
+; 189  : void *Array::calcAddress ( int index ) {
+
+  00572	55		 push	 ebp
+  00573	8b ec		 mov	 ebp, esp
+  00575	83 ec 24	 sub	 esp, 36			; 00000024H
+  00578	89 4d e0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 190  : 	if ( index < 0 ) 
+
+  0057b	83 7d 08 00	 cmp	 DWORD PTR _index$[ebp], 0
+  0057f	7d 18		 jge	 SHORT $L58896
+
+; 191  : 		msgMgr->Fatal ( "Array::calcAddress ( %d ): passed index is negative.", index );
+
+  00581	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  00584	50		 push	 eax
+  00585	68 00 00 00 00	 push	 OFFSET FLAT:$SG58897
+  0058a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00590	51		 push	 ecx
+  00591	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00596	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58896:
+
+; 192  : 
+; 193  : 	if ( dataID() ) {
+
+  00599	8d 55 ec	 lea	 edx, DWORD PTR $T59241[ebp]
+  0059c	52		 push	 edx
+  0059d	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  005a0	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  005a5	8b c8		 mov	 ecx, eax
+  005a7	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  005ac	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  005b1	85 c0		 test	 eax, eax
+  005b3	0f 84 a3 00 00
+	00		 je	 $L58899
+
+; 194  : 		char *base = (char *)*dataID();
+
+  005b9	8d 45 e8	 lea	 eax, DWORD PTR $T59242[ebp]
+  005bc	50		 push	 eax
+  005bd	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  005c0	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  005c5	8b c8		 mov	 ecx, eax
+  005c7	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  005cc	89 45 f4	 mov	 DWORD PTR _base$58900[ebp], eax
+
+; 195  : 		char *end = base + dataID().Size();
+
+  005cf	8d 4d e4	 lea	 ecx, DWORD PTR $T59243[ebp]
+  005d2	51		 push	 ecx
+  005d3	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  005d6	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  005db	8b c8		 mov	 ecx, eax
+  005dd	e8 00 00 00 00	 call	 ?Size@MemID@@QBEIXZ	; MemID::Size
+  005e2	8b 55 f4	 mov	 edx, DWORD PTR _base$58900[ebp]
+  005e5	03 d0		 add	 edx, eax
+  005e7	89 55 f8	 mov	 DWORD PTR _end$58903[ebp], edx
+
+; 196  : 		void *data;
+; 197  : 
+; 198  : 		switch ( memType() ) {
+
+  005ea	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  005ed	e8 00 00 00 00	 call	 ?memType@Array@@QAE?AW4MemType@@XZ ; Array::memType
+  005f2	89 45 dc	 mov	 DWORD PTR -36+[ebp], eax
+  005f5	83 7d dc 35	 cmp	 DWORD PTR -36+[ebp], 53	; 00000035H
+  005f9	74 02		 je	 SHORT $L58910
+  005fb	eb 1e		 jmp	 SHORT $L58914
+$L58910:
+
+; 200  : 				ArrayHeader *header = (ArrayHeader *)base;
+
+  005fd	8b 45 f4	 mov	 eax, DWORD PTR _base$58900[ebp]
+  00600	89 45 f0	 mov	 DWORD PTR _header$58911[ebp], eax
+
+; 201  : 				data = base + sizeof ( ArrayHeader ) + ( header->elementSize * index );
+
+  00603	8b 4d f0	 mov	 ecx, DWORD PTR _header$58911[ebp]
+  00606	33 d2		 xor	 edx, edx
+  00608	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  0060b	0f af 55 08	 imul	 edx, DWORD PTR _index$[ebp]
+  0060f	8b 45 f4	 mov	 eax, DWORD PTR _base$58900[ebp]
+  00612	8d 4c 10 04	 lea	 ecx, DWORD PTR [eax+edx+4]
+  00616	89 4d fc	 mov	 DWORD PTR _data$58905[ebp], ecx
+
+; 203  : 
+; 204  : 			break;
+
+  00619	eb 09		 jmp	 SHORT $L58907
+$L58914:
+
+; 207  : 				data = base + index;
+
+  0061b	8b 55 f4	 mov	 edx, DWORD PTR _base$58900[ebp]
+  0061e	03 55 08	 add	 edx, DWORD PTR _index$[ebp]
+  00621	89 55 fc	 mov	 DWORD PTR _data$58905[ebp], edx
+$L58907:
+
+; 212  : 
+; 213  : 		if ( data < base || data > end )
+
+  00624	8b 45 fc	 mov	 eax, DWORD PTR _data$58905[ebp]
+  00627	3b 45 f4	 cmp	 eax, DWORD PTR _base$58900[ebp]
+  0062a	72 08		 jb	 SHORT $L58916
+  0062c	8b 4d fc	 mov	 ecx, DWORD PTR _data$58905[ebp]
+  0062f	3b 4d f8	 cmp	 ecx, DWORD PTR _end$58903[ebp]
+  00632	76 23		 jbe	 SHORT $L58915
+$L58916:
+
+; 214  : 			msgMgr->Fatal ( "Array addressing error. (i=%d, d=0x%x, b=0x%x, e=0x%x)", index, data, base, end );
+
+  00634	8b 55 f8	 mov	 edx, DWORD PTR _end$58903[ebp]
+  00637	52		 push	 edx
+  00638	8b 45 f4	 mov	 eax, DWORD PTR _base$58900[ebp]
+  0063b	50		 push	 eax
+  0063c	8b 4d fc	 mov	 ecx, DWORD PTR _data$58905[ebp]
+  0063f	51		 push	 ecx
+  00640	8b 55 08	 mov	 edx, DWORD PTR _index$[ebp]
+  00643	52		 push	 edx
+  00644	68 00 00 00 00	 push	 OFFSET FLAT:$SG58917
+  00649	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0064e	50		 push	 eax
+  0064f	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00654	83 c4 18	 add	 esp, 24			; 00000018H
+$L58915:
+
+; 215  : 
+; 216  : 		return data;
+
+  00657	8b 45 fc	 mov	 eax, DWORD PTR _data$58905[ebp]
+  0065a	eb 16		 jmp	 SHORT $L58895
+$L58899:
+
+; 218  : 
+; 219  : 	msgMgr->Fatal ( "Array with no DataID set has been addressed." );
+
+  0065c	68 00 00 00 00	 push	 OFFSET FLAT:$SG58918
+  00661	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00667	51		 push	 ecx
+  00668	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  0066d	83 c4 08	 add	 esp, 8
+
+; 220  : 
+; 221  : 	return NULL;
+
+  00670	33 c0		 xor	 eax, eax
+$L58895:
+
+; 222  : }
+
+  00672	8b e5		 mov	 esp, ebp
+  00674	5d		 pop	 ebp
+  00675	c2 04 00	 ret	 4
+?calcAddress@Array@@QAEPAXH@Z ENDP			; Array::calcAddress
+_TEXT	ENDS
+PUBLIC	?resize@Array@@QAEXH@Z				; Array::resize
+EXTRN	?Realloc@MemID@@QBEPAXI@Z:NEAR			; MemID::Realloc
+_DATA	SEGMENT
+	ORG $+3
+$SG58924 DB	'Array::resize ( %d ): passed size is negative.', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_newSize$ = 8
+_this$ = -36
+_byteSize$58926 = -8
+_newByteSize$58928 = -4
+_array$58933 = -12
+$T59245 = -16
+$T59246 = -20
+$T59247 = -24
+$T59248 = -28
+$T59249 = -32
+?resize@Array@@QAEXH@Z PROC NEAR			; Array::resize
+
+; 226  : {
+
+  00678	55		 push	 ebp
+  00679	8b ec		 mov	 ebp, esp
+  0067b	83 ec 24	 sub	 esp, 36			; 00000024H
+  0067e	89 4d dc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 227  : 	if ( newSize < 0 ) 
+
+  00681	83 7d 08 00	 cmp	 DWORD PTR _newSize$[ebp], 0
+  00685	7d 18		 jge	 SHORT $L58923
+
+; 228  : 		msgMgr->Fatal ( "Array::resize ( %d ): passed size is negative.", newSize );
+
+  00687	8b 45 08	 mov	 eax, DWORD PTR _newSize$[ebp]
+  0068a	50		 push	 eax
+  0068b	68 00 00 00 00	 push	 OFFSET FLAT:$SG58924
+  00690	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00696	51		 push	 ecx
+  00697	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  0069c	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58923:
+
+; 229  : 
+; 230  : 	newSize++;
+
+  0069f	8b 55 08	 mov	 edx, DWORD PTR _newSize$[ebp]
+  006a2	83 c2 01	 add	 edx, 1
+  006a5	89 55 08	 mov	 DWORD PTR _newSize$[ebp], edx
+
+; 231  : 
+; 232  : 	if ( memType() == MemArray ) {
+
+  006a8	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  006ab	e8 00 00 00 00	 call	 ?memType@Array@@QAE?AW4MemType@@XZ ; Array::memType
+  006b0	83 f8 35	 cmp	 eax, 53			; 00000035H
+  006b3	0f 85 95 00 00
+	00		 jne	 $L58925
+
+; 233  : 		int byteSize = dataID().Size(), newByteSize = newSize * elementSize() + sizeof ( ArrayHeader );
+
+  006b9	8d 45 f0	 lea	 eax, DWORD PTR $T59245[ebp]
+  006bc	50		 push	 eax
+  006bd	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  006c0	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  006c5	8b c8		 mov	 ecx, eax
+  006c7	e8 00 00 00 00	 call	 ?Size@MemID@@QBEIXZ	; MemID::Size
+  006cc	89 45 f8	 mov	 DWORD PTR _byteSize$58926[ebp], eax
+  006cf	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  006d2	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  006d7	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  006dc	8b 4d 08	 mov	 ecx, DWORD PTR _newSize$[ebp]
+  006df	0f af c8	 imul	 ecx, eax
+  006e2	83 c1 04	 add	 ecx, 4
+  006e5	89 4d fc	 mov	 DWORD PTR _newByteSize$58928[ebp], ecx
+
+; 234  : 
+; 235  : 		if ( newByteSize > byteSize ) {
+
+  006e8	8b 55 fc	 mov	 edx, DWORD PTR _newByteSize$58928[ebp]
+  006eb	3b 55 f8	 cmp	 edx, DWORD PTR _byteSize$58926[ebp]
+  006ee	7e 29		 jle	 SHORT $L58930
+
+; 236  : //			msgMgr->Mono ( "resizing %x to hold %d elements\n", dataID(), newSize );
+; 237  : 			dataID().Realloc ( newByteSize + (25 * elementSize()) );
+
+  006f0	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  006f3	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  006f8	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  006fd	6b c0 19	 imul	 eax, 25			; 00000019H
+  00700	8b 4d fc	 mov	 ecx, DWORD PTR _newByteSize$58928[ebp]
+  00703	03 c8		 add	 ecx, eax
+  00705	51		 push	 ecx
+  00706	8d 55 ec	 lea	 edx, DWORD PTR $T59246[ebp]
+  00709	52		 push	 edx
+  0070a	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0070d	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00712	8b c8		 mov	 ecx, eax
+  00714	e8 00 00 00 00	 call	 ?Realloc@MemID@@QBEPAXI@Z ; MemID::Realloc
+$L58930:
+
+; 239  : 
+; 240  : 		if ( newSize > size() ) {
+
+  00719	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0071c	e8 00 00 00 00	 call	 ?size@Array@@QAEGXZ	; Array::size
+  00721	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00726	39 45 08	 cmp	 DWORD PTR _newSize$[ebp], eax
+  00729	7e 21		 jle	 SHORT $L58932
+
+; 241  : 			ArrayHeader *array = (ArrayHeader *)*dataID();
+
+  0072b	8d 45 e8	 lea	 eax, DWORD PTR $T59247[ebp]
+  0072e	50		 push	 eax
+  0072f	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00732	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00737	8b c8		 mov	 ecx, eax
+  00739	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0073e	89 45 f4	 mov	 DWORD PTR _array$58933[ebp], eax
+
+; 242  : 			array->size = newSize;
+
+  00741	8b 4d f4	 mov	 ecx, DWORD PTR _array$58933[ebp]
+  00744	66 8b 55 08	 mov	 dx, WORD PTR _newSize$[ebp]
+  00748	66 89 51 02	 mov	 WORD PTR [ecx+2], dx
+$L58932:
+
+; 244  : 	} else {
+
+  0074c	eb 2f		 jmp	 SHORT $L58938
+$L58925:
+
+; 245  : 		if ( newSize > dataID().Size() ) 
+
+  0074e	8d 45 e4	 lea	 eax, DWORD PTR $T59248[ebp]
+  00751	50		 push	 eax
+  00752	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00755	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  0075a	8b c8		 mov	 ecx, eax
+  0075c	e8 00 00 00 00	 call	 ?Size@MemID@@QBEIXZ	; MemID::Size
+  00761	39 45 08	 cmp	 DWORD PTR _newSize$[ebp], eax
+  00764	76 17		 jbe	 SHORT $L58938
+
+; 246  : 			dataID().Realloc ( newSize );
+
+  00766	8b 4d 08	 mov	 ecx, DWORD PTR _newSize$[ebp]
+  00769	51		 push	 ecx
+  0076a	8d 55 e0	 lea	 edx, DWORD PTR $T59249[ebp]
+  0076d	52		 push	 edx
+  0076e	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00771	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00776	8b c8		 mov	 ecx, eax
+  00778	e8 00 00 00 00	 call	 ?Realloc@MemID@@QBEPAXI@Z ; MemID::Realloc
+$L58938:
+
+; 248  : }
+
+  0077d	8b e5		 mov	 esp, ebp
+  0077f	5d		 pop	 ebp
+  00780	c2 04 00	 ret	 4
+?resize@Array@@QAEXH@Z ENDP				; Array::resize
+_TEXT	ENDS
+_DATA	SEGMENT
+	ORG $+1
+$SG58962 DB	'Array::at ( %d ): unhandled elementSize of %d', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -12
+_retVal$ = -8
+_data$ = -4
+?at@Array@@QAEHH@Z PROC NEAR				; Array::at
+
+; 253  : {
+
+  00783	55		 push	 ebp
+  00784	8b ec		 mov	 ebp, esp
+  00786	83 ec 10	 sub	 esp, 16			; 00000010H
+  00789	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 254  : 	int retVal = 0;
+
+  0078c	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR _retVal$[ebp], 0
+
+; 255  : 
+; 256  : 	resize ( index );
+
+  00793	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  00796	50		 push	 eax
+  00797	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0079a	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 257  : 
+; 258  : 	void *data = calcAddress ( index );
+
+  0079f	8b 4d 08	 mov	 ecx, DWORD PTR _index$[ebp]
+  007a2	51		 push	 ecx
+  007a3	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  007a6	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  007ab	89 45 fc	 mov	 DWORD PTR _data$[ebp], eax
+
+; 259  : 
+; 260  : 	// based on the size of each element in this array, be sure to return
+; 261  : 	// the right value
+; 262  : 	//
+; 263  : 	switch ( elementSize() ) {
+
+  007ae	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  007b1	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  007b6	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  007bb	89 45 f0	 mov	 DWORD PTR -16+[ebp], eax
+  007be	83 7d f0 01	 cmp	 DWORD PTR -16+[ebp], 1
+  007c2	74 0e		 je	 SHORT $L58951
+  007c4	83 7d f0 02	 cmp	 DWORD PTR -16+[ebp], 2
+  007c8	74 14		 je	 SHORT $L58955
+  007ca	83 7d f0 04	 cmp	 DWORD PTR -16+[ebp], 4
+  007ce	74 1b		 je	 SHORT $L58959
+  007d0	eb 23		 jmp	 SHORT $L58961
+$L58951:
+
+; 264  : 		// byte arrays
+; 265  : 		case sizeof ( char ):
+; 266  : 			retVal = (int)*(unsigned char *)data;
+
+  007d2	8b 55 fc	 mov	 edx, DWORD PTR _data$[ebp]
+  007d5	33 c0		 xor	 eax, eax
+  007d7	8a 02		 mov	 al, BYTE PTR [edx]
+  007d9	89 45 f8	 mov	 DWORD PTR _retVal$[ebp], eax
+
+; 267  : 			break;
+
+  007dc	eb 3c		 jmp	 SHORT $L58947
+$L58955:
+
+; 268  : 
+; 269  : 		// word arrays
+; 270  : 		case sizeof ( SCIUWord ):
+; 271  : 			retVal = (int)*(SCIUWord *)data;
+
+  007de	8b 4d fc	 mov	 ecx, DWORD PTR _data$[ebp]
+  007e1	33 d2		 xor	 edx, edx
+  007e3	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  007e6	89 55 f8	 mov	 DWORD PTR _retVal$[ebp], edx
+
+; 272  : 			break;
+
+  007e9	eb 2f		 jmp	 SHORT $L58947
+$L58959:
+
+; 273  : 
+; 274  : 		// long arrays
+; 275  : 		case sizeof ( int ):
+; 276  : 			retVal = *(int *)data;
+
+  007eb	8b 45 fc	 mov	 eax, DWORD PTR _data$[ebp]
+  007ee	8b 08		 mov	 ecx, DWORD PTR [eax]
+  007f0	89 4d f8	 mov	 DWORD PTR _retVal$[ebp], ecx
+
+; 277  : 			break;
+
+  007f3	eb 25		 jmp	 SHORT $L58947
+$L58961:
+
+; 278  : 
+; 279  : 		default:
+; 280  : 			msgMgr->Fatal ( "Array::at ( %d ): unhandled elementSize of %d", index, elementSize() );
+
+  007f5	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  007f8	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  007fd	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00802	50		 push	 eax
+  00803	8b 55 08	 mov	 edx, DWORD PTR _index$[ebp]
+  00806	52		 push	 edx
+  00807	68 00 00 00 00	 push	 OFFSET FLAT:$SG58962
+  0080c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00811	50		 push	 eax
+  00812	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00817	83 c4 10	 add	 esp, 16			; 00000010H
+$L58947:
+
+; 283  : 
+; 284  : 	return retVal;
+
+  0081a	8b 45 f8	 mov	 eax, DWORD PTR _retVal$[ebp]
+
+; 285  : }
+
+  0081d	8b e5		 mov	 esp, ebp
+  0081f	5d		 pop	 ebp
+  00820	c2 04 00	 ret	 4
+?at@Array@@QAEHH@Z ENDP					; Array::at
+_TEXT	ENDS
+PUBLIC	?at@Array@@QAEXHH@Z				; Array::at
+_DATA	SEGMENT
+	ORG $+2
+$SG58985 DB	'Array::at ( %d, %d ): unhandled elementSize of %d', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_index$ = 8
+_value$ = 12
+_this$ = -8
+_data$ = -4
+?at@Array@@QAEXHH@Z PROC NEAR				; Array::at
+
+; 291  : {
+
+  00823	55		 push	 ebp
+  00824	8b ec		 mov	 ebp, esp
+  00826	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00829	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 292  : 	resize ( index );
+
+  0082c	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0082f	50		 push	 eax
+  00830	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00833	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 293  : 
+; 294  : 	void *data = calcAddress ( index );
+
+  00838	8b 4d 08	 mov	 ecx, DWORD PTR _index$[ebp]
+  0083b	51		 push	 ecx
+  0083c	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0083f	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00844	89 45 fc	 mov	 DWORD PTR _data$[ebp], eax
+
+; 295  : 
+; 296  : 	// based on the size of each element in this array, be sure to set the 
+; 297  : 	// value correctly
+; 298  : 	//
+; 299  : 	switch ( elementSize() ) {
+
+  00847	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0084a	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  0084f	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00854	89 45 f4	 mov	 DWORD PTR -12+[ebp], eax
+  00857	83 7d f4 01	 cmp	 DWORD PTR -12+[ebp], 1
+  0085b	74 0e		 je	 SHORT $L58974
+  0085d	83 7d f4 02	 cmp	 DWORD PTR -12+[ebp], 2
+  00861	74 12		 je	 SHORT $L58978
+  00863	83 7d f4 04	 cmp	 DWORD PTR -12+[ebp], 4
+  00867	74 18		 je	 SHORT $L58982
+  00869	eb 20		 jmp	 SHORT $L58984
+$L58974:
+
+; 300  : 		// byte arrays
+; 301  : 		case sizeof ( char ):
+; 302  : 			*(unsigned char *)data = (unsigned char)value;
+
+  0086b	8b 55 fc	 mov	 edx, DWORD PTR _data$[ebp]
+  0086e	8a 45 0c	 mov	 al, BYTE PTR _value$[ebp]
+  00871	88 02		 mov	 BYTE PTR [edx], al
+
+; 303  : 			break;
+
+  00873	eb 40		 jmp	 SHORT $L58970
+$L58978:
+
+; 304  : 
+; 305  : 		// word arrays
+; 306  : 		case sizeof ( SCIUWord ):
+; 307  : 			*(SCIUWord *)data = (SCIUWord)value;
+
+  00875	8b 4d fc	 mov	 ecx, DWORD PTR _data$[ebp]
+  00878	66 8b 55 0c	 mov	 dx, WORD PTR _value$[ebp]
+  0087c	66 89 11	 mov	 WORD PTR [ecx], dx
+
+; 308  : 			break;
+
+  0087f	eb 34		 jmp	 SHORT $L58970
+$L58982:
+
+; 309  : 
+; 310  : 		// long arrays
+; 311  : 		case sizeof ( int ):
+; 312  : 			*(int *)data = value;
+
+  00881	8b 45 fc	 mov	 eax, DWORD PTR _data$[ebp]
+  00884	8b 4d 0c	 mov	 ecx, DWORD PTR _value$[ebp]
+  00887	89 08		 mov	 DWORD PTR [eax], ecx
+
+; 313  : 			break;
+
+  00889	eb 2a		 jmp	 SHORT $L58970
+$L58984:
+
+; 314  : 
+; 315  : 		default:
+; 316  : 			msgMgr->Fatal ( "Array::at ( %d, %d ): unhandled elementSize of %d", index, value, elementSize() );
+
+  0088b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0088e	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00893	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00898	50		 push	 eax
+  00899	8b 55 0c	 mov	 edx, DWORD PTR _value$[ebp]
+  0089c	52		 push	 edx
+  0089d	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  008a0	50		 push	 eax
+  008a1	68 00 00 00 00	 push	 OFFSET FLAT:$SG58985
+  008a6	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  008ac	51		 push	 ecx
+  008ad	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  008b2	83 c4 14	 add	 esp, 20			; 00000014H
+$L58970:
+
+; 319  : }
+
+  008b5	8b e5		 mov	 esp, ebp
+  008b7	5d		 pop	 ebp
+  008b8	c2 08 00	 ret	 8
+?at@Array@@QAEXHH@Z ENDP				; Array::at
+_TEXT	ENDS
+EXTRN	_memcpy:NEAR
+_DATA	SEGMENT
+	ORG $+2
+$SG59019 DB	'Array::at ( %d, %d, %p ): unhandled elementSize of %d', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_index$ = 8
+_count$ = 12
+_values$ = 16
+_this$ = -20
+_data$ = -4
+_curValue$ = -8
+_charPtr$59001 = -12
+_intPtr$59012 = -16
+?at@Array@@QAEXHHPAX@Z PROC NEAR			; Array::at
+
+; 325  : {
+
+  008bb	55		 push	 ebp
+  008bc	8b ec		 mov	 ebp, esp
+  008be	83 ec 18	 sub	 esp, 24			; 00000018H
+  008c1	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 326  : 	resize ( index + count );
+
+  008c4	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  008c7	03 45 0c	 add	 eax, DWORD PTR _count$[ebp]
+  008ca	50		 push	 eax
+  008cb	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  008ce	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 327  : 
+; 328  : 	void *data = calcAddress ( index );
+
+  008d3	8b 4d 08	 mov	 ecx, DWORD PTR _index$[ebp]
+  008d6	51		 push	 ecx
+  008d7	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  008da	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  008df	89 45 fc	 mov	 DWORD PTR _data$[ebp], eax
+
+; 329  : 	SCIUWord *curValue = (SCIUWord *)values;
+
+  008e2	8b 55 10	 mov	 edx, DWORD PTR _values$[ebp]
+  008e5	89 55 f8	 mov	 DWORD PTR _curValue$[ebp], edx
+
+; 330  : 
+; 331  : 	// based on the size of each element in this array, be sure to set the 
+; 332  : 	// value correctly
+; 333  : 	//
+; 334  : 	switch ( elementSize() ) {
+
+  008e8	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  008eb	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  008f0	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  008f5	89 45 e8	 mov	 DWORD PTR -24+[ebp], eax
+  008f8	83 7d e8 01	 cmp	 DWORD PTR -24+[ebp], 1
+  008fc	74 11		 je	 SHORT $L59000
+  008fe	83 7d e8 02	 cmp	 DWORD PTR -24+[ebp], 2
+  00902	74 41		 je	 SHORT $L59008
+  00904	83 7d e8 04	 cmp	 DWORD PTR -24+[ebp], 4
+  00908	74 53		 je	 SHORT $L59011
+  0090a	e9 87 00 00 00	 jmp	 $L59018
+$L59000:
+
+; 337  : 			unsigned char *charPtr = (unsigned char *)data;
+
+  0090f	8b 45 fc	 mov	 eax, DWORD PTR _data$[ebp]
+  00912	89 45 f4	 mov	 DWORD PTR _charPtr$59001[ebp], eax
+$L59004:
+
+; 338  : 			
+; 339  : 			while ( count-- ) 
+
+  00915	8b 4d 0c	 mov	 ecx, DWORD PTR _count$[ebp]
+  00918	8b 55 0c	 mov	 edx, DWORD PTR _count$[ebp]
+  0091b	83 ea 01	 sub	 edx, 1
+  0091e	89 55 0c	 mov	 DWORD PTR _count$[ebp], edx
+  00921	85 c9		 test	 ecx, ecx
+  00923	74 1e		 je	 SHORT $L59005
+
+; 340  : 				*charPtr++ = (unsigned char)*curValue++;
+
+  00925	8b 45 f4	 mov	 eax, DWORD PTR _charPtr$59001[ebp]
+  00928	8b 4d f8	 mov	 ecx, DWORD PTR _curValue$[ebp]
+  0092b	8a 11		 mov	 dl, BYTE PTR [ecx]
+  0092d	88 10		 mov	 BYTE PTR [eax], dl
+  0092f	8b 45 f4	 mov	 eax, DWORD PTR _charPtr$59001[ebp]
+  00932	83 c0 01	 add	 eax, 1
+  00935	89 45 f4	 mov	 DWORD PTR _charPtr$59001[ebp], eax
+  00938	8b 4d f8	 mov	 ecx, DWORD PTR _curValue$[ebp]
+  0093b	83 c1 02	 add	 ecx, 2
+  0093e	89 4d f8	 mov	 DWORD PTR _curValue$[ebp], ecx
+  00941	eb d2		 jmp	 SHORT $L59004
+$L59005:
+
+; 342  : 
+; 343  : 		break;
+
+  00943	eb 7f		 jmp	 SHORT $L58996
+$L59008:
+
+; 344  : 
+; 345  : 		// word arrays
+; 346  : 		case sizeof ( SCIUWord ): 
+; 347  : 			memcpy ( data, curValue, count * sizeof ( SCIUWord ) );
+
+  00945	8b 55 0c	 mov	 edx, DWORD PTR _count$[ebp]
+  00948	d1 e2		 shl	 edx, 1
+  0094a	52		 push	 edx
+  0094b	8b 45 f8	 mov	 eax, DWORD PTR _curValue$[ebp]
+  0094e	50		 push	 eax
+  0094f	8b 4d fc	 mov	 ecx, DWORD PTR _data$[ebp]
+  00952	51		 push	 ecx
+  00953	e8 00 00 00 00	 call	 _memcpy
+  00958	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 348  : 			break;
+
+  0095b	eb 67		 jmp	 SHORT $L58996
+$L59011:
+
+; 352  : 			int *intPtr = (int *)data;
+
+  0095d	8b 55 fc	 mov	 edx, DWORD PTR _data$[ebp]
+  00960	89 55 f0	 mov	 DWORD PTR _intPtr$59012[ebp], edx
+$L59015:
+
+; 353  : 
+; 354  : 			while ( count-- ) 
+
+  00963	8b 45 0c	 mov	 eax, DWORD PTR _count$[ebp]
+  00966	8b 4d 0c	 mov	 ecx, DWORD PTR _count$[ebp]
+  00969	83 e9 01	 sub	 ecx, 1
+  0096c	89 4d 0c	 mov	 DWORD PTR _count$[ebp], ecx
+  0096f	85 c0		 test	 eax, eax
+  00971	74 21		 je	 SHORT $L59016
+
+; 355  : 				*intPtr++ = (int)*curValue++;
+
+  00973	8b 55 f8	 mov	 edx, DWORD PTR _curValue$[ebp]
+  00976	33 c0		 xor	 eax, eax
+  00978	66 8b 02	 mov	 ax, WORD PTR [edx]
+  0097b	8b 4d f0	 mov	 ecx, DWORD PTR _intPtr$59012[ebp]
+  0097e	89 01		 mov	 DWORD PTR [ecx], eax
+  00980	8b 55 f0	 mov	 edx, DWORD PTR _intPtr$59012[ebp]
+  00983	83 c2 04	 add	 edx, 4
+  00986	89 55 f0	 mov	 DWORD PTR _intPtr$59012[ebp], edx
+  00989	8b 45 f8	 mov	 eax, DWORD PTR _curValue$[ebp]
+  0098c	83 c0 02	 add	 eax, 2
+  0098f	89 45 f8	 mov	 DWORD PTR _curValue$[ebp], eax
+  00992	eb cf		 jmp	 SHORT $L59015
+$L59016:
+
+; 357  : 
+; 358  : 		break;
+
+  00994	eb 2e		 jmp	 SHORT $L58996
+$L59018:
+
+; 359  : 
+; 360  : 		default:
+; 361  : 			msgMgr->Fatal ( "Array::at ( %d, %d, %p ): unhandled elementSize of %d", index, count, values, elementSize() );
+
+  00996	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00999	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  0099e	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  009a3	50		 push	 eax
+  009a4	8b 4d 10	 mov	 ecx, DWORD PTR _values$[ebp]
+  009a7	51		 push	 ecx
+  009a8	8b 55 0c	 mov	 edx, DWORD PTR _count$[ebp]
+  009ab	52		 push	 edx
+  009ac	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  009af	50		 push	 eax
+  009b0	68 00 00 00 00	 push	 OFFSET FLAT:$SG59019
+  009b5	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  009bb	51		 push	 ecx
+  009bc	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  009c1	83 c4 18	 add	 esp, 24			; 00000018H
+$L58996:
+
+; 364  : }
+
+  009c4	8b e5		 mov	 esp, ebp
+  009c6	5d		 pop	 ebp
+  009c7	c2 0c 00	 ret	 12			; 0000000cH
+?at@Array@@QAEXHHPAX@Z ENDP				; Array::at
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0MemID@@QAE@G@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 23   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _h$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 24   : 	}
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b e5		 mov	 esp, ebp
+  00016	5d		 pop	 ebp
+  00017	c2 04 00	 ret	 4
+??0MemID@@QAE@G@Z ENDP					; MemID::MemID
+_TEXT	ENDS
+EXTRN	?Free@MemoryMgr@@QAEXG@Z:NEAR			; MemoryMgr::Free
+EXTRN	_memMgr:DWORD
+;	COMDAT ?Free@MemID@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Free@MemID@@QAEXXZ PROC NEAR				; MemID::Free, COMDAT
+
+; 32   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 33   : 		if (handle) {
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	33 c9		 xor	 ecx, ecx
+  0000c	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000f	85 c9		 test	 ecx, ecx
+  00011	74 1a		 je	 SHORT $L54879
+
+; 34   : 			memMgr->Free(handle);
+
+  00013	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00016	66 8b 02	 mov	 ax, WORD PTR [edx]
+  00019	50		 push	 eax
+  0001a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00020	e8 00 00 00 00	 call	 ?Free@MemoryMgr@@QAEXG@Z ; MemoryMgr::Free
+
+; 35   : 			handle = 0;
+
+  00025	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00028	66 c7 01 00 00	 mov	 WORD PTR [ecx], 0
+$L54879:
+
+; 37   : 	}
+
+  0002d	8b e5		 mov	 esp, ebp
+  0002f	5d		 pop	 ebp
+  00030	c3		 ret	 0
+?Free@MemID@@QAEXXZ ENDP				; MemID::Free
+_TEXT	ENDS
+EXTRN	_memset:NEAR
+_DATA	SEGMENT
+	ORG $+2
+$SG59052 DB	'Array::fill ( %d, %d, %d ): unhandled elementSize of %d', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_startIndex$ = 8
+_length$ = 12
+_value$ = 16
+_this$ = -20
+_endIndex$ = -8
+_data$ = -4
+_ptr$59038 = -12
+_ptr$59046 = -16
+?fill@Array@@QAEXHHH@Z PROC NEAR			; Array::fill
+
+; 370  : {
+
+  009ca	55		 push	 ebp
+  009cb	8b ec		 mov	 ebp, esp
+  009cd	83 ec 18	 sub	 esp, 24			; 00000018H
+  009d0	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 371  : 	// if length is -1, make length equal to the size of this array minus
+; 372  : 	// the startIndex
+; 373  : 	//
+; 374  : 	if ( length == -1 ) 
+
+  009d3	83 7d 0c ff	 cmp	 DWORD PTR _length$[ebp], -1
+  009d7	75 13		 jne	 SHORT $L59026
+
+; 375  : 		length = size() - startIndex;
+
+  009d9	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  009dc	e8 00 00 00 00	 call	 ?size@Array@@QAEGXZ	; Array::size
+  009e1	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  009e6	2b 45 08	 sub	 eax, DWORD PTR _startIndex$[ebp]
+  009e9	89 45 0c	 mov	 DWORD PTR _length$[ebp], eax
+$L59026:
+
+; 376  : 
+; 377  : 	// skip this call if length is invalid
+; 378  : 	if ( length < 1 )
+
+  009ec	83 7d 0c 01	 cmp	 DWORD PTR _length$[ebp], 1
+  009f0	7d 05		 jge	 SHORT $L59027
+
+; 379  : 		return;
+
+  009f2	e9 e6 00 00 00	 jmp	 $L59025
+$L59027:
+
+; 380  : 
+; 381  : 	int endIndex = startIndex + length;
+
+  009f7	8b 45 08	 mov	 eax, DWORD PTR _startIndex$[ebp]
+  009fa	03 45 0c	 add	 eax, DWORD PTR _length$[ebp]
+  009fd	89 45 f8	 mov	 DWORD PTR _endIndex$[ebp], eax
+
+; 382  : 
+; 383  : 	resize ( endIndex );
+
+  00a00	8b 4d f8	 mov	 ecx, DWORD PTR _endIndex$[ebp]
+  00a03	51		 push	 ecx
+  00a04	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a07	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 384  : 
+; 385  : 	void *data = calcAddress ( startIndex );
+
+  00a0c	8b 55 08	 mov	 edx, DWORD PTR _startIndex$[ebp]
+  00a0f	52		 push	 edx
+  00a10	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a13	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00a18	89 45 fc	 mov	 DWORD PTR _data$[ebp], eax
+
+; 386  : 
+; 387  : 	// choose the fill type to perform based on the size of the elements
+; 388  : 	//
+; 389  : 	switch ( elementSize() ) {
+
+  00a1b	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a1e	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00a23	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00a28	89 45 e8	 mov	 DWORD PTR -24+[ebp], eax
+  00a2b	83 7d e8 01	 cmp	 DWORD PTR -24+[ebp], 1
+  00a2f	74 0e		 je	 SHORT $L59035
+  00a31	83 7d e8 02	 cmp	 DWORD PTR -24+[ebp], 2
+  00a35	74 21		 je	 SHORT $L59037
+  00a37	83 7d e8 04	 cmp	 DWORD PTR -24+[ebp], 4
+  00a3b	74 48		 je	 SHORT $L59045
+  00a3d	eb 71		 jmp	 SHORT $L59051
+$L59035:
+
+; 390  : 		// byte arrays
+; 391  : 		case sizeof ( char ): 
+; 392  : 			memset ( data, value, length );
+
+  00a3f	8b 45 0c	 mov	 eax, DWORD PTR _length$[ebp]
+  00a42	50		 push	 eax
+  00a43	8b 4d 10	 mov	 ecx, DWORD PTR _value$[ebp]
+  00a46	51		 push	 ecx
+  00a47	8b 55 fc	 mov	 edx, DWORD PTR _data$[ebp]
+  00a4a	52		 push	 edx
+  00a4b	e8 00 00 00 00	 call	 _memset
+  00a50	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 393  : 
+; 394  : 		break;
+
+  00a53	e9 85 00 00 00	 jmp	 $L59031
+$L59037:
+
+; 398  : 			SCIUWord *ptr = (SCIUWord *)data;
+
+  00a58	8b 45 fc	 mov	 eax, DWORD PTR _data$[ebp]
+  00a5b	89 45 f4	 mov	 DWORD PTR _ptr$59038[ebp], eax
+$L59041:
+
+; 399  : 
+; 400  : 			while ( length-- ) 
+
+  00a5e	8b 4d 0c	 mov	 ecx, DWORD PTR _length$[ebp]
+  00a61	8b 55 0c	 mov	 edx, DWORD PTR _length$[ebp]
+  00a64	83 ea 01	 sub	 edx, 1
+  00a67	89 55 0c	 mov	 DWORD PTR _length$[ebp], edx
+  00a6a	85 c9		 test	 ecx, ecx
+  00a6c	74 15		 je	 SHORT $L59042
+
+; 401  : 				*ptr++ = (SCIUWord)value;
+
+  00a6e	8b 45 f4	 mov	 eax, DWORD PTR _ptr$59038[ebp]
+  00a71	66 8b 4d 10	 mov	 cx, WORD PTR _value$[ebp]
+  00a75	66 89 08	 mov	 WORD PTR [eax], cx
+  00a78	8b 55 f4	 mov	 edx, DWORD PTR _ptr$59038[ebp]
+  00a7b	83 c2 02	 add	 edx, 2
+  00a7e	89 55 f4	 mov	 DWORD PTR _ptr$59038[ebp], edx
+  00a81	eb db		 jmp	 SHORT $L59041
+$L59042:
+
+; 403  : 
+; 404  : 		break;
+
+  00a83	eb 58		 jmp	 SHORT $L59031
+$L59045:
+
+; 408  : 			int *ptr = (int *)data;
+
+  00a85	8b 45 fc	 mov	 eax, DWORD PTR _data$[ebp]
+  00a88	89 45 f0	 mov	 DWORD PTR _ptr$59046[ebp], eax
+$L59049:
+
+; 409  : 
+; 410  : 			while ( length-- ) 
+
+  00a8b	8b 4d 0c	 mov	 ecx, DWORD PTR _length$[ebp]
+  00a8e	8b 55 0c	 mov	 edx, DWORD PTR _length$[ebp]
+  00a91	83 ea 01	 sub	 edx, 1
+  00a94	89 55 0c	 mov	 DWORD PTR _length$[ebp], edx
+  00a97	85 c9		 test	 ecx, ecx
+  00a99	74 13		 je	 SHORT $L59050
+
+; 411  : 				*ptr++ = value;
+
+  00a9b	8b 45 f0	 mov	 eax, DWORD PTR _ptr$59046[ebp]
+  00a9e	8b 4d 10	 mov	 ecx, DWORD PTR _value$[ebp]
+  00aa1	89 08		 mov	 DWORD PTR [eax], ecx
+  00aa3	8b 55 f0	 mov	 edx, DWORD PTR _ptr$59046[ebp]
+  00aa6	83 c2 04	 add	 edx, 4
+  00aa9	89 55 f0	 mov	 DWORD PTR _ptr$59046[ebp], edx
+  00aac	eb dd		 jmp	 SHORT $L59049
+$L59050:
+
+; 413  : 
+; 414  : 		break;
+
+  00aae	eb 2d		 jmp	 SHORT $L59031
+$L59051:
+
+; 415  : 
+; 416  : 		default:
+; 417  : 			msgMgr->Fatal ( "Array::fill ( %d, %d, %d ): unhandled elementSize of %d", startIndex, length, value, elementSize() );
+
+  00ab0	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ab3	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00ab8	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00abd	50		 push	 eax
+  00abe	8b 45 10	 mov	 eax, DWORD PTR _value$[ebp]
+  00ac1	50		 push	 eax
+  00ac2	8b 4d 0c	 mov	 ecx, DWORD PTR _length$[ebp]
+  00ac5	51		 push	 ecx
+  00ac6	8b 55 08	 mov	 edx, DWORD PTR _startIndex$[ebp]
+  00ac9	52		 push	 edx
+  00aca	68 00 00 00 00	 push	 OFFSET FLAT:$SG59052
+  00acf	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00ad4	50		 push	 eax
+  00ad5	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00ada	83 c4 18	 add	 esp, 24			; 00000018H
+$L59031:
+$L59025:
+
+; 420  : }
+
+  00add	8b e5		 mov	 esp, ebp
+  00adf	5d		 pop	 ebp
+  00ae0	c2 0c 00	 ret	 12			; 0000000cH
+?fill@Array@@QAEXHHH@Z ENDP				; Array::fill
+_TEXT	ENDS
+PUBLIC	?IsValid@MemoryMgr@@QAEHG@Z			; MemoryMgr::IsValid
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsValid@MemID@@QBEHXZ PROC NEAR			; MemID::IsValid, COMDAT
+
+; 62   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 63   : 		return memMgr->IsValid(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?IsValid@MemoryMgr@@QAEHG@Z ; MemoryMgr::IsValid
+
+; 64   : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+?IsValid@MemID@@QBEHXZ ENDP				; MemID::IsValid
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -8
+_tempID$ = -4
+?IsValid@MemoryMgr@@QAEHG@Z PROC NEAR			; MemoryMgr::IsValid, COMDAT
+
+; 475  : 	inline Bool MemoryMgr::IsValid(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 476  : 		unsigned short tempID = (unsigned short)theID;
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  0000d	66 89 45 fc	 mov	 WORD PTR _tempID$[ebp], ax
+
+; 477  : 
+; 478  : 		return(
+; 479  : 				(tempID)															&&
+; 480  : 				(tempID < maxDescriptors)									&&
+; 481  : 				(desc[tempID].memInfo.bits.freeDescriptor == False)	&&
+; 482  : 				(desc[tempID].memInfo.bits.freeMemory == False)
+; 483  : 				);
+
+  00011	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00014	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  0001a	85 c9		 test	 ecx, ecx
+  0001c	74 58		 je	 SHORT $L59259
+  0001e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00021	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00027	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0002a	3b 50 04	 cmp	 edx, DWORD PTR [eax+4]
+  0002d	73 47		 jae	 SHORT $L59259
+  0002f	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00032	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00038	c1 e1 04	 shl	 ecx, 4
+  0003b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0003e	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00041	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00044	c1 e1 0e	 shl	 ecx, 14			; 0000000eH
+  00047	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  0004a	85 c9		 test	 ecx, ecx
+  0004c	75 28		 jne	 SHORT $L59259
+  0004e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00051	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00057	c1 e2 04	 shl	 edx, 4
+  0005a	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0005d	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00060	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  00063	c1 e2 14	 shl	 edx, 20			; 00000014H
+  00066	c1 fa 1f	 sar	 edx, 31			; 0000001fH
+  00069	85 d2		 test	 edx, edx
+  0006b	75 09		 jne	 SHORT $L59259
+  0006d	c7 45 f4 01 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 1
+  00074	eb 07		 jmp	 SHORT $L59260
+$L59259:
+  00076	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+$L59260:
+  0007d	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 484  : 	}
+
+  00080	8b e5		 mov	 esp, ebp
+  00082	5d		 pop	 ebp
+  00083	c2 04 00	 ret	 4
+?IsValid@MemoryMgr@@QAEHG@Z ENDP			; MemoryMgr::IsValid
+_TEXT	ENDS
+PUBLIC	??0MemID@@QAE@XZ				; MemID::MemID
+PUBLIC	?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+;	COMDAT ?Duplicate@MemID@@QAE?AV1@XZ
+_TEXT	SEGMENT
+___$ReturnUdt$ = 8
+_this$ = -8
+_newID$ = -4
+?Duplicate@MemID@@QAE?AV1@XZ PROC NEAR			; MemID::Duplicate, COMDAT
+
+; 68   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 69   : 		MemID newID;
+
+  00009	8d 4d fc	 lea	 ecx, DWORD PTR _newID$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+
+; 70   : 
+; 71   :  		newID.Get ( GetMemType(), Size() );
+
+  00011	6a 00		 push	 0
+  00013	6a 00		 push	 0
+  00015	6a 00		 push	 0
+  00017	6a 00		 push	 0
+  00019	68 00 02 00 00	 push	 512			; 00000200H
+  0001e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00021	e8 00 00 00 00	 call	 ?Size@MemID@@QBEIXZ	; MemID::Size
+  00026	50		 push	 eax
+  00027	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002a	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  0002f	50		 push	 eax
+  00030	8d 4d fc	 lea	 ecx, DWORD PTR _newID$[ebp]
+  00033	e8 00 00 00 00	 call	 ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+
+; 72   : 		memcpy ( *newID, **this, Size() );
+
+  00038	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0003b	e8 00 00 00 00	 call	 ?Size@MemID@@QBEIXZ	; MemID::Size
+  00040	50		 push	 eax
+  00041	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00044	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  00049	50		 push	 eax
+  0004a	8d 4d fc	 lea	 ecx, DWORD PTR _newID$[ebp]
+  0004d	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  00052	50		 push	 eax
+  00053	e8 00 00 00 00	 call	 _memcpy
+  00058	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 73   : 
+; 74   : 		return newID;
+
+  0005b	8d 45 fc	 lea	 eax, DWORD PTR _newID$[ebp]
+  0005e	50		 push	 eax
+  0005f	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00062	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00067	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+
+; 75   : 	}
+
+  0006a	8b e5		 mov	 esp, ebp
+  0006c	5d		 pop	 ebp
+  0006d	c2 04 00	 ret	 4
+?Duplicate@MemID@@QAE?AV1@XZ ENDP			; MemID::Duplicate
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0MemID@@QAE@XZ PROC NEAR				; MemID::MemID, COMDAT
+
+; 15   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 c7 00 00 00	 mov	 WORD PTR [eax], 0
+
+; 16   : 	}
+
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0MemID@@QAE@XZ ENDP					; MemID::MemID
+_TEXT	ENDS
+EXTRN	?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z:NEAR ; MemoryMgr::Alloc
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT
+_type$ = 8
+_size$ = 12
+_a$ = 16
+_num$ = 20
+_client$ = 24
+_initChar$ = 28
+_h$ = 32
+_this$ = -4
+?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z PROC NEAR ; MemID::Get, COMDAT
+
+; 42   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 43   : 		handle = memMgr->Alloc(type | a, size, num, client, initChar, h);
+
+  00007	8b 45 20	 mov	 eax, DWORD PTR _h$[ebp]
+  0000a	50		 push	 eax
+  0000b	8a 4d 1c	 mov	 cl, BYTE PTR _initChar$[ebp]
+  0000e	51		 push	 ecx
+  0000f	8b 55 18	 mov	 edx, DWORD PTR _client$[ebp]
+  00012	52		 push	 edx
+  00013	8b 45 14	 mov	 eax, DWORD PTR _num$[ebp]
+  00016	50		 push	 eax
+  00017	8b 4d 0c	 mov	 ecx, DWORD PTR _size$[ebp]
+  0001a	51		 push	 ecx
+  0001b	8b 55 08	 mov	 edx, DWORD PTR _type$[ebp]
+  0001e	0b 55 10	 or	 edx, DWORD PTR _a$[ebp]
+  00021	52		 push	 edx
+  00022	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00028	e8 00 00 00 00	 call	 ?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemoryMgr::Alloc
+  0002d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00030	66 89 01	 mov	 WORD PTR [ecx], ax
+
+; 44   : 	}
+
+  00033	8b e5		 mov	 esp, ebp
+  00035	5d		 pop	 ebp
+  00036	c2 1c 00	 ret	 28			; 0000001cH
+?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ENDP ; MemID::Get
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT
+_this$ = -4
+??BMemID@@QBEGXZ PROC NEAR				; MemID::operator unsigned short, COMDAT
+
+; 93   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 94   : 		return handle;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 95   : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+??BMemID@@QBEGXZ ENDP					; MemID::operator unsigned short
+_TEXT	ENDS
+PUBLIC	??0Array@@QAE@VMemID@@@Z			; Array::Array
+EXTRN	__imp__memmove:NEAR
+_DATA	SEGMENT
+$SG59066 DB	'Array::copy ( %d, %x, %d, %d ): source and destination a'
+	DB	're not of same type: source type == %d destination type == %d'
+	DB	'.', 00H
+_DATA	ENDS
+xdata$x	SEGMENT
+$T59269	DD	019930520H
+	DD	01H
+	DD	FLAT:$T59271
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T59271	DD	0ffffffffH
+	DD	FLAT:$L59267
+xdata$x	ENDS
+_TEXT	SEGMENT
+_destIndex$ = 8
+_source$ = 12
+_srcIndex$ = 16
+_length$ = 20
+_this$ = -36
+_srcArray$ = -20
+_esize$ = -24
+_sourcePtr$ = -28
+_destPtr$ = -16
+$T59266 = -32
+__$EHRec$ = -12
+?copy@Array@@QAEXHVMemID@@HH@Z PROC NEAR		; Array::copy
+
+; 425  : {
+
+  00ae3	55		 push	 ebp
+  00ae4	8b ec		 mov	 ebp, esp
+  00ae6	6a ff		 push	 -1
+  00ae8	68 00 00 00 00	 push	 $L59270
+  00aed	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00af3	50		 push	 eax
+  00af4	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  00afb	83 ec 18	 sub	 esp, 24			; 00000018H
+  00afe	89 4d dc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 426  : 	// if the length is -1 then make it equal to the size of the source array
+; 427  : 	// minus the srcIndex
+; 428  : 	//
+; 429  : 	Array srcArray ( source );
+
+  00b01	51		 push	 ecx
+  00b02	8b cc		 mov	 ecx, esp
+  00b04	89 65 e0	 mov	 DWORD PTR $T59266[ebp], esp
+  00b07	8d 45 0c	 lea	 eax, DWORD PTR _source$[ebp]
+  00b0a	50		 push	 eax
+  00b0b	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00b10	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00b13	e8 00 00 00 00	 call	 ??0Array@@QAE@VMemID@@@Z ; Array::Array
+  00b18	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+
+; 430  : 
+; 431  : 	if ( length == -1 ) 
+
+  00b1f	83 7d 14 ff	 cmp	 DWORD PTR _length$[ebp], -1
+  00b23	75 13		 jne	 SHORT $L59062
+
+; 432  : 		length = srcArray.size() - srcIndex;
+
+  00b25	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00b28	e8 00 00 00 00	 call	 ?size@Array@@QAEGXZ	; Array::size
+  00b2d	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00b32	2b 45 10	 sub	 eax, DWORD PTR _srcIndex$[ebp]
+  00b35	89 45 14	 mov	 DWORD PTR _length$[ebp], eax
+$L59062:
+
+; 433  : 
+; 434  : 	// skip this call if length is invalid
+; 435  : 	if ( length < 1 )
+
+  00b38	83 7d 14 01	 cmp	 DWORD PTR _length$[ebp], 1
+  00b3c	7d 14		 jge	 SHORT $L59063
+
+; 436  : 		return;
+
+  00b3e	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00b45	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00b48	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  00b4d	e9 bd 00 00 00	 jmp	 $L59059
+$L59063:
+
+; 437  : 
+; 438  : 	// verify bounds on this array
+; 439  : 	resize ( destIndex + length );
+
+  00b52	8b 4d 08	 mov	 ecx, DWORD PTR _destIndex$[ebp]
+  00b55	03 4d 14	 add	 ecx, DWORD PTR _length$[ebp]
+  00b58	51		 push	 ecx
+  00b59	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00b5c	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 440  : 
+; 441  : 	// verify bounds on the source array
+; 442  : 	srcArray.resize ( srcIndex + length );
+
+  00b61	8b 55 10	 mov	 edx, DWORD PTR _srcIndex$[ebp]
+  00b64	03 55 14	 add	 edx, DWORD PTR _length$[ebp]
+  00b67	52		 push	 edx
+  00b68	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00b6b	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 443  : 
+; 444  : 	int esize = elementSize();
+
+  00b70	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00b73	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00b78	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00b7d	89 45 e8	 mov	 DWORD PTR _esize$[ebp], eax
+
+; 445  : 
+; 446  : 	// verify the element sizes
+; 447  : 	if ( esize != srcArray.elementSize() )
+
+  00b80	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00b83	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00b88	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00b8d	39 45 e8	 cmp	 DWORD PTR _esize$[ebp], eax
+  00b90	74 37		 je	 SHORT $L59065
+
+; 448  : 		msgMgr->Fatal ( "Array::copy ( %d, %x, %d, %d ): source and destination are not of same type: source type == %d destination type == %d.", destIndex, source, srcIndex, length, srcArray.elementSize(), esize );
+
+  00b92	8b 45 e8	 mov	 eax, DWORD PTR _esize$[ebp]
+  00b95	50		 push	 eax
+  00b96	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00b99	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00b9e	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00ba3	50		 push	 eax
+  00ba4	8b 4d 14	 mov	 ecx, DWORD PTR _length$[ebp]
+  00ba7	51		 push	 ecx
+  00ba8	8b 55 10	 mov	 edx, DWORD PTR _srcIndex$[ebp]
+  00bab	52		 push	 edx
+  00bac	66 8b 45 0c	 mov	 ax, WORD PTR _source$[ebp]
+  00bb0	50		 push	 eax
+  00bb1	8b 4d 08	 mov	 ecx, DWORD PTR _destIndex$[ebp]
+  00bb4	51		 push	 ecx
+  00bb5	68 00 00 00 00	 push	 OFFSET FLAT:$SG59066
+  00bba	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00bc0	52		 push	 edx
+  00bc1	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00bc6	83 c4 20	 add	 esp, 32			; 00000020H
+$L59065:
+
+; 449  : 
+; 450  : 	// grab pointers to the data and do the copy
+; 451  : 	void *sourcePtr = srcArray.calcAddress ( srcIndex );
+
+  00bc9	8b 45 10	 mov	 eax, DWORD PTR _srcIndex$[ebp]
+  00bcc	50		 push	 eax
+  00bcd	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00bd0	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00bd5	89 45 e4	 mov	 DWORD PTR _sourcePtr$[ebp], eax
+
+; 452  : 	void *destPtr = calcAddress ( destIndex );
+
+  00bd8	8b 4d 08	 mov	 ecx, DWORD PTR _destIndex$[ebp]
+  00bdb	51		 push	 ecx
+  00bdc	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00bdf	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00be4	89 45 f0	 mov	 DWORD PTR _destPtr$[ebp], eax
+
+; 453  : 
+; 454  : 	memmove ( destPtr, sourcePtr, length * esize );
+
+  00be7	8b 55 14	 mov	 edx, DWORD PTR _length$[ebp]
+  00bea	0f af 55 e8	 imul	 edx, DWORD PTR _esize$[ebp]
+  00bee	52		 push	 edx
+  00bef	8b 45 e4	 mov	 eax, DWORD PTR _sourcePtr$[ebp]
+  00bf2	50		 push	 eax
+  00bf3	8b 4d f0	 mov	 ecx, DWORD PTR _destPtr$[ebp]
+  00bf6	51		 push	 ecx
+  00bf7	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__memmove
+  00bfd	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 455  : }
+
+  00c00	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00c07	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00c0a	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+$L59059:
+  00c0f	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  00c12	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  00c19	8b e5		 mov	 esp, ebp
+  00c1b	5d		 pop	 ebp
+  00c1c	c2 10 00	 ret	 16			; 00000010H
+_TEXT	ENDS
+text$x	SEGMENT
+$L59267:
+  00013	8d 4d ec	 lea	 ecx, DWORD PTR _srcArray$[ebp]
+  00016	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  0001b	c3		 ret	 0
+$L59270:
+  0001c	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T59269
+  00021	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?copy@Array@@QAEXHVMemID@@HH@Z ENDP			; Array::copy
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+PUBLIC	?copy@Array@@QAEXHPAXHH@Z			; Array::copy
+_DATA	SEGMENT
+	ORG $+1
+$SG59077 DB	'Array::copy ( %d, %p, %d, %d ): ambiguous copy calls are'
+	DB	' not allowed with a pointer.', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_destIndex$ = 8
+_source$ = 12
+_srcIndex$ = 16
+_length$ = 20
+_this$ = -16
+_esize$ = -8
+_destPtr$ = -4
+_sourcePtr$ = -12
+?copy@Array@@QAEXHPAXHH@Z PROC NEAR			; Array::copy
+
+; 460  : {
+
+  00c1f	55		 push	 ebp
+  00c20	8b ec		 mov	 ebp, esp
+  00c22	83 ec 10	 sub	 esp, 16			; 00000010H
+  00c25	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 461  : 	// no ambiguous copies allowed in this call, we can't determine the size
+; 462  : 	//
+; 463  : 	if ( length == -1 ) 
+
+  00c28	83 7d 14 ff	 cmp	 DWORD PTR _length$[ebp], -1
+  00c2c	75 24		 jne	 SHORT $L59076
+
+; 464  : 		msgMgr->Fatal ( "Array::copy ( %d, %p, %d, %d ): ambiguous copy calls are not allowed with a pointer.", destIndex, source, srcIndex, length );
+
+  00c2e	8b 45 14	 mov	 eax, DWORD PTR _length$[ebp]
+  00c31	50		 push	 eax
+  00c32	8b 4d 10	 mov	 ecx, DWORD PTR _srcIndex$[ebp]
+  00c35	51		 push	 ecx
+  00c36	8b 55 0c	 mov	 edx, DWORD PTR _source$[ebp]
+  00c39	52		 push	 edx
+  00c3a	8b 45 08	 mov	 eax, DWORD PTR _destIndex$[ebp]
+  00c3d	50		 push	 eax
+  00c3e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59077
+  00c43	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00c49	51		 push	 ecx
+  00c4a	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00c4f	83 c4 18	 add	 esp, 24			; 00000018H
+$L59076:
+
+; 465  : 
+; 466  : 	// skip this call if length is invalid
+; 467  : 	if ( length < 1 )
+
+  00c52	83 7d 14 01	 cmp	 DWORD PTR _length$[ebp], 1
+  00c56	7d 02		 jge	 SHORT $L59078
+
+; 468  : 		return;
+
+  00c58	eb 56		 jmp	 SHORT $L59075
+$L59078:
+
+; 469  : 
+; 470  : 	// verify bounds on this array
+; 471  : 	resize ( destIndex + length );
+
+  00c5a	8b 55 08	 mov	 edx, DWORD PTR _destIndex$[ebp]
+  00c5d	03 55 14	 add	 edx, DWORD PTR _length$[ebp]
+  00c60	52		 push	 edx
+  00c61	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c64	e8 00 00 00 00	 call	 ?resize@Array@@QAEXH@Z	; Array::resize
+
+; 472  : 
+; 473  : 	int esize = elementSize();
+
+  00c69	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c6c	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00c71	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00c76	89 45 f8	 mov	 DWORD PTR _esize$[ebp], eax
+
+; 474  : 
+; 475  : 	// grab pointers to the data and do the copy
+; 476  : 	void *destPtr = calcAddress ( destIndex );
+
+  00c79	8b 45 08	 mov	 eax, DWORD PTR _destIndex$[ebp]
+  00c7c	50		 push	 eax
+  00c7d	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c80	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00c85	89 45 fc	 mov	 DWORD PTR _destPtr$[ebp], eax
+
+; 477  : 	void *sourcePtr = (char *)source + (srcIndex * esize);
+
+  00c88	8b 4d 10	 mov	 ecx, DWORD PTR _srcIndex$[ebp]
+  00c8b	0f af 4d f8	 imul	 ecx, DWORD PTR _esize$[ebp]
+  00c8f	8b 55 0c	 mov	 edx, DWORD PTR _source$[ebp]
+  00c92	03 d1		 add	 edx, ecx
+  00c94	89 55 f4	 mov	 DWORD PTR _sourcePtr$[ebp], edx
+
+; 478  : 
+; 479  : 	memmove ( destPtr, sourcePtr, length * esize );
+
+  00c97	8b 45 14	 mov	 eax, DWORD PTR _length$[ebp]
+  00c9a	0f af 45 f8	 imul	 eax, DWORD PTR _esize$[ebp]
+  00c9e	50		 push	 eax
+  00c9f	8b 4d f4	 mov	 ecx, DWORD PTR _sourcePtr$[ebp]
+  00ca2	51		 push	 ecx
+  00ca3	8b 55 fc	 mov	 edx, DWORD PTR _destPtr$[ebp]
+  00ca6	52		 push	 edx
+  00ca7	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__memmove
+  00cad	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59075:
+
+; 480  : }
+
+  00cb0	8b e5		 mov	 esp, ebp
+  00cb2	5d		 pop	 ebp
+  00cb3	c2 10 00	 ret	 16			; 00000010H
+?copy@Array@@QAEXHPAXHH@Z ENDP				; Array::copy
+_TEXT	ENDS
+PUBLIC	?insert@Array@@QAEXHH@Z				; Array::insert
+_TEXT	SEGMENT
+_value$ = 8
+_index$ = 12
+_this$ = -12
+$T59277 = -8
+?insert@Array@@QAEXHH@Z PROC NEAR			; Array::insert
+
+; 485  : {
+
+  00cb6	55		 push	 ebp
+  00cb7	8b ec		 mov	 ebp, esp
+  00cb9	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00cbc	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 486  : 	copy ( index + 1, dataID(), index, -1 );
+
+  00cbf	6a ff		 push	 -1
+  00cc1	8b 45 0c	 mov	 eax, DWORD PTR _index$[ebp]
+  00cc4	50		 push	 eax
+  00cc5	8d 4d f8	 lea	 ecx, DWORD PTR $T59277[ebp]
+  00cc8	51		 push	 ecx
+  00cc9	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ccc	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00cd1	51		 push	 ecx
+  00cd2	8b cc		 mov	 ecx, esp
+  00cd4	50		 push	 eax
+  00cd5	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00cda	8b 55 0c	 mov	 edx, DWORD PTR _index$[ebp]
+  00cdd	83 c2 01	 add	 edx, 1
+  00ce0	52		 push	 edx
+  00ce1	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ce4	e8 00 00 00 00	 call	 ?copy@Array@@QAEXHVMemID@@HH@Z ; Array::copy
+
+; 487  : 	at ( index, value );
+
+  00ce9	8b 45 08	 mov	 eax, DWORD PTR _value$[ebp]
+  00cec	50		 push	 eax
+  00ced	8b 4d 0c	 mov	 ecx, DWORD PTR _index$[ebp]
+  00cf0	51		 push	 ecx
+  00cf1	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00cf4	e8 00 00 00 00	 call	 ?at@Array@@QAEXHH@Z	; Array::at
+
+; 488  : }
+
+  00cf9	8b e5		 mov	 esp, ebp
+  00cfb	5d		 pop	 ebp
+  00cfc	c2 08 00	 ret	 8
+?insert@Array@@QAEXHH@Z ENDP				; Array::insert
+_TEXT	ENDS
+PUBLIC	?del@Array@@QAEXH@Z				; Array::del
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -16
+_theSize$ = -4
+_sourcePtr$59096 = -12
+_destPtr$59097 = -8
+?del@Array@@QAEXH@Z PROC NEAR				; Array::del
+
+; 493  : {
+
+  00cff	55		 push	 ebp
+  00d00	8b ec		 mov	 ebp, esp
+  00d02	83 ec 10	 sub	 esp, 16			; 00000010H
+  00d05	56		 push	 esi
+  00d06	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 494  : 	int theSize = size();
+
+  00d09	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d0c	e8 00 00 00 00	 call	 ?size@Array@@QAEGXZ	; Array::size
+  00d11	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00d16	89 45 fc	 mov	 DWORD PTR _theSize$[ebp], eax
+
+; 495  : 
+; 496  : 	if ( index < (theSize - 1) ) {
+
+  00d19	8b 45 fc	 mov	 eax, DWORD PTR _theSize$[ebp]
+  00d1c	83 e8 01	 sub	 eax, 1
+  00d1f	39 45 08	 cmp	 DWORD PTR _index$[ebp], eax
+  00d22	7d 4e		 jge	 SHORT $L59095
+
+; 497  : 		// grab pointers to the data and do the copy
+; 498  : 		void *sourcePtr = calcAddress ( index + 1 );
+
+  00d24	8b 4d 08	 mov	 ecx, DWORD PTR _index$[ebp]
+  00d27	83 c1 01	 add	 ecx, 1
+  00d2a	51		 push	 ecx
+  00d2b	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d2e	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00d33	89 45 f4	 mov	 DWORD PTR _sourcePtr$59096[ebp], eax
+
+; 499  : 		void *destPtr = calcAddress ( index );
+
+  00d36	8b 55 08	 mov	 edx, DWORD PTR _index$[ebp]
+  00d39	52		 push	 edx
+  00d3a	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d3d	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00d42	89 45 f8	 mov	 DWORD PTR _destPtr$59097[ebp], eax
+
+; 500  : 
+; 501  : 		memmove ( destPtr, sourcePtr, (theSize - (index + 1)) * elementSize() );
+
+  00d45	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  00d48	83 c0 01	 add	 eax, 1
+  00d4b	8b 75 fc	 mov	 esi, DWORD PTR _theSize$[ebp]
+  00d4e	2b f0		 sub	 esi, eax
+  00d50	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d53	e8 00 00 00 00	 call	 ?elementSize@Array@@QAEGXZ ; Array::elementSize
+  00d58	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00d5d	0f af f0	 imul	 esi, eax
+  00d60	56		 push	 esi
+  00d61	8b 4d f4	 mov	 ecx, DWORD PTR _sourcePtr$59096[ebp]
+  00d64	51		 push	 ecx
+  00d65	8b 55 f8	 mov	 edx, DWORD PTR _destPtr$59097[ebp]
+  00d68	52		 push	 edx
+  00d69	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__memmove
+  00d6f	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59095:
+
+; 503  : }
+
+  00d72	5e		 pop	 esi
+  00d73	8b e5		 mov	 esp, ebp
+  00d75	5d		 pop	 ebp
+  00d76	c2 04 00	 ret	 4
+?del@Array@@QAEXH@Z ENDP				; Array::del
+_TEXT	ENDS
+PUBLIC	??0FakeArrayID@@QAE@XZ				; FakeArrayID::FakeArrayID
+;	COMDAT ??0ArrayID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0ArrayID@@QAE@XZ PROC NEAR				; ArrayID::ArrayID, COMDAT
+
+; 36   : 	ArrayID() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0FakeArrayID@@QAE@XZ	; FakeArrayID::FakeArrayID
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0ArrayID@@QAE@XZ ENDP					; ArrayID::ArrayID
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0FakeArrayID@@QAE@XZ PROC NEAR			; FakeArrayID::FakeArrayID, COMDAT
+
+; 34   : FakeTemplateID ( FakeArrayID, ArrayHeader, MemArray )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0FakeArrayID@@QAE@XZ ENDP				; FakeArrayID::FakeArrayID
+_TEXT	ENDS
+PUBLIC	??0FakeArrayID@@QAE@G@Z				; FakeArrayID::FakeArrayID
+;	COMDAT ??0ArrayID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0ArrayID@@QAE@G@Z PROC NEAR				; ArrayID::ArrayID, COMDAT
+
+; 38   : 	ArrayID(SOL_Handle h) : FakeArrayID(h) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0FakeArrayID@@QAE@G@Z	; FakeArrayID::FakeArrayID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0ArrayID@@QAE@G@Z ENDP				; ArrayID::ArrayID
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0FakeArrayID@@QAE@G@Z PROC NEAR			; FakeArrayID::FakeArrayID, COMDAT
+
+; 34   : FakeTemplateID ( FakeArrayID, ArrayHeader, MemArray )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0FakeArrayID@@QAE@G@Z ENDP				; FakeArrayID::FakeArrayID
+_TEXT	ENDS
+PUBLIC	??DFakeArrayID@@QBEPAUArrayHeader@@XZ		; FakeArrayID::operator*
+PUBLIC	?Get@ArrayID@@QAEXI@Z				; ArrayID::Get
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT
+_size$ = 8
+_type$ = 12
+_this$ = -12
+_elementSize$ = -8
+_array$ = -4
+??0ArrayID@@QAE@HW4ArrayType@@@Z PROC NEAR		; ArrayID::ArrayID, COMDAT
+
+; 40   : 	ArrayID ( int size, ArrayType type )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0FakeArrayID@@QAE@XZ	; FakeArrayID::FakeArrayID
+
+; 41   : 	{
+; 42   : 		int elementSize = ArrayElementSize[type];
+
+  00011	8b 45 0c	 mov	 eax, DWORD PTR _type$[ebp]
+  00014	8b 0c 85 00 00
+	00 00		 mov	 ecx, DWORD PTR ?ArrayElementSize@@3PAHA[eax*4]
+  0001b	89 4d f8	 mov	 DWORD PTR _elementSize$[ebp], ecx
+
+; 43   : 
+; 44   : 		// allocate the base array
+; 45   : 		Get ( elementSize * size + sizeof ( ArrayHeader ) );
+
+  0001e	8b 55 f8	 mov	 edx, DWORD PTR _elementSize$[ebp]
+  00021	0f af 55 08	 imul	 edx, DWORD PTR _size$[ebp]
+  00025	83 c2 04	 add	 edx, 4
+  00028	52		 push	 edx
+  00029	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002c	e8 00 00 00 00	 call	 ?Get@ArrayID@@QAEXI@Z	; ArrayID::Get
+
+; 46   : 
+; 47   : 		// set the default values for the Array struct that I represent
+; 48   : 		ArrayHeader *array = **this;
+
+  00031	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00034	e8 00 00 00 00	 call	 ??DFakeArrayID@@QBEPAUArrayHeader@@XZ ; FakeArrayID::operator*
+  00039	89 45 fc	 mov	 DWORD PTR _array$[ebp], eax
+
+; 49   : 		array->elementSize = elementSize;
+
+  0003c	8b 45 fc	 mov	 eax, DWORD PTR _array$[ebp]
+  0003f	66 8b 4d f8	 mov	 cx, WORD PTR _elementSize$[ebp]
+  00043	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 50   : 		array->size = size;
+
+  00046	8b 55 fc	 mov	 edx, DWORD PTR _array$[ebp]
+  00049	66 8b 45 08	 mov	 ax, WORD PTR _size$[ebp]
+  0004d	66 89 42 02	 mov	 WORD PTR [edx+2], ax
+
+; 51   : 	}
+
+  00051	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00054	8b e5		 mov	 esp, ebp
+  00056	5d		 pop	 ebp
+  00057	c2 08 00	 ret	 8
+??0ArrayID@@QAE@HW4ArrayType@@@Z ENDP			; ArrayID::ArrayID
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??DFakeArrayID@@QBEPAUArrayHeader@@XZ PROC NEAR		; FakeArrayID::operator*, COMDAT
+
+; 34   : FakeTemplateID ( FakeArrayID, ArrayHeader, MemArray )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+??DFakeArrayID@@QBEPAUArrayHeader@@XZ ENDP		; FakeArrayID::operator*
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT
+_size$ = 8
+_this$ = -4
+?Get@ArrayID@@QAEXI@Z PROC NEAR				; ArrayID::Get, COMDAT
+
+; 55   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 56   : 		// initialize arrays to 0
+; 57   : 
+; 58   : 		//	include defaulted args because CodeWarrior 1.1.1.2 doesn't
+; 59   : 		//	consider enums a separate type and so can't distinguish between
+; 60   : 		//	overloaded Get()s.
+; 61   : 		MemID::Get(MemArray, size, INITMEMORY | MOVEABLE, 0, 0, 0, IllegalHandle);
+
+  00007	6a 00		 push	 0
+  00009	6a 00		 push	 0
+  0000b	6a 00		 push	 0
+  0000d	6a 00		 push	 0
+  0000f	68 00 02 01 00	 push	 66048			; 00010200H
+  00014	8b 45 08	 mov	 eax, DWORD PTR _size$[ebp]
+  00017	50		 push	 eax
+  00018	6a 35		 push	 53			; 00000035H
+  0001a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001d	e8 00 00 00 00	 call	 ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+
+; 62   : 	}
+
+  00022	8b e5		 mov	 esp, ebp
+  00024	5d		 pop	 ebp
+  00025	c2 04 00	 ret	 4
+?Get@ArrayID@@QAEXI@Z ENDP				; ArrayID::Get
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -8
+??0Array@@QAE@XZ PROC NEAR				; Array::Array, COMDAT
+
+; 74   : 	Array() {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+
+; 75   : 		dataID ( 0 );
+
+  00011	51		 push	 ecx
+  00012	8b cc		 mov	 ecx, esp
+  00014	6a 00		 push	 0
+  00016	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0001b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001e	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 76   : 	}
+
+  00023	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00026	8b e5		 mov	 esp, ebp
+  00028	5d		 pop	 ebp
+  00029	c3		 ret	 0
+??0Array@@QAE@XZ ENDP					; Array::Array
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@VMemID@@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -8
+??0Array@@QAE@VMemID@@@Z PROC NEAR			; Array::Array, COMDAT
+
+; 79   : 	Array ( MemID id ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+
+; 80   : 		dataID ( id );
+
+  00011	51		 push	 ecx
+  00012	8b cc		 mov	 ecx, esp
+  00014	8d 45 08	 lea	 eax, DWORD PTR _id$[ebp]
+  00017	50		 push	 eax
+  00018	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0001d	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00020	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 81   : 	}
+
+  00025	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??0Array@@QAE@VMemID@@@Z ENDP				; Array::Array
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1Array@@QAE@XZ PROC NEAR				; Array::~Array, COMDAT
+
+; 88   : 	~Array() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c3		 ret	 0
+??1Array@@QAE@XZ ENDP					; Array::~Array
+_TEXT	ENDS
+;	COMDAT ?memType@Array@@QAE?AW4MemType@@XZ
+_TEXT	SEGMENT
+_this$ = -8
+$T59292 = -4
+?memType@Array@@QAE?AW4MemType@@XZ PROC NEAR		; Array::memType, COMDAT
+
+; 91   : 	MemType memType ( void ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 92   : 		return dataID().GetMemType();
+
+  00009	8d 45 fc	 lea	 eax, DWORD PTR $T59292[ebp]
+  0000c	50		 push	 eax
+  0000d	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00010	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00015	8b c8		 mov	 ecx, eax
+  00017	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+
+; 93   : 	}
+
+  0001c	8b e5		 mov	 esp, ebp
+  0001e	5d		 pop	 ebp
+  0001f	c3		 ret	 0
+?memType@Array@@QAE?AW4MemType@@XZ ENDP			; Array::memType
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT
+___$ReturnUdt$ = 8
+_this$ = -4
+?dataID@Array@@QAE?AVMemID@@XZ PROC NEAR		; Array::dataID, COMDAT
+
+; 96   : 	MemID dataID ( void ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 97   : 		return _dataID;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00013	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+
+; 98   : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?dataID@Array@@QAE?AVMemID@@XZ ENDP			; Array::dataID
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT
+_memID$ = 8
+_this$ = -4
+?dataID@Array@@QAEXVMemID@@@Z PROC NEAR			; Array::dataID, COMDAT
+
+; 111  : 	void dataID ( MemID memID ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 112  : 		_dataID = memID;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _memID$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 113  : 	}
+
+  00011	8b e5		 mov	 esp, ebp
+  00013	5d		 pop	 ebp
+  00014	c2 04 00	 ret	 4
+?dataID@Array@@QAEXVMemID@@@Z ENDP			; Array::dataID
+_TEXT	ENDS
+PUBLIC	??0FakeObjectID@@QAE@XZ				; FakeObjectID::FakeObjectID
+;	COMDAT ??0ObjectID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0ObjectID@@QAE@XZ PROC NEAR				; ObjectID::ObjectID, COMDAT
+
+; 227  : 	ObjectID() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0FakeObjectID@@QAE@XZ	; FakeObjectID::FakeObjectID
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0ObjectID@@QAE@XZ ENDP				; ObjectID::ObjectID
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0FakeObjectID@@QAE@XZ PROC NEAR			; FakeObjectID::FakeObjectID, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0FakeObjectID@@QAE@XZ ENDP				; FakeObjectID::FakeObjectID
+_TEXT	ENDS
+PUBLIC	??0FakeObjectID@@QAE@G@Z			; FakeObjectID::FakeObjectID
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0ObjectID@@QAE@G@Z PROC NEAR				; ObjectID::ObjectID, COMDAT
+
+; 230  : 	ObjectID(SOL_Handle h) : FakeObjectID(h) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0FakeObjectID@@QAE@G@Z ; FakeObjectID::FakeObjectID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0ObjectID@@QAE@G@Z ENDP				; ObjectID::ObjectID
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0FakeObjectID@@QAE@G@Z PROC NEAR			; FakeObjectID::FakeObjectID, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0FakeObjectID@@QAE@G@Z ENDP				; FakeObjectID::FakeObjectID
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsObject@ObjectID@@QBEHXZ PROC NEAR			; ObjectID::IsObject, COMDAT
+
+; 247  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 248  : 		return IsValid() && GetMemType() == MemObject;
+
+  00009	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ?IsValid@MemID@@QBEHXZ	; MemID::IsValid
+  00011	85 c0		 test	 eax, eax
+  00013	74 16		 je	 SHORT $L59300
+  00015	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00018	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  0001d	83 f8 34	 cmp	 eax, 52			; 00000034H
+  00020	75 09		 jne	 SHORT $L59300
+  00022	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+  00029	eb 07		 jmp	 SHORT $L59301
+$L59300:
+  0002b	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+$L59301:
+  00032	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 249  : 	}
+
+  00035	8b e5		 mov	 esp, ebp
+  00037	5d		 pop	 ebp
+  00038	c3		 ret	 0
+?IsObject@ObjectID@@QBEHXZ ENDP				; ObjectID::IsObject
+_TEXT	ENDS
+PUBLIC	?GetProperty@Object@@QAEFG@Z			; Object::GetProperty
+PUBLIC	??CFakeObjectID@@QBEPAUObject@@XZ		; FakeObjectID::operator->
+PUBLIC	?AssureValid@ObjectID@@QBEXXZ			; ObjectID::AssureValid
+;	COMDAT ?GetProperty@ObjectID@@QBEFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -4
+?GetProperty@ObjectID@@QBEFG@Z PROC NEAR		; ObjectID::GetProperty, COMDAT
+
+; 290  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 291  : 		//	get a property given a selector
+; 292  : 		AssureValid();
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?AssureValid@ObjectID@@QBEXXZ ; ObjectID::AssureValid
+
+; 293  : 		return (*this)->GetProperty(selector);
+
+  0000f	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  00013	50		 push	 eax
+  00014	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00017	e8 00 00 00 00	 call	 ??CFakeObjectID@@QBEPAUObject@@XZ ; FakeObjectID::operator->
+  0001c	8b c8		 mov	 ecx, eax
+  0001e	e8 00 00 00 00	 call	 ?GetProperty@Object@@QAEFG@Z ; Object::GetProperty
+
+; 294  : 	}
+
+  00023	8b e5		 mov	 esp, ebp
+  00025	5d		 pop	 ebp
+  00026	c2 04 00	 ret	 4
+?GetProperty@ObjectID@@QBEFG@Z ENDP			; ObjectID::GetProperty
+_TEXT	ENDS
+PUBLIC	?GetPropAddrCheck@Object@@QAEPAFG@Z		; Object::GetPropAddrCheck
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -4
+?GetProperty@Object@@QAEFG@Z PROC NEAR			; Object::GetProperty, COMDAT
+
+; 170  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 171  : 		//	get a property given a selector
+; 172  : 		return *GetPropAddrCheck(selector);
+
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ?GetPropAddrCheck@Object@@QAEPAFG@Z ; Object::GetPropAddrCheck
+  00014	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 173  : 	}
+
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+?GetProperty@Object@@QAEFG@Z ENDP			; Object::GetProperty
+_TEXT	ENDS
+PUBLIC	?GetPropAddr@Object@@QAEPAFG@Z			; Object::GetPropAddr
+EXTRN	?Fatal@MsgMgr@@QAAXHZZ:NEAR			; MsgMgr::Fatal
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -8
+_property$ = -4
+?GetPropAddrCheck@Object@@QAEPAFG@Z PROC NEAR		; Object::GetPropAddrCheck, COMDAT
+
+; 153  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 154  : 		//	get a property's address, checking for valid property
+; 155  : 		Property* property = GetPropAddr(selector);
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  0000d	50		 push	 eax
+  0000e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00011	e8 00 00 00 00	 call	 ?GetPropAddr@Object@@QAEPAFG@Z ; Object::GetPropAddr
+  00016	89 45 fc	 mov	 DWORD PTR _property$[ebp], eax
+
+; 156  : 		if (!property)
+
+  00019	83 7d fc 00	 cmp	 DWORD PTR _property$[ebp], 0
+  0001d	75 1b		 jne	 SHORT $L58146
+
+; 157  : 			msgMgr->Fatal(Msg_InvalidProperty, selector);
+
+  0001f	8b 4d 08	 mov	 ecx, DWORD PTR _selector$[ebp]
+  00022	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00028	51		 push	 ecx
+  00029	6a 29		 push	 41			; 00000029H
+  0002b	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00031	52		 push	 edx
+  00032	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXHZZ	; MsgMgr::Fatal
+  00037	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58146:
+
+; 158  : 		return property;
+
+  0003a	8b 45 fc	 mov	 eax, DWORD PTR _property$[ebp]
+
+; 159  : 	}
+
+  0003d	8b e5		 mov	 esp, ebp
+  0003f	5d		 pop	 ebp
+  00040	c2 04 00	 ret	 4
+?GetPropAddrCheck@Object@@QAEPAFG@Z ENDP		; Object::GetPropAddrCheck
+_TEXT	ENDS
+PUBLIC	?selectorDict@Object@@QAEPAVSelectorDict@@XZ	; Object::selectorDict
+PUBLIC	??AObject@@QAEAAFH@Z				; Object::operator[]
+EXTRN	?get@SelectorDict@@QAEHG@Z:NEAR			; SelectorDict::get
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -8
+_index$ = -4
+?GetPropAddr@Object@@QAEPAFG@Z PROC NEAR		; Object::GetPropAddr, COMDAT
+
+; 127  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 128  : 		int index = selectorDict()->get ( selector );
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  0000d	50		 push	 eax
+  0000e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00011	e8 00 00 00 00	 call	 ?selectorDict@Object@@QAEPAVSelectorDict@@XZ ; Object::selectorDict
+  00016	8b c8		 mov	 ecx, eax
+  00018	e8 00 00 00 00	 call	 ?get@SelectorDict@@QAEHG@Z ; SelectorDict::get
+  0001d	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 129  : 
+; 130  : 		if ( index != -1 && !selectorDict()->script )
+
+  00020	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  00024	74 2b		 je	 SHORT $L58137
+  00026	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00029	e8 00 00 00 00	 call	 ?selectorDict@Object@@QAEPAVSelectorDict@@XZ ; Object::selectorDict
+  0002e	33 c9		 xor	 ecx, ecx
+  00030	66 8b 48 16	 mov	 cx, WORD PTR [eax+22]
+  00034	85 c9		 test	 ecx, ecx
+  00036	75 19		 jne	 SHORT $L58137
+
+; 131  : 			return &(*this)[selectorDict()->offset]; 
+
+  00038	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0003b	e8 00 00 00 00	 call	 ?selectorDict@Object@@QAEPAVSelectorDict@@XZ ; Object::selectorDict
+  00040	33 d2		 xor	 edx, edx
+  00042	66 8b 50 14	 mov	 dx, WORD PTR [eax+20]
+  00046	52		 push	 edx
+  00047	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0004a	e8 00 00 00 00	 call	 ??AObject@@QAEAAFH@Z	; Object::operator[]
+  0004f	eb 02		 jmp	 SHORT $L58135
+$L58137:
+
+; 132  : 
+; 133  : 		return 0;
+
+  00051	33 c0		 xor	 eax, eax
+$L58135:
+
+; 134  : 	}
+
+  00053	8b e5		 mov	 esp, ebp
+  00055	5d		 pop	 ebp
+  00056	c2 04 00	 ret	 4
+?GetPropAddr@Object@@QAEPAFG@Z ENDP			; Object::GetPropAddr
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?selectorDict@Object@@QAEPAVSelectorDict@@XZ PROC NEAR	; Object::selectorDict, COMDAT
+
+; 102  : 	SelectorDict *selectorDict ( void ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 103  : 		return _selectorDict;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+
+; 104  : 	};
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?selectorDict@Object@@QAEPAVSelectorDict@@XZ ENDP	; Object::selectorDict
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??AObject@@QAEAAFH@Z PROC NEAR				; Object::operator[], COMDAT
+
+; 117  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : 		//	get a reference to a property given the number of the property
+; 119  : 		return ((Property*) this)[index];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8d 04 41	 lea	 eax, DWORD PTR [ecx+eax*2]
+
+; 120  : 	}
+
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??AObject@@QAEAAFH@Z ENDP				; Object::operator[]
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??CFakeObjectID@@QBEPAUObject@@XZ PROC NEAR		; FakeObjectID::operator->, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+??CFakeObjectID@@QBEPAUObject@@XZ ENDP			; FakeObjectID::operator->
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?AssureValid@ObjectID@@QBEXXZ PROC NEAR			; ObjectID::AssureValid, COMDAT
+
+; 238  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 239  : 		if (!IsObject())
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?IsObject@ObjectID@@QBEHXZ ; ObjectID::IsObject
+  0000f	85 c0		 test	 eax, eax
+  00011	75 1e		 jne	 SHORT $L58305
+
+; 240  : 			msgMgr->Fatal(Msg_NotObject, (int) *this);
+
+  00013	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00016	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  0001b	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00020	50		 push	 eax
+  00021	6a 2f		 push	 47			; 0000002fH
+  00023	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00028	50		 push	 eax
+  00029	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXHZZ	; MsgMgr::Fatal
+  0002e	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58305:
+
+; 241  : 	}
+
+  00031	8b e5		 mov	 esp, ebp
+  00033	5d		 pop	 ebp
+  00034	c3		 ret	 0
+?AssureValid@ObjectID@@QBEXXZ ENDP			; ObjectID::AssureValid
+_TEXT	ENDS
+;	COMDAT ?Get@TextID@@QAEXII@Z
+_TEXT	SEGMENT
+_size$ = 8
+_attrs$ = 12
+_this$ = -4
+?Get@TextID@@QAEXII@Z PROC NEAR				; TextID::Get, COMDAT
+
+; 34   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 35   : 		MemID::Get(MemText, size, attrs);
+
+  00007	6a 00		 push	 0
+  00009	6a 00		 push	 0
+  0000b	6a 00		 push	 0
+  0000d	6a 00		 push	 0
+  0000f	8b 45 0c	 mov	 eax, DWORD PTR _attrs$[ebp]
+  00012	50		 push	 eax
+  00013	8b 4d 08	 mov	 ecx, DWORD PTR _size$[ebp]
+  00016	51		 push	 ecx
+  00017	6a 33		 push	 51			; 00000033H
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	e8 00 00 00 00	 call	 ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+
+; 36   : 	}
+
+  00021	8b e5		 mov	 esp, ebp
+  00023	5d		 pop	 ebp
+  00024	c2 08 00	 ret	 8
+?Get@TextID@@QAEXII@Z ENDP				; TextID::Get
+_TEXT	ENDS
+END

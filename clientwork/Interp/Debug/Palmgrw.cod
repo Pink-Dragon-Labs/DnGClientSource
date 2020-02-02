@@ -1,0 +1,1169 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Palmgrw.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT PARA USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??ASOLPalette@@QAEAAVRgb24F@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4Screen@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Current@PaletteMgrIndex@@UBEABVSOLPalette@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Source@PaletteMgrIndex@@UBEABVSOLPalette@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Next@PaletteMgrIndex@@UBEABVSOLPalette@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CycleMap@PaletteMgrIndex@@UBEPBEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?VaryPercent@PaletteMgrIndex@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?VaryPause@PaletteMgrIndex@@UAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0PaletteMgrTrue@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgrTrue@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgrTrue@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgrIWin@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?UpdateHardware@PaletteMgrIWin@@UAEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgrIWin@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgrTWin@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?UpdateHardware@PaletteMgrTWin@@UAEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgrTWin@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SOL_Cursor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Cursor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7PaletteMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_Cursor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PaletteMgrTrue@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PaletteMgrIWin@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PaletteMgrTWin@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?lPal@@3U__unnamed@@A				; lPal
+PUBLIC	?systemPal@@3PAUtagPALETTEENTRY@@A		; systemPal
+PUBLIC	?sysEntry@@3PAKA				; sysEntry
+PUBLIC	?sysAlternate@@3PAKA				; sysAlternate
+PUBLIC	?paletteUpdated@@3HA				; paletteUpdated
+_BSS	SEGMENT
+?lPal@@3U__unnamed@@A DB 0404H DUP (?)			; lPal
+?systemPal@@3PAUtagPALETTEENTRY@@A DD 0100H DUP (?)	; systemPal
+?sysEntry@@3PAKA DD 0aH DUP (?)				; sysEntry
+?sysAlternate@@3PAKA DD 0aH DUP (?)			; sysAlternate
+_BSS	ENDS
+_DATA	SEGMENT
+?paletteUpdated@@3HA DD 01H				; paletteUpdated
+_DATA	ENDS
+PUBLIC	?InitPalette@@YAXXZ				; InitPalette
+EXTRN	__imp__CreatePalette@4:NEAR
+EXTRN	__imp__DeleteObject@4:NEAR
+EXTRN	__imp__RealizePalette@4:NEAR
+EXTRN	__imp__SelectPalette@12:NEAR
+EXTRN	?hMyDC@@3PAUHDC__@@A:DWORD			; hMyDC
+EXTRN	?hPal@@3PAUHPALETTE__@@A:DWORD			; hPal
+EXTRN	?hOldPal@@3PAUHPALETTE__@@A:DWORD		; hOldPal
+EXTRN	?WING@@3HA:DWORD				; WING
+_TEXT	SEGMENT
+_i$56365 = -12
+_tmp$56375 = -4
+_worked$56376 = -8
+?InitPalette@@YAXXZ PROC NEAR				; InitPalette
+
+; 42   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+
+; 43   :   	lPal.palVersion		= 0x300;
+
+  00006	66 c7 05 00 00
+	00 00 00 03	 mov	 WORD PTR ?lPal@@3U__unnamed@@A, 768 ; 00000300H
+
+; 44   :   	lPal.palNumEntries	= USERPALETTE;
+
+  0000f	66 c7 05 02 00
+	00 00 ec 00	 mov	 WORD PTR ?lPal@@3U__unnamed@@A+2, 236 ; 000000ecH
+
+; 45   : 
+; 46   : #ifdef WIN32S
+; 47   : 	if (!WING)
+
+  00018	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?WING@@3HA, 0	; WING
+  0001f	0f 85 f1 00 00
+	00		 jne	 $L56364
+
+; 49   : #endif
+; 50   : 		// DIB palette - not identity
+; 51   : 		// set palette to black
+; 52   : 	  	lPal.palVersion		= 0x300;
+
+  00025	66 c7 05 00 00
+	00 00 00 03	 mov	 WORD PTR ?lPal@@3U__unnamed@@A, 768 ; 00000300H
+
+; 53   : 	  	lPal.palNumEntries	= USERPALETTE;
+
+  0002e	66 c7 05 02 00
+	00 00 ec 00	 mov	 WORD PTR ?lPal@@3U__unnamed@@A+2, 236 ; 000000ecH
+
+; 54   : 
+; 55   : 	  	for (int i = 0; i < USERPALETTE; i++)
+
+  00037	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _i$56365[ebp], 0
+  0003e	eb 09		 jmp	 SHORT $L56366
+$L56367:
+  00040	8b 45 f4	 mov	 eax, DWORD PTR _i$56365[ebp]
+  00043	83 c0 01	 add	 eax, 1
+  00046	89 45 f4	 mov	 DWORD PTR _i$56365[ebp], eax
+$L56366:
+  00049	81 7d f4 ec 00
+	00 00		 cmp	 DWORD PTR _i$56365[ebp], 236 ; 000000ecH
+  00050	7d 2e		 jge	 SHORT $L56368
+
+; 57   : 		  	lPal.palPalEntry[i].peRed	= (BYTE)0;
+
+  00052	8b 4d f4	 mov	 ecx, DWORD PTR _i$56365[ebp]
+  00055	c6 04 8d 04 00
+	00 00 00	 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[ecx*4+4], 0
+
+; 58   : 		  	lPal.palPalEntry[i].peGreen	= (BYTE)0;
+
+  0005d	8b 55 f4	 mov	 edx, DWORD PTR _i$56365[ebp]
+  00060	c6 04 95 05 00
+	00 00 00	 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+5], 0
+
+; 59   : 		  	lPal.palPalEntry[i].peBlue	= (BYTE)0;
+
+  00068	8b 45 f4	 mov	 eax, DWORD PTR _i$56365[ebp]
+  0006b	c6 04 85 06 00
+	00 00 00	 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+6], 0
+
+; 60   : 	  		lPal.palPalEntry[i].peFlags = (BYTE)PC_RESERVED;
+
+  00073	8b 4d f4	 mov	 ecx, DWORD PTR _i$56365[ebp]
+  00076	c6 04 8d 07 00
+	00 00 01	 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[ecx*4+7], 1
+
+; 61   : 		}
+
+  0007e	eb c0		 jmp	 SHORT $L56367
+$L56368:
+
+; 62   : 	
+; 63   : 	  	hPal = CreatePalette ((LPLOGPALETTE)&lPal);
+
+  00080	68 00 00 00 00	 push	 OFFSET FLAT:?lPal@@3U__unnamed@@A ; lPal
+  00085	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__CreatePalette@4
+  0008b	a3 00 00 00 00	 mov	 DWORD PTR ?hPal@@3PAUHPALETTE__@@A, eax ; hPal
+
+; 64   : 		assert(hPal != NULL);
+; 65   : 
+; 66   : 	  	hOldPal = SelectPalette(hMyDC, hPal, 0);
+
+  00090	6a 00		 push	 0
+  00092	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?hPal@@3PAUHPALETTE__@@A ; hPal
+  00098	52		 push	 edx
+  00099	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hMyDC@@3PAUHDC__@@A ; hMyDC
+  0009e	50		 push	 eax
+  0009f	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SelectPalette@12
+  000a5	a3 00 00 00 00	 mov	 DWORD PTR ?hOldPal@@3PAUHPALETTE__@@A, eax ; hOldPal
+
+; 67   : 
+; 68   : 	  	RealizePalette(hMyDC);
+
+  000aa	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hMyDC@@3PAUHDC__@@A ; hMyDC
+  000b0	51		 push	 ecx
+  000b1	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__RealizePalette@4
+
+; 69   : 
+; 70   : 		// Here, we de-select the palette and then select it again.  This magic
+; 71   : 		// is done so that our logical palette entry 0 is really at system
+; 72   : 		// palette entry 10 so we can accuratly display device dependent bitmaps.
+; 73   : 		// I don't know why this works.
+; 74   : 	  	HPALETTE tmp = SelectPalette(hMyDC, hOldPal, 0);
+
+  000b7	6a 00		 push	 0
+  000b9	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?hOldPal@@3PAUHPALETTE__@@A ; hOldPal
+  000bf	52		 push	 edx
+  000c0	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hMyDC@@3PAUHDC__@@A ; hMyDC
+  000c5	50		 push	 eax
+  000c6	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SelectPalette@12
+  000cc	89 45 fc	 mov	 DWORD PTR _tmp$56375[ebp], eax
+
+; 75   : 
+; 76   : 	  	Bool worked = DeleteObject(hPal);
+
+  000cf	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hPal@@3PAUHPALETTE__@@A ; hPal
+  000d5	51		 push	 ecx
+  000d6	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__DeleteObject@4
+  000dc	89 45 f8	 mov	 DWORD PTR _worked$56376[ebp], eax
+
+; 77   : 
+; 78   : 	  	hPal = CreatePalette ((LPLOGPALETTE)&lPal);
+
+  000df	68 00 00 00 00	 push	 OFFSET FLAT:?lPal@@3U__unnamed@@A ; lPal
+  000e4	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__CreatePalette@4
+  000ea	a3 00 00 00 00	 mov	 DWORD PTR ?hPal@@3PAUHPALETTE__@@A, eax ; hPal
+
+; 79   : 
+; 80   : 	  	hOldPal = SelectPalette (hMyDC, hPal, 0);
+
+  000ef	6a 00		 push	 0
+  000f1	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?hPal@@3PAUHPALETTE__@@A ; hPal
+  000f7	52		 push	 edx
+  000f8	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hMyDC@@3PAUHDC__@@A ; hMyDC
+  000fd	50		 push	 eax
+  000fe	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SelectPalette@12
+  00104	a3 00 00 00 00	 mov	 DWORD PTR ?hOldPal@@3PAUHPALETTE__@@A, eax ; hOldPal
+
+; 81   : 
+; 82   : 	  	RealizePalette(hMyDC);
+
+  00109	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hMyDC@@3PAUHDC__@@A ; hMyDC
+  0010f	51		 push	 ecx
+  00110	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__RealizePalette@4
+$L56364:
+
+; 86   : #endif
+; 87   : }
+
+  00116	8b e5		 mov	 esp, ebp
+  00118	5d		 pop	 ebp
+  00119	c3		 ret	 0
+?InitPalette@@YAXXZ ENDP				; InitPalette
+_TEXT	ENDS
+PUBLIC	?TermPalette@@YAXXZ				; TermPalette
+_TEXT	SEGMENT
+_testPal$ = -8
+_worked$ = -4
+?TermPalette@@YAXXZ PROC NEAR				; TermPalette
+
+; 92   : {
+
+  0011a	55		 push	 ebp
+  0011b	8b ec		 mov	 ebp, esp
+  0011d	83 ec 08	 sub	 esp, 8
+
+; 93   :   	HPALETTE testPal = SelectPalette(hMyDC, hOldPal, 0);
+
+  00120	6a 00		 push	 0
+  00122	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hOldPal@@3PAUHPALETTE__@@A ; hOldPal
+  00127	50		 push	 eax
+  00128	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hMyDC@@3PAUHDC__@@A ; hMyDC
+  0012e	51		 push	 ecx
+  0012f	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SelectPalette@12
+  00135	89 45 f8	 mov	 DWORD PTR _testPal$[ebp], eax
+
+; 94   : //	assert(testPal != NULL);
+; 95   : 
+; 96   :   	Bool worked = DeleteObject(hPal);
+
+  00138	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?hPal@@3PAUHPALETTE__@@A ; hPal
+  0013e	52		 push	 edx
+  0013f	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__DeleteObject@4
+  00145	89 45 fc	 mov	 DWORD PTR _worked$[ebp], eax
+
+; 97   : 	assert(worked);
+; 98   : }
+
+  00148	8b e5		 mov	 esp, ebp
+  0014a	5d		 pop	 ebp
+  0014b	c3		 ret	 0
+?TermPalette@@YAXXZ ENDP				; TermPalette
+_TEXT	ENDS
+PUBLIC	?UpdatePalette@@YAHAAVSOLPalette@@ABV1@H@Z	; UpdatePalette
+PUBLIC	??ASOLPalette@@QAEAAVRgb24F@@H@Z		; SOLPalette::operator[]
+EXTRN	__imp__AnimatePalette@16:NEAR
+EXTRN	?gamma@@3QAY0BAA@$$CBDA:BYTE			; gamma
+EXTRN	??4SOLPalette@@QAEAAV0@ABV0@@Z:NEAR		; SOLPalette::operator=
+EXTRN	??8SOLPalette@@QBEHABV0@@Z:NEAR			; SOLPalette::operator==
+EXTRN	?bmiHdr@@3UBMI@@A:BYTE				; bmiHdr
+EXTRN	?TRUECOLOR@@3HA:DWORD				; TRUECOLOR
+_TEXT	SEGMENT
+_current$ = 8
+_next$ = 12
+_gammaValue$ = 16
+_hiIndex$56390 = -8
+_hiVal$56391 = -4
+_i$56393 = -12
+_rgb$56397 = -20
+_colorVal$56401 = -16
+_i$56404 = -24
+_rgb$56408 = -32
+_colorVal$56412 = -28
+_i$56415 = -36
+?UpdatePalette@@YAHAAVSOLPalette@@ABV1@H@Z PROC NEAR	; UpdatePalette
+
+; 102  : {
+
+  0014c	55		 push	 ebp
+  0014d	8b ec		 mov	 ebp, esp
+  0014f	83 ec 24	 sub	 esp, 36			; 00000024H
+
+; 103  :    if (current == next)
+
+  00152	8b 45 0c	 mov	 eax, DWORD PTR _next$[ebp]
+  00155	50		 push	 eax
+  00156	8b 4d 08	 mov	 ecx, DWORD PTR _current$[ebp]
+  00159	e8 00 00 00 00	 call	 ??8SOLPalette@@QBEHABV0@@Z ; SOLPalette::operator==
+  0015e	85 c0		 test	 eax, eax
+  00160	74 07		 je	 SHORT $L56388
+
+; 104  : 		return False;
+
+  00162	33 c0		 xor	 eax, eax
+  00164	e9 4e 02 00 00	 jmp	 $L56387
+$L56388:
+
+; 105  : 
+; 106  : 	current = next;
+
+  00169	8b 4d 0c	 mov	 ecx, DWORD PTR _next$[ebp]
+  0016c	51		 push	 ecx
+  0016d	8b 4d 08	 mov	 ecx, DWORD PTR _current$[ebp]
+  00170	e8 00 00 00 00	 call	 ??4SOLPalette@@QAEAAV0@ABV0@@Z ; SOLPalette::operator=
+
+; 107  : 
+; 108  : 
+; 109  : #ifdef WIN32S
+; 110  : 	if (!WING)
+
+  00175	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?WING@@3HA, 0	; WING
+  0017c	0f 85 30 02 00
+	00		 jne	 $L56419
+
+; 112  : #endif
+; 113  : 		// Normal palette for DIB
+; 114  : 		int hiIndex;
+; 115  : 		int hiVal = 0;
+
+  00182	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _hiVal$56391[ebp], 0
+
+; 116  : 
+; 117  : 		if (gammaValue > -1)
+
+  00189	83 7d 10 ff	 cmp	 DWORD PTR _gammaValue$[ebp], -1
+  0018d	0f 8e e0 00 00
+	00		 jle	 $L56392
+
+; 119  : 			for (int i = 0; i < 236; i++)
+
+  00193	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _i$56393[ebp], 0
+  0019a	eb 09		 jmp	 SHORT $L56394
+$L56395:
+  0019c	8b 55 f4	 mov	 edx, DWORD PTR _i$56393[ebp]
+  0019f	83 c2 01	 add	 edx, 1
+  001a2	89 55 f4	 mov	 DWORD PTR _i$56393[ebp], edx
+$L56394:
+  001a5	81 7d f4 ec 00
+	00 00		 cmp	 DWORD PTR _i$56393[ebp], 236 ; 000000ecH
+  001ac	0f 8d bc 00 00
+	00		 jge	 $L56396
+
+; 121  : 				Rgb24 rgb = current[i];
+
+  001b2	8b 45 f4	 mov	 eax, DWORD PTR _i$56393[ebp]
+  001b5	50		 push	 eax
+  001b6	8b 4d 08	 mov	 ecx, DWORD PTR _current$[ebp]
+  001b9	e8 00 00 00 00	 call	 ??ASOLPalette@@QAEAAVRgb24F@@H@Z ; SOLPalette::operator[]
+  001be	66 8b 08	 mov	 cx, WORD PTR [eax]
+  001c1	66 89 4d ec	 mov	 WORD PTR _rgb$56397[ebp], cx
+  001c5	8a 50 02	 mov	 dl, BYTE PTR [eax+2]
+  001c8	88 55 ee	 mov	 BYTE PTR _rgb$56397[ebp+2], dl
+
+; 122  : 			 	lPal.palPalEntry[i].peRed =   (BYTE)gamma[gammaValue][rgb.red];
+
+  001cb	8b 45 10	 mov	 eax, DWORD PTR _gammaValue$[ebp]
+  001ce	c1 e0 08	 shl	 eax, 8
+  001d1	8b 4d ec	 mov	 ecx, DWORD PTR _rgb$56397[ebp]
+  001d4	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  001da	8b 55 f4	 mov	 edx, DWORD PTR _i$56393[ebp]
+  001dd	8a 84 08 00 00
+	00 00		 mov	 al, BYTE PTR ?gamma@@3QAY0BAA@$$CBDA[eax+ecx]
+  001e4	88 04 95 04 00
+	00 00		 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+4], al
+
+; 123  : 			 	lPal.palPalEntry[i].peGreen = (BYTE)gamma[gammaValue][rgb.green];
+
+  001eb	8b 4d 10	 mov	 ecx, DWORD PTR _gammaValue$[ebp]
+  001ee	c1 e1 08	 shl	 ecx, 8
+  001f1	8b 55 ed	 mov	 edx, DWORD PTR _rgb$56397[ebp+1]
+  001f4	81 e2 ff 00 00
+	00		 and	 edx, 255		; 000000ffH
+  001fa	8b 45 f4	 mov	 eax, DWORD PTR _i$56393[ebp]
+  001fd	8a 8c 11 00 00
+	00 00		 mov	 cl, BYTE PTR ?gamma@@3QAY0BAA@$$CBDA[ecx+edx]
+  00204	88 0c 85 05 00
+	00 00		 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+5], cl
+
+; 124  : 			 	lPal.palPalEntry[i].peBlue =  (BYTE)gamma[gammaValue][rgb.blue];
+
+  0020b	8b 55 10	 mov	 edx, DWORD PTR _gammaValue$[ebp]
+  0020e	c1 e2 08	 shl	 edx, 8
+  00211	8b 45 ee	 mov	 eax, DWORD PTR _rgb$56397[ebp+2]
+  00214	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00219	8b 4d f4	 mov	 ecx, DWORD PTR _i$56393[ebp]
+  0021c	8a 94 02 00 00
+	00 00		 mov	 dl, BYTE PTR ?gamma@@3QAY0BAA@$$CBDA[edx+eax]
+  00223	88 14 8d 06 00
+	00 00		 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[ecx*4+6], dl
+
+; 125  : 				int colorVal = lPal.palPalEntry[i].peRed +
+; 126  : 							  lPal.palPalEntry[i].peGreen +
+; 127  : 							  lPal.palPalEntry[i].peBlue;
+
+  0022a	8b 45 f4	 mov	 eax, DWORD PTR _i$56393[ebp]
+  0022d	33 c9		 xor	 ecx, ecx
+  0022f	8a 0c 85 04 00
+	00 00		 mov	 cl, BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+4]
+  00236	8b 55 f4	 mov	 edx, DWORD PTR _i$56393[ebp]
+  00239	33 c0		 xor	 eax, eax
+  0023b	8a 04 95 05 00
+	00 00		 mov	 al, BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+5]
+  00242	03 c8		 add	 ecx, eax
+  00244	8b 55 f4	 mov	 edx, DWORD PTR _i$56393[ebp]
+  00247	33 c0		 xor	 eax, eax
+  00249	8a 04 95 06 00
+	00 00		 mov	 al, BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+6]
+  00250	03 c8		 add	 ecx, eax
+  00252	89 4d f0	 mov	 DWORD PTR _colorVal$56401[ebp], ecx
+
+; 128  : 				if (colorVal > hiVal)
+
+  00255	8b 4d f0	 mov	 ecx, DWORD PTR _colorVal$56401[ebp]
+  00258	3b 4d fc	 cmp	 ecx, DWORD PTR _hiVal$56391[ebp]
+  0025b	7e 0c		 jle	 SHORT $L56402
+
+; 130  : 					hiVal = colorVal;
+
+  0025d	8b 55 f0	 mov	 edx, DWORD PTR _colorVal$56401[ebp]
+  00260	89 55 fc	 mov	 DWORD PTR _hiVal$56391[ebp], edx
+
+; 131  : 					hiIndex = i;
+
+  00263	8b 45 f4	 mov	 eax, DWORD PTR _i$56393[ebp]
+  00266	89 45 f8	 mov	 DWORD PTR _hiIndex$56390[ebp], eax
+$L56402:
+
+; 133  : 			}
+
+  00269	e9 2e ff ff ff	 jmp	 $L56395
+$L56396:
+
+; 135  : 		else
+
+  0026e	e9 a3 00 00 00	 jmp	 $L56407
+$L56392:
+
+; 137  : 			for (int i = 0; i < 236; i++)
+
+  00273	c7 45 e8 00 00
+	00 00		 mov	 DWORD PTR _i$56404[ebp], 0
+  0027a	eb 09		 jmp	 SHORT $L56405
+$L56406:
+  0027c	8b 4d e8	 mov	 ecx, DWORD PTR _i$56404[ebp]
+  0027f	83 c1 01	 add	 ecx, 1
+  00282	89 4d e8	 mov	 DWORD PTR _i$56404[ebp], ecx
+$L56405:
+  00285	81 7d e8 ec 00
+	00 00		 cmp	 DWORD PTR _i$56404[ebp], 236 ; 000000ecH
+  0028c	0f 8d 84 00 00
+	00		 jge	 $L56407
+
+; 139  : 				Rgb24 rgb = current[i];
+
+  00292	8b 55 e8	 mov	 edx, DWORD PTR _i$56404[ebp]
+  00295	52		 push	 edx
+  00296	8b 4d 08	 mov	 ecx, DWORD PTR _current$[ebp]
+  00299	e8 00 00 00 00	 call	 ??ASOLPalette@@QAEAAVRgb24F@@H@Z ; SOLPalette::operator[]
+  0029e	66 8b 08	 mov	 cx, WORD PTR [eax]
+  002a1	66 89 4d e0	 mov	 WORD PTR _rgb$56408[ebp], cx
+  002a5	8a 50 02	 mov	 dl, BYTE PTR [eax+2]
+  002a8	88 55 e2	 mov	 BYTE PTR _rgb$56408[ebp+2], dl
+
+; 140  : 			 	lPal.palPalEntry[i].peRed =   (BYTE)rgb.red;
+
+  002ab	8b 45 e8	 mov	 eax, DWORD PTR _i$56404[ebp]
+  002ae	8a 4d e0	 mov	 cl, BYTE PTR _rgb$56408[ebp]
+  002b1	88 0c 85 04 00
+	00 00		 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+4], cl
+
+; 141  : 			 	lPal.palPalEntry[i].peGreen = (BYTE)rgb.green;
+
+  002b8	8b 55 e8	 mov	 edx, DWORD PTR _i$56404[ebp]
+  002bb	8a 45 e1	 mov	 al, BYTE PTR _rgb$56408[ebp+1]
+  002be	88 04 95 05 00
+	00 00		 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+5], al
+
+; 142  : 			 	lPal.palPalEntry[i].peBlue =  (BYTE)rgb.blue;
+
+  002c5	8b 4d e8	 mov	 ecx, DWORD PTR _i$56404[ebp]
+  002c8	8a 55 e2	 mov	 dl, BYTE PTR _rgb$56408[ebp+2]
+  002cb	88 14 8d 06 00
+	00 00		 mov	 BYTE PTR ?lPal@@3U__unnamed@@A[ecx*4+6], dl
+
+; 143  : 				int colorVal = lPal.palPalEntry[i].peRed +
+; 144  : 							  lPal.palPalEntry[i].peGreen +
+; 145  : 							  lPal.palPalEntry[i].peBlue;
+
+  002d2	8b 45 e8	 mov	 eax, DWORD PTR _i$56404[ebp]
+  002d5	33 c9		 xor	 ecx, ecx
+  002d7	8a 0c 85 04 00
+	00 00		 mov	 cl, BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+4]
+  002de	8b 55 e8	 mov	 edx, DWORD PTR _i$56404[ebp]
+  002e1	33 c0		 xor	 eax, eax
+  002e3	8a 04 95 05 00
+	00 00		 mov	 al, BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+5]
+  002ea	03 c8		 add	 ecx, eax
+  002ec	8b 55 e8	 mov	 edx, DWORD PTR _i$56404[ebp]
+  002ef	33 c0		 xor	 eax, eax
+  002f1	8a 04 95 06 00
+	00 00		 mov	 al, BYTE PTR ?lPal@@3U__unnamed@@A[edx*4+6]
+  002f8	03 c8		 add	 ecx, eax
+  002fa	89 4d e4	 mov	 DWORD PTR _colorVal$56412[ebp], ecx
+
+; 146  : 				if (colorVal > hiVal)
+
+  002fd	8b 4d e4	 mov	 ecx, DWORD PTR _colorVal$56412[ebp]
+  00300	3b 4d fc	 cmp	 ecx, DWORD PTR _hiVal$56391[ebp]
+  00303	7e 0c		 jle	 SHORT $L56413
+
+; 148  : 					hiVal = colorVal;
+
+  00305	8b 55 e4	 mov	 edx, DWORD PTR _colorVal$56412[ebp]
+  00308	89 55 fc	 mov	 DWORD PTR _hiVal$56391[ebp], edx
+
+; 149  : 					hiIndex = i;
+
+  0030b	8b 45 e8	 mov	 eax, DWORD PTR _i$56404[ebp]
+  0030e	89 45 f8	 mov	 DWORD PTR _hiIndex$56390[ebp], eax
+$L56413:
+
+; 151  : 			}
+
+  00311	e9 66 ff ff ff	 jmp	 $L56406
+$L56407:
+
+; 153  : 
+; 154  : 		if (TRUECOLOR)
+
+  00316	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?TRUECOLOR@@3HA, 0 ; TRUECOLOR
+  0031d	74 70		 je	 SHORT $L56414
+
+; 156  : 			for (int i = 0; i < 236; i++)
+
+  0031f	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR _i$56415[ebp], 0
+  00326	eb 09		 jmp	 SHORT $L56416
+$L56417:
+  00328	8b 4d dc	 mov	 ecx, DWORD PTR _i$56415[ebp]
+  0032b	83 c1 01	 add	 ecx, 1
+  0032e	89 4d dc	 mov	 DWORD PTR _i$56415[ebp], ecx
+$L56416:
+  00331	81 7d dc ec 00
+	00 00		 cmp	 DWORD PTR _i$56415[ebp], 236 ; 000000ecH
+  00338	7d 3e		 jge	 SHORT $L56418
+
+; 158  : 				bmiHdr.rgbq[i].rgbRed 	= lPal.palPalEntry[i].peRed;
+
+  0033a	8b 55 dc	 mov	 edx, DWORD PTR _i$56415[ebp]
+  0033d	8b 45 dc	 mov	 eax, DWORD PTR _i$56415[ebp]
+  00340	8a 0c 85 04 00
+	00 00		 mov	 cl, BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+4]
+  00347	88 0c 95 2a 00
+	00 00		 mov	 BYTE PTR ?bmiHdr@@3UBMI@@A[edx*4+42], cl
+
+; 159  : 				bmiHdr.rgbq[i].rgbGreen	= lPal.palPalEntry[i].peGreen;
+
+  0034e	8b 55 dc	 mov	 edx, DWORD PTR _i$56415[ebp]
+  00351	8b 45 dc	 mov	 eax, DWORD PTR _i$56415[ebp]
+  00354	8a 0c 85 05 00
+	00 00		 mov	 cl, BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+5]
+  0035b	88 0c 95 29 00
+	00 00		 mov	 BYTE PTR ?bmiHdr@@3UBMI@@A[edx*4+41], cl
+
+; 160  : 				bmiHdr.rgbq[i].rgbBlue	= lPal.palPalEntry[i].peBlue;
+
+  00362	8b 55 dc	 mov	 edx, DWORD PTR _i$56415[ebp]
+  00365	8b 45 dc	 mov	 eax, DWORD PTR _i$56415[ebp]
+  00368	8a 0c 85 06 00
+	00 00		 mov	 cl, BYTE PTR ?lPal@@3U__unnamed@@A[eax*4+6]
+  0036f	88 0c 95 28 00
+	00 00		 mov	 BYTE PTR ?bmiHdr@@3UBMI@@A[edx*4+40], cl
+
+; 161  : 			}
+
+  00376	eb b0		 jmp	 SHORT $L56417
+$L56418:
+
+; 162  : 
+; 163  : 			bmiHdr.rgbq[255].rgbRed 	= 255;
+
+  00378	c6 05 26 04 00
+	00 ff		 mov	 BYTE PTR ?bmiHdr@@3UBMI@@A+1062, 255 ; 000000ffH
+
+; 164  : 			bmiHdr.rgbq[255].rgbGreen	= 255;
+
+  0037f	c6 05 25 04 00
+	00 ff		 mov	 BYTE PTR ?bmiHdr@@3UBMI@@A+1061, 255 ; 000000ffH
+
+; 165  : 			bmiHdr.rgbq[255].rgbBlue	= 255;
+
+  00386	c6 05 24 04 00
+	00 ff		 mov	 BYTE PTR ?bmiHdr@@3UBMI@@A+1060, 255 ; 000000ffH
+
+; 167  : 		else
+
+  0038d	eb 23		 jmp	 SHORT $L56419
+$L56414:
+
+; 169  : 			// Set index 255 to lightest color so that debug window is visible
+; 170  : 			bmiHdr.colorix[255] = hiIndex;
+
+  0038f	66 8b 55 f8	 mov	 dx, WORD PTR _hiIndex$56390[ebp]
+  00393	66 89 15 26 02
+	00 00		 mov	 WORD PTR ?bmiHdr@@3UBMI@@A+550, dx
+
+; 171  : 			AnimatePalette (hPal, 0, USERPALETTE,
+; 172  : 							(LPPALETTEENTRY) &(lPal.palPalEntry [0]));
+
+  0039a	68 04 00 00 00	 push	 OFFSET FLAT:?lPal@@3U__unnamed@@A+4
+  0039f	68 ec 00 00 00	 push	 236			; 000000ecH
+  003a4	6a 00		 push	 0
+  003a6	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hPal@@3PAUHPALETTE__@@A ; hPal
+  003ab	50		 push	 eax
+  003ac	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__AnimatePalette@16
+$L56419:
+
+; 176  : #endif
+; 177  : 	return True;
+
+  003b2	b8 01 00 00 00	 mov	 eax, 1
+$L56387:
+
+; 178  : }
+
+  003b7	8b e5		 mov	 esp, ebp
+  003b9	5d		 pop	 ebp
+  003ba	c3		 ret	 0
+?UpdatePalette@@YAHAAVSOLPalette@@ABV1@H@Z ENDP		; UpdatePalette
+_TEXT	ENDS
+;	COMDAT ??ASOLPalette@@QAEAAVRgb24F@@H@Z
+_TEXT	SEGMENT
+_i$ = 8
+_this$ = -4
+??ASOLPalette@@QAEAAVRgb24F@@H@Z PROC NEAR		; SOLPalette::operator[], COMDAT
+
+; 42   : 	Rgb24F&	operator[](int i)					{return colors[i];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _i$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8d 04 81	 lea	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??ASOLPalette@@QAEAAVRgb24F@@H@Z ENDP			; SOLPalette::operator[]
+_TEXT	ENDS
+PUBLIC	?ClearSystemPalette@@YAXXZ			; ClearSystemPalette
+EXTRN	__imp__GetDC@4:NEAR
+EXTRN	__imp__ReleaseDC@8:NEAR
+_TEXT	SEGMENT
+_Palette$ = -1032
+_nMapped$ = -1044
+_counter$ = -1048
+_screenDC$ = -1040
+_screenPalette$ = -4
+_worked$56448 = -1052
+_worked$ = -1036
+?ClearSystemPalette@@YAXXZ PROC NEAR			; ClearSystemPalette
+
+; 188  : {
+
+  003bb	55		 push	 ebp
+  003bc	8b ec		 mov	 ebp, esp
+  003be	81 ec 1c 04 00
+	00		 sub	 esp, 1052		; 0000041cH
+  003c4	57		 push	 edi
+
+; 189  :   //*** A dummy palette setup
+; 190  :   struct
+; 191  :   {
+; 192  :     WORD Version;
+; 193  :     WORD NumberOfEntries;
+; 194  :     PALETTEENTRY aEntries[256];
+; 195  :   } Palette =
+; 196  :   {
+; 197  :     0x300,
+
+  003c5	66 c7 85 f8 fb
+	ff ff 00 03	 mov	 WORD PTR _Palette$[ebp], 768 ; 00000300H
+
+; 198  :     256
+; 199  :   };
+
+  003ce	66 c7 85 fa fb
+	ff ff 00 01	 mov	 WORD PTR _Palette$[ebp+2], 256 ; 00000100H
+  003d7	b9 00 01 00 00	 mov	 ecx, 256		; 00000100H
+  003dc	33 c0		 xor	 eax, eax
+  003de	8d bd fc fb ff
+	ff		 lea	 edi, DWORD PTR _Palette$[ebp+4]
+  003e4	f3 ab		 rep stosd
+
+; 200  : 
+; 201  :   UINT nMapped = 0;
+
+  003e6	c7 85 ec fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _nMapped$[ebp], 0
+
+; 202  :   
+; 203  :   //*** Reset everything in the system palette to black
+; 204  :   for (int counter = 0; counter < 256; counter++)
+
+  003f0	c7 85 e8 fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _counter$[ebp], 0
+  003fa	eb 0f		 jmp	 SHORT $L56437
+$L56438:
+  003fc	8b 85 e8 fb ff
+	ff		 mov	 eax, DWORD PTR _counter$[ebp]
+  00402	83 c0 01	 add	 eax, 1
+  00405	89 85 e8 fb ff
+	ff		 mov	 DWORD PTR _counter$[ebp], eax
+$L56437:
+  0040b	81 bd e8 fb ff
+	ff 00 01 00 00	 cmp	 DWORD PTR _counter$[ebp], 256 ; 00000100H
+  00415	7d 3a		 jge	 SHORT $L56439
+
+; 206  :     Palette.aEntries[counter].peRed = 0;
+
+  00417	8b 8d e8 fb ff
+	ff		 mov	 ecx, DWORD PTR _counter$[ebp]
+  0041d	c6 84 8d fc fb
+	ff ff 00	 mov	 BYTE PTR _Palette$[ebp+ecx*4+4], 0
+
+; 207  :     Palette.aEntries[counter].peGreen = 0;
+
+  00425	8b 95 e8 fb ff
+	ff		 mov	 edx, DWORD PTR _counter$[ebp]
+  0042b	c6 84 95 fd fb
+	ff ff 00	 mov	 BYTE PTR _Palette$[ebp+edx*4+5], 0
+
+; 208  :     Palette.aEntries[counter].peBlue = 0;
+
+  00433	8b 85 e8 fb ff
+	ff		 mov	 eax, DWORD PTR _counter$[ebp]
+  00439	c6 84 85 fe fb
+	ff ff 00	 mov	 BYTE PTR _Palette$[ebp+eax*4+6], 0
+
+; 209  :     Palette.aEntries[counter].peFlags = PC_NOCOLLAPSE;
+
+  00441	8b 8d e8 fb ff
+	ff		 mov	 ecx, DWORD PTR _counter$[ebp]
+  00447	c6 84 8d ff fb
+	ff ff 04	 mov	 BYTE PTR _Palette$[ebp+ecx*4+7], 4
+
+; 210  :   }
+
+  0044f	eb ab		 jmp	 SHORT $L56438
+$L56439:
+
+; 211  : 
+; 212  :   //*** Create, select, realize, deselect, and delete the palette
+; 213  :   HDC screenDC = GetDC(NULL);
+
+  00451	6a 00		 push	 0
+  00453	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__GetDC@4
+  00459	89 85 f0 fb ff
+	ff		 mov	 DWORD PTR _screenDC$[ebp], eax
+
+; 214  :   assert(screenDC != NULL);
+; 215  : 
+; 216  :   HPALETTE screenPalette = CreatePalette((LOGPALETTE *)&Palette);
+
+  0045f	8d 95 f8 fb ff
+	ff		 lea	 edx, DWORD PTR _Palette$[ebp]
+  00465	52		 push	 edx
+  00466	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__CreatePalette@4
+  0046c	89 45 fc	 mov	 DWORD PTR _screenPalette$[ebp], eax
+
+; 217  :   assert(screenPalette != NULL);
+; 218  : 
+; 219  :   if (screenPalette)
+
+  0046f	83 7d fc 00	 cmp	 DWORD PTR _screenPalette$[ebp], 0
+  00473	74 4f		 je	 SHORT $L56445
+
+; 221  :     screenPalette = SelectPalette(screenDC, screenPalette, FALSE);
+
+  00475	6a 00		 push	 0
+  00477	8b 45 fc	 mov	 eax, DWORD PTR _screenPalette$[ebp]
+  0047a	50		 push	 eax
+  0047b	8b 8d f0 fb ff
+	ff		 mov	 ecx, DWORD PTR _screenDC$[ebp]
+  00481	51		 push	 ecx
+  00482	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SelectPalette@12
+  00488	89 45 fc	 mov	 DWORD PTR _screenPalette$[ebp], eax
+
+; 222  : 	 assert(screenPalette != NULL);
+; 223  : 
+; 224  :     nMapped = RealizePalette(screenDC);
+
+  0048b	8b 95 f0 fb ff
+	ff		 mov	 edx, DWORD PTR _screenDC$[ebp]
+  00491	52		 push	 edx
+  00492	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__RealizePalette@4
+  00498	89 85 ec fb ff
+	ff		 mov	 DWORD PTR _nMapped$[ebp], eax
+
+; 225  :     screenPalette = SelectPalette(screenDC, screenPalette, FALSE);
+
+  0049e	6a 00		 push	 0
+  004a0	8b 45 fc	 mov	 eax, DWORD PTR _screenPalette$[ebp]
+  004a3	50		 push	 eax
+  004a4	8b 8d f0 fb ff
+	ff		 mov	 ecx, DWORD PTR _screenDC$[ebp]
+  004aa	51		 push	 ecx
+  004ab	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SelectPalette@12
+  004b1	89 45 fc	 mov	 DWORD PTR _screenPalette$[ebp], eax
+
+; 226  : 	 assert(screenPalette != NULL);
+; 227  : 
+; 228  :     Bool worked = DeleteObject(screenPalette);
+
+  004b4	8b 55 fc	 mov	 edx, DWORD PTR _screenPalette$[ebp]
+  004b7	52		 push	 edx
+  004b8	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__DeleteObject@4
+  004be	89 85 e4 fb ff
+	ff		 mov	 DWORD PTR _worked$56448[ebp], eax
+$L56445:
+
+; 231  : 
+; 232  :   Bool worked = ReleaseDC(NULL, screenDC);
+
+  004c4	8b 85 f0 fb ff
+	ff		 mov	 eax, DWORD PTR _screenDC$[ebp]
+  004ca	50		 push	 eax
+  004cb	6a 00		 push	 0
+  004cd	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__ReleaseDC@8
+  004d3	89 85 f4 fb ff
+	ff		 mov	 DWORD PTR _worked$[ebp], eax
+
+; 233  :   assert(worked);
+; 234  : 
+; 235  :   return;
+; 236  : }
+
+  004d9	5f		 pop	 edi
+  004da	8b e5		 mov	 esp, ebp
+  004dc	5d		 pop	 ebp
+  004dd	c3		 ret	 0
+?ClearSystemPalette@@YAXXZ ENDP				; ClearSystemPalette
+_TEXT	ENDS
+END

@@ -1,0 +1,3063 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Event.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@ObjectID@@QBEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@ObjectID@@QBEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0EventObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetModifiers@EventMgr@@UAEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1KbdMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GKbdMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PointerDevice@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPointerDevice@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SOL_Mouse@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSwift@SOL_Mouse@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Vibrate@SOL_Mouse@@UBEXHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Mouse@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1TimeMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Reset@TimeMgr@@UAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GTimeMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GEventMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0EventObjectID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7EventMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PointerDevice@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_Mouse@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7TimeMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7KbdMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?eventMgr@@3PAUEventMgr@@A			; eventMgr
+_BSS	SEGMENT
+?eventMgr@@3PAUEventMgr@@A DD 01H DUP (?)		; eventMgr
+_BSS	ENDS
+PUBLIC	??_H@YGXPAXIHP6EX0@Z@Z				; `vector constructor iterator'
+PUBLIC	??0SOL_Event@@QAE@XZ				; SOL_Event::SOL_Event
+PUBLIC	??0EventMgr@@QAE@XZ				; EventMgr::EventMgr
+PUBLIC	?Flush@EventMgr@@UAEXG@Z			; EventMgr::Flush
+PUBLIC	?Get@EventMgr@@UAEHPAVSOL_Event@@G@Z		; EventMgr::Get
+PUBLIC	?GetModifiers@EventMgr@@UAEGXZ			; EventMgr::GetModifiers
+PUBLIC	?Handle@EventMgr@@UAEXPAVSOL_Event@@@Z		; EventMgr::Handle
+PUBLIC	?IsAvail@EventMgr@@UBEHPAVSOL_Event@@G@Z	; EventMgr::IsAvail
+PUBLIC	?Post@EventMgr@@UAEXPAVSOL_Event@@@Z		; EventMgr::Post
+PUBLIC	?PostCommand@EventMgr@@UAEXH@Z			; EventMgr::PostCommand
+PUBLIC	?PostWinCommand@EventMgr@@UAEXHH@Z		; EventMgr::PostWinCommand
+PUBLIC	?StillDown@EventMgr@@UBEHXZ			; EventMgr::StillDown
+PUBLIC	?Wait@EventMgr@@UAE?AVSOL_Event@@G@Z		; EventMgr::Wait
+PUBLIC	?FlushKeyboard@EventMgr@@MAEXXZ			; EventMgr::FlushKeyboard
+PUBLIC	??_7EventMgr@@6B@				; EventMgr::`vftable'
+PUBLIC	??_GEventMgr@@UAEPAXI@Z				; EventMgr::`scalar deleting destructor'
+PUBLIC	??_EEventMgr@@UAEPAXI@Z				; EventMgr::`vector deleting destructor'
+;	COMDAT ??_7EventMgr@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Event.cpp
+CONST	SEGMENT
+??_7EventMgr@@6B@ DD FLAT:??_EEventMgr@@UAEPAXI@Z	; EventMgr::`vftable'
+	DD	FLAT:?Flush@EventMgr@@UAEXG@Z
+	DD	FLAT:?Get@EventMgr@@UAEHPAVSOL_Event@@G@Z
+	DD	FLAT:?GetModifiers@EventMgr@@UAEGXZ
+	DD	FLAT:?Handle@EventMgr@@UAEXPAVSOL_Event@@@Z
+	DD	FLAT:?IsAvail@EventMgr@@UBEHPAVSOL_Event@@G@Z
+	DD	FLAT:?Post@EventMgr@@UAEXPAVSOL_Event@@@Z
+	DD	FLAT:?PostCommand@EventMgr@@UAEXH@Z
+	DD	FLAT:?PostWinCommand@EventMgr@@UAEXHH@Z
+	DD	FLAT:?StillDown@EventMgr@@UBEHXZ
+	DD	FLAT:?Wait@EventMgr@@UAE?AVSOL_Event@@G@Z
+	DD	FLAT:?FlushKeyboard@EventMgr@@MAEXXZ
+CONST	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+??0EventMgr@@QAE@XZ PROC NEAR				; EventMgr::EventMgr
+
+; 25   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	68 00 00 00 00	 push	 OFFSET FLAT:??0SOL_Event@@QAE@XZ ; SOL_Event::SOL_Event
+  0000c	6a 10		 push	 16			; 00000010H
+  0000e	6a 28		 push	 40			; 00000028H
+  00010	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00013	83 c0 04	 add	 eax, 4
+  00016	50		 push	 eax
+  00017	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+  0001c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001f	c7 01 00 00 00
+	00		 mov	 DWORD PTR [ecx], OFFSET FLAT:??_7EventMgr@@6B@ ; EventMgr::`vftable'
+
+; 26   : 	head = tail = 0;
+
+  00025	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00028	c7 82 88 02 00
+	00 00 00 00 00	 mov	 DWORD PTR [edx+648], 0
+  00032	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00035	c7 80 84 02 00
+	00 00 00 00 00	 mov	 DWORD PTR [eax+644], 0
+
+; 27   : }
+
+  0003f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00042	8b e5		 mov	 esp, ebp
+  00044	5d		 pop	 ebp
+  00045	c3		 ret	 0
+??0EventMgr@@QAE@XZ ENDP				; EventMgr::EventMgr
+_TEXT	ENDS
+PUBLIC	??1EventMgr@@UAE@XZ				; EventMgr::~EventMgr
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+;	COMDAT ??_GEventMgr@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GEventMgr@@UAEPAXI@Z PROC NEAR			; EventMgr::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1EventMgr@@UAE@XZ	; EventMgr::~EventMgr
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L62586
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L62586:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GEventMgr@@UAEPAXI@Z ENDP				; EventMgr::`scalar deleting destructor'
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT
+___t$ = 8
+___s$ = 12
+___n$ = 16
+___f$ = 20
+??_H@YGXPAXIHP6EX0@Z@Z PROC NEAR			; `vector constructor iterator', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+$L62595:
+  00003	8b 45 10	 mov	 eax, DWORD PTR ___n$[ebp]
+  00006	83 e8 01	 sub	 eax, 1
+  00009	89 45 10	 mov	 DWORD PTR ___n$[ebp], eax
+  0000c	83 7d 10 00	 cmp	 DWORD PTR ___n$[ebp], 0
+  00010	7c 11		 jl	 SHORT $L62596
+  00012	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  00015	ff 55 14	 call	 DWORD PTR ___f$[ebp]
+  00018	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  0001b	03 4d 0c	 add	 ecx, DWORD PTR ___s$[ebp]
+  0001e	89 4d 08	 mov	 DWORD PTR ___t$[ebp], ecx
+  00021	eb e0		 jmp	 SHORT $L62595
+$L62596:
+  00023	5d		 pop	 ebp
+  00024	c2 10 00	 ret	 16			; 00000010H
+??_H@YGXPAXIHP6EX0@Z@Z ENDP				; `vector constructor iterator'
+_TEXT	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+??1EventMgr@@UAE@XZ PROC NEAR				; EventMgr::~EventMgr
+
+; 30   : {
+
+  00046	55		 push	 ebp
+  00047	8b ec		 mov	 ebp, esp
+  00049	51		 push	 ecx
+  0004a	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  0004d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00050	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7EventMgr@@6B@ ; EventMgr::`vftable'
+
+; 31   : }
+
+  00056	8b e5		 mov	 esp, ebp
+  00058	5d		 pop	 ebp
+  00059	c3		 ret	 0
+??1EventMgr@@UAE@XZ ENDP				; EventMgr::~EventMgr
+_TEXT	ENDS
+PUBLIC	?Bump@EventMgr@@IBEXAAH@Z			; EventMgr::Bump
+_TEXT	SEGMENT
+_ptr$ = 8
+_this$ = -4
+?Bump@EventMgr@@IBEXAAH@Z PROC NEAR			; EventMgr::Bump
+
+; 35   : {
+
+  0005a	55		 push	 ebp
+  0005b	8b ec		 mov	 ebp, esp
+  0005d	51		 push	 ecx
+  0005e	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 36   : 	//	move pointer to next slot
+; 37   : 
+; 38   : 	if (++ptr == Size)
+
+  00061	8b 45 08	 mov	 eax, DWORD PTR _ptr$[ebp]
+  00064	8b 08		 mov	 ecx, DWORD PTR [eax]
+  00066	83 c1 01	 add	 ecx, 1
+  00069	8b 55 08	 mov	 edx, DWORD PTR _ptr$[ebp]
+  0006c	89 0a		 mov	 DWORD PTR [edx], ecx
+  0006e	8b 45 08	 mov	 eax, DWORD PTR _ptr$[ebp]
+  00071	83 38 10	 cmp	 DWORD PTR [eax], 16	; 00000010H
+  00074	75 09		 jne	 SHORT $L62605
+
+; 39   : 		ptr = 0;
+
+  00076	8b 4d 08	 mov	 ecx, DWORD PTR _ptr$[ebp]
+  00079	c7 01 00 00 00
+	00		 mov	 DWORD PTR [ecx], 0
+$L62605:
+
+; 40   : }
+
+  0007f	8b e5		 mov	 esp, ebp
+  00081	5d		 pop	 ebp
+  00082	c2 04 00	 ret	 4
+?Bump@EventMgr@@IBEXAAH@Z ENDP				; EventMgr::Bump
+_mask$ = 8
+_this$ = -44
+_event$ = -40
+?Flush@EventMgr@@UAEXG@Z PROC NEAR			; EventMgr::Flush
+
+; 44   : {
+
+  00085	55		 push	 ebp
+  00086	8b ec		 mov	 ebp, esp
+  00088	83 ec 2c	 sub	 esp, 44			; 0000002cH
+  0008b	89 4d d4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 45   : 	// flush all events specified by mask from buffer
+; 46   : 
+; 47   : 	SOL_Event	event;
+
+  0008e	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  00091	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@XZ	; SOL_Event::SOL_Event
+$L62612:
+
+; 48   : 
+; 49   : 	while (Get(&event, mask))
+
+  00096	66 8b 45 08	 mov	 ax, WORD PTR _mask$[ebp]
+  0009a	50		 push	 eax
+  0009b	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  0009e	51		 push	 ecx
+  0009f	8b 55 d4	 mov	 edx, DWORD PTR _this$[ebp]
+  000a2	8b 02		 mov	 eax, DWORD PTR [edx]
+  000a4	8b 4d d4	 mov	 ecx, DWORD PTR _this$[ebp]
+  000a7	ff 50 08	 call	 DWORD PTR [eax+8]
+  000aa	85 c0		 test	 eax, eax
+  000ac	74 02		 je	 SHORT $L62613
+
+; 50   : 		;
+
+  000ae	eb e6		 jmp	 SHORT $L62612
+$L62613:
+
+; 51   : 		
+; 52   : 	if (mask & (SOL_Event::KeyDown | SOL_Event::KeyUp))
+
+  000b0	8b 4d 08	 mov	 ecx, DWORD PTR _mask$[ebp]
+  000b3	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  000b9	83 e1 0c	 and	 ecx, 12			; 0000000cH
+  000bc	85 c9		 test	 ecx, ecx
+  000be	74 0b		 je	 SHORT $L62614
+
+; 53   : 		FlushKeyboard();
+
+  000c0	8b 55 d4	 mov	 edx, DWORD PTR _this$[ebp]
+  000c3	8b 02		 mov	 eax, DWORD PTR [edx]
+  000c5	8b 4d d4	 mov	 ecx, DWORD PTR _this$[ebp]
+  000c8	ff 50 2c	 call	 DWORD PTR [eax+44]
+$L62614:
+
+; 54   : }
+
+  000cb	8b e5		 mov	 esp, ebp
+  000cd	5d		 pop	 ebp
+  000ce	c2 04 00	 ret	 4
+?Flush@EventMgr@@UAEXG@Z ENDP				; EventMgr::Flush
+_this$ = -4
+?FlushKeyboard@EventMgr@@MAEXXZ PROC NEAR		; EventMgr::FlushKeyboard
+
+; 58   : {
+
+  000d1	55		 push	 ebp
+  000d2	8b ec		 mov	 ebp, esp
+  000d4	51		 push	 ecx
+  000d5	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 59   : }
+
+  000d8	8b e5		 mov	 esp, ebp
+  000da	5d		 pop	 ebp
+  000db	c3		 ret	 0
+?FlushKeyboard@EventMgr@@MAEXXZ ENDP			; EventMgr::FlushKeyboard
+_TEXT	ENDS
+PUBLIC	??4SOL_Event@@QAEAAV0@ABV0@@Z			; SOL_Event::operator=
+PUBLIC	?MakeNull@SOL_Event@@QAEXXZ			; SOL_Event::MakeNull
+_TEXT	SEGMENT
+_event$ = 8
+_mask$ = 12
+_this$ = -12
+_ret$ = -4
+_found$ = -8
+?Get@EventMgr@@UAEHPAVSOL_Event@@G@Z PROC NEAR		; EventMgr::Get
+
+; 63   : {
+
+  000dc	55		 push	 ebp
+  000dd	8b ec		 mov	 ebp, esp
+  000df	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  000e2	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 64   : 	// return next event to user
+; 65   : 
+; 66   : 	Bool ret = False;
+
+  000e5	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _ret$[ebp], 0
+
+; 67   : 	int found;
+; 68   : 	for (found = head; found != tail; Bump(found)) {
+
+  000ec	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  000ef	8b 88 84 02 00
+	00		 mov	 ecx, DWORD PTR [eax+644]
+  000f5	89 4d f8	 mov	 DWORD PTR _found$[ebp], ecx
+  000f8	eb 0c		 jmp	 SHORT $L62625
+$L62626:
+  000fa	8d 55 f8	 lea	 edx, DWORD PTR _found$[ebp]
+  000fd	52		 push	 edx
+  000fe	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00101	e8 00 00 00 00	 call	 ?Bump@EventMgr@@IBEXAAH@Z ; EventMgr::Bump
+$L62625:
+  00106	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00109	8b 4d f8	 mov	 ecx, DWORD PTR _found$[ebp]
+  0010c	3b 88 88 02 00
+	00		 cmp	 ecx, DWORD PTR [eax+648]
+  00112	74 2a		 je	 SHORT $L62627
+
+; 69   : 		if (entries[found].type & mask) {
+
+  00114	8b 55 f8	 mov	 edx, DWORD PTR _found$[ebp]
+  00117	6b d2 28	 imul	 edx, 40			; 00000028H
+  0011a	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  0011d	33 c9		 xor	 ecx, ecx
+  0011f	66 8b 4c 10 04	 mov	 cx, WORD PTR [eax+edx+4]
+  00124	8b 55 0c	 mov	 edx, DWORD PTR _mask$[ebp]
+  00127	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  0012d	23 ca		 and	 ecx, edx
+  0012f	85 c9		 test	 ecx, ecx
+  00131	74 09		 je	 SHORT $L62628
+
+; 70   : 			ret = True;
+
+  00133	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _ret$[ebp], 1
+
+; 71   : 			break;
+
+  0013a	eb 02		 jmp	 SHORT $L62627
+$L62628:
+
+; 73   : 	}
+
+  0013c	eb bc		 jmp	 SHORT $L62626
+$L62627:
+
+; 74   : 
+; 75   : 	if (ret) {		// give it to him and blank out queue entry
+
+  0013e	83 7d fc 00	 cmp	 DWORD PTR _ret$[ebp], 0
+  00142	74 48		 je	 SHORT $L62629
+
+; 76   : 		*event = entries[found];
+
+  00144	8b 45 f8	 mov	 eax, DWORD PTR _found$[ebp]
+  00147	6b c0 28	 imul	 eax, 40			; 00000028H
+  0014a	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0014d	8d 54 01 04	 lea	 edx, DWORD PTR [ecx+eax+4]
+  00151	52		 push	 edx
+  00152	8b 4d 08	 mov	 ecx, DWORD PTR _event$[ebp]
+  00155	e8 00 00 00 00	 call	 ??4SOL_Event@@QAEAAV0@ABV0@@Z ; SOL_Event::operator=
+
+; 77   : 		entries[found].type = SOL_Event::Null;
+
+  0015a	8b 45 f8	 mov	 eax, DWORD PTR _found$[ebp]
+  0015d	6b c0 28	 imul	 eax, 40			; 00000028H
+  00160	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00163	66 c7 44 01 04
+	00 00		 mov	 WORD PTR [ecx+eax+4], 0
+
+; 78   : 		if (found == head)
+
+  0016a	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  0016d	8b 45 f8	 mov	 eax, DWORD PTR _found$[ebp]
+  00170	3b 82 84 02 00
+	00		 cmp	 eax, DWORD PTR [edx+644]
+  00176	75 12		 jne	 SHORT $L62630
+
+; 79   :          Bump(head);
+
+  00178	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0017b	81 c1 84 02 00
+	00		 add	 ecx, 644		; 00000284H
+  00181	51		 push	 ecx
+  00182	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00185	e8 00 00 00 00	 call	 ?Bump@EventMgr@@IBEXAAH@Z ; EventMgr::Bump
+$L62630:
+
+; 80   : 	} else
+
+  0018a	eb 08		 jmp	 SHORT $L62631
+$L62629:
+
+; 81   : 		event->MakeNull();	// use his storage
+
+  0018c	8b 4d 08	 mov	 ecx, DWORD PTR _event$[ebp]
+  0018f	e8 00 00 00 00	 call	 ?MakeNull@SOL_Event@@QAEXXZ ; SOL_Event::MakeNull
+$L62631:
+
+; 82   : 
+; 83   : 	return ret;
+
+  00194	8b 45 fc	 mov	 eax, DWORD PTR _ret$[ebp]
+
+; 84   : }
+
+  00197	8b e5		 mov	 esp, ebp
+  00199	5d		 pop	 ebp
+  0019a	c2 08 00	 ret	 8
+?Get@EventMgr@@UAEHPAVSOL_Event@@G@Z ENDP		; EventMgr::Get
+_this$ = -4
+?Handle@EventMgr@@UAEXPAVSOL_Event@@@Z PROC NEAR	; EventMgr::Handle
+
+; 88   : {
+
+  0019d	55		 push	 ebp
+  0019e	8b ec		 mov	 ebp, esp
+  001a0	51		 push	 ecx
+  001a1	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 89   : }
+
+  001a4	8b e5		 mov	 esp, ebp
+  001a6	5d		 pop	 ebp
+  001a7	c2 04 00	 ret	 4
+?Handle@EventMgr@@UAEXPAVSOL_Event@@@Z ENDP		; EventMgr::Handle
+_event$ = 8
+_mask$ = 12
+_this$ = -12
+_ret$ = -4
+_found$ = -8
+?IsAvail@EventMgr@@UBEHPAVSOL_Event@@G@Z PROC NEAR	; EventMgr::IsAvail
+
+; 93   : {
+
+  001aa	55		 push	 ebp
+  001ab	8b ec		 mov	 ebp, esp
+  001ad	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  001b0	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 94   : 	// return but don't remove
+; 95   : 
+; 96   : 	Bool	ret = False;
+
+  001b3	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _ret$[ebp], 0
+
+; 97   : 	int found;
+; 98   : 	for (found = head; found != tail; Bump(found)) {
+
+  001ba	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  001bd	8b 88 84 02 00
+	00		 mov	 ecx, DWORD PTR [eax+644]
+  001c3	89 4d f8	 mov	 DWORD PTR _found$[ebp], ecx
+  001c6	eb 0c		 jmp	 SHORT $L62643
+$L62644:
+  001c8	8d 55 f8	 lea	 edx, DWORD PTR _found$[ebp]
+  001cb	52		 push	 edx
+  001cc	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  001cf	e8 00 00 00 00	 call	 ?Bump@EventMgr@@IBEXAAH@Z ; EventMgr::Bump
+$L62643:
+  001d4	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  001d7	8b 4d f8	 mov	 ecx, DWORD PTR _found$[ebp]
+  001da	3b 88 88 02 00
+	00		 cmp	 ecx, DWORD PTR [eax+648]
+  001e0	74 2a		 je	 SHORT $L62645
+
+; 99   : 		if (entries[found].type & mask) {
+
+  001e2	8b 55 f8	 mov	 edx, DWORD PTR _found$[ebp]
+  001e5	6b d2 28	 imul	 edx, 40			; 00000028H
+  001e8	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  001eb	33 c9		 xor	 ecx, ecx
+  001ed	66 8b 4c 10 04	 mov	 cx, WORD PTR [eax+edx+4]
+  001f2	8b 55 0c	 mov	 edx, DWORD PTR _mask$[ebp]
+  001f5	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  001fb	23 ca		 and	 ecx, edx
+  001fd	85 c9		 test	 ecx, ecx
+  001ff	74 09		 je	 SHORT $L62646
+
+; 100  : 			ret = True;
+
+  00201	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _ret$[ebp], 1
+
+; 101  : 			break;
+
+  00208	eb 02		 jmp	 SHORT $L62645
+$L62646:
+
+; 103  : 	}
+
+  0020a	eb bc		 jmp	 SHORT $L62644
+$L62645:
+
+; 104  : 
+; 105  : 	// a null event pointer says just return result
+; 106  : 	if (event) {
+
+  0020c	83 7d 08 00	 cmp	 DWORD PTR _event$[ebp], 0
+  00210	74 26		 je	 SHORT $L62649
+
+; 107  : 		if (ret)
+
+  00212	83 7d fc 00	 cmp	 DWORD PTR _ret$[ebp], 0
+  00216	74 18		 je	 SHORT $L62648
+
+; 108  : 			*event = entries[found];
+
+  00218	8b 45 f8	 mov	 eax, DWORD PTR _found$[ebp]
+  0021b	6b c0 28	 imul	 eax, 40			; 00000028H
+  0021e	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00221	8d 54 01 04	 lea	 edx, DWORD PTR [ecx+eax+4]
+  00225	52		 push	 edx
+  00226	8b 4d 08	 mov	 ecx, DWORD PTR _event$[ebp]
+  00229	e8 00 00 00 00	 call	 ??4SOL_Event@@QAEAAV0@ABV0@@Z ; SOL_Event::operator=
+
+; 109  : 		else
+
+  0022e	eb 08		 jmp	 SHORT $L62649
+$L62648:
+
+; 110  : 			event->MakeNull();
+
+  00230	8b 4d 08	 mov	 ecx, DWORD PTR _event$[ebp]
+  00233	e8 00 00 00 00	 call	 ?MakeNull@SOL_Event@@QAEXXZ ; SOL_Event::MakeNull
+$L62649:
+
+; 112  : 
+; 113  : 	return ret;
+
+  00238	8b 45 fc	 mov	 eax, DWORD PTR _ret$[ebp]
+
+; 114  : }
+
+  0023b	8b e5		 mov	 esp, ebp
+  0023d	5d		 pop	 ebp
+  0023e	c2 08 00	 ret	 8
+?IsAvail@EventMgr@@UBEHPAVSOL_Event@@G@Z ENDP		; EventMgr::IsAvail
+_TEXT	ENDS
+EXTRN	?timeMgr@@3PAVTimeMgr@@A:DWORD			; timeMgr
+_TEXT	SEGMENT
+_event$ = 8
+_this$ = -4
+?Post@EventMgr@@UAEXPAVSOL_Event@@@Z PROC NEAR		; EventMgr::Post
+
+; 118  : {
+
+  00241	55		 push	 ebp
+  00242	8b ec		 mov	 ebp, esp
+  00244	51		 push	 ecx
+  00245	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 119  : 	// add event tail; bump head if == tail
+; 120  : 
+; 121  : 	event->when = timeMgr->GetTickCount();
+
+  00248	a1 00 00 00 00	 mov	 eax, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  0024d	8b 10		 mov	 edx, DWORD PTR [eax]
+  0024f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00255	ff 52 04	 call	 DWORD PTR [edx+4]
+  00258	8b 4d 08	 mov	 ecx, DWORD PTR _event$[ebp]
+  0025b	89 41 0c	 mov	 DWORD PTR [ecx+12], eax
+
+; 122  : 
+; 123  : 	entries[tail] = *event;
+
+  0025e	8b 55 08	 mov	 edx, DWORD PTR _event$[ebp]
+  00261	52		 push	 edx
+  00262	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00265	8b 88 88 02 00
+	00		 mov	 ecx, DWORD PTR [eax+648]
+  0026b	6b c9 28	 imul	 ecx, 40			; 00000028H
+  0026e	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00271	8d 4c 0a 04	 lea	 ecx, DWORD PTR [edx+ecx+4]
+  00275	e8 00 00 00 00	 call	 ??4SOL_Event@@QAEAAV0@ABV0@@Z ; SOL_Event::operator=
+
+; 124  : 
+; 125  : 	Bump(tail);
+
+  0027a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0027d	05 88 02 00 00	 add	 eax, 648		; 00000288H
+  00282	50		 push	 eax
+  00283	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00286	e8 00 00 00 00	 call	 ?Bump@EventMgr@@IBEXAAH@Z ; EventMgr::Bump
+
+; 126  : 	if (tail == head)		// throw away oldest
+
+  0028b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0028e	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00291	8b 81 88 02 00
+	00		 mov	 eax, DWORD PTR [ecx+648]
+  00297	3b 82 84 02 00
+	00		 cmp	 eax, DWORD PTR [edx+644]
+  0029d	75 12		 jne	 SHORT $L62654
+
+; 127  : 		Bump(head);
+
+  0029f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  002a2	81 c1 84 02 00
+	00		 add	 ecx, 644		; 00000284H
+  002a8	51		 push	 ecx
+  002a9	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  002ac	e8 00 00 00 00	 call	 ?Bump@EventMgr@@IBEXAAH@Z ; EventMgr::Bump
+$L62654:
+
+; 128  : }
+
+  002b1	8b e5		 mov	 esp, ebp
+  002b3	5d		 pop	 ebp
+  002b4	c2 04 00	 ret	 4
+?Post@EventMgr@@UAEXPAVSOL_Event@@@Z ENDP		; EventMgr::Post
+_command$ = 8
+_this$ = -44
+_event$ = -40
+?PostCommand@EventMgr@@UAEXH@Z PROC NEAR		; EventMgr::PostCommand
+
+; 132  : {
+
+  002b7	55		 push	 ebp
+  002b8	8b ec		 mov	 ebp, esp
+  002ba	83 ec 2c	 sub	 esp, 44			; 0000002cH
+  002bd	89 4d d4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 133  : 	// post a command event
+; 134  : 	
+; 135  : 	SOL_Event event;
+
+  002c0	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  002c3	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@XZ	; SOL_Event::SOL_Event
+
+; 136  : 	
+; 137  : 	event.type		= SOL_Event::Command;
+
+  002c8	66 c7 45 d8 80
+	00		 mov	 WORD PTR _event$[ebp], 128 ; 00000080H
+
+; 138  : 	event.message	= command;
+
+  002ce	8b 45 08	 mov	 eax, DWORD PTR _command$[ebp]
+  002d1	89 45 dc	 mov	 DWORD PTR _event$[ebp+4], eax
+
+; 139  : 	
+; 140  : 	Post(&event);
+
+  002d4	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  002d7	51		 push	 ecx
+  002d8	8b 55 d4	 mov	 edx, DWORD PTR _this$[ebp]
+  002db	8b 02		 mov	 eax, DWORD PTR [edx]
+  002dd	8b 4d d4	 mov	 ecx, DWORD PTR _this$[ebp]
+  002e0	ff 50 18	 call	 DWORD PTR [eax+24]
+
+; 141  : }
+
+  002e3	8b e5		 mov	 esp, ebp
+  002e5	5d		 pop	 ebp
+  002e6	c2 04 00	 ret	 4
+?PostCommand@EventMgr@@UAEXH@Z ENDP			; EventMgr::PostCommand
+_command$ = 8
+_modifiers$ = 12
+_this$ = -44
+_event$ = -40
+?PostWinCommand@EventMgr@@UAEXHH@Z PROC NEAR		; EventMgr::PostWinCommand
+
+; 145  : {
+
+  002e9	55		 push	 ebp
+  002ea	8b ec		 mov	 ebp, esp
+  002ec	83 ec 2c	 sub	 esp, 44			; 0000002cH
+  002ef	89 4d d4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 146  : 	// post a win command event
+; 147  : 	
+; 148  : 	SOL_Event event;
+
+  002f2	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  002f5	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@XZ	; SOL_Event::SOL_Event
+
+; 149  : 	
+; 150  : 	event.type		= SOL_Event::WinCmd;
+
+  002fa	66 c7 45 d8 00
+	01		 mov	 WORD PTR _event$[ebp], 256 ; 00000100H
+
+; 151  : 	event.message	= command;
+
+  00300	8b 45 08	 mov	 eax, DWORD PTR _command$[ebp]
+  00303	89 45 dc	 mov	 DWORD PTR _event$[ebp+4], eax
+
+; 152  : 	event.modifiers = modifiers;
+
+  00306	66 8b 4d 0c	 mov	 cx, WORD PTR _modifiers$[ebp]
+  0030a	66 89 4d e0	 mov	 WORD PTR _event$[ebp+8], cx
+
+; 153  : 	
+; 154  : 	Post(&event);
+
+  0030e	8d 55 d8	 lea	 edx, DWORD PTR _event$[ebp]
+  00311	52		 push	 edx
+  00312	8b 45 d4	 mov	 eax, DWORD PTR _this$[ebp]
+  00315	8b 10		 mov	 edx, DWORD PTR [eax]
+  00317	8b 4d d4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0031a	ff 52 18	 call	 DWORD PTR [edx+24]
+
+; 155  : }
+
+  0031d	8b e5		 mov	 esp, ebp
+  0031f	5d		 pop	 ebp
+  00320	c2 08 00	 ret	 8
+?PostWinCommand@EventMgr@@UAEXHH@Z ENDP			; EventMgr::PostWinCommand
+_this$ = -4
+?StillDown@EventMgr@@UBEHXZ PROC NEAR			; EventMgr::StillDown
+
+; 159  : {
+
+  00323	55		 push	 ebp
+  00324	8b ec		 mov	 ebp, esp
+  00326	51		 push	 ecx
+  00327	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 160  : 	// look for any mouse ups
+; 161  : 
+; 162  : 	return !IsAvail(0, SOL_Event::MouseUp);
+
+  0032a	6a 02		 push	 2
+  0032c	6a 00		 push	 0
+  0032e	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00331	8b 10		 mov	 edx, DWORD PTR [eax]
+  00333	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00336	ff 52 14	 call	 DWORD PTR [edx+20]
+  00339	f7 d8		 neg	 eax
+  0033b	1b c0		 sbb	 eax, eax
+  0033d	40		 inc	 eax
+
+; 163  : }
+
+  0033e	8b e5		 mov	 esp, ebp
+  00340	5d		 pop	 ebp
+  00341	c3		 ret	 0
+?StillDown@EventMgr@@UBEHXZ ENDP			; EventMgr::StillDown
+_TEXT	ENDS
+PUBLIC	??0SOL_Event@@QAE@ABV0@@Z			; SOL_Event::SOL_Event
+EXTRN	?AsyncEventCheck@@YAXXZ:NEAR			; AsyncEventCheck
+_TEXT	SEGMENT
+_mask$ = 12
+___$ReturnUdt$ = 8
+_this$ = -44
+_event$ = -40
+?Wait@EventMgr@@UAE?AVSOL_Event@@G@Z PROC NEAR		; EventMgr::Wait
+
+; 167  : {
+
+  00342	55		 push	 ebp
+  00343	8b ec		 mov	 ebp, esp
+  00345	83 ec 2c	 sub	 esp, 44			; 0000002cH
+  00348	89 4d d4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 168  : 	//	wait for an event
+; 169  : 
+; 170  : 	SOL_Event event;
+
+  0034b	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  0034e	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@XZ	; SOL_Event::SOL_Event
+$L62676:
+
+; 171  : 	while (!Get(&event, mask)) {
+
+  00353	66 8b 45 0c	 mov	 ax, WORD PTR _mask$[ebp]
+  00357	50		 push	 eax
+  00358	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  0035b	51		 push	 ecx
+  0035c	8b 55 d4	 mov	 edx, DWORD PTR _this$[ebp]
+  0035f	8b 02		 mov	 eax, DWORD PTR [edx]
+  00361	8b 4d d4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00364	ff 50 08	 call	 DWORD PTR [eax+8]
+  00367	85 c0		 test	 eax, eax
+  00369	75 07		 jne	 SHORT $L62677
+
+; 172  : 		AsyncEventCheck();
+
+  0036b	e8 00 00 00 00	 call	 ?AsyncEventCheck@@YAXXZ	; AsyncEventCheck
+
+; 173  : 	}
+
+  00370	eb e1		 jmp	 SHORT $L62676
+$L62677:
+
+; 174  : 	return event;
+
+  00372	8d 4d d8	 lea	 ecx, DWORD PTR _event$[ebp]
+  00375	51		 push	 ecx
+  00376	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00379	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@ABV0@@Z ; SOL_Event::SOL_Event
+  0037e	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+
+; 175  : }
+
+  00381	8b e5		 mov	 esp, ebp
+  00383	5d		 pop	 ebp
+  00384	c2 08 00	 ret	 8
+?Wait@EventMgr@@UAE?AVSOL_Event@@G@Z ENDP		; EventMgr::Wait
+_TEXT	ENDS
+PUBLIC	??4EventObjectID@@QAEAAV0@ABVSOL_Event@@@Z	; EventObjectID::operator=
+PUBLIC	?SetIndexedProperty@ObjectID@@QBEXHF@Z		; ObjectID::SetIndexedProperty
+EXTRN	?mouse@@3PAVSOL_Mouse@@A:DWORD			; mouse
+_TEXT	SEGMENT
+_evt$ = 8
+_this$ = -4
+??4EventObjectID@@QAEAAV0@ABVSOL_Event@@@Z PROC NEAR	; EventObjectID::operator=
+
+; 181  : {
+
+  00387	55		 push	 ebp
+  00388	8b ec		 mov	 ebp, esp
+  0038a	51		 push	 ecx
+  0038b	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 182  : 	SetIndexedProperty(evTyp, evt.type);
+
+  0038e	8b 45 08	 mov	 eax, DWORD PTR _evt$[ebp]
+  00391	66 8b 08	 mov	 cx, WORD PTR [eax]
+  00394	51		 push	 ecx
+  00395	6a 35		 push	 53			; 00000035H
+  00397	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0039a	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 183  : 	SetIndexedProperty(evMod, evt.modifiers);
+
+  0039f	8b 55 08	 mov	 edx, DWORD PTR _evt$[ebp]
+  003a2	66 8b 42 08	 mov	 ax, WORD PTR [edx+8]
+  003a6	50		 push	 eax
+  003a7	6a 37		 push	 55			; 00000037H
+  003a9	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  003ac	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 184  : 	SetIndexedProperty(evMsg, (Property) evt.message);
+
+  003b1	8b 4d 08	 mov	 ecx, DWORD PTR _evt$[ebp]
+  003b4	66 8b 51 04	 mov	 dx, WORD PTR [ecx+4]
+  003b8	52		 push	 edx
+  003b9	6a 36		 push	 54			; 00000036H
+  003bb	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  003be	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 185  : 	SetIndexedProperty(evX, evt.where.x);
+
+  003c3	8b 45 08	 mov	 eax, DWORD PTR _evt$[ebp]
+  003c6	66 8b 48 10	 mov	 cx, WORD PTR [eax+16]
+  003ca	51		 push	 ecx
+  003cb	6a 2f		 push	 47			; 0000002fH
+  003cd	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  003d0	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 186  : 	SetIndexedProperty(evY, evt.where.y);
+
+  003d5	8b 55 08	 mov	 edx, DWORD PTR _evt$[ebp]
+  003d8	66 8b 42 14	 mov	 ax, WORD PTR [edx+20]
+  003dc	50		 push	 eax
+  003dd	6a 30		 push	 48			; 00000030H
+  003df	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  003e2	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 187  :    if(mouse && mouse->IsSwift()) {
+
+  003e7	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?mouse@@3PAVSOL_Mouse@@A, 0 ; mouse
+  003ee	74 5d		 je	 SHORT $L62683
+  003f0	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  003f6	8b 11		 mov	 edx, DWORD PTR [ecx]
+  003f8	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  003fe	ff 52 24	 call	 DWORD PTR [edx+36]
+  00401	85 c0		 test	 eax, eax
+  00403	74 48		 je	 SHORT $L62683
+
+; 188  : 		SetIndexedProperty(evZ, evt.zaxis);
+
+  00405	8b 45 08	 mov	 eax, DWORD PTR _evt$[ebp]
+  00408	66 8b 48 18	 mov	 cx, WORD PTR [eax+24]
+  0040c	51		 push	 ecx
+  0040d	6a 31		 push	 49			; 00000031H
+  0040f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00412	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 189  : 		SetIndexedProperty(evPitch, evt.pitch);
+
+  00417	8b 55 08	 mov	 edx, DWORD PTR _evt$[ebp]
+  0041a	66 8b 42 1c	 mov	 ax, WORD PTR [edx+28]
+  0041e	50		 push	 eax
+  0041f	6a 32		 push	 50			; 00000032H
+  00421	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00424	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 190  : 		SetIndexedProperty(evRoll, evt.roll);
+
+  00429	8b 4d 08	 mov	 ecx, DWORD PTR _evt$[ebp]
+  0042c	66 8b 51 20	 mov	 dx, WORD PTR [ecx+32]
+  00430	52		 push	 edx
+  00431	6a 33		 push	 51			; 00000033H
+  00433	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00436	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+
+; 191  : 		SetIndexedProperty(evYaw, evt.yaw);
+
+  0043b	8b 45 08	 mov	 eax, DWORD PTR _evt$[ebp]
+  0043e	66 8b 48 24	 mov	 cx, WORD PTR [eax+36]
+  00442	51		 push	 ecx
+  00443	6a 34		 push	 52			; 00000034H
+  00445	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00448	e8 00 00 00 00	 call	 ?SetIndexedProperty@ObjectID@@QBEXHF@Z ; ObjectID::SetIndexedProperty
+$L62683:
+
+; 193  :    return *this;
+
+  0044d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 194  : }
+
+  00450	8b e5		 mov	 esp, ebp
+  00452	5d		 pop	 ebp
+  00453	c2 04 00	 ret	 4
+??4EventObjectID@@QAEAAV0@ABVSOL_Event@@@Z ENDP		; EventObjectID::operator=
+_TEXT	ENDS
+PUBLIC	??0SOL_Point@@QAE@XZ				; SOL_Point::SOL_Point
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Event@@QAE@XZ PROC NEAR				; SOL_Event::SOL_Event
+
+; 199  : {
+
+  00456	55		 push	 ebp
+  00457	8b ec		 mov	 ebp, esp
+  00459	51		 push	 ecx
+  0045a	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  0045d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00460	83 c1 10	 add	 ecx, 16			; 00000010H
+  00463	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 200  :    zaxis = 0;
+
+  00468	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0046b	c7 40 18 00 00
+	00 00		 mov	 DWORD PTR [eax+24], 0
+
+; 201  :    pitch = 0;
+
+  00472	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00475	c7 41 1c 00 00
+	00 00		 mov	 DWORD PTR [ecx+28], 0
+
+; 202  :    roll = 0;
+
+  0047c	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0047f	c7 42 20 00 00
+	00 00		 mov	 DWORD PTR [edx+32], 0
+
+; 203  : 	yaw = 0;
+
+  00486	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00489	c7 40 24 00 00
+	00 00		 mov	 DWORD PTR [eax+36], 0
+
+; 204  : }
+
+  00490	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00493	8b e5		 mov	 esp, ebp
+  00495	5d		 pop	 ebp
+  00496	c3		 ret	 0
+??0SOL_Event@@QAE@XZ ENDP				; SOL_Event::SOL_Event
+_e$ = 8
+_this$ = -4
+??0SOL_Event@@QAE@ABV0@@Z PROC NEAR			; SOL_Event::SOL_Event
+
+; 207  : {
+
+  00497	55		 push	 ebp
+  00498	8b ec		 mov	 ebp, esp
+  0049a	51		 push	 ecx
+  0049b	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  0049e	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  004a1	83 c1 10	 add	 ecx, 16			; 00000010H
+  004a4	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 208  : 	*this = e;
+
+  004a9	8b 45 08	 mov	 eax, DWORD PTR _e$[ebp]
+  004ac	50		 push	 eax
+  004ad	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  004b0	e8 00 00 00 00	 call	 ??4SOL_Event@@QAEAAV0@ABV0@@Z ; SOL_Event::operator=
+
+; 209  : }
+
+  004b5	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  004b8	8b e5		 mov	 esp, ebp
+  004ba	5d		 pop	 ebp
+  004bb	c2 04 00	 ret	 4
+??0SOL_Event@@QAE@ABV0@@Z ENDP				; SOL_Event::SOL_Event
+_TEXT	ENDS
+PUBLIC	??0SOL_Event@@QAE@VEventObjectID@@@Z		; SOL_Event::SOL_Event
+PUBLIC	?GetIndexedProperty@ObjectID@@QBEFH@Z		; ObjectID::GetIndexedProperty
+PUBLIC	??0SOL_Point@@QAE@HH@Z				; SOL_Point::SOL_Point
+_TEXT	SEGMENT
+_obj$ = 8
+_this$ = -4
+??0SOL_Event@@QAE@VEventObjectID@@@Z PROC NEAR		; SOL_Event::SOL_Event
+
+; 220  : {
+
+  004be	55		 push	 ebp
+  004bf	8b ec		 mov	 ebp, esp
+  004c1	51		 push	 ecx
+  004c2	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  004c5	6a 35		 push	 53			; 00000035H
+  004c7	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  004ca	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  004cf	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  004d2	66 89 01	 mov	 WORD PTR [ecx], ax
+  004d5	6a 36		 push	 54			; 00000036H
+  004d7	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  004da	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  004df	0f bf d0	 movsx	 edx, ax
+  004e2	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  004e5	89 50 04	 mov	 DWORD PTR [eax+4], edx
+  004e8	6a 37		 push	 55			; 00000037H
+  004ea	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  004ed	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  004f2	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  004f5	66 89 41 08	 mov	 WORD PTR [ecx+8], ax
+  004f9	6a 30		 push	 48			; 00000030H
+  004fb	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  004fe	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  00503	0f bf d0	 movsx	 edx, ax
+  00506	52		 push	 edx
+  00507	6a 2f		 push	 47			; 0000002fH
+  00509	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  0050c	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  00511	0f bf c0	 movsx	 eax, ax
+  00514	50		 push	 eax
+  00515	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00518	83 c1 10	 add	 ecx, 16			; 00000010H
+  0051b	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+  00520	6a 31		 push	 49			; 00000031H
+  00522	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  00525	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  0052a	0f bf c8	 movsx	 ecx, ax
+  0052d	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00530	89 4a 18	 mov	 DWORD PTR [edx+24], ecx
+  00533	6a 32		 push	 50			; 00000032H
+  00535	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  00538	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  0053d	0f bf c0	 movsx	 eax, ax
+  00540	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00543	89 41 1c	 mov	 DWORD PTR [ecx+28], eax
+  00546	6a 33		 push	 51			; 00000033H
+  00548	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  0054b	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  00550	0f bf d0	 movsx	 edx, ax
+  00553	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00556	89 50 20	 mov	 DWORD PTR [eax+32], edx
+  00559	6a 34		 push	 52			; 00000034H
+  0055b	8d 4d 08	 lea	 ecx, DWORD PTR _obj$[ebp]
+  0055e	e8 00 00 00 00	 call	 ?GetIndexedProperty@ObjectID@@QBEFH@Z ; ObjectID::GetIndexedProperty
+  00563	0f bf c8	 movsx	 ecx, ax
+  00566	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00569	89 4a 24	 mov	 DWORD PTR [edx+36], ecx
+
+; 221  : }
+
+  0056c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0056f	8b e5		 mov	 esp, ebp
+  00571	5d		 pop	 ebp
+  00572	c2 04 00	 ret	 4
+??0SOL_Event@@QAE@VEventObjectID@@@Z ENDP		; SOL_Event::SOL_Event
+_TEXT	ENDS
+PUBLIC	??4SOL_Point@@QAEAAV0@ABV0@@Z			; SOL_Point::operator=
+_TEXT	SEGMENT
+_e$ = 8
+_this$ = -4
+??4SOL_Event@@QAEAAV0@ABV0@@Z PROC NEAR			; SOL_Event::operator=
+
+; 225  : {
+
+  00575	55		 push	 ebp
+  00576	8b ec		 mov	 ebp, esp
+  00578	51		 push	 ecx
+  00579	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 226  : 	/*	this method is necessary because the one that WATCOM 9.5 generates
+; 227  : 		does not work inside an interrupt function (or one it calls), since
+; 228  : 		ES is not set
+; 229  : 	*/
+; 230  : 	type			= e.type;
+
+  0057c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0057f	8b 4d 08	 mov	 ecx, DWORD PTR _e$[ebp]
+  00582	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00585	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 231  : 	message		= e.message;
+
+  00588	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0058b	8b 4d 08	 mov	 ecx, DWORD PTR _e$[ebp]
+  0058e	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00591	89 50 04	 mov	 DWORD PTR [eax+4], edx
+
+; 232  : 	modifiers	= e.modifiers;
+
+  00594	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00597	8b 4d 08	 mov	 ecx, DWORD PTR _e$[ebp]
+  0059a	66 8b 51 08	 mov	 dx, WORD PTR [ecx+8]
+  0059e	66 89 50 08	 mov	 WORD PTR [eax+8], dx
+
+; 233  : 	when			= e.when;
+
+  005a2	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  005a5	8b 4d 08	 mov	 ecx, DWORD PTR _e$[ebp]
+  005a8	8b 51 0c	 mov	 edx, DWORD PTR [ecx+12]
+  005ab	89 50 0c	 mov	 DWORD PTR [eax+12], edx
+
+; 234  : 	where			= e.where;
+
+  005ae	8b 45 08	 mov	 eax, DWORD PTR _e$[ebp]
+  005b1	83 c0 10	 add	 eax, 16			; 00000010H
+  005b4	50		 push	 eax
+  005b5	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  005b8	83 c1 10	 add	 ecx, 16			; 00000010H
+  005bb	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 235  :    zaxis       = e.zaxis;
+
+  005c0	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  005c3	8b 55 08	 mov	 edx, DWORD PTR _e$[ebp]
+  005c6	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  005c9	89 41 18	 mov	 DWORD PTR [ecx+24], eax
+
+; 236  :    pitch       = e.pitch;
+
+  005cc	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  005cf	8b 55 08	 mov	 edx, DWORD PTR _e$[ebp]
+  005d2	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  005d5	89 41 1c	 mov	 DWORD PTR [ecx+28], eax
+
+; 237  :    roll        = e.roll;
+
+  005d8	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  005db	8b 55 08	 mov	 edx, DWORD PTR _e$[ebp]
+  005de	8b 42 20	 mov	 eax, DWORD PTR [edx+32]
+  005e1	89 41 20	 mov	 DWORD PTR [ecx+32], eax
+
+; 238  :    yaw         = e.yaw;
+
+  005e4	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  005e7	8b 55 08	 mov	 edx, DWORD PTR _e$[ebp]
+  005ea	8b 42 24	 mov	 eax, DWORD PTR [edx+36]
+  005ed	89 41 24	 mov	 DWORD PTR [ecx+36], eax
+
+; 239  : 	
+; 240  : 	return *this;
+
+  005f0	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 241  : }
+
+  005f3	8b e5		 mov	 esp, ebp
+  005f5	5d		 pop	 ebp
+  005f6	c2 04 00	 ret	 4
+??4SOL_Event@@QAEAAV0@ABV0@@Z ENDP			; SOL_Event::operator=
+_this$ = -12
+$T62991 = -8
+?MakeNull@SOL_Event@@QAEXXZ PROC NEAR			; SOL_Event::MakeNull
+
+; 245  : {
+
+  005f9	55		 push	 ebp
+  005fa	8b ec		 mov	 ebp, esp
+  005fc	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  005ff	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 246  : 	//	give him current stuff
+; 247  : 
+; 248  : 	type = 0;
+
+  00602	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00605	66 c7 00 00 00	 mov	 WORD PTR [eax], 0
+
+; 249  : 	if (mouse) {
+
+  0060a	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?mouse@@3PAVSOL_Mouse@@A, 0 ; mouse
+  00611	74 47		 je	 SHORT $L62702
+
+; 250  : 		mouse->GlobalPosSci(&where);
+
+  00613	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00616	83 c1 10	 add	 ecx, 16			; 00000010H
+  00619	51		 push	 ecx
+  0061a	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  00620	8b 02		 mov	 eax, DWORD PTR [edx]
+  00622	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  00628	ff 50 1c	 call	 DWORD PTR [eax+28]
+
+; 251  : 		mouse->GetSwiftInfo(
+; 252  : 						&zaxis,
+; 253  : 						&pitch,
+; 254  : 						&roll,
+; 255  : 						&yaw
+; 256  :       );
+
+  0062b	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0062e	83 c1 24	 add	 ecx, 36			; 00000024H
+  00631	51		 push	 ecx
+  00632	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00635	83 c2 20	 add	 edx, 32			; 00000020H
+  00638	52		 push	 edx
+  00639	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  0063c	83 c0 1c	 add	 eax, 28			; 0000001cH
+  0063f	50		 push	 eax
+  00640	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00643	83 c1 18	 add	 ecx, 24			; 00000018H
+  00646	51		 push	 ecx
+  00647	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  0064d	8b 02		 mov	 eax, DWORD PTR [edx]
+  0064f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  00655	ff 50 20	 call	 DWORD PTR [eax+32]
+
+; 257  : 	} else
+
+  00658	eb 18		 jmp	 SHORT $L62703
+$L62702:
+
+; 258  : 		where = SOL_Point(0, 0);
+
+  0065a	6a 00		 push	 0
+  0065c	6a 00		 push	 0
+  0065e	8d 4d f8	 lea	 ecx, DWORD PTR $T62991[ebp]
+  00661	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+  00666	50		 push	 eax
+  00667	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0066a	83 c1 10	 add	 ecx, 16			; 00000010H
+  0066d	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+$L62703:
+
+; 259  : 
+; 260  : 	modifiers = eventMgr->GetModifiers();
+
+  00672	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  00678	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0067a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  00680	ff 52 0c	 call	 DWORD PTR [edx+12]
+  00683	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00686	66 89 41 08	 mov	 WORD PTR [ecx+8], ax
+
+; 261  : }
+
+  0068a	8b e5		 mov	 esp, ebp
+  0068c	5d		 pop	 ebp
+  0068d	c3		 ret	 0
+?MakeNull@SOL_Event@@QAEXXZ ENDP			; SOL_Event::MakeNull
+_TEXT	ENDS
+PUBLIC	?MapKeyToDir@SOL_Event@@QAEPAV1@XZ		; SOL_Event::MapKeyToDir
+EXTRN	?kbdMgr@@3PAVKbdMgr@@A:DWORD			; kbdMgr
+_TEXT	SEGMENT
+_this$ = -4
+?MapKeyToDir@SOL_Event@@QAEPAV1@XZ PROC NEAR		; SOL_Event::MapKeyToDir
+
+; 265  : {
+
+  0068e	55		 push	 ebp
+  0068f	8b ec		 mov	 ebp, esp
+  00691	51		 push	 ecx
+  00692	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 266  : 	kbdMgr->MapToDir(this);
+
+  00695	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00698	50		 push	 eax
+  00699	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?kbdMgr@@3PAVKbdMgr@@A ; kbdMgr
+  0069f	8b 11		 mov	 edx, DWORD PTR [ecx]
+  006a1	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?kbdMgr@@3PAVKbdMgr@@A ; kbdMgr
+  006a7	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 267  : 	return this;
+
+  006aa	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 268  : }
+
+  006ad	8b e5		 mov	 esp, ebp
+  006af	5d		 pop	 ebp
+  006b0	c3		 ret	 0
+?MapKeyToDir@SOL_Event@@QAEPAV1@XZ ENDP			; SOL_Event::MapKeyToDir
+_TEXT	ENDS
+PUBLIC	?KGetEvent@@YAXPAF@Z				; KGetEvent
+EXTRN	?pm@@3VPMachine@@A:BYTE				; pm
+_TEXT	SEGMENT
+_args$ = 8
+_event$ = -44
+_type$ = -4
+?KGetEvent@@YAXPAF@Z PROC NEAR				; KGetEvent
+
+; 272  : {
+
+  006b1	55		 push	 ebp
+  006b2	8b ec		 mov	 ebp, esp
+  006b4	83 ec 2c	 sub	 esp, 44			; 0000002cH
+
+; 273  : 	// fill in an event object
+; 274  : 
+; 275  : 	SOL_Event			event;
+
+  006b7	8d 4d d4	 lea	 ecx, DWORD PTR _event$[ebp]
+  006ba	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@XZ	; SOL_Event::SOL_Event
+
+; 276  : 	SOL_Event::Type	type;
+; 277  : 
+; 278  : 	type = arg(1);
+
+  006bf	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  006c2	66 8b 48 02	 mov	 cx, WORD PTR [eax+2]
+  006c6	66 89 4d fc	 mov	 WORD PTR _type$[ebp], cx
+
+; 279  : 	if (type & SOL_Event::Leave)
+
+  006ca	8b 55 fc	 mov	 edx, DWORD PTR _type$[ebp]
+  006cd	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  006d3	81 e2 00 80 00
+	00		 and	 edx, 32768		; 00008000H
+  006d9	85 d2		 test	 edx, edx
+  006db	74 21		 je	 SHORT $L62713
+
+; 280  : 		pm.acc = (Acc) eventMgr->IsAvail(&event, type);
+
+  006dd	66 8b 45 fc	 mov	 ax, WORD PTR _type$[ebp]
+  006e1	50		 push	 eax
+  006e2	8d 4d d4	 lea	 ecx, DWORD PTR _event$[ebp]
+  006e5	51		 push	 ecx
+  006e6	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  006ec	8b 02		 mov	 eax, DWORD PTR [edx]
+  006ee	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  006f4	ff 50 14	 call	 DWORD PTR [eax+20]
+  006f7	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 281  : 	else
+
+  006fc	eb 1e		 jmp	 SHORT $L62715
+$L62713:
+
+; 282  : 		pm.acc = (Acc) eventMgr->Get(&event, type);
+
+  006fe	66 8b 4d fc	 mov	 cx, WORD PTR _type$[ebp]
+  00702	51		 push	 ecx
+  00703	8d 55 d4	 lea	 edx, DWORD PTR _event$[ebp]
+  00706	52		 push	 edx
+  00707	a1 00 00 00 00	 mov	 eax, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  0070c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0070e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  00714	ff 52 08	 call	 DWORD PTR [edx+8]
+  00717	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L62715:
+
+; 283  : 
+; 284  : #ifdef RDEBUG
+; 285  : 	Recorder(evt);
+; 286  : #endif
+; 287  : 
+; 288  : 	*(EventObjectID*) &arg(2) = event;
+
+  0071c	8d 45 d4	 lea	 eax, DWORD PTR _event$[ebp]
+  0071f	50		 push	 eax
+  00720	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00723	83 c1 04	 add	 ecx, 4
+  00726	e8 00 00 00 00	 call	 ??4EventObjectID@@QAEAAV0@ABVSOL_Event@@@Z ; EventObjectID::operator=
+
+; 289  : }
+
+  0072b	8b e5		 mov	 esp, ebp
+  0072d	5d		 pop	 ebp
+  0072e	c3		 ret	 0
+?KGetEvent@@YAXPAF@Z ENDP				; KGetEvent
+_TEXT	ENDS
+PUBLIC	??BMemID@@QBEGXZ				; MemID::operator unsigned short
+PUBLIC	??0EventObjectID@@QAE@G@Z			; EventObjectID::EventObjectID
+PUBLIC	??0EventObjectID@@QAE@ABV0@@Z			; EventObjectID::EventObjectID
+PUBLIC	?KMapKeyToDir@@YAXPAF@Z				; KMapKeyToDir
+PUBLIC	??0ObjectID@@QAE@G@Z				; ObjectID::ObjectID
+_TEXT	SEGMENT
+_args$ = 8
+_sciEvent$ = -4
+_event$ = -44
+$T62995 = -48
+?KMapKeyToDir@@YAXPAF@Z PROC NEAR			; KMapKeyToDir
+
+; 293  : {
+
+  0072f	55		 push	 ebp
+  00730	8b ec		 mov	 ebp, esp
+  00732	83 ec 34	 sub	 esp, 52			; 00000034H
+
+; 294  : 	EventObjectID	sciEvent = (ObjectID) arg(1);
+
+  00735	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00738	66 8b 48 02	 mov	 cx, WORD PTR [eax+2]
+  0073c	51		 push	 ecx
+  0073d	8d 4d d0	 lea	 ecx, DWORD PTR $T62995[ebp]
+  00740	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@G@Z	; ObjectID::ObjectID
+  00745	8b c8		 mov	 ecx, eax
+  00747	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  0074c	50		 push	 eax
+  0074d	8d 4d fc	 lea	 ecx, DWORD PTR _sciEvent$[ebp]
+  00750	e8 00 00 00 00	 call	 ??0EventObjectID@@QAE@G@Z ; EventObjectID::EventObjectID
+
+; 295  : 	SOL_Event		event(sciEvent);
+
+  00755	51		 push	 ecx
+  00756	8b cc		 mov	 ecx, esp
+  00758	8d 55 fc	 lea	 edx, DWORD PTR _sciEvent$[ebp]
+  0075b	52		 push	 edx
+  0075c	e8 00 00 00 00	 call	 ??0EventObjectID@@QAE@ABV0@@Z ; EventObjectID::EventObjectID
+  00761	8d 4d d4	 lea	 ecx, DWORD PTR _event$[ebp]
+  00764	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@VEventObjectID@@@Z ; SOL_Event::SOL_Event
+
+; 296  : 
+; 297  : 	event.MapKeyToDir();
+
+  00769	8d 4d d4	 lea	 ecx, DWORD PTR _event$[ebp]
+  0076c	e8 00 00 00 00	 call	 ?MapKeyToDir@SOL_Event@@QAEPAV1@XZ ; SOL_Event::MapKeyToDir
+
+; 298  : 	sciEvent = event;
+
+  00771	8d 45 d4	 lea	 eax, DWORD PTR _event$[ebp]
+  00774	50		 push	 eax
+  00775	8d 4d fc	 lea	 ecx, DWORD PTR _sciEvent$[ebp]
+  00778	e8 00 00 00 00	 call	 ??4EventObjectID@@QAEAAV0@ABVSOL_Event@@@Z ; EventObjectID::operator=
+
+; 299  : 	pm.acc = (Acc) sciEvent;
+
+  0077d	8d 4d fc	 lea	 ecx, DWORD PTR _sciEvent$[ebp]
+  00780	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  00785	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0078a	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 300  : }
+
+  0078f	8b e5		 mov	 esp, ebp
+  00791	5d		 pop	 ebp
+  00792	c3		 ret	 0
+?KMapKeyToDir@@YAXPAF@Z ENDP				; KMapKeyToDir
+_TEXT	ENDS
+PUBLIC	??0ObjectID@@QAE@ABV0@@Z			; ObjectID::ObjectID
+;	COMDAT ??0EventObjectID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+___that$ = 8
+_this$ = -4
+??0EventObjectID@@QAE@ABV0@@Z PROC NEAR			; EventObjectID::EventObjectID, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR ___that$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@ABV0@@Z ; ObjectID::ObjectID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0EventObjectID@@QAE@ABV0@@Z ENDP			; EventObjectID::EventObjectID
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT
+_this$ = -4
+??BMemID@@QBEGXZ PROC NEAR				; MemID::operator unsigned short, COMDAT
+
+; 93   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 94   : 		return handle;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 95   : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+??BMemID@@QBEGXZ ENDP					; MemID::operator unsigned short
+_TEXT	ENDS
+PUBLIC	??0FakeObjectID@@QAE@ABVMemID@@@Z		; FakeObjectID::FakeObjectID
+;	COMDAT ??0ObjectID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0ObjectID@@QAE@ABV0@@Z PROC NEAR			; ObjectID::ObjectID, COMDAT
+
+; 229  : 	ObjectID(const ObjectID& id) : FakeObjectID((MemID&) id) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _id$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0FakeObjectID@@QAE@ABVMemID@@@Z ; FakeObjectID::FakeObjectID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0ObjectID@@QAE@ABV0@@Z ENDP				; ObjectID::ObjectID
+_TEXT	ENDS
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0FakeObjectID@@QAE@ABVMemID@@@Z PROC NEAR		; FakeObjectID::FakeObjectID, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _id$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0FakeObjectID@@QAE@ABVMemID@@@Z ENDP			; FakeObjectID::FakeObjectID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+PUBLIC	??0FakeObjectID@@QAE@G@Z			; FakeObjectID::FakeObjectID
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0ObjectID@@QAE@G@Z PROC NEAR				; ObjectID::ObjectID, COMDAT
+
+; 230  : 	ObjectID(SOL_Handle h) : FakeObjectID(h) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0FakeObjectID@@QAE@G@Z ; FakeObjectID::FakeObjectID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0ObjectID@@QAE@G@Z ENDP				; ObjectID::ObjectID
+_TEXT	ENDS
+PUBLIC	??0MemID@@QAE@G@Z				; MemID::MemID
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0FakeObjectID@@QAE@G@Z PROC NEAR			; FakeObjectID::FakeObjectID, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0FakeObjectID@@QAE@G@Z ENDP				; FakeObjectID::FakeObjectID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0MemID@@QAE@G@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 23   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _h$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 24   : 	}
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b e5		 mov	 esp, ebp
+  00016	5d		 pop	 ebp
+  00017	c2 04 00	 ret	 4
+??0MemID@@QAE@G@Z ENDP					; MemID::MemID
+_TEXT	ENDS
+PUBLIC	?GetIndexedProperty@Object@@QAEFH@Z		; Object::GetIndexedProperty
+PUBLIC	??CFakeObjectID@@QBEPAUObject@@XZ		; FakeObjectID::operator->
+PUBLIC	?AssureValid@ObjectID@@QBEXXZ			; ObjectID::AssureValid
+;	COMDAT ?GetIndexedProperty@ObjectID@@QBEFH@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+?GetIndexedProperty@ObjectID@@QBEFH@Z PROC NEAR		; ObjectID::GetIndexedProperty, COMDAT
+
+; 266  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 267  : 		//	get a property given an index in the property offsets table
+; 268  : 		AssureValid();
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?AssureValid@ObjectID@@QBEXXZ ; ObjectID::AssureValid
+
+; 269  : 		return (*this)->GetIndexedProperty(index);
+
+  0000f	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  00012	50		 push	 eax
+  00013	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00016	e8 00 00 00 00	 call	 ??CFakeObjectID@@QBEPAUObject@@XZ ; FakeObjectID::operator->
+  0001b	8b c8		 mov	 ecx, eax
+  0001d	e8 00 00 00 00	 call	 ?GetIndexedProperty@Object@@QAEFH@Z ; Object::GetIndexedProperty
+
+; 270  : 	}
+
+  00022	8b e5		 mov	 esp, ebp
+  00024	5d		 pop	 ebp
+  00025	c2 04 00	 ret	 4
+?GetIndexedProperty@ObjectID@@QBEFH@Z ENDP		; ObjectID::GetIndexedProperty
+_TEXT	ENDS
+PUBLIC	?GetIndexedPropAddr@Object@@QAEPBFH@Z		; Object::GetIndexedPropAddr
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+?GetIndexedProperty@Object@@QAEFH@Z PROC NEAR		; Object::GetIndexedProperty, COMDAT
+
+; 146  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 147  : 		//	get a property given an index in the property offsets table
+; 148  : 		return *GetIndexedPropAddr(index);
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ?GetIndexedPropAddr@Object@@QAEPBFH@Z ; Object::GetIndexedPropAddr
+  00013	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 149  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetIndexedProperty@Object@@QAEFH@Z ENDP		; Object::GetIndexedProperty
+_TEXT	ENDS
+PUBLIC	??AObject@@QAEAAFH@Z				; Object::operator[]
+EXTRN	?indexedPropertyOffsets@@3PAIA:BYTE		; indexedPropertyOffsets
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+?GetIndexedPropAddr@Object@@QAEPBFH@Z PROC NEAR		; Object::GetIndexedPropAddr, COMDAT
+
+; 138  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 139  : 		//	get a property address given an index into the property offsets table
+; 140  : 		extern size_t indexedPropertyOffsets[];
+; 141  : 		return &(*this)[indexedPropertyOffsets[index]];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 0c 85 00 00
+	00 00		 mov	 ecx, DWORD PTR ?indexedPropertyOffsets@@3PAIA[eax*4]
+  00011	51		 push	 ecx
+  00012	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00015	e8 00 00 00 00	 call	 ??AObject@@QAEAAFH@Z	; Object::operator[]
+
+; 142  : 	}
+
+  0001a	8b e5		 mov	 esp, ebp
+  0001c	5d		 pop	 ebp
+  0001d	c2 04 00	 ret	 4
+?GetIndexedPropAddr@Object@@QAEPBFH@Z ENDP		; Object::GetIndexedPropAddr
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??AObject@@QAEAAFH@Z PROC NEAR				; Object::operator[], COMDAT
+
+; 117  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : 		//	get a reference to a property given the number of the property
+; 119  : 		return ((Property*) this)[index];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8d 04 41	 lea	 eax, DWORD PTR [ecx+eax*2]
+
+; 120  : 	}
+
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??AObject@@QAEAAFH@Z ENDP				; Object::operator[]
+_TEXT	ENDS
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??CFakeObjectID@@QBEPAUObject@@XZ PROC NEAR		; FakeObjectID::operator->, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+??CFakeObjectID@@QBEPAUObject@@XZ ENDP			; FakeObjectID::operator->
+_TEXT	ENDS
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+EXTRN	_memMgr:DWORD
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+PUBLIC	?IsObject@ObjectID@@QBEHXZ			; ObjectID::IsObject
+EXTRN	?Fatal@MsgMgr@@QAAXHZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?AssureValid@ObjectID@@QBEXXZ PROC NEAR			; ObjectID::AssureValid, COMDAT
+
+; 238  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 239  : 		if (!IsObject())
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?IsObject@ObjectID@@QBEHXZ ; ObjectID::IsObject
+  0000f	85 c0		 test	 eax, eax
+  00011	75 1e		 jne	 SHORT $L58188
+
+; 240  : 			msgMgr->Fatal(Msg_NotObject, (int) *this);
+
+  00013	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00016	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  0001b	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00020	50		 push	 eax
+  00021	6a 2f		 push	 47			; 0000002fH
+  00023	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00028	50		 push	 eax
+  00029	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXHZZ	; MsgMgr::Fatal
+  0002e	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58188:
+
+; 241  : 	}
+
+  00031	8b e5		 mov	 esp, ebp
+  00033	5d		 pop	 ebp
+  00034	c3		 ret	 0
+?AssureValid@ObjectID@@QBEXXZ ENDP			; ObjectID::AssureValid
+_TEXT	ENDS
+PUBLIC	?IsValid@MemID@@QBEHXZ				; MemID::IsValid
+EXTRN	?GetMemType@MemID@@QBE?AW4MemType@@XZ:NEAR	; MemID::GetMemType
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsObject@ObjectID@@QBEHXZ PROC NEAR			; ObjectID::IsObject, COMDAT
+
+; 247  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 248  : 		return IsValid() && GetMemType() == MemObject;
+
+  00009	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ?IsValid@MemID@@QBEHXZ	; MemID::IsValid
+  00011	85 c0		 test	 eax, eax
+  00013	74 16		 je	 SHORT $L63014
+  00015	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00018	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  0001d	83 f8 34	 cmp	 eax, 52			; 00000034H
+  00020	75 09		 jne	 SHORT $L63014
+  00022	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+  00029	eb 07		 jmp	 SHORT $L63015
+$L63014:
+  0002b	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+$L63015:
+  00032	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 249  : 	}
+
+  00035	8b e5		 mov	 esp, ebp
+  00037	5d		 pop	 ebp
+  00038	c3		 ret	 0
+?IsObject@ObjectID@@QBEHXZ ENDP				; ObjectID::IsObject
+_TEXT	ENDS
+PUBLIC	?IsValid@MemoryMgr@@QAEHG@Z			; MemoryMgr::IsValid
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsValid@MemID@@QBEHXZ PROC NEAR			; MemID::IsValid, COMDAT
+
+; 62   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 63   : 		return memMgr->IsValid(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?IsValid@MemoryMgr@@QAEHG@Z ; MemoryMgr::IsValid
+
+; 64   : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+?IsValid@MemID@@QBEHXZ ENDP				; MemID::IsValid
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -8
+_tempID$ = -4
+?IsValid@MemoryMgr@@QAEHG@Z PROC NEAR			; MemoryMgr::IsValid, COMDAT
+
+; 475  : 	inline Bool MemoryMgr::IsValid(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 476  : 		unsigned short tempID = (unsigned short)theID;
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  0000d	66 89 45 fc	 mov	 WORD PTR _tempID$[ebp], ax
+
+; 477  : 
+; 478  : 		return(
+; 479  : 				(tempID)															&&
+; 480  : 				(tempID < maxDescriptors)									&&
+; 481  : 				(desc[tempID].memInfo.bits.freeDescriptor == False)	&&
+; 482  : 				(desc[tempID].memInfo.bits.freeMemory == False)
+; 483  : 				);
+
+  00011	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00014	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  0001a	85 c9		 test	 ecx, ecx
+  0001c	74 58		 je	 SHORT $L63018
+  0001e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00021	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00027	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0002a	3b 50 04	 cmp	 edx, DWORD PTR [eax+4]
+  0002d	73 47		 jae	 SHORT $L63018
+  0002f	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00032	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00038	c1 e1 04	 shl	 ecx, 4
+  0003b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0003e	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00041	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00044	c1 e1 0e	 shl	 ecx, 14			; 0000000eH
+  00047	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  0004a	85 c9		 test	 ecx, ecx
+  0004c	75 28		 jne	 SHORT $L63018
+  0004e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00051	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00057	c1 e2 04	 shl	 edx, 4
+  0005a	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0005d	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00060	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  00063	c1 e2 14	 shl	 edx, 20			; 00000014H
+  00066	c1 fa 1f	 sar	 edx, 31			; 0000001fH
+  00069	85 d2		 test	 edx, edx
+  0006b	75 09		 jne	 SHORT $L63018
+  0006d	c7 45 f4 01 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 1
+  00074	eb 07		 jmp	 SHORT $L63019
+$L63018:
+  00076	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+$L63019:
+  0007d	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 484  : 	}
+
+  00080	8b e5		 mov	 esp, ebp
+  00082	5d		 pop	 ebp
+  00083	c2 04 00	 ret	 4
+?IsValid@MemoryMgr@@QAEHG@Z ENDP			; MemoryMgr::IsValid
+_TEXT	ENDS
+PUBLIC	?SetIndexedProperty@Object@@QAEXHF@Z		; Object::SetIndexedProperty
+;	COMDAT ?SetIndexedProperty@ObjectID@@QBEXHF@Z
+_TEXT	SEGMENT
+_index$ = 8
+_property$ = 12
+_this$ = -4
+?SetIndexedProperty@ObjectID@@QBEXHF@Z PROC NEAR	; ObjectID::SetIndexedProperty, COMDAT
+
+; 324  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 325  : 		//	set a property given an index into property offsets table
+; 326  : 		AssureValid();
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?AssureValid@ObjectID@@QBEXXZ ; ObjectID::AssureValid
+
+; 327  : 		(*this)->SetIndexedProperty(index, property);
+
+  0000f	66 8b 45 0c	 mov	 ax, WORD PTR _property$[ebp]
+  00013	50		 push	 eax
+  00014	8b 4d 08	 mov	 ecx, DWORD PTR _index$[ebp]
+  00017	51		 push	 ecx
+  00018	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001b	e8 00 00 00 00	 call	 ??CFakeObjectID@@QBEPAUObject@@XZ ; FakeObjectID::operator->
+  00020	8b c8		 mov	 ecx, eax
+  00022	e8 00 00 00 00	 call	 ?SetIndexedProperty@Object@@QAEXHF@Z ; Object::SetIndexedProperty
+
+; 328  : 	}
+
+  00027	8b e5		 mov	 esp, ebp
+  00029	5d		 pop	 ebp
+  0002a	c2 08 00	 ret	 8
+?SetIndexedProperty@ObjectID@@QBEXHF@Z ENDP		; ObjectID::SetIndexedProperty
+_TEXT	ENDS
+PUBLIC	?SetPropAtOffset@Object@@QAEAAFI@Z		; Object::SetPropAtOffset
+EXTRN	?indexedPropertyOffsets@@3PAIA:BYTE		; indexedPropertyOffsets
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT
+_index$ = 8
+_property$ = 12
+_this$ = -4
+?SetIndexedProperty@Object@@QAEXHF@Z PROC NEAR		; Object::SetIndexedProperty, COMDAT
+
+; 188  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 189  : 		//	set a property given an index into property offsets table
+; 190  : 		extern size_t indexedPropertyOffsets[];
+; 191  : 		SetPropAtOffset(indexedPropertyOffsets[index] * sizeof(Property)) =
+; 192  : 			property;
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 0c 85 00 00
+	00 00		 mov	 ecx, DWORD PTR ?indexedPropertyOffsets@@3PAIA[eax*4]
+  00011	d1 e1		 shl	 ecx, 1
+  00013	51		 push	 ecx
+  00014	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00017	e8 00 00 00 00	 call	 ?SetPropAtOffset@Object@@QAEAAFI@Z ; Object::SetPropAtOffset
+  0001c	66 8b 55 0c	 mov	 dx, WORD PTR _property$[ebp]
+  00020	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 193  : 	}
+
+  00023	8b e5		 mov	 esp, ebp
+  00025	5d		 pop	 ebp
+  00026	c2 08 00	 ret	 8
+?SetIndexedProperty@Object@@QAEXHF@Z ENDP		; Object::SetIndexedProperty
+_TEXT	ENDS
+PUBLIC	?SetGraphicsUpdate@Object@@QAEXXZ		; Object::SetGraphicsUpdate
+PUBLIC	?GetPropAtOffset@Object@@QAEAAFI@Z		; Object::GetPropAtOffset
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT
+_offset$ = 8
+_this$ = -4
+?SetPropAtOffset@Object@@QAEAAFI@Z PROC NEAR		; Object::SetPropAtOffset, COMDAT
+
+; 197  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 198  : 		//	return reference to property that is about to be changed
+; 199  : 		if (offset <= MaxGraphUpdateOffset && offset >= MinGraphUpdateOffset)
+
+  00007	83 7d 08 56	 cmp	 DWORD PTR _offset$[ebp], 86 ; 00000056H
+  0000b	77 0e		 ja	 SHORT $L58047
+  0000d	83 7d 08 30	 cmp	 DWORD PTR _offset$[ebp], 48 ; 00000030H
+  00011	72 08		 jb	 SHORT $L58047
+
+; 200  : 			SetGraphicsUpdate();
+
+  00013	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00016	e8 00 00 00 00	 call	 ?SetGraphicsUpdate@Object@@QAEXXZ ; Object::SetGraphicsUpdate
+$L58047:
+
+; 201  : 		return GetPropAtOffset(offset);
+
+  0001b	8b 45 08	 mov	 eax, DWORD PTR _offset$[ebp]
+  0001e	50		 push	 eax
+  0001f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00022	e8 00 00 00 00	 call	 ?GetPropAtOffset@Object@@QAEAAFI@Z ; Object::GetPropAtOffset
+
+; 202  : 	}
+
+  00027	8b e5		 mov	 esp, ebp
+  00029	5d		 pop	 ebp
+  0002a	c2 04 00	 ret	 4
+?SetPropAtOffset@Object@@QAEAAFI@Z ENDP			; Object::SetPropAtOffset
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?SetGraphicsUpdate@Object@@QAEXXZ PROC NEAR		; Object::SetGraphicsUpdate, COMDAT
+
+; 97   : 	void		SetGraphicsUpdate()		{ info |= GRAPH_UPD; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 48 0e	 mov	 cx, WORD PTR [eax+14]
+  0000e	80 c9 08	 or	 cl, 8
+  00011	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00014	66 89 4a 0e	 mov	 WORD PTR [edx+14], cx
+  00018	8b e5		 mov	 esp, ebp
+  0001a	5d		 pop	 ebp
+  0001b	c3		 ret	 0
+?SetGraphicsUpdate@Object@@QAEXXZ ENDP			; Object::SetGraphicsUpdate
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT
+_offset$ = 8
+_this$ = -4
+?GetPropAtOffset@Object@@QAEAAFI@Z PROC NEAR		; Object::GetPropAtOffset, COMDAT
+
+; 163  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 164  : 		//	get a property given an offset into the object
+; 165  : 		return (Property&) ((char*) this)[offset];
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	03 45 08	 add	 eax, DWORD PTR _offset$[ebp]
+
+; 166  : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c2 04 00	 ret	 4
+?GetPropAtOffset@Object@@QAEAAFI@Z ENDP			; Object::GetPropAtOffset
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Point@@QAE@XZ PROC NEAR				; SOL_Point::SOL_Point, COMDAT
+
+; 20   : 	SOL_Point() : x(DefaultCoord), y(DefaultCoord) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 ef cd ab
+	89		 mov	 DWORD PTR [eax], -1985229329 ; 89abcdefH
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c7 41 04 ef cd
+	ab 89		 mov	 DWORD PTR [ecx+4], -1985229329 ; 89abcdefH
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Point@@QAE@XZ ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT
+_this$ = -4
+_x$ = 8
+_y$ = 12
+??0SOL_Point@@QAE@HH@Z PROC NEAR			; SOL_Point::SOL_Point, COMDAT
+
+; 21   : 	SOL_Point(Coord x, Coord y) : x(x), y(y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _x$[ebp]
+  0000d	89 08		 mov	 DWORD PTR [eax], ecx
+  0000f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00012	8b 45 0c	 mov	 eax, DWORD PTR _y$[ebp]
+  00015	89 42 04	 mov	 DWORD PTR [edx+4], eax
+  00018	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001b	8b e5		 mov	 esp, ebp
+  0001d	5d		 pop	 ebp
+  0001e	c2 08 00	 ret	 8
+??0SOL_Point@@QAE@HH@Z ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??4SOL_Point@@QAEAAV0@ABV0@@Z PROC NEAR			; SOL_Point::operator=, COMDAT
+
+; 117  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : 	x = p.x;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+
+; 119  : 	y = p.y;
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00017	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0001a	89 50 04	 mov	 DWORD PTR [eax+4], edx
+
+; 120  : 	return *this;
+
+  0001d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 121  : }
+
+  00020	8b e5		 mov	 esp, ebp
+  00022	5d		 pop	 ebp
+  00023	c2 04 00	 ret	 4
+??4SOL_Point@@QAEAAV0@ABV0@@Z ENDP			; SOL_Point::operator=
+_TEXT	ENDS
+;	COMDAT ??0EventObjectID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0EventObjectID@@QAE@G@Z PROC NEAR			; EventObjectID::EventObjectID, COMDAT
+
+; 43   : 	EventObjectID(SOL_Handle h) : ObjectID(h) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _h$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@G@Z	; ObjectID::ObjectID
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+??0EventObjectID@@QAE@G@Z ENDP				; EventObjectID::EventObjectID
+_TEXT	ENDS
+;	COMDAT ?GetModifiers@EventMgr@@UAEGXZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetModifiers@EventMgr@@UAEGXZ PROC NEAR		; EventMgr::GetModifiers, COMDAT
+
+; 106  : 	virtual Kbd::Mod	GetModifiers() { return 0; };
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	66 33 c0	 xor	 ax, ax
+  0000a	8b e5		 mov	 esp, ebp
+  0000c	5d		 pop	 ebp
+  0000d	c3		 ret	 0
+?GetModifiers@EventMgr@@UAEGXZ ENDP			; EventMgr::GetModifiers
+_TEXT	ENDS
+END

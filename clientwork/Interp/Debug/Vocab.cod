@@ -1,0 +1,539 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Vocab.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+PUBLIC	?GetVocabStr@@YAHHHPAD@Z			; GetVocabStr
+EXTRN	?resMgr@@3PAVResourceMgr@@A:DWORD		; resMgr
+_TEXT	SEGMENT
+_moduleNum$ = 8
+_entryNum$ = 12
+_dest$ = 16
+_dh$ = -20
+_dp$ = -12
+_ofs$ = -4
+_length$ = -8
+_i$ = -16
+$T55268 = -24
+?GetVocabStr@@YAHHHPAD@Z PROC NEAR			; GetVocabStr
+
+; 10   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 18	 sub	 esp, 24			; 00000018H
+
+; 11   : 	// Get a handle to the appropriate resource.
+; 12   : 	MemID dh = resMgr->Get(MemResVocab, moduleNum);
+
+  00006	6a 00		 push	 0
+  00008	66 8b 45 08	 mov	 ax, WORD PTR _moduleNum$[ebp]
+  0000c	50		 push	 eax
+  0000d	6a 06		 push	 6
+  0000f	8d 4d e8	 lea	 ecx, DWORD PTR $T55268[ebp]
+  00012	51		 push	 ecx
+  00013	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00019	8b 02		 mov	 eax, DWORD PTR [edx]
+  0001b	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00021	ff 50 20	 call	 DWORD PTR [eax+32]
+  00024	50		 push	 eax
+  00025	8d 4d ec	 lea	 ecx, DWORD PTR _dh$[ebp]
+  00028	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+
+; 13   : 	char* dp = (char*) *dh;
+
+  0002d	8d 4d ec	 lea	 ecx, DWORD PTR _dh$[ebp]
+  00030	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  00035	89 45 f4	 mov	 DWORD PTR _dp$[ebp], eax
+
+; 14   : 
+; 15   : 	// Value check the requested entryNum (first int of resource contains
+; 16   : 	// the maximum directory entry).
+; 17   : 	if (entryNum > *(SCIWord*) dp)
+
+  00038	8b 4d f4	 mov	 ecx, DWORD PTR _dp$[ebp]
+  0003b	0f bf 11	 movsx	 edx, WORD PTR [ecx]
+  0003e	39 55 0c	 cmp	 DWORD PTR _entryNum$[ebp], edx
+  00041	7e 04		 jle	 SHORT $L55158
+
+; 18   : 		return 0;
+
+  00043	33 c0		 xor	 eax, eax
+  00045	eb 67		 jmp	 SHORT $L55152
+$L55158:
+
+; 19   : 
+; 20   : 	// Get a pointer to the data by looking up its offset in the directory.
+; 21   : 	int ofs = ((SCIWord*) dp)[entryNum + 1];
+
+  00047	8b 45 0c	 mov	 eax, DWORD PTR _entryNum$[ebp]
+  0004a	8b 4d f4	 mov	 ecx, DWORD PTR _dp$[ebp]
+  0004d	0f bf 54 41 02	 movsx	 edx, WORD PTR [ecx+eax*2+2]
+  00052	89 55 fc	 mov	 DWORD PTR _ofs$[ebp], edx
+
+; 22   : 	dp += ofs;
+
+  00055	8b 45 f4	 mov	 eax, DWORD PTR _dp$[ebp]
+  00058	03 45 fc	 add	 eax, DWORD PTR _ofs$[ebp]
+  0005b	89 45 f4	 mov	 DWORD PTR _dp$[ebp], eax
+
+; 23   : 
+; 24   : 	// Get the length of the data.
+; 25   : 	int length = *(SCIWord*) dp;
+
+  0005e	8b 4d f4	 mov	 ecx, DWORD PTR _dp$[ebp]
+  00061	0f bf 11	 movsx	 edx, WORD PTR [ecx]
+  00064	89 55 f8	 mov	 DWORD PTR _length$[ebp], edx
+
+; 26   : 	dp += 2;
+
+  00067	8b 45 f4	 mov	 eax, DWORD PTR _dp$[ebp]
+  0006a	83 c0 02	 add	 eax, 2
+  0006d	89 45 f4	 mov	 DWORD PTR _dp$[ebp], eax
+
+; 27   : 
+; 28   : 	// Copy the data to its destination.
+; 29   : 	for (int i = length; i > 0 ; --i)
+
+  00070	8b 4d f8	 mov	 ecx, DWORD PTR _length$[ebp]
+  00073	89 4d f0	 mov	 DWORD PTR _i$[ebp], ecx
+  00076	eb 09		 jmp	 SHORT $L55164
+$L55165:
+  00078	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  0007b	83 ea 01	 sub	 edx, 1
+  0007e	89 55 f0	 mov	 DWORD PTR _i$[ebp], edx
+$L55164:
+  00081	83 7d f0 00	 cmp	 DWORD PTR _i$[ebp], 0
+  00085	7e 1e		 jle	 SHORT $L55166
+
+; 30   : 		*dest++ = *dp++;
+
+  00087	8b 45 10	 mov	 eax, DWORD PTR _dest$[ebp]
+  0008a	8b 4d f4	 mov	 ecx, DWORD PTR _dp$[ebp]
+  0008d	8a 11		 mov	 dl, BYTE PTR [ecx]
+  0008f	88 10		 mov	 BYTE PTR [eax], dl
+  00091	8b 45 10	 mov	 eax, DWORD PTR _dest$[ebp]
+  00094	83 c0 01	 add	 eax, 1
+  00097	89 45 10	 mov	 DWORD PTR _dest$[ebp], eax
+  0009a	8b 4d f4	 mov	 ecx, DWORD PTR _dp$[ebp]
+  0009d	83 c1 01	 add	 ecx, 1
+  000a0	89 4d f4	 mov	 DWORD PTR _dp$[ebp], ecx
+  000a3	eb d3		 jmp	 SHORT $L55165
+$L55166:
+
+; 31   : 	*dest = 0;
+
+  000a5	8b 55 10	 mov	 edx, DWORD PTR _dest$[ebp]
+  000a8	c6 02 00	 mov	 BYTE PTR [edx], 0
+
+; 32   : 
+; 33   : 	// Return the length of the data.
+; 34   : 	return length;
+
+  000ab	8b 45 f8	 mov	 eax, DWORD PTR _length$[ebp]
+$L55152:
+
+; 35   : }
+
+  000ae	8b e5		 mov	 esp, ebp
+  000b0	5d		 pop	 ebp
+  000b1	c3		 ret	 0
+?GetVocabStr@@YAHHHPAD@Z ENDP				; GetVocabStr
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+EXTRN	_memMgr:DWORD
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+END

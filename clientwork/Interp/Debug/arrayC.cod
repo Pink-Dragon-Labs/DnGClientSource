@@ -1,0 +1,281 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\arrayC.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ?CheckBounds@OCArray@@IAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?Grow@OCArray@@IAEXH@Z				; OCArray::Grow
+PUBLIC	??0OCArray@@QAE@H@Z				; OCArray::OCArray
+_TEXT	SEGMENT
+_size$ = 8
+_this$ = -4
+??0OCArray@@QAE@H@Z PROC NEAR				; OCArray::OCArray
+
+; 18   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 19   : 	m_pData = NULL;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], 0
+
+; 20   : 	m_nSize = m_nActualSize = 0;
+
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c7 41 04 00 00
+	00 00		 mov	 DWORD PTR [ecx+4], 0
+  0001a	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0001d	c7 42 08 00 00
+	00 00		 mov	 DWORD PTR [edx+8], 0
+
+; 21   : 	m_bFreeBuffer = 1;
+
+  00024	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00027	c6 40 0c 01	 mov	 BYTE PTR [eax+12], 1
+
+; 22   : 
+; 23   : 	Grow ( size );
+
+  0002b	8b 4d 08	 mov	 ecx, DWORD PTR _size$[ebp]
+  0002e	51		 push	 ecx
+  0002f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00032	e8 00 00 00 00	 call	 ?Grow@OCArray@@IAEXH@Z	; OCArray::Grow
+
+; 24   : } 
+
+  00037	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0003a	8b e5		 mov	 esp, ebp
+  0003c	5d		 pop	 ebp
+  0003d	c2 04 00	 ret	 4
+??0OCArray@@QAE@H@Z ENDP				; OCArray::OCArray
+_TEXT	ENDS
+PUBLIC	??0OCArray@@QAE@XZ				; OCArray::OCArray
+_TEXT	SEGMENT
+_this$ = -4
+??0OCArray@@QAE@XZ PROC NEAR				; OCArray::OCArray
+
+; 27   : {
+
+  00040	55		 push	 ebp
+  00041	8b ec		 mov	 ebp, esp
+  00043	51		 push	 ecx
+  00044	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 28   : 	m_pData = NULL;
+
+  00047	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0004a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], 0
+
+; 29   : 	m_nSize = m_nActualSize = 0;
+
+  00050	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00053	c7 41 04 00 00
+	00 00		 mov	 DWORD PTR [ecx+4], 0
+  0005a	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0005d	c7 42 08 00 00
+	00 00		 mov	 DWORD PTR [edx+8], 0
+
+; 30   : 	m_bFreeBuffer = true;
+
+  00064	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00067	c6 40 0c 01	 mov	 BYTE PTR [eax+12], 1
+
+; 31   : 
+; 32   : 	Grow ( _ARRAY_START_SIZE );
+
+  0006b	68 e8 03 00 00	 push	 1000			; 000003e8H
+  00070	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00073	e8 00 00 00 00	 call	 ?Grow@OCArray@@IAEXH@Z	; OCArray::Grow
+
+; 33   : }
+
+  00078	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0007b	8b e5		 mov	 esp, ebp
+  0007d	5d		 pop	 ebp
+  0007e	c3		 ret	 0
+??0OCArray@@QAE@XZ ENDP					; OCArray::OCArray
+_TEXT	ENDS
+PUBLIC	??1OCArray@@QAE@XZ				; OCArray::~OCArray
+EXTRN	__imp__free:NEAR
+_TEXT	SEGMENT
+_this$ = -4
+??1OCArray@@QAE@XZ PROC NEAR				; OCArray::~OCArray
+
+; 36   : {
+
+  0007f	55		 push	 ebp
+  00080	8b ec		 mov	 ebp, esp
+  00082	51		 push	 ecx
+  00083	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 37   : 	if ( m_pData ) {
+
+  00086	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00089	83 38 00	 cmp	 DWORD PTR [eax], 0
+  0008c	74 24		 je	 SHORT $L1265
+
+; 38   : 		if ( m_bFreeBuffer )
+
+  0008e	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00091	33 d2		 xor	 edx, edx
+  00093	8a 51 0c	 mov	 dl, BYTE PTR [ecx+12]
+  00096	85 d2		 test	 edx, edx
+  00098	74 0f		 je	 SHORT $L1266
+
+; 39   : 			free ( m_pData );
+
+  0009a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0009d	8b 08		 mov	 ecx, DWORD PTR [eax]
+  0009f	51		 push	 ecx
+  000a0	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__free
+  000a6	83 c4 04	 add	 esp, 4
+$L1266:
+
+; 40   : 
+; 41   : 		m_pData = NULL;
+
+  000a9	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  000ac	c7 02 00 00 00
+	00		 mov	 DWORD PTR [edx], 0
+$L1265:
+
+; 43   : 
+; 44   : 	m_nSize = m_nActualSize = 0;
+
+  000b2	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  000b5	c7 40 04 00 00
+	00 00		 mov	 DWORD PTR [eax+4], 0
+  000bc	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000bf	c7 41 08 00 00
+	00 00		 mov	 DWORD PTR [ecx+8], 0
+
+; 45   : }
+
+  000c6	8b e5		 mov	 esp, ebp
+  000c8	5d		 pop	 ebp
+  000c9	c3		 ret	 0
+??1OCArray@@QAE@XZ ENDP					; OCArray::~OCArray
+_TEXT	ENDS
+EXTRN	__imp__calloc:NEAR
+EXTRN	_memcpy:NEAR
+_TEXT	SEGMENT
+_size$ = 8
+_this$ = -12
+_newSize$ = -8
+_newData$ = -4
+?Grow@OCArray@@IAEXH@Z PROC NEAR			; OCArray::Grow
+
+; 48   : {
+
+  000ca	55		 push	 ebp
+  000cb	8b ec		 mov	 ebp, esp
+  000cd	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  000d0	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 49   : 	// you can't grow an array that does not own it's buffer
+; 50   : 	if ( !m_bFreeBuffer ) 
+
+  000d3	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  000d6	33 c9		 xor	 ecx, ecx
+  000d8	8a 48 0c	 mov	 cl, BYTE PTR [eax+12]
+  000db	85 c9		 test	 ecx, ecx
+  000dd	75 02		 jne	 SHORT $L1271
+
+; 51   : 		return;
+
+  000df	eb 5f		 jmp	 SHORT $L1270
+$L1271:
+
+; 52   : 
+; 53   : 	int newSize = m_nActualSize + size;
+
+  000e1	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  000e4	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  000e7	03 45 08	 add	 eax, DWORD PTR _size$[ebp]
+  000ea	89 45 f8	 mov	 DWORD PTR _newSize$[ebp], eax
+
+; 54   : 	unsigned char *newData = (unsigned char *)calloc ( 1, sizeof ( char ) * newSize ); 
+
+  000ed	8b 4d f8	 mov	 ecx, DWORD PTR _newSize$[ebp]
+  000f0	51		 push	 ecx
+  000f1	6a 01		 push	 1
+  000f3	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__calloc
+  000f9	83 c4 08	 add	 esp, 8
+  000fc	89 45 fc	 mov	 DWORD PTR _newData$[ebp], eax
+
+; 55   : 
+; 56   : 	if ( m_pData ) {
+
+  000ff	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00102	83 3a 00	 cmp	 DWORD PTR [edx], 0
+  00105	74 28		 je	 SHORT $L1276
+
+; 57   : 		memcpy ( newData, m_pData, sizeof ( unsigned char ) * m_nActualSize );
+
+  00107	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  0010a	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  0010d	51		 push	 ecx
+  0010e	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00111	8b 02		 mov	 eax, DWORD PTR [edx]
+  00113	50		 push	 eax
+  00114	8b 4d fc	 mov	 ecx, DWORD PTR _newData$[ebp]
+  00117	51		 push	 ecx
+  00118	e8 00 00 00 00	 call	 _memcpy
+  0011d	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 58   : 		free ( m_pData );
+
+  00120	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00123	8b 02		 mov	 eax, DWORD PTR [edx]
+  00125	50		 push	 eax
+  00126	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__free
+  0012c	83 c4 04	 add	 esp, 4
+$L1276:
+
+; 60   : 
+; 61   : 	m_pData = newData;
+
+  0012f	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00132	8b 55 fc	 mov	 edx, DWORD PTR _newData$[ebp]
+  00135	89 11		 mov	 DWORD PTR [ecx], edx
+
+; 62   : 	m_nActualSize = newSize;
+
+  00137	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  0013a	8b 4d f8	 mov	 ecx, DWORD PTR _newSize$[ebp]
+  0013d	89 48 04	 mov	 DWORD PTR [eax+4], ecx
+$L1270:
+
+; 63   : }
+
+  00140	8b e5		 mov	 esp, ebp
+  00142	5d		 pop	 ebp
+  00143	c2 04 00	 ret	 4
+?Grow@OCArray@@IAEXH@Z ENDP				; OCArray::Grow
+_TEXT	ENDS
+END

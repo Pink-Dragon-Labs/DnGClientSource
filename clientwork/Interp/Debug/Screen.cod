@@ -1,0 +1,4715 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Screen.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsEmpty@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Clip@SOL_Rect@@QAEXABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?PlaneId@ScreenItem@@QBEJXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AScreenItemList@@QAEAAVScreenItem@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AddCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DeleteCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?EraseCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Id@SOL_Plane@@QBEJXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Priority@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?PriorityCount@SOL_Plane@@QAEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RedrawAllCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?UpdateCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsTransparent@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?OnScreen@SOL_Plane@@QBEABVSOL_Rect@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DecAddCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DecDeleteCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DecEraseCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DecPriorityCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DecUpdateCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetDeleteCount@SOL_Plane@@QAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetUpdateCount@SOL_Plane@@QAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SIList@SOL_Plane@@QAEAAVScreenItemList@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Length@PlaneList@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??APlaneList@@QBEABVSOL_Plane@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??APlaneList@@QAEAAVSOL_Plane@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Pointer@PlaneList@@QAEPAVSOL_Plane@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Length@RectList@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??ARectList@@QAEAAVSOL_Rect@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Planes@Screen@@QAEAAVPlaneList@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GRectList@@QAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GDrawList@@QAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?AbortPlane@Screen@@QAEXPBVSOL_Plane@@@Z	; Screen::AbortPlane
+PUBLIC	?Id@SOL_Plane@@QBEJXZ				; SOL_Plane::Id
+EXTRN	?Search@PlaneList@@QBEHI@Z:NEAR			; PlaneList::Search
+EXTRN	?Delete@PlaneList@@QAEXH@Z:NEAR			; PlaneList::Delete
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+_DATA	SEGMENT
+$SG57936 DB	'AbortPlane - plane not found!', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_plane$ = 8
+_this$ = -8
+_index$ = -4
+?AbortPlane@Screen@@QAEXPBVSOL_Plane@@@Z PROC NEAR	; Screen::AbortPlane
+
+; 13   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 14   : 	int index = planes.Search(plane->Id());
+
+  00009	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  0000c	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  00011	50		 push	 eax
+  00012	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00015	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  0001a	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 15   : 	if (index == -1)
+
+  0001d	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  00021	75 13		 jne	 SHORT $L57935
+
+; 16   : 		msgMgr->Fatal("AbortPlane - plane not found!");
+
+  00023	68 00 00 00 00	 push	 OFFSET FLAT:$SG57936
+  00028	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0002d	50		 push	 eax
+  0002e	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00033	83 c4 08	 add	 esp, 8
+$L57935:
+
+; 17   : 
+; 18   : 	planes.Delete(index);
+
+  00036	8b 4d fc	 mov	 ecx, DWORD PTR _index$[ebp]
+  00039	51		 push	 ecx
+  0003a	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0003d	e8 00 00 00 00	 call	 ?Delete@PlaneList@@QAEXH@Z ; PlaneList::Delete
+
+; 19   : }
+
+  00042	8b e5		 mov	 esp, ebp
+  00044	5d		 pop	 ebp
+  00045	c2 04 00	 ret	 4
+?AbortPlane@Screen@@QAEXPBVSOL_Plane@@@Z ENDP		; Screen::AbortPlane
+_TEXT	ENDS
+;	COMDAT ?Id@SOL_Plane@@QBEJXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Id@SOL_Plane@@QBEJXZ PROC NEAR				; SOL_Plane::Id, COMDAT
+
+; 64   : 	long				Id() const					{return planeId;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 00		 mov	 eax, DWORD PTR [eax]
+  0000c	8b e5		 mov	 esp, ebp
+  0000e	5d		 pop	 ebp
+  0000f	c3		 ret	 0
+?Id@SOL_Plane@@QBEJXZ ENDP				; SOL_Plane::Id
+_TEXT	ENDS
+PUBLIC	?AddPlane@Screen@@QAEXPAVSOL_Plane@@@Z		; Screen::AddPlane
+PUBLIC	?AddCount@SOL_Plane@@QBEHXZ			; SOL_Plane::AddCount
+PUBLIC	?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ		; SOL_Plane::OnScreen
+PUBLIC	?SetDeleteCount@SOL_Plane@@QAEXH@Z		; SOL_Plane::SetDeleteCount
+PUBLIC	?SetUpdateCount@SOL_Plane@@QAEXH@Z		; SOL_Plane::SetUpdateCount
+PUBLIC	?Clip@SOL_Rect@@QAEXABV1@@Z			; SOL_Rect::Clip
+EXTRN	?Add@PlaneList@@QAEHPAVSOL_Plane@@@Z:NEAR	; PlaneList::Add
+EXTRN	?Sort@PlaneList@@QAEXXZ:NEAR			; PlaneList::Sort
+EXTRN	?graphMgr@@3PAVGraphicsMgr@@A:DWORD		; graphMgr
+_TEXT	SEGMENT
+_plane$ = 8
+_this$ = -8
+_index$ = -4
+?AddPlane@Screen@@QAEXPAVSOL_Plane@@@Z PROC NEAR	; Screen::AddPlane
+
+; 23   : {
+
+  00048	55		 push	 ebp
+  00049	8b ec		 mov	 ebp, esp
+  0004b	83 ec 08	 sub	 esp, 8
+  0004e	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 24   : 	int index = planes.Search(plane->Id());
+
+  00051	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  00054	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  00059	50		 push	 eax
+  0005a	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0005d	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  00062	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 25   : 	if (index == -1) {
+
+  00065	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  00069	75 26		 jne	 SHORT $L57942
+
+; 26   : 		// Clip plane's onScreen by the screen
+; 27   : 		plane->OnScreen().Clip(screenRect);
+
+  0006b	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0006e	05 94 01 00 00	 add	 eax, 404		; 00000194H
+  00073	50		 push	 eax
+  00074	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  00077	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  0007c	8b c8		 mov	 ecx, eax
+  0007e	e8 00 00 00 00	 call	 ?Clip@SOL_Rect@@QAEXABV1@@Z ; SOL_Rect::Clip
+
+; 28   : 		planes.Add(plane);
+
+  00083	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  00086	51		 push	 ecx
+  00087	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0008a	e8 00 00 00 00	 call	 ?Add@PlaneList@@QAEHPAVSOL_Plane@@@Z ; PlaneList::Add
+
+; 30   : 	else {
+
+  0008f	eb 38		 jmp	 SHORT $L57943
+$L57942:
+
+; 31   : 		// This plane already exists, just update it.
+; 32   : 		plane->SetDeleteCount(0);
+
+  00091	6a 00		 push	 0
+  00093	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  00096	e8 00 00 00 00	 call	 ?SetDeleteCount@SOL_Plane@@QAEXH@Z ; SOL_Plane::SetDeleteCount
+
+; 33   : 		if (!plane->AddCount())
+
+  0009b	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  0009e	e8 00 00 00 00	 call	 ?AddCount@SOL_Plane@@QBEHXZ ; SOL_Plane::AddCount
+  000a3	85 c0		 test	 eax, eax
+  000a5	75 1a		 jne	 SHORT $L57944
+
+; 34   : 			plane->SetUpdateCount(graphMgr->ScreenCount());
+
+  000a7	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  000ad	8b 02		 mov	 eax, DWORD PTR [edx]
+  000af	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  000b5	ff 50 04	 call	 DWORD PTR [eax+4]
+  000b8	50		 push	 eax
+  000b9	8b 4d 08	 mov	 ecx, DWORD PTR _plane$[ebp]
+  000bc	e8 00 00 00 00	 call	 ?SetUpdateCount@SOL_Plane@@QAEXH@Z ; SOL_Plane::SetUpdateCount
+$L57944:
+
+; 35   : 		// The planes list is kept In priority order
+; 36   : 		planes.Sort();
+
+  000c1	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000c4	e8 00 00 00 00	 call	 ?Sort@PlaneList@@QAEXXZ	; PlaneList::Sort
+$L57943:
+
+; 38   : }
+
+  000c9	8b e5		 mov	 esp, ebp
+  000cb	5d		 pop	 ebp
+  000cc	c2 04 00	 ret	 4
+?AddPlane@Screen@@QAEXPAVSOL_Plane@@@Z ENDP		; Screen::AddPlane
+_TEXT	ENDS
+PUBLIC	?Intersect@SOL_Rect@@QBEHABV1@@Z		; SOL_Rect::Intersect
+PUBLIC	?MakeEmpty@SOL_Rect@@QAEXXZ			; SOL_Rect::MakeEmpty
+;	COMDAT ?Clip@SOL_Rect@@QAEXABV1@@Z
+_TEXT	SEGMENT
+_r$ = 8
+_this$ = -4
+?Clip@SOL_Rect@@QAEXABV1@@Z PROC NEAR			; SOL_Rect::Clip, COMDAT
+
+; 224  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 225  : 	if (Intersect(r))  {
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _r$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ?Intersect@SOL_Rect@@QBEHABV1@@Z ; SOL_Rect::Intersect
+  00013	85 c0		 test	 eax, eax
+  00015	74 66		 je	 SHORT $L921
+
+; 226  : 		if (A.x < r.A.x)
+
+  00017	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001a	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  0001d	8b 01		 mov	 eax, DWORD PTR [ecx]
+  0001f	3b 02		 cmp	 eax, DWORD PTR [edx]
+  00021	7d 0a		 jge	 SHORT $L922
+
+; 227  : 			A.x = r.A.x;
+
+  00023	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00026	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  00029	8b 02		 mov	 eax, DWORD PTR [edx]
+  0002b	89 01		 mov	 DWORD PTR [ecx], eax
+$L922:
+
+; 228  : 		if (A.y < r.A.y)
+
+  0002d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00030	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  00033	8b 41 04	 mov	 eax, DWORD PTR [ecx+4]
+  00036	3b 42 04	 cmp	 eax, DWORD PTR [edx+4]
+  00039	7d 0c		 jge	 SHORT $L923
+
+; 229  : 			A.y = r.A.y;
+
+  0003b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0003e	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  00041	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  00044	89 41 04	 mov	 DWORD PTR [ecx+4], eax
+$L923:
+
+; 230  : 		if (B.x > r.B.x)
+
+  00047	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0004a	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  0004d	8b 41 08	 mov	 eax, DWORD PTR [ecx+8]
+  00050	3b 42 08	 cmp	 eax, DWORD PTR [edx+8]
+  00053	7e 0c		 jle	 SHORT $L924
+
+; 231  : 			B.x = r.B.x;
+
+  00055	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00058	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  0005b	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  0005e	89 41 08	 mov	 DWORD PTR [ecx+8], eax
+$L924:
+
+; 232  : 		if (B.y > r.B.y)
+
+  00061	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00064	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  00067	8b 41 0c	 mov	 eax, DWORD PTR [ecx+12]
+  0006a	3b 42 0c	 cmp	 eax, DWORD PTR [edx+12]
+  0006d	7e 0c		 jle	 SHORT $L925
+
+; 233  : 			B.y = r.B.y;
+
+  0006f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00072	8b 55 08	 mov	 edx, DWORD PTR _r$[ebp]
+  00075	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  00078	89 41 0c	 mov	 DWORD PTR [ecx+12], eax
+$L925:
+
+; 235  : 	else
+
+  0007b	eb 08		 jmp	 SHORT $L926
+$L921:
+
+; 236  : 		MakeEmpty();
+
+  0007d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00080	e8 00 00 00 00	 call	 ?MakeEmpty@SOL_Rect@@QAEXXZ ; SOL_Rect::MakeEmpty
+$L926:
+
+; 237  : }
+
+  00085	8b e5		 mov	 esp, ebp
+  00087	5d		 pop	 ebp
+  00088	c2 04 00	 ret	 4
+?Clip@SOL_Rect@@QAEXABV1@@Z ENDP			; SOL_Rect::Clip
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?MakeEmpty@SOL_Rect@@QAEXXZ PROC NEAR			; SOL_Rect::MakeEmpty, COMDAT
+
+; 142  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 143  : 	B.x = -1;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 40 08 ff ff
+	ff ff		 mov	 DWORD PTR [eax+8], -1
+
+; 144  : 	B.y = -1;
+
+  00011	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00014	c7 41 0c ff ff
+	ff ff		 mov	 DWORD PTR [ecx+12], -1
+
+; 145  : 	A.x = 0;
+
+  0001b	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0001e	c7 02 00 00 00
+	00		 mov	 DWORD PTR [edx], 0
+
+; 146  : 	A.y = 0;
+
+  00024	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00027	c7 40 04 00 00
+	00 00		 mov	 DWORD PTR [eax+4], 0
+
+; 147  : }
+
+  0002e	8b e5		 mov	 esp, ebp
+  00030	5d		 pop	 ebp
+  00031	c3		 ret	 0
+?MakeEmpty@SOL_Rect@@QAEXXZ ENDP			; SOL_Rect::MakeEmpty
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT
+_r$ = 8
+_this$ = -4
+?Intersect@SOL_Rect@@QBEHABV1@@Z PROC NEAR		; SOL_Rect::Intersect, COMDAT
+
+; 189  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 190  : 	if (B.x < r.A.x)
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _r$[ebp]
+  0000d	8b 50 08	 mov	 edx, DWORD PTR [eax+8]
+  00010	3b 11		 cmp	 edx, DWORD PTR [ecx]
+  00012	7d 04		 jge	 SHORT $L904
+
+; 191  : 		return False;
+
+  00014	33 c0		 xor	 eax, eax
+  00016	eb 3a		 jmp	 SHORT $L903
+$L904:
+
+; 192  : 	if (B.y < r.A.y)
+
+  00018	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001b	8b 4d 08	 mov	 ecx, DWORD PTR _r$[ebp]
+  0001e	8b 50 0c	 mov	 edx, DWORD PTR [eax+12]
+  00021	3b 51 04	 cmp	 edx, DWORD PTR [ecx+4]
+  00024	7d 04		 jge	 SHORT $L905
+
+; 193  : 		return False;
+
+  00026	33 c0		 xor	 eax, eax
+  00028	eb 28		 jmp	 SHORT $L903
+$L905:
+
+; 194  : 	if (A.x > r.B.x)
+
+  0002a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0002d	8b 4d 08	 mov	 ecx, DWORD PTR _r$[ebp]
+  00030	8b 10		 mov	 edx, DWORD PTR [eax]
+  00032	3b 51 08	 cmp	 edx, DWORD PTR [ecx+8]
+  00035	7e 04		 jle	 SHORT $L906
+
+; 195  : 		return False;
+
+  00037	33 c0		 xor	 eax, eax
+  00039	eb 17		 jmp	 SHORT $L903
+$L906:
+
+; 196  : 	if (A.y > r.B.y)
+
+  0003b	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0003e	8b 4d 08	 mov	 ecx, DWORD PTR _r$[ebp]
+  00041	8b 50 04	 mov	 edx, DWORD PTR [eax+4]
+  00044	3b 51 0c	 cmp	 edx, DWORD PTR [ecx+12]
+  00047	7e 04		 jle	 SHORT $L907
+
+; 197  : 		return False;
+
+  00049	33 c0		 xor	 eax, eax
+  0004b	eb 05		 jmp	 SHORT $L903
+$L907:
+
+; 198  : 	return True;
+
+  0004d	b8 01 00 00 00	 mov	 eax, 1
+$L903:
+
+; 199  : }
+
+  00052	8b e5		 mov	 esp, ebp
+  00054	5d		 pop	 ebp
+  00055	c2 04 00	 ret	 4
+?Intersect@SOL_Rect@@QBEHABV1@@Z ENDP			; SOL_Rect::Intersect
+_TEXT	ENDS
+;	COMDAT ?AddCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?AddCount@SOL_Plane@@QBEHXZ PROC NEAR			; SOL_Plane::AddCount, COMDAT
+
+; 56   : 	int				AddCount() const			{return addCount;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 30	 mov	 eax, DWORD PTR [eax+48]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?AddCount@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::AddCount
+_TEXT	ENDS
+;	COMDAT ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ PROC NEAR	; SOL_Plane::OnScreen, COMDAT
+
+; 80   : 	SOL_Rect&		OnScreen()					{return onScreen;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	83 c0 4c	 add	 eax, 76			; 0000004cH
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ENDP		; SOL_Plane::OnScreen
+_TEXT	ENDS
+;	COMDAT ?SetDeleteCount@SOL_Plane@@QAEXH@Z
+_TEXT	SEGMENT
+_val$ = 8
+_this$ = -4
+?SetDeleteCount@SOL_Plane@@QAEXH@Z PROC NEAR		; SOL_Plane::SetDeleteCount, COMDAT
+
+; 116  : 	void				SetDeleteCount(int val)	{deleteCount = val;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _val$[ebp]
+  0000d	89 48 44	 mov	 DWORD PTR [eax+68], ecx
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+?SetDeleteCount@SOL_Plane@@QAEXH@Z ENDP			; SOL_Plane::SetDeleteCount
+_TEXT	ENDS
+;	COMDAT ?SetUpdateCount@SOL_Plane@@QAEXH@Z
+_TEXT	SEGMENT
+_val$ = 8
+_this$ = -4
+?SetUpdateCount@SOL_Plane@@QAEXH@Z PROC NEAR		; SOL_Plane::SetUpdateCount, COMDAT
+
+; 122  : 	void				SetUpdateCount(int val)	{updateCount = val;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _val$[ebp]
+  0000d	89 88 c0 9c 00
+	00		 mov	 DWORD PTR [eax+40128], ecx
+  00013	8b e5		 mov	 esp, ebp
+  00015	5d		 pop	 ebp
+  00016	c2 04 00	 ret	 4
+?SetUpdateCount@SOL_Plane@@QAEXH@Z ENDP			; SOL_Plane::SetUpdateCount
+_TEXT	ENDS
+PUBLIC	??APlaneList@@QAEAAVSOL_Plane@@H@Z		; PlaneList::operator[]
+PUBLIC	?AddPic@Screen@@QAEHJHABVSOL_Point@@H@Z		; Screen::AddPic
+EXTRN	?AddPic@SOL_Plane@@QAEHHABVSOL_Point@@HH@Z:NEAR	; SOL_Plane::AddPic
+EXTRN	?Fatal@MsgMgr@@QAAXDPADHHZZ:NEAR		; MsgMgr::Fatal
+_DATA	SEGMENT
+	ORG $+2
+$SG57954 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Screen'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_planeID$ = 8
+_thePic$ = 12
+_thePoint$ = 16
+_mirror$ = 20
+_this$ = -8
+_index$ = -4
+?AddPic@Screen@@QAEHJHABVSOL_Point@@H@Z PROC NEAR	; Screen::AddPic
+
+; 42   : {
+
+  000cf	55		 push	 ebp
+  000d0	8b ec		 mov	 ebp, esp
+  000d2	83 ec 08	 sub	 esp, 8
+  000d5	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 43   : 	int index = planes.Search(planeID);
+
+  000d8	8b 45 08	 mov	 eax, DWORD PTR _planeID$[ebp]
+  000db	50		 push	 eax
+  000dc	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000df	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  000e4	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 44   : 	if (index == -1)
+
+  000e7	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  000eb	75 1e		 jne	 SHORT $L57953
+
+; 45   : 		msgMgr->Fatal(SrcLoc,Msg_PlaneNotFound,planeID);
+
+  000ed	8b 4d 08	 mov	 ecx, DWORD PTR _planeID$[ebp]
+  000f0	51		 push	 ecx
+  000f1	6a 6b		 push	 107			; 0000006bH
+  000f3	6a 2d		 push	 45			; 0000002dH
+  000f5	68 00 00 00 00	 push	 OFFSET FLAT:$SG57954
+  000fa	6a 61		 push	 97			; 00000061H
+  000fc	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00102	52		 push	 edx
+  00103	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  00108	83 c4 18	 add	 esp, 24			; 00000018H
+$L57953:
+
+; 46   : 	return planes[index].AddPic(thePic,thePoint,mirror);
+
+  0010b	6a 01		 push	 1
+  0010d	8b 45 14	 mov	 eax, DWORD PTR _mirror$[ebp]
+  00110	50		 push	 eax
+  00111	8b 4d 10	 mov	 ecx, DWORD PTR _thePoint$[ebp]
+  00114	51		 push	 ecx
+  00115	8b 55 0c	 mov	 edx, DWORD PTR _thePic$[ebp]
+  00118	52		 push	 edx
+  00119	8b 45 fc	 mov	 eax, DWORD PTR _index$[ebp]
+  0011c	50		 push	 eax
+  0011d	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00120	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00125	8b c8		 mov	 ecx, eax
+  00127	e8 00 00 00 00	 call	 ?AddPic@SOL_Plane@@QAEHHABVSOL_Point@@HH@Z ; SOL_Plane::AddPic
+
+; 47   : }
+
+  0012c	8b e5		 mov	 esp, ebp
+  0012e	5d		 pop	 ebp
+  0012f	c2 10 00	 ret	 16			; 00000010H
+?AddPic@Screen@@QAEHJHABVSOL_Point@@H@Z ENDP		; Screen::AddPic
+_TEXT	ENDS
+;	COMDAT ??APlaneList@@QAEAAVSOL_Plane@@H@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??APlaneList@@QAEAAVSOL_Plane@@H@Z PROC NEAR		; PlaneList::operator[], COMDAT
+
+; 29   : 	SOL_Plane& operator[](int index) 					{return *planeArray[index];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 04 81	 mov	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??APlaneList@@QAEAAVSOL_Plane@@H@Z ENDP			; PlaneList::operator[]
+_TEXT	ENDS
+PUBLIC	?DeletePic@Screen@@QAEXJHH@Z			; Screen::DeletePic
+EXTRN	?DeletePic@SOL_Plane@@QAEXHH@Z:NEAR		; SOL_Plane::DeletePic
+_DATA	SEGMENT
+	ORG $+3
+$SG57963 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Screen'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_planeID$ = 8
+_oldPic$ = 12
+_newPic$ = 16
+_this$ = -8
+_index$ = -4
+?DeletePic@Screen@@QAEXJHH@Z PROC NEAR			; Screen::DeletePic
+
+; 51   : {
+
+  00132	55		 push	 ebp
+  00133	8b ec		 mov	 ebp, esp
+  00135	83 ec 08	 sub	 esp, 8
+  00138	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 52   : 	int index = planes.Search(planeID);
+
+  0013b	8b 45 08	 mov	 eax, DWORD PTR _planeID$[ebp]
+  0013e	50		 push	 eax
+  0013f	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00142	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  00147	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 53   : 	if (index == -1)
+
+  0014a	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  0014e	75 1e		 jne	 SHORT $L57962
+
+; 54   : 		msgMgr->Fatal(SrcLoc,Msg_PlaneNotFound,planeID);
+
+  00150	8b 4d 08	 mov	 ecx, DWORD PTR _planeID$[ebp]
+  00153	51		 push	 ecx
+  00154	6a 6b		 push	 107			; 0000006bH
+  00156	6a 36		 push	 54			; 00000036H
+  00158	68 00 00 00 00	 push	 OFFSET FLAT:$SG57963
+  0015d	6a 61		 push	 97			; 00000061H
+  0015f	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00165	52		 push	 edx
+  00166	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  0016b	83 c4 18	 add	 esp, 24			; 00000018H
+$L57962:
+
+; 55   : 	planes[index].DeletePic(oldPic,newPic);
+
+  0016e	8b 45 10	 mov	 eax, DWORD PTR _newPic$[ebp]
+  00171	50		 push	 eax
+  00172	8b 4d 0c	 mov	 ecx, DWORD PTR _oldPic$[ebp]
+  00175	51		 push	 ecx
+  00176	8b 55 fc	 mov	 edx, DWORD PTR _index$[ebp]
+  00179	52		 push	 edx
+  0017a	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0017d	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00182	8b c8		 mov	 ecx, eax
+  00184	e8 00 00 00 00	 call	 ?DeletePic@SOL_Plane@@QAEXHH@Z ; SOL_Plane::DeletePic
+
+; 56   : }
+
+  00189	8b e5		 mov	 esp, ebp
+  0018b	5d		 pop	 ebp
+  0018c	c2 0c 00	 ret	 12			; 0000000cH
+?DeletePic@Screen@@QAEXJHH@Z ENDP			; Screen::DeletePic
+_TEXT	ENDS
+PUBLIC	?ScrollScreenItems@Screen@@QAEXJHHH@Z		; Screen::ScrollScreenItems
+EXTRN	?ScrollScreenItems@SOL_Plane@@QAEXHHH@Z:NEAR	; SOL_Plane::ScrollScreenItems
+_DATA	SEGMENT
+	ORG $+3
+$SG57973 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Screen'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_planeID$ = 8
+_xStep$ = 12
+_yStep$ = 16
+_movePic$ = 20
+_this$ = -8
+_index$ = -4
+?ScrollScreenItems@Screen@@QAEXJHHH@Z PROC NEAR		; Screen::ScrollScreenItems
+
+; 60   : {
+
+  0018f	55		 push	 ebp
+  00190	8b ec		 mov	 ebp, esp
+  00192	83 ec 08	 sub	 esp, 8
+  00195	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 61   : 	int index = planes.Search(planeID);
+
+  00198	8b 45 08	 mov	 eax, DWORD PTR _planeID$[ebp]
+  0019b	50		 push	 eax
+  0019c	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0019f	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  001a4	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 62   : 	if (index == -1)
+
+  001a7	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  001ab	75 1e		 jne	 SHORT $L57972
+
+; 63   : 		msgMgr->Fatal(SrcLoc,Msg_PlaneNotFound,planeID);
+
+  001ad	8b 4d 08	 mov	 ecx, DWORD PTR _planeID$[ebp]
+  001b0	51		 push	 ecx
+  001b1	6a 6b		 push	 107			; 0000006bH
+  001b3	6a 3f		 push	 63			; 0000003fH
+  001b5	68 00 00 00 00	 push	 OFFSET FLAT:$SG57973
+  001ba	6a 61		 push	 97			; 00000061H
+  001bc	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  001c2	52		 push	 edx
+  001c3	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  001c8	83 c4 18	 add	 esp, 24			; 00000018H
+$L57972:
+
+; 64   : 	planes[index].ScrollScreenItems(xStep,yStep,movePic);
+
+  001cb	8b 45 14	 mov	 eax, DWORD PTR _movePic$[ebp]
+  001ce	50		 push	 eax
+  001cf	8b 4d 10	 mov	 ecx, DWORD PTR _yStep$[ebp]
+  001d2	51		 push	 ecx
+  001d3	8b 55 0c	 mov	 edx, DWORD PTR _xStep$[ebp]
+  001d6	52		 push	 edx
+  001d7	8b 45 fc	 mov	 eax, DWORD PTR _index$[ebp]
+  001da	50		 push	 eax
+  001db	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  001de	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  001e3	8b c8		 mov	 ecx, eax
+  001e5	e8 00 00 00 00	 call	 ?ScrollScreenItems@SOL_Plane@@QAEXHHH@Z ; SOL_Plane::ScrollScreenItems
+
+; 65   : }
+
+  001ea	8b e5		 mov	 esp, ebp
+  001ec	5d		 pop	 ebp
+  001ed	c2 10 00	 ret	 16			; 00000010H
+?ScrollScreenItems@Screen@@QAEXJHHH@Z ENDP		; Screen::ScrollScreenItems
+_TEXT	ENDS
+PUBLIC	?Length@PlaneList@@QBEHXZ			; PlaneList::Length
+PUBLIC	?CheckIntegrity@Screen@@QAEXXZ			; Screen::CheckIntegrity
+EXTRN	?CheckIntegrity@SOL_Plane@@QAEXXZ:NEAR		; SOL_Plane::CheckIntegrity
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+?CheckIntegrity@Screen@@QAEXXZ PROC NEAR		; Screen::CheckIntegrity
+
+; 68   : {
+
+  001f0	55		 push	 ebp
+  001f1	8b ec		 mov	 ebp, esp
+  001f3	83 ec 08	 sub	 esp, 8
+  001f6	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 69   : 	for ( int i=0; i<planes.Length(); i++ )
+
+  001f9	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00200	eb 09		 jmp	 SHORT $L57979
+$L57980:
+  00202	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00205	83 c0 01	 add	 eax, 1
+  00208	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L57979:
+  0020b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0020e	e8 00 00 00 00	 call	 ?Length@PlaneList@@QBEHXZ ; PlaneList::Length
+  00213	39 45 fc	 cmp	 DWORD PTR _i$[ebp], eax
+  00216	7d 15		 jge	 SHORT $L57981
+
+; 70   : 		planes[i].CheckIntegrity();
+
+  00218	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0021b	51		 push	 ecx
+  0021c	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0021f	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00224	8b c8		 mov	 ecx, eax
+  00226	e8 00 00 00 00	 call	 ?CheckIntegrity@SOL_Plane@@QAEXXZ ; SOL_Plane::CheckIntegrity
+  0022b	eb d5		 jmp	 SHORT $L57980
+$L57981:
+
+; 71   : }
+
+  0022d	8b e5		 mov	 esp, ebp
+  0022f	5d		 pop	 ebp
+  00230	c3		 ret	 0
+?CheckIntegrity@Screen@@QAEXXZ ENDP			; Screen::CheckIntegrity
+_TEXT	ENDS
+;	COMDAT ?Length@PlaneList@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Length@PlaneList@@QBEHXZ PROC NEAR			; PlaneList::Length, COMDAT
+
+; 22   : 	int	Length() const								{return length;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 80 90 01 00
+	00		 mov	 eax, DWORD PTR [eax+400]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+?Length@PlaneList@@QBEHXZ ENDP				; PlaneList::Length
+_TEXT	ENDS
+PUBLIC	?AddScreenItem@Screen@@QAEXPAVScreenItem@@@Z	; Screen::AddScreenItem
+PUBLIC	?PlaneId@ScreenItem@@QBEJXZ			; ScreenItem::PlaneId
+EXTRN	?AddScreenItem@SOL_Plane@@QAEXPAVScreenItem@@@Z:NEAR ; SOL_Plane::AddScreenItem
+_DATA	SEGMENT
+	ORG $+3
+$SG57988 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Screen'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_si$ = 8
+_this$ = -8
+_index$ = -4
+?AddScreenItem@Screen@@QAEXPAVScreenItem@@@Z PROC NEAR	; Screen::AddScreenItem
+
+; 75   : {
+
+  00231	55		 push	 ebp
+  00232	8b ec		 mov	 ebp, esp
+  00234	83 ec 08	 sub	 esp, 8
+  00237	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 76   : 	int index = planes.Search(si->PlaneId());
+
+  0023a	8b 4d 08	 mov	 ecx, DWORD PTR _si$[ebp]
+  0023d	e8 00 00 00 00	 call	 ?PlaneId@ScreenItem@@QBEJXZ ; ScreenItem::PlaneId
+  00242	50		 push	 eax
+  00243	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00246	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  0024b	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 77   : 	if (index == -1) {
+
+  0024e	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  00252	75 22		 jne	 SHORT $L57987
+
+; 78   : 		msgMgr->Fatal(SrcLoc,Msg_InvalidPlane,si->PlaneId());
+
+  00254	8b 4d 08	 mov	 ecx, DWORD PTR _si$[ebp]
+  00257	e8 00 00 00 00	 call	 ?PlaneId@ScreenItem@@QBEJXZ ; ScreenItem::PlaneId
+  0025c	50		 push	 eax
+  0025d	6a 6c		 push	 108			; 0000006cH
+  0025f	6a 4e		 push	 78			; 0000004eH
+  00261	68 00 00 00 00	 push	 OFFSET FLAT:$SG57988
+  00266	6a 61		 push	 97			; 00000061H
+  00268	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0026d	50		 push	 eax
+  0026e	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  00273	83 c4 18	 add	 esp, 24			; 00000018H
+$L57987:
+
+; 80   : 
+; 81   : 	planes[index].AddScreenItem(si);
+
+  00276	8b 4d 08	 mov	 ecx, DWORD PTR _si$[ebp]
+  00279	51		 push	 ecx
+  0027a	8b 55 fc	 mov	 edx, DWORD PTR _index$[ebp]
+  0027d	52		 push	 edx
+  0027e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00281	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00286	8b c8		 mov	 ecx, eax
+  00288	e8 00 00 00 00	 call	 ?AddScreenItem@SOL_Plane@@QAEXPAVScreenItem@@@Z ; SOL_Plane::AddScreenItem
+
+; 82   : }
+
+  0028d	8b e5		 mov	 esp, ebp
+  0028f	5d		 pop	 ebp
+  00290	c2 04 00	 ret	 4
+?AddScreenItem@Screen@@QAEXPAVScreenItem@@@Z ENDP	; Screen::AddScreenItem
+_TEXT	ENDS
+;	COMDAT ?PlaneId@ScreenItem@@QBEJXZ
+_TEXT	SEGMENT
+_this$ = -4
+?PlaneId@ScreenItem@@QBEJXZ PROC NEAR			; ScreenItem::PlaneId, COMDAT
+
+; 63   : 	long			PlaneId() const			{return planeId;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 3c	 mov	 eax, DWORD PTR [eax+60]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?PlaneId@ScreenItem@@QBEJXZ ENDP			; ScreenItem::PlaneId
+_TEXT	ENDS
+PUBLIC	?NewScreenDim@Screen@@QAEXHH@Z			; Screen::NewScreenDim
+PUBLIC	?Set@SOL_Rect@@QAEXHHHH@Z			; SOL_Rect::Set
+PUBLIC	??0SOL_Rect@@QAE@ABV0@@Z			; SOL_Rect::SOL_Rect
+EXTRN	?NewScreenDim@SOL_Plane@@QAEXVSOL_Rect@@@Z:NEAR	; SOL_Plane::NewScreenDim
+_TEXT	SEGMENT
+_newXdim$ = 8
+_newYdim$ = 12
+_this$ = -16
+_count$ = -4
+_i$ = -8
+?NewScreenDim@Screen@@QAEXHH@Z PROC NEAR		; Screen::NewScreenDim
+
+; 86   : {
+
+  00293	55		 push	 ebp
+  00294	8b ec		 mov	 ebp, esp
+  00296	83 ec 10	 sub	 esp, 16			; 00000010H
+  00299	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 87   : 	xDim = newXdim;
+
+  0029c	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  0029f	8b 4d 08	 mov	 ecx, DWORD PTR _newXdim$[ebp]
+  002a2	89 88 48 11 00
+	00		 mov	 DWORD PTR [eax+4424], ecx
+
+; 88   : 	yDim = newYdim;
+
+  002a8	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  002ab	8b 45 0c	 mov	 eax, DWORD PTR _newYdim$[ebp]
+  002ae	89 82 4c 11 00
+	00		 mov	 DWORD PTR [edx+4428], eax
+
+; 89   : 	screenRect.Set(0,0,xDim - 1,yDim - 1);
+
+  002b4	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002b7	8b 91 4c 11 00
+	00		 mov	 edx, DWORD PTR [ecx+4428]
+  002bd	83 ea 01	 sub	 edx, 1
+  002c0	52		 push	 edx
+  002c1	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  002c4	8b 88 48 11 00
+	00		 mov	 ecx, DWORD PTR [eax+4424]
+  002ca	83 e9 01	 sub	 ecx, 1
+  002cd	51		 push	 ecx
+  002ce	6a 00		 push	 0
+  002d0	6a 00		 push	 0
+  002d2	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002d5	81 c1 94 01 00
+	00		 add	 ecx, 404		; 00000194H
+  002db	e8 00 00 00 00	 call	 ?Set@SOL_Rect@@QAEXHHHH@Z ; SOL_Rect::Set
+
+; 90   : 	int count = planes.Length();
+
+  002e0	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002e3	e8 00 00 00 00	 call	 ?Length@PlaneList@@QBEHXZ ; PlaneList::Length
+  002e8	89 45 fc	 mov	 DWORD PTR _count$[ebp], eax
+
+; 91   : 	for (int i = 0;i < count;i++) {
+
+  002eb	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  002f2	eb 09		 jmp	 SHORT $L57996
+$L57997:
+  002f4	8b 55 f8	 mov	 edx, DWORD PTR _i$[ebp]
+  002f7	83 c2 01	 add	 edx, 1
+  002fa	89 55 f8	 mov	 DWORD PTR _i$[ebp], edx
+$L57996:
+  002fd	8b 45 f8	 mov	 eax, DWORD PTR _i$[ebp]
+  00300	3b 45 fc	 cmp	 eax, DWORD PTR _count$[ebp]
+  00303	7d 2b		 jge	 SHORT $L57998
+
+; 92   : 		planes[i].NewScreenDim(screenRect);	
+
+  00305	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00308	81 c1 94 01 00
+	00		 add	 ecx, 404		; 00000194H
+  0030e	83 ec 10	 sub	 esp, 16			; 00000010H
+  00311	8b d4		 mov	 edx, esp
+  00313	51		 push	 ecx
+  00314	8b ca		 mov	 ecx, edx
+  00316	e8 00 00 00 00	 call	 ??0SOL_Rect@@QAE@ABV0@@Z ; SOL_Rect::SOL_Rect
+  0031b	8b 45 f8	 mov	 eax, DWORD PTR _i$[ebp]
+  0031e	50		 push	 eax
+  0031f	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00322	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00327	8b c8		 mov	 ecx, eax
+  00329	e8 00 00 00 00	 call	 ?NewScreenDim@SOL_Plane@@QAEXVSOL_Rect@@@Z ; SOL_Plane::NewScreenDim
+
+; 93   : 	}
+
+  0032e	eb c4		 jmp	 SHORT $L57997
+$L57998:
+
+; 94   : }
+
+  00330	8b e5		 mov	 esp, ebp
+  00332	5d		 pop	 ebp
+  00333	c2 08 00	 ret	 8
+?NewScreenDim@Screen@@QAEXHH@Z ENDP			; Screen::NewScreenDim
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT
+_xa$ = 8
+_ya$ = 12
+_xb$ = 16
+_yb$ = 20
+_this$ = -4
+?Set@SOL_Rect@@QAEXHHHH@Z PROC NEAR			; SOL_Rect::Set, COMDAT
+
+; 73   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 74   : 	A.x = xa;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _xa$[ebp]
+  0000d	89 08		 mov	 DWORD PTR [eax], ecx
+
+; 75   : 	A.y = ya;
+
+  0000f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00012	8b 45 0c	 mov	 eax, DWORD PTR _ya$[ebp]
+  00015	89 42 04	 mov	 DWORD PTR [edx+4], eax
+
+; 76   : 	B.x = xb;
+
+  00018	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001b	8b 55 10	 mov	 edx, DWORD PTR _xb$[ebp]
+  0001e	89 51 08	 mov	 DWORD PTR [ecx+8], edx
+
+; 77   : 	B.y = yb;
+
+  00021	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00024	8b 4d 14	 mov	 ecx, DWORD PTR _yb$[ebp]
+  00027	89 48 0c	 mov	 DWORD PTR [eax+12], ecx
+
+; 78   : }
+
+  0002a	8b e5		 mov	 esp, ebp
+  0002c	5d		 pop	 ebp
+  0002d	c2 10 00	 ret	 16			; 00000010H
+?Set@SOL_Rect@@QAEXHHHH@Z ENDP				; SOL_Rect::Set
+_TEXT	ENDS
+PUBLIC	??0SOL_Point@@QAE@ABV0@@Z			; SOL_Point::SOL_Point
+;	COMDAT ??0SOL_Rect@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+___that$ = 8
+_this$ = -4
+??0SOL_Rect@@QAE@ABV0@@Z PROC NEAR			; SOL_Rect::SOL_Rect, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR ___that$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@ABV0@@Z ; SOL_Point::SOL_Point
+  00013	8b 4d 08	 mov	 ecx, DWORD PTR ___that$[ebp]
+  00016	83 c1 08	 add	 ecx, 8
+  00019	51		 push	 ecx
+  0001a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001d	83 c1 08	 add	 ecx, 8
+  00020	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@ABV0@@Z ; SOL_Point::SOL_Point
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??0SOL_Rect@@QAE@ABV0@@Z ENDP				; SOL_Rect::SOL_Rect
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??0SOL_Point@@QAE@ABV0@@Z PROC NEAR			; SOL_Point::SOL_Point, COMDAT
+
+; 22   : 	SOL_Point(const SOL_Point& p) : x(p.x), y(p.y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00017	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0001a	89 50 04	 mov	 DWORD PTR [eax+4], edx
+  0001d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00020	8b e5		 mov	 esp, ebp
+  00022	5d		 pop	 ebp
+  00023	c2 04 00	 ret	 4
+??0SOL_Point@@QAE@ABV0@@Z ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+PUBLIC	?Clear@Screen@@QAEXXZ				; Screen::Clear
+EXTRN	?Clear@PlaneList@@QAEXXZ:NEAR			; PlaneList::Clear
+EXTRN	?Clear@RectList@@QAEXXZ:NEAR			; RectList::Clear
+_TEXT	SEGMENT
+_this$ = -4
+?Clear@Screen@@QAEXXZ PROC NEAR				; Screen::Clear
+
+; 98   : {
+
+  00336	55		 push	 ebp
+  00337	8b ec		 mov	 ebp, esp
+  00339	51		 push	 ecx
+  0033a	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 	planes.Clear();
+
+  0033d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00340	e8 00 00 00 00	 call	 ?Clear@PlaneList@@QAEXXZ ; PlaneList::Clear
+
+; 100  : 	showList.Clear();
+
+  00345	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00348	81 c1 a4 01 00
+	00		 add	 ecx, 420		; 000001a4H
+  0034e	e8 00 00 00 00	 call	 ?Clear@RectList@@QAEXXZ	; RectList::Clear
+
+; 101  : }
+
+  00353	8b e5		 mov	 esp, ebp
+  00355	5d		 pop	 ebp
+  00356	c3		 ret	 0
+?Clear@Screen@@QAEXXZ ENDP				; Screen::Clear
+_TEXT	ENDS
+PUBLIC	??APlaneList@@QBEABVSOL_Plane@@H@Z		; PlaneList::operator[]
+PUBLIC	?PlaneRect@Screen@@QBEXHAAVSOL_Rect@@@Z		; Screen::PlaneRect
+PUBLIC	?OnScreen@SOL_Plane@@QBEABVSOL_Rect@@XZ		; SOL_Plane::OnScreen
+PUBLIC	??4SOL_Rect@@QAEAAV0@ABV0@@Z			; SOL_Rect::operator=
+_DATA	SEGMENT
+	ORG $+3
+$SG58010 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Screen'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_planeID$ = 8
+_planeRect$ = 12
+_this$ = -8
+_index$ = -4
+?PlaneRect@Screen@@QBEXHAAVSOL_Rect@@@Z PROC NEAR	; Screen::PlaneRect
+
+; 129  : {
+
+  00357	55		 push	 ebp
+  00358	8b ec		 mov	 ebp, esp
+  0035a	83 ec 08	 sub	 esp, 8
+  0035d	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 130  : 	int index = planes.Search(planeID);
+
+  00360	8b 45 08	 mov	 eax, DWORD PTR _planeID$[ebp]
+  00363	50		 push	 eax
+  00364	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00367	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  0036c	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 131  : 	if (index == -1)
+
+  0036f	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  00373	75 21		 jne	 SHORT $L58009
+
+; 132  : 		msgMgr->Fatal(SrcLoc,Msg_PlaneNotFound,planeID);
+
+  00375	8b 4d 08	 mov	 ecx, DWORD PTR _planeID$[ebp]
+  00378	51		 push	 ecx
+  00379	6a 6b		 push	 107			; 0000006bH
+  0037b	68 84 00 00 00	 push	 132			; 00000084H
+  00380	68 00 00 00 00	 push	 OFFSET FLAT:$SG58010
+  00385	6a 61		 push	 97			; 00000061H
+  00387	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0038d	52		 push	 edx
+  0038e	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  00393	83 c4 18	 add	 esp, 24			; 00000018H
+$L58009:
+
+; 133  : 	planeRect = planes[index].OnScreen();
+
+  00396	8b 45 fc	 mov	 eax, DWORD PTR _index$[ebp]
+  00399	50		 push	 eax
+  0039a	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0039d	e8 00 00 00 00	 call	 ??APlaneList@@QBEABVSOL_Plane@@H@Z ; PlaneList::operator[]
+  003a2	8b c8		 mov	 ecx, eax
+  003a4	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QBEABVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  003a9	50		 push	 eax
+  003aa	8b 4d 0c	 mov	 ecx, DWORD PTR _planeRect$[ebp]
+  003ad	e8 00 00 00 00	 call	 ??4SOL_Rect@@QAEAAV0@ABV0@@Z ; SOL_Rect::operator=
+
+; 134  : }
+
+  003b2	8b e5		 mov	 esp, ebp
+  003b4	5d		 pop	 ebp
+  003b5	c2 08 00	 ret	 8
+?PlaneRect@Screen@@QBEXHAAVSOL_Rect@@@Z ENDP		; Screen::PlaneRect
+_TEXT	ENDS
+PUBLIC	??4SOL_Point@@QAEAAV0@ABV0@@Z			; SOL_Point::operator=
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT
+___that$ = 8
+_this$ = -4
+??4SOL_Rect@@QAEAAV0@ABV0@@Z PROC NEAR			; SOL_Rect::operator=, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR ___that$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+  00013	8b 4d 08	 mov	 ecx, DWORD PTR ___that$[ebp]
+  00016	83 c1 08	 add	 ecx, 8
+  00019	51		 push	 ecx
+  0001a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001d	83 c1 08	 add	 ecx, 8
+  00020	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??4SOL_Rect@@QAEAAV0@ABV0@@Z ENDP			; SOL_Rect::operator=
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??4SOL_Point@@QAEAAV0@ABV0@@Z PROC NEAR			; SOL_Point::operator=, COMDAT
+
+; 117  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : 	x = p.x;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+
+; 119  : 	y = p.y;
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00017	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0001a	89 50 04	 mov	 DWORD PTR [eax+4], edx
+
+; 120  : 	return *this;
+
+  0001d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 121  : }
+
+  00020	8b e5		 mov	 esp, ebp
+  00022	5d		 pop	 ebp
+  00023	c2 04 00	 ret	 4
+??4SOL_Point@@QAEAAV0@ABV0@@Z ENDP			; SOL_Point::operator=
+_TEXT	ENDS
+;	COMDAT ?OnScreen@SOL_Plane@@QBEABVSOL_Rect@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?OnScreen@SOL_Plane@@QBEABVSOL_Rect@@XZ PROC NEAR	; SOL_Plane::OnScreen, COMDAT
+
+; 76   : 	const SOL_Rect&	OnScreen() const		{return onScreen;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	83 c0 4c	 add	 eax, 76			; 0000004cH
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?OnScreen@SOL_Plane@@QBEABVSOL_Rect@@XZ ENDP		; SOL_Plane::OnScreen
+_TEXT	ENDS
+;	COMDAT ??APlaneList@@QBEABVSOL_Plane@@H@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??APlaneList@@QBEABVSOL_Plane@@H@Z PROC NEAR		; PlaneList::operator[], COMDAT
+
+; 26   : 	const SOL_Plane& operator[](int index) const	{return *planeArray[index];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 04 81	 mov	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??APlaneList@@QBEABVSOL_Plane@@H@Z ENDP			; PlaneList::operator[]
+_TEXT	ENDS
+PUBLIC	?TopScreenItem@Screen@@QBEHH@Z			; Screen::TopScreenItem
+EXTRN	?TopScreenItem@SOL_Plane@@QBEHXZ:NEAR		; SOL_Plane::TopScreenItem
+_DATA	SEGMENT
+	ORG $+3
+$SG58017 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Screen'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_planeID$ = 8
+_this$ = -8
+_index$ = -4
+?TopScreenItem@Screen@@QBEHH@Z PROC NEAR		; Screen::TopScreenItem
+
+; 138  : {
+
+  003b8	55		 push	 ebp
+  003b9	8b ec		 mov	 ebp, esp
+  003bb	83 ec 08	 sub	 esp, 8
+  003be	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 139  : 	int index = planes.Search(planeID);
+
+  003c1	8b 45 08	 mov	 eax, DWORD PTR _planeID$[ebp]
+  003c4	50		 push	 eax
+  003c5	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  003c8	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  003cd	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 140  : 	if (index == -1)
+
+  003d0	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  003d4	75 21		 jne	 SHORT $L58016
+
+; 141  : 		msgMgr->Fatal(SrcLoc,Msg_PlaneNotFound,planeID);
+
+  003d6	8b 4d 08	 mov	 ecx, DWORD PTR _planeID$[ebp]
+  003d9	51		 push	 ecx
+  003da	6a 6b		 push	 107			; 0000006bH
+  003dc	68 8d 00 00 00	 push	 141			; 0000008dH
+  003e1	68 00 00 00 00	 push	 OFFSET FLAT:$SG58017
+  003e6	6a 61		 push	 97			; 00000061H
+  003e8	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  003ee	52		 push	 edx
+  003ef	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  003f4	83 c4 18	 add	 esp, 24			; 00000018H
+$L58016:
+
+; 142  : 	return planes[index].TopScreenItem();
+
+  003f7	8b 45 fc	 mov	 eax, DWORD PTR _index$[ebp]
+  003fa	50		 push	 eax
+  003fb	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  003fe	e8 00 00 00 00	 call	 ??APlaneList@@QBEABVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00403	8b c8		 mov	 ecx, eax
+  00405	e8 00 00 00 00	 call	 ?TopScreenItem@SOL_Plane@@QBEHXZ ; SOL_Plane::TopScreenItem
+
+; 143  : }
+
+  0040a	8b e5		 mov	 esp, ebp
+  0040c	5d		 pop	 ebp
+  0040d	c2 04 00	 ret	 4
+?TopScreenItem@Screen@@QBEHH@Z ENDP			; Screen::TopScreenItem
+_TEXT	ENDS
+PUBLIC	??_H@YGXPAXIHP6EX0@Z@Z				; `vector constructor iterator'
+PUBLIC	?Pointer@PlaneList@@QAEPAVSOL_Plane@@H@Z	; PlaneList::Pointer
+PUBLIC	?Length@RectList@@QBEHXZ			; RectList::Length
+PUBLIC	??ARectList@@QAEAAVSOL_Rect@@H@Z		; RectList::operator[]
+PUBLIC	??_GRectList@@QAEPAXI@Z				; RectList::`scalar deleting destructor'
+PUBLIC	?Planes@Screen@@QAEAAVPlaneList@@XZ		; Screen::Planes
+PUBLIC	?CalcLists@Screen@@QAEXAAV1@QAPAVDrawList@@QAPAVRectList@@ABVSOL_Rect@@@Z ; Screen::CalcLists
+PUBLIC	??_GDrawList@@QAEPAXI@Z				; DrawList::`scalar deleting destructor'
+PUBLIC	?DeleteCount@SOL_Plane@@QBEHXZ			; SOL_Plane::DeleteCount
+PUBLIC	?EraseCount@SOL_Plane@@QBEHXZ			; SOL_Plane::EraseCount
+PUBLIC	?Priority@SOL_Plane@@QBEHXZ			; SOL_Plane::Priority
+PUBLIC	?PriorityCount@SOL_Plane@@QAEHXZ		; SOL_Plane::PriorityCount
+PUBLIC	?RedrawAllCount@SOL_Plane@@QBEHXZ		; SOL_Plane::RedrawAllCount
+PUBLIC	?UpdateCount@SOL_Plane@@QBEHXZ			; SOL_Plane::UpdateCount
+PUBLIC	?IsTransparent@SOL_Plane@@QBEHXZ		; SOL_Plane::IsTransparent
+PUBLIC	?DecAddCount@SOL_Plane@@QAEXXZ			; SOL_Plane::DecAddCount
+PUBLIC	?DecDeleteCount@SOL_Plane@@QAEXXZ		; SOL_Plane::DecDeleteCount
+PUBLIC	?DecEraseCount@SOL_Plane@@QAEXXZ		; SOL_Plane::DecEraseCount
+PUBLIC	?DecPriorityCount@SOL_Plane@@QAEXXZ		; SOL_Plane::DecPriorityCount
+PUBLIC	?DecUpdateCount@SOL_Plane@@QAEXXZ		; SOL_Plane::DecUpdateCount
+PUBLIC	??0SOL_Rect@@QAE@XZ				; SOL_Rect::SOL_Rect
+PUBLIC	?IsEmpty@SOL_Rect@@QBEHXZ			; SOL_Rect::IsEmpty
+EXTRN	__except_list:DWORD
+EXTRN	__chkstk:NEAR
+EXTRN	___CxxFrameHandler:NEAR
+EXTRN	??0RectList@@QAE@XZ:NEAR			; RectList::RectList
+EXTRN	??1RectList@@QAE@XZ:NEAR			; RectList::~RectList
+EXTRN	?Add@RectList@@QAEXABVSOL_Rect@@@Z:NEAR		; RectList::Add
+EXTRN	?Delete@RectList@@QAEXH@Z:NEAR			; RectList::Delete
+EXTRN	?Pack@RectList@@QAEHXZ:NEAR			; RectList::Pack
+EXTRN	??2@YAPAXI@Z:NEAR				; operator new
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+EXTRN	??0SOL_Plane@@QAE@ABV0@@Z:NEAR			; SOL_Plane::SOL_Plane
+EXTRN	??4SOL_Plane@@QAEAAV0@ABV0@@Z:NEAR		; SOL_Plane::operator=
+EXTRN	?CalcLists@SOL_Plane@@QAEXPAV1@AAVPlaneList@@AAVDrawList@@AAVRectList@@@Z:NEAR ; SOL_Plane::CalcLists
+EXTRN	?FilterDownEraseRects@SOL_Plane@@QAEXAAVDrawList@@AAVRectList@@1@Z:NEAR ; SOL_Plane::FilterDownEraseRects
+EXTRN	?FilterUpDrawRects@SOL_Plane@@QAEXAAVDrawList@@0@Z:NEAR ; SOL_Plane::FilterUpDrawRects
+EXTRN	?FilterUpEraseRects@SOL_Plane@@QAEXAAVDrawList@@AAVRectList@@@Z:NEAR ; SOL_Plane::FilterUpEraseRects
+EXTRN	?RedrawAll@SOL_Plane@@QAEXPAV1@AAVPlaneList@@AAVDrawList@@AAVRectList@@@Z:NEAR ; SOL_Plane::RedrawAll
+EXTRN	?Intersect@SOL_Rect@@QBEHABV1@PAV1@@Z:NEAR	; SOL_Rect::Intersect
+EXTRN	?Split@SOL_Rect@@QAEHAAV1@PAV1@@Z:NEAR		; SOL_Rect::Split
+xdata$x	SEGMENT
+$T58376	DD	019930520H
+	DD	02H
+	DD	FLAT:$T58380
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T58380	DD	0ffffffffH
+	DD	FLAT:$L58371
+	DD	00H
+	DD	FLAT:$L58372
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T58368 = -4220
+__$EHRec$ = -12
+_last$ = 8
+_drawLists$ = 12
+_eraseLists$ = 16
+_dirtyRect$ = 20
+_this$ = -4224
+_rects$ = -4104
+_eraseRects$ = -4020
+_nDeletedPlanes$ = -16
+_passEraseRects$ = -4024
+_i$ = -4032
+_nPlanes$ = -4028
+_lastPlanesList$ = -4036
+_transparentPlanesCount$ = -4108
+_lastI$58039 = -4112
+_newRects$58045 = -4116
+_i$58054 = -4120
+_i$58066 = -4124
+_j$58071 = -4128
+_k$58075 = -4132
+_newRects$58082 = -4136
+_l$58083 = -4140
+_lastI$58093 = -4144
+_k$58097 = -4148
+_lastI$58111 = -4152
+_j$58112 = -4156
+_lastJ$58116 = -4160
+_eraseRectsLength$58117 = -4164
+_k$58118 = -4168
+_newRects$58122 = -4172
+_l$58134 = -4176
+_lastI$58145 = -4180
+_lastPlane$58146 = -4184
+_lastPlane$58153 = -4188
+_j$58164 = -4192
+_j$58170 = -4196
+$T58359 = -4200
+$T58360 = -4204
+$T58363 = -4208
+$T58364 = -4212
+$T58367 = -4216
+?CalcLists@Screen@@QAEXAAV1@QAPAVDrawList@@QAPAVRectList@@ABVSOL_Rect@@@Z PROC NEAR ; Screen::CalcLists
+
+; 147  : {
+
+  00410	55		 push	 ebp
+  00411	8b ec		 mov	 ebp, esp
+  00413	6a ff		 push	 -1
+  00415	68 00 00 00 00	 push	 $L58377
+  0041a	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00420	50		 push	 eax
+  00421	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  00428	b8 8c 10 00 00	 mov	 eax, 4236		; 0000108cH
+  0042d	e8 00 00 00 00	 call	 __chkstk
+  00432	56		 push	 esi
+  00433	57		 push	 edi
+  00434	89 8d 80 ef ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 148  : 	/*
+; 149  : 	If a plane moves, then nextPlane must be intersected with the
+; 150  : 	currPlane to created erase rectangles.
+; 151  : 
+; 152  : 
+; 153  : 		 ____________________				     ____________________
+; 154  : 		|currPlane           |				    |                    |
+; 155  : 		|	                  |				    |	                   |
+; 156  : 		|							|				    |	erase rect 1	    |
+; 157  : 		|							|				    |						    |
+; 158  : 		|			  ____________________	    |********* __________|
+; 159  : 		|			 |nextPlane				 |	    |			  |
+; 160  : 		|			 |                    |	    |		     |
+; 161  : 		|			 |							 |	    |	erase	  |
+; 162  : 		|			 |							 |	    |	rect	  |
+; 163  : 		|			 |							 |	    |	2   	  |
+; 164  : 		|			 |							 |	    |  		  |
+; 165  : 		|			 |							 |	    |		     |
+; 166  : 		|_________|							 |	    |_________|
+; 167  : 					 |							 |
+; 168  : 					 |							 |
+; 169  : 					 |							 |
+; 170  : 					 |							 |
+; 171  : 					 |____________________|
+; 172  : 
+; 173  : 
+; 174  : 	The erase rectangles created will be intersected with all other
+; 175  : 	nextPlanes from highest priority to lowest priority. The overlaps
+; 176  : 	will be added to the eraseList of the nextplane and then dumped if
+; 177  : 	the plane is not transparent. Whats left after the overlap is 
+; 178  : 	removed will be add to the list of erase rectangles to be processed
+; 179  : 	againest all the nextPlanes of lower priority.
+; 180  : 	*/
+; 181  : 
+; 182  : 	SOL_Rect rects[4];
+
+  0043a	68 00 00 00 00	 push	 OFFSET FLAT:??0SOL_Rect@@QAE@XZ ; SOL_Rect::SOL_Rect
+  0043f	6a 04		 push	 4
+  00441	6a 10		 push	 16			; 00000010H
+  00443	8d 85 f8 ef ff
+	ff		 lea	 eax, DWORD PTR _rects$[ebp]
+  00449	50		 push	 eax
+  0044a	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+
+; 183  : 	RectList eraseRects;
+
+  0044f	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00455	e8 00 00 00 00	 call	 ??0RectList@@QAE@XZ	; RectList::RectList
+  0045a	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+
+; 184  : 	int nDeletedPlanes = 0;
+
+  00461	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR _nDeletedPlanes$[ebp], 0
+
+; 185  : 	int passEraseRects = 0;
+
+  00468	c7 85 48 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _passEraseRects$[ebp], 0
+
+; 186  : 	int i, k;
+; 187  : 	if (!dirtyRect.IsEmpty()) {
+
+  00472	8b 4d 14	 mov	 ecx, DWORD PTR _dirtyRect$[ebp]
+  00475	e8 00 00 00 00	 call	 ?IsEmpty@SOL_Rect@@QBEHXZ ; SOL_Rect::IsEmpty
+  0047a	85 c0		 test	 eax, eax
+  0047c	75 19		 jne	 SHORT $L58032
+
+; 188  : 		eraseRects.Add(dirtyRect);
+
+  0047e	8b 4d 14	 mov	 ecx, DWORD PTR _dirtyRect$[ebp]
+  00481	51		 push	 ecx
+  00482	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00488	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 189  : 		passEraseRects = 1;
+
+  0048d	c7 85 48 f0 ff
+	ff 01 00 00 00	 mov	 DWORD PTR _passEraseRects$[ebp], 1
+$L58032:
+
+; 191  : 
+; 192  : 	int nPlanes = planes.Length();
+
+  00497	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0049d	e8 00 00 00 00	 call	 ?Length@PlaneList@@QBEHXZ ; PlaneList::Length
+  004a2	89 85 44 f0 ff
+	ff		 mov	 DWORD PTR _nPlanes$[ebp], eax
+
+; 193  : 	PlaneList& lastPlanesList = last.Planes();
+
+  004a8	8b 4d 08	 mov	 ecx, DWORD PTR _last$[ebp]
+  004ab	e8 00 00 00 00	 call	 ?Planes@Screen@@QAEAAVPlaneList@@XZ ; Screen::Planes
+  004b0	89 85 3c f0 ff
+	ff		 mov	 DWORD PTR _lastPlanesList$[ebp], eax
+
+; 194  : 
+; 195  : 	// Go through the planes list resolving planes
+; 196  : 	// that were moved, resized or deleted.
+; 197  : 	// Also count the number of transparent planes
+; 198  :  	int transparentPlanesCount = 0;
+
+  004b6	c7 85 f4 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _transparentPlanesCount$[ebp], 0
+
+; 199  : 	for (i = 0; i < nPlanes;++i) {
+
+  004c0	c7 85 40 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  004ca	eb 0f		 jmp	 SHORT $L58036
+$L58037:
+  004cc	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  004d2	83 c2 01	 add	 edx, 1
+  004d5	89 95 40 f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L58036:
+  004db	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  004e1	3b 85 44 f0 ff
+	ff		 cmp	 eax, DWORD PTR _nPlanes$[ebp]
+  004e7	0f 8d f0 04 00
+	00		 jge	 $L58038
+
+; 200  : 		int lastI = lastPlanesList.Search(planes[i].Id());
+
+  004ed	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  004f3	51		 push	 ecx
+  004f4	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  004fa	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  004ff	8b c8		 mov	 ecx, eax
+  00501	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  00506	50		 push	 eax
+  00507	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  0050d	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  00512	89 85 f0 ef ff
+	ff		 mov	 DWORD PTR _lastI$58039[ebp], eax
+
+; 201  : 		if (planes[i].IsTransparent())
+
+  00518	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0051e	52		 push	 edx
+  0051f	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00525	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0052a	8b c8		 mov	 ecx, eax
+  0052c	e8 00 00 00 00	 call	 ?IsTransparent@SOL_Plane@@QBEHXZ ; SOL_Plane::IsTransparent
+  00531	85 c0		 test	 eax, eax
+  00533	74 0f		 je	 SHORT $L58040
+
+; 202  :  			++transparentPlanesCount;
+
+  00535	8b 85 f4 ef ff
+	ff		 mov	 eax, DWORD PTR _transparentPlanesCount$[ebp]
+  0053b	83 c0 01	 add	 eax, 1
+  0053e	89 85 f4 ef ff
+	ff		 mov	 DWORD PTR _transparentPlanesCount$[ebp], eax
+$L58040:
+
+; 203  : 
+; 204  : 		if (planes[i].DeleteCount()) {
+
+  00544	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0054a	51		 push	 ecx
+  0054b	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00551	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00556	8b c8		 mov	 ecx, eax
+  00558	e8 00 00 00 00	 call	 ?DeleteCount@SOL_Plane@@QBEHXZ ; SOL_Plane::DeleteCount
+  0055d	85 c0		 test	 eax, eax
+  0055f	74 6f		 je	 SHORT $L58041
+
+; 205  : 			if ((lastI != -1) && !lastPlanesList[lastI].OnScreen().IsEmpty()) {
+
+  00561	83 bd f0 ef ff
+	ff ff		 cmp	 DWORD PTR _lastI$58039[ebp], -1
+  00568	74 58		 je	 SHORT $L58042
+  0056a	8b 95 f0 ef ff
+	ff		 mov	 edx, DWORD PTR _lastI$58039[ebp]
+  00570	52		 push	 edx
+  00571	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00577	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0057c	8b c8		 mov	 ecx, eax
+  0057e	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00583	8b c8		 mov	 ecx, eax
+  00585	e8 00 00 00 00	 call	 ?IsEmpty@SOL_Rect@@QBEHXZ ; SOL_Rect::IsEmpty
+  0058a	85 c0		 test	 eax, eax
+  0058c	75 34		 jne	 SHORT $L58042
+
+; 206  : 				eraseRects.Add(lastPlanesList[lastI].OnScreen());
+
+  0058e	8b 85 f0 ef ff
+	ff		 mov	 eax, DWORD PTR _lastI$58039[ebp]
+  00594	50		 push	 eax
+  00595	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  0059b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  005a0	8b c8		 mov	 ecx, eax
+  005a2	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  005a7	50		 push	 eax
+  005a8	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  005ae	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 207  : 				++passEraseRects;
+
+  005b3	8b 8d 48 f0 ff
+	ff		 mov	 ecx, DWORD PTR _passEraseRects$[ebp]
+  005b9	83 c1 01	 add	 ecx, 1
+  005bc	89 8d 48 f0 ff
+	ff		 mov	 DWORD PTR _passEraseRects$[ebp], ecx
+$L58042:
+
+; 209  : 			++nDeletedPlanes;
+
+  005c2	8b 55 f0	 mov	 edx, DWORD PTR _nDeletedPlanes$[ebp]
+  005c5	83 c2 01	 add	 edx, 1
+  005c8	89 55 f0	 mov	 DWORD PTR _nDeletedPlanes$[ebp], edx
+
+; 211  : 		else {
+
+  005cb	e9 33 02 00 00	 jmp	 $L58059
+$L58041:
+
+; 212  : 			if ((lastI != -1) && planes[i].EraseCount())	{
+
+  005d0	83 bd f0 ef ff
+	ff ff		 cmp	 DWORD PTR _lastI$58039[ebp], -1
+  005d7	0f 84 26 02 00
+	00		 je	 $L58059
+  005dd	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  005e3	50		 push	 eax
+  005e4	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  005ea	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  005ef	8b c8		 mov	 ecx, eax
+  005f1	e8 00 00 00 00	 call	 ?EraseCount@SOL_Plane@@QBEHXZ ; SOL_Plane::EraseCount
+  005f6	85 c0		 test	 eax, eax
+  005f8	0f 84 05 02 00
+	00		 je	 $L58059
+
+; 213  : 				planes[i].DecEraseCount();
+
+  005fe	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00604	51		 push	 ecx
+  00605	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0060b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00610	8b c8		 mov	 ecx, eax
+  00612	e8 00 00 00 00	 call	 ?DecEraseCount@SOL_Plane@@QAEXXZ ; SOL_Plane::DecEraseCount
+
+; 214  : 				// Check for the plane losing space
+; 215  : 				int newRects = lastPlanesList[lastI].OnScreen().Split
+; 216  : 				(
+; 217  : 					planes[i].OnScreen(),
+; 218  : 					rects
+; 219  : 				);
+
+  00617	8d 95 f8 ef ff
+	ff		 lea	 edx, DWORD PTR _rects$[ebp]
+  0061d	52		 push	 edx
+  0061e	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00624	50		 push	 eax
+  00625	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0062b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00630	8b c8		 mov	 ecx, eax
+  00632	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00637	50		 push	 eax
+  00638	8b 8d f0 ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58039[ebp]
+  0063e	51		 push	 ecx
+  0063f	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00645	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0064a	8b c8		 mov	 ecx, eax
+  0064c	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00651	8b c8		 mov	 ecx, eax
+  00653	e8 00 00 00 00	 call	 ?Split@SOL_Rect@@QAEHAAV1@PAV1@@Z ; SOL_Rect::Split
+  00658	89 85 ec ef ff
+	ff		 mov	 DWORD PTR _newRects$58045[ebp], eax
+
+; 220  : 
+; 221  : 				// rects is a list of the erase rectangles created by
+; 222  : 				// the move or resize of a plane
+; 223  : 				if (newRects != 0) {
+
+  0065e	83 bd ec ef ff
+	ff 00		 cmp	 DWORD PTR _newRects$58045[ebp], 0
+  00665	0f 84 b8 00 00
+	00		 je	 $L58046
+
+; 224  : 					switch (newRects)	{
+
+  0066b	8b 95 ec ef ff
+	ff		 mov	 edx, DWORD PTR _newRects$58045[ebp]
+  00671	89 95 7c ef ff
+	ff		 mov	 DWORD PTR -4228+[ebp], edx
+  00677	83 bd 7c ef ff
+	ff ff		 cmp	 DWORD PTR -4228+[ebp], -1
+  0067e	74 02		 je	 SHORT $L58051
+  00680	eb 4b		 jmp	 SHORT $L58053
+$L58051:
+
+; 225  : 
+; 226  : 						case -1:
+; 227  : 							// No overlap
+; 228  : 							if (!lastPlanesList[lastI].OnScreen().IsEmpty())
+
+  00682	8b 85 f0 ef ff
+	ff		 mov	 eax, DWORD PTR _lastI$58039[ebp]
+  00688	50		 push	 eax
+  00689	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  0068f	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00694	8b c8		 mov	 ecx, eax
+  00696	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  0069b	8b c8		 mov	 ecx, eax
+  0069d	e8 00 00 00 00	 call	 ?IsEmpty@SOL_Rect@@QBEHXZ ; SOL_Rect::IsEmpty
+  006a2	85 c0		 test	 eax, eax
+  006a4	75 25		 jne	 SHORT $L58052
+
+; 229  : 								eraseRects.Add(lastPlanesList[lastI].OnScreen());
+
+  006a6	8b 8d f0 ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58039[ebp]
+  006ac	51		 push	 ecx
+  006ad	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  006b3	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  006b8	8b c8		 mov	 ecx, eax
+  006ba	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  006bf	50		 push	 eax
+  006c0	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  006c6	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+$L58052:
+
+; 230  : 							break;
+
+  006cb	eb 47		 jmp	 SHORT $L58048
+$L58053:
+
+; 231  : 
+; 232  : 						default:
+; 233  : 							// Multiple IRects not covered by nextPlane
+; 234  : 							for (int i = 0; i < newRects; i++) {
+
+  006cd	c7 85 e8 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$58054[ebp], 0
+  006d7	eb 0f		 jmp	 SHORT $L58055
+$L58056:
+  006d9	8b 95 e8 ef ff
+	ff		 mov	 edx, DWORD PTR _i$58054[ebp]
+  006df	83 c2 01	 add	 edx, 1
+  006e2	89 95 e8 ef ff
+	ff		 mov	 DWORD PTR _i$58054[ebp], edx
+$L58055:
+  006e8	8b 85 e8 ef ff
+	ff		 mov	 eax, DWORD PTR _i$58054[ebp]
+  006ee	3b 85 ec ef ff
+	ff		 cmp	 eax, DWORD PTR _newRects$58045[ebp]
+  006f4	7d 1e		 jge	 SHORT $L58057
+
+; 235  : 								eraseRects.Add(rects[i]);
+
+  006f6	8b 8d e8 ef ff
+	ff		 mov	 ecx, DWORD PTR _i$58054[ebp]
+  006fc	c1 e1 04	 shl	 ecx, 4
+  006ff	8d 94 0d f8 ef
+	ff ff		 lea	 edx, DWORD PTR _rects$[ebp+ecx]
+  00706	52		 push	 edx
+  00707	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  0070d	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 236  : 							}
+
+  00712	eb c5		 jmp	 SHORT $L58056
+$L58057:
+$L58048:
+
+; 239  : 				++passEraseRects;
+
+  00714	8b 85 48 f0 ff
+	ff		 mov	 eax, DWORD PTR _passEraseRects$[ebp]
+  0071a	83 c0 01	 add	 eax, 1
+  0071d	89 85 48 f0 ff
+	ff		 mov	 DWORD PTR _passEraseRects$[ebp], eax
+$L58046:
+
+; 241  : 
+; 242  : 				if (!planes[i].RedrawAllCount()) {
+
+  00723	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00729	51		 push	 ecx
+  0072a	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00730	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00735	8b c8		 mov	 ecx, eax
+  00737	e8 00 00 00 00	 call	 ?RedrawAllCount@SOL_Plane@@QBEHXZ ; SOL_Plane::RedrawAllCount
+  0073c	85 c0		 test	 eax, eax
+  0073e	0f 85 bf 00 00
+	00		 jne	 $L58059
+
+; 243  : 					// Check for the plane gaining space
+; 244  : 					newRects = planes[i].OnScreen().Split
+; 245  : 					(
+; 246  : 						lastPlanesList[lastI].OnScreen(),
+; 247  : 						rects
+; 248  : 					);
+
+  00744	8d 95 f8 ef ff
+	ff		 lea	 edx, DWORD PTR _rects$[ebp]
+  0074a	52		 push	 edx
+  0074b	8b 85 f0 ef ff
+	ff		 mov	 eax, DWORD PTR _lastI$58039[ebp]
+  00751	50		 push	 eax
+  00752	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00758	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0075d	8b c8		 mov	 ecx, eax
+  0075f	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00764	50		 push	 eax
+  00765	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0076b	51		 push	 ecx
+  0076c	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00772	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00777	8b c8		 mov	 ecx, eax
+  00779	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  0077e	8b c8		 mov	 ecx, eax
+  00780	e8 00 00 00 00	 call	 ?Split@SOL_Rect@@QAEHAAV1@PAV1@@Z ; SOL_Rect::Split
+  00785	89 85 ec ef ff
+	ff		 mov	 DWORD PTR _newRects$58045[ebp], eax
+
+; 249  : 
+; 250  : 					// rects is a list of the erase rectangles created by
+; 251  : 					// the move or resize of a plane
+; 252  : 					if (newRects != 0) {
+
+  0078b	83 bd ec ef ff
+	ff 00		 cmp	 DWORD PTR _newRects$58045[ebp], 0
+  00792	74 6f		 je	 SHORT $L58059
+
+; 253  : 						switch (newRects)	{
+
+  00794	8b 95 ec ef ff
+	ff		 mov	 edx, DWORD PTR _newRects$58045[ebp]
+  0079a	89 95 78 ef ff
+	ff		 mov	 DWORD PTR -4232+[ebp], edx
+  007a0	83 bd 78 ef ff
+	ff ff		 cmp	 DWORD PTR -4232+[ebp], -1
+  007a7	74 02		 je	 SHORT $L58064
+  007a9	eb 02		 jmp	 SHORT $L58065
+$L58064:
+
+; 254  : 
+; 255  : 							case -1:
+; 256  : 								// No overlap
+; 257  : 								break;
+
+  007ab	eb 47		 jmp	 SHORT $L58061
+$L58065:
+
+; 258  : 
+; 259  : 							default:
+; 260  : 								// Multiple IRects not covered by nextPlane
+; 261  : 								for (int i = 0; i < newRects; i++) {
+
+  007ad	c7 85 e4 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$58066[ebp], 0
+  007b7	eb 0f		 jmp	 SHORT $L58067
+$L58068:
+  007b9	8b 85 e4 ef ff
+	ff		 mov	 eax, DWORD PTR _i$58066[ebp]
+  007bf	83 c0 01	 add	 eax, 1
+  007c2	89 85 e4 ef ff
+	ff		 mov	 DWORD PTR _i$58066[ebp], eax
+$L58067:
+  007c8	8b 8d e4 ef ff
+	ff		 mov	 ecx, DWORD PTR _i$58066[ebp]
+  007ce	3b 8d ec ef ff
+	ff		 cmp	 ecx, DWORD PTR _newRects$58045[ebp]
+  007d4	7d 1e		 jge	 SHORT $L58069
+
+; 262  : 									eraseRects.Add(rects[i]);
+
+  007d6	8b 95 e4 ef ff
+	ff		 mov	 edx, DWORD PTR _i$58066[ebp]
+  007dc	c1 e2 04	 shl	 edx, 4
+  007df	8d 84 15 f8 ef
+	ff ff		 lea	 eax, DWORD PTR _rects$[ebp+edx]
+  007e6	50		 push	 eax
+  007e7	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  007ed	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 263  : 								}
+
+  007f2	eb c5		 jmp	 SHORT $L58068
+$L58069:
+$L58061:
+
+; 266  : 					++passEraseRects;
+
+  007f4	8b 8d 48 f0 ff
+	ff		 mov	 ecx, DWORD PTR _passEraseRects$[ebp]
+  007fa	83 c1 01	 add	 ecx, 1
+  007fd	89 8d 48 f0 ff
+	ff		 mov	 DWORD PTR _passEraseRects$[ebp], ecx
+$L58059:
+
+; 271  : 		if (passEraseRects) {
+
+  00803	83 bd 48 f0 ff
+	ff 00		 cmp	 DWORD PTR _passEraseRects$[ebp], 0
+  0080a	0f 84 c8 01 00
+	00		 je	 $L58070
+
+; 272  : 			// Now eraseRects contains erase rectangle created by
+; 273  : 			// the move, resize or delete. These erase rectangles 
+; 274  : 			// are now to be distributed to other planes (assume 
+; 275  : 			// that the	erase rectangles will be completely absorbed 
+; 276  : 			// by	planes (an erase rectangle may go to it's own plane
+; 277  : 			// if the plane got bigger)
+; 278  : 
+; 279  : 			// Go through the planes from high to low priority
+; 280  : 			// adding erase rectangles to the plane when there is
+; 281  : 			// overlap
+; 282  : 
+; 283  : 			// The planesList is sorted in low to high priority
+; 284  : // HOOK
+; 285  : // lastI could = -1
+; 286  : //			int rectsLastPri = lastPlanesList[lastI].Priority();
+; 287  : 
+; 288  : 			for (int j = 0;j < eraseRects.Length();++j) {
+
+  00810	c7 85 e0 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _j$58071[ebp], 0
+  0081a	eb 0f		 jmp	 SHORT $L58072
+$L58073:
+  0081c	8b 95 e0 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58071[ebp]
+  00822	83 c2 01	 add	 edx, 1
+  00825	89 95 e0 ef ff
+	ff		 mov	 DWORD PTR _j$58071[ebp], edx
+$L58072:
+  0082b	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00831	e8 00 00 00 00	 call	 ?Length@RectList@@QBEHXZ ; RectList::Length
+  00836	39 85 e0 ef ff
+	ff		 cmp	 DWORD PTR _j$58071[ebp], eax
+  0083c	0f 8d 8b 01 00
+	00		 jge	 $L58074
+
+; 289  : 				for (int k = nPlanes - 1;k >= 0;--k) {
+
+  00842	8b 85 44 f0 ff
+	ff		 mov	 eax, DWORD PTR _nPlanes$[ebp]
+  00848	83 e8 01	 sub	 eax, 1
+  0084b	89 85 dc ef ff
+	ff		 mov	 DWORD PTR _k$58075[ebp], eax
+  00851	eb 0f		 jmp	 SHORT $L58076
+$L58077:
+  00853	8b 8d dc ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58075[ebp]
+  00859	83 e9 01	 sub	 ecx, 1
+  0085c	89 8d dc ef ff
+	ff		 mov	 DWORD PTR _k$58075[ebp], ecx
+$L58076:
+  00862	83 bd dc ef ff
+	ff 00		 cmp	 DWORD PTR _k$58075[ebp], 0
+  00869	0f 8c 59 01 00
+	00		 jl	 $L58078
+
+; 290  : 					// eliminate the any deleted planes from this test
+; 291  : 					// eliminate the i plane from this test (needed for deleted planes)
+; 292  : 					// eliminate transparent planes (they will get passed erase rects
+; 293  : 					// from non transparent planes
+; 294  : 
+; 295  : 
+; 296  : 					if (!planes[k].DeleteCount() && !planes[k].IsTransparent()) {
+
+  0086f	8b 95 dc ef ff
+	ff		 mov	 edx, DWORD PTR _k$58075[ebp]
+  00875	52		 push	 edx
+  00876	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0087c	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00881	8b c8		 mov	 ecx, eax
+  00883	e8 00 00 00 00	 call	 ?DeleteCount@SOL_Plane@@QBEHXZ ; SOL_Plane::DeleteCount
+  00888	85 c0		 test	 eax, eax
+  0088a	0f 85 33 01 00
+	00		 jne	 $L58080
+  00890	8b 85 dc ef ff
+	ff		 mov	 eax, DWORD PTR _k$58075[ebp]
+  00896	50		 push	 eax
+  00897	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0089d	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  008a2	8b c8		 mov	 ecx, eax
+  008a4	e8 00 00 00 00	 call	 ?IsTransparent@SOL_Plane@@QBEHXZ ; SOL_Plane::IsTransparent
+  008a9	85 c0		 test	 eax, eax
+  008ab	0f 85 12 01 00
+	00		 jne	 $L58080
+
+; 297  : 						if (planes[k].OnScreen().Intersect(eraseRects[j],rects)) {
+
+  008b1	8d 8d f8 ef ff
+	ff		 lea	 ecx, DWORD PTR _rects$[ebp]
+  008b7	51		 push	 ecx
+  008b8	8b 95 e0 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58071[ebp]
+  008be	52		 push	 edx
+  008bf	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  008c5	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  008ca	50		 push	 eax
+  008cb	8b 85 dc ef ff
+	ff		 mov	 eax, DWORD PTR _k$58075[ebp]
+  008d1	50		 push	 eax
+  008d2	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  008d8	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  008dd	8b c8		 mov	 ecx, eax
+  008df	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  008e4	8b c8		 mov	 ecx, eax
+  008e6	e8 00 00 00 00	 call	 ?Intersect@SOL_Rect@@QBEHABV1@PAV1@@Z ; SOL_Rect::Intersect
+  008eb	85 c0		 test	 eax, eax
+  008ed	0f 84 d0 00 00
+	00		 je	 $L58080
+
+; 304  : 								(!planes[k].RedrawAllCount())
+; 305  : // HOOK
+; 306  : // Why do we need the following line?
+; 307  : //								&&
+; 308  : //								(rectsLastPri >= lastPlanesList[lastPlanesList.Search(planes[k].Id())].Priority())
+; 309  : 								) {
+
+  008f3	8b 8d dc ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58075[ebp]
+  008f9	51		 push	 ecx
+  008fa	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00900	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00905	8b c8		 mov	 ecx, eax
+  00907	e8 00 00 00 00	 call	 ?RedrawAllCount@SOL_Plane@@QBEHXZ ; SOL_Plane::RedrawAllCount
+  0090c	85 c0		 test	 eax, eax
+  0090e	75 18		 jne	 SHORT $L58081
+
+; 310  : 								eraseLists[k]->Add(rects[0]);
+
+  00910	8d 95 f8 ef ff
+	ff		 lea	 edx, DWORD PTR _rects$[ebp]
+  00916	52		 push	 edx
+  00917	8b 85 dc ef ff
+	ff		 mov	 eax, DWORD PTR _k$58075[ebp]
+  0091d	8b 4d 10	 mov	 ecx, DWORD PTR _eraseLists$[ebp]
+  00920	8b 0c 81	 mov	 ecx, DWORD PTR [ecx+eax*4]
+  00923	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+$L58081:
+
+; 313  : 								(
+; 314  : 								planes[k].OnScreen(),
+; 315  : 								rects
+; 316  : 								);
+
+  00928	8d 95 f8 ef ff
+	ff		 lea	 edx, DWORD PTR _rects$[ebp]
+  0092e	52		 push	 edx
+  0092f	8b 85 dc ef ff
+	ff		 mov	 eax, DWORD PTR _k$58075[ebp]
+  00935	50		 push	 eax
+  00936	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0093c	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00941	8b c8		 mov	 ecx, eax
+  00943	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00948	50		 push	 eax
+  00949	8b 8d e0 ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58071[ebp]
+  0094f	51		 push	 ecx
+  00950	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00956	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  0095b	8b c8		 mov	 ecx, eax
+  0095d	e8 00 00 00 00	 call	 ?Split@SOL_Rect@@QAEHAAV1@PAV1@@Z ; SOL_Rect::Split
+  00962	89 85 d8 ef ff
+	ff		 mov	 DWORD PTR _newRects$58082[ebp], eax
+
+; 317  : 							for (int l = 0;l < newRects;++l) {
+
+  00968	c7 85 d4 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _l$58083[ebp], 0
+  00972	eb 0f		 jmp	 SHORT $L58084
+$L58085:
+  00974	8b 95 d4 ef ff
+	ff		 mov	 edx, DWORD PTR _l$58083[ebp]
+  0097a	83 c2 01	 add	 edx, 1
+  0097d	89 95 d4 ef ff
+	ff		 mov	 DWORD PTR _l$58083[ebp], edx
+$L58084:
+  00983	8b 85 d4 ef ff
+	ff		 mov	 eax, DWORD PTR _l$58083[ebp]
+  00989	3b 85 d8 ef ff
+	ff		 cmp	 eax, DWORD PTR _newRects$58082[ebp]
+  0098f	7d 1e		 jge	 SHORT $L58086
+
+; 318  : 								eraseRects.Add(rects[l]);
+
+  00991	8b 8d d4 ef ff
+	ff		 mov	 ecx, DWORD PTR _l$58083[ebp]
+  00997	c1 e1 04	 shl	 ecx, 4
+  0099a	8d 94 0d f8 ef
+	ff ff		 lea	 edx, DWORD PTR _rects$[ebp+ecx]
+  009a1	52		 push	 edx
+  009a2	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  009a8	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 319  : 							}
+
+  009ad	eb c5		 jmp	 SHORT $L58085
+$L58086:
+
+; 320  : 							eraseRects.Delete(j);
+
+  009af	8b 85 e0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58071[ebp]
+  009b5	50		 push	 eax
+  009b6	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  009bc	e8 00 00 00 00	 call	 ?Delete@RectList@@QAEXH@Z ; RectList::Delete
+
+; 321  : 							break;
+
+  009c1	eb 05		 jmp	 SHORT $L58078
+$L58080:
+
+; 324  : 				}
+
+  009c3	e9 8b fe ff ff	 jmp	 $L58077
+$L58078:
+
+; 325  : 			}
+
+  009c8	e9 4f fe ff ff	 jmp	 $L58073
+$L58074:
+
+; 326  : 			eraseRects.Pack();
+
+  009cd	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  009d3	e8 00 00 00 00	 call	 ?Pack@RectList@@QAEHXZ	; RectList::Pack
+$L58070:
+
+; 328  : 	}
+
+  009d8	e9 ef fa ff ff	 jmp	 $L58037
+$L58038:
+
+; 329  : 	// All of the eraseRects should be absorbed 
+; 330  : 	// by planes. EraseRects should be empty
+; 331  : #ifdef DEBUG
+; 332  : #ifndef WINDOWS
+; 333  : 	if (eraseRects.Length())
+; 334  : 		msgMgr->Fatal(SrcLoc,"Plane's erase rectangles not absorbed.");
+; 335  : #endif
+; 336  : #endif
+; 337  : 
+; 338  : 	// If a deleted plane was encountered it may have to be deleted
+; 339  : 	if (nDeletedPlanes) {
+
+  009dd	83 7d f0 00	 cmp	 DWORD PTR _nDeletedPlanes$[ebp], 0
+  009e1	0f 84 36 02 00
+	00		 je	 $L58090
+
+; 340  : 		for (i = nPlanes - 1; i >= 0; --i) {
+
+  009e7	8b 8d 44 f0 ff
+	ff		 mov	 ecx, DWORD PTR _nPlanes$[ebp]
+  009ed	83 e9 01	 sub	 ecx, 1
+  009f0	89 8d 40 f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], ecx
+  009f6	eb 0f		 jmp	 SHORT $L58088
+$L58089:
+  009f8	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  009fe	83 ea 01	 sub	 edx, 1
+  00a01	89 95 40 f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L58088:
+  00a07	83 bd 40 f0 ff
+	ff 00		 cmp	 DWORD PTR _i$[ebp], 0
+  00a0e	0f 8c 09 02 00
+	00		 jl	 $L58090
+
+; 341  : 			if (planes[i].DeleteCount())	{
+
+  00a14	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00a1a	50		 push	 eax
+  00a1b	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a21	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00a26	8b c8		 mov	 ecx, eax
+  00a28	e8 00 00 00 00	 call	 ?DeleteCount@SOL_Plane@@QBEHXZ ; SOL_Plane::DeleteCount
+  00a2d	85 c0		 test	 eax, eax
+  00a2f	0f 84 e3 01 00
+	00		 je	 $L58106
+
+; 342  : 				planes[i].DecDeleteCount();
+
+  00a35	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00a3b	51		 push	 ecx
+  00a3c	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a42	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00a47	8b c8		 mov	 ecx, eax
+  00a49	e8 00 00 00 00	 call	 ?DecDeleteCount@SOL_Plane@@QAEXXZ ; SOL_Plane::DecDeleteCount
+
+; 343  : 				if (planes[i].DeleteCount() <= 0) {
+
+  00a4e	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00a54	52		 push	 edx
+  00a55	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a5b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00a60	8b c8		 mov	 ecx, eax
+  00a62	e8 00 00 00 00	 call	 ?DeleteCount@SOL_Plane@@QBEHXZ ; SOL_Plane::DeleteCount
+  00a67	85 c0		 test	 eax, eax
+  00a69	0f 8f 98 01 00
+	00		 jg	 $L58092
+
+; 344  : 					// delete the last screen's plane
+; 345  : 					int lastI = lastPlanesList.Search(planes[i].Id());
+
+  00a6f	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00a75	50		 push	 eax
+  00a76	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a7c	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00a81	8b c8		 mov	 ecx, eax
+  00a83	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  00a88	50		 push	 eax
+  00a89	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00a8f	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  00a94	89 85 d0 ef ff
+	ff		 mov	 DWORD PTR _lastI$58093[ebp], eax
+
+; 346  : 					if (lastI != -1)
+
+  00a9a	83 bd d0 ef ff
+	ff ff		 cmp	 DWORD PTR _lastI$58093[ebp], -1
+  00aa1	74 12		 je	 SHORT $L58094
+
+; 347  : 						lastPlanesList.Delete(lastI);
+
+  00aa3	8b 8d d0 ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58093[ebp]
+  00aa9	51		 push	 ecx
+  00aaa	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00ab0	e8 00 00 00 00	 call	 ?Delete@PlaneList@@QAEXH@Z ; PlaneList::Delete
+$L58094:
+
+; 348  : 
+; 349  : 					// delete the next screen's plane
+; 350  : 					planes.Delete(i);
+
+  00ab5	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00abb	52		 push	 edx
+  00abc	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ac2	e8 00 00 00 00	 call	 ?Delete@PlaneList@@QAEXH@Z ; PlaneList::Delete
+
+; 351  : 
+; 352  : 					// Shift the erase and draw rectangles
+; 353  : 					// down because deleting a plane shifts 
+; 354  : 					// the planes list down
+; 355  : 					delete eraseLists[i];
+
+  00ac7	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00acd	8b 4d 10	 mov	 ecx, DWORD PTR _eraseLists$[ebp]
+  00ad0	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  00ad3	89 95 94 ef ff
+	ff		 mov	 DWORD PTR $T58360[ebp], edx
+  00ad9	8b 85 94 ef ff
+	ff		 mov	 eax, DWORD PTR $T58360[ebp]
+  00adf	89 85 98 ef ff
+	ff		 mov	 DWORD PTR $T58359[ebp], eax
+  00ae5	83 bd 98 ef ff
+	ff 00		 cmp	 DWORD PTR $T58359[ebp], 0
+  00aec	74 15		 je	 SHORT $L58361
+  00aee	6a 01		 push	 1
+  00af0	8b 8d 98 ef ff
+	ff		 mov	 ecx, DWORD PTR $T58359[ebp]
+  00af6	e8 00 00 00 00	 call	 ??_GRectList@@QAEPAXI@Z	; RectList::`scalar deleting destructor'
+  00afb	89 85 74 ef ff
+	ff		 mov	 DWORD PTR -4236+[ebp], eax
+  00b01	eb 0a		 jmp	 SHORT $L58362
+$L58361:
+  00b03	c7 85 74 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR -4236+[ebp], 0
+$L58362:
+
+; 356  : 					for (int k = i;k < nPlanes - 1;++k) {
+
+  00b0d	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00b13	89 8d cc ef ff
+	ff		 mov	 DWORD PTR _k$58097[ebp], ecx
+  00b19	eb 0f		 jmp	 SHORT $L58098
+$L58099:
+  00b1b	8b 95 cc ef ff
+	ff		 mov	 edx, DWORD PTR _k$58097[ebp]
+  00b21	83 c2 01	 add	 edx, 1
+  00b24	89 95 cc ef ff
+	ff		 mov	 DWORD PTR _k$58097[ebp], edx
+$L58098:
+  00b2a	8b 85 44 f0 ff
+	ff		 mov	 eax, DWORD PTR _nPlanes$[ebp]
+  00b30	83 e8 01	 sub	 eax, 1
+  00b33	39 85 cc ef ff
+	ff		 cmp	 DWORD PTR _k$58097[ebp], eax
+  00b39	7d 1b		 jge	 SHORT $L58100
+
+; 357  : 						eraseLists[k] = eraseLists[k+1];
+
+  00b3b	8b 8d cc ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58097[ebp]
+  00b41	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  00b44	8b 85 cc ef ff
+	ff		 mov	 eax, DWORD PTR _k$58097[ebp]
+  00b4a	8b 75 10	 mov	 esi, DWORD PTR _eraseLists$[ebp]
+  00b4d	8b 44 86 04	 mov	 eax, DWORD PTR [esi+eax*4+4]
+  00b51	89 04 8a	 mov	 DWORD PTR [edx+ecx*4], eax
+
+; 358  : 					}
+
+  00b54	eb c5		 jmp	 SHORT $L58099
+$L58100:
+
+; 359  : 					eraseLists[nPlanes - 1]	= NULL;
+
+  00b56	8b 8d 44 f0 ff
+	ff		 mov	 ecx, DWORD PTR _nPlanes$[ebp]
+  00b5c	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  00b5f	c7 44 8a fc 00
+	00 00 00	 mov	 DWORD PTR [edx+ecx*4-4], 0
+
+; 360  : 					delete drawLists[i];
+
+  00b67	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00b6d	8b 4d 0c	 mov	 ecx, DWORD PTR _drawLists$[ebp]
+  00b70	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  00b73	89 95 8c ef ff
+	ff		 mov	 DWORD PTR $T58364[ebp], edx
+  00b79	8b 85 8c ef ff
+	ff		 mov	 eax, DWORD PTR $T58364[ebp]
+  00b7f	89 85 90 ef ff
+	ff		 mov	 DWORD PTR $T58363[ebp], eax
+  00b85	83 bd 90 ef ff
+	ff 00		 cmp	 DWORD PTR $T58363[ebp], 0
+  00b8c	74 15		 je	 SHORT $L58365
+  00b8e	6a 01		 push	 1
+  00b90	8b 8d 90 ef ff
+	ff		 mov	 ecx, DWORD PTR $T58363[ebp]
+  00b96	e8 00 00 00 00	 call	 ??_GDrawList@@QAEPAXI@Z	; DrawList::`scalar deleting destructor'
+  00b9b	89 85 70 ef ff
+	ff		 mov	 DWORD PTR -4240+[ebp], eax
+  00ba1	eb 0a		 jmp	 SHORT $L58366
+$L58365:
+  00ba3	c7 85 70 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR -4240+[ebp], 0
+$L58366:
+
+; 361  : 					for (k = i;k < nPlanes - 1;++k) {
+
+  00bad	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00bb3	89 8d cc ef ff
+	ff		 mov	 DWORD PTR _k$58097[ebp], ecx
+  00bb9	eb 0f		 jmp	 SHORT $L58103
+$L58104:
+  00bbb	8b 95 cc ef ff
+	ff		 mov	 edx, DWORD PTR _k$58097[ebp]
+  00bc1	83 c2 01	 add	 edx, 1
+  00bc4	89 95 cc ef ff
+	ff		 mov	 DWORD PTR _k$58097[ebp], edx
+$L58103:
+  00bca	8b 85 44 f0 ff
+	ff		 mov	 eax, DWORD PTR _nPlanes$[ebp]
+  00bd0	83 e8 01	 sub	 eax, 1
+  00bd3	39 85 cc ef ff
+	ff		 cmp	 DWORD PTR _k$58097[ebp], eax
+  00bd9	7d 1b		 jge	 SHORT $L58105
+
+; 362  : 						drawLists[k] = drawLists[k+1];
+
+  00bdb	8b 8d cc ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58097[ebp]
+  00be1	8b 55 0c	 mov	 edx, DWORD PTR _drawLists$[ebp]
+  00be4	8b 85 cc ef ff
+	ff		 mov	 eax, DWORD PTR _k$58097[ebp]
+  00bea	8b 75 0c	 mov	 esi, DWORD PTR _drawLists$[ebp]
+  00bed	8b 44 86 04	 mov	 eax, DWORD PTR [esi+eax*4+4]
+  00bf1	89 04 8a	 mov	 DWORD PTR [edx+ecx*4], eax
+
+; 363  : 					}
+
+  00bf4	eb c5		 jmp	 SHORT $L58104
+$L58105:
+
+; 364  : 					drawLists[nPlanes - 1]	= NULL;
+
+  00bf6	8b 8d 44 f0 ff
+	ff		 mov	 ecx, DWORD PTR _nPlanes$[ebp]
+  00bfc	8b 55 0c	 mov	 edx, DWORD PTR _drawLists$[ebp]
+  00bff	c7 44 8a fc 00
+	00 00 00	 mov	 DWORD PTR [edx+ecx*4-4], 0
+$L58092:
+
+; 366  : 				if ((--nDeletedPlanes) <= 0) break;
+
+  00c07	8b 45 f0	 mov	 eax, DWORD PTR _nDeletedPlanes$[ebp]
+  00c0a	83 e8 01	 sub	 eax, 1
+  00c0d	89 45 f0	 mov	 DWORD PTR _nDeletedPlanes$[ebp], eax
+  00c10	83 7d f0 00	 cmp	 DWORD PTR _nDeletedPlanes$[ebp], 0
+  00c14	7f 02		 jg	 SHORT $L58106
+  00c16	eb 05		 jmp	 SHORT $L58090
+$L58106:
+
+; 368  : 		}
+
+  00c18	e9 db fd ff ff	 jmp	 $L58089
+$L58090:
+
+; 370  : 
+; 371  : 	// The number of planes may have changed because some were deleted
+; 372  : 	nPlanes = planes.Length();
+
+  00c1d	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c23	e8 00 00 00 00	 call	 ?Length@PlaneList@@QBEHXZ ; PlaneList::Length
+  00c28	89 85 44 f0 ff
+	ff		 mov	 DWORD PTR _nPlanes$[ebp], eax
+
+; 373  : 
+; 374  : 	// Go through the planes list resolving planes
+; 375  : 	// that had their priority changed
+; 376  : 	for (i = 0; i < nPlanes;++i) {
+
+  00c2e	c7 85 40 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  00c38	eb 0f		 jmp	 SHORT $L58107
+$L58108:
+  00c3a	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00c40	83 c1 01	 add	 ecx, 1
+  00c43	89 8d 40 f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], ecx
+$L58107:
+  00c49	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00c4f	3b 95 44 f0 ff
+	ff		 cmp	 edx, DWORD PTR _nPlanes$[ebp]
+  00c55	0f 8d 9d 04 00
+	00		 jge	 $L58109
+
+; 377  : 		if (planes[i].PriorityCount()) {
+
+  00c5b	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00c61	50		 push	 eax
+  00c62	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c68	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00c6d	8b c8		 mov	 ecx, eax
+  00c6f	e8 00 00 00 00	 call	 ?PriorityCount@SOL_Plane@@QAEHXZ ; SOL_Plane::PriorityCount
+  00c74	85 c0		 test	 eax, eax
+  00c76	0f 84 77 04 00
+	00		 je	 $L58115
+
+; 378  : 			planes[i].DecPriorityCount();
+
+  00c7c	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00c82	51		 push	 ecx
+  00c83	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c89	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00c8e	8b c8		 mov	 ecx, eax
+  00c90	e8 00 00 00 00	 call	 ?DecPriorityCount@SOL_Plane@@QAEXXZ ; SOL_Plane::DecPriorityCount
+
+; 379  : 			int lastI = lastPlanesList.Search(planes[i].Id());
+
+  00c95	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00c9b	52		 push	 edx
+  00c9c	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ca2	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00ca7	8b c8		 mov	 ecx, eax
+  00ca9	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  00cae	50		 push	 eax
+  00caf	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00cb5	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  00cba	89 85 c8 ef ff
+	ff		 mov	 DWORD PTR _lastI$58111[ebp], eax
+
+; 380  : 			// Use intersection because the plane 
+; 381  : 			// may have been resized	or moved.
+; 382  : 			planes[i].OnScreen().Intersect(lastPlanesList[lastI].OnScreen(),rects);
+
+  00cc0	8d 85 f8 ef ff
+	ff		 lea	 eax, DWORD PTR _rects$[ebp]
+  00cc6	50		 push	 eax
+  00cc7	8b 8d c8 ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58111[ebp]
+  00ccd	51		 push	 ecx
+  00cce	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00cd4	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00cd9	8b c8		 mov	 ecx, eax
+  00cdb	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00ce0	50		 push	 eax
+  00ce1	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00ce7	52		 push	 edx
+  00ce8	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00cee	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00cf3	8b c8		 mov	 ecx, eax
+  00cf5	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00cfa	8b c8		 mov	 ecx, eax
+  00cfc	e8 00 00 00 00	 call	 ?Intersect@SOL_Rect@@QBEHABV1@PAV1@@Z ; SOL_Rect::Intersect
+
+; 383  : 			eraseRects.Add(rects[0]);
+
+  00d01	8d 85 f8 ef ff
+	ff		 lea	 eax, DWORD PTR _rects$[ebp]
+  00d07	50		 push	 eax
+  00d08	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00d0e	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 384  : 			for (int j = nPlanes - 1;j >= 0;--j) {
+
+  00d13	8b 8d 44 f0 ff
+	ff		 mov	 ecx, DWORD PTR _nPlanes$[ebp]
+  00d19	83 e9 01	 sub	 ecx, 1
+  00d1c	89 8d c4 ef ff
+	ff		 mov	 DWORD PTR _j$58112[ebp], ecx
+  00d22	eb 0f		 jmp	 SHORT $L58113
+$L58114:
+  00d24	8b 95 c4 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58112[ebp]
+  00d2a	83 ea 01	 sub	 edx, 1
+  00d2d	89 95 c4 ef ff
+	ff		 mov	 DWORD PTR _j$58112[ebp], edx
+$L58113:
+  00d33	83 bd c4 ef ff
+	ff 00		 cmp	 DWORD PTR _j$58112[ebp], 0
+  00d3a	0f 8c b3 03 00
+	00		 jl	 $L58115
+
+; 385  : 				// Don't bother with transparent planes. They will 
+; 386  : 				// get their erase rects from non transparent planes
+; 387  : 				int lastJ = lastPlanesList.Search(planes[j].Id());
+
+  00d40	8b 85 c4 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58112[ebp]
+  00d46	50		 push	 eax
+  00d47	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00d4d	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00d52	8b c8		 mov	 ecx, eax
+  00d54	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  00d59	50		 push	 eax
+  00d5a	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00d60	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  00d65	89 85 c0 ef ff
+	ff		 mov	 DWORD PTR _lastJ$58116[ebp], eax
+
+; 388  : 				int eraseRectsLength = eraseRects.Length();
+
+  00d6b	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00d71	e8 00 00 00 00	 call	 ?Length@RectList@@QBEHXZ ; RectList::Length
+  00d76	89 85 bc ef ff
+	ff		 mov	 DWORD PTR _eraseRectsLength$58117[ebp], eax
+
+; 389  : 				for (int k = 0; k < eraseRectsLength;++k) {
+
+  00d7c	c7 85 b8 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _k$58118[ebp], 0
+  00d86	eb 0f		 jmp	 SHORT $L58119
+$L58120:
+  00d88	8b 8d b8 ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58118[ebp]
+  00d8e	83 c1 01	 add	 ecx, 1
+  00d91	89 8d b8 ef ff
+	ff		 mov	 DWORD PTR _k$58118[ebp], ecx
+$L58119:
+  00d97	8b 95 b8 ef ff
+	ff		 mov	 edx, DWORD PTR _k$58118[ebp]
+  00d9d	3b 95 bc ef ff
+	ff		 cmp	 edx, DWORD PTR _eraseRectsLength$58117[ebp]
+  00da3	0f 8d 3a 03 00
+	00		 jge	 $L58121
+
+; 390  : 					int newRects = eraseRects[k].Split
+; 391  : 					(
+; 392  : 						planes[j].OnScreen(),
+; 393  : 						rects
+; 394  : 					);
+
+  00da9	8d 85 f8 ef ff
+	ff		 lea	 eax, DWORD PTR _rects$[ebp]
+  00daf	50		 push	 eax
+  00db0	8b 8d c4 ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58112[ebp]
+  00db6	51		 push	 ecx
+  00db7	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00dbd	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00dc2	8b c8		 mov	 ecx, eax
+  00dc4	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  00dc9	50		 push	 eax
+  00dca	8b 95 b8 ef ff
+	ff		 mov	 edx, DWORD PTR _k$58118[ebp]
+  00dd0	52		 push	 edx
+  00dd1	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00dd7	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  00ddc	8b c8		 mov	 ecx, eax
+  00dde	e8 00 00 00 00	 call	 ?Split@SOL_Rect@@QAEHAAV1@PAV1@@Z ; SOL_Rect::Split
+  00de3	89 85 b4 ef ff
+	ff		 mov	 DWORD PTR _newRects$58122[ebp], eax
+
+; 395  : 					switch (newRects)	{
+
+  00de9	8b 85 b4 ef ff
+	ff		 mov	 eax, DWORD PTR _newRects$58122[ebp]
+  00def	89 85 6c ef ff
+	ff		 mov	 DWORD PTR -4244+[ebp], eax
+  00df5	83 bd 6c ef ff
+	ff ff		 cmp	 DWORD PTR -4244+[ebp], -1
+  00dfc	0f 84 2b 01 00
+	00		 je	 $L58132
+  00e02	83 bd 6c ef ff
+	ff 00		 cmp	 DWORD PTR -4244+[ebp], 0
+  00e09	74 05		 je	 SHORT $L58127
+  00e0b	e9 22 01 00 00	 jmp	 $L58133
+$L58127:
+
+; 396  : 						case 0:
+; 397  : 							// Completey overlaped
+; 398  : 							// Has the relative priority changed?
+; 399  : 
+; 400  : 							// Note: this check is not taking into account
+; 401  : 							// different planes that overlap and have the
+; 402  : 							// same priority.	If two planes have the same
+; 403  : 							// priority and overlap then a change of priority
+; 404  : 							// to one of these planes may cause an incorrect 
+; 405  : 							// resolution for the priority change.
+; 406  : 
+; 407  : 							if (lastJ != -1) {
+
+  00e10	83 bd c0 ef ff
+	ff ff		 cmp	 DWORD PTR _lastJ$58116[ebp], -1
+  00e17	0f 84 f9 00 00
+	00		 je	 $L58131
+
+; 410  : 								(
+; 411  : 								(lastPlanesList[lastI].Priority() - lastPlanesList[lastJ].Priority())
+; 412  : 								*
+; 413  : 								(planes[i].Priority() - planes[j].Priority())
+; 414  : 								)
+; 415  : 								<= 0
+; 416  : 								) {
+
+  00e1d	8b 8d c8 ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58111[ebp]
+  00e23	51		 push	 ecx
+  00e24	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00e2a	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00e2f	8b c8		 mov	 ecx, eax
+  00e31	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00e36	8b f0		 mov	 esi, eax
+  00e38	8b 95 c0 ef ff
+	ff		 mov	 edx, DWORD PTR _lastJ$58116[ebp]
+  00e3e	52		 push	 edx
+  00e3f	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00e45	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00e4a	8b c8		 mov	 ecx, eax
+  00e4c	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00e51	2b f0		 sub	 esi, eax
+  00e53	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00e59	50		 push	 eax
+  00e5a	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e60	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00e65	8b c8		 mov	 ecx, eax
+  00e67	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00e6c	8b f8		 mov	 edi, eax
+  00e6e	8b 8d c4 ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58112[ebp]
+  00e74	51		 push	 ecx
+  00e75	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e7b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00e80	8b c8		 mov	 ecx, eax
+  00e82	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00e87	2b f8		 sub	 edi, eax
+  00e89	0f af f7	 imul	 esi, edi
+  00e8c	85 f6		 test	 esi, esi
+  00e8e	0f 8f 82 00 00
+	00		 jg	 $L58131
+
+; 417  : 									// Add to the erase rects of the higher priority plane
+; 418  : 									if (planes[i].Priority() > planes[j].Priority()) {
+
+  00e94	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00e9a	52		 push	 edx
+  00e9b	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ea1	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00ea6	8b c8		 mov	 ecx, eax
+  00ea8	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00ead	8b f0		 mov	 esi, eax
+  00eaf	8b 85 c4 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58112[ebp]
+  00eb5	50		 push	 eax
+  00eb6	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ebc	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00ec1	8b c8		 mov	 ecx, eax
+  00ec3	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00ec8	3b f0		 cmp	 esi, eax
+  00eca	7e 26		 jle	 SHORT $L58130
+
+; 419  : 										eraseLists[i]->Add(eraseRects[k]);
+
+  00ecc	8b 8d b8 ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58118[ebp]
+  00ed2	51		 push	 ecx
+  00ed3	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00ed9	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  00ede	50		 push	 eax
+  00edf	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00ee5	8b 45 10	 mov	 eax, DWORD PTR _eraseLists$[ebp]
+  00ee8	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  00eeb	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 421  : 									else {
+
+  00ef0	eb 24		 jmp	 SHORT $L58131
+$L58130:
+
+; 422  : 										eraseLists[j]->Add(eraseRects[k]);
+
+  00ef2	8b 8d b8 ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58118[ebp]
+  00ef8	51		 push	 ecx
+  00ef9	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00eff	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  00f04	50		 push	 eax
+  00f05	8b 95 c4 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58112[ebp]
+  00f0b	8b 45 10	 mov	 eax, DWORD PTR _eraseLists$[ebp]
+  00f0e	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  00f11	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+$L58131:
+
+; 426  : 							eraseRects.Delete(k);
+
+  00f16	8b 8d b8 ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58118[ebp]
+  00f1c	51		 push	 ecx
+  00f1d	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00f23	e8 00 00 00 00	 call	 ?Delete@RectList@@QAEXH@Z ; RectList::Delete
+
+; 427  : 							break;
+
+  00f28	e9 b1 01 00 00	 jmp	 $L58124
+$L58132:
+
+; 428  : 
+; 429  : 						case -1:
+; 430  : 							// No overlap
+; 431  : 							break;
+
+  00f2d	e9 ac 01 00 00	 jmp	 $L58124
+$L58133:
+
+; 432  : 
+; 433  : 						default:
+; 434  : 							// Multiple IRects not covered by plane[j]
+; 435  : 							for (int l = 0; l < newRects; l++) {
+
+  00f32	c7 85 b0 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _l$58134[ebp], 0
+  00f3c	eb 0f		 jmp	 SHORT $L58135
+$L58136:
+  00f3e	8b 95 b0 ef ff
+	ff		 mov	 edx, DWORD PTR _l$58134[ebp]
+  00f44	83 c2 01	 add	 edx, 1
+  00f47	89 95 b0 ef ff
+	ff		 mov	 DWORD PTR _l$58134[ebp], edx
+$L58135:
+  00f4d	8b 85 b0 ef ff
+	ff		 mov	 eax, DWORD PTR _l$58134[ebp]
+  00f53	3b 85 b4 ef ff
+	ff		 cmp	 eax, DWORD PTR _newRects$58122[ebp]
+  00f59	7d 1e		 jge	 SHORT $L58137
+
+; 436  : 								eraseRects.Add(rects[l]);
+
+  00f5b	8b 8d b0 ef ff
+	ff		 mov	 ecx, DWORD PTR _l$58134[ebp]
+  00f61	c1 e1 04	 shl	 ecx, 4
+  00f64	8d 94 0d f8 ef
+	ff ff		 lea	 edx, DWORD PTR _rects$[ebp+ecx]
+  00f6b	52		 push	 edx
+  00f6c	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00f72	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 437  : 							}
+
+  00f77	eb c5		 jmp	 SHORT $L58136
+$L58137:
+
+; 438  : 							// Has the relative priority changed?
+; 439  : 
+; 440  : 							// Note: this check is not taking into account
+; 441  : 							// different planes that overlap and have the
+; 442  : 							// same priority.	If two planes have the same
+; 443  : 							// priority and overlap then a change of priority
+; 444  : 							// to one of these planes may cause an incorrect 
+; 445  : 							// resolution for the priority change.
+; 446  : 							if (lastJ != -1) {
+
+  00f79	83 bd c0 ef ff
+	ff ff		 cmp	 DWORD PTR _lastJ$58116[ebp], -1
+  00f80	0f 84 46 01 00
+	00		 je	 $L58141
+
+; 449  : 								(
+; 450  : 								(lastPlanesList[lastI].Priority() - lastPlanesList[lastJ].Priority())
+; 451  : 								*
+; 452  : 								(planes[i].Priority() - planes[j].Priority())
+; 453  : 								)
+; 454  : 								<= 0
+; 455  : 								) {
+
+  00f86	8b 85 c8 ef ff
+	ff		 mov	 eax, DWORD PTR _lastI$58111[ebp]
+  00f8c	50		 push	 eax
+  00f8d	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00f93	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00f98	8b c8		 mov	 ecx, eax
+  00f9a	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00f9f	8b f0		 mov	 esi, eax
+  00fa1	8b 8d c0 ef ff
+	ff		 mov	 ecx, DWORD PTR _lastJ$58116[ebp]
+  00fa7	51		 push	 ecx
+  00fa8	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  00fae	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00fb3	8b c8		 mov	 ecx, eax
+  00fb5	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00fba	2b f0		 sub	 esi, eax
+  00fbc	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00fc2	52		 push	 edx
+  00fc3	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00fc9	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00fce	8b c8		 mov	 ecx, eax
+  00fd0	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00fd5	8b f8		 mov	 edi, eax
+  00fd7	8b 85 c4 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58112[ebp]
+  00fdd	50		 push	 eax
+  00fde	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00fe4	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  00fe9	8b c8		 mov	 ecx, eax
+  00feb	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  00ff0	2b f8		 sub	 edi, eax
+  00ff2	0f af f7	 imul	 esi, edi
+  00ff5	85 f6		 test	 esi, esi
+  00ff7	0f 8f cf 00 00
+	00		 jg	 $L58141
+
+; 456  : 									// Add the overlap to the erase rects of the higher priority plane
+; 457  : 									planes[i].OnScreen().Intersect(planes[j].OnScreen(),&eraseRects[k]);
+
+  00ffd	8b 8d b8 ef ff
+	ff		 mov	 ecx, DWORD PTR _k$58118[ebp]
+  01003	51		 push	 ecx
+  01004	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  0100a	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  0100f	50		 push	 eax
+  01010	8b 95 c4 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58112[ebp]
+  01016	52		 push	 edx
+  01017	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0101d	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01022	8b c8		 mov	 ecx, eax
+  01024	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  01029	50		 push	 eax
+  0102a	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01030	50		 push	 eax
+  01031	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01037	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0103c	8b c8		 mov	 ecx, eax
+  0103e	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  01043	8b c8		 mov	 ecx, eax
+  01045	e8 00 00 00 00	 call	 ?Intersect@SOL_Rect@@QBEHABV1@PAV1@@Z ; SOL_Rect::Intersect
+
+; 458  : 									if (planes[i].Priority() > planes[j].Priority()) {
+
+  0104a	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01050	51		 push	 ecx
+  01051	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01057	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0105c	8b c8		 mov	 ecx, eax
+  0105e	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  01063	8b f0		 mov	 esi, eax
+  01065	8b 95 c4 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58112[ebp]
+  0106b	52		 push	 edx
+  0106c	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01072	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01077	8b c8		 mov	 ecx, eax
+  01079	e8 00 00 00 00	 call	 ?Priority@SOL_Plane@@QBEHXZ ; SOL_Plane::Priority
+  0107e	3b f0		 cmp	 esi, eax
+  01080	7e 26		 jle	 SHORT $L58140
+
+; 459  : 										eraseLists[i]->Add(eraseRects[k]);
+
+  01082	8b 85 b8 ef ff
+	ff		 mov	 eax, DWORD PTR _k$58118[ebp]
+  01088	50		 push	 eax
+  01089	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  0108f	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  01094	50		 push	 eax
+  01095	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0109b	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  0109e	8b 0c 8a	 mov	 ecx, DWORD PTR [edx+ecx*4]
+  010a1	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+
+; 461  : 									else {
+
+  010a6	eb 24		 jmp	 SHORT $L58141
+$L58140:
+
+; 462  : 										eraseLists[j]->Add(eraseRects[k]);
+
+  010a8	8b 85 b8 ef ff
+	ff		 mov	 eax, DWORD PTR _k$58118[ebp]
+  010ae	50		 push	 eax
+  010af	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  010b5	e8 00 00 00 00	 call	 ??ARectList@@QAEAAVSOL_Rect@@H@Z ; RectList::operator[]
+  010ba	50		 push	 eax
+  010bb	8b 8d c4 ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58112[ebp]
+  010c1	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  010c4	8b 0c 8a	 mov	 ecx, DWORD PTR [edx+ecx*4]
+  010c7	e8 00 00 00 00	 call	 ?Add@RectList@@QAEXABVSOL_Rect@@@Z ; RectList::Add
+$L58141:
+
+; 466  : 							eraseRects.Delete(k);
+
+  010cc	8b 85 b8 ef ff
+	ff		 mov	 eax, DWORD PTR _k$58118[ebp]
+  010d2	50		 push	 eax
+  010d3	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  010d9	e8 00 00 00 00	 call	 ?Delete@RectList@@QAEXH@Z ; RectList::Delete
+$L58124:
+
+; 469  : 				}
+
+  010de	e9 a5 fc ff ff	 jmp	 $L58120
+$L58121:
+
+; 470  : 				eraseRects.Pack();
+
+  010e3	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  010e9	e8 00 00 00 00	 call	 ?Pack@RectList@@QAEHXZ	; RectList::Pack
+
+; 471  : 			}
+
+  010ee	e9 31 fc ff ff	 jmp	 $L58114
+$L58115:
+
+; 473  : 	}
+
+  010f3	e9 42 fb ff ff	 jmp	 $L58108
+$L58109:
+
+; 474  : 
+; 475  : 	// Go through the planes list calling each 
+; 476  : 	// to a calculate draw and erase list.
+; 477  : 	for (i = 0;i < nPlanes;++i) {
+
+  010f8	c7 85 40 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  01102	eb 0f		 jmp	 SHORT $L58142
+$L58143:
+  01104	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0110a	83 c1 01	 add	 ecx, 1
+  0110d	89 8d 40 f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], ecx
+$L58142:
+  01113	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01119	3b 95 44 f0 ff
+	ff		 cmp	 edx, DWORD PTR _nPlanes$[ebp]
+  0111f	0f 8d 60 02 00
+	00		 jge	 $L58144
+
+; 478  : 		int lastI = lastPlanesList.Search(planes[i].Id());
+
+  01125	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0112b	50		 push	 eax
+  0112c	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01132	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01137	8b c8		 mov	 ecx, eax
+  01139	e8 00 00 00 00	 call	 ?Id@SOL_Plane@@QBEJXZ	; SOL_Plane::Id
+  0113e	50		 push	 eax
+  0113f	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  01145	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  0114a	89 85 ac ef ff
+	ff		 mov	 DWORD PTR _lastI$58145[ebp], eax
+
+; 479  : 		SOL_Plane* lastPlane = NULL;
+
+  01150	c7 85 a8 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR _lastPlane$58146[ebp], 0
+
+; 480  : 		if (lastI != -1)
+
+  0115a	83 bd ac ef ff
+	ff ff		 cmp	 DWORD PTR _lastI$58145[ebp], -1
+  01161	74 18		 je	 SHORT $L58147
+
+; 481  : 			lastPlane = lastPlanesList.Pointer(lastI);
+
+  01163	8b 8d ac ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58145[ebp]
+  01169	51		 push	 ecx
+  0116a	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  01170	e8 00 00 00 00	 call	 ?Pointer@PlaneList@@QAEPAVSOL_Plane@@H@Z ; PlaneList::Pointer
+  01175	89 85 a8 ef ff
+	ff		 mov	 DWORD PTR _lastPlane$58146[ebp], eax
+$L58147:
+
+; 482  : 		if (planes[i].RedrawAllCount()) {
+
+  0117b	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01181	52		 push	 edx
+  01182	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01188	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0118d	8b c8		 mov	 ecx, eax
+  0118f	e8 00 00 00 00	 call	 ?RedrawAllCount@SOL_Plane@@QBEHXZ ; SOL_Plane::RedrawAllCount
+  01194	85 c0		 test	 eax, eax
+  01196	74 67		 je	 SHORT $L58148
+
+; 483  : 			if (!planes[i].OnScreen().IsEmpty())
+
+  01198	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0119e	50		 push	 eax
+  0119f	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  011a5	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  011aa	8b c8		 mov	 ecx, eax
+  011ac	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  011b1	8b c8		 mov	 ecx, eax
+  011b3	e8 00 00 00 00	 call	 ?IsEmpty@SOL_Rect@@QBEHXZ ; SOL_Rect::IsEmpty
+  011b8	85 c0		 test	 eax, eax
+  011ba	75 41		 jne	 SHORT $L58149
+
+; 484  : 				planes[i].RedrawAll(lastPlane,planes,*drawLists[i],*eraseLists[i]);
+
+  011bc	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  011c2	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  011c5	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  011c8	50		 push	 eax
+  011c9	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  011cf	8b 55 0c	 mov	 edx, DWORD PTR _drawLists$[ebp]
+  011d2	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  011d5	50		 push	 eax
+  011d6	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  011dc	51		 push	 ecx
+  011dd	8b 95 a8 ef ff
+	ff		 mov	 edx, DWORD PTR _lastPlane$58146[ebp]
+  011e3	52		 push	 edx
+  011e4	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  011ea	50		 push	 eax
+  011eb	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  011f1	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  011f6	8b c8		 mov	 ecx, eax
+  011f8	e8 00 00 00 00	 call	 ?RedrawAll@SOL_Plane@@QAEXPAV1@AAVPlaneList@@AAVDrawList@@AAVRectList@@@Z ; SOL_Plane::RedrawAll
+$L58149:
+
+; 486  : 		else  {
+
+  011fd	eb 65		 jmp	 SHORT $L58151
+$L58148:
+
+; 487  : 			// If the plane did not exist on the last frame out,
+; 488  : 			// it's redrawAllCount should be True
+; 489  : 			#ifdef DEBUG
+; 490  : 				if (lastPlane == NULL)
+; 491  : 					msgMgr->Fatal(SrcLoc,Msg_PrevPlaneNotFound,planes[i].Id());
+; 492  : 			#endif
+; 493  : 			if (!planes[i].OnScreen().IsEmpty())
+
+  011ff	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01205	51		 push	 ecx
+  01206	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0120c	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01211	8b c8		 mov	 ecx, eax
+  01213	e8 00 00 00 00	 call	 ?OnScreen@SOL_Plane@@QAEAAVSOL_Rect@@XZ ; SOL_Plane::OnScreen
+  01218	8b c8		 mov	 ecx, eax
+  0121a	e8 00 00 00 00	 call	 ?IsEmpty@SOL_Rect@@QBEHXZ ; SOL_Rect::IsEmpty
+  0121f	85 c0		 test	 eax, eax
+  01221	75 41		 jne	 SHORT $L58151
+
+; 494  : 				planes[i].CalcLists(lastPlane,planes,*drawLists[i],*eraseLists[i]);
+
+  01223	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01229	8b 45 10	 mov	 eax, DWORD PTR _eraseLists$[ebp]
+  0122c	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  0122f	51		 push	 ecx
+  01230	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01236	8b 45 0c	 mov	 eax, DWORD PTR _drawLists$[ebp]
+  01239	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  0123c	51		 push	 ecx
+  0123d	8b 95 80 ef ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01243	52		 push	 edx
+  01244	8b 85 a8 ef ff
+	ff		 mov	 eax, DWORD PTR _lastPlane$58146[ebp]
+  0124a	50		 push	 eax
+  0124b	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01251	51		 push	 ecx
+  01252	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01258	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0125d	8b c8		 mov	 ecx, eax
+  0125f	e8 00 00 00 00	 call	 ?CalcLists@SOL_Plane@@QAEXPAV1@AAVPlaneList@@AAVDrawList@@AAVRectList@@@Z ; SOL_Plane::CalcLists
+$L58151:
+
+; 496  : 
+; 497  : 		// Adjust the last screen planes list for added or updated planes
+; 498  : 		if (planes[i].AddCount()) {
+
+  01264	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0126a	52		 push	 edx
+  0126b	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01271	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01276	8b c8		 mov	 ecx, eax
+  01278	e8 00 00 00 00	 call	 ?AddCount@SOL_Plane@@QBEHXZ ; SOL_Plane::AddCount
+  0127d	85 c0		 test	 eax, eax
+  0127f	0f 84 99 00 00
+	00		 je	 $L58152
+
+; 499  : 			SOL_Plane* lastPlane = New SOL_Plane(planes[i]);
+
+  01285	68 c8 9c 00 00	 push	 40136			; 00009cc8H
+  0128a	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  0128f	83 c4 04	 add	 esp, 4
+  01292	89 85 84 ef ff
+	ff		 mov	 DWORD PTR $T58368[ebp], eax
+  01298	c6 45 fc 01	 mov	 BYTE PTR __$EHRec$[ebp+8], 1
+  0129c	83 bd 84 ef ff
+	ff 00		 cmp	 DWORD PTR $T58368[ebp], 0
+  012a3	74 26		 je	 SHORT $L58369
+  012a5	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  012ab	50		 push	 eax
+  012ac	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  012b2	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  012b7	50		 push	 eax
+  012b8	8b 8d 84 ef ff
+	ff		 mov	 ecx, DWORD PTR $T58368[ebp]
+  012be	e8 00 00 00 00	 call	 ??0SOL_Plane@@QAE@ABV0@@Z ; SOL_Plane::SOL_Plane
+  012c3	89 85 68 ef ff
+	ff		 mov	 DWORD PTR -4248+[ebp], eax
+  012c9	eb 0a		 jmp	 SHORT $L58370
+$L58369:
+  012cb	c7 85 68 ef ff
+	ff 00 00 00 00	 mov	 DWORD PTR -4248+[ebp], 0
+$L58370:
+  012d5	8b 8d 68 ef ff
+	ff		 mov	 ecx, DWORD PTR -4248+[ebp]
+  012db	89 8d 88 ef ff
+	ff		 mov	 DWORD PTR $T58367[ebp], ecx
+  012e1	c6 45 fc 00	 mov	 BYTE PTR __$EHRec$[ebp+8], 0
+  012e5	8b 95 88 ef ff
+	ff		 mov	 edx, DWORD PTR $T58367[ebp]
+  012eb	89 95 a4 ef ff
+	ff		 mov	 DWORD PTR _lastPlane$58153[ebp], edx
+
+; 500  : 			lastPlanesList.Add(lastPlane);
+
+  012f1	8b 85 a4 ef ff
+	ff		 mov	 eax, DWORD PTR _lastPlane$58153[ebp]
+  012f7	50		 push	 eax
+  012f8	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  012fe	e8 00 00 00 00	 call	 ?Add@PlaneList@@QAEHPAVSOL_Plane@@@Z ; PlaneList::Add
+
+; 501  : 			planes[i].DecAddCount();
+
+  01303	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01309	51		 push	 ecx
+  0130a	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01310	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01315	8b c8		 mov	 ecx, eax
+  01317	e8 00 00 00 00	 call	 ?DecAddCount@SOL_Plane@@QAEXXZ ; SOL_Plane::DecAddCount
+
+; 503  : 		else {
+
+  0131c	eb 62		 jmp	 SHORT $L58159
+$L58152:
+
+; 504  : 			if (planes[i].UpdateCount()) {
+
+  0131e	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01324	52		 push	 edx
+  01325	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0132b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01330	8b c8		 mov	 ecx, eax
+  01332	e8 00 00 00 00	 call	 ?UpdateCount@SOL_Plane@@QBEHXZ ; SOL_Plane::UpdateCount
+  01337	85 c0		 test	 eax, eax
+  01339	74 45		 je	 SHORT $L58159
+
+; 505  : 				lastPlanesList[lastI] = planes[i];
+
+  0133b	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01341	50		 push	 eax
+  01342	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01348	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0134d	50		 push	 eax
+  0134e	8b 8d ac ef ff
+	ff		 mov	 ecx, DWORD PTR _lastI$58145[ebp]
+  01354	51		 push	 ecx
+  01355	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _lastPlanesList$[ebp]
+  0135b	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01360	8b c8		 mov	 ecx, eax
+  01362	e8 00 00 00 00	 call	 ??4SOL_Plane@@QAEAAV0@ABV0@@Z ; SOL_Plane::operator=
+
+; 506  : 				planes[i].DecUpdateCount();
+
+  01367	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0136d	52		 push	 edx
+  0136e	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01374	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01379	8b c8		 mov	 ecx, eax
+  0137b	e8 00 00 00 00	 call	 ?DecUpdateCount@SOL_Plane@@QAEXXZ ; SOL_Plane::DecUpdateCount
+$L58159:
+
+; 509  : 	}
+
+  01380	e9 7f fd ff ff	 jmp	 $L58143
+$L58144:
+
+; 510  : 
+; 511  : 	// Now do some work for transparent planes
+; 512  : 	if (transparentPlanesCount) {
+
+  01385	83 bd f4 ef ff
+	ff 00		 cmp	 DWORD PTR _transparentPlanesCount$[ebp], 0
+  0138c	0f 84 ba 01 00
+	00		 je	 $L58163
+
+; 513  : 		for (i = 0;i < nPlanes;++i) {
+
+  01392	c7 85 40 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  0139c	eb 0f		 jmp	 SHORT $L58161
+$L58162:
+  0139e	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  013a4	83 c0 01	 add	 eax, 1
+  013a7	89 85 40 f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L58161:
+  013ad	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  013b3	3b 8d 44 f0 ff
+	ff		 cmp	 ecx, DWORD PTR _nPlanes$[ebp]
+  013b9	0f 8d 8d 01 00
+	00		 jge	 $L58163
+
+; 514  : 			int j;
+; 515  : 
+; 516  : 			for (j = i+1;j < nPlanes;++j) {
+
+  013bf	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  013c5	83 c2 01	 add	 edx, 1
+  013c8	89 95 a0 ef ff
+	ff		 mov	 DWORD PTR _j$58164[ebp], edx
+  013ce	eb 0f		 jmp	 SHORT $L58165
+$L58166:
+  013d0	8b 85 a0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58164[ebp]
+  013d6	83 c0 01	 add	 eax, 1
+  013d9	89 85 a0 ef ff
+	ff		 mov	 DWORD PTR _j$58164[ebp], eax
+$L58165:
+  013df	8b 8d a0 ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58164[ebp]
+  013e5	3b 8d 44 f0 ff
+	ff		 cmp	 ecx, DWORD PTR _nPlanes$[ebp]
+  013eb	7d 52		 jge	 SHORT $L58167
+
+; 517  : 				if (planes[j].IsTransparent()) {
+
+  013ed	8b 95 a0 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58164[ebp]
+  013f3	52		 push	 edx
+  013f4	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  013fa	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  013ff	8b c8		 mov	 ecx, eax
+  01401	e8 00 00 00 00	 call	 ?IsTransparent@SOL_Plane@@QBEHXZ ; SOL_Plane::IsTransparent
+  01406	85 c0		 test	 eax, eax
+  01408	74 33		 je	 SHORT $L58168
+
+; 518  : 					planes[j].FilterUpEraseRects(*drawLists[j],*eraseLists[i]);
+
+  0140a	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01410	8b 4d 10	 mov	 ecx, DWORD PTR _eraseLists$[ebp]
+  01413	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  01416	52		 push	 edx
+  01417	8b 85 a0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58164[ebp]
+  0141d	8b 4d 0c	 mov	 ecx, DWORD PTR _drawLists$[ebp]
+  01420	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  01423	52		 push	 edx
+  01424	8b 85 a0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58164[ebp]
+  0142a	50		 push	 eax
+  0142b	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01431	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01436	8b c8		 mov	 ecx, eax
+  01438	e8 00 00 00 00	 call	 ?FilterUpEraseRects@SOL_Plane@@QAEXAAVDrawList@@AAVRectList@@@Z ; SOL_Plane::FilterUpEraseRects
+$L58168:
+
+; 520  : 			}
+
+  0143d	eb 91		 jmp	 SHORT $L58166
+$L58167:
+
+; 521  : 
+; 522  : 			if (planes[i].IsTransparent()) {
+
+  0143f	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01445	51		 push	 ecx
+  01446	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0144c	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01451	8b c8		 mov	 ecx, eax
+  01453	e8 00 00 00 00	 call	 ?IsTransparent@SOL_Plane@@QBEHXZ ; SOL_Plane::IsTransparent
+  01458	85 c0		 test	 eax, eax
+  0145a	74 6b		 je	 SHORT $L58173
+
+; 523  : 				int j;
+; 524  : 				for (j = i-1;j >= 0;--j) {
+
+  0145c	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01462	83 ea 01	 sub	 edx, 1
+  01465	89 95 9c ef ff
+	ff		 mov	 DWORD PTR _j$58170[ebp], edx
+  0146b	eb 0f		 jmp	 SHORT $L58171
+$L58172:
+  0146d	8b 85 9c ef ff
+	ff		 mov	 eax, DWORD PTR _j$58170[ebp]
+  01473	83 e8 01	 sub	 eax, 1
+  01476	89 85 9c ef ff
+	ff		 mov	 DWORD PTR _j$58170[ebp], eax
+$L58171:
+  0147c	83 bd 9c ef ff
+	ff 00		 cmp	 DWORD PTR _j$58170[ebp], 0
+  01483	7c 42		 jl	 SHORT $L58173
+
+; 525  : 					planes[j].FilterDownEraseRects(*drawLists[j],*eraseLists[j],*eraseLists[i]);
+
+  01485	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0148b	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  0148e	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  01491	50		 push	 eax
+  01492	8b 8d 9c ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58170[ebp]
+  01498	8b 55 10	 mov	 edx, DWORD PTR _eraseLists$[ebp]
+  0149b	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  0149e	50		 push	 eax
+  0149f	8b 8d 9c ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58170[ebp]
+  014a5	8b 55 0c	 mov	 edx, DWORD PTR _drawLists$[ebp]
+  014a8	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  014ab	50		 push	 eax
+  014ac	8b 8d 9c ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58170[ebp]
+  014b2	51		 push	 ecx
+  014b3	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  014b9	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  014be	8b c8		 mov	 ecx, eax
+  014c0	e8 00 00 00 00	 call	 ?FilterDownEraseRects@SOL_Plane@@QAEXAAVDrawList@@AAVRectList@@1@Z ; SOL_Plane::FilterDownEraseRects
+
+; 526  : 				}
+
+  014c5	eb a6		 jmp	 SHORT $L58172
+$L58173:
+
+; 534  : 
+; 535  : 			for (j = i+1;j < nPlanes;++j) {
+
+  014c7	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  014cd	83 c2 01	 add	 edx, 1
+  014d0	89 95 a0 ef ff
+	ff		 mov	 DWORD PTR _j$58164[ebp], edx
+  014d6	eb 0f		 jmp	 SHORT $L58174
+$L58175:
+  014d8	8b 85 a0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58164[ebp]
+  014de	83 c0 01	 add	 eax, 1
+  014e1	89 85 a0 ef ff
+	ff		 mov	 DWORD PTR _j$58164[ebp], eax
+$L58174:
+  014e7	8b 8d a0 ef ff
+	ff		 mov	 ecx, DWORD PTR _j$58164[ebp]
+  014ed	3b 8d 44 f0 ff
+	ff		 cmp	 ecx, DWORD PTR _nPlanes$[ebp]
+  014f3	7d 52		 jge	 SHORT $L58176
+
+; 536  : 				if (planes[j].IsTransparent())
+
+  014f5	8b 95 a0 ef ff
+	ff		 mov	 edx, DWORD PTR _j$58164[ebp]
+  014fb	52		 push	 edx
+  014fc	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01502	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  01507	8b c8		 mov	 ecx, eax
+  01509	e8 00 00 00 00	 call	 ?IsTransparent@SOL_Plane@@QBEHXZ ; SOL_Plane::IsTransparent
+  0150e	85 c0		 test	 eax, eax
+  01510	74 33		 je	 SHORT $L58177
+
+; 537  : 					planes[j].FilterUpDrawRects(*drawLists[j],*drawLists[i]);
+
+  01512	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01518	8b 4d 0c	 mov	 ecx, DWORD PTR _drawLists$[ebp]
+  0151b	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  0151e	52		 push	 edx
+  0151f	8b 85 a0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58164[ebp]
+  01525	8b 4d 0c	 mov	 ecx, DWORD PTR _drawLists$[ebp]
+  01528	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  0152b	52		 push	 edx
+  0152c	8b 85 a0 ef ff
+	ff		 mov	 eax, DWORD PTR _j$58164[ebp]
+  01532	50		 push	 eax
+  01533	8b 8d 80 ef ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01539	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  0153e	8b c8		 mov	 ecx, eax
+  01540	e8 00 00 00 00	 call	 ?FilterUpDrawRects@SOL_Plane@@QAEXAAVDrawList@@0@Z ; SOL_Plane::FilterUpDrawRects
+$L58177:
+
+; 538  : 			}
+
+  01545	eb 91		 jmp	 SHORT $L58175
+$L58176:
+
+; 539  : 		}
+
+  01547	e9 52 fe ff ff	 jmp	 $L58162
+$L58163:
+
+; 541  : }
+
+  0154c	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  01553	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  01559	e8 00 00 00 00	 call	 ??1RectList@@QAE@XZ	; RectList::~RectList
+  0155e	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  01561	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  01568	5f		 pop	 edi
+  01569	5e		 pop	 esi
+  0156a	8b e5		 mov	 esp, ebp
+  0156c	5d		 pop	 ebp
+  0156d	c2 10 00	 ret	 16			; 00000010H
+_TEXT	ENDS
+text$x	SEGMENT
+$L58371:
+  00000	8d 8d 4c f0 ff
+	ff		 lea	 ecx, DWORD PTR _eraseRects$[ebp]
+  00006	e8 00 00 00 00	 call	 ??1RectList@@QAE@XZ	; RectList::~RectList
+  0000b	c3		 ret	 0
+$L58372:
+  0000c	8b 85 84 ef ff
+	ff		 mov	 eax, DWORD PTR $T58368[ebp]
+  00012	50		 push	 eax
+  00013	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00018	59		 pop	 ecx
+  00019	c3		 ret	 0
+$L58377:
+  0001a	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T58376
+  0001f	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?CalcLists@Screen@@QAEXAAV1@QAPAVDrawList@@QAPAVRectList@@ABVSOL_Rect@@@Z ENDP ; Screen::CalcLists
+PUBLIC	??0SOL_Point@@QAE@XZ				; SOL_Point::SOL_Point
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Rect@@QAE@XZ PROC NEAR				; SOL_Rect::SOL_Rect, COMDAT
+
+; 13   : 	SOL_Rect()  {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0000f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00012	83 c1 08	 add	 ecx, 8
+  00015	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Rect@@QAE@XZ ENDP				; SOL_Rect::SOL_Rect
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Point@@QAE@XZ PROC NEAR				; SOL_Point::SOL_Point, COMDAT
+
+; 20   : 	SOL_Point() : x(DefaultCoord), y(DefaultCoord) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 ef cd ab
+	89		 mov	 DWORD PTR [eax], -1985229329 ; 89abcdefH
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c7 41 04 ef cd
+	ab 89		 mov	 DWORD PTR [ecx+4], -1985229329 ; 89abcdefH
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Point@@QAE@XZ ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+;	COMDAT ?IsEmpty@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsEmpty@SOL_Rect@@QBEHXZ PROC NEAR			; SOL_Rect::IsEmpty, COMDAT
+
+; 116  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 117  : 	if (B.x < A.x  ||  B.y < A.y)
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 50 08	 mov	 edx, DWORD PTR [eax+8]
+  00010	3b 11		 cmp	 edx, DWORD PTR [ecx]
+  00012	7c 0e		 jl	 SHORT $L868
+  00014	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00017	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001a	8b 50 0c	 mov	 edx, DWORD PTR [eax+12]
+  0001d	3b 51 04	 cmp	 edx, DWORD PTR [ecx+4]
+  00020	7d 07		 jge	 SHORT $L867
+$L868:
+
+; 118  : 		return True;
+
+  00022	b8 01 00 00 00	 mov	 eax, 1
+  00027	eb 02		 jmp	 SHORT $L866
+$L867:
+
+; 119  : 	return False;
+
+  00029	33 c0		 xor	 eax, eax
+$L866:
+
+; 120  : }
+
+  0002b	8b e5		 mov	 esp, ebp
+  0002d	5d		 pop	 ebp
+  0002e	c3		 ret	 0
+?IsEmpty@SOL_Rect@@QBEHXZ ENDP				; SOL_Rect::IsEmpty
+_TEXT	ENDS
+;	COMDAT ?DeleteCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DeleteCount@SOL_Plane@@QBEHXZ PROC NEAR		; SOL_Plane::DeleteCount, COMDAT
+
+; 59   : 	int				DeleteCount() const		{return deleteCount;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 44	 mov	 eax, DWORD PTR [eax+68]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?DeleteCount@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::DeleteCount
+_TEXT	ENDS
+;	COMDAT ?EraseCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?EraseCount@SOL_Plane@@QBEHXZ PROC NEAR			; SOL_Plane::EraseCount, COMDAT
+
+; 60   : 	int				EraseCount() const		{return eraseCount;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 48	 mov	 eax, DWORD PTR [eax+72]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?EraseCount@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::EraseCount
+_TEXT	ENDS
+;	COMDAT ?Priority@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Priority@SOL_Plane@@QBEHXZ PROC NEAR			; SOL_Plane::Priority, COMDAT
+
+; 67   : 	int				Priority() const			{return priority;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 24	 mov	 eax, DWORD PTR [eax+36]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?Priority@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::Priority
+_TEXT	ENDS
+;	COMDAT ?PriorityCount@SOL_Plane@@QAEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?PriorityCount@SOL_Plane@@QAEHXZ PROC NEAR		; SOL_Plane::PriorityCount, COMDAT
+
+; 68   : 	int				PriorityCount() 			{return priorityCount;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 74	 mov	 eax, DWORD PTR [eax+116]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?PriorityCount@SOL_Plane@@QAEHXZ ENDP			; SOL_Plane::PriorityCount
+_TEXT	ENDS
+;	COMDAT ?RedrawAllCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?RedrawAllCount@SOL_Plane@@QBEHXZ PROC NEAR		; SOL_Plane::RedrawAllCount, COMDAT
+
+; 69   : 	int				RedrawAllCount() const	{return redrawAllCount;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 78	 mov	 eax, DWORD PTR [eax+120]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?RedrawAllCount@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::RedrawAllCount
+_TEXT	ENDS
+;	COMDAT ?UpdateCount@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?UpdateCount@SOL_Plane@@QBEHXZ PROC NEAR		; SOL_Plane::UpdateCount, COMDAT
+
+; 72   : 	int				UpdateCount() const		{return updateCount;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 80 c0 9c 00
+	00		 mov	 eax, DWORD PTR [eax+40128]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+?UpdateCount@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::UpdateCount
+_TEXT	ENDS
+;	COMDAT ?IsTransparent@SOL_Plane@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsTransparent@SOL_Plane@@QBEHXZ PROC NEAR		; SOL_Plane::IsTransparent, COMDAT
+
+; 73   : 	Bool				IsTransparent() const	{return (type == transparentPlane);}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	33 c9		 xor	 ecx, ecx
+  0000c	83 78 04 02	 cmp	 DWORD PTR [eax+4], 2
+  00010	0f 94 c1	 sete	 cl
+  00013	8b c1		 mov	 eax, ecx
+  00015	8b e5		 mov	 esp, ebp
+  00017	5d		 pop	 ebp
+  00018	c3		 ret	 0
+?IsTransparent@SOL_Plane@@QBEHXZ ENDP			; SOL_Plane::IsTransparent
+_TEXT	ENDS
+;	COMDAT ?DecAddCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DecAddCount@SOL_Plane@@QAEXXZ PROC NEAR		; SOL_Plane::DecAddCount, COMDAT
+
+; 89   : 	void				DecAddCount()				{addCount--;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 48 30	 mov	 ecx, DWORD PTR [eax+48]
+  0000d	83 e9 01	 sub	 ecx, 1
+  00010	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00013	89 4a 30	 mov	 DWORD PTR [edx+48], ecx
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c3		 ret	 0
+?DecAddCount@SOL_Plane@@QAEXXZ ENDP			; SOL_Plane::DecAddCount
+_TEXT	ENDS
+;	COMDAT ?DecDeleteCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DecDeleteCount@SOL_Plane@@QAEXXZ PROC NEAR		; SOL_Plane::DecDeleteCount, COMDAT
+
+; 90   : 	void				DecDeleteCount() 			{deleteCount--;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 48 44	 mov	 ecx, DWORD PTR [eax+68]
+  0000d	83 e9 01	 sub	 ecx, 1
+  00010	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00013	89 4a 44	 mov	 DWORD PTR [edx+68], ecx
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c3		 ret	 0
+?DecDeleteCount@SOL_Plane@@QAEXXZ ENDP			; SOL_Plane::DecDeleteCount
+_TEXT	ENDS
+;	COMDAT ?DecEraseCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DecEraseCount@SOL_Plane@@QAEXXZ PROC NEAR		; SOL_Plane::DecEraseCount, COMDAT
+
+; 91   : 	void				DecEraseCount()			{eraseCount--;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 48 48	 mov	 ecx, DWORD PTR [eax+72]
+  0000d	83 e9 01	 sub	 ecx, 1
+  00010	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00013	89 4a 48	 mov	 DWORD PTR [edx+72], ecx
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c3		 ret	 0
+?DecEraseCount@SOL_Plane@@QAEXXZ ENDP			; SOL_Plane::DecEraseCount
+_TEXT	ENDS
+;	COMDAT ?DecPriorityCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DecPriorityCount@SOL_Plane@@QAEXXZ PROC NEAR		; SOL_Plane::DecPriorityCount, COMDAT
+
+; 92   : 	void				DecPriorityCount()		{priorityCount--;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 48 74	 mov	 ecx, DWORD PTR [eax+116]
+  0000d	83 e9 01	 sub	 ecx, 1
+  00010	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00013	89 4a 74	 mov	 DWORD PTR [edx+116], ecx
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c3		 ret	 0
+?DecPriorityCount@SOL_Plane@@QAEXXZ ENDP		; SOL_Plane::DecPriorityCount
+_TEXT	ENDS
+;	COMDAT ?DecUpdateCount@SOL_Plane@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DecUpdateCount@SOL_Plane@@QAEXXZ PROC NEAR		; SOL_Plane::DecUpdateCount, COMDAT
+
+; 93   : 	void				DecUpdateCount()			{updateCount--;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 88 c0 9c 00
+	00		 mov	 ecx, DWORD PTR [eax+40128]
+  00010	83 e9 01	 sub	 ecx, 1
+  00013	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00016	89 8a c0 9c 00
+	00		 mov	 DWORD PTR [edx+40128], ecx
+  0001c	8b e5		 mov	 esp, ebp
+  0001e	5d		 pop	 ebp
+  0001f	c3		 ret	 0
+?DecUpdateCount@SOL_Plane@@QAEXXZ ENDP			; SOL_Plane::DecUpdateCount
+_TEXT	ENDS
+;	COMDAT ?Pointer@PlaneList@@QAEPAVSOL_Plane@@H@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+?Pointer@PlaneList@@QAEPAVSOL_Plane@@H@Z PROC NEAR	; PlaneList::Pointer, COMDAT
+
+; 30   : 	SOL_Plane* Pointer(int index)						{return planeArray[index];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 04 81	 mov	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+?Pointer@PlaneList@@QAEPAVSOL_Plane@@H@Z ENDP		; PlaneList::Pointer
+_TEXT	ENDS
+;	COMDAT ?Length@RectList@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Length@RectList@@QBEHXZ PROC NEAR			; RectList::Length, COMDAT
+
+; 45   : 	int	Length() const									{return length;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 80 a0 0f 00
+	00		 mov	 eax, DWORD PTR [eax+4000]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+?Length@RectList@@QBEHXZ ENDP				; RectList::Length
+_TEXT	ENDS
+;	COMDAT ??ARectList@@QAEAAVSOL_Rect@@H@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??ARectList@@QAEAAVSOL_Rect@@H@Z PROC NEAR		; RectList::operator[], COMDAT
+
+; 48   : 	SOL_Rect&	operator[](int index)				{return *rectArray[index];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 04 81	 mov	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??ARectList@@QAEAAVSOL_Rect@@H@Z ENDP			; RectList::operator[]
+_TEXT	ENDS
+;	COMDAT ?Planes@Screen@@QAEAAVPlaneList@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?Planes@Screen@@QAEAAVPlaneList@@XZ PROC NEAR		; Screen::Planes, COMDAT
+
+; 37   : 	PlaneList& Planes() 						{return planes;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b e5		 mov	 esp, ebp
+  0000c	5d		 pop	 ebp
+  0000d	c3		 ret	 0
+?Planes@Screen@@QAEAAVPlaneList@@XZ ENDP		; Screen::Planes
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT
+___t$ = 8
+___s$ = 12
+___n$ = 16
+___f$ = 20
+??_H@YGXPAXIHP6EX0@Z@Z PROC NEAR			; `vector constructor iterator', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+$L58188:
+  00003	8b 45 10	 mov	 eax, DWORD PTR ___n$[ebp]
+  00006	83 e8 01	 sub	 eax, 1
+  00009	89 45 10	 mov	 DWORD PTR ___n$[ebp], eax
+  0000c	83 7d 10 00	 cmp	 DWORD PTR ___n$[ebp], 0
+  00010	7c 11		 jl	 SHORT $L58189
+  00012	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  00015	ff 55 14	 call	 DWORD PTR ___f$[ebp]
+  00018	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  0001b	03 4d 0c	 add	 ecx, DWORD PTR ___s$[ebp]
+  0001e	89 4d 08	 mov	 DWORD PTR ___t$[ebp], ecx
+  00021	eb e0		 jmp	 SHORT $L58188
+$L58189:
+  00023	5d		 pop	 ebp
+  00024	c2 10 00	 ret	 16			; 00000010H
+??_H@YGXPAXIHP6EX0@Z@Z ENDP				; `vector constructor iterator'
+_TEXT	ENDS
+;	COMDAT ??_GRectList@@QAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GRectList@@QAEPAXI@Z PROC NEAR			; RectList::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1RectList@@QAE@XZ	; RectList::~RectList
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L58193
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L58193:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GRectList@@QAEPAXI@Z ENDP				; RectList::`scalar deleting destructor'
+_TEXT	ENDS
+EXTRN	??1DrawList@@QAE@XZ:NEAR			; DrawList::~DrawList
+;	COMDAT ??_GDrawList@@QAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GDrawList@@QAEPAXI@Z PROC NEAR			; DrawList::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1DrawList@@QAE@XZ	; DrawList::~DrawList
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L58196
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L58196:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GDrawList@@QAEPAXI@Z ENDP				; DrawList::`scalar deleting destructor'
+_TEXT	ENDS
+PUBLIC	?RemapMarkRedraw@Screen@@QAEXXZ			; Screen::RemapMarkRedraw
+EXTRN	?RemapMarkRedraw@SOL_Plane@@QAEXXZ:NEAR		; SOL_Plane::RemapMarkRedraw
+_TEXT	SEGMENT
+_this$ = -12
+_nPlanes$ = -8
+_i$ = -4
+?RemapMarkRedraw@Screen@@QAEXXZ PROC NEAR		; Screen::RemapMarkRedraw
+
+; 545  : {
+
+  01570	55		 push	 ebp
+  01571	8b ec		 mov	 ebp, esp
+  01573	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  01576	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 546  : 	int nPlanes = planes.Length();
+
+  01579	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0157c	e8 00 00 00 00	 call	 ?Length@PlaneList@@QBEHXZ ; PlaneList::Length
+  01581	89 45 f8	 mov	 DWORD PTR _nPlanes$[ebp], eax
+
+; 547  : 	for(int i = 0; i < nPlanes; ++i) {
+
+  01584	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  0158b	eb 09		 jmp	 SHORT $L58202
+$L58203:
+  0158d	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  01590	83 c0 01	 add	 eax, 1
+  01593	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L58202:
+  01596	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  01599	3b 4d f8	 cmp	 ecx, DWORD PTR _nPlanes$[ebp]
+  0159c	7d 15		 jge	 SHORT $L58204
+
+; 548  : 		planes[i].RemapMarkRedraw();
+
+  0159e	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  015a1	52		 push	 edx
+  015a2	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  015a5	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  015aa	8b c8		 mov	 ecx, eax
+  015ac	e8 00 00 00 00	 call	 ?RemapMarkRedraw@SOL_Plane@@QAEXXZ ; SOL_Plane::RemapMarkRedraw
+
+; 549  :    }
+
+  015b1	eb da		 jmp	 SHORT $L58203
+$L58204:
+
+; 550  : }
+
+  015b3	8b e5		 mov	 esp, ebp
+  015b5	5d		 pop	 ebp
+  015b6	c3		 ret	 0
+?RemapMarkRedraw@Screen@@QAEXXZ ENDP			; Screen::RemapMarkRedraw
+_TEXT	ENDS
+PUBLIC	?GetScreenItem@Screen@@QAEPAVScreenItem@@HJ@Z	; Screen::GetScreenItem
+PUBLIC	??AScreenItemList@@QAEAAVScreenItem@@H@Z	; ScreenItemList::operator[]
+PUBLIC	?SIList@SOL_Plane@@QAEAAVScreenItemList@@XZ	; SOL_Plane::SIList
+EXTRN	?Search@ScreenItemList@@QBEHJ@Z:NEAR		; ScreenItemList::Search
+_TEXT	SEGMENT
+_planeId$ = 8
+_siId$ = 12
+_this$ = -12
+_index$ = -8
+_siList$ = -4
+?GetScreenItem@Screen@@QAEPAVScreenItem@@HJ@Z PROC NEAR	; Screen::GetScreenItem
+
+; 554  : {
+
+  015b7	55		 push	 ebp
+  015b8	8b ec		 mov	 ebp, esp
+  015ba	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  015bd	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 555  : 	int index = planes.Search(planeId);
+
+  015c0	8b 45 08	 mov	 eax, DWORD PTR _planeId$[ebp]
+  015c3	50		 push	 eax
+  015c4	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  015c7	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  015cc	89 45 f8	 mov	 DWORD PTR _index$[ebp], eax
+
+; 556  : 	if (index == -1)
+
+  015cf	83 7d f8 ff	 cmp	 DWORD PTR _index$[ebp], -1
+  015d3	75 04		 jne	 SHORT $L58211
+
+; 557  : 		return NULL;
+
+  015d5	33 c0		 xor	 eax, eax
+  015d7	eb 3b		 jmp	 SHORT $L58209
+$L58211:
+
+; 558  : 
+; 559  : 	ScreenItemList& siList = planes[index].SIList();
+
+  015d9	8b 4d f8	 mov	 ecx, DWORD PTR _index$[ebp]
+  015dc	51		 push	 ecx
+  015dd	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  015e0	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+  015e5	8b c8		 mov	 ecx, eax
+  015e7	e8 00 00 00 00	 call	 ?SIList@SOL_Plane@@QAEAAVScreenItemList@@XZ ; SOL_Plane::SIList
+  015ec	89 45 fc	 mov	 DWORD PTR _siList$[ebp], eax
+
+; 560  : 	index = siList.Search(siId);
+
+  015ef	8b 55 0c	 mov	 edx, DWORD PTR _siId$[ebp]
+  015f2	52		 push	 edx
+  015f3	8b 4d fc	 mov	 ecx, DWORD PTR _siList$[ebp]
+  015f6	e8 00 00 00 00	 call	 ?Search@ScreenItemList@@QBEHJ@Z ; ScreenItemList::Search
+  015fb	89 45 f8	 mov	 DWORD PTR _index$[ebp], eax
+
+; 561  : 	if (index == -1)
+
+  015fe	83 7d f8 ff	 cmp	 DWORD PTR _index$[ebp], -1
+  01602	75 04		 jne	 SHORT $L58213
+
+; 562  : 		return NULL;
+
+  01604	33 c0		 xor	 eax, eax
+  01606	eb 0c		 jmp	 SHORT $L58209
+$L58213:
+
+; 563  : 	return &siList[index];
+
+  01608	8b 45 f8	 mov	 eax, DWORD PTR _index$[ebp]
+  0160b	50		 push	 eax
+  0160c	8b 4d fc	 mov	 ecx, DWORD PTR _siList$[ebp]
+  0160f	e8 00 00 00 00	 call	 ??AScreenItemList@@QAEAAVScreenItem@@H@Z ; ScreenItemList::operator[]
+$L58209:
+
+; 564  : }
+
+  01614	8b e5		 mov	 esp, ebp
+  01616	5d		 pop	 ebp
+  01617	c2 08 00	 ret	 8
+?GetScreenItem@Screen@@QAEPAVScreenItem@@HJ@Z ENDP	; Screen::GetScreenItem
+_TEXT	ENDS
+;	COMDAT ??AScreenItemList@@QAEAAVScreenItem@@H@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??AScreenItemList@@QAEAAVScreenItem@@H@Z PROC NEAR	; ScreenItemList::operator[], COMDAT
+
+; 27   : 	ScreenItem& operator[](int index) 		{return *siArray[index];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 04 81	 mov	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??AScreenItemList@@QAEAAVScreenItem@@H@Z ENDP		; ScreenItemList::operator[]
+_TEXT	ENDS
+;	COMDAT ?SIList@SOL_Plane@@QAEAAVScreenItemList@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?SIList@SOL_Plane@@QAEAAVScreenItemList@@XZ PROC NEAR	; SOL_Plane::SIList, COMDAT
+
+; 125  : 						SIList()						{return siArray;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	83 c0 7c	 add	 eax, 124		; 0000007cH
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?SIList@SOL_Plane@@QAEAAVScreenItemList@@XZ ENDP	; SOL_Plane::SIList
+_TEXT	ENDS
+PUBLIC	?GetPlane@Screen@@QAEPAVSOL_Plane@@H@Z		; Screen::GetPlane
+_TEXT	SEGMENT
+_planeId$ = 8
+_this$ = -8
+_index$ = -4
+?GetPlane@Screen@@QAEPAVSOL_Plane@@H@Z PROC NEAR	; Screen::GetPlane
+
+; 568  : {
+
+  0161a	55		 push	 ebp
+  0161b	8b ec		 mov	 ebp, esp
+  0161d	83 ec 08	 sub	 esp, 8
+  01620	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 569  : 	int index = planes.Search(planeId);
+
+  01623	8b 45 08	 mov	 eax, DWORD PTR _planeId$[ebp]
+  01626	50		 push	 eax
+  01627	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0162a	e8 00 00 00 00	 call	 ?Search@PlaneList@@QBEHI@Z ; PlaneList::Search
+  0162f	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 570  : 	if (index == -1)
+
+  01632	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  01636	75 04		 jne	 SHORT $L58219
+
+; 571  : 		return NULL;
+
+  01638	33 c0		 xor	 eax, eax
+  0163a	eb 0c		 jmp	 SHORT $L58217
+$L58219:
+
+; 572  : 	return &planes[index];
+
+  0163c	8b 4d fc	 mov	 ecx, DWORD PTR _index$[ebp]
+  0163f	51		 push	 ecx
+  01640	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  01643	e8 00 00 00 00	 call	 ??APlaneList@@QAEAAVSOL_Plane@@H@Z ; PlaneList::operator[]
+$L58217:
+
+; 573  : }
+
+  01648	8b e5		 mov	 esp, ebp
+  0164a	5d		 pop	 ebp
+  0164b	c2 04 00	 ret	 4
+?GetPlane@Screen@@QAEPAVSOL_Plane@@H@Z ENDP		; Screen::GetPlane
+_TEXT	ENDS
+END

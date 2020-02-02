@@ -1,0 +1,4993 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Remap.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??9Rgb24@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Lum@Rgb24@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Dist@Rgb24@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??ASOLPalette@@QBEABVRgb24F@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SingleRemap@Remap@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@SingleRemap@Remap@@QBE?AW4RemapType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?InRange@Remap@@IAEHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GRemap@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSingleRemap@Remap@@QAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?sqr@@YAHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7PaletteMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Remap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?REMAP_START_COLOR@@3HA				; REMAP_START_COLOR
+PUBLIC	?REMAP_END_COLOR@@3HA				; REMAP_END_COLOR
+PUBLIC	?START_COLOR@@3HA				; START_COLOR
+PUBLIC	?END_COLOR@@3HA					; END_COLOR
+PUBLIC	?remapColor@Remap@@2PAY0BAA@EA			; Remap::remapColor
+PUBLIC	?remapDepth@Remap@@2PAIA			; Remap::remapDepth
+PUBLIC	?remapOn@Remap@@2PAEA				; Remap::remapOn
+PUBLIC	?remapCount@Remap@@2IA				; Remap::remapCount
+PUBLIC	?remapDepthOn@Remap@@2IA			; Remap::remapDepthOn
+PUBLIC	?updateFlag@Remap@@2HA				; Remap::updateFlag
+PUBLIC	?forbiddenStart@Remap@@2HA			; Remap::forbiddenStart
+PUBLIC	?forbiddenCount@Remap@@2HA			; Remap::forbiddenCount
+_BSS	SEGMENT
+?START_COLOR@@3HA DD 01H DUP (?)			; START_COLOR
+?remapColor@Remap@@2PAY0BAA@EA DB 0900H DUP (?)		; Remap::remapColor
+?remapDepth@Remap@@2PAIA DD 09H DUP (?)			; Remap::remapDepth
+?remapOn@Remap@@2PAEA DB 0100H DUP (?)			; Remap::remapOn
+?remapCount@Remap@@2IA DD 01H DUP (?)			; Remap::remapCount
+?remapDepthOn@Remap@@2IA DD 01H DUP (?)			; Remap::remapDepthOn
+?updateFlag@Remap@@2HA DD 01H DUP (?)			; Remap::updateFlag
+?forbiddenStart@Remap@@2HA DD 01H DUP (?)		; Remap::forbiddenStart
+?forbiddenCount@Remap@@2HA DD 01H DUP (?)		; Remap::forbiddenCount
+_?inited@?1???0Remap@@QAE@XZ@4HA DD 01H DUP (?)
+_BSS	ENDS
+_DATA	SEGMENT
+?REMAP_END_COLOR@@3HA DD 0f4H				; REMAP_END_COLOR
+?REMAP_START_COLOR@@3HA DD 0ecH				; REMAP_START_COLOR
+?END_COLOR@@3HA DD 0ebH					; END_COLOR
+_DATA	ENDS
+PUBLIC	??0Remap@@QAE@XZ				; Remap::Remap
+PUBLIC	??_7Remap@@6B@					; Remap::`vftable'
+PUBLIC	??_GRemap@@UAEPAXI@Z				; Remap::`scalar deleting destructor'
+PUBLIC	??_ERemap@@UAEPAXI@Z				; Remap::`vector deleting destructor'
+EXTRN	?AddPalShift@@YAHH@Z:NEAR			; AddPalShift
+;	COMDAT ??_7Remap@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Remap.cpp
+CONST	SEGMENT
+??_7Remap@@6B@ DD FLAT:??_ERemap@@UAEPAXI@Z		; Remap::`vftable'
+CONST	ENDS
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+??0Remap@@QAE@XZ PROC NEAR				; Remap::Remap
+
+; 32   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7Remap@@6B@ ; Remap::`vftable'
+
+; 33   : 	static Bool inited = False;
+; 34   : 	int i;
+; 35   : 	if (!inited)  {
+
+  00012	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR _?inited@?1???0Remap@@QAE@XZ@4HA, 0
+  00019	75 59		 jne	 SHORT $L58034
+
+; 36   : 		REMAP_START_COLOR = AddPalShift(REMAP_START_COLOR);
+
+  0001b	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?REMAP_START_COLOR@@3HA ; REMAP_START_COLOR
+  00021	51		 push	 ecx
+  00022	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  00027	83 c4 04	 add	 esp, 4
+  0002a	a3 00 00 00 00	 mov	 DWORD PTR ?REMAP_START_COLOR@@3HA, eax ; REMAP_START_COLOR
+
+; 37   : 		REMAP_END_COLOR = AddPalShift(REMAP_END_COLOR);
+
+  0002f	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  00035	52		 push	 edx
+  00036	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  0003b	83 c4 04	 add	 esp, 4
+  0003e	a3 00 00 00 00	 mov	 DWORD PTR ?REMAP_END_COLOR@@3HA, eax ; REMAP_END_COLOR
+
+; 38   : 		START_COLOR = AddPalShift(START_COLOR);
+
+  00043	a1 00 00 00 00	 mov	 eax, DWORD PTR ?START_COLOR@@3HA ; START_COLOR
+  00048	50		 push	 eax
+  00049	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  0004e	83 c4 04	 add	 esp, 4
+  00051	a3 00 00 00 00	 mov	 DWORD PTR ?START_COLOR@@3HA, eax ; START_COLOR
+
+; 39   : 		END_COLOR = AddPalShift(END_COLOR);
+
+  00056	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?END_COLOR@@3HA ; END_COLOR
+  0005c	51		 push	 ecx
+  0005d	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  00062	83 c4 04	 add	 esp, 4
+  00065	a3 00 00 00 00	 mov	 DWORD PTR ?END_COLOR@@3HA, eax ; END_COLOR
+
+; 40   : 		inited = True;
+
+  0006a	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _?inited@?1???0Remap@@QAE@XZ@4HA, 1
+$L58034:
+
+; 42   : 
+; 43   : 	remapCount = 0;
+
+  00074	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?remapCount@Remap@@2IA, 0 ; Remap::remapCount
+
+; 44   : 	remapDepthOn = 0;
+
+  0007e	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, 0 ; Remap::remapDepthOn
+
+; 45   : 	forbiddenCount = 0;
+
+  00088	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?forbiddenCount@Remap@@2HA, 0 ; Remap::forbiddenCount
+
+; 46   : 	forbiddenStart = 0;
+
+  00092	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?forbiddenStart@Remap@@2HA, 0 ; Remap::forbiddenStart
+
+; 47   : 	updateFlag = False;
+
+  0009c	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 0 ; Remap::updateFlag
+
+; 48   : 	for (i = 0; i < REMAP_COLOR_RANGE; i++)
+
+  000a6	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  000ad	eb 09		 jmp	 SHORT $L58035
+$L58036:
+  000af	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  000b2	83 c2 01	 add	 edx, 1
+  000b5	89 55 fc	 mov	 DWORD PTR _i$[ebp], edx
+$L58035:
+  000b8	83 7d fc 09	 cmp	 DWORD PTR _i$[ebp], 9
+  000bc	7d 10		 jge	 SHORT $L58037
+
+; 49   : 		singleRemap[i] = NULL;
+
+  000be	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  000c1	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000c4	c7 44 81 04 00
+	00 00 00	 mov	 DWORD PTR [ecx+eax*4+4], 0
+  000cc	eb e1		 jmp	 SHORT $L58036
+$L58037:
+
+; 50   : 
+; 51   : 	for (i = 0; i < 256; i++)
+
+  000ce	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  000d5	eb 09		 jmp	 SHORT $L58038
+$L58039:
+  000d7	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  000da	83 c2 01	 add	 edx, 1
+  000dd	89 55 fc	 mov	 DWORD PTR _i$[ebp], edx
+$L58038:
+  000e0	81 7d fc 00 01
+	00 00		 cmp	 DWORD PTR _i$[ebp], 256	; 00000100H
+  000e7	7d 0c		 jge	 SHORT $L58040
+
+; 52   : 		remapOn[i] = False;
+
+  000e9	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  000ec	c6 80 00 00 00
+	00 00		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[eax], 0
+  000f3	eb e2		 jmp	 SHORT $L58039
+$L58040:
+
+; 53   : } 
+
+  000f5	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  000f8	8b e5		 mov	 esp, ebp
+  000fa	5d		 pop	 ebp
+  000fb	c3		 ret	 0
+??0Remap@@QAE@XZ ENDP					; Remap::Remap
+_TEXT	ENDS
+PUBLIC	??1Remap@@UAE@XZ				; Remap::~Remap
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+;	COMDAT ??_GRemap@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GRemap@@UAEPAXI@Z PROC NEAR				; Remap::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1Remap@@UAE@XZ	; Remap::~Remap
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L58044
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L58044:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GRemap@@UAEPAXI@Z ENDP				; Remap::`scalar deleting destructor'
+_TEXT	ENDS
+PUBLIC	??_GSingleRemap@Remap@@QAEPAXI@Z		; Remap::SingleRemap::`scalar deleting destructor'
+_TEXT	SEGMENT
+$T58779 = -8
+$T58780 = -12
+_this$ = -16
+_i$ = -4
+??1Remap@@UAE@XZ PROC NEAR				; Remap::~Remap
+
+; 56   : {   
+
+  000fc	55		 push	 ebp
+  000fd	8b ec		 mov	 ebp, esp
+  000ff	83 ec 14	 sub	 esp, 20			; 00000014H
+  00102	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+  00105	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00108	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7Remap@@6B@ ; Remap::`vftable'
+
+; 57   : 	for (int i = 0; i < REMAP_COLOR_RANGE; i++)
+
+  0010e	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00115	eb 09		 jmp	 SHORT $L58049
+$L58050:
+  00117	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0011a	83 c1 01	 add	 ecx, 1
+  0011d	89 4d fc	 mov	 DWORD PTR _i$[ebp], ecx
+$L58049:
+  00120	83 7d fc 09	 cmp	 DWORD PTR _i$[ebp], 9
+  00124	7d 31		 jge	 SHORT $L58051
+
+; 58   : 		delete singleRemap[i];
+
+  00126	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00129	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  0012c	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  00130	89 4d f4	 mov	 DWORD PTR $T58780[ebp], ecx
+  00133	8b 55 f4	 mov	 edx, DWORD PTR $T58780[ebp]
+  00136	89 55 f8	 mov	 DWORD PTR $T58779[ebp], edx
+  00139	83 7d f8 00	 cmp	 DWORD PTR $T58779[ebp], 0
+  0013d	74 0f		 je	 SHORT $L58781
+  0013f	6a 01		 push	 1
+  00141	8b 4d f8	 mov	 ecx, DWORD PTR $T58779[ebp]
+  00144	e8 00 00 00 00	 call	 ??_GSingleRemap@Remap@@QAEPAXI@Z ; Remap::SingleRemap::`scalar deleting destructor'
+  00149	89 45 ec	 mov	 DWORD PTR -20+[ebp], eax
+  0014c	eb 07		 jmp	 SHORT $L58782
+$L58781:
+  0014e	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR -20+[ebp], 0
+$L58782:
+  00155	eb c0		 jmp	 SHORT $L58050
+$L58051:
+
+; 59   : }
+
+  00157	8b e5		 mov	 esp, ebp
+  00159	5d		 pop	 ebp
+  0015a	c3		 ret	 0
+??1Remap@@UAE@XZ ENDP					; Remap::~Remap
+_TEXT	ENDS
+PUBLIC	??1SingleRemap@Remap@@QAE@XZ			; Remap::SingleRemap::~SingleRemap
+;	COMDAT ??_GSingleRemap@Remap@@QAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GSingleRemap@Remap@@QAEPAXI@Z PROC NEAR		; Remap::SingleRemap::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1SingleRemap@Remap@@QAE@XZ ; Remap::SingleRemap::~SingleRemap
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L58057
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L58057:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GSingleRemap@Remap@@QAEPAXI@Z ENDP			; Remap::SingleRemap::`scalar deleting destructor'
+_TEXT	ENDS
+;	COMDAT ??1SingleRemap@Remap@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1SingleRemap@Remap@@QAE@XZ PROC NEAR			; Remap::SingleRemap::~SingleRemap, COMDAT
+
+; 57   : 		~SingleRemap() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c3		 ret	 0
+??1SingleRemap@Remap@@QAE@XZ ENDP			; Remap::SingleRemap::~SingleRemap
+_TEXT	ENDS
+PUBLIC	?RemapOff@Remap@@QAEXH@Z			; Remap::RemapOff
+PUBLIC	?Type@SingleRemap@Remap@@QBE?AW4RemapType@@XZ	; Remap::SingleRemap::Type
+PUBLIC	?InRange@Remap@@IAEHH@Z				; Remap::InRange
+EXTRN	?Fatal@MsgMgr@@QAAXDPADH0ZZ:NEAR		; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+_DATA	SEGMENT
+$SG58077 DB	'Remap Should not be off', 00H
+$SG58078 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Remap.'
+	DB	'cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+$T58786 = -16
+$T58787 = -20
+$T58790 = -24
+$T58791 = -28
+_color$ = 8
+_this$ = -32
+_i$58064 = -12
+_index$ = -8
+?RemapOff@Remap@@QAEXH@Z PROC NEAR			; Remap::RemapOff
+
+; 63   : {
+
+  0015b	55		 push	 ebp
+  0015c	8b ec		 mov	 ebp, esp
+  0015e	83 ec 28	 sub	 esp, 40			; 00000028H
+  00161	89 4d e0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 64   : 	int i;
+; 65   :    if (!color) {
+
+  00164	83 7d 08 00	 cmp	 DWORD PTR _color$[ebp], 0
+  00168	0f 85 a1 00 00
+	00		 jne	 $L58063
+
+; 66   : 	   for (int i = 0; i < REMAP_COLOR_RANGE; i++) {
+
+  0016e	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _i$58064[ebp], 0
+  00175	eb 09		 jmp	 SHORT $L58065
+$L58066:
+  00177	8b 45 f4	 mov	 eax, DWORD PTR _i$58064[ebp]
+  0017a	83 c0 01	 add	 eax, 1
+  0017d	89 45 f4	 mov	 DWORD PTR _i$58064[ebp], eax
+$L58065:
+  00180	83 7d f4 09	 cmp	 DWORD PTR _i$58064[ebp], 9
+  00184	7d 3f		 jge	 SHORT $L58067
+
+; 67   : 			delete singleRemap[i];
+
+  00186	8b 4d f4	 mov	 ecx, DWORD PTR _i$58064[ebp]
+  00189	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  0018c	8b 44 8a 04	 mov	 eax, DWORD PTR [edx+ecx*4+4]
+  00190	89 45 ec	 mov	 DWORD PTR $T58787[ebp], eax
+  00193	8b 4d ec	 mov	 ecx, DWORD PTR $T58787[ebp]
+  00196	89 4d f0	 mov	 DWORD PTR $T58786[ebp], ecx
+  00199	83 7d f0 00	 cmp	 DWORD PTR $T58786[ebp], 0
+  0019d	74 0f		 je	 SHORT $L58788
+  0019f	6a 01		 push	 1
+  001a1	8b 4d f0	 mov	 ecx, DWORD PTR $T58786[ebp]
+  001a4	e8 00 00 00 00	 call	 ??_GSingleRemap@Remap@@QAEPAXI@Z ; Remap::SingleRemap::`scalar deleting destructor'
+  001a9	89 45 dc	 mov	 DWORD PTR -36+[ebp], eax
+  001ac	eb 07		 jmp	 SHORT $L58789
+$L58788:
+  001ae	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR -36+[ebp], 0
+$L58789:
+
+; 68   : 			singleRemap[i] = NULL;
+
+  001b5	8b 55 f4	 mov	 edx, DWORD PTR _i$58064[ebp]
+  001b8	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  001bb	c7 44 90 04 00
+	00 00 00	 mov	 DWORD PTR [eax+edx*4+4], 0
+
+; 69   : 	   }
+
+  001c3	eb b2		 jmp	 SHORT $L58066
+$L58067:
+
+; 70   : 
+; 71   : 		for (i = 0; i < 256; i++)
+
+  001c5	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _i$58064[ebp], 0
+  001cc	eb 09		 jmp	 SHORT $L58070
+$L58071:
+  001ce	8b 4d f4	 mov	 ecx, DWORD PTR _i$58064[ebp]
+  001d1	83 c1 01	 add	 ecx, 1
+  001d4	89 4d f4	 mov	 DWORD PTR _i$58064[ebp], ecx
+$L58070:
+  001d7	81 7d f4 00 01
+	00 00		 cmp	 DWORD PTR _i$58064[ebp], 256 ; 00000100H
+  001de	7d 0c		 jge	 SHORT $L58072
+
+; 72   : 			remapOn[i] = False;
+
+  001e0	8b 55 f4	 mov	 edx, DWORD PTR _i$58064[ebp]
+  001e3	c6 82 00 00 00
+	00 00		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[edx], 0
+  001ea	eb e2		 jmp	 SHORT $L58071
+$L58072:
+
+; 73   : 
+; 74   :       remapCount = 0;
+
+  001ec	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?remapCount@Remap@@2IA, 0 ; Remap::remapCount
+
+; 75   : 		remapDepthOn = 0; 
+
+  001f6	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, 0 ; Remap::remapDepthOn
+
+; 76   : 		updateFlag = True;
+
+  00200	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 1 ; Remap::updateFlag
+
+; 77   :       return;
+
+  0020a	e9 ee 00 00 00	 jmp	 $L58061
+$L58063:
+
+; 79   : 
+; 80   : 	//  If not in range or already off, return
+; 81   : 	color = AddPalShift(color);
+
+  0020f	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  00212	50		 push	 eax
+  00213	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  00218	83 c4 04	 add	 esp, 4
+  0021b	89 45 08	 mov	 DWORD PTR _color$[ebp], eax
+
+; 82   : 	if (!InRange(color))
+
+  0021e	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  00221	51		 push	 ecx
+  00222	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00225	e8 00 00 00 00	 call	 ?InRange@Remap@@IAEHH@Z	; Remap::InRange
+  0022a	85 c0		 test	 eax, eax
+  0022c	75 05		 jne	 SHORT $L58073
+
+; 83   : 		return;
+
+  0022e	e9 ca 00 00 00	 jmp	 $L58061
+$L58073:
+
+; 84   : 	const int index = REMAP_END_COLOR - color;
+
+  00233	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  00239	2b 55 08	 sub	 edx, DWORD PTR _color$[ebp]
+  0023c	89 55 f8	 mov	 DWORD PTR _index$[ebp], edx
+
+; 85   : 	if (!singleRemap[index])
+
+  0023f	8b 45 f8	 mov	 eax, DWORD PTR _index$[ebp]
+  00242	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00245	83 7c 81 04 00	 cmp	 DWORD PTR [ecx+eax*4+4], 0
+  0024a	75 05		 jne	 SHORT $L58075
+
+; 86   : 		return;
+
+  0024c	e9 ac 00 00 00	 jmp	 $L58061
+$L58075:
+
+; 87   : 
+; 88   :    if (singleRemap[index]->Type() == REMAP_OFF)
+
+  00251	8b 55 f8	 mov	 edx, DWORD PTR _index$[ebp]
+  00254	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00257	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  0025b	e8 00 00 00 00	 call	 ?Type@SingleRemap@Remap@@QBE?AW4RemapType@@XZ ; Remap::SingleRemap::Type
+  00260	85 c0		 test	 eax, eax
+  00262	75 1d		 jne	 SHORT $L58076
+
+; 89   :       msgMgr->Fatal(SrcLoc, "Remap Should not be off");
+
+  00264	68 00 00 00 00	 push	 OFFSET FLAT:$SG58077
+  00269	6a 59		 push	 89			; 00000059H
+  0026b	68 00 00 00 00	 push	 OFFSET FLAT:$SG58078
+  00270	6a 61		 push	 97			; 00000061H
+  00272	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00278	51		 push	 ecx
+  00279	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADH0ZZ ; MsgMgr::Fatal
+  0027e	83 c4 14	 add	 esp, 20			; 00000014H
+$L58076:
+
+; 90   : 
+; 91   : 	//  Take down remapCount, remapDepth on if applicable
+; 92   : 	remapCount--;
+
+  00281	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?remapCount@Remap@@2IA ; Remap::remapCount
+  00287	83 ea 01	 sub	 edx, 1
+  0028a	89 15 00 00 00
+	00		 mov	 DWORD PTR ?remapCount@Remap@@2IA, edx ; Remap::remapCount
+
+; 93   : 	remapOn[color] = False;
+
+  00290	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  00293	c6 80 00 00 00
+	00 00		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[eax], 0
+
+; 94   : 	if (remapDepth[index])
+
+  0029a	8b 4d f8	 mov	 ecx, DWORD PTR _index$[ebp]
+  0029d	83 3c 8d 00 00
+	00 00 00	 cmp	 DWORD PTR ?remapDepth@Remap@@2PAIA[ecx*4], 0
+  002a5	74 0f		 je	 SHORT $L58079
+
+; 95   : 		remapDepthOn--;
+
+  002a7	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  002ad	83 ea 01	 sub	 edx, 1
+  002b0	89 15 00 00 00
+	00		 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, edx ; Remap::remapDepthOn
+$L58079:
+
+; 96   : 
+; 97   : 	delete singleRemap[index];
+
+  002b6	8b 45 f8	 mov	 eax, DWORD PTR _index$[ebp]
+  002b9	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002bc	8b 54 81 04	 mov	 edx, DWORD PTR [ecx+eax*4+4]
+  002c0	89 55 e4	 mov	 DWORD PTR $T58791[ebp], edx
+  002c3	8b 45 e4	 mov	 eax, DWORD PTR $T58791[ebp]
+  002c6	89 45 e8	 mov	 DWORD PTR $T58790[ebp], eax
+  002c9	83 7d e8 00	 cmp	 DWORD PTR $T58790[ebp], 0
+  002cd	74 0f		 je	 SHORT $L58792
+  002cf	6a 01		 push	 1
+  002d1	8b 4d e8	 mov	 ecx, DWORD PTR $T58790[ebp]
+  002d4	e8 00 00 00 00	 call	 ??_GSingleRemap@Remap@@QAEPAXI@Z ; Remap::SingleRemap::`scalar deleting destructor'
+  002d9	89 45 d8	 mov	 DWORD PTR -40+[ebp], eax
+  002dc	eb 07		 jmp	 SHORT $L58793
+$L58792:
+  002de	c7 45 d8 00 00
+	00 00		 mov	 DWORD PTR -40+[ebp], 0
+$L58793:
+
+; 98   : 	singleRemap[index] = NULL;
+
+  002e5	8b 4d f8	 mov	 ecx, DWORD PTR _index$[ebp]
+  002e8	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  002eb	c7 44 8a 04 00
+	00 00 00	 mov	 DWORD PTR [edx+ecx*4+4], 0
+
+; 99   : 	updateFlag = True;
+
+  002f3	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 1 ; Remap::updateFlag
+$L58061:
+
+; 100  : }
+
+  002fd	8b e5		 mov	 esp, ebp
+  002ff	5d		 pop	 ebp
+  00300	c2 04 00	 ret	 4
+?RemapOff@Remap@@QAEXH@Z ENDP				; Remap::RemapOff
+_TEXT	ENDS
+;	COMDAT ?Type@SingleRemap@Remap@@QBE?AW4RemapType@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?Type@SingleRemap@Remap@@QBE?AW4RemapType@@XZ PROC NEAR	; Remap::SingleRemap::Type, COMDAT
+
+; 64   : 		RemapType	Type() const		{return type;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 1c	 mov	 eax, DWORD PTR [eax+28]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?Type@SingleRemap@Remap@@QBE?AW4RemapType@@XZ ENDP	; Remap::SingleRemap::Type
+_TEXT	ENDS
+;	COMDAT ?InRange@Remap@@IAEHH@Z
+_TEXT	SEGMENT
+_color$ = 8
+_this$ = -4
+?InRange@Remap@@IAEHH@Z PROC NEAR			; Remap::InRange, COMDAT
+
+; 92   :    Bool	InRange(int color)	{return (REMAP_START_COLOR <= color && color <= REMAP_END_COLOR);}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	a1 00 00 00 00	 mov	 eax, DWORD PTR ?REMAP_START_COLOR@@3HA ; REMAP_START_COLOR
+  0000e	3b 45 08	 cmp	 eax, DWORD PTR _color$[ebp]
+  00011	7f 14		 jg	 SHORT $L58796
+  00013	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  00016	3b 0d 00 00 00
+	00		 cmp	 ecx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  0001c	7f 09		 jg	 SHORT $L58796
+  0001e	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+  00025	eb 07		 jmp	 SHORT $L58797
+$L58796:
+  00027	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+$L58797:
+  0002e	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+  00031	8b e5		 mov	 esp, ebp
+  00033	5d		 pop	 ebp
+  00034	c2 04 00	 ret	 4
+?InRange@Remap@@IAEHH@Z ENDP				; Remap::InRange
+_TEXT	ENDS
+PUBLIC	?RemapByRange@Remap@@QAEXHHHHH@Z		; Remap::RemapByRange
+PUBLIC	??0SingleRemap@Remap@@QAE@PAE@Z			; Remap::SingleRemap::SingleRemap
+EXTRN	??2@YAPAXI@Z:NEAR				; operator new
+EXTRN	__except_list:DWORD
+EXTRN	___CxxFrameHandler:NEAR
+xdata$x	SEGMENT
+$T58807	DD	019930520H
+	DD	01H
+	DD	FLAT:$T58810
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T58810	DD	0ffffffffH
+	DD	FLAT:$L58803
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T58799 = -20
+$T58800 = -24
+__$EHRec$ = -12
+_color$ = 8
+_start$ = 12
+_end$ = 16
+_delta$ = 20
+_depth$ = 24
+_this$ = -28
+_index$ = -16
+?RemapByRange@Remap@@QAEXHHHHH@Z PROC NEAR		; Remap::RemapByRange
+
+; 104  : {
+
+  00303	55		 push	 ebp
+  00304	8b ec		 mov	 ebp, esp
+  00306	6a ff		 push	 -1
+  00308	68 00 00 00 00	 push	 $L58808
+  0030d	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00313	50		 push	 eax
+  00314	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  0031b	83 ec 14	 sub	 esp, 20			; 00000014H
+  0031e	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 105  : 	color = AddPalShift(color);
+
+  00321	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  00324	50		 push	 eax
+  00325	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  0032a	83 c4 04	 add	 esp, 4
+  0032d	89 45 08	 mov	 DWORD PTR _color$[ebp], eax
+
+; 106  : 	start = AddPalShift(start);
+
+  00330	8b 4d 0c	 mov	 ecx, DWORD PTR _start$[ebp]
+  00333	51		 push	 ecx
+  00334	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  00339	83 c4 04	 add	 esp, 4
+  0033c	89 45 0c	 mov	 DWORD PTR _start$[ebp], eax
+
+; 107  : 	end   = AddPalShift(end);
+
+  0033f	8b 55 10	 mov	 edx, DWORD PTR _end$[ebp]
+  00342	52		 push	 edx
+  00343	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  00348	83 c4 04	 add	 esp, 4
+  0034b	89 45 10	 mov	 DWORD PTR _end$[ebp], eax
+
+; 108  : 
+; 109  : 	if (!InRange(color) || start < 0 || end > REMAP_START_COLOR - 1)
+
+  0034e	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  00351	50		 push	 eax
+  00352	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00355	e8 00 00 00 00	 call	 ?InRange@Remap@@IAEHH@Z	; Remap::InRange
+  0035a	85 c0		 test	 eax, eax
+  0035c	74 14		 je	 SHORT $L58091
+  0035e	83 7d 0c 00	 cmp	 DWORD PTR _start$[ebp], 0
+  00362	7c 0e		 jl	 SHORT $L58091
+  00364	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?REMAP_START_COLOR@@3HA ; REMAP_START_COLOR
+  0036a	83 e9 01	 sub	 ecx, 1
+  0036d	39 4d 10	 cmp	 DWORD PTR _end$[ebp], ecx
+  00370	7e 05		 jle	 SHORT $L58090
+$L58091:
+
+; 110  : 		return;
+
+  00372	e9 13 01 00 00	 jmp	 $L58089
+$L58090:
+
+; 111  : 		 
+; 112  : 	const int index = REMAP_END_COLOR - color;
+
+  00377	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  0037d	2b 55 08	 sub	 edx, DWORD PTR _color$[ebp]
+  00380	89 55 f0	 mov	 DWORD PTR _index$[ebp], edx
+
+; 113  : 	if (!singleRemap[index])  {
+
+  00383	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  00386	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00389	83 7c 81 04 00	 cmp	 DWORD PTR [ecx+eax*4+4], 0
+  0038e	75 71		 jne	 SHORT $L58093
+
+; 114  : 		singleRemap[index] = New SingleRemap(remapColor[index]);
+
+  00390	68 48 0a 00 00	 push	 2632			; 00000a48H
+  00395	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  0039a	83 c4 04	 add	 esp, 4
+  0039d	89 45 e8	 mov	 DWORD PTR $T58800[ebp], eax
+  003a0	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  003a7	83 7d e8 00	 cmp	 DWORD PTR $T58800[ebp], 0
+  003ab	74 1a		 je	 SHORT $L58801
+  003ad	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  003b0	c1 e2 08	 shl	 edx, 8
+  003b3	81 c2 00 00 00
+	00		 add	 edx, OFFSET FLAT:?remapColor@Remap@@2PAY0BAA@EA ; Remap::remapColor
+  003b9	52		 push	 edx
+  003ba	8b 4d e8	 mov	 ecx, DWORD PTR $T58800[ebp]
+  003bd	e8 00 00 00 00	 call	 ??0SingleRemap@Remap@@QAE@PAE@Z ; Remap::SingleRemap::SingleRemap
+  003c2	89 45 e0	 mov	 DWORD PTR -32+[ebp], eax
+  003c5	eb 07		 jmp	 SHORT $L58802
+$L58801:
+  003c7	c7 45 e0 00 00
+	00 00		 mov	 DWORD PTR -32+[ebp], 0
+$L58802:
+  003ce	8b 45 e0	 mov	 eax, DWORD PTR -32+[ebp]
+  003d1	89 45 ec	 mov	 DWORD PTR $T58799[ebp], eax
+  003d4	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  003db	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  003de	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  003e1	8b 45 ec	 mov	 eax, DWORD PTR $T58799[ebp]
+  003e4	89 44 8a 04	 mov	 DWORD PTR [edx+ecx*4+4], eax
+
+; 115  : 		remapCount++;
+
+  003e8	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?remapCount@Remap@@2IA ; Remap::remapCount
+  003ee	83 c1 01	 add	 ecx, 1
+  003f1	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?remapCount@Remap@@2IA, ecx ; Remap::remapCount
+
+; 116  : 		remapOn[color] = True;
+
+  003f7	8b 55 08	 mov	 edx, DWORD PTR _color$[ebp]
+  003fa	c6 82 00 00 00
+	00 01		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[edx], 1
+$L58093:
+
+; 118  : 
+; 119  :    //  if remapDepth was on reduce the count, not to worry if depth is set again it will be added
+; 120  :    if (remapDepth[index])
+
+  00401	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  00404	83 3c 85 00 00
+	00 00 00	 cmp	 DWORD PTR ?remapDepth@Remap@@2PAIA[eax*4], 0
+  0040c	74 0f		 je	 SHORT $L58098
+
+; 121  : 		remapDepthOn--;
+
+  0040e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  00414	83 e9 01	 sub	 ecx, 1
+  00417	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, ecx ; Remap::remapDepthOn
+$L58098:
+
+; 122  : 
+; 123  : 	remapDepth[index] = depth;
+
+  0041d	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00420	8b 45 18	 mov	 eax, DWORD PTR _depth$[ebp]
+  00423	89 04 95 00 00
+	00 00		 mov	 DWORD PTR ?remapDepth@Remap@@2PAIA[edx*4], eax
+
+; 124  : 	if (depth)
+
+  0042a	83 7d 18 00	 cmp	 DWORD PTR _depth$[ebp], 0
+  0042e	74 0f		 je	 SHORT $L58099
+
+; 125  : 		remapDepthOn++;
+
+  00430	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  00436	83 c1 01	 add	 ecx, 1
+  00439	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, ecx ; Remap::remapDepthOn
+$L58099:
+
+; 126  : 
+; 127  :    singleRemap[index]->start = start; 
+
+  0043f	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00442	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00445	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  00449	8b 55 0c	 mov	 edx, DWORD PTR _start$[ebp]
+  0044c	89 51 10	 mov	 DWORD PTR [ecx+16], edx
+
+; 128  :    singleRemap[index]->end = end; 
+
+  0044f	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  00452	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00455	8b 54 81 04	 mov	 edx, DWORD PTR [ecx+eax*4+4]
+  00459	8b 45 10	 mov	 eax, DWORD PTR _end$[ebp]
+  0045c	89 42 14	 mov	 DWORD PTR [edx+20], eax
+
+; 129  :    singleRemap[index]->delta = delta;
+
+  0045f	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  00462	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  00465	8b 44 8a 04	 mov	 eax, DWORD PTR [edx+ecx*4+4]
+  00469	8b 4d 14	 mov	 ecx, DWORD PTR _delta$[ebp]
+  0046c	89 48 18	 mov	 DWORD PTR [eax+24], ecx
+
+; 130  : 	singleRemap[index]->type = REMAP_BY_RANGE;
+
+  0046f	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00472	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00475	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  00479	c7 41 1c 01 00
+	00 00		 mov	 DWORD PTR [ecx+28], 1
+
+; 131  : 	updateFlag = True;
+
+  00480	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 1 ; Remap::updateFlag
+$L58089:
+
+; 132  : }
+
+  0048a	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0048d	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  00494	8b e5		 mov	 esp, ebp
+  00496	5d		 pop	 ebp
+  00497	c2 14 00	 ret	 20			; 00000014H
+_TEXT	ENDS
+text$x	SEGMENT
+$L58803:
+  00000	8b 45 e8	 mov	 eax, DWORD PTR $T58800[ebp]
+  00003	50		 push	 eax
+  00004	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00009	59		 pop	 ecx
+  0000a	c3		 ret	 0
+$L58808:
+  0000b	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T58807
+  00010	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?RemapByRange@Remap@@QAEXHHHHH@Z ENDP			; Remap::RemapByRange
+PUBLIC	?RemapByPercent@Remap@@QAEXHHH@Z		; Remap::RemapByPercent
+EXTRN	?Alert@MsgMgr@@QAAHPADZZ:NEAR			; MsgMgr::Alert
+_DATA	SEGMENT
+$SG58108 DB	'RemapByPercent percent out of range; percent = %d', 00H
+_DATA	ENDS
+xdata$x	SEGMENT
+$T58819	DD	019930520H
+	DD	01H
+	DD	FLAT:$T58821
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T58821	DD	0ffffffffH
+	DD	FLAT:$L58817
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T58813 = -20
+$T58814 = -24
+__$EHRec$ = -12
+_color$ = 8
+_percent$ = 12
+_depth$ = 16
+_this$ = -28
+_index$ = -16
+?RemapByPercent@Remap@@QAEXHHH@Z PROC NEAR		; Remap::RemapByPercent
+
+; 136  : {  
+
+  0049a	55		 push	 ebp
+  0049b	8b ec		 mov	 ebp, esp
+  0049d	6a ff		 push	 -1
+  0049f	68 00 00 00 00	 push	 $L58820
+  004a4	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  004aa	50		 push	 eax
+  004ab	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  004b2	83 ec 14	 sub	 esp, 20			; 00000014H
+  004b5	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 137  : 	color = AddPalShift(color);
+
+  004b8	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  004bb	50		 push	 eax
+  004bc	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  004c1	83 c4 04	 add	 esp, 4
+  004c4	89 45 08	 mov	 DWORD PTR _color$[ebp], eax
+
+; 138  : 	if (!InRange(color))
+
+  004c7	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  004ca	51		 push	 ecx
+  004cb	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  004ce	e8 00 00 00 00	 call	 ?InRange@Remap@@IAEHH@Z	; Remap::InRange
+  004d3	85 c0		 test	 eax, eax
+  004d5	75 05		 jne	 SHORT $L58106
+
+; 139  : 		return;
+
+  004d7	e9 09 01 00 00	 jmp	 $L58105
+$L58106:
+
+; 140  : 
+; 141  :    if (percent < 0)
+
+  004dc	83 7d 0c 00	 cmp	 DWORD PTR _percent$[ebp], 0
+  004e0	7d 17		 jge	 SHORT $L58107
+
+; 142  :       msgMgr->Alert("RemapByPercent percent out of range; percent = %d",percent);
+
+  004e2	8b 55 0c	 mov	 edx, DWORD PTR _percent$[ebp]
+  004e5	52		 push	 edx
+  004e6	68 00 00 00 00	 push	 OFFSET FLAT:$SG58108
+  004eb	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  004f0	50		 push	 eax
+  004f1	e8 00 00 00 00	 call	 ?Alert@MsgMgr@@QAAHPADZZ ; MsgMgr::Alert
+  004f6	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58107:
+
+; 143  : 							  
+; 144  : 	const int index = REMAP_END_COLOR - color;
+
+  004f9	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  004ff	2b 4d 08	 sub	 ecx, DWORD PTR _color$[ebp]
+  00502	89 4d f0	 mov	 DWORD PTR _index$[ebp], ecx
+
+; 145  : 
+; 146  : 	if (!singleRemap[index])  {
+
+  00505	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00508	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  0050b	83 7c 90 04 00	 cmp	 DWORD PTR [eax+edx*4+4], 0
+  00510	75 6f		 jne	 SHORT $L58110
+
+; 147  : 		singleRemap[index] = New SingleRemap(remapColor[index]);
+
+  00512	68 48 0a 00 00	 push	 2632			; 00000a48H
+  00517	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  0051c	83 c4 04	 add	 esp, 4
+  0051f	89 45 e8	 mov	 DWORD PTR $T58814[ebp], eax
+  00522	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  00529	83 7d e8 00	 cmp	 DWORD PTR $T58814[ebp], 0
+  0052d	74 1a		 je	 SHORT $L58815
+  0052f	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  00532	c1 e1 08	 shl	 ecx, 8
+  00535	81 c1 00 00 00
+	00		 add	 ecx, OFFSET FLAT:?remapColor@Remap@@2PAY0BAA@EA ; Remap::remapColor
+  0053b	51		 push	 ecx
+  0053c	8b 4d e8	 mov	 ecx, DWORD PTR $T58814[ebp]
+  0053f	e8 00 00 00 00	 call	 ??0SingleRemap@Remap@@QAE@PAE@Z ; Remap::SingleRemap::SingleRemap
+  00544	89 45 e0	 mov	 DWORD PTR -32+[ebp], eax
+  00547	eb 07		 jmp	 SHORT $L58816
+$L58815:
+  00549	c7 45 e0 00 00
+	00 00		 mov	 DWORD PTR -32+[ebp], 0
+$L58816:
+  00550	8b 55 e0	 mov	 edx, DWORD PTR -32+[ebp]
+  00553	89 55 ec	 mov	 DWORD PTR $T58813[ebp], edx
+  00556	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  0055d	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  00560	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00563	8b 55 ec	 mov	 edx, DWORD PTR $T58813[ebp]
+  00566	89 54 81 04	 mov	 DWORD PTR [ecx+eax*4+4], edx
+
+; 148  : 		remapCount++;
+
+  0056a	a1 00 00 00 00	 mov	 eax, DWORD PTR ?remapCount@Remap@@2IA ; Remap::remapCount
+  0056f	83 c0 01	 add	 eax, 1
+  00572	a3 00 00 00 00	 mov	 DWORD PTR ?remapCount@Remap@@2IA, eax ; Remap::remapCount
+
+; 149  : 		remapOn[color] = True;
+
+  00577	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  0057a	c6 81 00 00 00
+	00 01		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[ecx], 1
+$L58110:
+
+; 151  : 
+; 152  :    //  if remapDepth was on reduce the count, not to worry if depth is set again it will be added
+; 153  :    if (remapDepth[index])
+
+  00581	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00584	83 3c 95 00 00
+	00 00 00	 cmp	 DWORD PTR ?remapDepth@Remap@@2PAIA[edx*4], 0
+  0058c	74 0d		 je	 SHORT $L58115
+
+; 154  : 		remapDepthOn--;
+
+  0058e	a1 00 00 00 00	 mov	 eax, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  00593	83 e8 01	 sub	 eax, 1
+  00596	a3 00 00 00 00	 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, eax ; Remap::remapDepthOn
+$L58115:
+
+; 155  : 
+; 156  : 	remapDepth[index] = depth;
+
+  0059b	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  0059e	8b 55 10	 mov	 edx, DWORD PTR _depth$[ebp]
+  005a1	89 14 8d 00 00
+	00 00		 mov	 DWORD PTR ?remapDepth@Remap@@2PAIA[ecx*4], edx
+
+; 157  : 	if (depth)
+
+  005a8	83 7d 10 00	 cmp	 DWORD PTR _depth$[ebp], 0
+  005ac	74 0d		 je	 SHORT $L58116
+
+; 158  : 		remapDepthOn++;
+
+  005ae	a1 00 00 00 00	 mov	 eax, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  005b3	83 c0 01	 add	 eax, 1
+  005b6	a3 00 00 00 00	 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, eax ; Remap::remapDepthOn
+$L58116:
+
+; 159  : 
+; 160  : 	singleRemap[index]->percent = percent;
+
+  005bb	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  005be	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  005c1	8b 44 8a 04	 mov	 eax, DWORD PTR [edx+ecx*4+4]
+  005c5	8b 4d 0c	 mov	 ecx, DWORD PTR _percent$[ebp]
+  005c8	89 08		 mov	 DWORD PTR [eax], ecx
+
+; 161  : 	singleRemap[index]->type = REMAP_BY_PERCENT;
+
+  005ca	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  005cd	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  005d0	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  005d4	c7 41 1c 02 00
+	00 00		 mov	 DWORD PTR [ecx+28], 2
+
+; 162  : 	updateFlag = True;
+
+  005db	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 1 ; Remap::updateFlag
+$L58105:
+
+; 163  : }
+
+  005e5	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  005e8	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  005ef	8b e5		 mov	 esp, ebp
+  005f1	5d		 pop	 ebp
+  005f2	c2 0c 00	 ret	 12			; 0000000cH
+_TEXT	ENDS
+text$x	SEGMENT
+$L58817:
+  00015	8b 45 e8	 mov	 eax, DWORD PTR $T58814[ebp]
+  00018	50		 push	 eax
+  00019	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  0001e	59		 pop	 ecx
+  0001f	c3		 ret	 0
+$L58820:
+  00020	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T58819
+  00025	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?RemapByPercent@Remap@@QAEXHHH@Z ENDP			; Remap::RemapByPercent
+PUBLIC	?RemapToGray@Remap@@QAEXHHH@Z			; Remap::RemapToGray
+_DATA	SEGMENT
+	ORG $+2
+$SG58126 DB	'RemapToGray percent out of range; gray = %d', 00H
+_DATA	ENDS
+xdata$x	SEGMENT
+$T58829	DD	019930520H
+	DD	01H
+	DD	FLAT:$T58831
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T58831	DD	0ffffffffH
+	DD	FLAT:$L58827
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T58823 = -20
+$T58824 = -24
+__$EHRec$ = -12
+_color$ = 8
+_gray$ = 12
+_depth$ = 16
+_this$ = -28
+_index$ = -16
+?RemapToGray@Remap@@QAEXHHH@Z PROC NEAR			; Remap::RemapToGray
+
+; 167  : {  
+
+  005f5	55		 push	 ebp
+  005f6	8b ec		 mov	 ebp, esp
+  005f8	6a ff		 push	 -1
+  005fa	68 00 00 00 00	 push	 $L58830
+  005ff	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00605	50		 push	 eax
+  00606	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  0060d	83 ec 14	 sub	 esp, 20			; 00000014H
+  00610	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 168  : 	color = AddPalShift(color);
+
+  00613	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  00616	50		 push	 eax
+  00617	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  0061c	83 c4 04	 add	 esp, 4
+  0061f	89 45 08	 mov	 DWORD PTR _color$[ebp], eax
+
+; 169  : 	if (!InRange(color))
+
+  00622	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  00625	51		 push	 ecx
+  00626	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00629	e8 00 00 00 00	 call	 ?InRange@Remap@@IAEHH@Z	; Remap::InRange
+  0062e	85 c0		 test	 eax, eax
+  00630	75 05		 jne	 SHORT $L58123
+
+; 170  : 		return; 
+
+  00632	e9 10 01 00 00	 jmp	 $L58122
+$L58123:
+
+; 171  : 
+; 172  :    if (gray > 100 || gray < 0)
+
+  00637	83 7d 0c 64	 cmp	 DWORD PTR _gray$[ebp], 100 ; 00000064H
+  0063b	7f 06		 jg	 SHORT $L58125
+  0063d	83 7d 0c 00	 cmp	 DWORD PTR _gray$[ebp], 0
+  00641	7d 17		 jge	 SHORT $L58124
+$L58125:
+
+; 173  :       msgMgr->Alert("RemapToGray percent out of range; gray = %d",gray); 
+
+  00643	8b 55 0c	 mov	 edx, DWORD PTR _gray$[ebp]
+  00646	52		 push	 edx
+  00647	68 00 00 00 00	 push	 OFFSET FLAT:$SG58126
+  0064c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00651	50		 push	 eax
+  00652	e8 00 00 00 00	 call	 ?Alert@MsgMgr@@QAAHPADZZ ; MsgMgr::Alert
+  00657	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58124:
+
+; 174  : 					 
+; 175  : 	const int index = REMAP_END_COLOR - color;
+
+  0065a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  00660	2b 4d 08	 sub	 ecx, DWORD PTR _color$[ebp]
+  00663	89 4d f0	 mov	 DWORD PTR _index$[ebp], ecx
+
+; 176  : 	if (!singleRemap[index])  {
+
+  00666	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00669	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  0066c	83 7c 90 04 00	 cmp	 DWORD PTR [eax+edx*4+4], 0
+  00671	75 6f		 jne	 SHORT $L58128
+
+; 177  : 		singleRemap[index] = New SingleRemap(remapColor[index]);
+
+  00673	68 48 0a 00 00	 push	 2632			; 00000a48H
+  00678	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  0067d	83 c4 04	 add	 esp, 4
+  00680	89 45 e8	 mov	 DWORD PTR $T58824[ebp], eax
+  00683	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  0068a	83 7d e8 00	 cmp	 DWORD PTR $T58824[ebp], 0
+  0068e	74 1a		 je	 SHORT $L58825
+  00690	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  00693	c1 e1 08	 shl	 ecx, 8
+  00696	81 c1 00 00 00
+	00		 add	 ecx, OFFSET FLAT:?remapColor@Remap@@2PAY0BAA@EA ; Remap::remapColor
+  0069c	51		 push	 ecx
+  0069d	8b 4d e8	 mov	 ecx, DWORD PTR $T58824[ebp]
+  006a0	e8 00 00 00 00	 call	 ??0SingleRemap@Remap@@QAE@PAE@Z ; Remap::SingleRemap::SingleRemap
+  006a5	89 45 e0	 mov	 DWORD PTR -32+[ebp], eax
+  006a8	eb 07		 jmp	 SHORT $L58826
+$L58825:
+  006aa	c7 45 e0 00 00
+	00 00		 mov	 DWORD PTR -32+[ebp], 0
+$L58826:
+  006b1	8b 55 e0	 mov	 edx, DWORD PTR -32+[ebp]
+  006b4	89 55 ec	 mov	 DWORD PTR $T58823[ebp], edx
+  006b7	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  006be	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  006c1	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  006c4	8b 55 ec	 mov	 edx, DWORD PTR $T58823[ebp]
+  006c7	89 54 81 04	 mov	 DWORD PTR [ecx+eax*4+4], edx
+
+; 178  : 		remapCount++;
+
+  006cb	a1 00 00 00 00	 mov	 eax, DWORD PTR ?remapCount@Remap@@2IA ; Remap::remapCount
+  006d0	83 c0 01	 add	 eax, 1
+  006d3	a3 00 00 00 00	 mov	 DWORD PTR ?remapCount@Remap@@2IA, eax ; Remap::remapCount
+
+; 179  : 		remapOn[color] = True;
+
+  006d8	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  006db	c6 81 00 00 00
+	00 01		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[ecx], 1
+$L58128:
+
+; 181  : 
+; 182  :    //  if remapDepth was on reduce the count, not to worry if depth is set again it will be added
+; 183  :    if (remapDepth[index])
+
+  006e2	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  006e5	83 3c 95 00 00
+	00 00 00	 cmp	 DWORD PTR ?remapDepth@Remap@@2PAIA[edx*4], 0
+  006ed	74 0d		 je	 SHORT $L58133
+
+; 184  : 		remapDepthOn--;
+
+  006ef	a1 00 00 00 00	 mov	 eax, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  006f4	83 e8 01	 sub	 eax, 1
+  006f7	a3 00 00 00 00	 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, eax ; Remap::remapDepthOn
+$L58133:
+
+; 185  : 
+; 186  : 	remapDepth[index] = depth;
+
+  006fc	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  006ff	8b 55 10	 mov	 edx, DWORD PTR _depth$[ebp]
+  00702	89 14 8d 00 00
+	00 00		 mov	 DWORD PTR ?remapDepth@Remap@@2PAIA[ecx*4], edx
+
+; 187  : 	if (depth)
+
+  00709	83 7d 10 00	 cmp	 DWORD PTR _depth$[ebp], 0
+  0070d	74 0d		 je	 SHORT $L58134
+
+; 188  : 		remapDepthOn++;
+
+  0070f	a1 00 00 00 00	 mov	 eax, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  00714	83 c0 01	 add	 eax, 1
+  00717	a3 00 00 00 00	 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, eax ; Remap::remapDepthOn
+$L58134:
+
+; 189  : 
+; 190  : 	singleRemap[index]->gray = gray;
+
+  0071c	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  0071f	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  00722	8b 44 8a 04	 mov	 eax, DWORD PTR [edx+ecx*4+4]
+  00726	8b 4d 0c	 mov	 ecx, DWORD PTR _gray$[ebp]
+  00729	89 48 08	 mov	 DWORD PTR [eax+8], ecx
+
+; 191  : 	singleRemap[index]->type = REMAP_TO_GRAY;
+
+  0072c	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  0072f	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00732	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  00736	c7 41 1c 03 00
+	00 00		 mov	 DWORD PTR [ecx+28], 3
+
+; 192  : 	updateFlag = True;
+
+  0073d	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 1 ; Remap::updateFlag
+$L58122:
+
+; 193  : }
+
+  00747	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0074a	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  00751	8b e5		 mov	 esp, ebp
+  00753	5d		 pop	 ebp
+  00754	c2 0c 00	 ret	 12			; 0000000cH
+_TEXT	ENDS
+text$x	SEGMENT
+$L58827:
+  0002a	8b 45 e8	 mov	 eax, DWORD PTR $T58824[ebp]
+  0002d	50		 push	 eax
+  0002e	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00033	59		 pop	 ecx
+  00034	c3		 ret	 0
+$L58830:
+  00035	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T58829
+  0003a	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?RemapToGray@Remap@@QAEXHHH@Z ENDP			; Remap::RemapToGray
+PUBLIC	?RemapToPercentGray@Remap@@QAEXHHHH@Z		; Remap::RemapToPercentGray
+xdata$x	SEGMENT
+$T58839	DD	019930520H
+	DD	01H
+	DD	FLAT:$T58841
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T58841	DD	0ffffffffH
+	DD	FLAT:$L58837
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T58833 = -20
+$T58834 = -24
+__$EHRec$ = -12
+_color$ = 8
+_gray$ = 12
+_percent$ = 16
+_depth$ = 20
+_this$ = -28
+_index$ = -16
+?RemapToPercentGray@Remap@@QAEXHHHH@Z PROC NEAR		; Remap::RemapToPercentGray
+
+; 197  : {        
+
+  00757	55		 push	 ebp
+  00758	8b ec		 mov	 ebp, esp
+  0075a	6a ff		 push	 -1
+  0075c	68 00 00 00 00	 push	 $L58840
+  00761	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00767	50		 push	 eax
+  00768	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  0076f	83 ec 14	 sub	 esp, 20			; 00000014H
+  00772	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 198  : 	color = AddPalShift(color);
+
+  00775	8b 45 08	 mov	 eax, DWORD PTR _color$[ebp]
+  00778	50		 push	 eax
+  00779	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  0077e	83 c4 04	 add	 esp, 4
+  00781	89 45 08	 mov	 DWORD PTR _color$[ebp], eax
+
+; 199  : 	if (!InRange(color))
+
+  00784	8b 4d 08	 mov	 ecx, DWORD PTR _color$[ebp]
+  00787	51		 push	 ecx
+  00788	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0078b	e8 00 00 00 00	 call	 ?InRange@Remap@@IAEHH@Z	; Remap::InRange
+  00790	85 c0		 test	 eax, eax
+  00792	75 05		 jne	 SHORT $L58142
+
+; 200  : 		return;
+
+  00794	e9 02 01 00 00	 jmp	 $L58141
+$L58142:
+
+; 201  : 							  
+; 202  : 	const int index = REMAP_END_COLOR - color;
+
+  00799	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?REMAP_END_COLOR@@3HA ; REMAP_END_COLOR
+  0079f	2b 55 08	 sub	 edx, DWORD PTR _color$[ebp]
+  007a2	89 55 f0	 mov	 DWORD PTR _index$[ebp], edx
+
+; 203  : 	if (!singleRemap[index])  {
+
+  007a5	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  007a8	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  007ab	83 7c 81 04 00	 cmp	 DWORD PTR [ecx+eax*4+4], 0
+  007b0	75 71		 jne	 SHORT $L58144
+
+; 204  : 		singleRemap[index] = New SingleRemap(remapColor[index]);
+
+  007b2	68 48 0a 00 00	 push	 2632			; 00000a48H
+  007b7	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  007bc	83 c4 04	 add	 esp, 4
+  007bf	89 45 e8	 mov	 DWORD PTR $T58834[ebp], eax
+  007c2	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  007c9	83 7d e8 00	 cmp	 DWORD PTR $T58834[ebp], 0
+  007cd	74 1a		 je	 SHORT $L58835
+  007cf	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  007d2	c1 e2 08	 shl	 edx, 8
+  007d5	81 c2 00 00 00
+	00		 add	 edx, OFFSET FLAT:?remapColor@Remap@@2PAY0BAA@EA ; Remap::remapColor
+  007db	52		 push	 edx
+  007dc	8b 4d e8	 mov	 ecx, DWORD PTR $T58834[ebp]
+  007df	e8 00 00 00 00	 call	 ??0SingleRemap@Remap@@QAE@PAE@Z ; Remap::SingleRemap::SingleRemap
+  007e4	89 45 e0	 mov	 DWORD PTR -32+[ebp], eax
+  007e7	eb 07		 jmp	 SHORT $L58836
+$L58835:
+  007e9	c7 45 e0 00 00
+	00 00		 mov	 DWORD PTR -32+[ebp], 0
+$L58836:
+  007f0	8b 45 e0	 mov	 eax, DWORD PTR -32+[ebp]
+  007f3	89 45 ec	 mov	 DWORD PTR $T58833[ebp], eax
+  007f6	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  007fd	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  00800	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  00803	8b 45 ec	 mov	 eax, DWORD PTR $T58833[ebp]
+  00806	89 44 8a 04	 mov	 DWORD PTR [edx+ecx*4+4], eax
+
+; 205  : 		remapCount++;
+
+  0080a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?remapCount@Remap@@2IA ; Remap::remapCount
+  00810	83 c1 01	 add	 ecx, 1
+  00813	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?remapCount@Remap@@2IA, ecx ; Remap::remapCount
+
+; 206  : 		remapOn[color] = True;
+
+  00819	8b 55 08	 mov	 edx, DWORD PTR _color$[ebp]
+  0081c	c6 82 00 00 00
+	00 01		 mov	 BYTE PTR ?remapOn@Remap@@2PAEA[edx], 1
+$L58144:
+
+; 208  : 
+; 209  :    //  if remapDepth was on reduce the count, not to worry if depth is set again it will be added
+; 210  :    if (remapDepth[index])
+
+  00823	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  00826	83 3c 85 00 00
+	00 00 00	 cmp	 DWORD PTR ?remapDepth@Remap@@2PAIA[eax*4], 0
+  0082e	74 0f		 je	 SHORT $L58149
+
+; 211  : 		remapDepthOn--;
+
+  00830	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  00836	83 e9 01	 sub	 ecx, 1
+  00839	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, ecx ; Remap::remapDepthOn
+$L58149:
+
+; 212  : 
+; 213  : 	remapDepth[index] = depth;
+
+  0083f	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00842	8b 45 14	 mov	 eax, DWORD PTR _depth$[ebp]
+  00845	89 04 95 00 00
+	00 00		 mov	 DWORD PTR ?remapDepth@Remap@@2PAIA[edx*4], eax
+
+; 214  : 	if (depth)
+
+  0084c	83 7d 14 00	 cmp	 DWORD PTR _depth$[ebp], 0
+  00850	74 0f		 je	 SHORT $L58150
+
+; 215  : 		remapDepthOn++;
+
+  00852	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?remapDepthOn@Remap@@2IA ; Remap::remapDepthOn
+  00858	83 c1 01	 add	 ecx, 1
+  0085b	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?remapDepthOn@Remap@@2IA, ecx ; Remap::remapDepthOn
+$L58150:
+
+; 216  : 
+; 217  : 	singleRemap[index]->percent = percent;
+
+  00861	8b 55 f0	 mov	 edx, DWORD PTR _index$[ebp]
+  00864	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00867	8b 4c 90 04	 mov	 ecx, DWORD PTR [eax+edx*4+4]
+  0086b	8b 55 10	 mov	 edx, DWORD PTR _percent$[ebp]
+  0086e	89 11		 mov	 DWORD PTR [ecx], edx
+
+; 218  : 	singleRemap[index]->gray = gray;
+
+  00870	8b 45 f0	 mov	 eax, DWORD PTR _index$[ebp]
+  00873	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00876	8b 54 81 04	 mov	 edx, DWORD PTR [ecx+eax*4+4]
+  0087a	8b 45 0c	 mov	 eax, DWORD PTR _gray$[ebp]
+  0087d	89 42 08	 mov	 DWORD PTR [edx+8], eax
+
+; 219  : 	singleRemap[index]->type = REMAP_TO_PERCENT_GRAY;
+
+  00880	8b 4d f0	 mov	 ecx, DWORD PTR _index$[ebp]
+  00883	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  00886	8b 44 8a 04	 mov	 eax, DWORD PTR [edx+ecx*4+4]
+  0088a	c7 40 1c 04 00
+	00 00		 mov	 DWORD PTR [eax+28], 4
+
+; 220  : 	updateFlag = True;
+
+  00891	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 1 ; Remap::updateFlag
+$L58141:
+
+; 221  : }
+
+  0089b	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0089e	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  008a5	8b e5		 mov	 esp, ebp
+  008a7	5d		 pop	 ebp
+  008a8	c2 10 00	 ret	 16			; 00000010H
+_TEXT	ENDS
+text$x	SEGMENT
+$L58837:
+  0003f	8b 45 e8	 mov	 eax, DWORD PTR $T58834[ebp]
+  00042	50		 push	 eax
+  00043	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00048	59		 pop	 ecx
+  00049	c3		 ret	 0
+$L58840:
+  0004a	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T58839
+  0004f	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?RemapToPercentGray@Remap@@QAEXHHHH@Z ENDP		; Remap::RemapToPercentGray
+PUBLIC	?RemapAllTables@Remap@@QAEHH@Z			; Remap::RemapAllTables
+PUBLIC	?Update@SingleRemap@Remap@@QAEHH@Z		; Remap::SingleRemap::Update
+_TEXT	SEGMENT
+_palChanged$ = 8
+_this$ = -12
+_changed$ = -4
+_j$ = -8
+?RemapAllTables@Remap@@QAEHH@Z PROC NEAR		; Remap::RemapAllTables
+
+; 226  : {		            
+
+  008ab	55		 push	 ebp
+  008ac	8b ec		 mov	 ebp, esp
+  008ae	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  008b1	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 227  : 	Bool changed = False;
+
+  008b4	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _changed$[ebp], 0
+
+; 228  : 	for (int j = 0; j < REMAP_COLOR_RANGE; j++)  {
+
+  008bb	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR _j$[ebp], 0
+  008c2	eb 09		 jmp	 SHORT $L58157
+$L58158:
+  008c4	8b 45 f8	 mov	 eax, DWORD PTR _j$[ebp]
+  008c7	83 c0 01	 add	 eax, 1
+  008ca	89 45 f8	 mov	 DWORD PTR _j$[ebp], eax
+$L58157:
+  008cd	83 7d f8 09	 cmp	 DWORD PTR _j$[ebp], 9
+  008d1	7d 2a		 jge	 SHORT $L58159
+
+; 229  : 		if (singleRemap[j])
+
+  008d3	8b 4d f8	 mov	 ecx, DWORD PTR _j$[ebp]
+  008d6	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  008d9	83 7c 8a 04 00	 cmp	 DWORD PTR [edx+ecx*4+4], 0
+  008de	74 1b		 je	 SHORT $L58160
+
+; 230  : 			changed |= singleRemap[j]->Update(palChanged);
+
+  008e0	8b 45 08	 mov	 eax, DWORD PTR _palChanged$[ebp]
+  008e3	50		 push	 eax
+  008e4	8b 4d f8	 mov	 ecx, DWORD PTR _j$[ebp]
+  008e7	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  008ea	8b 4c 8a 04	 mov	 ecx, DWORD PTR [edx+ecx*4+4]
+  008ee	e8 00 00 00 00	 call	 ?Update@SingleRemap@Remap@@QAEHH@Z ; Remap::SingleRemap::Update
+  008f3	8b 4d fc	 mov	 ecx, DWORD PTR _changed$[ebp]
+  008f6	0b c8		 or	 ecx, eax
+  008f8	89 4d fc	 mov	 DWORD PTR _changed$[ebp], ecx
+$L58160:
+
+; 231  : 	}
+
+  008fb	eb c7		 jmp	 SHORT $L58158
+$L58159:
+
+; 232  : 	updateFlag = False;
+
+  008fd	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?updateFlag@Remap@@2HA, 0 ; Remap::updateFlag
+
+; 233  : 	return changed;
+
+  00907	8b 45 fc	 mov	 eax, DWORD PTR _changed$[ebp]
+
+; 234  : }
+
+  0090a	8b e5		 mov	 esp, ebp
+  0090c	5d		 pop	 ebp
+  0090d	c2 04 00	 ret	 4
+?RemapAllTables@Remap@@QAEHH@Z ENDP			; Remap::RemapAllTables
+_TEXT	ENDS
+PUBLIC	?DontMapToRange@Remap@@QAEXHH@Z			; Remap::DontMapToRange
+_TEXT	SEGMENT
+_start$ = 8
+_count$ = 12
+_this$ = -4
+?DontMapToRange@Remap@@QAEXHH@Z PROC NEAR		; Remap::DontMapToRange
+
+; 238  : {
+
+  00910	55		 push	 ebp
+  00911	8b ec		 mov	 ebp, esp
+  00913	51		 push	 ecx
+  00914	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 239  : 	start = AddPalShift(start);
+
+  00917	8b 45 08	 mov	 eax, DWORD PTR _start$[ebp]
+  0091a	50		 push	 eax
+  0091b	e8 00 00 00 00	 call	 ?AddPalShift@@YAHH@Z	; AddPalShift
+  00920	83 c4 04	 add	 esp, 4
+  00923	89 45 08	 mov	 DWORD PTR _start$[ebp], eax
+
+; 240  : 	forbiddenStart = start;
+
+  00926	8b 4d 08	 mov	 ecx, DWORD PTR _start$[ebp]
+  00929	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?forbiddenStart@Remap@@2HA, ecx ; Remap::forbiddenStart
+
+; 241  : 	forbiddenCount = count;
+
+  0092f	8b 55 0c	 mov	 edx, DWORD PTR _count$[ebp]
+  00932	89 15 00 00 00
+	00		 mov	 DWORD PTR ?forbiddenCount@Remap@@2HA, edx ; Remap::forbiddenCount
+
+; 242  : }
+
+  00938	8b e5		 mov	 esp, ebp
+  0093a	5d		 pop	 ebp
+  0093b	c2 08 00	 ret	 8
+?DontMapToRange@Remap@@QAEXHH@Z ENDP			; Remap::DontMapToRange
+_TEXT	ENDS
+PUBLIC	?KRemapColors@@YAXPAF@Z				; KRemapColors
+PUBLIC	?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ		; GraphicsMgr::GRemapper
+EXTRN	?graphMgr@@3PAVGraphicsMgr@@A:DWORD		; graphMgr
+_TEXT	SEGMENT
+_args$ = 8
+?KRemapColors@@YAXPAF@Z PROC NEAR			; KRemapColors
+
+; 251  : {
+
+  0093e	55		 push	 ebp
+  0093f	8b ec		 mov	 ebp, esp
+  00941	51		 push	 ecx
+
+; 252  : 	switch (arg(1)) {      
+
+  00942	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00945	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00949	89 4d fc	 mov	 DWORD PTR -4+[ebp], ecx
+  0094c	83 7d fc 05	 cmp	 DWORD PTR -4+[ebp], 5
+  00950	0f 87 19 02 00
+	00		 ja	 $L58477
+  00956	8b 55 fc	 mov	 edx, DWORD PTR -4+[ebp]
+  00959	ff 24 95 00 00
+	00 00		 jmp	 DWORD PTR $L58845[edx*4]
+$L58480:
+
+; 253  : 		case REMAP_OFF:
+; 254  :          if(argCount < 2)
+
+  00960	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00963	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  00966	83 f9 02	 cmp	 ecx, 2
+  00969	7d 16		 jge	 SHORT $L58481
+
+; 255  : 			   graphMgr->GRemapper().RemapOff();
+
+  0096b	6a 00		 push	 0
+  0096d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00973	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00978	8b c8		 mov	 ecx, eax
+  0097a	e8 00 00 00 00	 call	 ?RemapOff@Remap@@QAEXH@Z ; Remap::RemapOff
+
+; 256  :          else
+
+  0097f	eb 1a		 jmp	 SHORT $L58482
+$L58481:
+
+; 257  : 			   graphMgr->GRemapper().RemapOff(arg(2));
+
+  00981	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00984	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  00988	50		 push	 eax
+  00989	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  0098f	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00994	8b c8		 mov	 ecx, eax
+  00996	e8 00 00 00 00	 call	 ?RemapOff@Remap@@QAEXH@Z ; Remap::RemapOff
+$L58482:
+
+; 258  : 			break;
+
+  0099b	e9 cf 01 00 00	 jmp	 $L58477
+$L58483:
+
+; 259  : 
+; 260  : 		case REMAP_BY_RANGE:
+; 261  : 			if(argCount < 6)     
+
+  009a0	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  009a3	0f bf 11	 movsx	 edx, WORD PTR [ecx]
+  009a6	83 fa 06	 cmp	 edx, 6
+  009a9	7d 36		 jge	 SHORT $L58484
+
+; 262  : 				graphMgr->GRemapper().RemapByRange(arg(2), arg(3), arg(4), arg(5));
+
+  009ab	6a 00		 push	 0
+  009ad	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  009b0	0f bf 48 0a	 movsx	 ecx, WORD PTR [eax+10]
+  009b4	51		 push	 ecx
+  009b5	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  009b8	0f bf 42 08	 movsx	 eax, WORD PTR [edx+8]
+  009bc	50		 push	 eax
+  009bd	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  009c0	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  009c4	52		 push	 edx
+  009c5	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  009c8	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  009cc	51		 push	 ecx
+  009cd	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  009d3	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  009d8	8b c8		 mov	 ecx, eax
+  009da	e8 00 00 00 00	 call	 ?RemapByRange@Remap@@QAEXHHHHH@Z ; Remap::RemapByRange
+
+; 263  :          else
+
+  009df	eb 3a		 jmp	 SHORT $L58485
+$L58484:
+
+; 264  : 				graphMgr->GRemapper().RemapByRange(arg(2), arg(3), arg(4), arg(5), arg(6));
+
+  009e1	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  009e4	0f bf 42 0c	 movsx	 eax, WORD PTR [edx+12]
+  009e8	50		 push	 eax
+  009e9	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  009ec	0f bf 51 0a	 movsx	 edx, WORD PTR [ecx+10]
+  009f0	52		 push	 edx
+  009f1	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  009f4	0f bf 48 08	 movsx	 ecx, WORD PTR [eax+8]
+  009f8	51		 push	 ecx
+  009f9	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  009fc	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00a00	50		 push	 eax
+  00a01	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00a04	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00a08	52		 push	 edx
+  00a09	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00a0f	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00a14	8b c8		 mov	 ecx, eax
+  00a16	e8 00 00 00 00	 call	 ?RemapByRange@Remap@@QAEXHHHHH@Z ; Remap::RemapByRange
+$L58485:
+
+; 265  : 			break;
+
+  00a1b	e9 4f 01 00 00	 jmp	 $L58477
+$L58486:
+
+; 266  : 
+; 267  : 		case REMAP_BY_PERCENT: 
+; 268  : 			if(argCount < 4)     
+
+  00a20	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00a23	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  00a26	83 f9 04	 cmp	 ecx, 4
+  00a29	7d 26		 jge	 SHORT $L58487
+
+; 269  : 				graphMgr->GRemapper().RemapByPercent(arg(2), arg(3));
+
+  00a2b	6a 00		 push	 0
+  00a2d	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00a30	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00a34	50		 push	 eax
+  00a35	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00a38	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00a3c	52		 push	 edx
+  00a3d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00a43	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00a48	8b c8		 mov	 ecx, eax
+  00a4a	e8 00 00 00 00	 call	 ?RemapByPercent@Remap@@QAEXHHH@Z ; Remap::RemapByPercent
+
+; 270  :          else
+
+  00a4f	eb 2a		 jmp	 SHORT $L58488
+$L58487:
+
+; 271  : 				graphMgr->GRemapper().RemapByPercent(arg(2), arg(3), arg(4));
+
+  00a51	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00a54	0f bf 48 08	 movsx	 ecx, WORD PTR [eax+8]
+  00a58	51		 push	 ecx
+  00a59	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00a5c	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00a60	50		 push	 eax
+  00a61	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00a64	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00a68	52		 push	 edx
+  00a69	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00a6f	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00a74	8b c8		 mov	 ecx, eax
+  00a76	e8 00 00 00 00	 call	 ?RemapByPercent@Remap@@QAEXHHH@Z ; Remap::RemapByPercent
+$L58488:
+
+; 272  : 			break;
+
+  00a7b	e9 ef 00 00 00	 jmp	 $L58477
+$L58489:
+
+; 273  : 
+; 274  : 		case REMAP_TO_GRAY: 
+; 275  : 			if(argCount < 4)     
+
+  00a80	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00a83	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  00a86	83 f9 04	 cmp	 ecx, 4
+  00a89	7d 26		 jge	 SHORT $L58490
+
+; 276  : 				graphMgr->GRemapper().RemapToGray(arg(2), arg(3));
+
+  00a8b	6a 00		 push	 0
+  00a8d	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00a90	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00a94	50		 push	 eax
+  00a95	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00a98	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00a9c	52		 push	 edx
+  00a9d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00aa3	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00aa8	8b c8		 mov	 ecx, eax
+  00aaa	e8 00 00 00 00	 call	 ?RemapToGray@Remap@@QAEXHHH@Z ; Remap::RemapToGray
+
+; 277  :          else
+
+  00aaf	eb 2a		 jmp	 SHORT $L58491
+$L58490:
+
+; 278  : 				graphMgr->GRemapper().RemapToGray(arg(2), arg(3), arg(4));
+
+  00ab1	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00ab4	0f bf 48 08	 movsx	 ecx, WORD PTR [eax+8]
+  00ab8	51		 push	 ecx
+  00ab9	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00abc	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00ac0	50		 push	 eax
+  00ac1	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00ac4	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00ac8	52		 push	 edx
+  00ac9	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00acf	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00ad4	8b c8		 mov	 ecx, eax
+  00ad6	e8 00 00 00 00	 call	 ?RemapToGray@Remap@@QAEXHHH@Z ; Remap::RemapToGray
+$L58491:
+
+; 279  : 			break;
+
+  00adb	e9 8f 00 00 00	 jmp	 $L58477
+$L58492:
+
+; 280  : 
+; 281  : 		case REMAP_TO_PERCENT_GRAY:
+; 282  : 			if (argCount < 5)     
+
+  00ae0	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00ae3	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  00ae6	83 f9 05	 cmp	 ecx, 5
+  00ae9	7d 2e		 jge	 SHORT $L58493
+
+; 283  : 				graphMgr->GRemapper().RemapToPercentGray(arg(2), arg(3), arg(4));
+
+  00aeb	6a 00		 push	 0
+  00aed	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00af0	0f bf 42 08	 movsx	 eax, WORD PTR [edx+8]
+  00af4	50		 push	 eax
+  00af5	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00af8	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  00afc	52		 push	 edx
+  00afd	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00b00	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  00b04	51		 push	 ecx
+  00b05	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00b0b	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00b10	8b c8		 mov	 ecx, eax
+  00b12	e8 00 00 00 00	 call	 ?RemapToPercentGray@Remap@@QAEXHHHH@Z ; Remap::RemapToPercentGray
+
+; 284  :          else
+
+  00b17	eb 32		 jmp	 SHORT $L58494
+$L58493:
+
+; 285  : 				graphMgr->GRemapper().RemapToPercentGray(arg(2), arg(3), arg(4), arg(5));
+
+  00b19	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00b1c	0f bf 42 0a	 movsx	 eax, WORD PTR [edx+10]
+  00b20	50		 push	 eax
+  00b21	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00b24	0f bf 51 08	 movsx	 edx, WORD PTR [ecx+8]
+  00b28	52		 push	 edx
+  00b29	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00b2c	0f bf 48 06	 movsx	 ecx, WORD PTR [eax+6]
+  00b30	51		 push	 ecx
+  00b31	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00b34	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  00b38	50		 push	 eax
+  00b39	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00b3f	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00b44	8b c8		 mov	 ecx, eax
+  00b46	e8 00 00 00 00	 call	 ?RemapToPercentGray@Remap@@QAEXHHHH@Z ; Remap::RemapToPercentGray
+$L58494:
+
+; 286  : 			break;
+
+  00b4b	eb 22		 jmp	 SHORT $L58477
+$L58495:
+
+; 287  : 
+; 288  : 		case REMAP_SET_GLOBAL_NOMATCH_RANGE:
+; 289  : 			graphMgr->GRemapper().DontMapToRange(arg(2), arg(3));
+
+  00b4d	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00b50	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  00b54	52		 push	 edx
+  00b55	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00b58	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  00b5c	51		 push	 ecx
+  00b5d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00b63	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00b68	8b c8		 mov	 ecx, eax
+  00b6a	e8 00 00 00 00	 call	 ?DontMapToRange@Remap@@QAEXHH@Z ; Remap::DontMapToRange
+$L58477:
+
+; 293  : }
+
+  00b6f	8b e5		 mov	 esp, ebp
+  00b71	5d		 pop	 ebp
+  00b72	c3		 ret	 0
+$L58845:
+  00b73	00 00 00 00	 DD	 $L58480
+  00b77	00 00 00 00	 DD	 $L58483
+  00b7b	00 00 00 00	 DD	 $L58486
+  00b7f	00 00 00 00	 DD	 $L58489
+  00b83	00 00 00 00	 DD	 $L58492
+  00b87	00 00 00 00	 DD	 $L58495
+?KRemapColors@@YAXPAF@Z ENDP				; KRemapColors
+_TEXT	ENDS
+;	COMDAT ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ PROC NEAR	; GraphicsMgr::GRemapper, COMDAT
+
+; 70   : 	Remap&	GRemapper() 							{return remapper;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	05 68 11 00 00	 add	 eax, 4456		; 00001168H
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ENDP		; GraphicsMgr::GRemapper
+_TEXT	ENDS
+PUBLIC	??_H@YGXPAXIHP6EX0@Z@Z				; `vector constructor iterator'
+PUBLIC	??ASOLPalette@@QBEABVRgb24F@@H@Z		; SOLPalette::operator[]
+PUBLIC	??0Rgb24@@QAE@XZ				; Rgb24::Rgb24
+_TEXT	SEGMENT
+_remapTable$ = 8
+_this$ = -12
+_i$ = -4
+_color$58506 = -8
+??0SingleRemap@Remap@@QAE@PAE@Z PROC NEAR		; Remap::SingleRemap::SingleRemap
+
+; 300  : {
+
+  00b8b	55		 push	 ebp
+  00b8c	8b ec		 mov	 ebp, esp
+  00b8e	83 ec 10	 sub	 esp, 16			; 00000010H
+  00b91	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+  00b94	68 00 00 00 00	 push	 OFFSET FLAT:??0Rgb24@@QAE@XZ ; Rgb24::Rgb24
+  00b99	68 ec 00 00 00	 push	 236			; 000000ecH
+  00b9e	6a 03		 push	 3
+  00ba0	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00ba3	83 c0 20	 add	 eax, 32			; 00000020H
+  00ba6	50		 push	 eax
+  00ba7	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+  00bac	68 00 00 00 00	 push	 OFFSET FLAT:??0Rgb24@@QAE@XZ ; Rgb24::Rgb24
+  00bb1	68 ec 00 00 00	 push	 236			; 000000ecH
+  00bb6	6a 03		 push	 3
+  00bb8	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00bbb	81 c1 e4 02 00
+	00		 add	 ecx, 740		; 000002e4H
+  00bc1	51		 push	 ecx
+  00bc2	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+
+; 301  : 	type = REMAP_OFF;
+
+  00bc7	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00bca	c7 42 1c 00 00
+	00 00		 mov	 DWORD PTR [edx+28], 0
+
+; 302  : 	remap = remapTable;
+
+  00bd1	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00bd4	8b 4d 08	 mov	 ecx, DWORD PTR _remapTable$[ebp]
+  00bd7	89 88 44 0a 00
+	00		 mov	 DWORD PTR [eax+2628], ecx
+
+; 303  : 	percent = 100;
+
+  00bdd	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00be0	c7 02 64 00 00
+	00		 mov	 DWORD PTR [edx], 100	; 00000064H
+
+; 304  :    oldPercent = 100;
+
+  00be6	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00be9	c7 40 04 64 00
+	00 00		 mov	 DWORD PTR [eax+4], 100	; 00000064H
+
+; 305  : 	gray = 0;
+
+  00bf0	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00bf3	c7 41 08 00 00
+	00 00		 mov	 DWORD PTR [ecx+8], 0
+
+; 306  : 	oldGray = 0;
+
+  00bfa	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00bfd	c7 42 0c 00 00
+	00 00		 mov	 DWORD PTR [edx+12], 0
+
+; 307  : 	int i;
+; 308  : 	for (i = 0; i < 236; i++)  {
+
+  00c04	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00c0b	eb 09		 jmp	 SHORT $L58503
+$L58504:
+  00c0d	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00c10	83 c0 01	 add	 eax, 1
+  00c13	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L58503:
+  00c16	81 7d fc ec 00
+	00 00		 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  00c1d	0f 8d a3 00 00
+	00		 jge	 $L58505
+
+; 309  : 		Rgb24 color = graphMgr->GPalette().Current()[i];
+
+  00c23	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00c26	51		 push	 ecx
+  00c27	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00c2d	8b 02		 mov	 eax, DWORD PTR [edx]
+  00c2f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00c35	ff 50 1c	 call	 DWORD PTR [eax+28]
+  00c38	89 45 f0	 mov	 DWORD PTR -16+[ebp], eax
+  00c3b	8b 4d f0	 mov	 ecx, DWORD PTR -16+[ebp]
+  00c3e	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00c40	8b 4d f0	 mov	 ecx, DWORD PTR -16+[ebp]
+  00c43	ff 52 0c	 call	 DWORD PTR [edx+12]
+  00c46	8b c8		 mov	 ecx, eax
+  00c48	e8 00 00 00 00	 call	 ??ASOLPalette@@QBEABVRgb24F@@H@Z ; SOLPalette::operator[]
+  00c4d	66 8b 08	 mov	 cx, WORD PTR [eax]
+  00c50	66 89 4d f8	 mov	 WORD PTR _color$58506[ebp], cx
+  00c54	8a 50 02	 mov	 dl, BYTE PTR [eax+2]
+  00c57	88 55 fa	 mov	 BYTE PTR _color$58506[ebp+2], dl
+
+; 310  : 		colorArray[i] = color;
+
+  00c5a	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00c5d	6b c0 03	 imul	 eax, 3
+  00c60	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c63	8d 94 01 e4 02
+	00 00		 lea	 edx, DWORD PTR [ecx+eax+740]
+  00c6a	66 8b 45 f8	 mov	 ax, WORD PTR _color$58506[ebp]
+  00c6e	66 89 02	 mov	 WORD PTR [edx], ax
+  00c71	8a 4d fa	 mov	 cl, BYTE PTR _color$58506[ebp+2]
+  00c74	88 4a 02	 mov	 BYTE PTR [edx+2], cl
+
+; 311  : 		targetColor[i] = color;
+
+  00c77	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00c7a	6b d2 03	 imul	 edx, 3
+  00c7d	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00c80	8d 4c 10 20	 lea	 ecx, DWORD PTR [eax+edx+32]
+  00c84	66 8b 55 f8	 mov	 dx, WORD PTR _color$58506[ebp]
+  00c88	66 89 11	 mov	 WORD PTR [ecx], dx
+  00c8b	8a 45 fa	 mov	 al, BYTE PTR _color$58506[ebp+2]
+  00c8e	88 41 02	 mov	 BYTE PTR [ecx+2], al
+
+; 312  : 		dist[i] = 0;
+
+  00c91	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00c94	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00c97	c7 84 8a 94 06
+	00 00 00 00 00
+	00		 mov	 DWORD PTR [edx+ecx*4+1684], 0
+
+; 313  : 		remap[i] = i;
+
+  00ca2	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00ca5	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  00cab	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00cae	8a 45 fc	 mov	 al, BYTE PTR _i$[ebp]
+  00cb1	88 04 11	 mov	 BYTE PTR [ecx+edx], al
+
+; 314  : 		colorChanged[i] = True;
+
+  00cb4	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00cb7	03 4d fc	 add	 ecx, DWORD PTR _i$[ebp]
+  00cba	c6 81 a8 05 00
+	00 01		 mov	 BYTE PTR [ecx+1448], 1
+
+; 315  : 	}
+
+  00cc1	e9 47 ff ff ff	 jmp	 $L58504
+$L58505:
+
+; 316  : 	for (i = 236; i < 246; i++)		// ****** ???????  WRONG
+
+  00cc6	c7 45 fc ec 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  00ccd	eb 09		 jmp	 SHORT $L58507
+$L58508:
+  00ccf	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00cd2	83 c2 01	 add	 edx, 1
+  00cd5	89 55 fc	 mov	 DWORD PTR _i$[ebp], edx
+$L58507:
+  00cd8	81 7d fc f6 00
+	00 00		 cmp	 DWORD PTR _i$[ebp], 246	; 000000f6H
+  00cdf	7d 14		 jge	 SHORT $L58509
+
+; 317  : 		remap[i] = i;
+
+  00ce1	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00ce4	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  00cea	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00ced	8a 45 fc	 mov	 al, BYTE PTR _i$[ebp]
+  00cf0	88 04 11	 mov	 BYTE PTR [ecx+edx], al
+  00cf3	eb da		 jmp	 SHORT $L58508
+$L58509:
+
+; 318  : }
+
+  00cf5	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00cf8	8b e5		 mov	 esp, ebp
+  00cfa	5d		 pop	 ebp
+  00cfb	c2 04 00	 ret	 4
+??0SingleRemap@Remap@@QAE@PAE@Z ENDP			; Remap::SingleRemap::SingleRemap
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0Rgb24@@QAE@XZ PROC NEAR				; Rgb24::Rgb24, COMDAT
+
+; 8    : 	Rgb24() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b e5		 mov	 esp, ebp
+  0000c	5d		 pop	 ebp
+  0000d	c3		 ret	 0
+??0Rgb24@@QAE@XZ ENDP					; Rgb24::Rgb24
+_TEXT	ENDS
+;	COMDAT ??ASOLPalette@@QBEABVRgb24F@@H@Z
+_TEXT	SEGMENT
+_i$ = 8
+_this$ = -4
+??ASOLPalette@@QBEABVRgb24F@@H@Z PROC NEAR		; SOLPalette::operator[], COMDAT
+
+; 37   : 	const Rgb24F&	operator[](int i) const			{return colors[i];} 
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _i$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8d 04 81	 lea	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??ASOLPalette@@QBEABVRgb24F@@H@Z ENDP			; SOLPalette::operator[]
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT
+___t$ = 8
+___s$ = 12
+___n$ = 16
+___f$ = 20
+??_H@YGXPAXIHP6EX0@Z@Z PROC NEAR			; `vector constructor iterator', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+$L58518:
+  00003	8b 45 10	 mov	 eax, DWORD PTR ___n$[ebp]
+  00006	83 e8 01	 sub	 eax, 1
+  00009	89 45 10	 mov	 DWORD PTR ___n$[ebp], eax
+  0000c	83 7d 10 00	 cmp	 DWORD PTR ___n$[ebp], 0
+  00010	7c 11		 jl	 SHORT $L58519
+  00012	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  00015	ff 55 14	 call	 DWORD PTR ___f$[ebp]
+  00018	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  0001b	03 4d 0c	 add	 ecx, DWORD PTR ___s$[ebp]
+  0001e	89 4d 08	 mov	 DWORD PTR ___t$[ebp], ecx
+  00021	eb e0		 jmp	 SHORT $L58518
+$L58519:
+  00023	5d		 pop	 ebp
+  00024	c2 10 00	 ret	 16			; 00000010H
+??_H@YGXPAXIHP6EX0@Z@Z ENDP				; `vector constructor iterator'
+_TEXT	ENDS
+PUBLIC	?ByRange@SingleRemap@Remap@@QAEHXZ		; Remap::SingleRemap::ByRange
+_TEXT	SEGMENT
+_this$ = -16
+_changed$ = -4
+_i$ = -8
+_result$58529 = -12
+?ByRange@SingleRemap@Remap@@QAEHXZ PROC NEAR		; Remap::SingleRemap::ByRange
+
+; 324  : {
+
+  00cfe	55		 push	 ebp
+  00cff	8b ec		 mov	 ebp, esp
+  00d01	83 ec 10	 sub	 esp, 16			; 00000010H
+  00d04	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 325  : 	Bool changed = False;
+
+  00d07	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _changed$[ebp], 0
+
+; 326  : 
+; 327  : 	for (int i = 0; i < 236; i++)  {
+
+  00d0e	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00d15	eb 09		 jmp	 SHORT $L58526
+$L58527:
+  00d17	8b 45 f8	 mov	 eax, DWORD PTR _i$[ebp]
+  00d1a	83 c0 01	 add	 eax, 1
+  00d1d	89 45 f8	 mov	 DWORD PTR _i$[ebp], eax
+$L58526:
+  00d20	81 7d f8 ec 00
+	00 00		 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  00d27	7d 68		 jge	 SHORT $L58528
+
+; 328  : 		int result;
+; 329  :       if (start <= i  &&  i <= end)
+
+  00d29	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d2c	8b 51 10	 mov	 edx, DWORD PTR [ecx+16]
+  00d2f	3b 55 f8	 cmp	 edx, DWORD PTR _i$[ebp]
+  00d32	7f 19		 jg	 SHORT $L58530
+  00d34	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00d37	8b 4d f8	 mov	 ecx, DWORD PTR _i$[ebp]
+  00d3a	3b 48 14	 cmp	 ecx, DWORD PTR [eax+20]
+  00d3d	7f 0e		 jg	 SHORT $L58530
+
+; 330  : 			result = i + delta;
+
+  00d3f	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00d42	8b 45 f8	 mov	 eax, DWORD PTR _i$[ebp]
+  00d45	03 42 18	 add	 eax, DWORD PTR [edx+24]
+  00d48	89 45 f4	 mov	 DWORD PTR _result$58529[ebp], eax
+
+; 331  :       else
+
+  00d4b	eb 06		 jmp	 SHORT $L58531
+$L58530:
+
+; 332  : 			result = i;
+
+  00d4d	8b 4d f8	 mov	 ecx, DWORD PTR _i$[ebp]
+  00d50	89 4d f4	 mov	 DWORD PTR _result$58529[ebp], ecx
+$L58531:
+
+; 333  : 
+; 334  : 		if (remap[i] != result)  {
+
+  00d53	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00d56	8b 82 44 0a 00
+	00		 mov	 eax, DWORD PTR [edx+2628]
+  00d5c	8b 4d f8	 mov	 ecx, DWORD PTR _i$[ebp]
+  00d5f	33 d2		 xor	 edx, edx
+  00d61	8a 14 08	 mov	 dl, BYTE PTR [eax+ecx]
+  00d64	3b 55 f4	 cmp	 edx, DWORD PTR _result$58529[ebp]
+  00d67	74 19		 je	 SHORT $L58532
+
+; 335  : 			changed = True;
+
+  00d69	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _changed$[ebp], 1
+
+; 336  : 			remap[i] = result;
+
+  00d70	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00d73	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  00d79	8b 55 f8	 mov	 edx, DWORD PTR _i$[ebp]
+  00d7c	8a 45 f4	 mov	 al, BYTE PTR _result$58529[ebp]
+  00d7f	88 04 11	 mov	 BYTE PTR [ecx+edx], al
+$L58532:
+
+; 338  : 		colorChanged[i] = True; // keep color changed true to assure new remaps are
+
+  00d82	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d85	03 4d f8	 add	 ecx, DWORD PTR _i$[ebp]
+  00d88	c6 81 a8 05 00
+	00 01		 mov	 BYTE PTR [ecx+1448], 1
+
+; 339  :                               // clean
+; 340  : 	}
+
+  00d8f	eb 86		 jmp	 SHORT $L58527
+$L58528:
+
+; 341  : 	return changed;
+
+  00d91	8b 45 fc	 mov	 eax, DWORD PTR _changed$[ebp]
+
+; 342  : }
+
+  00d94	8b e5		 mov	 esp, ebp
+  00d96	5d		 pop	 ebp
+  00d97	c3		 ret	 0
+?ByRange@SingleRemap@Remap@@QAEHXZ ENDP			; Remap::SingleRemap::ByRange
+_TEXT	ENDS
+PUBLIC	?ByPercent@SingleRemap@Remap@@QAEHXZ		; Remap::SingleRemap::ByPercent
+PUBLIC	?Apply@SingleRemap@Remap@@IAEHPAE@Z		; Remap::SingleRemap::Apply
+PUBLIC	??0Rgb24@@QAE@EEE@Z				; Rgb24::Rgb24
+PUBLIC	??9Rgb24@@QBEHABV0@@Z				; Rgb24::operator!=
+EXTRN	_memset:NEAR
+_TEXT	SEGMENT
+_this$ = -272
+_targetChanged$ = -240
+_palette$ = -4
+_i$ = -248
+_color$58542 = -252
+_red$58546 = -256
+_green$58547 = -260
+_blue$58548 = -268
+_newcolor$58553 = -264
+_remapChanged$ = -244
+?ByPercent@SingleRemap@Remap@@QAEHXZ PROC NEAR		; Remap::SingleRemap::ByPercent
+
+; 346  : {
+
+  00d98	55		 push	 ebp
+  00d99	8b ec		 mov	 ebp, esp
+  00d9b	81 ec 14 01 00
+	00		 sub	 esp, 276		; 00000114H
+  00da1	89 8d f0 fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 347  : 	uchar targetChanged[236];
+; 348  : 
+; 349  : 	memset(targetChanged, False, 236);
+
+  00da7	68 ec 00 00 00	 push	 236			; 000000ecH
+  00dac	6a 00		 push	 0
+  00dae	8d 85 10 ff ff
+	ff		 lea	 eax, DWORD PTR _targetChanged$[ebp]
+  00db4	50		 push	 eax
+  00db5	e8 00 00 00 00	 call	 _memset
+  00dba	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 350  : 
+; 351  : 	const SOLPalette& palette = graphMgr->GPalette().Next();
+
+  00dbd	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00dc3	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00dc5	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00dcb	ff 52 1c	 call	 DWORD PTR [edx+28]
+  00dce	89 85 ec fe ff
+	ff		 mov	 DWORD PTR -276+[ebp], eax
+  00dd4	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR -276+[ebp]
+  00dda	8b 10		 mov	 edx, DWORD PTR [eax]
+  00ddc	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR -276+[ebp]
+  00de2	ff 52 14	 call	 DWORD PTR [edx+20]
+  00de5	89 45 fc	 mov	 DWORD PTR _palette$[ebp], eax
+
+; 352  : 	for (int i = 1; i < 236; i++ ) {
+
+  00de8	c7 85 08 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  00df2	eb 0f		 jmp	 SHORT $L58539
+$L58540:
+  00df4	8b 85 08 ff ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00dfa	83 c0 01	 add	 eax, 1
+  00dfd	89 85 08 ff ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L58539:
+  00e03	81 bd 08 ff ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  00e0d	0f 8d e2 01 00
+	00		 jge	 $L58541
+
+; 353  : 		Rgb24 color = palette[i];
+
+  00e13	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00e19	51		 push	 ecx
+  00e1a	8b 4d fc	 mov	 ecx, DWORD PTR _palette$[ebp]
+  00e1d	e8 00 00 00 00	 call	 ??ASOLPalette@@QBEABVRgb24F@@H@Z ; SOLPalette::operator[]
+  00e22	66 8b 10	 mov	 dx, WORD PTR [eax]
+  00e25	66 89 95 04 ff
+	ff ff		 mov	 WORD PTR _color$58542[ebp], dx
+  00e2c	8a 40 02	 mov	 al, BYTE PTR [eax+2]
+  00e2f	88 85 06 ff ff
+	ff		 mov	 BYTE PTR _color$58542[ebp+2], al
+
+; 354  : 
+; 355  : 		if (colorArray[i] != color)  {
+
+  00e35	8d 8d 04 ff ff
+	ff		 lea	 ecx, DWORD PTR _color$58542[ebp]
+  00e3b	51		 push	 ecx
+  00e3c	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00e42	6b d2 03	 imul	 edx, 3
+  00e45	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00e4b	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  00e52	e8 00 00 00 00	 call	 ??9Rgb24@@QBEHABV0@@Z	; Rgb24::operator!=
+  00e57	85 c0		 test	 eax, eax
+  00e59	74 3c		 je	 SHORT $L58543
+
+; 356  : 			colorChanged[i] = True;
+
+  00e5b	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e61	03 8d 08 ff ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  00e67	c6 81 a8 05 00
+	00 01		 mov	 BYTE PTR [ecx+1448], 1
+
+; 357  : 			colorArray[i] = color;
+
+  00e6e	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00e74	6b d2 03	 imul	 edx, 3
+  00e77	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00e7d	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  00e84	66 8b 95 04 ff
+	ff ff		 mov	 dx, WORD PTR _color$58542[ebp]
+  00e8b	66 89 11	 mov	 WORD PTR [ecx], dx
+  00e8e	8a 85 06 ff ff
+	ff		 mov	 al, BYTE PTR _color$58542[ebp+2]
+  00e94	88 41 02	 mov	 BYTE PTR [ecx+2], al
+$L58543:
+
+; 359  : 
+; 360  : 		if (percent != oldPercent  || colorChanged[i])  {
+
+  00e97	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e9d	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00ea3	8b 01		 mov	 eax, DWORD PTR [ecx]
+  00ea5	3b 42 04	 cmp	 eax, DWORD PTR [edx+4]
+  00ea8	75 1c		 jne	 SHORT $L58545
+  00eaa	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00eb0	03 8d 08 ff ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  00eb6	33 d2		 xor	 edx, edx
+  00eb8	8a 91 a8 05 00
+	00		 mov	 dl, BYTE PTR [ecx+1448]
+  00ebe	85 d2		 test	 edx, edx
+  00ec0	0f 84 2a 01 00
+	00		 je	 $L58554
+$L58545:
+
+; 361  : 			int red = color.red * percent / 100;
+
+  00ec6	8b 85 04 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58542[ebp]
+  00ecc	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00ed1	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ed7	0f af 01	 imul	 eax, DWORD PTR [ecx]
+  00eda	99		 cdq
+  00edb	b9 64 00 00 00	 mov	 ecx, 100		; 00000064H
+  00ee0	f7 f9		 idiv	 ecx
+  00ee2	89 85 00 ff ff
+	ff		 mov	 DWORD PTR _red$58546[ebp], eax
+
+; 362  : 			int green = color.green * percent / 100;
+
+  00ee8	8b 85 05 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58542[ebp+1]
+  00eee	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00ef3	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00ef9	0f af 02	 imul	 eax, DWORD PTR [edx]
+  00efc	99		 cdq
+  00efd	b9 64 00 00 00	 mov	 ecx, 100		; 00000064H
+  00f02	f7 f9		 idiv	 ecx
+  00f04	89 85 fc fe ff
+	ff		 mov	 DWORD PTR _green$58547[ebp], eax
+
+; 363  : 			int blue = color.blue * percent / 100;
+
+  00f0a	8b 85 06 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58542[ebp+2]
+  00f10	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00f15	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00f1b	0f af 02	 imul	 eax, DWORD PTR [edx]
+  00f1e	99		 cdq
+  00f1f	b9 64 00 00 00	 mov	 ecx, 100		; 00000064H
+  00f24	f7 f9		 idiv	 ecx
+  00f26	89 85 f4 fe ff
+	ff		 mov	 DWORD PTR _blue$58548[ebp], eax
+
+; 364  : 
+; 365  : 			if (percent > 100)  {
+
+  00f2c	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00f32	83 3a 64	 cmp	 DWORD PTR [edx], 100	; 00000064H
+  00f35	7e 42		 jle	 SHORT $L58552
+
+; 366  : 				if (red > 255)
+
+  00f37	81 bd 00 ff ff
+	ff ff 00 00 00	 cmp	 DWORD PTR _red$58546[ebp], 255 ; 000000ffH
+  00f41	7e 0a		 jle	 SHORT $L58550
+
+; 367  : 					red = 255;
+
+  00f43	c7 85 00 ff ff
+	ff ff 00 00 00	 mov	 DWORD PTR _red$58546[ebp], 255 ; 000000ffH
+$L58550:
+
+; 368  : 				if (green > 255)
+
+  00f4d	81 bd fc fe ff
+	ff ff 00 00 00	 cmp	 DWORD PTR _green$58547[ebp], 255 ; 000000ffH
+  00f57	7e 0a		 jle	 SHORT $L58551
+
+; 369  : 					green = 255;
+
+  00f59	c7 85 fc fe ff
+	ff ff 00 00 00	 mov	 DWORD PTR _green$58547[ebp], 255 ; 000000ffH
+$L58551:
+
+; 370  : 				if (blue > 255)
+
+  00f63	81 bd f4 fe ff
+	ff ff 00 00 00	 cmp	 DWORD PTR _blue$58548[ebp], 255 ; 000000ffH
+  00f6d	7e 0a		 jle	 SHORT $L58552
+
+; 371  : 					blue = 255;
+
+  00f6f	c7 85 f4 fe ff
+	ff ff 00 00 00	 mov	 DWORD PTR _blue$58548[ebp], 255 ; 000000ffH
+$L58552:
+
+; 373  : 
+; 374  : 			Rgb24 newcolor(red, green, blue);
+
+  00f79	8a 85 f4 fe ff
+	ff		 mov	 al, BYTE PTR _blue$58548[ebp]
+  00f7f	50		 push	 eax
+  00f80	8a 8d fc fe ff
+	ff		 mov	 cl, BYTE PTR _green$58547[ebp]
+  00f86	51		 push	 ecx
+  00f87	8a 95 00 ff ff
+	ff		 mov	 dl, BYTE PTR _red$58546[ebp]
+  00f8d	52		 push	 edx
+  00f8e	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _newcolor$58553[ebp]
+  00f94	e8 00 00 00 00	 call	 ??0Rgb24@@QAE@EEE@Z	; Rgb24::Rgb24
+
+; 375  : 			if (targetColor[i] != newcolor)  {
+
+  00f99	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _newcolor$58553[ebp]
+  00f9f	50		 push	 eax
+  00fa0	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00fa6	6b c9 03	 imul	 ecx, 3
+  00fa9	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00faf	8d 4c 0a 20	 lea	 ecx, DWORD PTR [edx+ecx+32]
+  00fb3	e8 00 00 00 00	 call	 ??9Rgb24@@QBEHABV0@@Z	; Rgb24::operator!=
+  00fb8	85 c0		 test	 eax, eax
+  00fba	74 34		 je	 SHORT $L58554
+
+; 376  : 				targetChanged[i] = True;
+
+  00fbc	8b 85 08 ff ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00fc2	c6 84 05 10 ff
+	ff ff 01	 mov	 BYTE PTR _targetChanged$[ebp+eax], 1
+
+; 377  : 				targetColor[i] = newcolor;
+
+  00fca	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00fd0	6b c9 03	 imul	 ecx, 3
+  00fd3	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00fd9	8d 44 0a 20	 lea	 eax, DWORD PTR [edx+ecx+32]
+  00fdd	66 8b 8d f8 fe
+	ff ff		 mov	 cx, WORD PTR _newcolor$58553[ebp]
+  00fe4	66 89 08	 mov	 WORD PTR [eax], cx
+  00fe7	8a 95 fa fe ff
+	ff		 mov	 dl, BYTE PTR _newcolor$58553[ebp+2]
+  00fed	88 50 02	 mov	 BYTE PTR [eax+2], dl
+$L58554:
+
+; 380  : 	}
+
+  00ff0	e9 ff fd ff ff	 jmp	 $L58540
+$L58541:
+
+; 381  : 
+; 382  : 	Bool remapChanged = Apply(targetChanged);
+
+  00ff5	8d 85 10 ff ff
+	ff		 lea	 eax, DWORD PTR _targetChanged$[ebp]
+  00ffb	50		 push	 eax
+  00ffc	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01002	e8 00 00 00 00	 call	 ?Apply@SingleRemap@Remap@@IAEHPAE@Z ; Remap::SingleRemap::Apply
+  01007	89 85 0c ff ff
+	ff		 mov	 DWORD PTR _remapChanged$[ebp], eax
+
+; 383  : 	memset(colorChanged, False, 236);
+
+  0100d	68 ec 00 00 00	 push	 236			; 000000ecH
+  01012	6a 00		 push	 0
+  01014	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0101a	81 c1 a8 05 00
+	00		 add	 ecx, 1448		; 000005a8H
+  01020	51		 push	 ecx
+  01021	e8 00 00 00 00	 call	 _memset
+  01026	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 384  :    oldPercent = percent;
+
+  01029	8b 95 f0 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0102f	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01035	8b 08		 mov	 ecx, DWORD PTR [eax]
+  01037	89 4a 04	 mov	 DWORD PTR [edx+4], ecx
+
+; 385  : 	return remapChanged;
+
+  0103a	8b 85 0c ff ff
+	ff		 mov	 eax, DWORD PTR _remapChanged$[ebp]
+
+; 386  : }
+
+  01040	8b e5		 mov	 esp, ebp
+  01042	5d		 pop	 ebp
+  01043	c3		 ret	 0
+?ByPercent@SingleRemap@Remap@@QAEHXZ ENDP		; Remap::SingleRemap::ByPercent
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT
+_r$ = 8
+_g$ = 12
+_b$ = 16
+_this$ = -4
+??0Rgb24@@QAE@EEE@Z PROC NEAR				; Rgb24::Rgb24, COMDAT
+
+; 7    : 	Rgb24(uchar r, uchar g, uchar b) : red(r), green(g), blue(b) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8a 4d 08	 mov	 cl, BYTE PTR _r$[ebp]
+  0000d	88 08		 mov	 BYTE PTR [eax], cl
+  0000f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00012	8a 45 0c	 mov	 al, BYTE PTR _g$[ebp]
+  00015	88 42 01	 mov	 BYTE PTR [edx+1], al
+  00018	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001b	8a 55 10	 mov	 dl, BYTE PTR _b$[ebp]
+  0001e	88 51 02	 mov	 BYTE PTR [ecx+2], dl
+  00021	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00024	8b e5		 mov	 esp, ebp
+  00026	5d		 pop	 ebp
+  00027	c2 0c 00	 ret	 12			; 0000000cH
+??0Rgb24@@QAE@EEE@Z ENDP				; Rgb24::Rgb24
+_TEXT	ENDS
+;	COMDAT ??9Rgb24@@QBEHABV0@@Z
+_TEXT	SEGMENT
+_src$ = 8
+_this$ = -4
+??9Rgb24@@QBEHABV0@@Z PROC NEAR				; Rgb24::operator!=, COMDAT
+
+; 57   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 58   : 	return red != src.red  ||  green != src.green  || blue != src.blue;
+
+  00009	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	33 c9		 xor	 ecx, ecx
+  0000e	8a 08		 mov	 cl, BYTE PTR [eax]
+  00010	8b 55 08	 mov	 edx, DWORD PTR _src$[ebp]
+  00013	33 c0		 xor	 eax, eax
+  00015	8a 02		 mov	 al, BYTE PTR [edx]
+  00017	3b c8		 cmp	 ecx, eax
+  00019	75 31		 jne	 SHORT $L58855
+  0001b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001e	33 d2		 xor	 edx, edx
+  00020	8a 51 01	 mov	 dl, BYTE PTR [ecx+1]
+  00023	8b 45 08	 mov	 eax, DWORD PTR _src$[ebp]
+  00026	33 c9		 xor	 ecx, ecx
+  00028	8a 48 01	 mov	 cl, BYTE PTR [eax+1]
+  0002b	3b d1		 cmp	 edx, ecx
+  0002d	75 1d		 jne	 SHORT $L58855
+  0002f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00032	33 c0		 xor	 eax, eax
+  00034	8a 42 02	 mov	 al, BYTE PTR [edx+2]
+  00037	8b 4d 08	 mov	 ecx, DWORD PTR _src$[ebp]
+  0003a	33 d2		 xor	 edx, edx
+  0003c	8a 51 02	 mov	 dl, BYTE PTR [ecx+2]
+  0003f	3b c2		 cmp	 eax, edx
+  00041	75 09		 jne	 SHORT $L58855
+  00043	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+  0004a	eb 07		 jmp	 SHORT $L58856
+$L58855:
+  0004c	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+$L58856:
+  00053	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 59   : }
+
+  00056	8b e5		 mov	 esp, ebp
+  00058	5d		 pop	 ebp
+  00059	c2 04 00	 ret	 4
+??9Rgb24@@QBEHABV0@@Z ENDP				; Rgb24::operator!=
+_TEXT	ENDS
+PUBLIC	?ToGray@SingleRemap@Remap@@QAEHXZ		; Remap::SingleRemap::ToGray
+PUBLIC	?Lum@Rgb24@@QBEEXZ				; Rgb24::Lum
+_TEXT	SEGMENT
+_this$ = -276
+_targetChanged$ = -240
+_palette$ = -4
+_i$ = -248
+_color$58565 = -252
+_lum$58569 = -264
+_red$58570 = -256
+_green$58571 = -260
+_blue$58572 = -272
+_newcolor$58573 = -268
+_remapChanged$ = -244
+?ToGray@SingleRemap@Remap@@QAEHXZ PROC NEAR		; Remap::SingleRemap::ToGray
+
+; 391  : {
+
+  01044	55		 push	 ebp
+  01045	8b ec		 mov	 ebp, esp
+  01047	81 ec 18 01 00
+	00		 sub	 esp, 280		; 00000118H
+  0104d	56		 push	 esi
+  0104e	89 8d ec fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 392  : 	uchar targetChanged[236];
+; 393  : 
+; 394  : 	memset(targetChanged, False, 236);
+
+  01054	68 ec 00 00 00	 push	 236			; 000000ecH
+  01059	6a 00		 push	 0
+  0105b	8d 85 10 ff ff
+	ff		 lea	 eax, DWORD PTR _targetChanged$[ebp]
+  01061	50		 push	 eax
+  01062	e8 00 00 00 00	 call	 _memset
+  01067	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 395  : 	const SOLPalette& palette = graphMgr->GPalette().Current();
+
+  0106a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01070	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01072	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01078	ff 52 1c	 call	 DWORD PTR [edx+28]
+  0107b	89 85 e8 fe ff
+	ff		 mov	 DWORD PTR -280+[ebp], eax
+  01081	8b 85 e8 fe ff
+	ff		 mov	 eax, DWORD PTR -280+[ebp]
+  01087	8b 10		 mov	 edx, DWORD PTR [eax]
+  01089	8b 8d e8 fe ff
+	ff		 mov	 ecx, DWORD PTR -280+[ebp]
+  0108f	ff 52 0c	 call	 DWORD PTR [edx+12]
+  01092	89 45 fc	 mov	 DWORD PTR _palette$[ebp], eax
+
+; 396  : 	for (int i = 1; i < 236; i++) {
+
+  01095	c7 85 08 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  0109f	eb 0f		 jmp	 SHORT $L58562
+$L58563:
+  010a1	8b 85 08 ff ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  010a7	83 c0 01	 add	 eax, 1
+  010aa	89 85 08 ff ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L58562:
+  010b0	81 bd 08 ff ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  010ba	0f 8d eb 01 00
+	00		 jge	 $L58564
+
+; 397  : 		Rgb24 color = palette[i];
+
+  010c0	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  010c6	51		 push	 ecx
+  010c7	8b 4d fc	 mov	 ecx, DWORD PTR _palette$[ebp]
+  010ca	e8 00 00 00 00	 call	 ??ASOLPalette@@QBEABVRgb24F@@H@Z ; SOLPalette::operator[]
+  010cf	66 8b 10	 mov	 dx, WORD PTR [eax]
+  010d2	66 89 95 04 ff
+	ff ff		 mov	 WORD PTR _color$58565[ebp], dx
+  010d9	8a 40 02	 mov	 al, BYTE PTR [eax+2]
+  010dc	88 85 06 ff ff
+	ff		 mov	 BYTE PTR _color$58565[ebp+2], al
+
+; 398  : 		if (colorArray[i] != color)  {
+
+  010e2	8d 8d 04 ff ff
+	ff		 lea	 ecx, DWORD PTR _color$58565[ebp]
+  010e8	51		 push	 ecx
+  010e9	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  010ef	6b d2 03	 imul	 edx, 3
+  010f2	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  010f8	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  010ff	e8 00 00 00 00	 call	 ??9Rgb24@@QBEHABV0@@Z	; Rgb24::operator!=
+  01104	85 c0		 test	 eax, eax
+  01106	74 3c		 je	 SHORT $L58566
+
+; 399  : 			colorChanged[i] = True;
+
+  01108	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0110e	03 8d 08 ff ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  01114	c6 81 a8 05 00
+	00 01		 mov	 BYTE PTR [ecx+1448], 1
+
+; 400  : 			colorArray[i] = color;
+
+  0111b	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01121	6b d2 03	 imul	 edx, 3
+  01124	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0112a	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  01131	66 8b 95 04 ff
+	ff ff		 mov	 dx, WORD PTR _color$58565[ebp]
+  01138	66 89 11	 mov	 WORD PTR [ecx], dx
+  0113b	8a 85 06 ff ff
+	ff		 mov	 al, BYTE PTR _color$58565[ebp+2]
+  01141	88 41 02	 mov	 BYTE PTR [ecx+2], al
+$L58566:
+
+; 402  : 
+; 403  :       if (gray != oldGray  || colorChanged[i]) {
+
+  01144	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0114a	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01150	8b 41 08	 mov	 eax, DWORD PTR [ecx+8]
+  01153	3b 42 0c	 cmp	 eax, DWORD PTR [edx+12]
+  01156	75 1c		 jne	 SHORT $L58568
+  01158	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0115e	03 8d 08 ff ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  01164	33 d2		 xor	 edx, edx
+  01166	8a 91 a8 05 00
+	00		 mov	 dl, BYTE PTR [ecx+1448]
+  0116c	85 d2		 test	 edx, edx
+  0116e	0f 84 32 01 00
+	00		 je	 $L58574
+$L58568:
+
+; 404  :    		int lum = color.Lum();
+
+  01174	8d 8d 04 ff ff
+	ff		 lea	 ecx, DWORD PTR _color$58565[ebp]
+  0117a	e8 00 00 00 00	 call	 ?Lum@Rgb24@@QBEEXZ	; Rgb24::Lum
+  0117f	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  01184	89 85 f8 fe ff
+	ff		 mov	 DWORD PTR _lum$58569[ebp], eax
+
+; 405  : 	   	int red = color.red - ((color.red - lum) * gray / 100);
+
+  0118a	8b 8d 04 ff ff
+	ff		 mov	 ecx, DWORD PTR _color$58565[ebp]
+  01190	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  01196	8b 85 04 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58565[ebp]
+  0119c	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  011a1	2b 85 f8 fe ff
+	ff		 sub	 eax, DWORD PTR _lum$58569[ebp]
+  011a7	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  011ad	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  011b1	99		 cdq
+  011b2	be 64 00 00 00	 mov	 esi, 100		; 00000064H
+  011b7	f7 fe		 idiv	 esi
+  011b9	2b c8		 sub	 ecx, eax
+  011bb	89 8d 00 ff ff
+	ff		 mov	 DWORD PTR _red$58570[ebp], ecx
+
+; 406  : 		   int green = color.green - ((color.green - lum) * gray / 100);
+
+  011c1	8b 8d 05 ff ff
+	ff		 mov	 ecx, DWORD PTR _color$58565[ebp+1]
+  011c7	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  011cd	8b 85 05 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58565[ebp+1]
+  011d3	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  011d8	2b 85 f8 fe ff
+	ff		 sub	 eax, DWORD PTR _lum$58569[ebp]
+  011de	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  011e4	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  011e8	99		 cdq
+  011e9	be 64 00 00 00	 mov	 esi, 100		; 00000064H
+  011ee	f7 fe		 idiv	 esi
+  011f0	2b c8		 sub	 ecx, eax
+  011f2	89 8d fc fe ff
+	ff		 mov	 DWORD PTR _green$58571[ebp], ecx
+
+; 407  :    		int blue = color.blue - ((color.blue - lum) * gray / 100);
+
+  011f8	8b 8d 06 ff ff
+	ff		 mov	 ecx, DWORD PTR _color$58565[ebp+2]
+  011fe	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  01204	8b 85 06 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58565[ebp+2]
+  0120a	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  0120f	2b 85 f8 fe ff
+	ff		 sub	 eax, DWORD PTR _lum$58569[ebp]
+  01215	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0121b	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  0121f	99		 cdq
+  01220	be 64 00 00 00	 mov	 esi, 100		; 00000064H
+  01225	f7 fe		 idiv	 esi
+  01227	2b c8		 sub	 ecx, eax
+  01229	89 8d f0 fe ff
+	ff		 mov	 DWORD PTR _blue$58572[ebp], ecx
+
+; 408  : 
+; 409  : 	   	Rgb24 newcolor(red, green, blue);
+
+  0122f	8a 85 f0 fe ff
+	ff		 mov	 al, BYTE PTR _blue$58572[ebp]
+  01235	50		 push	 eax
+  01236	8a 8d fc fe ff
+	ff		 mov	 cl, BYTE PTR _green$58571[ebp]
+  0123c	51		 push	 ecx
+  0123d	8a 95 00 ff ff
+	ff		 mov	 dl, BYTE PTR _red$58570[ebp]
+  01243	52		 push	 edx
+  01244	8d 8d f4 fe ff
+	ff		 lea	 ecx, DWORD PTR _newcolor$58573[ebp]
+  0124a	e8 00 00 00 00	 call	 ??0Rgb24@@QAE@EEE@Z	; Rgb24::Rgb24
+
+; 410  : 		   if (targetColor[i] != newcolor)  {
+
+  0124f	8d 85 f4 fe ff
+	ff		 lea	 eax, DWORD PTR _newcolor$58573[ebp]
+  01255	50		 push	 eax
+  01256	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0125c	6b c9 03	 imul	 ecx, 3
+  0125f	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01265	8d 4c 0a 20	 lea	 ecx, DWORD PTR [edx+ecx+32]
+  01269	e8 00 00 00 00	 call	 ??9Rgb24@@QBEHABV0@@Z	; Rgb24::operator!=
+  0126e	85 c0		 test	 eax, eax
+  01270	74 34		 je	 SHORT $L58574
+
+; 411  : 			   targetChanged[i] = True;
+
+  01272	8b 85 08 ff ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01278	c6 84 05 10 ff
+	ff ff 01	 mov	 BYTE PTR _targetChanged$[ebp+eax], 1
+
+; 412  : 			   targetColor[i] = newcolor;
+
+  01280	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01286	6b c9 03	 imul	 ecx, 3
+  01289	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0128f	8d 44 0a 20	 lea	 eax, DWORD PTR [edx+ecx+32]
+  01293	66 8b 8d f4 fe
+	ff ff		 mov	 cx, WORD PTR _newcolor$58573[ebp]
+  0129a	66 89 08	 mov	 WORD PTR [eax], cx
+  0129d	8a 95 f6 fe ff
+	ff		 mov	 dl, BYTE PTR _newcolor$58573[ebp+2]
+  012a3	88 50 02	 mov	 BYTE PTR [eax+2], dl
+$L58574:
+
+; 415  : 	}
+
+  012a6	e9 f6 fd ff ff	 jmp	 $L58563
+$L58564:
+
+; 416  : 
+; 417  : 	Bool remapChanged = Apply(targetChanged);
+
+  012ab	8d 85 10 ff ff
+	ff		 lea	 eax, DWORD PTR _targetChanged$[ebp]
+  012b1	50		 push	 eax
+  012b2	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  012b8	e8 00 00 00 00	 call	 ?Apply@SingleRemap@Remap@@IAEHPAE@Z ; Remap::SingleRemap::Apply
+  012bd	89 85 0c ff ff
+	ff		 mov	 DWORD PTR _remapChanged$[ebp], eax
+
+; 418  : 	memset(colorChanged, False, 236);
+
+  012c3	68 ec 00 00 00	 push	 236			; 000000ecH
+  012c8	6a 00		 push	 0
+  012ca	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  012d0	81 c1 a8 05 00
+	00		 add	 ecx, 1448		; 000005a8H
+  012d6	51		 push	 ecx
+  012d7	e8 00 00 00 00	 call	 _memset
+  012dc	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 419  :    oldGray = gray;
+
+  012df	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  012e5	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  012eb	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  012ee	89 4a 0c	 mov	 DWORD PTR [edx+12], ecx
+
+; 420  : 	return remapChanged;
+
+  012f1	8b 85 0c ff ff
+	ff		 mov	 eax, DWORD PTR _remapChanged$[ebp]
+
+; 421  : }
+
+  012f7	5e		 pop	 esi
+  012f8	8b e5		 mov	 esp, ebp
+  012fa	5d		 pop	 ebp
+  012fb	c3		 ret	 0
+?ToGray@SingleRemap@Remap@@QAEHXZ ENDP			; Remap::SingleRemap::ToGray
+_TEXT	ENDS
+;	COMDAT ?Lum@Rgb24@@QBEEXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Lum@Rgb24@@QBEEXZ PROC NEAR				; Rgb24::Lum, COMDAT
+
+; 63   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 64   : 	return (uchar) (((red * 77L) + (green * 151L) + (blue * 28L)) >> 8);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	33 c9		 xor	 ecx, ecx
+  0000c	8a 08		 mov	 cl, BYTE PTR [eax]
+  0000e	8b c1		 mov	 eax, ecx
+  00010	6b c0 4d	 imul	 eax, 77			; 0000004dH
+  00013	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00016	33 c9		 xor	 ecx, ecx
+  00018	8a 4a 01	 mov	 cl, BYTE PTR [edx+1]
+  0001b	69 c9 97 00 00
+	00		 imul	 ecx, 151		; 00000097H
+  00021	03 c1		 add	 eax, ecx
+  00023	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00026	33 c9		 xor	 ecx, ecx
+  00028	8a 4a 02	 mov	 cl, BYTE PTR [edx+2]
+  0002b	6b c9 1c	 imul	 ecx, 28			; 0000001cH
+  0002e	03 c1		 add	 eax, ecx
+  00030	c1 f8 08	 sar	 eax, 8
+
+; 65   : }
+
+  00033	8b e5		 mov	 esp, ebp
+  00035	5d		 pop	 ebp
+  00036	c3		 ret	 0
+?Lum@Rgb24@@QBEEXZ ENDP					; Rgb24::Lum
+_TEXT	ENDS
+PUBLIC	?ToPercentGray@SingleRemap@Remap@@QAEHXZ	; Remap::SingleRemap::ToPercentGray
+_TEXT	SEGMENT
+_this$ = -276
+_targetChanged$ = -240
+_i$ = -248
+_palette$ = -4
+_color$58585 = -252
+_lum$58589 = -264
+_red$58590 = -256
+_green$58591 = -260
+_blue$58592 = -272
+_newcolor$58597 = -268
+_remapChanged$ = -244
+?ToPercentGray@SingleRemap@Remap@@QAEHXZ PROC NEAR	; Remap::SingleRemap::ToPercentGray
+
+; 426  : {
+
+  012fc	55		 push	 ebp
+  012fd	8b ec		 mov	 ebp, esp
+  012ff	81 ec 18 01 00
+	00		 sub	 esp, 280		; 00000118H
+  01305	56		 push	 esi
+  01306	89 8d ec fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 427  : 	uchar targetChanged[236];
+; 428  : 	int i;
+; 429  : 
+; 430  : 	memset(targetChanged, False, 236);
+
+  0130c	68 ec 00 00 00	 push	 236			; 000000ecH
+  01311	6a 00		 push	 0
+  01313	8d 85 10 ff ff
+	ff		 lea	 eax, DWORD PTR _targetChanged$[ebp]
+  01319	50		 push	 eax
+  0131a	e8 00 00 00 00	 call	 _memset
+  0131f	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 431  : 	const SOLPalette& palette = graphMgr->GPalette().Current();
+
+  01322	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01328	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0132a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01330	ff 52 1c	 call	 DWORD PTR [edx+28]
+  01333	89 85 e8 fe ff
+	ff		 mov	 DWORD PTR -280+[ebp], eax
+  01339	8b 85 e8 fe ff
+	ff		 mov	 eax, DWORD PTR -280+[ebp]
+  0133f	8b 10		 mov	 edx, DWORD PTR [eax]
+  01341	8b 8d e8 fe ff
+	ff		 mov	 ecx, DWORD PTR -280+[ebp]
+  01347	ff 52 0c	 call	 DWORD PTR [edx+12]
+  0134a	89 45 fc	 mov	 DWORD PTR _palette$[ebp], eax
+
+; 432  : 	for (i = 1; i < 236; i++) {
+
+  0134d	c7 85 08 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  01357	eb 0f		 jmp	 SHORT $L58582
+$L58583:
+  01359	8b 85 08 ff ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0135f	83 c0 01	 add	 eax, 1
+  01362	89 85 08 ff ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L58582:
+  01368	81 bd 08 ff ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  01372	0f 8d 6a 02 00
+	00		 jge	 $L58584
+
+; 433  : 		Rgb24 color = palette[i];
+
+  01378	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0137e	51		 push	 ecx
+  0137f	8b 4d fc	 mov	 ecx, DWORD PTR _palette$[ebp]
+  01382	e8 00 00 00 00	 call	 ??ASOLPalette@@QBEABVRgb24F@@H@Z ; SOLPalette::operator[]
+  01387	66 8b 10	 mov	 dx, WORD PTR [eax]
+  0138a	66 89 95 04 ff
+	ff ff		 mov	 WORD PTR _color$58585[ebp], dx
+  01391	8a 40 02	 mov	 al, BYTE PTR [eax+2]
+  01394	88 85 06 ff ff
+	ff		 mov	 BYTE PTR _color$58585[ebp+2], al
+
+; 434  : 		if (colorArray[i] != color)  {
+
+  0139a	8d 8d 04 ff ff
+	ff		 lea	 ecx, DWORD PTR _color$58585[ebp]
+  013a0	51		 push	 ecx
+  013a1	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  013a7	6b d2 03	 imul	 edx, 3
+  013aa	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  013b0	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  013b7	e8 00 00 00 00	 call	 ??9Rgb24@@QBEHABV0@@Z	; Rgb24::operator!=
+  013bc	85 c0		 test	 eax, eax
+  013be	74 3c		 je	 SHORT $L58586
+
+; 435  : 			colorChanged[i] = True;
+
+  013c0	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  013c6	03 8d 08 ff ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  013cc	c6 81 a8 05 00
+	00 01		 mov	 BYTE PTR [ecx+1448], 1
+
+; 436  : 			colorArray[i] = color;
+
+  013d3	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  013d9	6b d2 03	 imul	 edx, 3
+  013dc	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  013e2	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  013e9	66 8b 95 04 ff
+	ff ff		 mov	 dx, WORD PTR _color$58585[ebp]
+  013f0	66 89 11	 mov	 WORD PTR [ecx], dx
+  013f3	8a 85 06 ff ff
+	ff		 mov	 al, BYTE PTR _color$58585[ebp+2]
+  013f9	88 41 02	 mov	 BYTE PTR [ecx+2], al
+$L58586:
+
+; 438  : 
+; 439  :       if (percent != oldPercent || gray != oldGray  || colorChanged[i]) {
+
+  013fc	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01402	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01408	8b 01		 mov	 eax, DWORD PTR [ecx]
+  0140a	3b 42 04	 cmp	 eax, DWORD PTR [edx+4]
+  0140d	75 30		 jne	 SHORT $L58588
+  0140f	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01415	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0141b	8b 41 08	 mov	 eax, DWORD PTR [ecx+8]
+  0141e	3b 42 0c	 cmp	 eax, DWORD PTR [edx+12]
+  01421	75 1c		 jne	 SHORT $L58588
+  01423	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01429	03 8d 08 ff ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  0142f	33 d2		 xor	 edx, edx
+  01431	8a 91 a8 05 00
+	00		 mov	 dl, BYTE PTR [ecx+1448]
+  01437	85 d2		 test	 edx, edx
+  01439	0f 84 9e 01 00
+	00		 je	 $L58598
+$L58588:
+
+; 440  :    		int lum = color.Lum();
+
+  0143f	8d 8d 04 ff ff
+	ff		 lea	 ecx, DWORD PTR _color$58585[ebp]
+  01445	e8 00 00 00 00	 call	 ?Lum@Rgb24@@QBEEXZ	; Rgb24::Lum
+  0144a	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  0144f	89 85 f8 fe ff
+	ff		 mov	 DWORD PTR _lum$58589[ebp], eax
+
+; 441  : 			lum = lum * percent / 100;
+
+  01455	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0145b	8b 8d f8 fe ff
+	ff		 mov	 ecx, DWORD PTR _lum$58589[ebp]
+  01461	0f af 08	 imul	 ecx, DWORD PTR [eax]
+  01464	8b c1		 mov	 eax, ecx
+  01466	99		 cdq
+  01467	b9 64 00 00 00	 mov	 ecx, 100		; 00000064H
+  0146c	f7 f9		 idiv	 ecx
+  0146e	89 85 f8 fe ff
+	ff		 mov	 DWORD PTR _lum$58589[ebp], eax
+
+; 442  : 	   	int red = color.red - ((color.red - lum) * gray / 100);
+
+  01474	8b 8d 04 ff ff
+	ff		 mov	 ecx, DWORD PTR _color$58585[ebp]
+  0147a	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  01480	8b 85 04 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58585[ebp]
+  01486	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  0148b	2b 85 f8 fe ff
+	ff		 sub	 eax, DWORD PTR _lum$58589[ebp]
+  01491	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01497	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  0149b	99		 cdq
+  0149c	be 64 00 00 00	 mov	 esi, 100		; 00000064H
+  014a1	f7 fe		 idiv	 esi
+  014a3	2b c8		 sub	 ecx, eax
+  014a5	89 8d 00 ff ff
+	ff		 mov	 DWORD PTR _red$58590[ebp], ecx
+
+; 443  : 		   int green = color.green - ((color.green - lum) * gray / 100);
+
+  014ab	8b 8d 05 ff ff
+	ff		 mov	 ecx, DWORD PTR _color$58585[ebp+1]
+  014b1	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  014b7	8b 85 05 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58585[ebp+1]
+  014bd	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  014c2	2b 85 f8 fe ff
+	ff		 sub	 eax, DWORD PTR _lum$58589[ebp]
+  014c8	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  014ce	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  014d2	99		 cdq
+  014d3	be 64 00 00 00	 mov	 esi, 100		; 00000064H
+  014d8	f7 fe		 idiv	 esi
+  014da	2b c8		 sub	 ecx, eax
+  014dc	89 8d fc fe ff
+	ff		 mov	 DWORD PTR _green$58591[ebp], ecx
+
+; 444  :    		int blue = color.blue - ((color.blue - lum) * gray / 100);
+
+  014e2	8b 8d 06 ff ff
+	ff		 mov	 ecx, DWORD PTR _color$58585[ebp+2]
+  014e8	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  014ee	8b 85 06 ff ff
+	ff		 mov	 eax, DWORD PTR _color$58585[ebp+2]
+  014f4	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  014f9	2b 85 f8 fe ff
+	ff		 sub	 eax, DWORD PTR _lum$58589[ebp]
+  014ff	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01505	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  01509	99		 cdq
+  0150a	be 64 00 00 00	 mov	 esi, 100		; 00000064H
+  0150f	f7 fe		 idiv	 esi
+  01511	2b c8		 sub	 ecx, eax
+  01513	89 8d f0 fe ff
+	ff		 mov	 DWORD PTR _blue$58592[ebp], ecx
+
+; 445  : 
+; 446  : 			if (percent > 100)  {
+
+  01519	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0151f	83 38 64	 cmp	 DWORD PTR [eax], 100	; 00000064H
+  01522	7e 42		 jle	 SHORT $L58596
+
+; 447  : 				if (red > 255)
+
+  01524	81 bd 00 ff ff
+	ff ff 00 00 00	 cmp	 DWORD PTR _red$58590[ebp], 255 ; 000000ffH
+  0152e	7e 0a		 jle	 SHORT $L58594
+
+; 448  : 					red = 255;
+
+  01530	c7 85 00 ff ff
+	ff ff 00 00 00	 mov	 DWORD PTR _red$58590[ebp], 255 ; 000000ffH
+$L58594:
+
+; 449  : 				if (green > 255)
+
+  0153a	81 bd fc fe ff
+	ff ff 00 00 00	 cmp	 DWORD PTR _green$58591[ebp], 255 ; 000000ffH
+  01544	7e 0a		 jle	 SHORT $L58595
+
+; 450  : 					green = 255;
+
+  01546	c7 85 fc fe ff
+	ff ff 00 00 00	 mov	 DWORD PTR _green$58591[ebp], 255 ; 000000ffH
+$L58595:
+
+; 451  : 				if (blue > 255)
+
+  01550	81 bd f0 fe ff
+	ff ff 00 00 00	 cmp	 DWORD PTR _blue$58592[ebp], 255 ; 000000ffH
+  0155a	7e 0a		 jle	 SHORT $L58596
+
+; 452  : 					blue = 255;
+
+  0155c	c7 85 f0 fe ff
+	ff ff 00 00 00	 mov	 DWORD PTR _blue$58592[ebp], 255 ; 000000ffH
+$L58596:
+
+; 454  : 
+; 455  : 	   	Rgb24 newcolor(red, green, blue);
+
+  01566	8a 8d f0 fe ff
+	ff		 mov	 cl, BYTE PTR _blue$58592[ebp]
+  0156c	51		 push	 ecx
+  0156d	8a 95 fc fe ff
+	ff		 mov	 dl, BYTE PTR _green$58591[ebp]
+  01573	52		 push	 edx
+  01574	8a 85 00 ff ff
+	ff		 mov	 al, BYTE PTR _red$58590[ebp]
+  0157a	50		 push	 eax
+  0157b	8d 8d f4 fe ff
+	ff		 lea	 ecx, DWORD PTR _newcolor$58597[ebp]
+  01581	e8 00 00 00 00	 call	 ??0Rgb24@@QAE@EEE@Z	; Rgb24::Rgb24
+
+; 456  : 		   if (targetColor[i] != newcolor)  {
+
+  01586	8d 8d f4 fe ff
+	ff		 lea	 ecx, DWORD PTR _newcolor$58597[ebp]
+  0158c	51		 push	 ecx
+  0158d	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01593	6b d2 03	 imul	 edx, 3
+  01596	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0159c	8d 4c 10 20	 lea	 ecx, DWORD PTR [eax+edx+32]
+  015a0	e8 00 00 00 00	 call	 ??9Rgb24@@QBEHABV0@@Z	; Rgb24::operator!=
+  015a5	85 c0		 test	 eax, eax
+  015a7	74 34		 je	 SHORT $L58598
+
+; 457  : 			   targetChanged[i] = True;
+
+  015a9	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  015af	c6 84 0d 10 ff
+	ff ff 01	 mov	 BYTE PTR _targetChanged$[ebp+ecx], 1
+
+; 458  : 			   targetColor[i] = newcolor;
+
+  015b7	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  015bd	6b d2 03	 imul	 edx, 3
+  015c0	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  015c6	8d 4c 10 20	 lea	 ecx, DWORD PTR [eax+edx+32]
+  015ca	66 8b 95 f4 fe
+	ff ff		 mov	 dx, WORD PTR _newcolor$58597[ebp]
+  015d1	66 89 11	 mov	 WORD PTR [ecx], dx
+  015d4	8a 85 f6 fe ff
+	ff		 mov	 al, BYTE PTR _newcolor$58597[ebp+2]
+  015da	88 41 02	 mov	 BYTE PTR [ecx+2], al
+$L58598:
+
+; 461  : 	}
+
+  015dd	e9 77 fd ff ff	 jmp	 $L58583
+$L58584:
+
+; 462  : 
+; 463  : 	Bool remapChanged = Apply(targetChanged);
+
+  015e2	8d 8d 10 ff ff
+	ff		 lea	 ecx, DWORD PTR _targetChanged$[ebp]
+  015e8	51		 push	 ecx
+  015e9	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  015ef	e8 00 00 00 00	 call	 ?Apply@SingleRemap@Remap@@IAEHPAE@Z ; Remap::SingleRemap::Apply
+  015f4	89 85 0c ff ff
+	ff		 mov	 DWORD PTR _remapChanged$[ebp], eax
+
+; 464  : 	memset(colorChanged, False, 236);
+
+  015fa	68 ec 00 00 00	 push	 236			; 000000ecH
+  015ff	6a 00		 push	 0
+  01601	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01607	81 c2 a8 05 00
+	00		 add	 edx, 1448		; 000005a8H
+  0160d	52		 push	 edx
+  0160e	e8 00 00 00 00	 call	 _memset
+  01613	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 465  :    oldPercent = percent; 
+
+  01616	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0161c	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01622	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01624	89 50 04	 mov	 DWORD PTR [eax+4], edx
+
+; 466  :    oldGray = gray;
+
+  01627	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0162d	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01633	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  01636	89 50 0c	 mov	 DWORD PTR [eax+12], edx
+
+; 467  : 	return remapChanged;
+
+  01639	8b 85 0c ff ff
+	ff		 mov	 eax, DWORD PTR _remapChanged$[ebp]
+
+; 468  : }
+
+  0163f	5e		 pop	 esi
+  01640	8b e5		 mov	 esp, ebp
+  01642	5d		 pop	 ebp
+  01643	c3		 ret	 0
+?ToPercentGray@SingleRemap@Remap@@QAEHXZ ENDP		; Remap::SingleRemap::ToPercentGray
+_TEXT	ENDS
+PUBLIC	?Dist@Rgb24@@QBEHABV1@@Z			; Rgb24::Dist
+EXTRN	?Match@SOLPalette@@QBEHABVRgb24@@HPAHPBE@Z:NEAR	; SOLPalette::Match
+EXTRN	?WING@@3HA:DWORD				; WING
+xdata$x	SEGMENT
+$T58868	DD	019930520H
+	DD	01H
+	DD	FLAT:$T58870
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T58870	DD	0ffffffffH
+	DD	FLAT:$L58866
+xdata$x	ENDS
+_TEXT	SEGMENT
+_targetChanged$ = 8
+_this$ = -540
+_realIndex$ = -500
+_colorForbidden$ = -256
+_i$ = -260
+_cycleMap$ = -504
+_newcolors$ = -20
+_newCount$ = -264
+_changed$ = -16
+_distance$58629 = -512
+_result$58633 = -508
+_j$58636 = -516
+_distance$58640 = -524
+_result$58644 = -520
+$T58861 = -528
+$T58862 = -532
+$T58865 = -536
+__$EHRec$ = -12
+?Apply@SingleRemap@Remap@@IAEHPAE@Z PROC NEAR		; Remap::SingleRemap::Apply
+
+; 473  : {
+
+  01644	55		 push	 ebp
+  01645	8b ec		 mov	 ebp, esp
+  01647	6a ff		 push	 -1
+  01649	68 00 00 00 00	 push	 $L58869
+  0164e	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  01654	50		 push	 eax
+  01655	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  0165c	81 ec 20 02 00
+	00		 sub	 esp, 544		; 00000220H
+  01662	89 8d e4 fd ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 474  : 	uchar realIndex[236];
+; 475  : 	uchar colorForbidden[236];
+; 476  : 	int i;
+; 477  : 
+; 478  :    const uchar* cycleMap = graphMgr->GPalette().CycleMap();
+
+  01668	a1 00 00 00 00	 mov	 eax, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  0166d	8b 10		 mov	 edx, DWORD PTR [eax]
+  0166f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01675	ff 52 1c	 call	 DWORD PTR [edx+28]
+  01678	89 85 e0 fd ff
+	ff		 mov	 DWORD PTR -544+[ebp], eax
+  0167e	8b 85 e0 fd ff
+	ff		 mov	 eax, DWORD PTR -544+[ebp]
+  01684	8b 10		 mov	 edx, DWORD PTR [eax]
+  01686	8b 8d e0 fd ff
+	ff		 mov	 ecx, DWORD PTR -544+[ebp]
+  0168c	ff 52 18	 call	 DWORD PTR [edx+24]
+  0168f	89 85 08 fe ff
+	ff		 mov	 DWORD PTR _cycleMap$[ebp], eax
+
+; 479  : 	memset(colorForbidden, False, 236);
+
+  01695	68 ec 00 00 00	 push	 236			; 000000ecH
+  0169a	6a 00		 push	 0
+  0169c	8d 85 00 ff ff
+	ff		 lea	 eax, DWORD PTR _colorForbidden$[ebp]
+  016a2	50		 push	 eax
+  016a3	e8 00 00 00 00	 call	 _memset
+  016a8	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 480  : 	if (forbiddenCount)
+
+  016ab	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?forbiddenCount@Remap@@2HA, 0 ; Remap::forbiddenCount
+  016b2	74 1f		 je	 SHORT $L58608
+
+; 481  : 		memset(colorForbidden + forbiddenStart, True, forbiddenCount);
+
+  016b4	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?forbiddenCount@Remap@@2HA ; Remap::forbiddenCount
+  016ba	51		 push	 ecx
+  016bb	6a 01		 push	 1
+  016bd	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?forbiddenStart@Remap@@2HA ; Remap::forbiddenStart
+  016c3	8d 84 15 00 ff
+	ff ff		 lea	 eax, DWORD PTR _colorForbidden$[ebp+edx]
+  016ca	50		 push	 eax
+  016cb	e8 00 00 00 00	 call	 _memset
+  016d0	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L58608:
+
+; 482  : 
+; 483  : 	for (i = 0; i < 236; i++)  {
+
+  016d3	c7 85 fc fe ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  016dd	eb 0f		 jmp	 SHORT $L58609
+$L58610:
+  016df	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  016e5	83 c1 01	 add	 ecx, 1
+  016e8	89 8d fc fe ff
+	ff		 mov	 DWORD PTR _i$[ebp], ecx
+$L58609:
+  016ee	81 bd fc fe ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  016f8	7d 24		 jge	 SHORT $L58611
+
+; 484  : 		if (cycleMap[i])
+
+  016fa	8b 95 08 fe ff
+	ff		 mov	 edx, DWORD PTR _cycleMap$[ebp]
+  01700	03 95 fc fe ff
+	ff		 add	 edx, DWORD PTR _i$[ebp]
+  01706	33 c0		 xor	 eax, eax
+  01708	8a 02		 mov	 al, BYTE PTR [edx]
+  0170a	85 c0		 test	 eax, eax
+  0170c	74 0e		 je	 SHORT $L58612
+
+; 485  : 			colorForbidden[i] = True;
+
+  0170e	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01714	c6 84 0d 00 ff
+	ff ff 01	 mov	 BYTE PTR _colorForbidden$[ebp+ecx], 1
+$L58612:
+
+; 486  : 	}
+
+  0171c	eb c1		 jmp	 SHORT $L58610
+$L58611:
+
+; 487  : 
+; 488  : 
+; 489  : 	//  Update the distances on everyone whose 
+; 490  : 	Rgb24* newcolors = New Rgb24[236];
+
+  0171e	68 c4 02 00 00	 push	 708			; 000002c4H
+  01723	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  01728	83 c4 04	 add	 esp, 4
+  0172b	89 85 ec fd ff
+	ff		 mov	 DWORD PTR $T58862[ebp], eax
+  01731	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  01738	83 bd ec fd ff
+	ff 00		 cmp	 DWORD PTR $T58862[ebp], 0
+  0173f	74 26		 je	 SHORT $L58863
+  01741	68 00 00 00 00	 push	 OFFSET FLAT:??0Rgb24@@QAE@XZ ; Rgb24::Rgb24
+  01746	68 ec 00 00 00	 push	 236			; 000000ecH
+  0174b	6a 03		 push	 3
+  0174d	8b 95 ec fd ff
+	ff		 mov	 edx, DWORD PTR $T58862[ebp]
+  01753	52		 push	 edx
+  01754	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+  01759	8b 85 ec fd ff
+	ff		 mov	 eax, DWORD PTR $T58862[ebp]
+  0175f	89 85 dc fd ff
+	ff		 mov	 DWORD PTR -548+[ebp], eax
+  01765	eb 0a		 jmp	 SHORT $L58864
+$L58863:
+  01767	c7 85 dc fd ff
+	ff 00 00 00 00	 mov	 DWORD PTR -548+[ebp], 0
+$L58864:
+  01771	8b 8d dc fd ff
+	ff		 mov	 ecx, DWORD PTR -548+[ebp]
+  01777	89 8d f0 fd ff
+	ff		 mov	 DWORD PTR $T58861[ebp], ecx
+  0177d	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  01784	8b 95 f0 fd ff
+	ff		 mov	 edx, DWORD PTR $T58861[ebp]
+  0178a	89 55 ec	 mov	 DWORD PTR _newcolors$[ebp], edx
+
+; 491  : 	int newCount= 0;
+
+  0178d	c7 85 f8 fe ff
+	ff 00 00 00 00	 mov	 DWORD PTR _newCount$[ebp], 0
+
+; 492  : 	for (i = 1; i < 236; i++)  {
+
+  01797	c7 85 fc fe ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  017a1	eb 0f		 jmp	 SHORT $L58620
+$L58621:
+  017a3	8b 85 fc fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  017a9	83 c0 01	 add	 eax, 1
+  017ac	89 85 fc fe ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L58620:
+  017b2	81 bd fc fe ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  017bc	0f 8d 82 00 00
+	00		 jge	 $L58622
+
+; 493  : 		if (colorChanged[i]  &&  !colorForbidden[i])  {
+
+  017c2	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  017c8	03 8d fc fe ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  017ce	33 d2		 xor	 edx, edx
+  017d0	8a 91 a8 05 00
+	00		 mov	 dl, BYTE PTR [ecx+1448]
+  017d6	85 d2		 test	 edx, edx
+  017d8	74 65		 je	 SHORT $L58623
+  017da	8b 85 fc fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  017e0	33 c9		 xor	 ecx, ecx
+  017e2	8a 8c 05 00 ff
+	ff ff		 mov	 cl, BYTE PTR _colorForbidden$[ebp+eax]
+  017e9	85 c9		 test	 ecx, ecx
+  017eb	75 52		 jne	 SHORT $L58623
+
+; 494  : 			newcolors[newCount] = colorArray[i];
+
+  017ed	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  017f3	6b d2 03	 imul	 edx, 3
+  017f6	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  017fc	8d 8c 10 e4 02
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+740]
+  01803	8b 95 f8 fe ff
+	ff		 mov	 edx, DWORD PTR _newCount$[ebp]
+  01809	6b d2 03	 imul	 edx, 3
+  0180c	8b 45 ec	 mov	 eax, DWORD PTR _newcolors$[ebp]
+  0180f	03 c2		 add	 eax, edx
+  01811	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  01814	66 89 10	 mov	 WORD PTR [eax], dx
+  01817	8a 49 02	 mov	 cl, BYTE PTR [ecx+2]
+  0181a	88 48 02	 mov	 BYTE PTR [eax+2], cl
+
+; 495  : 			realIndex[newCount] = i;
+
+  0181d	8b 95 f8 fe ff
+	ff		 mov	 edx, DWORD PTR _newCount$[ebp]
+  01823	8a 85 fc fe ff
+	ff		 mov	 al, BYTE PTR _i$[ebp]
+  01829	88 84 15 0c fe
+	ff ff		 mov	 BYTE PTR _realIndex$[ebp+edx], al
+
+; 496  : 			newCount++;
+
+  01830	8b 8d f8 fe ff
+	ff		 mov	 ecx, DWORD PTR _newCount$[ebp]
+  01836	83 c1 01	 add	 ecx, 1
+  01839	89 8d f8 fe ff
+	ff		 mov	 DWORD PTR _newCount$[ebp], ecx
+$L58623:
+
+; 498  : 	}
+
+  0183f	e9 5f ff ff ff	 jmp	 $L58621
+$L58622:
+
+; 499  : 
+; 500  : 	Bool changed = False;
+
+  01844	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR _changed$[ebp], 0
+
+; 501  : 	if (!WING) {
+
+  0184b	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?WING@@3HA, 0	; WING
+  01852	0f 85 ef 01 00
+	00		 jne	 $L58625
+
+; 502  : 		for (i = 1; i < 236; i++)  {
+
+  01858	c7 85 fc fe ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  01862	eb 0f		 jmp	 SHORT $L58626
+$L58627:
+  01864	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0186a	83 c2 01	 add	 edx, 1
+  0186d	89 95 fc fe ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L58626:
+  01873	81 bd fc fe ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  0187d	0f 8d bf 01 00
+	00		 jge	 $L58628
+
+; 503  : 
+; 504  : 			int distance;
+; 505  : 			//	 If the color and remap color didn't change, check new list only
+; 506  : 			if (!targetChanged[i]  &&  !colorChanged[remap[i]])  {
+
+  01883	8b 45 08	 mov	 eax, DWORD PTR _targetChanged$[ebp]
+  01886	03 85 fc fe ff
+	ff		 add	 eax, DWORD PTR _i$[ebp]
+  0188c	33 c9		 xor	 ecx, ecx
+  0188e	8a 08		 mov	 cl, BYTE PTR [eax]
+  01890	85 c9		 test	 ecx, ecx
+  01892	75 2c		 jne	 SHORT $L58630
+  01894	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0189a	8b 82 44 0a 00
+	00		 mov	 eax, DWORD PTR [edx+2628]
+  018a0	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  018a6	33 d2		 xor	 edx, edx
+  018a8	8a 14 08	 mov	 dl, BYTE PTR [eax+ecx]
+  018ab	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  018b1	33 c9		 xor	 ecx, ecx
+  018b3	8a 8c 10 a8 05
+	00 00		 mov	 cl, BYTE PTR [eax+edx+1448]
+  018ba	85 c9		 test	 ecx, ecx
+  018bc	75 02		 jne	 SHORT $L58630
+
+; 507  : 				//  NEW **** Ignore search for better - has failed KQ7 - DF - 10/26/94
+; 508  : 				continue;
+
+  018be	eb a4		 jmp	 SHORT $L58627
+$L58630:
+
+; 510  : 
+; 511  : 			//  If they both changed and within previous tolerance, don't search
+; 512  : 			if (targetChanged[i]  &&  colorChanged[remap[i]])  {
+
+  018c0	8b 55 08	 mov	 edx, DWORD PTR _targetChanged$[ebp]
+  018c3	03 95 fc fe ff
+	ff		 add	 edx, DWORD PTR _i$[ebp]
+  018c9	33 c0		 xor	 eax, eax
+  018cb	8a 02		 mov	 al, BYTE PTR [edx]
+  018cd	85 c0		 test	 eax, eax
+  018cf	0f 84 9a 00 00
+	00		 je	 $L58632
+  018d5	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  018db	8b 91 44 0a 00
+	00		 mov	 edx, DWORD PTR [ecx+2628]
+  018e1	8b 85 fc fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  018e7	33 c9		 xor	 ecx, ecx
+  018e9	8a 0c 02	 mov	 cl, BYTE PTR [edx+eax]
+  018ec	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  018f2	33 c0		 xor	 eax, eax
+  018f4	8a 84 0a a8 05
+	00 00		 mov	 al, BYTE PTR [edx+ecx+1448]
+  018fb	85 c0		 test	 eax, eax
+  018fd	74 70		 je	 SHORT $L58632
+
+; 513  : 				if (dist[i] < 100  &&  targetColor[i].Dist(colorArray[remap[i]]) <= dist[i])  {
+
+  018ff	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01905	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0190b	83 bc 8a 94 06
+	00 00 64	 cmp	 DWORD PTR [edx+ecx*4+1684], 100 ; 00000064H
+  01913	7d 5a		 jge	 SHORT $L58632
+  01915	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0191b	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  01921	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01927	33 c0		 xor	 eax, eax
+  01929	8a 04 11	 mov	 al, BYTE PTR [ecx+edx]
+  0192c	6b c0 03	 imul	 eax, 3
+  0192f	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01935	8d 94 01 e4 02
+	00 00		 lea	 edx, DWORD PTR [ecx+eax+740]
+  0193c	52		 push	 edx
+  0193d	8b 85 fc fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01943	6b c0 03	 imul	 eax, 3
+  01946	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0194c	8d 4c 01 20	 lea	 ecx, DWORD PTR [ecx+eax+32]
+  01950	e8 00 00 00 00	 call	 ?Dist@Rgb24@@QBEHABV1@@Z ; Rgb24::Dist
+  01955	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0195b	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01961	3b 84 91 94 06
+	00 00		 cmp	 eax, DWORD PTR [ecx+edx*4+1684]
+  01968	7f 05		 jg	 SHORT $L58632
+
+; 514  : 					continue;
+
+  0196a	e9 f5 fe ff ff	 jmp	 $L58627
+$L58632:
+
+; 517  : 
+; 518  : 			int result = graphMgr->GPalette().Next().Match(targetColor[i], dist[i], &distance, colorForbidden);
+
+  0196f	8d 95 00 ff ff
+	ff		 lea	 edx, DWORD PTR _colorForbidden$[ebp]
+  01975	52		 push	 edx
+  01976	8d 85 00 fe ff
+	ff		 lea	 eax, DWORD PTR _distance$58629[ebp]
+  0197c	50		 push	 eax
+  0197d	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01983	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01989	8b 84 8a 94 06
+	00 00		 mov	 eax, DWORD PTR [edx+ecx*4+1684]
+  01990	50		 push	 eax
+  01991	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01997	6b c9 03	 imul	 ecx, 3
+  0199a	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  019a0	8d 44 0a 20	 lea	 eax, DWORD PTR [edx+ecx+32]
+  019a4	50		 push	 eax
+  019a5	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  019ab	8b 11		 mov	 edx, DWORD PTR [ecx]
+  019ad	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  019b3	ff 52 1c	 call	 DWORD PTR [edx+28]
+  019b6	89 85 d8 fd ff
+	ff		 mov	 DWORD PTR -552+[ebp], eax
+  019bc	8b 85 d8 fd ff
+	ff		 mov	 eax, DWORD PTR -552+[ebp]
+  019c2	8b 10		 mov	 edx, DWORD PTR [eax]
+  019c4	8b 8d d8 fd ff
+	ff		 mov	 ecx, DWORD PTR -552+[ebp]
+  019ca	ff 52 14	 call	 DWORD PTR [edx+20]
+  019cd	8b c8		 mov	 ecx, eax
+  019cf	e8 00 00 00 00	 call	 ?Match@SOLPalette@@QBEHABVRgb24@@HPAHPBE@Z ; SOLPalette::Match
+  019d4	89 85 04 fe ff
+	ff		 mov	 DWORD PTR _result$58633[ebp], eax
+
+; 519  : 			if (result != -1  &&  remap[i] != result)  {
+
+  019da	83 bd 04 fe ff
+	ff ff		 cmp	 DWORD PTR _result$58633[ebp], -1
+  019e1	74 5a		 je	 SHORT $L58634
+  019e3	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  019e9	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  019ef	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  019f5	33 c0		 xor	 eax, eax
+  019f7	8a 04 11	 mov	 al, BYTE PTR [ecx+edx]
+  019fa	3b 85 04 fe ff
+	ff		 cmp	 eax, DWORD PTR _result$58633[ebp]
+  01a00	74 3b		 je	 SHORT $L58634
+
+; 520  : 				changed = True;
+
+  01a02	c7 45 f0 01 00
+	00 00		 mov	 DWORD PTR _changed$[ebp], 1
+
+; 521  : 				remap[i] = result;
+
+  01a09	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01a0f	8b 91 44 0a 00
+	00		 mov	 edx, DWORD PTR [ecx+2628]
+  01a15	8b 85 fc fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01a1b	8a 8d 04 fe ff
+	ff		 mov	 cl, BYTE PTR _result$58633[ebp]
+  01a21	88 0c 02	 mov	 BYTE PTR [edx+eax], cl
+
+; 522  : 				dist[i] = distance;
+
+  01a24	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01a2a	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01a30	8b 8d 00 fe ff
+	ff		 mov	 ecx, DWORD PTR _distance$58629[ebp]
+  01a36	89 8c 90 94 06
+	00 00		 mov	 DWORD PTR [eax+edx*4+1684], ecx
+$L58634:
+
+; 524  : 		}
+
+  01a3d	e9 22 fe ff ff	 jmp	 $L58627
+$L58628:
+
+; 526  : 	else {
+
+  01a42	e9 04 02 00 00	 jmp	 $L58639
+$L58625:
+
+; 527  : 		int	j;
+; 528  : 		for (i = 1; i < 236; i++)  {
+
+  01a47	c7 85 fc fe ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  01a51	eb 0f		 jmp	 SHORT $L58637
+$L58638:
+  01a53	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01a59	83 c2 01	 add	 edx, 1
+  01a5c	89 95 fc fe ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L58637:
+  01a62	81 bd fc fe ff
+	ff ec 00 00 00	 cmp	 DWORD PTR _i$[ebp], 236	; 000000ecH
+  01a6c	0f 8d d9 01 00
+	00		 jge	 $L58639
+
+; 529  : 			j = i + PALSHIFT;
+
+  01a72	8b 85 fc fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01a78	83 c0 0a	 add	 eax, 10			; 0000000aH
+  01a7b	89 85 fc fd ff
+	ff		 mov	 DWORD PTR _j$58636[ebp], eax
+
+; 530  : 
+; 531  : 			int distance;
+; 532  : 			//	 If the color and remap color didn't change, check new list only
+; 533  : 			if (!targetChanged[i]  &&  !colorChanged[remap[j] - PALSHIFT])  {
+
+  01a81	8b 4d 08	 mov	 ecx, DWORD PTR _targetChanged$[ebp]
+  01a84	03 8d fc fe ff
+	ff		 add	 ecx, DWORD PTR _i$[ebp]
+  01a8a	33 d2		 xor	 edx, edx
+  01a8c	8a 11		 mov	 dl, BYTE PTR [ecx]
+  01a8e	85 d2		 test	 edx, edx
+  01a90	75 2c		 jne	 SHORT $L58641
+  01a92	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01a98	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  01a9e	8b 95 fc fd ff
+	ff		 mov	 edx, DWORD PTR _j$58636[ebp]
+  01aa4	33 c0		 xor	 eax, eax
+  01aa6	8a 04 11	 mov	 al, BYTE PTR [ecx+edx]
+  01aa9	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01aaf	33 d2		 xor	 edx, edx
+  01ab1	8a 94 01 9e 05
+	00 00		 mov	 dl, BYTE PTR [ecx+eax+1438]
+  01ab8	85 d2		 test	 edx, edx
+  01aba	75 02		 jne	 SHORT $L58641
+
+; 534  : 				//  NEW **** Ignore search for better - has failed KQ7 - DF - 10/26/94
+; 535  : 				continue;
+
+  01abc	eb 95		 jmp	 SHORT $L58638
+$L58641:
+
+; 537  : 
+; 538  : 			//  If they both changed and within previous tolerance, don't search
+; 539  : 			if (targetChanged[i]  &&  colorChanged[remap[j] - PALSHIFT])
+
+  01abe	8b 45 08	 mov	 eax, DWORD PTR _targetChanged$[ebp]
+  01ac1	03 85 fc fe ff
+	ff		 add	 eax, DWORD PTR _i$[ebp]
+  01ac7	33 c9		 xor	 ecx, ecx
+  01ac9	8a 08		 mov	 cl, BYTE PTR [eax]
+  01acb	85 c9		 test	 ecx, ecx
+  01acd	0f 84 9d 00 00
+	00		 je	 $L58643
+  01ad3	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01ad9	8b 82 44 0a 00
+	00		 mov	 eax, DWORD PTR [edx+2628]
+  01adf	8b 8d fc fd ff
+	ff		 mov	 ecx, DWORD PTR _j$58636[ebp]
+  01ae5	33 d2		 xor	 edx, edx
+  01ae7	8a 14 08	 mov	 dl, BYTE PTR [eax+ecx]
+  01aea	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01af0	33 c9		 xor	 ecx, ecx
+  01af2	8a 8c 10 9e 05
+	00 00		 mov	 cl, BYTE PTR [eax+edx+1438]
+  01af9	85 c9		 test	 ecx, ecx
+  01afb	74 73		 je	 SHORT $L58643
+
+; 540  : 				if (dist[i] < 100  &&  targetColor[i].Dist(colorArray[remap[j] - PALSHIFT]) <= dist[i])
+
+  01afd	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01b03	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01b09	83 bc 90 94 06
+	00 00 64	 cmp	 DWORD PTR [eax+edx*4+1684], 100 ; 00000064H
+  01b11	7d 5d		 jge	 SHORT $L58643
+  01b13	8b 8d e4 fd ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01b19	8b 91 44 0a 00
+	00		 mov	 edx, DWORD PTR [ecx+2628]
+  01b1f	8b 85 fc fd ff
+	ff		 mov	 eax, DWORD PTR _j$58636[ebp]
+  01b25	33 c9		 xor	 ecx, ecx
+  01b27	8a 0c 02	 mov	 cl, BYTE PTR [edx+eax]
+  01b2a	83 e9 0a	 sub	 ecx, 10			; 0000000aH
+  01b2d	6b c9 03	 imul	 ecx, 3
+  01b30	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01b36	8d 84 0a e4 02
+	00 00		 lea	 eax, DWORD PTR [edx+ecx+740]
+  01b3d	50		 push	 eax
+  01b3e	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01b44	6b c9 03	 imul	 ecx, 3
+  01b47	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01b4d	8d 4c 0a 20	 lea	 ecx, DWORD PTR [edx+ecx+32]
+  01b51	e8 00 00 00 00	 call	 ?Dist@Rgb24@@QBEHABV1@@Z ; Rgb24::Dist
+  01b56	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01b5c	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01b62	3b 84 8a 94 06
+	00 00		 cmp	 eax, DWORD PTR [edx+ecx*4+1684]
+  01b69	7f 05		 jg	 SHORT $L58643
+
+; 541  : 					continue;
+
+  01b6b	e9 e3 fe ff ff	 jmp	 $L58638
+$L58643:
+
+; 542  : 
+; 543  : 			int result = graphMgr->GPalette().Next().Match(targetColor[i], dist[i], &distance, colorForbidden);
+
+  01b70	8d 85 00 ff ff
+	ff		 lea	 eax, DWORD PTR _colorForbidden$[ebp]
+  01b76	50		 push	 eax
+  01b77	8d 8d f4 fd ff
+	ff		 lea	 ecx, DWORD PTR _distance$58640[ebp]
+  01b7d	51		 push	 ecx
+  01b7e	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01b84	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01b8a	8b 8c 90 94 06
+	00 00		 mov	 ecx, DWORD PTR [eax+edx*4+1684]
+  01b91	51		 push	 ecx
+  01b92	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01b98	6b d2 03	 imul	 edx, 3
+  01b9b	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01ba1	8d 4c 10 20	 lea	 ecx, DWORD PTR [eax+edx+32]
+  01ba5	51		 push	 ecx
+  01ba6	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01bac	8b 02		 mov	 eax, DWORD PTR [edx]
+  01bae	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  01bb4	ff 50 1c	 call	 DWORD PTR [eax+28]
+  01bb7	89 85 d4 fd ff
+	ff		 mov	 DWORD PTR -556+[ebp], eax
+  01bbd	8b 8d d4 fd ff
+	ff		 mov	 ecx, DWORD PTR -556+[ebp]
+  01bc3	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01bc5	8b 8d d4 fd ff
+	ff		 mov	 ecx, DWORD PTR -556+[ebp]
+  01bcb	ff 52 14	 call	 DWORD PTR [edx+20]
+  01bce	8b c8		 mov	 ecx, eax
+  01bd0	e8 00 00 00 00	 call	 ?Match@SOLPalette@@QBEHABVRgb24@@HPAHPBE@Z ; SOLPalette::Match
+  01bd5	89 85 f8 fd ff
+	ff		 mov	 DWORD PTR _result$58644[ebp], eax
+
+; 544  : 			if (result != -1  &&  remap[j] != result + PALSHIFT)  {
+
+  01bdb	83 bd f8 fd ff
+	ff ff		 cmp	 DWORD PTR _result$58644[ebp], -1
+  01be2	74 62		 je	 SHORT $L58645
+  01be4	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01bea	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  01bf0	8b 95 fc fd ff
+	ff		 mov	 edx, DWORD PTR _j$58636[ebp]
+  01bf6	33 c0		 xor	 eax, eax
+  01bf8	8a 04 11	 mov	 al, BYTE PTR [ecx+edx]
+  01bfb	8b 8d f8 fd ff
+	ff		 mov	 ecx, DWORD PTR _result$58644[ebp]
+  01c01	83 c1 0a	 add	 ecx, 10			; 0000000aH
+  01c04	3b c1		 cmp	 eax, ecx
+  01c06	74 3e		 je	 SHORT $L58645
+
+; 545  : 				changed = True;
+
+  01c08	c7 45 f0 01 00
+	00 00		 mov	 DWORD PTR _changed$[ebp], 1
+
+; 546  : 				remap[j] = result + PALSHIFT;
+
+  01c0f	8b 95 f8 fd ff
+	ff		 mov	 edx, DWORD PTR _result$58644[ebp]
+  01c15	83 c2 0a	 add	 edx, 10			; 0000000aH
+  01c18	8b 85 e4 fd ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01c1e	8b 88 44 0a 00
+	00		 mov	 ecx, DWORD PTR [eax+2628]
+  01c24	8b 85 fc fd ff
+	ff		 mov	 eax, DWORD PTR _j$58636[ebp]
+  01c2a	88 14 01	 mov	 BYTE PTR [ecx+eax], dl
+
+; 547  : 				dist[i] = distance;
+
+  01c2d	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01c33	8b 95 e4 fd ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01c39	8b 85 f4 fd ff
+	ff		 mov	 eax, DWORD PTR _distance$58640[ebp]
+  01c3f	89 84 8a 94 06
+	00 00		 mov	 DWORD PTR [edx+ecx*4+1684], eax
+$L58645:
+
+; 549  : 		}
+
+  01c46	e9 08 fe ff ff	 jmp	 $L58638
+$L58639:
+
+; 551  : 
+; 552  : 	delete [] newcolors;
+
+  01c4b	8b 4d ec	 mov	 ecx, DWORD PTR _newcolors$[ebp]
+  01c4e	89 8d e8 fd ff
+	ff		 mov	 DWORD PTR $T58865[ebp], ecx
+  01c54	8b 95 e8 fd ff
+	ff		 mov	 edx, DWORD PTR $T58865[ebp]
+  01c5a	52		 push	 edx
+  01c5b	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  01c60	83 c4 04	 add	 esp, 4
+
+; 553  : 	return changed;
+
+  01c63	8b 45 f0	 mov	 eax, DWORD PTR _changed$[ebp]
+
+; 554  : }
+
+  01c66	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  01c69	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  01c70	8b e5		 mov	 esp, ebp
+  01c72	5d		 pop	 ebp
+  01c73	c2 04 00	 ret	 4
+_TEXT	ENDS
+text$x	SEGMENT
+$L58866:
+  00054	8b 85 ec fd ff
+	ff		 mov	 eax, DWORD PTR $T58862[ebp]
+  0005a	50		 push	 eax
+  0005b	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00060	59		 pop	 ecx
+  00061	c3		 ret	 0
+$L58869:
+  00062	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T58868
+  00067	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?Apply@SingleRemap@Remap@@IAEHPAE@Z ENDP		; Remap::SingleRemap::Apply
+;	COMDAT ?Dist@Rgb24@@QBEHABV1@@Z
+_TEXT	SEGMENT
+_src$ = 8
+_this$ = -12
+_dif$ = -4
+_total$ = -8
+?Dist@Rgb24@@QBEHABV1@@Z PROC NEAR			; Rgb24::Dist, COMDAT
+
+; 69   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 70   : 	int dif = red - src.red;
+
+  00009	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	33 c9		 xor	 ecx, ecx
+  0000e	8a 08		 mov	 cl, BYTE PTR [eax]
+  00010	8b 55 08	 mov	 edx, DWORD PTR _src$[ebp]
+  00013	33 c0		 xor	 eax, eax
+  00015	8a 02		 mov	 al, BYTE PTR [edx]
+  00017	2b c8		 sub	 ecx, eax
+  00019	89 4d fc	 mov	 DWORD PTR _dif$[ebp], ecx
+
+; 71   : 	int total = dif * dif;
+
+  0001c	8b 4d fc	 mov	 ecx, DWORD PTR _dif$[ebp]
+  0001f	0f af 4d fc	 imul	 ecx, DWORD PTR _dif$[ebp]
+  00023	89 4d f8	 mov	 DWORD PTR _total$[ebp], ecx
+
+; 72   : 	dif = green - src.green;
+
+  00026	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00029	33 c0		 xor	 eax, eax
+  0002b	8a 42 01	 mov	 al, BYTE PTR [edx+1]
+  0002e	8b 4d 08	 mov	 ecx, DWORD PTR _src$[ebp]
+  00031	33 d2		 xor	 edx, edx
+  00033	8a 51 01	 mov	 dl, BYTE PTR [ecx+1]
+  00036	2b c2		 sub	 eax, edx
+  00038	89 45 fc	 mov	 DWORD PTR _dif$[ebp], eax
+
+; 73   : 	total += dif * dif;
+
+  0003b	8b 45 fc	 mov	 eax, DWORD PTR _dif$[ebp]
+  0003e	0f af 45 fc	 imul	 eax, DWORD PTR _dif$[ebp]
+  00042	8b 4d f8	 mov	 ecx, DWORD PTR _total$[ebp]
+  00045	03 c8		 add	 ecx, eax
+  00047	89 4d f8	 mov	 DWORD PTR _total$[ebp], ecx
+
+; 74   : 	dif = blue - src.blue;
+
+  0004a	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  0004d	33 c0		 xor	 eax, eax
+  0004f	8a 42 02	 mov	 al, BYTE PTR [edx+2]
+  00052	8b 4d 08	 mov	 ecx, DWORD PTR _src$[ebp]
+  00055	33 d2		 xor	 edx, edx
+  00057	8a 51 02	 mov	 dl, BYTE PTR [ecx+2]
+  0005a	2b c2		 sub	 eax, edx
+  0005c	89 45 fc	 mov	 DWORD PTR _dif$[ebp], eax
+
+; 75   : 	total += dif * dif;
+
+  0005f	8b 45 fc	 mov	 eax, DWORD PTR _dif$[ebp]
+  00062	0f af 45 fc	 imul	 eax, DWORD PTR _dif$[ebp]
+  00066	8b 4d f8	 mov	 ecx, DWORD PTR _total$[ebp]
+  00069	03 c8		 add	 ecx, eax
+  0006b	89 4d f8	 mov	 DWORD PTR _total$[ebp], ecx
+
+; 76   : 
+; 77   : 	return total;
+
+  0006e	8b 45 f8	 mov	 eax, DWORD PTR _total$[ebp]
+
+; 78   : }
+
+  00071	8b e5		 mov	 esp, ebp
+  00073	5d		 pop	 ebp
+  00074	c2 04 00	 ret	 4
+?Dist@Rgb24@@QBEHABV1@@Z ENDP				; Rgb24::Dist
+_TEXT	ENDS
+_DATA	SEGMENT
+$SG58658 DB	'Illegal remap type %d', 00H
+	ORG $+2
+$SG58659 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Remap.'
+	DB	'cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_palChanged$ = 8
+_this$ = -4
+?Update@SingleRemap@Remap@@QAEHH@Z PROC NEAR		; Remap::SingleRemap::Update
+
+; 559  : {
+
+  01c76	55		 push	 ebp
+  01c77	8b ec		 mov	 ebp, esp
+  01c79	51		 push	 ecx
+  01c7a	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 560  : 	if (Remap::updateFlag  ||  palChanged)  {
+
+  01c7d	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?updateFlag@Remap@@2HA, 0 ; Remap::updateFlag
+  01c84	75 0a		 jne	 SHORT $L58652
+  01c86	83 7d 08 00	 cmp	 DWORD PTR _palChanged$[ebp], 0
+  01c8a	0f 84 80 00 00
+	00		 je	 $L58651
+$L58652:
+
+; 561  : 		if (type == REMAP_OFF)
+
+  01c90	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01c93	83 78 1c 00	 cmp	 DWORD PTR [eax+28], 0
+  01c97	75 04		 jne	 SHORT $L58653
+
+; 562  : 			return False;
+
+  01c99	33 c0		 xor	 eax, eax
+  01c9b	eb 75		 jmp	 SHORT $L58650
+$L58653:
+
+; 563  : 		
+; 564  : 		if (type == REMAP_BY_RANGE)
+
+  01c9d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01ca0	83 79 1c 01	 cmp	 DWORD PTR [ecx+28], 1
+  01ca4	75 0a		 jne	 SHORT $L58654
+
+; 565  : 			return ByRange();
+
+  01ca6	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01ca9	e8 00 00 00 00	 call	 ?ByRange@SingleRemap@Remap@@QAEHXZ ; Remap::SingleRemap::ByRange
+  01cae	eb 62		 jmp	 SHORT $L58650
+$L58654:
+
+; 566  : 
+; 567  : 		if (type == REMAP_TO_GRAY)
+
+  01cb0	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  01cb3	83 7a 1c 03	 cmp	 DWORD PTR [edx+28], 3
+  01cb7	75 0a		 jne	 SHORT $L58655
+
+; 568  : 			return ToGray();
+
+  01cb9	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01cbc	e8 00 00 00 00	 call	 ?ToGray@SingleRemap@Remap@@QAEHXZ ; Remap::SingleRemap::ToGray
+  01cc1	eb 4f		 jmp	 SHORT $L58650
+$L58655:
+
+; 569  : 
+; 570  : 		if (type == REMAP_BY_PERCENT)
+
+  01cc3	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01cc6	83 78 1c 02	 cmp	 DWORD PTR [eax+28], 2
+  01cca	75 0a		 jne	 SHORT $L58656
+
+; 571  : 			return ByPercent();
+
+  01ccc	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01ccf	e8 00 00 00 00	 call	 ?ByPercent@SingleRemap@Remap@@QAEHXZ ; Remap::SingleRemap::ByPercent
+  01cd4	eb 3c		 jmp	 SHORT $L58650
+$L58656:
+
+; 572  : 
+; 573  : 		if (type == REMAP_TO_PERCENT_GRAY)
+
+  01cd6	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01cd9	83 79 1c 04	 cmp	 DWORD PTR [ecx+28], 4
+  01cdd	75 0a		 jne	 SHORT $L58657
+
+; 574  : 			return ToPercentGray();
+
+  01cdf	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01ce2	e8 00 00 00 00	 call	 ?ToPercentGray@SingleRemap@Remap@@QAEHXZ ; Remap::SingleRemap::ToPercentGray
+  01ce7	eb 29		 jmp	 SHORT $L58650
+$L58657:
+
+; 575  : 
+; 576  : 	   msgMgr->Fatal(SrcLoc, "Illegal remap type %d", type);
+
+  01ce9	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  01cec	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  01cef	50		 push	 eax
+  01cf0	68 00 00 00 00	 push	 OFFSET FLAT:$SG58658
+  01cf5	68 40 02 00 00	 push	 576			; 00000240H
+  01cfa	68 00 00 00 00	 push	 OFFSET FLAT:$SG58659
+  01cff	6a 61		 push	 97			; 00000061H
+  01d01	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  01d07	51		 push	 ecx
+  01d08	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADH0ZZ ; MsgMgr::Fatal
+  01d0d	83 c4 18	 add	 esp, 24			; 00000018H
+$L58651:
+
+; 578  : 
+; 579  :    return False;
+
+  01d10	33 c0		 xor	 eax, eax
+$L58650:
+
+; 580  : }
+
+  01d12	8b e5		 mov	 esp, ebp
+  01d14	5d		 pop	 ebp
+  01d15	c2 04 00	 ret	 4
+?Update@SingleRemap@Remap@@QAEHH@Z ENDP			; Remap::SingleRemap::Update
+_TEXT	ENDS
+PUBLIC	?Match@SingleRemap@Remap@@QAEHPAVRgb24@@HABV3@HAAH@Z ; Remap::SingleRemap::Match
+PUBLIC	?sqr@@YAHH@Z					; sqr
+_TEXT	SEGMENT
+_colors$ = 8
+_count$ = 12
+_color$ = 16
+_diff$ = 20
+_newDiff$ = 24
+_this$ = -28
+_index$ = -24
+_current$ = -4
+_red$ = -8
+_green$ = -16
+_blue$ = -20
+_i$ = -12
+?Match@SingleRemap@Remap@@QAEHPAVRgb24@@HABV3@HAAH@Z PROC NEAR ; Remap::SingleRemap::Match
+
+; 586  : {
+
+  01d18	55		 push	 ebp
+  01d19	8b ec		 mov	 ebp, esp
+  01d1b	83 ec 1c	 sub	 esp, 28			; 0000001cH
+  01d1e	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 587  : 	int index = -1;
+
+  01d21	c7 45 e8 ff ff
+	ff ff		 mov	 DWORD PTR _index$[ebp], -1
+
+; 588  : 	int current;
+; 589  : 	int red = color.red;
+
+  01d28	8b 45 10	 mov	 eax, DWORD PTR _color$[ebp]
+  01d2b	33 c9		 xor	 ecx, ecx
+  01d2d	8a 08		 mov	 cl, BYTE PTR [eax]
+  01d2f	89 4d f8	 mov	 DWORD PTR _red$[ebp], ecx
+
+; 590  : 	int green = color.green;
+
+  01d32	8b 55 10	 mov	 edx, DWORD PTR _color$[ebp]
+  01d35	33 c0		 xor	 eax, eax
+  01d37	8a 42 01	 mov	 al, BYTE PTR [edx+1]
+  01d3a	89 45 f0	 mov	 DWORD PTR _green$[ebp], eax
+
+; 591  : 	int blue = color.blue;
+
+  01d3d	8b 4d 10	 mov	 ecx, DWORD PTR _color$[ebp]
+  01d40	33 d2		 xor	 edx, edx
+  01d42	8a 51 02	 mov	 dl, BYTE PTR [ecx+2]
+  01d45	89 55 ec	 mov	 DWORD PTR _blue$[ebp], edx
+
+; 592  : 
+; 593  : 	for (int i = 0; i < count; i++) {
+
+  01d48	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  01d4f	eb 09		 jmp	 SHORT $L58677
+$L58678:
+  01d51	8b 45 f4	 mov	 eax, DWORD PTR _i$[ebp]
+  01d54	83 c0 01	 add	 eax, 1
+  01d57	89 45 f4	 mov	 DWORD PTR _i$[ebp], eax
+$L58677:
+  01d5a	8b 4d f4	 mov	 ecx, DWORD PTR _i$[ebp]
+  01d5d	3b 4d 0c	 cmp	 ecx, DWORD PTR _count$[ebp]
+  01d60	0f 8d 8c 00 00
+	00		 jge	 $L58679
+
+; 594  : 		current = sqr((int)(colors[i].red) - red);
+
+  01d66	8b 55 f4	 mov	 edx, DWORD PTR _i$[ebp]
+  01d69	6b d2 03	 imul	 edx, 3
+  01d6c	8b 45 08	 mov	 eax, DWORD PTR _colors$[ebp]
+  01d6f	33 c9		 xor	 ecx, ecx
+  01d71	8a 0c 10	 mov	 cl, BYTE PTR [eax+edx]
+  01d74	2b 4d f8	 sub	 ecx, DWORD PTR _red$[ebp]
+  01d77	51		 push	 ecx
+  01d78	e8 00 00 00 00	 call	 ?sqr@@YAHH@Z		; sqr
+  01d7d	83 c4 04	 add	 esp, 4
+  01d80	89 45 fc	 mov	 DWORD PTR _current$[ebp], eax
+
+; 595  : 		if (diff > current) {
+
+  01d83	8b 55 14	 mov	 edx, DWORD PTR _diff$[ebp]
+  01d86	3b 55 fc	 cmp	 edx, DWORD PTR _current$[ebp]
+  01d89	7e 62		 jle	 SHORT $L58685
+
+; 596  : 			current += sqr((int)(colors[i].green) - green);
+
+  01d8b	8b 45 f4	 mov	 eax, DWORD PTR _i$[ebp]
+  01d8e	6b c0 03	 imul	 eax, 3
+  01d91	8b 4d 08	 mov	 ecx, DWORD PTR _colors$[ebp]
+  01d94	33 d2		 xor	 edx, edx
+  01d96	8a 54 01 01	 mov	 dl, BYTE PTR [ecx+eax+1]
+  01d9a	2b 55 f0	 sub	 edx, DWORD PTR _green$[ebp]
+  01d9d	52		 push	 edx
+  01d9e	e8 00 00 00 00	 call	 ?sqr@@YAHH@Z		; sqr
+  01da3	83 c4 04	 add	 esp, 4
+  01da6	8b 4d fc	 mov	 ecx, DWORD PTR _current$[ebp]
+  01da9	03 c8		 add	 ecx, eax
+  01dab	89 4d fc	 mov	 DWORD PTR _current$[ebp], ecx
+
+; 597  : 			if (diff > current) {
+
+  01dae	8b 55 14	 mov	 edx, DWORD PTR _diff$[ebp]
+  01db1	3b 55 fc	 cmp	 edx, DWORD PTR _current$[ebp]
+  01db4	7e 37		 jle	 SHORT $L58685
+
+; 598  : 				current += sqr((int)(colors[i].blue) - blue);
+
+  01db6	8b 45 f4	 mov	 eax, DWORD PTR _i$[ebp]
+  01db9	6b c0 03	 imul	 eax, 3
+  01dbc	8b 4d 08	 mov	 ecx, DWORD PTR _colors$[ebp]
+  01dbf	33 d2		 xor	 edx, edx
+  01dc1	8a 54 01 02	 mov	 dl, BYTE PTR [ecx+eax+2]
+  01dc5	2b 55 ec	 sub	 edx, DWORD PTR _blue$[ebp]
+  01dc8	52		 push	 edx
+  01dc9	e8 00 00 00 00	 call	 ?sqr@@YAHH@Z		; sqr
+  01dce	83 c4 04	 add	 esp, 4
+  01dd1	8b 4d fc	 mov	 ecx, DWORD PTR _current$[ebp]
+  01dd4	03 c8		 add	 ecx, eax
+  01dd6	89 4d fc	 mov	 DWORD PTR _current$[ebp], ecx
+
+; 599  : 				if (diff > current) {
+
+  01dd9	8b 55 14	 mov	 edx, DWORD PTR _diff$[ebp]
+  01ddc	3b 55 fc	 cmp	 edx, DWORD PTR _current$[ebp]
+  01ddf	7e 0c		 jle	 SHORT $L58685
+
+; 600  : 					diff = current;
+
+  01de1	8b 45 fc	 mov	 eax, DWORD PTR _current$[ebp]
+  01de4	89 45 14	 mov	 DWORD PTR _diff$[ebp], eax
+
+; 601  : 					index = i;
+
+  01de7	8b 4d f4	 mov	 ecx, DWORD PTR _i$[ebp]
+  01dea	89 4d e8	 mov	 DWORD PTR _index$[ebp], ecx
+$L58685:
+
+; 605  : 	}
+
+  01ded	e9 5f ff ff ff	 jmp	 $L58678
+$L58679:
+
+; 606  : 
+; 607  :    newDiff = diff;
+
+  01df2	8b 55 18	 mov	 edx, DWORD PTR _newDiff$[ebp]
+  01df5	8b 45 14	 mov	 eax, DWORD PTR _diff$[ebp]
+  01df8	89 02		 mov	 DWORD PTR [edx], eax
+
+; 608  : 	return index;
+
+  01dfa	8b 45 e8	 mov	 eax, DWORD PTR _index$[ebp]
+
+; 609  : 
+; 610  : }
+
+  01dfd	8b e5		 mov	 esp, ebp
+  01dff	5d		 pop	 ebp
+  01e00	c2 14 00	 ret	 20			; 00000014H
+?Match@SingleRemap@Remap@@QAEHPAVRgb24@@HABV3@HAAH@Z ENDP ; Remap::SingleRemap::Match
+_TEXT	ENDS
+;	COMDAT ?sqr@@YAHH@Z
+_TEXT	SEGMENT
+_i$ = 8
+?sqr@@YAHH@Z PROC NEAR					; sqr, COMDAT
+
+; 582  : inline int sqr(int i) {return i * i;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	8b 45 08	 mov	 eax, DWORD PTR _i$[ebp]
+  00006	0f af 45 08	 imul	 eax, DWORD PTR _i$[ebp]
+  0000a	5d		 pop	 ebp
+  0000b	c3		 ret	 0
+?sqr@@YAHH@Z ENDP					; sqr
+_TEXT	ENDS
+END

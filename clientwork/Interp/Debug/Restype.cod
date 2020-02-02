@@ -1,0 +1,4206 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Restype.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT PARA USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@SOL_ResType@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_ResType@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?fd@SOL_ResType@@1HA				; SOL_ResType::fd
+PUBLIC	?resLength@SOL_ResType@@1HA			; SOL_ResType::resLength
+PUBLIC	?compressedLength@SOL_ResType@@1HA		; SOL_ResType::compressedLength
+PUBLIC	?resOffset@SOL_ResType@@1HA			; SOL_ResType::resOffset
+_BSS	SEGMENT
+?resLength@SOL_ResType@@1HA DD 01H DUP (?)		; SOL_ResType::resLength
+?compressedLength@SOL_ResType@@1HA DD 01H DUP (?)	; SOL_ResType::compressedLength
+?resOffset@SOL_ResType@@1HA DD 01H DUP (?)		; SOL_ResType::resOffset
+_BSS	ENDS
+_DATA	SEGMENT
+?fd@SOL_ResType@@1HA DD 0ffffffffH			; SOL_ResType::fd
+_DATA	ENDS
+PUBLIC	??0SOL_ResType@@QAE@PAD0@Z			; SOL_ResType::SOL_ResType
+PUBLIC	?Check@SOL_ResType@@UAEHG@Z			; SOL_ResType::Check
+PUBLIC	?Close@SOL_ResType@@UBEHH@Z			; SOL_ResType::Close
+PUBLIC	?GetExtension@SOL_ResType@@UBEPBDXZ		; SOL_ResType::GetExtension
+PUBLIC	?IsSupported@SOL_ResType@@UBEHXZ		; SOL_ResType::IsSupported
+PUBLIC	?Load@SOL_ResType@@UAEXAAUResTag@@H@Z		; SOL_ResType::Load
+PUBLIC	?MakeName@SOL_ResType@@UBEXPAD0G@Z		; SOL_ResType::MakeName
+PUBLIC	?MakeWildName@SOL_ResType@@UBEXPAD0@Z		; SOL_ResType::MakeWildName
+PUBLIC	?Open@SOL_ResType@@UAEHGPAD@Z			; SOL_ResType::Open
+PUBLIC	?FindDirEntry@SOL_ResType@@UBEHGPAH@Z		; SOL_ResType::FindDirEntry
+PUBLIC	?FindPatchEntry@SOL_ResType@@UBEHG@Z		; SOL_ResType::FindPatchEntry
+PUBLIC	?CheckPatches@SOL_ResType@@UBEHG@Z		; SOL_ResType::CheckPatches
+PUBLIC	?GetType@SOL_ResType@@UBE?AW4MemType@@XZ	; SOL_ResType::GetType
+PUBLIC	?GetAttrs@SOL_ResType@@UBEIXZ			; SOL_ResType::GetAttrs
+PUBLIC	?ConfirmType@SOL_ResType@@MBEXW4MemType@@@Z	; SOL_ResType::ConfirmType
+PUBLIC	?Decompress@SOL_ResType@@MBEXAAUResTag@@@Z	; SOL_ResType::Decompress
+PUBLIC	?FindPatch36Entry@SOL_ResType@@MBEHPAD@Z	; SOL_ResType::FindPatch36Entry
+PUBLIC	?GetFileSize@SOL_ResType@@MBEJXZ		; SOL_ResType::GetFileSize
+PUBLIC	?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ	; SOL_ResType::GetFileType
+PUBLIC	?MakeName@SOL_ResType@@MBEXPAD00@Z		; SOL_ResType::MakeName
+PUBLIC	?Read@SOL_ResType@@MBEHPAXH@Z			; SOL_ResType::Read
+PUBLIC	?SeekToData@SOL_ResType@@MBEHXZ			; SOL_ResType::SeekToData
+PUBLIC	??_7SOL_ResType@@6B@				; SOL_ResType::`vftable'
+EXTRN	_strcpy:NEAR
+;	COMDAT ??_7SOL_ResType@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Restype.cpp
+CONST	SEGMENT
+??_7SOL_ResType@@6B@ DD FLAT:?Check@SOL_ResType@@UAEHG@Z ; SOL_ResType::`vftable'
+	DD	FLAT:?Close@SOL_ResType@@UBEHH@Z
+	DD	FLAT:?GetExtension@SOL_ResType@@UBEPBDXZ
+	DD	FLAT:?IsSupported@SOL_ResType@@UBEHXZ
+	DD	FLAT:?Load@SOL_ResType@@UAEXAAUResTag@@H@Z
+	DD	FLAT:?MakeName@SOL_ResType@@MBEXPAD00@Z
+	DD	FLAT:?MakeName@SOL_ResType@@UBEXPAD0G@Z
+	DD	FLAT:?MakeWildName@SOL_ResType@@UBEXPAD0@Z
+	DD	FLAT:?Open@SOL_ResType@@UAEHGPAD@Z
+	DD	FLAT:?FindDirEntry@SOL_ResType@@UBEHGPAH@Z
+	DD	FLAT:?FindPatchEntry@SOL_ResType@@UBEHG@Z
+	DD	FLAT:?CheckPatches@SOL_ResType@@UBEHG@Z
+	DD	FLAT:?GetType@SOL_ResType@@UBE?AW4MemType@@XZ
+	DD	FLAT:?GetAttrs@SOL_ResType@@UBEIXZ
+	DD	FLAT:?ConfirmType@SOL_ResType@@MBEXW4MemType@@@Z
+	DD	FLAT:?Decompress@SOL_ResType@@MBEXAAUResTag@@@Z
+	DD	FLAT:?FindPatch36Entry@SOL_ResType@@MBEHPAD@Z
+	DD	FLAT:?GetFileSize@SOL_ResType@@MBEJXZ
+	DD	FLAT:?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+	DD	FLAT:?Read@SOL_ResType@@MBEHPAXH@Z
+	DD	FLAT:?SeekToData@SOL_ResType@@MBEHXZ
+CONST	ENDS
+_TEXT	SEGMENT
+_extension$ = 8
+_label$ = 12
+_this$ = -4
+??0SOL_ResType@@QAE@PAD0@Z PROC NEAR			; SOL_ResType::SOL_ResType
+
+; 105  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 0c	 mov	 ecx, DWORD PTR _label$[ebp]
+  0000d	89 88 08 01 00
+	00		 mov	 DWORD PTR [eax+264], ecx
+  00013	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00016	c7 02 00 00 00
+	00		 mov	 DWORD PTR [edx], OFFSET FLAT:??_7SOL_ResType@@6B@ ; SOL_ResType::`vftable'
+
+; 106  : 	strcpy(ext, extension);
+
+  0001c	8b 45 08	 mov	 eax, DWORD PTR _extension$[ebp]
+  0001f	50		 push	 eax
+  00020	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00023	83 c1 04	 add	 ecx, 4
+  00026	51		 push	 ecx
+  00027	e8 00 00 00 00	 call	 _strcpy
+  0002c	83 c4 08	 add	 esp, 8
+
+; 107  : }
+
+  0002f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00032	8b e5		 mov	 esp, ebp
+  00034	5d		 pop	 ebp
+  00035	c2 08 00	 ret	 8
+??0SOL_ResType@@QAE@PAD0@Z ENDP				; SOL_ResType::SOL_ResType
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetExtension@SOL_ResType@@UBEPBDXZ PROC NEAR		; SOL_ResType::GetExtension, COMDAT
+
+; 34   : 	virtual const char*	GetExtension() const 	{ return ext; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	83 c0 04	 add	 eax, 4
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?GetExtension@SOL_ResType@@UBEPBDXZ ENDP		; SOL_ResType::GetExtension
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsSupported@SOL_ResType@@UBEHXZ PROC NEAR		; SOL_ResType::IsSupported, COMDAT
+
+; 35   : 	virtual Bool			IsSupported() const		{ return *ext != 0; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	0f be 40 04	 movsx	 eax, BYTE PTR [eax+4]
+  0000e	f7 d8		 neg	 eax
+  00010	1b c0		 sbb	 eax, eax
+  00012	f7 d8		 neg	 eax
+  00014	8b e5		 mov	 esp, ebp
+  00016	5d		 pop	 ebp
+  00017	c3		 ret	 0
+?IsSupported@SOL_ResType@@UBEHXZ ENDP			; SOL_ResType::IsSupported
+_TEXT	ENDS
+;	COMDAT ?GetType@SOL_ResType@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetType@SOL_ResType@@UBE?AW4MemType@@XZ PROC NEAR	; SOL_ResType::GetType, COMDAT
+
+; 44   : 	virtual MemType		GetType() const 			{ return MemResNone; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	b8 70 00 00 00	 mov	 eax, 112		; 00000070H
+  0000c	8b e5		 mov	 esp, ebp
+  0000e	5d		 pop	 ebp
+  0000f	c3		 ret	 0
+?GetType@SOL_ResType@@UBE?AW4MemType@@XZ ENDP		; SOL_ResType::GetType
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetAttrs@SOL_ResType@@UBEIXZ PROC NEAR			; SOL_ResType::GetAttrs, COMDAT
+
+; 46   : 								{ return DISCARDABLE | MOVEABLE | CHECKSUMMABLE; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	b8 00 86 00 00	 mov	 eax, 34304		; 00008600H
+  0000c	8b e5		 mov	 esp, ebp
+  0000e	5d		 pop	 ebp
+  0000f	c3		 ret	 0
+?GetAttrs@SOL_ResType@@UBEIXZ ENDP			; SOL_ResType::GetAttrs
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ PROC NEAR	; SOL_ResType::GetFileType, COMDAT
+
+; 53   : 	virtual MemType		GetFileType() const 		{ return GetType(); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 10		 mov	 edx, DWORD PTR [eax]
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	ff 52 30	 call	 DWORD PTR [edx+48]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ ENDP	; SOL_ResType::GetFileType
+_TEXT	ENDS
+_TEXT	SEGMENT
+_resNum$ = 8
+_this$ = -8
+_found$ = -4
+?Check@SOL_ResType@@UAEHG@Z PROC NEAR			; SOL_ResType::Check
+
+; 111  : {
+
+  00038	55		 push	 ebp
+  00039	8b ec		 mov	 ebp, esp
+  0003b	83 ec 08	 sub	 esp, 8
+  0003e	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 112  : 	int	found;
+; 113  : 
+; 114  : 	Close(found = Open(resNum));
+
+  00041	6a 00		 push	 0
+  00043	66 8b 45 08	 mov	 ax, WORD PTR _resNum$[ebp]
+  00047	50		 push	 eax
+  00048	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0004b	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0004d	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00050	ff 52 20	 call	 DWORD PTR [edx+32]
+  00053	89 45 fc	 mov	 DWORD PTR _found$[ebp], eax
+  00056	8b 45 fc	 mov	 eax, DWORD PTR _found$[ebp]
+  00059	50		 push	 eax
+  0005a	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0005d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0005f	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00062	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 115  : 	if (found != -1)
+
+  00065	83 7d fc ff	 cmp	 DWORD PTR _found$[ebp], -1
+  00069	74 07		 je	 SHORT $L53391
+
+; 116  : 		return True;
+
+  0006b	b8 01 00 00 00	 mov	 eax, 1
+  00070	eb 02		 jmp	 SHORT $L53389
+$L53391:
+
+; 117  : 	
+; 118  : //	if ((GetType() == MemResAudio || GetType() == MemResWAVE) &&
+; 119  : //			FindAudEntry(resNum) != -1L)
+; 120  : //		return True;
+; 121  : 
+; 122  : 	return False;
+
+  00072	33 c0		 xor	 eax, eax
+$L53389:
+
+; 123  : }
+
+  00074	8b e5		 mov	 esp, ebp
+  00076	5d		 pop	 ebp
+  00077	c2 04 00	 ret	 4
+?Check@SOL_ResType@@UAEHG@Z ENDP			; SOL_ResType::Check
+_TEXT	ENDS
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+PUBLIC	?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+PUBLIC	??AMemID@@QBEAADI@Z				; MemID::operator[]
+EXTRN	?resMgr@@3PAVResourceMgr@@A:DWORD		; resMgr
+EXTRN	?gFontTable@@3PAPAXA:BYTE			; gFontTable
+EXTRN	?Lock@MemID@@QBEPAXXZ:NEAR			; MemID::Lock
+EXTRN	?SetDiscardable@MemID@@QBEXXZ:NEAR		; MemID::SetDiscardable
+EXTRN	?SetNotDiscardable@MemID@@QBEXXZ:NEAR		; MemID::SetNotDiscardable
+EXTRN	?Read@MemID@@QBEHH@Z:NEAR			; MemID::Read
+EXTRN	?ReadMemID@@YAHHVMemID@@H@Z:NEAR		; ReadMemID
+EXTRN	?Fatal@MsgMgr@@QAAXDPADHHZZ:NEAR		; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+_BSS	SEGMENT
+_volEntryHeader DB 0dH DUP (?)
+_BSS	ENDS
+_DATA	SEGMENT
+$SG53400 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+	ORG $+2
+$SG53407 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+	ORG $+2
+$SG53410 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+	ORG $+2
+$SG53413 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+	ORG $+2
+$SG53416 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_tag$ = 8
+_lock$ = 12
+_this$ = -16
+_attrs$ = -8
+_result$ = -4
+?Load@SOL_ResType@@UAEXAAUResTag@@H@Z PROC NEAR		; SOL_ResType::Load
+
+; 127  : {
+
+  0007a	55		 push	 ebp
+  0007b	8b ec		 mov	 ebp, esp
+  0007d	83 ec 14	 sub	 esp, 20			; 00000014H
+  00080	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 128  : 	MemAttrs attrs = lock ? GetAttrs() & ~MOVEABLE : GetAttrs();
+
+  00083	83 7d 0c 00	 cmp	 DWORD PTR _lock$[ebp], 0
+  00087	74 13		 je	 SHORT $L53800
+  00089	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  0008c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0008e	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00091	ff 52 34	 call	 DWORD PTR [edx+52]
+  00094	80 e4 fd	 and	 ah, -3			; fffffffdH
+  00097	89 45 ec	 mov	 DWORD PTR -20+[ebp], eax
+  0009a	eb 0e		 jmp	 SHORT $L53801
+$L53800:
+  0009c	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  0009f	8b 10		 mov	 edx, DWORD PTR [eax]
+  000a1	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  000a4	ff 52 34	 call	 DWORD PTR [edx+52]
+  000a7	89 45 ec	 mov	 DWORD PTR -20+[ebp], eax
+$L53801:
+  000aa	8b 45 ec	 mov	 eax, DWORD PTR -20+[ebp]
+  000ad	89 45 f8	 mov	 DWORD PTR _attrs$[ebp], eax
+
+; 129  : 	fd = Open(tag.resNum);
+
+  000b0	6a 00		 push	 0
+  000b2	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  000b5	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  000b8	52		 push	 edx
+  000b9	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  000bc	8b 10		 mov	 edx, DWORD PTR [eax]
+  000be	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  000c1	ff 52 20	 call	 DWORD PTR [edx+32]
+  000c4	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+
+; 130  : 
+; 131  : #if 0
+; 132  : 	if (fd == -1 && GetType() == MemResView) {
+; 133  : //* * * LOAD DUMY VIEW 777
+; 134  : 		fd = Open(777);
+; 135  : 		attrs |= SWAPMEMORY;
+; 136  : 	}
+; 137  : #endif
+; 138  : 
+; 139  : 	if (fd == -1) {
+
+  000c9	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  000d0	75 3b		 jne	 SHORT $L53399
+
+; 140  : #ifdef DEBUG
+; 141  : 		Bool tryAgain = True;
+; 142  : 		while (tryAgain) {
+; 143  : 			tryAgain = msgMgr->Alert("Error opening resource %u%s\nUse ENTER to retry\n ESC to quit",tag.resNum,GetExtension());
+; 144  : 			if (tryAgain)
+; 145  : 	  			if ((fd = Open(tag.resNum)) != -1)
+; 146  : 					break;
+; 147  : 		}
+; 148  : #endif
+; 149  : 
+; 150  : 	  	if (fd == -1)
+
+  000d2	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  000d9	75 32		 jne	 SHORT $L53399
+
+; 151  : 			msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+
+  000db	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  000de	8b 10		 mov	 edx, DWORD PTR [eax]
+  000e0	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  000e3	ff 52 08	 call	 DWORD PTR [edx+8]
+  000e6	50		 push	 eax
+  000e7	8b 45 08	 mov	 eax, DWORD PTR _tag$[ebp]
+  000ea	33 c9		 xor	 ecx, ecx
+  000ec	66 8b 08	 mov	 cx, WORD PTR [eax]
+  000ef	51		 push	 ecx
+  000f0	6a 63		 push	 99			; 00000063H
+  000f2	68 97 00 00 00	 push	 151			; 00000097H
+  000f7	68 00 00 00 00	 push	 OFFSET FLAT:$SG53400
+  000fc	6a 61		 push	 97			; 00000061H
+  000fe	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00104	52		 push	 edx
+  00105	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  0010a	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L53399:
+
+; 153  : 	if (GetType() == MemResMap)
+
+  0010d	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00110	8b 10		 mov	 edx, DWORD PTR [eax]
+  00112	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00115	ff 52 30	 call	 DWORD PTR [edx+48]
+  00118	83 f8 10	 cmp	 eax, 16			; 00000010H
+  0011b	75 0b		 jne	 SHORT $L53401
+
+; 154  : 		attrs |= TRANSITORY;
+
+  0011d	8b 45 f8	 mov	 eax, DWORD PTR _attrs$[ebp]
+  00120	0d 00 00 10 00	 or	 eax, 1048576		; 00100000H
+  00125	89 45 f8	 mov	 DWORD PTR _attrs$[ebp], eax
+$L53401:
+
+; 155  : 	tag.id.Get(GetType(), resLength + 1, attrs, tag.resNum, resMgr);
+
+  00128	6a 00		 push	 0
+  0012a	6a 00		 push	 0
+  0012c	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00132	51		 push	 ecx
+  00133	8b 55 08	 mov	 edx, DWORD PTR _tag$[ebp]
+  00136	33 c0		 xor	 eax, eax
+  00138	66 8b 02	 mov	 ax, WORD PTR [edx]
+  0013b	50		 push	 eax
+  0013c	8b 4d f8	 mov	 ecx, DWORD PTR _attrs$[ebp]
+  0013f	51		 push	 ecx
+  00140	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?resLength@SOL_ResType@@1HA ; SOL_ResType::resLength
+  00146	83 c2 01	 add	 edx, 1
+  00149	52		 push	 edx
+  0014a	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  0014d	8b 10		 mov	 edx, DWORD PTR [eax]
+  0014f	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00152	ff 52 30	 call	 DWORD PTR [edx+48]
+  00155	50		 push	 eax
+  00156	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00159	83 c1 02	 add	 ecx, 2
+  0015c	e8 00 00 00 00	 call	 ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+
+; 156  : 
+; 157  : 	int result = 0;
+
+  00161	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _result$[ebp], 0
+
+; 158  : 	if (!resMgr->VolumeOpen(fd)) {
+
+  00168	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  0016d	50		 push	 eax
+  0016e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00174	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00176	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  0017c	ff 52 50	 call	 DWORD PTR [edx+80]
+  0017f	85 c0		 test	 eax, eax
+  00181	75 2b		 jne	 SHORT $L53403
+
+; 159  : 		result = tag.id.Read(fd);
+
+  00183	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00188	50		 push	 eax
+  00189	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0018c	83 c1 02	 add	 ecx, 2
+  0018f	e8 00 00 00 00	 call	 ?Read@MemID@@QBEHH@Z	; MemID::Read
+  00194	89 45 fc	 mov	 DWORD PTR _result$[ebp], eax
+
+; 160  : 		Close(fd);
+
+  00197	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  0019d	51		 push	 ecx
+  0019e	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  001a1	8b 02		 mov	 eax, DWORD PTR [edx]
+  001a3	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  001a6	ff 50 04	 call	 DWORD PTR [eax+4]
+
+; 161  : 	} else if (volEntryHeader.compressUsed == 0x20) {
+
+  001a9	e9 1d 01 00 00	 jmp	 $L53414
+$L53403:
+  001ae	33 c9		 xor	 ecx, ecx
+  001b0	66 8b 0d 0b 00
+	00 00		 mov	 cx, WORD PTR _volEntryHeader+11
+  001b7	83 f9 20	 cmp	 ecx, 32			; 00000020H
+  001ba	75 5f		 jne	 SHORT $L53405
+
+; 162  : 		if(volEntryHeader.resId != tag.resNum)
+
+  001bc	33 d2		 xor	 edx, edx
+  001be	66 8b 15 01 00
+	00 00		 mov	 dx, WORD PTR _volEntryHeader+1
+  001c5	8b 45 08	 mov	 eax, DWORD PTR _tag$[ebp]
+  001c8	33 c9		 xor	 ecx, ecx
+  001ca	66 8b 08	 mov	 cx, WORD PTR [eax]
+  001cd	3b d1		 cmp	 edx, ecx
+  001cf	74 20		 je	 SHORT $L53406
+
+; 163  : 			msgMgr->Fatal(SrcLoc,Msg_ResourceData);
+
+  001d1	68 8e 00 00 00	 push	 142			; 0000008eH
+  001d6	68 a3 00 00 00	 push	 163			; 000000a3H
+  001db	68 00 00 00 00	 push	 OFFSET FLAT:$SG53407
+  001e0	6a 61		 push	 97			; 00000061H
+  001e2	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  001e8	52		 push	 edx
+  001e9	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  001ee	83 c4 14	 add	 esp, 20			; 00000014H
+$L53406:
+
+; 164  : 		tag.id.SetNotDiscardable();
+
+  001f1	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  001f4	83 c1 02	 add	 ecx, 2
+  001f7	e8 00 00 00 00	 call	 ?SetNotDiscardable@MemID@@QBEXXZ ; MemID::SetNotDiscardable
+
+; 165  : 		Decompress(tag);
+
+  001fc	8b 45 08	 mov	 eax, DWORD PTR _tag$[ebp]
+  001ff	50		 push	 eax
+  00200	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00203	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00205	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00208	ff 52 3c	 call	 DWORD PTR [edx+60]
+
+; 166  : 		tag.id.SetDiscardable();
+
+  0020b	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0020e	83 c1 02	 add	 ecx, 2
+  00211	e8 00 00 00 00	 call	 ?SetDiscardable@MemID@@QBEXXZ ; MemID::SetDiscardable
+
+; 167  : 	} else {
+
+  00216	e9 b0 00 00 00	 jmp	 $L53414
+$L53405:
+
+; 168  : 		if(volEntryHeader.resId != tag.resNum)
+
+  0021b	33 c0		 xor	 eax, eax
+  0021d	66 a1 01 00 00
+	00		 mov	 ax, WORD PTR _volEntryHeader+1
+  00223	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00226	33 d2		 xor	 edx, edx
+  00228	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  0022b	3b c2		 cmp	 eax, edx
+  0022d	74 1f		 je	 SHORT $L53409
+
+; 169  : 			msgMgr->Fatal(SrcLoc,Msg_ResourceData);
+
+  0022f	68 8e 00 00 00	 push	 142			; 0000008eH
+  00234	68 a9 00 00 00	 push	 169			; 000000a9H
+  00239	68 00 00 00 00	 push	 OFFSET FLAT:$SG53410
+  0023e	6a 61		 push	 97			; 00000061H
+  00240	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00245	50		 push	 eax
+  00246	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  0024b	83 c4 14	 add	 esp, 20			; 00000014H
+$L53409:
+
+; 170  : 
+; 171  : 		result = ::ReadMemID(fd, tag.id, resLength);
+
+  0024e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resLength@SOL_ResType@@1HA ; SOL_ResType::resLength
+  00254	51		 push	 ecx
+  00255	8b 55 08	 mov	 edx, DWORD PTR _tag$[ebp]
+  00258	83 c2 02	 add	 edx, 2
+  0025b	51		 push	 ecx
+  0025c	8b cc		 mov	 ecx, esp
+  0025e	52		 push	 edx
+  0025f	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00264	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00269	50		 push	 eax
+  0026a	e8 00 00 00 00	 call	 ?ReadMemID@@YAHHVMemID@@H@Z ; ReadMemID
+  0026f	83 c4 0c	 add	 esp, 12			; 0000000cH
+  00272	89 45 fc	 mov	 DWORD PTR _result$[ebp], eax
+
+; 172  : 		if (result != resLength)
+
+  00275	8b 4d fc	 mov	 ecx, DWORD PTR _result$[ebp]
+  00278	3b 0d 00 00 00
+	00		 cmp	 ecx, DWORD PTR ?resLength@SOL_ResType@@1HA ; SOL_ResType::resLength
+  0027e	74 31		 je	 SHORT $L53412
+
+; 173  : 			msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+
+  00280	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00283	8b 02		 mov	 eax, DWORD PTR [edx]
+  00285	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00288	ff 50 08	 call	 DWORD PTR [eax+8]
+  0028b	50		 push	 eax
+  0028c	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0028f	33 d2		 xor	 edx, edx
+  00291	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00294	52		 push	 edx
+  00295	6a 63		 push	 99			; 00000063H
+  00297	68 ad 00 00 00	 push	 173			; 000000adH
+  0029c	68 00 00 00 00	 push	 OFFSET FLAT:$SG53413
+  002a1	6a 61		 push	 97			; 00000061H
+  002a3	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  002a8	50		 push	 eax
+  002a9	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  002ae	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L53412:
+
+; 174  : 		if (tag.id[0] == 0xff) {
+
+  002b1	6a 00		 push	 0
+  002b3	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  002b6	83 c1 02	 add	 ecx, 2
+  002b9	e8 00 00 00 00	 call	 ??AMemID@@QBEAADI@Z	; MemID::operator[]
+  002be	0f be 08	 movsx	 ecx, BYTE PTR [eax]
+  002c1	81 f9 ff 00 00
+	00		 cmp	 ecx, 255		; 000000ffH
+  002c7	75 02		 jne	 SHORT $L53414
+
+; 175  : //			tag.id.Realloc(resLength);
+; 176  : 			return;
+
+  002c9	eb 6c		 jmp	 SHORT $L53396
+$L53414:
+
+; 179  : 
+; 180  : 	if (result == -1)
+
+  002cb	83 7d fc ff	 cmp	 DWORD PTR _result$[ebp], -1
+  002cf	75 31		 jne	 SHORT $L53415
+
+; 181  : 		msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+
+  002d1	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  002d4	8b 02		 mov	 eax, DWORD PTR [edx]
+  002d6	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002d9	ff 50 08	 call	 DWORD PTR [eax+8]
+  002dc	50		 push	 eax
+  002dd	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  002e0	33 d2		 xor	 edx, edx
+  002e2	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  002e5	52		 push	 edx
+  002e6	6a 63		 push	 99			; 00000063H
+  002e8	68 b5 00 00 00	 push	 181			; 000000b5H
+  002ed	68 00 00 00 00	 push	 OFFSET FLAT:$SG53416
+  002f2	6a 61		 push	 97			; 00000061H
+  002f4	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  002f9	50		 push	 eax
+  002fa	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  002ff	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L53415:
+
+; 182  : 
+; 183  : 	if ( GetType() == MemResFont ) {
+
+  00302	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00305	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00307	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0030a	ff 52 30	 call	 DWORD PTR [edx+48]
+  0030d	83 f8 07	 cmp	 eax, 7
+  00310	75 25		 jne	 SHORT $L53417
+
+; 184  : 		tag.id.Lock();
+
+  00312	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00315	83 c1 02	 add	 ecx, 2
+  00318	e8 00 00 00 00	 call	 ?Lock@MemID@@QBEPAXXZ	; MemID::Lock
+
+; 185  : 		gFontTable[tag.resNum] = *tag.id;
+
+  0031d	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00320	83 c1 02	 add	 ecx, 2
+  00323	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  00328	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0032b	33 d2		 xor	 edx, edx
+  0032d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00330	89 04 95 00 00
+	00 00		 mov	 DWORD PTR ?gFontTable@@3PAPAXA[edx*4], eax
+$L53417:
+$L53396:
+
+; 187  : 
+; 188  : //	tag.id.Realloc(resLength);
+; 189  : }
+
+  00337	8b e5		 mov	 esp, ebp
+  00339	5d		 pop	 ebp
+  0033a	c2 08 00	 ret	 8
+?Load@SOL_ResType@@UAEXAAUResTag@@H@Z ENDP		; SOL_ResType::Load
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+EXTRN	?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z:NEAR ; MemoryMgr::Alloc
+EXTRN	_memMgr:DWORD
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT
+_type$ = 8
+_size$ = 12
+_a$ = 16
+_num$ = 20
+_client$ = 24
+_initChar$ = 28
+_h$ = 32
+_this$ = -4
+?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z PROC NEAR ; MemID::Get, COMDAT
+
+; 42   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 43   : 		handle = memMgr->Alloc(type | a, size, num, client, initChar, h);
+
+  00007	8b 45 20	 mov	 eax, DWORD PTR _h$[ebp]
+  0000a	50		 push	 eax
+  0000b	8a 4d 1c	 mov	 cl, BYTE PTR _initChar$[ebp]
+  0000e	51		 push	 ecx
+  0000f	8b 55 18	 mov	 edx, DWORD PTR _client$[ebp]
+  00012	52		 push	 edx
+  00013	8b 45 14	 mov	 eax, DWORD PTR _num$[ebp]
+  00016	50		 push	 eax
+  00017	8b 4d 0c	 mov	 ecx, DWORD PTR _size$[ebp]
+  0001a	51		 push	 ecx
+  0001b	8b 55 08	 mov	 edx, DWORD PTR _type$[ebp]
+  0001e	0b 55 10	 or	 edx, DWORD PTR _a$[ebp]
+  00021	52		 push	 edx
+  00022	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00028	e8 00 00 00 00	 call	 ?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemoryMgr::Alloc
+  0002d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00030	66 89 01	 mov	 WORD PTR [ecx], ax
+
+; 44   : 	}
+
+  00033	8b e5		 mov	 esp, ebp
+  00035	5d		 pop	 ebp
+  00036	c2 1c 00	 ret	 28			; 0000001cH
+?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ENDP ; MemID::Get
+_TEXT	ENDS
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT
+_s$ = 8
+_this$ = -4
+??AMemID@@QBEAADI@Z PROC NEAR				; MemID::operator[], COMDAT
+
+; 103  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 104  : 		return *((char*) memMgr->GetAddr(handle) + s);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+  00019	03 45 08	 add	 eax, DWORD PTR _s$[ebp]
+
+; 105  : 	}
+
+  0001c	8b e5		 mov	 esp, ebp
+  0001e	5d		 pop	 ebp
+  0001f	c2 04 00	 ret	 4
+??AMemID@@QBEAADI@Z ENDP				; MemID::operator[]
+_TEXT	ENDS
+EXTRN	_Initcompress:NEAR
+EXTRN	_Decompress:NEAR
+EXTRN	?GetMemType@MemID@@QBE?AW4MemType@@XZ:NEAR	; MemID::GetMemType
+EXTRN	?Read@@YAHHPAXH@Z:NEAR				; Read
+EXTRN	?Get@ConfigMgr@@QAEHW4Flag@1@@Z:NEAR		; ConfigMgr::Get
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?configMgr@@3PAVConfigMgr@@A:DWORD		; configMgr
+EXTRN	__imp__free:NEAR
+EXTRN	__imp__malloc:NEAR
+_DATA	SEGMENT
+	ORG $+2
+$SG53431 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+	ORG $+2
+$SG53444 DB	'Could not find the file RESSUMS.DAT.  Please check your '
+	DB	'installation and try again.', 00H
+$SG53451 DB	'There was a failure reading a required resource from dis'
+	DB	'k.  The resource on your disk has been corrupted.  You can co'
+	DB	'ntinue to play, but the game may well crash horribly.  Please'
+	DB	' send the following information to our tech support group.', 0aH
+	DB	'resource type = %d, resource id = %d, resource sum = %d, requ'
+	DB	'ired sum = %d', 00H
+$SG53453 DB	'RESSUMS.DAT is corrupted.  Please check your installatio'
+	DB	'n and try again. (%d, %d)', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_tag$ = 8
+_this$ = -64
+_resourceData$ = -12
+_workBuffer$ = -4
+_sum$53433 = -40
+_ptr$53434 = -36
+_i$53435 = -52
+_sumID$53439 = -56
+_sums$53440 = -44
+_count$53441 = -48
+_theSum$53449 = -60
+_in$ = -16
+_out$ = -8
+_destLength$ = -24
+_sourceLength$ = -32
+_flushIt$ = -28
+?Decompress@SOL_ResType@@MBEXAAUResTag@@@Z PROC NEAR	; SOL_ResType::Decompress
+
+; 195  : {
+
+  0033d	55		 push	 ebp
+  0033e	8b ec		 mov	 ebp, esp
+  00340	83 ec 40	 sub	 esp, 64			; 00000040H
+  00343	89 4d c0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 196  : 	int i;
+; 197  : 	char *resourceData = (char *)malloc ( compressedLength );
+
+  00346	a1 00 00 00 00	 mov	 eax, DWORD PTR ?compressedLength@SOL_ResType@@1HA ; SOL_ResType::compressedLength
+  0034b	50		 push	 eax
+  0034c	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__malloc
+  00352	83 c4 04	 add	 esp, 4
+  00355	89 45 f4	 mov	 DWORD PTR _resourceData$[ebp], eax
+
+; 198  : 	char *workBuffer = (char *)malloc ( 11 * 1024 );
+
+  00358	68 00 2c 00 00	 push	 11264			; 00002c00H
+  0035d	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__malloc
+  00363	83 c4 04	 add	 esp, 4
+  00366	89 45 fc	 mov	 DWORD PTR _workBuffer$[ebp], eax
+
+; 199  : 
+; 200  : 	if ( ::Read ( fd, resourceData, compressedLength ) != compressedLength )
+
+  00369	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?compressedLength@SOL_ResType@@1HA ; SOL_ResType::compressedLength
+  0036f	51		 push	 ecx
+  00370	8b 55 f4	 mov	 edx, DWORD PTR _resourceData$[ebp]
+  00373	52		 push	 edx
+  00374	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00379	50		 push	 eax
+  0037a	e8 00 00 00 00	 call	 ?Read@@YAHHPAXH@Z	; Read
+  0037f	83 c4 0c	 add	 esp, 12			; 0000000cH
+  00382	3b 05 00 00 00
+	00		 cmp	 eax, DWORD PTR ?compressedLength@SOL_ResType@@1HA ; SOL_ResType::compressedLength
+  00388	74 32		 je	 SHORT $L53430
+
+; 201  : 		msgMgr->Fatal(SrcLoc, Msg_ResLoadErr, tag.resNum, GetExtension());
+
+  0038a	8b 4d c0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0038d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0038f	8b 4d c0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00392	ff 52 08	 call	 DWORD PTR [edx+8]
+  00395	50		 push	 eax
+  00396	8b 45 08	 mov	 eax, DWORD PTR _tag$[ebp]
+  00399	33 c9		 xor	 ecx, ecx
+  0039b	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0039e	51		 push	 ecx
+  0039f	6a 63		 push	 99			; 00000063H
+  003a1	68 c9 00 00 00	 push	 201			; 000000c9H
+  003a6	68 00 00 00 00	 push	 OFFSET FLAT:$SG53431
+  003ab	6a 61		 push	 97			; 00000061H
+  003ad	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  003b3	52		 push	 edx
+  003b4	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  003b9	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L53430:
+
+; 202  : 
+; 203  : 	// if this for only a resource.win change.
+; 204  : 	//
+; 205  : 	if ( configMgr->Get( configMgr->ResourceChecking ) ) {
+
+  003bc	6a 05		 push	 5
+  003be	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  003c4	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEHW4Flag@1@@Z ; ConfigMgr::Get
+  003c9	85 c0		 test	 eax, eax
+  003cb	0f 84 86 01 00
+	00		 je	 $L53452
+
+; 206  : 		// check the sum on the resource data
+; 207  : 		unsigned short sum = 0;
+
+  003d1	66 c7 45 d8 00
+	00		 mov	 WORD PTR _sum$53433[ebp], 0
+
+; 208  : 		char *ptr = resourceData;
+
+  003d7	8b 45 f4	 mov	 eax, DWORD PTR _resourceData$[ebp]
+  003da	89 45 dc	 mov	 DWORD PTR _ptr$53434[ebp], eax
+
+; 209  : 
+; 210  : 		for ( int i=0; i<compressedLength; i++ )
+
+  003dd	c7 45 cc 00 00
+	00 00		 mov	 DWORD PTR _i$53435[ebp], 0
+  003e4	eb 09		 jmp	 SHORT $L53436
+$L53437:
+  003e6	8b 4d cc	 mov	 ecx, DWORD PTR _i$53435[ebp]
+  003e9	83 c1 01	 add	 ecx, 1
+  003ec	89 4d cc	 mov	 DWORD PTR _i$53435[ebp], ecx
+$L53436:
+  003ef	8b 55 cc	 mov	 edx, DWORD PTR _i$53435[ebp]
+  003f2	3b 15 00 00 00
+	00		 cmp	 edx, DWORD PTR ?compressedLength@SOL_ResType@@1HA ; SOL_ResType::compressedLength
+  003f8	7d 1d		 jge	 SHORT $L53438
+
+; 211  : 			sum += *ptr++;
+
+  003fa	8b 45 dc	 mov	 eax, DWORD PTR _ptr$53434[ebp]
+  003fd	66 0f be 08	 movsx	 cx, BYTE PTR [eax]
+  00401	66 8b 55 d8	 mov	 dx, WORD PTR _sum$53433[ebp]
+  00405	66 03 d1	 add	 dx, cx
+  00408	66 89 55 d8	 mov	 WORD PTR _sum$53433[ebp], dx
+  0040c	8b 45 dc	 mov	 eax, DWORD PTR _ptr$53434[ebp]
+  0040f	83 c0 01	 add	 eax, 1
+  00412	89 45 dc	 mov	 DWORD PTR _ptr$53434[ebp], eax
+  00415	eb cf		 jmp	 SHORT $L53437
+$L53438:
+
+; 212  : 
+; 213  : 		// find the sum data
+; 214  : 		unsigned short *sumID = resMgr->resSumID[tag.id.GetMemType()];
+
+  00417	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0041a	83 c1 02	 add	 ecx, 2
+  0041d	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  00422	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00428	8b 54 81 06	 mov	 edx, DWORD PTR [ecx+eax*4+6]
+  0042c	89 55 c8	 mov	 DWORD PTR _sumID$53439[ebp], edx
+
+; 215  : 		unsigned short *sums = resMgr->resSums[tag.id.GetMemType()];
+
+  0042f	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00432	83 c1 02	 add	 ecx, 2
+  00435	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  0043a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00440	8b 54 81 62	 mov	 edx, DWORD PTR [ecx+eax*4+98]
+  00444	89 55 d4	 mov	 DWORD PTR _sums$53440[ebp], edx
+
+; 216  : 		unsigned short count = resMgr->resCounts[tag.id.GetMemType()];
+
+  00447	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0044a	83 c1 02	 add	 ecx, 2
+  0044d	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  00452	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00458	66 8b 94 41 be
+	00 00 00	 mov	 dx, WORD PTR [ecx+eax*2+190]
+  00460	66 89 55 d0	 mov	 WORD PTR _count$53441[ebp], dx
+
+; 217  : 
+; 218  : 		if ( !sumID || !sums )
+
+  00464	83 7d c8 00	 cmp	 DWORD PTR _sumID$53439[ebp], 0
+  00468	74 06		 je	 SHORT $L53443
+  0046a	83 7d d4 00	 cmp	 DWORD PTR _sums$53440[ebp], 0
+  0046e	75 13		 jne	 SHORT $L53442
+$L53443:
+
+; 219  : 			msgMgr->Fatal ( "Could not find the file RESSUMS.DAT.  Please check your installation and try again." );
+
+  00470	68 00 00 00 00	 push	 OFFSET FLAT:$SG53444
+  00475	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0047a	50		 push	 eax
+  0047b	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00480	83 c4 08	 add	 esp, 8
+$L53442:
+
+; 220  : 
+; 221  : 		for ( i=0; i<count; i++ ) {
+
+  00483	c7 45 cc 00 00
+	00 00		 mov	 DWORD PTR _i$53435[ebp], 0
+  0048a	eb 09		 jmp	 SHORT $L53445
+$L53446:
+  0048c	8b 4d cc	 mov	 ecx, DWORD PTR _i$53435[ebp]
+  0048f	83 c1 01	 add	 ecx, 1
+  00492	89 4d cc	 mov	 DWORD PTR _i$53435[ebp], ecx
+$L53445:
+  00495	8b 55 d0	 mov	 edx, DWORD PTR _count$53441[ebp]
+  00498	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  0049e	39 55 cc	 cmp	 DWORD PTR _i$53435[ebp], edx
+  004a1	7d 7f		 jge	 SHORT $L53447
+
+; 222  : 			if ( sumID[i] == tag.resNum ) {
+
+  004a3	8b 45 cc	 mov	 eax, DWORD PTR _i$53435[ebp]
+  004a6	8b 4d c8	 mov	 ecx, DWORD PTR _sumID$53439[ebp]
+  004a9	33 d2		 xor	 edx, edx
+  004ab	66 8b 14 41	 mov	 dx, WORD PTR [ecx+eax*2]
+  004af	8b 45 08	 mov	 eax, DWORD PTR _tag$[ebp]
+  004b2	33 c9		 xor	 ecx, ecx
+  004b4	66 8b 08	 mov	 cx, WORD PTR [eax]
+  004b7	3b d1		 cmp	 edx, ecx
+  004b9	75 62		 jne	 SHORT $L53448
+
+; 223  : 				unsigned short theSum = sums[i];
+
+  004bb	8b 55 cc	 mov	 edx, DWORD PTR _i$53435[ebp]
+  004be	8b 45 d4	 mov	 eax, DWORD PTR _sums$53440[ebp]
+  004c1	66 8b 0c 50	 mov	 cx, WORD PTR [eax+edx*2]
+  004c5	66 89 4d c4	 mov	 WORD PTR _theSum$53449[ebp], cx
+
+; 224  : 
+; 225  : 				if ( sum != theSum )
+
+  004c9	8b 55 d8	 mov	 edx, DWORD PTR _sum$53433[ebp]
+  004cc	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  004d2	8b 45 c4	 mov	 eax, DWORD PTR _theSum$53449[ebp]
+  004d5	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  004da	3b d0		 cmp	 edx, eax
+  004dc	74 3d		 je	 SHORT $L53450
+
+; 226  : 					msgMgr->Fatal ( "There was a failure reading a required resource from disk.  The resource on your disk has been corrupted.  You can continue to play, but the game may well crash horribly.  Please send the following information to our tech support group.\nresource type = %d, resource id = %d, resource sum = %d, required sum = %d", tag.id.GetMemType(), tag.resNum, sum, theSum );
+
+  004de	8b 4d c4	 mov	 ecx, DWORD PTR _theSum$53449[ebp]
+  004e1	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  004e7	51		 push	 ecx
+  004e8	8b 55 d8	 mov	 edx, DWORD PTR _sum$53433[ebp]
+  004eb	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  004f1	52		 push	 edx
+  004f2	8b 45 08	 mov	 eax, DWORD PTR _tag$[ebp]
+  004f5	33 c9		 xor	 ecx, ecx
+  004f7	66 8b 08	 mov	 cx, WORD PTR [eax]
+  004fa	51		 push	 ecx
+  004fb	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  004fe	83 c1 02	 add	 ecx, 2
+  00501	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  00506	50		 push	 eax
+  00507	68 00 00 00 00	 push	 OFFSET FLAT:$SG53451
+  0050c	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00512	52		 push	 edx
+  00513	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00518	83 c4 18	 add	 esp, 24			; 00000018H
+$L53450:
+
+; 227  : 
+; 228  : 				break;
+
+  0051b	eb 05		 jmp	 SHORT $L53447
+$L53448:
+
+; 230  : 		}
+
+  0051d	e9 6a ff ff ff	 jmp	 $L53446
+$L53447:
+
+; 231  : 
+; 232  : 		if ( i==count ) 
+
+  00522	8b 45 d0	 mov	 eax, DWORD PTR _count$53441[ebp]
+  00525	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0052a	39 45 cc	 cmp	 DWORD PTR _i$53435[ebp], eax
+  0052d	75 28		 jne	 SHORT $L53452
+
+; 233  : 			msgMgr->Fatal ( "RESSUMS.DAT is corrupted.  Please check your installation and try again. (%d, %d)", tag.id.GetMemType(), tag.resNum );
+
+  0052f	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00532	33 d2		 xor	 edx, edx
+  00534	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00537	52		 push	 edx
+  00538	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  0053b	83 c1 02	 add	 ecx, 2
+  0053e	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  00543	50		 push	 eax
+  00544	68 00 00 00 00	 push	 OFFSET FLAT:$SG53453
+  00549	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0054e	50		 push	 eax
+  0054f	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00554	83 c4 10	 add	 esp, 16			; 00000010H
+$L53452:
+
+; 235  : 	//
+; 236  : 	// if this for only a resource.win change.
+; 237  : 
+; 238  : 
+; 239  : 	char *in = resourceData;
+
+  00557	8b 4d f4	 mov	 ecx, DWORD PTR _resourceData$[ebp]
+  0055a	89 4d f0	 mov	 DWORD PTR _in$[ebp], ecx
+
+; 240  : 	char *out = (char *) *tag.id;
+
+  0055d	8b 4d 08	 mov	 ecx, DWORD PTR _tag$[ebp]
+  00560	83 c1 02	 add	 ecx, 2
+  00563	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  00568	89 45 f8	 mov	 DWORD PTR _out$[ebp], eax
+
+; 241  : 
+; 242  : 	ulong destLength = resLength;
+
+  0056b	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?resLength@SOL_ResType@@1HA ; SOL_ResType::resLength
+  00571	89 55 e8	 mov	 DWORD PTR _destLength$[ebp], edx
+
+; 243  : 	ulong sourceLength = compressedLength;
+
+  00574	a1 00 00 00 00	 mov	 eax, DWORD PTR ?compressedLength@SOL_ResType@@1HA ; SOL_ResType::compressedLength
+  00579	89 45 e0	 mov	 DWORD PTR _sourceLength$[ebp], eax
+
+; 244  : 	ulong flushIt = 0;
+
+  0057c	c7 45 e4 00 00
+	00 00		 mov	 DWORD PTR _flushIt$[ebp], 0
+
+; 245  : 
+; 246  : 	Initcompress(workBuffer);
+
+  00583	8b 4d fc	 mov	 ecx, DWORD PTR _workBuffer$[ebp]
+  00586	51		 push	 ecx
+  00587	e8 00 00 00 00	 call	 _Initcompress
+  0058c	83 c4 04	 add	 esp, 4
+$L53461:
+
+; 247  : 
+; 248  : 	while ( sourceLength && destLength ) {
+
+  0058f	83 7d e0 00	 cmp	 DWORD PTR _sourceLength$[ebp], 0
+  00593	74 40		 je	 SHORT $L53462
+  00595	83 7d e8 00	 cmp	 DWORD PTR _destLength$[ebp], 0
+  00599	74 3a		 je	 SHORT $L53462
+
+; 249  : 		::Decompress ( &in, &out, &sourceLength, &destLength, workBuffer );
+
+  0059b	8b 55 fc	 mov	 edx, DWORD PTR _workBuffer$[ebp]
+  0059e	52		 push	 edx
+  0059f	8d 45 e8	 lea	 eax, DWORD PTR _destLength$[ebp]
+  005a2	50		 push	 eax
+  005a3	8d 4d e0	 lea	 ecx, DWORD PTR _sourceLength$[ebp]
+  005a6	51		 push	 ecx
+  005a7	8d 55 f8	 lea	 edx, DWORD PTR _out$[ebp]
+  005aa	52		 push	 edx
+  005ab	8d 45 f0	 lea	 eax, DWORD PTR _in$[ebp]
+  005ae	50		 push	 eax
+  005af	e8 00 00 00 00	 call	 _Decompress
+  005b4	83 c4 14	 add	 esp, 20			; 00000014H
+
+; 250  : 		::Decompress ( &in, &out, &sourceLength, &flushIt, workBuffer );
+
+  005b7	8b 4d fc	 mov	 ecx, DWORD PTR _workBuffer$[ebp]
+  005ba	51		 push	 ecx
+  005bb	8d 55 e4	 lea	 edx, DWORD PTR _flushIt$[ebp]
+  005be	52		 push	 edx
+  005bf	8d 45 e0	 lea	 eax, DWORD PTR _sourceLength$[ebp]
+  005c2	50		 push	 eax
+  005c3	8d 4d f8	 lea	 ecx, DWORD PTR _out$[ebp]
+  005c6	51		 push	 ecx
+  005c7	8d 55 f0	 lea	 edx, DWORD PTR _in$[ebp]
+  005ca	52		 push	 edx
+  005cb	e8 00 00 00 00	 call	 _Decompress
+  005d0	83 c4 14	 add	 esp, 20			; 00000014H
+
+; 251  : 	}
+
+  005d3	eb ba		 jmp	 SHORT $L53461
+$L53462:
+
+; 252  : 
+; 253  : #if 0
+; 254  : 	if ( tag.id.GetMemType() == MemResView && !CheckView ( tag.id ) ) {
+; 255  : 		char filename[1024];
+; 256  : 		sprintf ( filename, "%u.cmp", (unsigned short)tag.resNum );
+; 257  : 		FILE *file = fopen ( filename, "wb" );
+; 258  : 		fwrite ( resourceData, compressedLength, 1, file );
+; 259  : 		fclose ( file );
+; 260  : 		msgMgr->Fatal ( "View data is not valid after decompressing it.  The file %s has been written out in the directory where The Realm is installed.  Please hold onto that file and tell Stephen about it. ;)", filename );
+; 261  : 	}
+; 262  : #endif
+; 263  : 
+; 264  : 	free ( resourceData );
+
+  005d5	8b 45 f4	 mov	 eax, DWORD PTR _resourceData$[ebp]
+  005d8	50		 push	 eax
+  005d9	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__free
+  005df	83 c4 04	 add	 esp, 4
+
+; 265  : 	free ( workBuffer );
+
+  005e2	8b 4d fc	 mov	 ecx, DWORD PTR _workBuffer$[ebp]
+  005e5	51		 push	 ecx
+  005e6	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__free
+  005ec	83 c4 04	 add	 esp, 4
+
+; 266  : }
+
+  005ef	8b e5		 mov	 esp, ebp
+  005f1	5d		 pop	 ebp
+  005f2	c2 04 00	 ret	 4
+?Decompress@SOL_ResType@@MBEXAAUResTag@@@Z ENDP		; SOL_ResType::Decompress
+_TEXT	ENDS
+EXTRN	?langPath@@3PADA:BYTE				; langPath
+EXTRN	_strcat:NEAR
+EXTRN	?LSeek@@YAJHJH@Z:NEAR				; LSeek
+EXTRN	?Open@@YAHPBDI@Z:NEAR				; Open
+EXTRN	?Get@ConfigMgr@@QAEPADPADH@Z:NEAR		; ConfigMgr::Get
+EXTRN	?Get@ConfigMgr@@QAEPADW4MemType@@H@Z:NEAR	; ConfigMgr::Get
+EXTRN	?GetNTokens@ConfigMgr@@QAEHW4MemType@@@Z:NEAR	; ConfigMgr::GetNTokens
+_DATA	SEGMENT
+	ORG $+2
+$SG53479 DB	'patchDir', 00H
+	ORG $+3
+$SG53486 DB	'patchDir', 00H
+	ORG $+3
+$SG53487 DB	'\', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_num$ = 8
+_path$ = 12
+_this$ = -292
+_nameBuf$ = -264
+_type$ = -272
+_dirNum$ = -288
+_dirNum36$ = -280
+_i$ = -276
+?Open@SOL_ResType@@UAEHGPAD@Z PROC NEAR			; SOL_ResType::Open
+
+; 270  : {
+
+  005f5	55		 push	 ebp
+  005f6	8b ec		 mov	 ebp, esp
+  005f8	81 ec 24 01 00
+	00		 sub	 esp, 292		; 00000124H
+  005fe	89 8d dc fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 271  : 	char		nameBuf[MaxPath + 1];
+; 272  : 	MemType	type;
+; 273  : 	int		hdrLength,t;
+; 274  : 
+; 275  : 	// check the language directory for MAP resources
+; 276  : 	if (langPath[0] && GetFileType() == MemResMap) {
+
+  00604	0f be 05 00 00
+	00 00		 movsx	 eax, BYTE PTR ?langPath@@3PADA
+  0060b	85 c0		 test	 eax, eax
+  0060d	0f 84 ef 00 00
+	00		 je	 $L53473
+  00613	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00619	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0061b	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00621	ff 52 48	 call	 DWORD PTR [edx+72]
+  00624	83 f8 10	 cmp	 eax, 16			; 00000010H
+  00627	0f 85 d5 00 00
+	00		 jne	 $L53473
+
+; 277  : 		MakeName(nameBuf, langPath, num);
+
+  0062d	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00631	50		 push	 eax
+  00632	68 00 00 00 00	 push	 OFFSET FLAT:?langPath@@3PADA ; langPath
+  00637	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  0063d	51		 push	 ecx
+  0063e	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00644	8b 02		 mov	 eax, DWORD PTR [edx]
+  00646	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0064c	ff 50 18	 call	 DWORD PTR [eax+24]
+
+; 278  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  0064f	68 00 80 00 00	 push	 32768			; 00008000H
+  00654	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  0065a	51		 push	 ecx
+  0065b	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00660	83 c4 08	 add	 esp, 8
+  00663	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00668	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  0066f	0f 84 8d 00 00
+	00		 je	 $L53473
+
+; 279  : 			if (path)
+
+  00675	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00679	74 13		 je	 SHORT $L53474
+
+; 280  : 				strcpy(path, nameBuf);
+
+  0067b	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  00681	52		 push	 edx
+  00682	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  00685	50		 push	 eax
+  00686	e8 00 00 00 00	 call	 _strcpy
+  0068b	83 c4 08	 add	 esp, 8
+$L53474:
+
+; 281  : 			Read(&type, 1);
+
+  0068e	6a 01		 push	 1
+  00690	8d 8d f0 fe ff
+	ff		 lea	 ecx, DWORD PTR _type$[ebp]
+  00696	51		 push	 ecx
+  00697	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0069d	8b 02		 mov	 eax, DWORD PTR [edx]
+  0069f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  006a5	ff 50 4c	 call	 DWORD PTR [eax+76]
+
+; 282  : 			ConfirmType((MemType)(type & 0xff));
+
+  006a8	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _type$[ebp]
+  006ae	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  006b4	51		 push	 ecx
+  006b5	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  006bb	8b 02		 mov	 eax, DWORD PTR [edx]
+  006bd	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  006c3	ff 50 38	 call	 DWORD PTR [eax+56]
+
+; 283  : 			resOffset = SeekToData();
+
+  006c6	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  006cc	8b 11		 mov	 edx, DWORD PTR [ecx]
+  006ce	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  006d4	ff 52 50	 call	 DWORD PTR [edx+80]
+  006d7	a3 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, eax ; SOL_ResType::resOffset
+
+; 284  : 			resLength = GetFileSize() - resOffset;
+
+  006dc	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  006e2	8b 10		 mov	 edx, DWORD PTR [eax]
+  006e4	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  006ea	ff 52 44	 call	 DWORD PTR [edx+68]
+  006ed	2b 05 00 00 00
+	00		 sub	 eax, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  006f3	a3 00 00 00 00	 mov	 DWORD PTR ?resLength@SOL_ResType@@1HA, eax ; SOL_ResType::resLength
+
+; 285  : #ifdef DEBUG	
+; 286  : 		   if (tracking)
+; 287  : 				rmResList->Add(GetType(), num, resLength);
+; 288  : #endif
+; 289  : 			return fd;
+
+  006f8	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  006fd	e9 f4 04 00 00	 jmp	 $L53467
+$L53473:
+
+; 292  : 
+; 293  : 	// check patch table
+; 294  : 	int dirNum = FindPatchEntry(num);
+
+  00702	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00706	50		 push	 eax
+  00707	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0070d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0070f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00715	ff 52 28	 call	 DWORD PTR [edx+40]
+  00718	89 85 e0 fe ff
+	ff		 mov	 DWORD PTR _dirNum$[ebp], eax
+
+; 295  : 	int dirNum36 = FindPatch36Entry(path);
+
+  0071e	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  00721	50		 push	 eax
+  00722	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00728	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0072a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00730	ff 52 40	 call	 DWORD PTR [edx+64]
+  00733	89 85 e8 fe ff
+	ff		 mov	 DWORD PTR _dirNum36$[ebp], eax
+
+; 296  : 
+; 297  : 	// if patched resource found, use it
+; 298  : 	if (dirNum != -1) {
+
+  00739	83 bd e0 fe ff
+	ff ff		 cmp	 DWORD PTR _dirNum$[ebp], -1
+  00740	0f 84 2a 01 00
+	00		 je	 $L53480
+
+; 299  : 		MakeName(nameBuf, configMgr->Get("patchDir",dirNum), num);
+
+  00746	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  0074a	50		 push	 eax
+  0074b	8b 8d e0 fe ff
+	ff		 mov	 ecx, DWORD PTR _dirNum$[ebp]
+  00751	51		 push	 ecx
+  00752	68 00 00 00 00	 push	 OFFSET FLAT:$SG53479
+  00757	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  0075d	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADPADH@Z ; ConfigMgr::Get
+  00762	50		 push	 eax
+  00763	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  00769	52		 push	 edx
+  0076a	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00770	8b 10		 mov	 edx, DWORD PTR [eax]
+  00772	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00778	ff 52 18	 call	 DWORD PTR [edx+24]
+
+; 300  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  0077b	68 00 80 00 00	 push	 32768			; 00008000H
+  00780	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  00786	50		 push	 eax
+  00787	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  0078c	83 c4 08	 add	 esp, 8
+  0078f	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00794	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  0079b	0f 84 cf 00 00
+	00		 je	 $L53480
+
+; 301  : 			if (path)
+
+  007a1	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  007a5	74 13		 je	 SHORT $L53481
+
+; 302  : 				strcpy(path, nameBuf);
+
+  007a7	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  007ad	51		 push	 ecx
+  007ae	8b 55 0c	 mov	 edx, DWORD PTR _path$[ebp]
+  007b1	52		 push	 edx
+  007b2	e8 00 00 00 00	 call	 _strcpy
+  007b7	83 c4 08	 add	 esp, 8
+$L53481:
+
+; 303  : 			Read(&type, 1);
+
+  007ba	6a 01		 push	 1
+  007bc	8d 85 f0 fe ff
+	ff		 lea	 eax, DWORD PTR _type$[ebp]
+  007c2	50		 push	 eax
+  007c3	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  007c9	8b 11		 mov	 edx, DWORD PTR [ecx]
+  007cb	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  007d1	ff 52 4c	 call	 DWORD PTR [edx+76]
+
+; 304  : 			ConfirmType((MemType)(type & 0xff));
+
+  007d4	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _type$[ebp]
+  007da	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  007df	50		 push	 eax
+  007e0	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  007e6	8b 11		 mov	 edx, DWORD PTR [ecx]
+  007e8	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  007ee	ff 52 38	 call	 DWORD PTR [edx+56]
+
+; 305  : 			resOffset = SeekToData();
+
+  007f1	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  007f7	8b 10		 mov	 edx, DWORD PTR [eax]
+  007f9	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  007ff	ff 52 50	 call	 DWORD PTR [edx+80]
+  00802	a3 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, eax ; SOL_ResType::resOffset
+
+; 306  : 			if (GetType() == MemResAudio || GetType() == MemResWAVE)
+
+  00807	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0080d	8b 10		 mov	 edx, DWORD PTR [eax]
+  0080f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00815	ff 52 30	 call	 DWORD PTR [edx+48]
+  00818	83 f8 0d	 cmp	 eax, 13			; 0000000dH
+  0081b	74 16		 je	 SHORT $L53484
+  0081d	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00823	8b 10		 mov	 edx, DWORD PTR [eax]
+  00825	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0082b	ff 52 30	 call	 DWORD PTR [edx+48]
+  0082e	83 f8 0c	 cmp	 eax, 12			; 0000000cH
+  00831	75 17		 jne	 SHORT $L53483
+$L53484:
+
+; 307  : 				LSeek(fd,resOffset,SEEK_SET);
+
+  00833	6a 00		 push	 0
+  00835	a1 00 00 00 00	 mov	 eax, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  0083a	50		 push	 eax
+  0083b	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00841	51		 push	 ecx
+  00842	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  00847	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L53483:
+
+; 308  : 			resLength = GetFileSize() - resOffset;
+
+  0084a	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00850	8b 02		 mov	 eax, DWORD PTR [edx]
+  00852	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00858	ff 50 44	 call	 DWORD PTR [eax+68]
+  0085b	2b 05 00 00 00
+	00		 sub	 eax, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  00861	a3 00 00 00 00	 mov	 DWORD PTR ?resLength@SOL_ResType@@1HA, eax ; SOL_ResType::resLength
+
+; 309  : #ifdef DEBUG	
+; 310  : 		   if (tracking)
+; 311  : 				rmResList->Add(GetType(), num, resLength);
+; 312  : #endif
+; 313  : 			return fd;
+
+  00866	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  0086b	e9 86 03 00 00	 jmp	 $L53467
+$L53480:
+
+; 316  : 
+; 317  : 	// if found in patch36 table use it
+; 318  : 	if (dirNum36 != -1) {
+
+  00870	83 bd e8 fe ff
+	ff ff		 cmp	 DWORD PTR _dirNum36$[ebp], -1
+  00877	0f 84 fa 00 00
+	00		 je	 $L53488
+
+; 319  : 		strcpy(nameBuf, configMgr->Get("patchDir",dirNum36));
+
+  0087d	8b 8d e8 fe ff
+	ff		 mov	 ecx, DWORD PTR _dirNum36$[ebp]
+  00883	51		 push	 ecx
+  00884	68 00 00 00 00	 push	 OFFSET FLAT:$SG53486
+  00889	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  0088f	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADPADH@Z ; ConfigMgr::Get
+  00894	50		 push	 eax
+  00895	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  0089b	52		 push	 edx
+  0089c	e8 00 00 00 00	 call	 _strcpy
+  008a1	83 c4 08	 add	 esp, 8
+
+; 320  : 		strcat(nameBuf, "\\");
+
+  008a4	68 00 00 00 00	 push	 OFFSET FLAT:$SG53487
+  008a9	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  008af	50		 push	 eax
+  008b0	e8 00 00 00 00	 call	 _strcat
+  008b5	83 c4 08	 add	 esp, 8
+
+; 321  : 		strcat(nameBuf, path);
+
+  008b8	8b 4d 0c	 mov	 ecx, DWORD PTR _path$[ebp]
+  008bb	51		 push	 ecx
+  008bc	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  008c2	52		 push	 edx
+  008c3	e8 00 00 00 00	 call	 _strcat
+  008c8	83 c4 08	 add	 esp, 8
+
+; 322  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  008cb	68 00 80 00 00	 push	 32768			; 00008000H
+  008d0	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  008d6	50		 push	 eax
+  008d7	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  008dc	83 c4 08	 add	 esp, 8
+  008df	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  008e4	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  008eb	0f 84 86 00 00
+	00		 je	 $L53488
+
+; 323  : 			strcpy(path, nameBuf);
+
+  008f1	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  008f7	51		 push	 ecx
+  008f8	8b 55 0c	 mov	 edx, DWORD PTR _path$[ebp]
+  008fb	52		 push	 edx
+  008fc	e8 00 00 00 00	 call	 _strcpy
+  00901	83 c4 08	 add	 esp, 8
+
+; 324  : 			Read(&type, 1);
+
+  00904	6a 01		 push	 1
+  00906	8d 85 f0 fe ff
+	ff		 lea	 eax, DWORD PTR _type$[ebp]
+  0090c	50		 push	 eax
+  0090d	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00913	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00915	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0091b	ff 52 4c	 call	 DWORD PTR [edx+76]
+
+; 325  : 			ConfirmType((MemType)(type & 0xff));
+
+  0091e	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _type$[ebp]
+  00924	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00929	50		 push	 eax
+  0092a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00930	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00932	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00938	ff 52 38	 call	 DWORD PTR [edx+56]
+
+; 326  : 			resOffset = SeekToData();
+
+  0093b	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00941	8b 10		 mov	 edx, DWORD PTR [eax]
+  00943	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00949	ff 52 50	 call	 DWORD PTR [edx+80]
+  0094c	a3 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, eax ; SOL_ResType::resOffset
+
+; 327  : 			resLength = GetFileSize() - resOffset;
+
+  00951	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00957	8b 10		 mov	 edx, DWORD PTR [eax]
+  00959	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0095f	ff 52 44	 call	 DWORD PTR [edx+68]
+  00962	2b 05 00 00 00
+	00		 sub	 eax, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  00968	a3 00 00 00 00	 mov	 DWORD PTR ?resLength@SOL_ResType@@1HA, eax ; SOL_ResType::resLength
+
+; 328  : #ifdef DEBUG	
+; 329  : 		   if (tracking)
+; 330  : 				rmResList->Add(GetType(), num, resLength);
+; 331  : #endif
+; 332  : 			return fd;
+
+  0096d	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00972	e9 7f 02 00 00	 jmp	 $L53467
+$L53488:
+
+; 335  : 
+; 336  : 	// check resource-config file path(s)...
+; 337  : 	for (int i = 0; i < configMgr->GetNTokens(GetType()); i++) {
+
+  00977	c7 85 ec fe ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  00981	eb 0f		 jmp	 SHORT $L53491
+$L53492:
+  00983	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00989	83 c0 01	 add	 eax, 1
+  0098c	89 85 ec fe ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L53491:
+  00992	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00998	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0099a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  009a0	ff 52 30	 call	 DWORD PTR [edx+48]
+  009a3	50		 push	 eax
+  009a4	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  009aa	e8 00 00 00 00	 call	 ?GetNTokens@ConfigMgr@@QAEHW4MemType@@@Z ; ConfigMgr::GetNTokens
+  009af	39 85 ec fe ff
+	ff		 cmp	 DWORD PTR _i$[ebp], eax
+  009b5	0f 8d 9a 01 00
+	00		 jge	 $L53493
+
+; 338  : 		if (path && *path)
+
+  009bb	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  009bf	74 4d		 je	 SHORT $L53494
+  009c1	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  009c4	0f be 08	 movsx	 ecx, BYTE PTR [eax]
+  009c7	85 c9		 test	 ecx, ecx
+  009c9	74 43		 je	 SHORT $L53494
+
+; 339  : 			MakeName(nameBuf, configMgr->Get(GetType(), i), path);
+
+  009cb	8b 55 0c	 mov	 edx, DWORD PTR _path$[ebp]
+  009ce	52		 push	 edx
+  009cf	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  009d5	50		 push	 eax
+  009d6	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  009dc	8b 11		 mov	 edx, DWORD PTR [ecx]
+  009de	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  009e4	ff 52 30	 call	 DWORD PTR [edx+48]
+  009e7	50		 push	 eax
+  009e8	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  009ee	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADW4MemType@@H@Z ; ConfigMgr::Get
+  009f3	50		 push	 eax
+  009f4	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  009fa	50		 push	 eax
+  009fb	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a01	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00a03	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a09	ff 52 14	 call	 DWORD PTR [edx+20]
+
+; 340  : 		else
+
+  00a0c	eb 42		 jmp	 SHORT $L53495
+$L53494:
+
+; 341  : 			MakeName(nameBuf, configMgr->Get(GetType(), i), num);
+
+  00a0e	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00a12	50		 push	 eax
+  00a13	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00a19	51		 push	 ecx
+  00a1a	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00a20	8b 02		 mov	 eax, DWORD PTR [edx]
+  00a22	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a28	ff 50 30	 call	 DWORD PTR [eax+48]
+  00a2b	50		 push	 eax
+  00a2c	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00a32	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADW4MemType@@H@Z ; ConfigMgr::Get
+  00a37	50		 push	 eax
+  00a38	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00a3e	51		 push	 ecx
+  00a3f	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00a45	8b 02		 mov	 eax, DWORD PTR [edx]
+  00a47	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a4d	ff 50 18	 call	 DWORD PTR [eax+24]
+$L53495:
+
+; 342  : 
+; 343  : //		msgMgr->Alert ( "Opening %s", nameBuf );
+; 344  : 
+; 345  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  00a50	68 00 80 00 00	 push	 32768			; 00008000H
+  00a55	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00a5b	51		 push	 ecx
+  00a5c	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00a61	83 c4 08	 add	 esp, 8
+  00a64	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00a69	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  00a70	0f 84 da 00 00
+	00		 je	 $L53496
+
+; 346  : 			if (path)
+
+  00a76	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00a7a	74 13		 je	 SHORT $L53497
+
+; 347  : 				strcpy(path, nameBuf);
+
+  00a7c	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  00a82	52		 push	 edx
+  00a83	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  00a86	50		 push	 eax
+  00a87	e8 00 00 00 00	 call	 _strcpy
+  00a8c	83 c4 08	 add	 esp, 8
+$L53497:
+
+; 348  : 			if (GetType() != MemResAudio && GetType() != MemResAudio36 && GetType() != MemResWAVE) {
+
+  00a8f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a95	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00a97	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a9d	ff 52 30	 call	 DWORD PTR [edx+48]
+  00aa0	83 f8 0d	 cmp	 eax, 13			; 0000000dH
+  00aa3	74 7b		 je	 SHORT $L53498
+  00aa5	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00aab	8b 10		 mov	 edx, DWORD PTR [eax]
+  00aad	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ab3	ff 52 30	 call	 DWORD PTR [edx+48]
+  00ab6	83 f8 13	 cmp	 eax, 19			; 00000013H
+  00ab9	74 65		 je	 SHORT $L53498
+  00abb	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00ac1	8b 10		 mov	 edx, DWORD PTR [eax]
+  00ac3	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ac9	ff 52 30	 call	 DWORD PTR [edx+48]
+  00acc	83 f8 0c	 cmp	 eax, 12			; 0000000cH
+  00acf	74 4f		 je	 SHORT $L53498
+
+; 349  : 				Read(&type, 1);
+
+  00ad1	6a 01		 push	 1
+  00ad3	8d 85 f0 fe ff
+	ff		 lea	 eax, DWORD PTR _type$[ebp]
+  00ad9	50		 push	 eax
+  00ada	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ae0	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00ae2	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ae8	ff 52 4c	 call	 DWORD PTR [edx+76]
+
+; 350  : 				ConfirmType((MemType)(type & 0xff));
+
+  00aeb	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _type$[ebp]
+  00af1	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00af6	50		 push	 eax
+  00af7	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00afd	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00aff	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00b05	ff 52 38	 call	 DWORD PTR [edx+56]
+
+; 351  : 				resOffset = SeekToData();
+
+  00b08	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00b0e	8b 10		 mov	 edx, DWORD PTR [eax]
+  00b10	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00b16	ff 52 50	 call	 DWORD PTR [edx+80]
+  00b19	a3 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, eax ; SOL_ResType::resOffset
+
+; 352  : 			} else
+
+  00b1e	eb 0a		 jmp	 SHORT $L53500
+$L53498:
+
+; 353  : 				resOffset = 0;
+
+  00b20	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, 0 ; SOL_ResType::resOffset
+$L53500:
+
+; 354  : 			resLength = GetFileSize() - resOffset;
+
+  00b2a	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00b30	8b 10		 mov	 edx, DWORD PTR [eax]
+  00b32	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00b38	ff 52 44	 call	 DWORD PTR [edx+68]
+  00b3b	2b 05 00 00 00
+	00		 sub	 eax, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  00b41	a3 00 00 00 00	 mov	 DWORD PTR ?resLength@SOL_ResType@@1HA, eax ; SOL_ResType::resLength
+
+; 355  : #ifdef DEBUG	
+; 356  : 		   if (tracking)
+; 357  : 				rmResList->Add(GetType(), num, resLength);
+; 358  : #endif
+; 359  : 			return fd;
+
+  00b46	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00b4b	e9 a6 00 00 00	 jmp	 $L53467
+$L53496:
+
+; 361  : 	}
+
+  00b50	e9 2e fe ff ff	 jmp	 $L53492
+$L53493:
+
+; 362  : 
+; 363  : 	// check resource volume...
+; 364  : 
+; 365  : 	if ((resOffset = FindDirEntry(num,&fd)) != -1) {
+
+  00b55	68 00 00 00 00	 push	 OFFSET FLAT:?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00b5a	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00b5e	50		 push	 eax
+  00b5f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00b65	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00b67	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00b6d	ff 52 24	 call	 DWORD PTR [edx+36]
+  00b70	a3 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, eax ; SOL_ResType::resOffset
+  00b75	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?resOffset@SOL_ResType@@1HA, -1 ; SOL_ResType::resOffset
+  00b7c	74 75		 je	 SHORT $L53501
+
+; 366  : 		// requested resource is volume-resident
+; 367  : 		LSeek(fd,resOffset,SEEK_SET);
+
+  00b7e	6a 00		 push	 0
+  00b80	a1 00 00 00 00	 mov	 eax, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  00b85	50		 push	 eax
+  00b86	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00b8c	51		 push	 ecx
+  00b8d	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  00b92	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 368  : 		Read(&volEntryHeader, sizeof volEntryHeader);
+
+  00b95	6a 0d		 push	 13			; 0000000dH
+  00b97	68 00 00 00 00	 push	 OFFSET FLAT:_volEntryHeader
+  00b9c	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00ba2	8b 02		 mov	 eax, DWORD PTR [edx]
+  00ba4	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00baa	ff 50 4c	 call	 DWORD PTR [eax+76]
+
+; 369  : 		ConfirmType((MemType)volEntryHeader.type);
+
+  00bad	33 c9		 xor	 ecx, ecx
+  00baf	8a 0d 00 00 00
+	00		 mov	 cl, BYTE PTR _volEntryHeader
+  00bb5	51		 push	 ecx
+  00bb6	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00bbc	8b 02		 mov	 eax, DWORD PTR [edx]
+  00bbe	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00bc4	ff 50 38	 call	 DWORD PTR [eax+56]
+
+; 370  : 		resOffset += sizeof(volEntryHeader);
+
+  00bc7	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resOffset@SOL_ResType@@1HA ; SOL_ResType::resOffset
+  00bcd	83 c1 0d	 add	 ecx, 13			; 0000000dH
+  00bd0	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, ecx ; SOL_ResType::resOffset
+
+; 371  : 		resLength = volEntryHeader.expandedLength;
+
+  00bd6	8b 15 07 00 00
+	00		 mov	 edx, DWORD PTR _volEntryHeader+7
+  00bdc	89 15 00 00 00
+	00		 mov	 DWORD PTR ?resLength@SOL_ResType@@1HA, edx ; SOL_ResType::resLength
+
+; 372  : 		compressedLength = volEntryHeader.compressedLength;
+
+  00be2	a1 03 00 00 00	 mov	 eax, DWORD PTR _volEntryHeader+3
+  00be7	a3 00 00 00 00	 mov	 DWORD PTR ?compressedLength@SOL_ResType@@1HA, eax ; SOL_ResType::compressedLength
+
+; 373  : 
+; 374  : #ifdef DEBUG	
+; 375  : 	   if (tracking)
+; 376  : 			rmResList->Add(GetType(), num, resLength);
+; 377  : #endif
+; 378  : 		return fd;
+
+  00bec	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00bf1	eb 03		 jmp	 SHORT $L53467
+$L53501:
+
+; 380  : 
+; 381  : 	return -1;
+
+  00bf3	83 c8 ff	 or	 eax, -1
+$L53467:
+
+; 382  : }
+
+  00bf6	8b e5		 mov	 esp, ebp
+  00bf8	5d		 pop	 ebp
+  00bf9	c2 08 00	 ret	 8
+?Open@SOL_ResType@@UAEHGPAD@Z ENDP			; SOL_ResType::Open
+_TEXT	ENDS
+PUBLIC	?CanOpen@SOL_ResType@@QAEHGPAD@Z		; SOL_ResType::CanOpen
+_DATA	SEGMENT
+	ORG $+2
+$SG53518 DB	'patchDir', 00H
+	ORG $+3
+$SG53522 DB	'patchDir', 00H
+	ORG $+3
+$SG53523 DB	'\', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_num$ = 8
+_path$ = 12
+_this$ = -292
+_nameBuf$ = -264
+_dirNum$ = -288
+_dirNum36$ = -280
+_i$ = -276
+?CanOpen@SOL_ResType@@QAEHGPAD@Z PROC NEAR		; SOL_ResType::CanOpen
+
+; 386  : {
+
+  00bfc	55		 push	 ebp
+  00bfd	8b ec		 mov	 ebp, esp
+  00bff	81 ec 24 01 00
+	00		 sub	 esp, 292		; 00000124H
+  00c05	89 8d dc fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 387  : 	char		nameBuf[MaxPath + 1];
+; 388  : 	MemType	type;
+; 389  : 	int		hdrLength,t;
+; 390  : 
+; 391  : 	// check the language directory for MAP resources
+; 392  : 	if (langPath[0] && GetFileType() == MemResMap) {
+
+  00c0b	0f be 05 00 00
+	00 00		 movsx	 eax, BYTE PTR ?langPath@@3PADA
+  00c12	85 c0		 test	 eax, eax
+  00c14	0f 84 95 00 00
+	00		 je	 $L53513
+  00c1a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c20	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00c22	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c28	ff 52 48	 call	 DWORD PTR [edx+72]
+  00c2b	83 f8 10	 cmp	 eax, 16			; 00000010H
+  00c2e	75 7f		 jne	 SHORT $L53513
+
+; 393  : 		MakeName(nameBuf, langPath, num);
+
+  00c30	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00c34	50		 push	 eax
+  00c35	68 00 00 00 00	 push	 OFFSET FLAT:?langPath@@3PADA ; langPath
+  00c3a	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00c40	51		 push	 ecx
+  00c41	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00c47	8b 02		 mov	 eax, DWORD PTR [edx]
+  00c49	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c4f	ff 50 18	 call	 DWORD PTR [eax+24]
+
+; 394  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  00c52	68 00 80 00 00	 push	 32768			; 00008000H
+  00c57	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00c5d	51		 push	 ecx
+  00c5e	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00c63	83 c4 08	 add	 esp, 8
+  00c66	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00c6b	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  00c72	74 3b		 je	 SHORT $L53513
+
+; 395  : 			Close ( fd );
+
+  00c74	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00c7a	52		 push	 edx
+  00c7b	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00c81	8b 10		 mov	 edx, DWORD PTR [eax]
+  00c83	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00c89	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 396  : 			if (path)
+
+  00c8c	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00c90	74 13		 je	 SHORT $L53514
+
+; 397  : 				strcpy(path, nameBuf);
+
+  00c92	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  00c98	50		 push	 eax
+  00c99	8b 4d 0c	 mov	 ecx, DWORD PTR _path$[ebp]
+  00c9c	51		 push	 ecx
+  00c9d	e8 00 00 00 00	 call	 _strcpy
+  00ca2	83 c4 08	 add	 esp, 8
+$L53514:
+
+; 398  : 			return fd;
+
+  00ca5	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00caa	e9 12 03 00 00	 jmp	 $L53507
+$L53513:
+
+; 401  : 
+; 402  : 	// check patch table
+; 403  : 	int dirNum = FindPatchEntry(num);
+
+  00caf	66 8b 55 08	 mov	 dx, WORD PTR _num$[ebp]
+  00cb3	52		 push	 edx
+  00cb4	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00cba	8b 10		 mov	 edx, DWORD PTR [eax]
+  00cbc	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00cc2	ff 52 28	 call	 DWORD PTR [edx+40]
+  00cc5	89 85 e0 fe ff
+	ff		 mov	 DWORD PTR _dirNum$[ebp], eax
+
+; 404  : 	int dirNum36 = FindPatch36Entry(path);
+
+  00ccb	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  00cce	50		 push	 eax
+  00ccf	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00cd5	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00cd7	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00cdd	ff 52 40	 call	 DWORD PTR [edx+64]
+  00ce0	89 85 e8 fe ff
+	ff		 mov	 DWORD PTR _dirNum36$[ebp], eax
+
+; 405  : 
+; 406  : 	// if patched resource found, use it
+; 407  : 	if (dirNum != -1) {
+
+  00ce6	83 bd e0 fe ff
+	ff ff		 cmp	 DWORD PTR _dirNum$[ebp], -1
+  00ced	0f 84 92 00 00
+	00		 je	 $L53519
+
+; 408  : 		MakeName(nameBuf, configMgr->Get("patchDir",dirNum), num);
+
+  00cf3	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00cf7	50		 push	 eax
+  00cf8	8b 8d e0 fe ff
+	ff		 mov	 ecx, DWORD PTR _dirNum$[ebp]
+  00cfe	51		 push	 ecx
+  00cff	68 00 00 00 00	 push	 OFFSET FLAT:$SG53518
+  00d04	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00d0a	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADPADH@Z ; ConfigMgr::Get
+  00d0f	50		 push	 eax
+  00d10	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  00d16	52		 push	 edx
+  00d17	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00d1d	8b 10		 mov	 edx, DWORD PTR [eax]
+  00d1f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00d25	ff 52 18	 call	 DWORD PTR [edx+24]
+
+; 409  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  00d28	68 00 80 00 00	 push	 32768			; 00008000H
+  00d2d	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  00d33	50		 push	 eax
+  00d34	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00d39	83 c4 08	 add	 esp, 8
+  00d3c	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00d41	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  00d48	74 3b		 je	 SHORT $L53519
+
+; 410  : 			Close ( fd );
+
+  00d4a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00d50	51		 push	 ecx
+  00d51	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00d57	8b 02		 mov	 eax, DWORD PTR [edx]
+  00d59	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00d5f	ff 50 04	 call	 DWORD PTR [eax+4]
+
+; 411  : 			if (path)
+
+  00d62	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00d66	74 13		 je	 SHORT $L53520
+
+; 412  : 				strcpy(path, nameBuf);
+
+  00d68	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00d6e	51		 push	 ecx
+  00d6f	8b 55 0c	 mov	 edx, DWORD PTR _path$[ebp]
+  00d72	52		 push	 edx
+  00d73	e8 00 00 00 00	 call	 _strcpy
+  00d78	83 c4 08	 add	 esp, 8
+$L53520:
+
+; 413  : 			return fd;
+
+  00d7b	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00d80	e9 3c 02 00 00	 jmp	 $L53507
+$L53519:
+
+; 416  : 
+; 417  : 	// if found in patch36 table use it
+; 418  : 	if (path && dirNum36 != -1) {
+
+  00d85	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00d89	0f 84 b1 00 00
+	00		 je	 $L53524
+  00d8f	83 bd e8 fe ff
+	ff ff		 cmp	 DWORD PTR _dirNum36$[ebp], -1
+  00d96	0f 84 a4 00 00
+	00		 je	 $L53524
+
+; 419  : 		strcpy(nameBuf, configMgr->Get("patchDir",dirNum36));
+
+  00d9c	8b 85 e8 fe ff
+	ff		 mov	 eax, DWORD PTR _dirNum36$[ebp]
+  00da2	50		 push	 eax
+  00da3	68 00 00 00 00	 push	 OFFSET FLAT:$SG53522
+  00da8	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00dae	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADPADH@Z ; ConfigMgr::Get
+  00db3	50		 push	 eax
+  00db4	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00dba	51		 push	 ecx
+  00dbb	e8 00 00 00 00	 call	 _strcpy
+  00dc0	83 c4 08	 add	 esp, 8
+
+; 420  : 		strcat(nameBuf, "\\");
+
+  00dc3	68 00 00 00 00	 push	 OFFSET FLAT:$SG53523
+  00dc8	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  00dce	52		 push	 edx
+  00dcf	e8 00 00 00 00	 call	 _strcat
+  00dd4	83 c4 08	 add	 esp, 8
+
+; 421  : 		strcat(nameBuf, path);
+
+  00dd7	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  00dda	50		 push	 eax
+  00ddb	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00de1	51		 push	 ecx
+  00de2	e8 00 00 00 00	 call	 _strcat
+  00de7	83 c4 08	 add	 esp, 8
+
+; 422  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  00dea	68 00 80 00 00	 push	 32768			; 00008000H
+  00def	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _nameBuf$[ebp]
+  00df5	52		 push	 edx
+  00df6	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00dfb	83 c4 08	 add	 esp, 8
+  00dfe	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00e03	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  00e0a	74 34		 je	 SHORT $L53524
+
+; 423  : 			Close ( fd );
+
+  00e0c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00e11	50		 push	 eax
+  00e12	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e18	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00e1a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e20	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 424  : 			strcpy(path, nameBuf);
+
+  00e23	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  00e29	50		 push	 eax
+  00e2a	8b 4d 0c	 mov	 ecx, DWORD PTR _path$[ebp]
+  00e2d	51		 push	 ecx
+  00e2e	e8 00 00 00 00	 call	 _strcpy
+  00e33	83 c4 08	 add	 esp, 8
+
+; 425  : 			return fd;
+
+  00e36	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00e3b	e9 81 01 00 00	 jmp	 $L53507
+$L53524:
+
+; 428  : 
+; 429  : 	// check resource-config file path(s)...
+; 430  : 	for (int i = 0; i < configMgr->GetNTokens(GetType()); i++) {
+
+  00e40	c7 85 ec fe ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  00e4a	eb 0f		 jmp	 SHORT $L53526
+$L53527:
+  00e4c	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00e52	83 c2 01	 add	 edx, 1
+  00e55	89 95 ec fe ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L53526:
+  00e5b	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00e61	8b 10		 mov	 edx, DWORD PTR [eax]
+  00e63	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00e69	ff 52 30	 call	 DWORD PTR [edx+48]
+  00e6c	50		 push	 eax
+  00e6d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00e73	e8 00 00 00 00	 call	 ?GetNTokens@ConfigMgr@@QAEHW4MemType@@@Z ; ConfigMgr::GetNTokens
+  00e78	39 85 ec fe ff
+	ff		 cmp	 DWORD PTR _i$[ebp], eax
+  00e7e	0f 8d f4 00 00
+	00		 jge	 $L53528
+
+; 431  : 		if (path && *path)
+
+  00e84	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00e88	74 4d		 je	 SHORT $L53529
+  00e8a	8b 45 0c	 mov	 eax, DWORD PTR _path$[ebp]
+  00e8d	0f be 08	 movsx	 ecx, BYTE PTR [eax]
+  00e90	85 c9		 test	 ecx, ecx
+  00e92	74 43		 je	 SHORT $L53529
+
+; 432  : 			MakeName(nameBuf, configMgr->Get(GetType(), i), path);
+
+  00e94	8b 55 0c	 mov	 edx, DWORD PTR _path$[ebp]
+  00e97	52		 push	 edx
+  00e98	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00e9e	50		 push	 eax
+  00e9f	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ea5	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00ea7	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ead	ff 52 30	 call	 DWORD PTR [edx+48]
+  00eb0	50		 push	 eax
+  00eb1	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00eb7	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADW4MemType@@H@Z ; ConfigMgr::Get
+  00ebc	50		 push	 eax
+  00ebd	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  00ec3	50		 push	 eax
+  00ec4	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00eca	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00ecc	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ed2	ff 52 14	 call	 DWORD PTR [edx+20]
+
+; 433  : 		else
+
+  00ed5	eb 42		 jmp	 SHORT $L53530
+$L53529:
+
+; 434  : 			MakeName(nameBuf, configMgr->Get(GetType(), i), num);
+
+  00ed7	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  00edb	50		 push	 eax
+  00edc	8b 8d ec fe ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00ee2	51		 push	 ecx
+  00ee3	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00ee9	8b 02		 mov	 eax, DWORD PTR [edx]
+  00eeb	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00ef1	ff 50 30	 call	 DWORD PTR [eax+48]
+  00ef4	50		 push	 eax
+  00ef5	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00efb	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADW4MemType@@H@Z ; ConfigMgr::Get
+  00f00	50		 push	 eax
+  00f01	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00f07	51		 push	 ecx
+  00f08	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00f0e	8b 02		 mov	 eax, DWORD PTR [edx]
+  00f10	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00f16	ff 50 18	 call	 DWORD PTR [eax+24]
+$L53530:
+
+; 435  : 
+; 436  : //		msgMgr->Alert ( "Opening %s", nameBuf );
+; 437  : 
+; 438  : 		if ((fd = ::Open(nameBuf, O_BINARY | O_RDONLY)) != -1) {
+
+  00f19	68 00 80 00 00	 push	 32768			; 00008000H
+  00f1e	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _nameBuf$[ebp]
+  00f24	51		 push	 ecx
+  00f25	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00f2a	83 c4 08	 add	 esp, 8
+  00f2d	a3 00 00 00 00	 mov	 DWORD PTR ?fd@SOL_ResType@@1HA, eax ; SOL_ResType::fd
+  00f32	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  00f39	74 38		 je	 SHORT $L53531
+
+; 439  : 			Close ( fd );
+
+  00f3b	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00f41	52		 push	 edx
+  00f42	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00f48	8b 10		 mov	 edx, DWORD PTR [eax]
+  00f4a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00f50	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 440  : 			if (path)
+
+  00f53	83 7d 0c 00	 cmp	 DWORD PTR _path$[ebp], 0
+  00f57	74 13		 je	 SHORT $L53532
+
+; 441  : 				strcpy(path, nameBuf);
+
+  00f59	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _nameBuf$[ebp]
+  00f5f	50		 push	 eax
+  00f60	8b 4d 0c	 mov	 ecx, DWORD PTR _path$[ebp]
+  00f63	51		 push	 ecx
+  00f64	e8 00 00 00 00	 call	 _strcpy
+  00f69	83 c4 08	 add	 esp, 8
+$L53532:
+
+; 442  : 			return fd;
+
+  00f6c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00f71	eb 4e		 jmp	 SHORT $L53507
+$L53531:
+
+; 444  : 	}
+
+  00f73	e9 d4 fe ff ff	 jmp	 $L53527
+$L53528:
+
+; 445  : 
+; 446  : 	// check resource volume...
+; 447  : 
+; 448  : 	if ((resOffset = FindDirEntry(num,&fd)) != -1) {
+
+  00f78	68 00 00 00 00	 push	 OFFSET FLAT:?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00f7d	66 8b 55 08	 mov	 dx, WORD PTR _num$[ebp]
+  00f81	52		 push	 edx
+  00f82	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00f88	8b 10		 mov	 edx, DWORD PTR [eax]
+  00f8a	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00f90	ff 52 24	 call	 DWORD PTR [edx+36]
+  00f93	a3 00 00 00 00	 mov	 DWORD PTR ?resOffset@SOL_ResType@@1HA, eax ; SOL_ResType::resOffset
+  00f98	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?resOffset@SOL_ResType@@1HA, -1 ; SOL_ResType::resOffset
+  00f9f	74 1e		 je	 SHORT $L53533
+
+; 449  : 		Close ( fd );
+
+  00fa1	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00fa6	50		 push	 eax
+  00fa7	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00fad	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00faf	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00fb5	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 450  : 		// requested resource is volume-resident
+; 451  : 		return fd;
+
+  00fb8	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  00fbd	eb 02		 jmp	 SHORT $L53507
+$L53533:
+
+; 453  : 
+; 454  : 	return 0;
+
+  00fbf	33 c0		 xor	 eax, eax
+$L53507:
+
+; 455  : }
+
+  00fc1	8b e5		 mov	 esp, ebp
+  00fc3	5d		 pop	 ebp
+  00fc4	c2 08 00	 ret	 8
+?CanOpen@SOL_ResType@@QAEHGPAD@Z ENDP			; SOL_ResType::CanOpen
+_TEXT	ENDS
+EXTRN	?Close@@YAHH@Z:NEAR				; Close
+_TEXT	SEGMENT
+_fd$ = 8
+_this$ = -4
+?Close@SOL_ResType@@UBEHH@Z PROC NEAR			; SOL_ResType::Close
+
+; 459  : {
+
+  00fc7	55		 push	 ebp
+  00fc8	8b ec		 mov	 ebp, esp
+  00fca	51		 push	 ecx
+  00fcb	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 460  : 	if (fd != -1 && !resMgr->VolumeOpen(fd) )
+
+  00fce	83 7d 08 ff	 cmp	 DWORD PTR _fd$[ebp], -1
+  00fd2	74 27		 je	 SHORT $L53538
+  00fd4	8b 45 08	 mov	 eax, DWORD PTR _fd$[ebp]
+  00fd7	50		 push	 eax
+  00fd8	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00fde	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00fe0	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00fe6	ff 52 50	 call	 DWORD PTR [edx+80]
+  00fe9	85 c0		 test	 eax, eax
+  00feb	75 0e		 jne	 SHORT $L53538
+
+; 461  : 		return ::Close(fd);
+
+  00fed	8b 45 08	 mov	 eax, DWORD PTR _fd$[ebp]
+  00ff0	50		 push	 eax
+  00ff1	e8 00 00 00 00	 call	 ?Close@@YAHH@Z		; Close
+  00ff6	83 c4 04	 add	 esp, 4
+  00ff9	eb 03		 jmp	 SHORT $L53537
+$L53538:
+
+; 462  : 	return -1;
+
+  00ffb	83 c8 ff	 or	 eax, -1
+$L53537:
+
+; 463  : }
+
+  00ffe	8b e5		 mov	 esp, ebp
+  01000	5d		 pop	 ebp
+  01001	c2 04 00	 ret	 4
+?Close@SOL_ResType@@UBEHH@Z ENDP			; SOL_ResType::Close
+_TEXT	ENDS
+EXTRN	__imp__sprintf:NEAR
+_DATA	SEGMENT
+	ORG $+2
+$SG53546 DB	'%u', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_buf$ = 8
+_fileSpec$ = 12
+_num$ = 16
+_this$ = -264
+_rootName$ = -260
+?MakeName@SOL_ResType@@UBEXPAD0G@Z PROC NEAR		; SOL_ResType::MakeName
+
+; 467  : {
+
+  01004	55		 push	 ebp
+  01005	8b ec		 mov	 ebp, esp
+  01007	81 ec 08 01 00
+	00		 sub	 esp, 264		; 00000108H
+  0100d	89 8d f8 fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 468  : 	char	rootName[MaxFName + 1];
+; 469  : 
+; 470  : 	sprintf(rootName, "%u", num);
+
+  01013	8b 45 10	 mov	 eax, DWORD PTR _num$[ebp]
+  01016	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0101b	50		 push	 eax
+  0101c	68 00 00 00 00	 push	 OFFSET FLAT:$SG53546
+  01021	8d 8d fc fe ff
+	ff		 lea	 ecx, DWORD PTR _rootName$[ebp]
+  01027	51		 push	 ecx
+  01028	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sprintf
+  0102e	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 471  : 	MakeName(buf, fileSpec, rootName);
+
+  01031	8d 95 fc fe ff
+	ff		 lea	 edx, DWORD PTR _rootName$[ebp]
+  01037	52		 push	 edx
+  01038	8b 45 0c	 mov	 eax, DWORD PTR _fileSpec$[ebp]
+  0103b	50		 push	 eax
+  0103c	8b 4d 08	 mov	 ecx, DWORD PTR _buf$[ebp]
+  0103f	51		 push	 ecx
+  01040	8b 95 f8 fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  01046	8b 02		 mov	 eax, DWORD PTR [edx]
+  01048	8b 8d f8 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0104e	ff 50 14	 call	 DWORD PTR [eax+20]
+
+; 472  : }
+
+  01051	8b e5		 mov	 esp, ebp
+  01053	5d		 pop	 ebp
+  01054	c2 0c 00	 ret	 12			; 0000000cH
+?MakeName@SOL_ResType@@UBEXPAD0G@Z ENDP			; SOL_ResType::MakeName
+_TEXT	ENDS
+EXTRN	_strlen:NEAR
+EXTRN	__imp__strchr:NEAR
+EXTRN	__imp___makepath:NEAR
+EXTRN	__imp___splitpath:NEAR
+_DATA	SEGMENT
+	ORG $+1
+$SG53558 DB	'\', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_buf$ = 8
+_fileSpec$ = 12
+_rootName$ = 16
+_this$ = -792
+_drive$ = -788
+_dir$ = -784
+_ext$ = -524
+_fullName$ = -264
+?MakeName@SOL_ResType@@MBEXPAD00@Z PROC NEAR		; SOL_ResType::MakeName
+
+; 476  : {
+
+  01057	55		 push	 ebp
+  01058	8b ec		 mov	 ebp, esp
+  0105a	81 ec 1c 03 00
+	00		 sub	 esp, 796		; 0000031cH
+  01060	89 8d e8 fc ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 486  : 	    fileSpec[strlen(fileSpec) - 1] != '\\') {
+
+  01066	6a 2a		 push	 42			; 0000002aH
+  01068	8b 45 0c	 mov	 eax, DWORD PTR _fileSpec$[ebp]
+  0106b	50		 push	 eax
+  0106c	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  01072	83 c4 08	 add	 esp, 8
+  01075	85 c0		 test	 eax, eax
+  01077	75 62		 jne	 SHORT $L53557
+  01079	8b 4d 0c	 mov	 ecx, DWORD PTR _fileSpec$[ebp]
+  0107c	51		 push	 ecx
+  0107d	e8 00 00 00 00	 call	 _strlen
+  01082	83 c4 04	 add	 esp, 4
+  01085	8b 55 0c	 mov	 edx, DWORD PTR _fileSpec$[ebp]
+  01088	0f be 44 02 ff	 movsx	 eax, BYTE PTR [edx+eax-1]
+  0108d	83 f8 3a	 cmp	 eax, 58			; 0000003aH
+  01090	74 49		 je	 SHORT $L53557
+  01092	8b 4d 0c	 mov	 ecx, DWORD PTR _fileSpec$[ebp]
+  01095	51		 push	 ecx
+  01096	e8 00 00 00 00	 call	 _strlen
+  0109b	83 c4 04	 add	 esp, 4
+  0109e	8b 55 0c	 mov	 edx, DWORD PTR _fileSpec$[ebp]
+  010a1	0f be 44 02 ff	 movsx	 eax, BYTE PTR [edx+eax-1]
+  010a6	83 f8 5c	 cmp	 eax, 92			; 0000005cH
+  010a9	74 30		 je	 SHORT $L53557
+
+; 487  : 		strcpy(fullName, fileSpec);
+
+  010ab	8b 4d 0c	 mov	 ecx, DWORD PTR _fileSpec$[ebp]
+  010ae	51		 push	 ecx
+  010af	8d 95 f8 fe ff
+	ff		 lea	 edx, DWORD PTR _fullName$[ebp]
+  010b5	52		 push	 edx
+  010b6	e8 00 00 00 00	 call	 _strcpy
+  010bb	83 c4 08	 add	 esp, 8
+
+; 488  : 		strcat(fullName, "\\");
+
+  010be	68 00 00 00 00	 push	 OFFSET FLAT:$SG53558
+  010c3	8d 85 f8 fe ff
+	ff		 lea	 eax, DWORD PTR _fullName$[ebp]
+  010c9	50		 push	 eax
+  010ca	e8 00 00 00 00	 call	 _strcat
+  010cf	83 c4 08	 add	 esp, 8
+
+; 489  : 		fileSpec = fullName;
+
+  010d2	8d 8d f8 fe ff
+	ff		 lea	 ecx, DWORD PTR _fullName$[ebp]
+  010d8	89 4d 0c	 mov	 DWORD PTR _fileSpec$[ebp], ecx
+$L53557:
+
+; 491  : 	
+; 492  : 	//	get the drive, directory and extension
+; 493  : 	_splitpath(fileSpec, drive, dir, 0, ext);
+
+  010db	8d 95 f4 fd ff
+	ff		 lea	 edx, DWORD PTR _ext$[ebp]
+  010e1	52		 push	 edx
+  010e2	6a 00		 push	 0
+  010e4	8d 85 f0 fc ff
+	ff		 lea	 eax, DWORD PTR _dir$[ebp]
+  010ea	50		 push	 eax
+  010eb	8d 8d ec fc ff
+	ff		 lea	 ecx, DWORD PTR _drive$[ebp]
+  010f1	51		 push	 ecx
+  010f2	8b 55 0c	 mov	 edx, DWORD PTR _fileSpec$[ebp]
+  010f5	52		 push	 edx
+  010f6	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp___splitpath
+  010fc	83 c4 14	 add	 esp, 20			; 00000014H
+
+; 494  : 	
+; 495  : 	//	and add the name and extension
+; 496  : 	_makepath(buf, drive, dir, rootName, *ext ? ext : GetExtension());
+
+  010ff	0f be 85 f4 fd
+	ff ff		 movsx	 eax, BYTE PTR _ext$[ebp]
+  01106	85 c0		 test	 eax, eax
+  01108	74 0e		 je	 SHORT $L53814
+  0110a	8d 8d f4 fd ff
+	ff		 lea	 ecx, DWORD PTR _ext$[ebp]
+  01110	89 8d e4 fc ff
+	ff		 mov	 DWORD PTR -796+[ebp], ecx
+  01116	eb 17		 jmp	 SHORT $L53815
+$L53814:
+  01118	8b 95 e8 fc ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0111e	8b 02		 mov	 eax, DWORD PTR [edx]
+  01120	8b 8d e8 fc ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  01126	ff 50 08	 call	 DWORD PTR [eax+8]
+  01129	89 85 e4 fc ff
+	ff		 mov	 DWORD PTR -796+[ebp], eax
+$L53815:
+  0112f	8b 8d e4 fc ff
+	ff		 mov	 ecx, DWORD PTR -796+[ebp]
+  01135	51		 push	 ecx
+  01136	8b 55 10	 mov	 edx, DWORD PTR _rootName$[ebp]
+  01139	52		 push	 edx
+  0113a	8d 85 f0 fc ff
+	ff		 lea	 eax, DWORD PTR _dir$[ebp]
+  01140	50		 push	 eax
+  01141	8d 8d ec fc ff
+	ff		 lea	 ecx, DWORD PTR _drive$[ebp]
+  01147	51		 push	 ecx
+  01148	8b 55 08	 mov	 edx, DWORD PTR _buf$[ebp]
+  0114b	52		 push	 edx
+  0114c	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp___makepath
+  01152	83 c4 14	 add	 esp, 20			; 00000014H
+
+; 497  : }
+
+  01155	8b e5		 mov	 esp, ebp
+  01157	5d		 pop	 ebp
+  01158	c2 0c 00	 ret	 12			; 0000000cH
+?MakeName@SOL_ResType@@MBEXPAD00@Z ENDP			; SOL_ResType::MakeName
+_TEXT	ENDS
+_DATA	SEGMENT
+	ORG $+2
+$SG53564 DB	'*', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_buf$ = 8
+_fileSpec$ = 12
+_this$ = -4
+?MakeWildName@SOL_ResType@@UBEXPAD0@Z PROC NEAR		; SOL_ResType::MakeWildName
+
+; 501  : {
+
+  0115b	55		 push	 ebp
+  0115c	8b ec		 mov	 ebp, esp
+  0115e	51		 push	 ecx
+  0115f	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 502  : 	MakeName(buf, fileSpec, "*");
+
+  01162	68 00 00 00 00	 push	 OFFSET FLAT:$SG53564
+  01167	8b 45 0c	 mov	 eax, DWORD PTR _fileSpec$[ebp]
+  0116a	50		 push	 eax
+  0116b	8b 4d 08	 mov	 ecx, DWORD PTR _buf$[ebp]
+  0116e	51		 push	 ecx
+  0116f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  01172	8b 02		 mov	 eax, DWORD PTR [edx]
+  01174	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01177	ff 50 14	 call	 DWORD PTR [eax+20]
+
+; 503  : }
+
+  0117a	8b e5		 mov	 esp, ebp
+  0117c	5d		 pop	 ebp
+  0117d	c2 08 00	 ret	 8
+?MakeWildName@SOL_ResType@@UBEXPAD0@Z ENDP		; SOL_ResType::MakeWildName
+_TEXT	ENDS
+EXTRN	?FileLength@@YAKH@Z:NEAR			; FileLength
+_DATA	SEGMENT
+	ORG $+2
+$SG53570 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+?GetFileSize@SOL_ResType@@MBEJXZ PROC NEAR		; SOL_ResType::GetFileSize
+
+; 507  : {
+
+  01180	55		 push	 ebp
+  01181	8b ec		 mov	 ebp, esp
+  01183	51		 push	 ecx
+  01184	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 508  : 	if (fd != -1)
+
+  01187	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  0118e	74 10		 je	 SHORT $L53568
+
+; 509  : 		return FileLength(fd);
+
+  01190	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  01195	50		 push	 eax
+  01196	e8 00 00 00 00	 call	 ?FileLength@@YAKH@Z	; FileLength
+  0119b	83 c4 04	 add	 esp, 4
+  0119e	eb 28		 jmp	 SHORT $L53567
+$L53568:
+
+; 511  : 		msgMgr->Fatal(SrcLoc, Msg_InvalidResFileHandle, label);
+
+  011a0	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  011a3	8b 91 08 01 00
+	00		 mov	 edx, DWORD PTR [ecx+264]
+  011a9	52		 push	 edx
+  011aa	6a 68		 push	 104			; 00000068H
+  011ac	68 ff 01 00 00	 push	 511			; 000001ffH
+  011b1	68 00 00 00 00	 push	 OFFSET FLAT:$SG53570
+  011b6	6a 61		 push	 97			; 00000061H
+  011b8	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  011bd	50		 push	 eax
+  011be	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  011c3	83 c4 18	 add	 esp, 24			; 00000018H
+
+; 512  : 	return 0;
+
+  011c6	33 c0		 xor	 eax, eax
+$L53567:
+
+; 513  : }
+
+  011c8	8b e5		 mov	 esp, ebp
+  011ca	5d		 pop	 ebp
+  011cb	c3		 ret	 0
+?GetFileSize@SOL_ResType@@MBEJXZ ENDP			; SOL_ResType::GetFileSize
+_TEXT	ENDS
+EXTRN	?Fatal@MsgMgr@@QAAXHZZ:NEAR			; MsgMgr::Fatal
+_DATA	SEGMENT
+	ORG $+2
+$SG53576 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Restyp'
+	DB	'e.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_type$ = 8
+_this$ = -4
+?ConfirmType@SOL_ResType@@MBEXW4MemType@@@Z PROC NEAR	; SOL_ResType::ConfirmType
+
+; 517  : {
+
+  011cc	55		 push	 ebp
+  011cd	8b ec		 mov	 ebp, esp
+  011cf	51		 push	 ecx
+  011d0	56		 push	 esi
+  011d1	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 518  : 	if(fd == -1)
+
+  011d4	83 3d 00 00 00
+	00 ff		 cmp	 DWORD PTR ?fd@SOL_ResType@@1HA, -1 ; SOL_ResType::fd
+  011db	75 27		 jne	 SHORT $L53575
+
+; 519  : 		msgMgr->Fatal(SrcLoc, Msg_InvalidResFileHandle, label);
+
+  011dd	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  011e0	8b 88 08 01 00
+	00		 mov	 ecx, DWORD PTR [eax+264]
+  011e6	51		 push	 ecx
+  011e7	6a 68		 push	 104			; 00000068H
+  011e9	68 07 02 00 00	 push	 519			; 00000207H
+  011ee	68 00 00 00 00	 push	 OFFSET FLAT:$SG53576
+  011f3	6a 61		 push	 97			; 00000061H
+  011f5	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  011fb	52		 push	 edx
+  011fc	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  01201	83 c4 18	 add	 esp, 24			; 00000018H
+$L53575:
+
+; 520  : 
+; 521  : 	if (GetFileType() == MemResAudio || GetFileType() == MemResVMD)
+
+  01204	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01207	8b 10		 mov	 edx, DWORD PTR [eax]
+  01209	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0120c	ff 52 48	 call	 DWORD PTR [edx+72]
+  0120f	83 f8 0d	 cmp	 eax, 13			; 0000000dH
+  01212	74 10		 je	 SHORT $L53578
+  01214	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01217	8b 10		 mov	 edx, DWORD PTR [eax]
+  01219	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0121c	ff 52 48	 call	 DWORD PTR [edx+72]
+  0121f	83 f8 17	 cmp	 eax, 23			; 00000017H
+  01222	75 02		 jne	 SHORT $L53577
+$L53578:
+
+; 522  : 		return;
+
+  01224	eb 45		 jmp	 SHORT $L53574
+$L53577:
+
+; 523  : 
+; 524  : // Delete the next line when robot resources are converted to the proper type
+; 525  : 	if (GetFileType() == MemResRobot) return;
+
+  01226	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01229	8b 10		 mov	 edx, DWORD PTR [eax]
+  0122b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0122e	ff 52 48	 call	 DWORD PTR [edx+72]
+  01231	83 f8 16	 cmp	 eax, 22			; 00000016H
+  01234	75 02		 jne	 SHORT $L53579
+  01236	eb 33		 jmp	 SHORT $L53574
+$L53579:
+
+; 526  : 
+; 527  : 	//	allow 0x80-based or 0-based numbers
+; 528  : 	if((MemType)(type & ~0x80) != GetFileType())
+
+  01238	8b 75 08	 mov	 esi, DWORD PTR _type$[ebp]
+  0123b	81 e6 7f ff ff
+	ff		 and	 esi, -129		; ffffff7fH
+  01241	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01244	8b 10		 mov	 edx, DWORD PTR [eax]
+  01246	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01249	ff 52 48	 call	 DWORD PTR [edx+72]
+  0124c	3b f0		 cmp	 esi, eax
+  0124e	74 1b		 je	 SHORT $L53581
+
+; 529  : 		msgMgr->Fatal(Msg_WrongResType, label);
+
+  01250	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01253	8b 88 08 01 00
+	00		 mov	 ecx, DWORD PTR [eax+264]
+  01259	51		 push	 ecx
+  0125a	6a 69		 push	 105			; 00000069H
+  0125c	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  01262	52		 push	 edx
+  01263	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXHZZ	; MsgMgr::Fatal
+  01268	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L53581:
+$L53574:
+
+; 530  : }
+
+  0126b	5e		 pop	 esi
+  0126c	8b e5		 mov	 esp, ebp
+  0126e	5d		 pop	 ebp
+  0126f	c2 04 00	 ret	 4
+?ConfirmType@SOL_ResType@@MBEXW4MemType@@@Z ENDP	; SOL_ResType::ConfirmType
+_dest$ = 8
+_size$ = 12
+_this$ = -4
+?Read@SOL_ResType@@MBEHPAXH@Z PROC NEAR			; SOL_ResType::Read
+
+; 534  : {
+
+  01272	55		 push	 ebp
+  01273	8b ec		 mov	 ebp, esp
+  01275	51		 push	 ecx
+  01276	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 535  : 	return ::Read(fd, dest, size);
+
+  01279	8b 45 0c	 mov	 eax, DWORD PTR _size$[ebp]
+  0127c	50		 push	 eax
+  0127d	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  01280	51		 push	 ecx
+  01281	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  01287	52		 push	 edx
+  01288	e8 00 00 00 00	 call	 ?Read@@YAHHPAXH@Z	; Read
+  0128d	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 536  : }
+
+  01290	8b e5		 mov	 esp, ebp
+  01292	5d		 pop	 ebp
+  01293	c2 08 00	 ret	 8
+?Read@SOL_ResType@@MBEHPAXH@Z ENDP			; SOL_ResType::Read
+_this$ = -8
+_len$ = -4
+?SeekToData@SOL_ResType@@MBEHXZ PROC NEAR		; SOL_ResType::SeekToData
+
+; 540  : {
+
+  01296	55		 push	 ebp
+  01297	8b ec		 mov	 ebp, esp
+  01299	83 ec 08	 sub	 esp, 8
+  0129c	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 541  : 	char	len;
+; 542  : 
+; 543  : 	LSeek(fd,1,SEEK_SET);
+
+  0129f	6a 00		 push	 0
+  012a1	6a 01		 push	 1
+  012a3	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  012a8	50		 push	 eax
+  012a9	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  012ae	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 544  : 	Read(&len, 1);
+
+  012b1	6a 01		 push	 1
+  012b3	8d 4d fc	 lea	 ecx, DWORD PTR _len$[ebp]
+  012b6	51		 push	 ecx
+  012b7	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  012ba	8b 02		 mov	 eax, DWORD PTR [edx]
+  012bc	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  012bf	ff 50 4c	 call	 DWORD PTR [eax+76]
+
+; 545  : 	return LSeek(fd,len,SEEK_CUR);
+
+  012c2	6a 01		 push	 1
+  012c4	0f be 4d fc	 movsx	 ecx, BYTE PTR _len$[ebp]
+  012c8	51		 push	 ecx
+  012c9	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  012cf	52		 push	 edx
+  012d0	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  012d5	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 546  : }
+
+  012d8	8b e5		 mov	 esp, ebp
+  012da	5d		 pop	 ebp
+  012db	c3		 ret	 0
+?SeekToData@SOL_ResType@@MBEHXZ ENDP			; SOL_ResType::SeekToData
+_TEXT	ENDS
+EXTRN	?maxVolumes@@3HA:DWORD				; maxVolumes
+_TEXT	SEGMENT
+_resId$ = 8
+_fd$ = 12
+_this$ = -40
+_n$ = -4
+_resMap$53600 = -16
+_header$53602 = -8
+_theType$53604 = -24
+_firstOffset$53611 = -20
+_lastOffset$53612 = -12
+_midOffset$53617 = -32
+_entry$53620 = -28
+$T53822 = -36
+?FindDirEntry@SOL_ResType@@UBEHGPAH@Z PROC NEAR		; SOL_ResType::FindDirEntry
+
+; 550  : {
+
+  012dc	55		 push	 ebp
+  012dd	8b ec		 mov	 ebp, esp
+  012df	83 ec 28	 sub	 esp, 40			; 00000028H
+  012e2	89 4d d8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 551  : 	for (int n = 0; n < maxVolumes; n++) {
+
+  012e5	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _n$[ebp], 0
+  012ec	eb 09		 jmp	 SHORT $L53597
+$L53598:
+  012ee	8b 45 fc	 mov	 eax, DWORD PTR _n$[ebp]
+  012f1	83 c0 01	 add	 eax, 1
+  012f4	89 45 fc	 mov	 DWORD PTR _n$[ebp], eax
+$L53597:
+  012f7	8b 4d fc	 mov	 ecx, DWORD PTR _n$[ebp]
+  012fa	3b 0d 00 00 00
+	00		 cmp	 ecx, DWORD PTR ?maxVolumes@@3HA ; maxVolumes
+  01300	0f 8d 39 01 00
+	00		 jge	 $L53599
+
+; 552  : 
+; 553  : 		MemID resMap = resMgr->GetResMapID(n);
+
+  01306	8b 55 fc	 mov	 edx, DWORD PTR _n$[ebp]
+  01309	52		 push	 edx
+  0130a	8d 45 dc	 lea	 eax, DWORD PTR $T53822[ebp]
+  0130d	50		 push	 eax
+  0130e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  01314	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01316	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  0131c	ff 52 24	 call	 DWORD PTR [edx+36]
+  0131f	50		 push	 eax
+  01320	8d 4d f0	 lea	 ecx, DWORD PTR _resMap$53600[ebp]
+  01323	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+
+; 554  : 
+; 555  : 		// find the resource type in the resource map header
+; 556  : 		ResDirHdrEntry* header = (ResDirHdrEntry*) *resMap;
+
+  01328	8d 4d f0	 lea	 ecx, DWORD PTR _resMap$53600[ebp]
+  0132b	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  01330	89 45 f8	 mov	 DWORD PTR _header$53602[ebp], eax
+
+; 557  : 		MemType theType = GetType();
+
+  01333	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  01336	8b 10		 mov	 edx, DWORD PTR [eax]
+  01338	8b 4d d8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0133b	ff 52 30	 call	 DWORD PTR [edx+48]
+  0133e	89 45 e8	 mov	 DWORD PTR _theType$53604[ebp], eax
+$L53606:
+
+; 558  : 		while ((uchar)(header->resType & ~0x80) != theType) {
+
+  01341	8b 45 f8	 mov	 eax, DWORD PTR _header$53602[ebp]
+  01344	33 c9		 xor	 ecx, ecx
+  01346	8a 08		 mov	 cl, BYTE PTR [eax]
+  01348	80 e1 7f	 and	 cl, 127			; 0000007fH
+  0134b	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  01351	3b 4d e8	 cmp	 ecx, DWORD PTR _theType$53604[ebp]
+  01354	74 1b		 je	 SHORT $L53607
+
+; 559  : 			if (header->resType == 255)
+
+  01356	8b 55 f8	 mov	 edx, DWORD PTR _header$53602[ebp]
+  01359	33 c0		 xor	 eax, eax
+  0135b	8a 02		 mov	 al, BYTE PTR [edx]
+  0135d	3d ff 00 00 00	 cmp	 eax, 255		; 000000ffH
+  01362	75 02		 jne	 SHORT $L53609
+
+; 560  : 				break;
+
+  01364	eb 0b		 jmp	 SHORT $L53607
+$L53609:
+
+; 561  : 			++header;
+
+  01366	8b 4d f8	 mov	 ecx, DWORD PTR _header$53602[ebp]
+  01369	83 c1 03	 add	 ecx, 3
+  0136c	89 4d f8	 mov	 DWORD PTR _header$53602[ebp], ecx
+
+; 562  : 		}
+
+  0136f	eb d0		 jmp	 SHORT $L53606
+$L53607:
+
+; 563  : 		if (header->resType == 255)
+
+  01371	8b 55 f8	 mov	 edx, DWORD PTR _header$53602[ebp]
+  01374	33 c0		 xor	 eax, eax
+  01376	8a 02		 mov	 al, BYTE PTR [edx]
+  01378	3d ff 00 00 00	 cmp	 eax, 255		; 000000ffH
+  0137d	75 05		 jne	 SHORT $L53610
+
+; 564  : 			continue;
+
+  0137f	e9 6a ff ff ff	 jmp	 $L53598
+$L53610:
+
+; 565  : 		int firstOffset = header->resTypeOffset;
+
+  01384	8b 4d f8	 mov	 ecx, DWORD PTR _header$53602[ebp]
+  01387	33 d2		 xor	 edx, edx
+  01389	66 8b 51 01	 mov	 dx, WORD PTR [ecx+1]
+  0138d	89 55 ec	 mov	 DWORD PTR _firstOffset$53611[ebp], edx
+
+; 566  : 		int lastOffset = (header+1)->resTypeOffset - sizeof(ResDirEntry);
+
+  01390	8b 45 f8	 mov	 eax, DWORD PTR _header$53602[ebp]
+  01393	33 c9		 xor	 ecx, ecx
+  01395	66 8b 48 04	 mov	 cx, WORD PTR [eax+4]
+  01399	83 e9 06	 sub	 ecx, 6
+  0139c	89 4d f4	 mov	 DWORD PTR _lastOffset$53612[ebp], ecx
+$L53615:
+
+; 567  : 	
+; 568  : 		// utilize a binary search to locate the resource id
+; 569  : 		while (firstOffset <= lastOffset) {
+
+  0139f	8b 55 ec	 mov	 edx, DWORD PTR _firstOffset$53611[ebp]
+  013a2	3b 55 f4	 cmp	 edx, DWORD PTR _lastOffset$53612[ebp]
+  013a5	0f 8f 8f 00 00
+	00		 jg	 $L53616
+
+; 570  : 			int midOffset = (lastOffset - firstOffset) / 2
+; 571  : 				/ sizeof(ResDirEntry) * sizeof(ResDirEntry) + firstOffset;
+
+  013ab	8b 45 f4	 mov	 eax, DWORD PTR _lastOffset$53612[ebp]
+  013ae	2b 45 ec	 sub	 eax, DWORD PTR _firstOffset$53611[ebp]
+  013b1	99		 cdq
+  013b2	2b c2		 sub	 eax, edx
+  013b4	d1 f8		 sar	 eax, 1
+  013b6	33 d2		 xor	 edx, edx
+  013b8	b9 06 00 00 00	 mov	 ecx, 6
+  013bd	f7 f1		 div	 ecx
+  013bf	6b c0 06	 imul	 eax, 6
+  013c2	03 45 ec	 add	 eax, DWORD PTR _firstOffset$53611[ebp]
+  013c5	89 45 e0	 mov	 DWORD PTR _midOffset$53617[ebp], eax
+
+; 572  : 			ResDirEntry* entry = (ResDirEntry *) ((char *) *resMap + midOffset); 
+
+  013c8	8d 4d f0	 lea	 ecx, DWORD PTR _resMap$53600[ebp]
+  013cb	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  013d0	03 45 e0	 add	 eax, DWORD PTR _midOffset$53617[ebp]
+  013d3	89 45 e4	 mov	 DWORD PTR _entry$53620[ebp], eax
+
+; 573  : 			if (entry->resId == resId) {
+
+  013d6	8b 55 e4	 mov	 edx, DWORD PTR _entry$53620[ebp]
+  013d9	33 c0		 xor	 eax, eax
+  013db	66 8b 02	 mov	 ax, WORD PTR [edx]
+  013de	8b 4d 08	 mov	 ecx, DWORD PTR _resId$[ebp]
+  013e1	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  013e7	3b c1		 cmp	 eax, ecx
+  013e9	75 21		 jne	 SHORT $L53623
+
+; 574  : 				*fd = resMgr->OpenVolume(n);
+
+  013eb	8b 55 fc	 mov	 edx, DWORD PTR _n$[ebp]
+  013ee	52		 push	 edx
+  013ef	a1 00 00 00 00	 mov	 eax, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  013f4	8b 10		 mov	 edx, DWORD PTR [eax]
+  013f6	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  013fc	ff 52 3c	 call	 DWORD PTR [edx+60]
+  013ff	8b 4d 0c	 mov	 ecx, DWORD PTR _fd$[ebp]
+  01402	89 01		 mov	 DWORD PTR [ecx], eax
+
+; 575  : 				return entry->volOffset;
+
+  01404	8b 55 e4	 mov	 edx, DWORD PTR _entry$53620[ebp]
+  01407	8b 42 02	 mov	 eax, DWORD PTR [edx+2]
+  0140a	eb 36		 jmp	 SHORT $L53595
+$L53623:
+
+; 577  : 			if (entry->resId < resId)
+
+  0140c	8b 45 e4	 mov	 eax, DWORD PTR _entry$53620[ebp]
+  0140f	33 c9		 xor	 ecx, ecx
+  01411	66 8b 08	 mov	 cx, WORD PTR [eax]
+  01414	8b 55 08	 mov	 edx, DWORD PTR _resId$[ebp]
+  01417	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  0141d	3b ca		 cmp	 ecx, edx
+  0141f	7d 0b		 jge	 SHORT $L53624
+
+; 578  : 				firstOffset = midOffset + sizeof(ResDirEntry);
+
+  01421	8b 45 e0	 mov	 eax, DWORD PTR _midOffset$53617[ebp]
+  01424	83 c0 06	 add	 eax, 6
+  01427	89 45 ec	 mov	 DWORD PTR _firstOffset$53611[ebp], eax
+
+; 579  : 			else
+
+  0142a	eb 09		 jmp	 SHORT $L53626
+$L53624:
+
+; 580  : 				lastOffset = midOffset - sizeof(ResDirEntry);
+
+  0142c	8b 4d e0	 mov	 ecx, DWORD PTR _midOffset$53617[ebp]
+  0142f	83 e9 06	 sub	 ecx, 6
+  01432	89 4d f4	 mov	 DWORD PTR _lastOffset$53612[ebp], ecx
+$L53626:
+
+; 581  : 		}
+
+  01435	e9 65 ff ff ff	 jmp	 $L53615
+$L53616:
+
+; 582  : 	}
+
+  0143a	e9 af fe ff ff	 jmp	 $L53598
+$L53599:
+
+; 583  : 
+; 584  : 	return -1;
+
+  0143f	83 c8 ff	 or	 eax, -1
+$L53595:
+
+; 585  : }
+
+  01442	8b e5		 mov	 esp, ebp
+  01444	5d		 pop	 ebp
+  01445	c2 08 00	 ret	 8
+?FindDirEntry@SOL_ResType@@UBEHGPAH@Z ENDP		; SOL_ResType::FindDirEntry
+_TEXT	ENDS
+PUBLIC	??7MemID@@QBEHXZ				; MemID::operator!
+EXTRN	?resPatches@@3VMemID@@A:WORD			; resPatches
+_TEXT	SEGMENT
+_resId$ = 8
+_this$ = -8
+_entry$ = -4
+?FindPatchEntry@SOL_ResType@@UBEHG@Z PROC NEAR		; SOL_ResType::FindPatchEntry
+
+; 589  : {
+
+  01448	55		 push	 ebp
+  01449	8b ec		 mov	 ebp, esp
+  0144b	83 ec 08	 sub	 esp, 8
+  0144e	56		 push	 esi
+  0144f	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 590  : 	ResPatchEntry*	entry;
+; 591  : 
+; 592  : 	if (!resPatches)
+
+  01452	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?resPatches@@3VMemID@@A ; resPatches
+  01457	e8 00 00 00 00	 call	 ??7MemID@@QBEHXZ	; MemID::operator!
+  0145c	85 c0		 test	 eax, eax
+  0145e	74 05		 je	 SHORT $L53633
+
+; 593  : 		return -1;
+
+  01460	83 c8 ff	 or	 eax, -1
+  01463	eb 64		 jmp	 SHORT $L53631
+$L53633:
+
+; 594  : 
+; 595  : 	for (entry = (ResPatchEntry*) *resPatches; (uchar) entry->resType != 0xff; ++entry)
+
+  01465	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?resPatches@@3VMemID@@A ; resPatches
+  0146a	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0146f	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+  01472	eb 09		 jmp	 SHORT $L53636
+$L53637:
+  01474	8b 45 fc	 mov	 eax, DWORD PTR _entry$[ebp]
+  01477	83 c0 04	 add	 eax, 4
+  0147a	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+$L53636:
+  0147d	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  01480	33 d2		 xor	 edx, edx
+  01482	8a 51 01	 mov	 dl, BYTE PTR [ecx+1]
+  01485	81 fa ff 00 00
+	00		 cmp	 edx, 255		; 000000ffH
+  0148b	74 39		 je	 SHORT $L53638
+
+; 596  : 		if (entry->resType == GetType() && entry->resId == resId)
+
+  0148d	8b 45 fc	 mov	 eax, DWORD PTR _entry$[ebp]
+  01490	33 c9		 xor	 ecx, ecx
+  01492	8a 48 01	 mov	 cl, BYTE PTR [eax+1]
+  01495	8b f1		 mov	 esi, ecx
+  01497	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0149a	8b 02		 mov	 eax, DWORD PTR [edx]
+  0149c	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0149f	ff 50 30	 call	 DWORD PTR [eax+48]
+  014a2	3b f0		 cmp	 esi, eax
+  014a4	75 1e		 jne	 SHORT $L53639
+  014a6	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  014a9	33 d2		 xor	 edx, edx
+  014ab	66 8b 51 02	 mov	 dx, WORD PTR [ecx+2]
+  014af	8b 45 08	 mov	 eax, DWORD PTR _resId$[ebp]
+  014b2	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  014b7	3b d0		 cmp	 edx, eax
+  014b9	75 09		 jne	 SHORT $L53639
+
+; 597  : 			return (int) entry->patchDir;
+
+  014bb	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  014be	33 c0		 xor	 eax, eax
+  014c0	8a 01		 mov	 al, BYTE PTR [ecx]
+  014c2	eb 05		 jmp	 SHORT $L53631
+$L53639:
+
+; 598  : 	return -1;
+
+  014c4	eb ae		 jmp	 SHORT $L53637
+$L53638:
+  014c6	83 c8 ff	 or	 eax, -1
+$L53631:
+
+; 599  : }
+
+  014c9	5e		 pop	 esi
+  014ca	8b e5		 mov	 esp, ebp
+  014cc	5d		 pop	 ebp
+  014cd	c2 04 00	 ret	 4
+?FindPatchEntry@SOL_ResType@@UBEHG@Z ENDP		; SOL_ResType::FindPatchEntry
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+??7MemID@@QBEHXZ PROC NEAR				; MemID::operator!, COMDAT
+
+; 118  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 119  : 		return handle == 0;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	33 c9		 xor	 ecx, ecx
+  0000c	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000f	8b c1		 mov	 eax, ecx
+  00011	f7 d8		 neg	 eax
+  00013	1b c0		 sbb	 eax, eax
+  00015	40		 inc	 eax
+
+; 120  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c3		 ret	 0
+??7MemID@@QBEHXZ ENDP					; MemID::operator!
+_TEXT	ENDS
+EXTRN	?resPatches36@@3VMemID@@A:WORD			; resPatches36
+EXTRN	__imp__stricmp:NEAR
+_TEXT	SEGMENT
+_name$ = 8
+_this$ = -8
+_entry36$ = -4
+?FindPatch36Entry@SOL_ResType@@MBEHPAD@Z PROC NEAR	; SOL_ResType::FindPatch36Entry
+
+; 603  : {
+
+  014d0	55		 push	 ebp
+  014d1	8b ec		 mov	 ebp, esp
+  014d3	83 ec 08	 sub	 esp, 8
+  014d6	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 604  : 	ResPatch36Entry*	entry36;
+; 605  : 
+; 606  : 	if (!resPatches36 || !name || strlen(name) != 12)
+
+  014d9	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?resPatches36@@3VMemID@@A ; resPatches36
+  014de	e8 00 00 00 00	 call	 ??7MemID@@QBEHXZ	; MemID::operator!
+  014e3	85 c0		 test	 eax, eax
+  014e5	75 17		 jne	 SHORT $L53647
+  014e7	83 7d 08 00	 cmp	 DWORD PTR _name$[ebp], 0
+  014eb	74 11		 je	 SHORT $L53647
+  014ed	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  014f0	50		 push	 eax
+  014f1	e8 00 00 00 00	 call	 _strlen
+  014f6	83 c4 04	 add	 esp, 4
+  014f9	83 f8 0c	 cmp	 eax, 12			; 0000000cH
+  014fc	74 05		 je	 SHORT $L53646
+$L53647:
+
+; 607  : 		return -1;
+
+  014fe	83 c8 ff	 or	 eax, -1
+  01501	eb 4b		 jmp	 SHORT $L53644
+$L53646:
+
+; 608  : 
+; 609  : 	for (entry36 = (ResPatch36Entry*) *resPatches36; entry36->resName[0]; ++entry36)
+
+  01503	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?resPatches36@@3VMemID@@A ; resPatches36
+  01508	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0150d	89 45 fc	 mov	 DWORD PTR _entry36$[ebp], eax
+  01510	eb 09		 jmp	 SHORT $L53649
+$L53650:
+  01512	8b 4d fc	 mov	 ecx, DWORD PTR _entry36$[ebp]
+  01515	83 c1 0e	 add	 ecx, 14			; 0000000eH
+  01518	89 4d fc	 mov	 DWORD PTR _entry36$[ebp], ecx
+$L53649:
+  0151b	8b 55 fc	 mov	 edx, DWORD PTR _entry36$[ebp]
+  0151e	0f be 42 01	 movsx	 eax, BYTE PTR [edx+1]
+  01522	85 c0		 test	 eax, eax
+  01524	74 25		 je	 SHORT $L53651
+
+; 610  : 		if (!stricmp(entry36->resName,name))
+
+  01526	8b 4d 08	 mov	 ecx, DWORD PTR _name$[ebp]
+  01529	51		 push	 ecx
+  0152a	8b 55 fc	 mov	 edx, DWORD PTR _entry36$[ebp]
+  0152d	83 c2 01	 add	 edx, 1
+  01530	52		 push	 edx
+  01531	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  01537	83 c4 08	 add	 esp, 8
+  0153a	85 c0		 test	 eax, eax
+  0153c	75 0b		 jne	 SHORT $L53652
+
+; 611  : 			return (int) entry36->patchDir;
+
+  0153e	8b 45 fc	 mov	 eax, DWORD PTR _entry36$[ebp]
+  01541	33 c9		 xor	 ecx, ecx
+  01543	8a 08		 mov	 cl, BYTE PTR [eax]
+  01545	8b c1		 mov	 eax, ecx
+  01547	eb 05		 jmp	 SHORT $L53644
+$L53652:
+
+; 612  : 	return -1;
+
+  01549	eb c7		 jmp	 SHORT $L53650
+$L53651:
+  0154b	83 c8 ff	 or	 eax, -1
+$L53644:
+
+; 613  : }
+
+  0154e	8b e5		 mov	 esp, ebp
+  01550	5d		 pop	 ebp
+  01551	c2 04 00	 ret	 4
+?FindPatch36Entry@SOL_ResType@@MBEHPAD@Z ENDP		; SOL_ResType::FindPatch36Entry
+_num$ = 8
+_this$ = -4
+?CheckPatches@SOL_ResType@@UBEHG@Z PROC NEAR		; SOL_ResType::CheckPatches
+
+; 617  : {
+
+  01554	55		 push	 ebp
+  01555	8b ec		 mov	 ebp, esp
+  01557	51		 push	 ecx
+  01558	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 618  : 	// check patch table
+; 619  : 	return FindPatchEntry(num) != -1;
+
+  0155b	66 8b 45 08	 mov	 ax, WORD PTR _num$[ebp]
+  0155f	50		 push	 eax
+  01560	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01563	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01565	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01568	ff 52 28	 call	 DWORD PTR [edx+40]
+  0156b	33 c9		 xor	 ecx, ecx
+  0156d	83 f8 ff	 cmp	 eax, -1
+  01570	0f 95 c1	 setne	 cl
+  01573	8b c1		 mov	 eax, ecx
+
+; 620  : }
+
+  01575	8b e5		 mov	 esp, ebp
+  01577	5d		 pop	 ebp
+  01578	c2 04 00	 ret	 4
+?CheckPatches@SOL_ResType@@UBEHG@Z ENDP			; SOL_ResType::CheckPatches
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResView@@MBEHXZ			; ResView::SeekToData
+_TEXT	SEGMENT
+_this$ = -8
+_len$ = -4
+?SeekToData@ResView@@MBEHXZ PROC NEAR			; ResView::SeekToData
+
+; 626  : {
+
+  0157b	55		 push	 ebp
+  0157c	8b ec		 mov	 ebp, esp
+  0157e	83 ec 08	 sub	 esp, 8
+  01581	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 627  : 	char	len;
+; 628  : 
+; 629  : 	LSeek(fd,3,SEEK_SET);
+
+  01584	6a 00		 push	 0
+  01586	6a 03		 push	 3
+  01588	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  0158d	50		 push	 eax
+  0158e	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  01593	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 630  : 	Read(&len, 1);
+
+  01596	6a 01		 push	 1
+  01598	8d 4d fc	 lea	 ecx, DWORD PTR _len$[ebp]
+  0159b	51		 push	 ecx
+  0159c	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0159f	8b 02		 mov	 eax, DWORD PTR [edx]
+  015a1	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  015a4	ff 50 4c	 call	 DWORD PTR [eax+76]
+
+; 631  : 	return LSeek(fd,len + 22,SEEK_CUR);
+
+  015a7	6a 01		 push	 1
+  015a9	0f be 4d fc	 movsx	 ecx, BYTE PTR _len$[ebp]
+  015ad	83 c1 16	 add	 ecx, 22			; 00000016H
+  015b0	51		 push	 ecx
+  015b1	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  015b7	52		 push	 edx
+  015b8	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  015bd	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 632  : }
+
+  015c0	8b e5		 mov	 esp, ebp
+  015c2	5d		 pop	 ebp
+  015c3	c3		 ret	 0
+?SeekToData@ResView@@MBEHXZ ENDP			; ResView::SeekToData
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResPic@@MBEHXZ			; ResPic::SeekToData
+_TEXT	SEGMENT
+_this$ = -8
+_len$ = -4
+?SeekToData@ResPic@@MBEHXZ PROC NEAR			; ResPic::SeekToData
+
+; 636  : {
+
+  015c4	55		 push	 ebp
+  015c5	8b ec		 mov	 ebp, esp
+  015c7	83 ec 08	 sub	 esp, 8
+  015ca	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 637  : 	char	len;
+; 638  : 
+; 639  : 	LSeek(fd,3,SEEK_SET);
+
+  015cd	6a 00		 push	 0
+  015cf	6a 03		 push	 3
+  015d1	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  015d6	50		 push	 eax
+  015d7	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  015dc	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 640  : 	Read(&len, 1);
+
+  015df	6a 01		 push	 1
+  015e1	8d 4d fc	 lea	 ecx, DWORD PTR _len$[ebp]
+  015e4	51		 push	 ecx
+  015e5	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  015e8	8b 02		 mov	 eax, DWORD PTR [edx]
+  015ea	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  015ed	ff 50 4c	 call	 DWORD PTR [eax+76]
+
+; 641  : 	return LSeek(fd,0,SEEK_CUR);
+
+  015f0	6a 01		 push	 1
+  015f2	6a 00		 push	 0
+  015f4	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  015fa	51		 push	 ecx
+  015fb	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  01600	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 642  : }
+
+  01603	8b e5		 mov	 esp, ebp
+  01605	5d		 pop	 ebp
+  01606	c3		 ret	 0
+?SeekToData@ResPic@@MBEHXZ ENDP				; ResPic::SeekToData
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResPal@@MBEHXZ			; ResPal::SeekToData
+_TEXT	SEGMENT
+_this$ = -8
+_len$ = -4
+?SeekToData@ResPal@@MBEHXZ PROC NEAR			; ResPal::SeekToData
+
+; 646  : {
+
+  01607	55		 push	 ebp
+  01608	8b ec		 mov	 ebp, esp
+  0160a	83 ec 08	 sub	 esp, 8
+  0160d	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 647  : 	char	len;
+; 648  : 
+; 649  : 	LSeek(fd,3,SEEK_SET);
+
+  01610	6a 00		 push	 0
+  01612	6a 03		 push	 3
+  01614	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  01619	50		 push	 eax
+  0161a	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  0161f	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 650  : 	Read(&len, 1);
+
+  01622	6a 01		 push	 1
+  01624	8d 4d fc	 lea	 ecx, DWORD PTR _len$[ebp]
+  01627	51		 push	 ecx
+  01628	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0162b	8b 02		 mov	 eax, DWORD PTR [edx]
+  0162d	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  01630	ff 50 4c	 call	 DWORD PTR [eax+76]
+
+; 651  : 	return LSeek(fd,len,SEEK_CUR);
+
+  01633	6a 01		 push	 1
+  01635	0f be 4d fc	 movsx	 ecx, BYTE PTR _len$[ebp]
+  01639	51		 push	 ecx
+  0163a	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  01640	52		 push	 edx
+  01641	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  01646	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 652  : }
+
+  01649	8b e5		 mov	 esp, ebp
+  0164b	5d		 pop	 ebp
+  0164c	c3		 ret	 0
+?SeekToData@ResPal@@MBEHXZ ENDP				; ResPal::SeekToData
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResWave@@MBEHXZ			; ResWave::SeekToData
+_TEXT	SEGMENT
+_this$ = -4
+?SeekToData@ResWave@@MBEHXZ PROC NEAR			; ResWave::SeekToData
+
+; 656  : {
+
+  0164d	55		 push	 ebp
+  0164e	8b ec		 mov	 ebp, esp
+  01650	51		 push	 ecx
+  01651	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 657  : 	return 0;
+
+  01654	33 c0		 xor	 eax, eax
+
+; 658  : }
+
+  01656	8b e5		 mov	 esp, ebp
+  01658	5d		 pop	 ebp
+  01659	c3		 ret	 0
+?SeekToData@ResWave@@MBEHXZ ENDP			; ResWave::SeekToData
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResAudio@@MBEHXZ			; ResAudio::SeekToData
+_TEXT	SEGMENT
+_this$ = -4
+?SeekToData@ResAudio@@MBEHXZ PROC NEAR			; ResAudio::SeekToData
+
+; 662  : {
+
+  0165a	55		 push	 ebp
+  0165b	8b ec		 mov	 ebp, esp
+  0165d	51		 push	 ecx
+  0165e	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 663  : 	return 0;
+
+  01661	33 c0		 xor	 eax, eax
+
+; 664  : }
+
+  01663	8b e5		 mov	 esp, ebp
+  01665	5d		 pop	 ebp
+  01666	c3		 ret	 0
+?SeekToData@ResAudio@@MBEHXZ ENDP			; ResAudio::SeekToData
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResAudio36@@MBEHXZ			; ResAudio36::SeekToData
+_TEXT	SEGMENT
+_this$ = -4
+?SeekToData@ResAudio36@@MBEHXZ PROC NEAR		; ResAudio36::SeekToData
+
+; 668  : {
+
+  01667	55		 push	 ebp
+  01668	8b ec		 mov	 ebp, esp
+  0166a	51		 push	 ecx
+  0166b	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 669  : 	return 0;
+
+  0166e	33 c0		 xor	 eax, eax
+
+; 670  : }
+
+  01670	8b e5		 mov	 esp, ebp
+  01672	5d		 pop	 ebp
+  01673	c3		 ret	 0
+?SeekToData@ResAudio36@@MBEHXZ ENDP			; ResAudio36::SeekToData
+_TEXT	ENDS
+PUBLIC	?SeekToData@ResVMD@@MBEHXZ			; ResVMD::SeekToData
+_TEXT	SEGMENT
+_this$ = -4
+?SeekToData@ResVMD@@MBEHXZ PROC NEAR			; ResVMD::SeekToData
+
+; 674  : {
+
+  01674	55		 push	 ebp
+  01675	8b ec		 mov	 ebp, esp
+  01677	51		 push	 ecx
+  01678	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 675  : 	LSeek(fd,0,SEEK_SET);
+
+  0167b	6a 00		 push	 0
+  0167d	6a 00		 push	 0
+  0167f	a1 00 00 00 00	 mov	 eax, DWORD PTR ?fd@SOL_ResType@@1HA ; SOL_ResType::fd
+  01684	50		 push	 eax
+  01685	e8 00 00 00 00	 call	 ?LSeek@@YAJHJH@Z	; LSeek
+  0168a	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 676  : 	return 0;
+
+  0168d	33 c0		 xor	 eax, eax
+
+; 677  : }
+
+  0168f	8b e5		 mov	 esp, ebp
+  01691	5d		 pop	 ebp
+  01692	c3		 ret	 0
+?SeekToData@ResVMD@@MBEHXZ ENDP				; ResVMD::SeekToData
+_TEXT	ENDS
+END

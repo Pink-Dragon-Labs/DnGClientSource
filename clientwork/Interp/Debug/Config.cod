@@ -1,0 +1,4612 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Config.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT PARA USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CRT$XCA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCA	ENDS
+CRT$XCU	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCU	ENDS
+CRT$XCL	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCL	ENDS
+CRT$XCC	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCC	ENDS
+CRT$XCZ	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCZ	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileName@ConfigMgr@@QBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@ObjectID@@QBEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DTextID@@QAEPADXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?StrGetData@@YA?AVTextID@@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0TextID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Claimed@ConfigEntry@@QAEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS, CRT$XCA, CRT$XCU, CRT$XCL, CRT$XCC, CRT$XCZ
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?configMgr@@3PAVConfigMgr@@A			; configMgr
+_BSS	SEGMENT
+?configMgr@@3PAVConfigMgr@@A DD 01H DUP (?)		; configMgr
+_BSS	ENDS
+CRT$XCU	SEGMENT
+_$S7	DD	FLAT:_$E6
+_$S12	DD	FLAT:_$E11
+CRT$XCU	ENDS
+_DATA	SEGMENT
+$SG59553 DB	'   old resource-naming convention only', 00H
+	ORG $+1
+$SG59555 DB	'   Will cause a vmd report after a vmd movie', 00H
+	ORG $+3
+$SG59557 DB	'   undisclosed', 00H
+	ORG $+1
+$SG59559 DB	'   Who knows?', 00H
+	ORG $+2
+$SG59561 DB	'   Resource Checking', 00H
+	ORG $+3
+$SG59604 DB	'audio', 00H
+	ORG $+2
+$SG59606 DB	'audio36', 00H
+$SG59608 DB	'bitmap', 00H
+	ORG $+1
+$SG59610 DB	'cursor', 00H
+	ORG $+1
+$SG59612 DB	'font', 00H
+	ORG $+3
+$SG59614 DB	'heap', 00H
+	ORG $+3
+$SG59616 DB	'map', 00H
+$SG59618 DB	'message', 00H
+$SG59620 DB	'movieDir', 00H
+	ORG $+3
+$SG59622 DB	'palette', 00H
+$SG59624 DB	'patch', 00H
+	ORG $+2
+$SG59626 DB	'pic', 00H
+$SG59628 DB	'robot', 00H
+	ORG $+2
+$SG59630 DB	'script', 00H
+	ORG $+1
+$SG59632 DB	'sound', 00H
+	ORG $+2
+$SG59634 DB	'sync', 00H
+	ORG $+3
+$SG59636 DB	'sync36', 00H
+	ORG $+1
+$SG59638 DB	'translation', 00H
+$SG59640 DB	'view', 00H
+	ORG $+3
+$SG59642 DB	'vocab', 00H
+	ORG $+2
+$SG59644 DB	'audio', 00H
+	ORG $+2
+$SG59646 DB	'adjustPerDAC', 00H
+	ORG $+3
+$SG59648 DB	'audioDMA', 00H
+	ORG $+3
+$SG59650 DB	'audioDrv', 00H
+	ORG $+3
+$SG59652 DB	'audioIRQ', 00H
+	ORG $+3
+$SG59654 DB	'0K(no audio),...62K(max), 32K default', 00H
+	ORG $+2
+$SG59655 DB	'audioSize', 00H
+	ORG $+2
+$SG59657 DB	'0(default),...4(maximum)', 00H
+	ORG $+3
+$SG59658 DB	'brightness', 00H
+	ORG $+1
+$SG59660 DB	'CDdrive', 00H
+$SG59662 DB	'CDspeed', 00H
+$SG59664 DB	'0K(no audio),...32K(max), 2K default', 00H
+	ORG $+3
+$SG59665 DB	'DACSize', 00H
+$SG59667 DB	'hires', 00H
+	ORG $+2
+$SG59669 DB	'YES or NO(default)', 00H
+	ORG $+1
+$SG59670 DB	'joyStick', 00H
+	ORG $+3
+$SG59672 DB	'1(English)', 00H
+	ORG $+1
+$SG59673 DB	'language', 00H
+	ORG $+3
+$SG59675 DB	'required after SCI+extender loaded (1M default)', 00H
+$SG59676 DB	'minMemory', 00H
+	ORG $+2
+$SG59678 DB	'patchDir', 00H
+	ORG $+3
+$SG59680 DB	'resAud', 00H
+	ORG $+1
+$SG59682 DB	'resCDisc', 00H
+	ORG $+3
+$SG59684 DB	'resMap', 00H
+	ORG $+1
+$SG59686 DB	'resSfx', 00H
+	ORG $+1
+$SG59688 DB	'Yes(default) or No', 00H
+	ORG $+1
+$SG59689 DB	'vmdSkip', 00H
+$SG59691 DB	'soundDrv', 00H
+	ORG $+3
+$SG59693 DB	'Yes or No(default) to enhance low-volume audio', 00H
+	ORG $+1
+$SG59694 DB	'staticFilter', 00H
+	ORG $+3
+$SG59696 DB	'bytes excluded from SCI usage', 00H
+	ORG $+2
+$SG59697 DB	'staticMemory', 00H
+	ORG $+3
+$SG59699 DB	'systemFont xxxx where the font number is xxxx', 00H
+	ORG $+2
+$SG59700 DB	'SystemFont', 00H
+	ORG $+1
+$SG59702 DB	'tracking', 00H
+	ORG $+3
+$SG59704 DB	'maxOpenVols', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_$E6	PROC NEAR
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	e8 00 00 00 00	 call	 _$E5
+  00008	5d		 pop	 ebp
+  00009	c3		 ret	 0
+_$E6	ENDP
+_TEXT	ENDS
+PUBLIC	??0FlagEntry@@QAE@DPAD@Z			; FlagEntry::FlagEntry
+_BSS	SEGMENT
+_flags	DB	090H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+$T60194 = -24
+$T60195 = -48
+$T60196 = -72
+$T60197 = -96
+$T60198 = -120
+$T60199 = -144
+_$E5	PROC NEAR
+
+; 36   : } static flags[] = {
+
+  0000a	55		 push	 ebp
+  0000b	8b ec		 mov	 ebp, esp
+  0000d	81 ec 90 00 00
+	00		 sub	 esp, 144		; 00000090H
+  00013	56		 push	 esi
+  00014	57		 push	 edi
+
+; 37   : #ifdef DEBUG
+; 38   : 	FlagEntry('\0'),
+; 39   : 	FlagEntry('a', "   alert if disc-streaming violations (-a0 to turn off; -a1 to C:\\DUMP)"),
+; 40   : 	FlagEntry('c', "   cursor display for resource loading (i.e. -c958 for cursor 958)"),
+; 41   : 	FlagEntry('e', "   extract resources from vols to the curdir (e.g. -e123.v56 or -e*.v56)"),
+; 42   : 	FlagEntry('i', "   integrity checking (default is on; use -i0 to turn off)"),
+; 43   : 	FlagEntry('k', "   kernel calls between integrity checks (default is 50,000)"),
+; 44   : 	FlagEntry('m', "   max memory to use (examples: -m1M -m1024K -m1048576 -m$fffff)"),
+; 45   : 	FlagEntry('M', "   Mono monitor echo Alert messages"),
+; 46   : 	FlagEntry('p', "   priority screen allocated, enable related features"),
+; 47   : 	FlagEntry('P', "   Play digital audio test (examples: -P100.WAV -PA0010203.045)"),
+; 48   : 	FlagEntry('r', "   room-by-room min memory requirements printed to C:\\DUMP"),
+; 49   : 	FlagEntry('t', "   translation messages shown on mono monitor"),
+; 50   : 	FlagEntry('W', "   WVIDEO compatibility"),
+; 51   : 	FlagEntry('o', "   old resource-naming convention only"),
+; 52   : 	FlagEntry('V', "   Will cause a vmd report after a vmd movie"),
+; 53   : 	FlagEntry('Z', "   Who knows?"),
+; 54   : 	FlagEntry('R', "   Resource Checking")
+; 55   : #else
+; 56   : 	FlagEntry('\0'),
+
+  00015	6a 00		 push	 0
+  00017	6a 00		 push	 0
+  00019	8d 4d e8	 lea	 ecx, DWORD PTR $T60194[ebp]
+  0001c	e8 00 00 00 00	 call	 ??0FlagEntry@@QAE@DPAD@Z ; FlagEntry::FlagEntry
+  00021	8b f0		 mov	 esi, eax
+  00023	b9 06 00 00 00	 mov	 ecx, 6
+  00028	bf 00 00 00 00	 mov	 edi, OFFSET FLAT:_flags
+  0002d	f3 a5		 rep movsd
+
+; 57   : 	FlagEntry('o', "   old resource-naming convention only"),
+
+  0002f	68 00 00 00 00	 push	 OFFSET FLAT:$SG59553
+  00034	6a 6f		 push	 111			; 0000006fH
+  00036	8d 4d d0	 lea	 ecx, DWORD PTR $T60195[ebp]
+  00039	e8 00 00 00 00	 call	 ??0FlagEntry@@QAE@DPAD@Z ; FlagEntry::FlagEntry
+  0003e	8b f0		 mov	 esi, eax
+  00040	b9 06 00 00 00	 mov	 ecx, 6
+  00045	bf 18 00 00 00	 mov	 edi, OFFSET FLAT:_flags+24
+  0004a	f3 a5		 rep movsd
+
+; 58   : 	FlagEntry('V', "   Will cause a vmd report after a vmd movie"),
+
+  0004c	68 00 00 00 00	 push	 OFFSET FLAT:$SG59555
+  00051	6a 56		 push	 86			; 00000056H
+  00053	8d 4d b8	 lea	 ecx, DWORD PTR $T60196[ebp]
+  00056	e8 00 00 00 00	 call	 ??0FlagEntry@@QAE@DPAD@Z ; FlagEntry::FlagEntry
+  0005b	8b f0		 mov	 esi, eax
+  0005d	b9 06 00 00 00	 mov	 ecx, 6
+  00062	bf 30 00 00 00	 mov	 edi, OFFSET FLAT:_flags+48
+  00067	f3 a5		 rep movsd
+
+; 59   : 	FlagEntry('m', "   undisclosed"),
+
+  00069	68 00 00 00 00	 push	 OFFSET FLAT:$SG59557
+  0006e	6a 6d		 push	 109			; 0000006dH
+  00070	8d 4d a0	 lea	 ecx, DWORD PTR $T60197[ebp]
+  00073	e8 00 00 00 00	 call	 ??0FlagEntry@@QAE@DPAD@Z ; FlagEntry::FlagEntry
+  00078	8b f0		 mov	 esi, eax
+  0007a	b9 06 00 00 00	 mov	 ecx, 6
+  0007f	bf 48 00 00 00	 mov	 edi, OFFSET FLAT:_flags+72
+  00084	f3 a5		 rep movsd
+
+; 60   : 	FlagEntry('Z', "   Who knows?"),
+
+  00086	68 00 00 00 00	 push	 OFFSET FLAT:$SG59559
+  0008b	6a 5a		 push	 90			; 0000005aH
+  0008d	8d 4d 88	 lea	 ecx, DWORD PTR $T60198[ebp]
+  00090	e8 00 00 00 00	 call	 ??0FlagEntry@@QAE@DPAD@Z ; FlagEntry::FlagEntry
+  00095	8b f0		 mov	 esi, eax
+  00097	b9 06 00 00 00	 mov	 ecx, 6
+  0009c	bf 60 00 00 00	 mov	 edi, OFFSET FLAT:_flags+96
+  000a1	f3 a5		 rep movsd
+
+; 61   : 	FlagEntry('R', "   Resource Checking")
+; 62   : #endif
+; 63   : };
+
+  000a3	68 00 00 00 00	 push	 OFFSET FLAT:$SG59561
+  000a8	6a 52		 push	 82			; 00000052H
+  000aa	8d 8d 70 ff ff
+	ff		 lea	 ecx, DWORD PTR $T60199[ebp]
+  000b0	e8 00 00 00 00	 call	 ??0FlagEntry@@QAE@DPAD@Z ; FlagEntry::FlagEntry
+  000b5	8b f0		 mov	 esi, eax
+  000b7	b9 06 00 00 00	 mov	 ecx, 6
+  000bc	bf 78 00 00 00	 mov	 edi, OFFSET FLAT:_flags+120
+  000c1	f3 a5		 rep movsd
+  000c3	5f		 pop	 edi
+  000c4	5e		 pop	 esi
+  000c5	8b e5		 mov	 esp, ebp
+  000c7	5d		 pop	 ebp
+  000c8	c3		 ret	 0
+_$E5	ENDP
+_$E11	PROC NEAR
+  000c9	55		 push	 ebp
+  000ca	8b ec		 mov	 ebp, esp
+  000cc	e8 00 00 00 00	 call	 _$E8
+  000d1	e8 00 00 00 00	 call	 _$E10
+  000d6	5d		 pop	 ebp
+  000d7	c3		 ret	 0
+_$E11	ENDP
+_TEXT	ENDS
+PUBLIC	??0ConfigEntry@@QAE@PADW4MemType@@0@Z		; ConfigEntry::ConfigEntry
+_BSS	SEGMENT
+_entries DB	0450H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_$E8	PROC NEAR
+
+; 87   : } static entries[] = {
+
+  000d8	55		 push	 ebp
+  000d9	8b ec		 mov	 ebp, esp
+
+; 88   : 
+; 89   : 	// Both MemResAudio and MemResWAVE use audio =
+; 90   : 	ConfigEntry("audio",		MemResAudio),
+
+  000db	6a 00		 push	 0
+  000dd	6a 0d		 push	 13			; 0000000dH
+  000df	68 00 00 00 00	 push	 OFFSET FLAT:$SG59604
+  000e4	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_entries
+  000e9	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 91   : 	ConfigEntry("audio36",		MemResAudio36),
+
+  000ee	6a 00		 push	 0
+  000f0	6a 13		 push	 19			; 00000013H
+  000f2	68 00 00 00 00	 push	 OFFSET FLAT:$SG59606
+  000f7	b9 18 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+24
+  000fc	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 92   : 	ConfigEntry("bitmap",		MemResBitmap),
+
+  00101	6a 00		 push	 0
+  00103	6a 0a		 push	 10			; 0000000aH
+  00105	68 00 00 00 00	 push	 OFFSET FLAT:$SG59608
+  0010a	b9 30 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+48
+  0010f	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 93   : 	ConfigEntry("cursor",		MemResCursor),
+
+  00114	6a 00		 push	 0
+  00116	6a 08		 push	 8
+  00118	68 00 00 00 00	 push	 OFFSET FLAT:$SG59610
+  0011d	b9 48 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+72
+  00122	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 94   : 	ConfigEntry("font", 		MemResFont),
+
+  00127	6a 00		 push	 0
+  00129	6a 07		 push	 7
+  0012b	68 00 00 00 00	 push	 OFFSET FLAT:$SG59612
+  00130	b9 60 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+96
+  00135	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 95   : 	ConfigEntry("heap",			MemResHeap),
+
+  0013a	6a 00		 push	 0
+  0013c	6a 11		 push	 17			; 00000011H
+  0013e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59614
+  00143	b9 78 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+120
+  00148	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 96   : 	ConfigEntry("map",			MemResMap),
+
+  0014d	6a 00		 push	 0
+  0014f	6a 10		 push	 16			; 00000010H
+  00151	68 00 00 00 00	 push	 OFFSET FLAT:$SG59616
+  00156	b9 90 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+144
+  0015b	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 97   : 	ConfigEntry("message",		MemResMsg),
+
+  00160	6a 00		 push	 0
+  00162	6a 0f		 push	 15			; 0000000fH
+  00164	68 00 00 00 00	 push	 OFFSET FLAT:$SG59618
+  00169	b9 a8 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+168
+  0016e	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 98   : 	ConfigEntry("movieDir",		MemResVMD),
+
+  00173	6a 00		 push	 0
+  00175	6a 17		 push	 23			; 00000017H
+  00177	68 00 00 00 00	 push	 OFFSET FLAT:$SG59620
+  0017c	b9 c0 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+192
+  00181	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 99   : 	ConfigEntry("palette",		MemResPalette),
+
+  00186	6a 00		 push	 0
+  00188	6a 0b		 push	 11			; 0000000bH
+  0018a	68 00 00 00 00	 push	 OFFSET FLAT:$SG59622
+  0018f	b9 d8 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+216
+  00194	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 100  : 	ConfigEntry("patch",		MemResPatch),
+
+  00199	6a 00		 push	 0
+  0019b	6a 09		 push	 9
+  0019d	68 00 00 00 00	 push	 OFFSET FLAT:$SG59624
+  001a2	b9 f0 00 00 00	 mov	 ecx, OFFSET FLAT:_entries+240
+  001a7	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 101  : 	ConfigEntry("pic",			MemResPic),
+
+  001ac	6a 00		 push	 0
+  001ae	6a 01		 push	 1
+  001b0	68 00 00 00 00	 push	 OFFSET FLAT:$SG59626
+  001b5	b9 08 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+264
+  001ba	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 102  : 	ConfigEntry("robot",		MemResRobot),
+
+  001bf	6a 00		 push	 0
+  001c1	6a 16		 push	 22			; 00000016H
+  001c3	68 00 00 00 00	 push	 OFFSET FLAT:$SG59628
+  001c8	b9 20 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+288
+  001cd	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 103  : 	ConfigEntry("script",		MemResHunk),
+
+  001d2	6a 00		 push	 0
+  001d4	6a 02		 push	 2
+  001d6	68 00 00 00 00	 push	 OFFSET FLAT:$SG59630
+  001db	b9 38 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+312
+  001e0	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 104  : 	ConfigEntry("sound",		MemResSound),
+
+  001e5	6a 00		 push	 0
+  001e7	6a 04		 push	 4
+  001e9	68 00 00 00 00	 push	 OFFSET FLAT:$SG59632
+  001ee	b9 50 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+336
+  001f3	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 105  : 	ConfigEntry("sync",			MemResSync),
+
+  001f8	6a 00		 push	 0
+  001fa	6a 0e		 push	 14			; 0000000eH
+  001fc	68 00 00 00 00	 push	 OFFSET FLAT:$SG59634
+  00201	b9 68 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+360
+  00206	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 106  : 	ConfigEntry("sync36",		MemResSync36),
+
+  0020b	6a 00		 push	 0
+  0020d	6a 14		 push	 20			; 00000014H
+  0020f	68 00 00 00 00	 push	 OFFSET FLAT:$SG59636
+  00214	b9 80 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+384
+  00219	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 107  : 	ConfigEntry("translation",	MemResMsgTranslation),
+
+  0021e	6a 00		 push	 0
+  00220	6a 15		 push	 21			; 00000015H
+  00222	68 00 00 00 00	 push	 OFFSET FLAT:$SG59638
+  00227	b9 98 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+408
+  0022c	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 108  : 	ConfigEntry("view",			MemResView),
+
+  00231	6a 00		 push	 0
+  00233	6a 00		 push	 0
+  00235	68 00 00 00 00	 push	 OFFSET FLAT:$SG59640
+  0023a	b9 b0 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+432
+  0023f	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 109  : 	ConfigEntry("vocab",		MemResVocab),
+
+  00244	6a 00		 push	 0
+  00246	6a 06		 push	 6
+  00248	68 00 00 00 00	 push	 OFFSET FLAT:$SG59642
+  0024d	b9 c8 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+456
+  00252	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 110  : 	// Both MemResAudio and MemResWAVE use audio =
+; 111  : 	ConfigEntry("audio",		MemResWAVE),
+
+  00257	6a 00		 push	 0
+  00259	6a 0c		 push	 12			; 0000000cH
+  0025b	68 00 00 00 00	 push	 OFFSET FLAT:$SG59644
+  00260	b9 e0 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+480
+  00265	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 112  : 
+; 113  : 	// these are special entries that are used by the interpreter
+; 114  : 
+; 115  : 	ConfigEntry("adjustPerDAC", MemResNone),
+
+  0026a	6a 00		 push	 0
+  0026c	6a 70		 push	 112			; 00000070H
+  0026e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59646
+  00273	b9 f8 01 00 00	 mov	 ecx, OFFSET FLAT:_entries+504
+  00278	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 116  : 	ConfigEntry("audioDMA",		MemResNone),
+
+  0027d	6a 00		 push	 0
+  0027f	6a 70		 push	 112			; 00000070H
+  00281	68 00 00 00 00	 push	 OFFSET FLAT:$SG59648
+  00286	b9 10 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+528
+  0028b	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 117  : 	ConfigEntry("audioDrv",		MemResNone),
+
+  00290	6a 00		 push	 0
+  00292	6a 70		 push	 112			; 00000070H
+  00294	68 00 00 00 00	 push	 OFFSET FLAT:$SG59650
+  00299	b9 28 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+552
+  0029e	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 118  : 	ConfigEntry("audioIRQ",		MemResNone),
+
+  002a3	6a 00		 push	 0
+  002a5	6a 70		 push	 112			; 00000070H
+  002a7	68 00 00 00 00	 push	 OFFSET FLAT:$SG59652
+  002ac	b9 40 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+576
+  002b1	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 119  : 	ConfigEntry("audioSize",	MemResNone,	"0K(no audio),...62K(max), 32K default"),
+
+  002b6	68 00 00 00 00	 push	 OFFSET FLAT:$SG59654
+  002bb	6a 70		 push	 112			; 00000070H
+  002bd	68 00 00 00 00	 push	 OFFSET FLAT:$SG59655
+  002c2	b9 58 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+600
+  002c7	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 120  : 	ConfigEntry("brightness",	MemResNone, "0(default),...4(maximum)"),
+
+  002cc	68 00 00 00 00	 push	 OFFSET FLAT:$SG59657
+  002d1	6a 70		 push	 112			; 00000070H
+  002d3	68 00 00 00 00	 push	 OFFSET FLAT:$SG59658
+  002d8	b9 70 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+624
+  002dd	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 121  : 	ConfigEntry("CDdrive",		MemResNone),
+
+  002e2	6a 00		 push	 0
+  002e4	6a 70		 push	 112			; 00000070H
+  002e6	68 00 00 00 00	 push	 OFFSET FLAT:$SG59660
+  002eb	b9 88 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+648
+  002f0	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 122  : 	ConfigEntry("CDspeed",		MemResNone),
+
+  002f5	6a 00		 push	 0
+  002f7	6a 70		 push	 112			; 00000070H
+  002f9	68 00 00 00 00	 push	 OFFSET FLAT:$SG59662
+  002fe	b9 a0 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+672
+  00303	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 123  : 	ConfigEntry("DACSize",		MemResNone, "0K(no audio),...32K(max), 2K default"),
+
+  00308	68 00 00 00 00	 push	 OFFSET FLAT:$SG59664
+  0030d	6a 70		 push	 112			; 00000070H
+  0030f	68 00 00 00 00	 push	 OFFSET FLAT:$SG59665
+  00314	b9 b8 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+696
+  00319	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 124  : 	ConfigEntry("hires",		MemResNone),
+
+  0031e	6a 00		 push	 0
+  00320	6a 70		 push	 112			; 00000070H
+  00322	68 00 00 00 00	 push	 OFFSET FLAT:$SG59667
+  00327	b9 d0 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+720
+  0032c	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 125  : 	ConfigEntry("joyStick",		MemResNone,	"YES or NO(default)"),
+
+  00331	68 00 00 00 00	 push	 OFFSET FLAT:$SG59669
+  00336	6a 70		 push	 112			; 00000070H
+  00338	68 00 00 00 00	 push	 OFFSET FLAT:$SG59670
+  0033d	b9 e8 02 00 00	 mov	 ecx, OFFSET FLAT:_entries+744
+  00342	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 126  : 	ConfigEntry("language",		MemResNone,	"1(English)"),
+
+  00347	68 00 00 00 00	 push	 OFFSET FLAT:$SG59672
+  0034c	6a 70		 push	 112			; 00000070H
+  0034e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59673
+  00353	b9 00 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+768
+  00358	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 127  : 	ConfigEntry("minMemory",	MemResNone, "required after SCI+extender loaded (1M default)"),
+
+  0035d	68 00 00 00 00	 push	 OFFSET FLAT:$SG59675
+  00362	6a 70		 push	 112			; 00000070H
+  00364	68 00 00 00 00	 push	 OFFSET FLAT:$SG59676
+  00369	b9 18 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+792
+  0036e	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 128  : 	ConfigEntry("patchDir",		MemResNone),
+
+  00373	6a 00		 push	 0
+  00375	6a 70		 push	 112			; 00000070H
+  00377	68 00 00 00 00	 push	 OFFSET FLAT:$SG59678
+  0037c	b9 30 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+816
+  00381	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 129  : 	ConfigEntry("resAud",		MemResNone),
+
+  00386	6a 00		 push	 0
+  00388	6a 70		 push	 112			; 00000070H
+  0038a	68 00 00 00 00	 push	 OFFSET FLAT:$SG59680
+  0038f	b9 48 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+840
+  00394	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 130  : 	ConfigEntry("resCDisc",		MemResNone),
+
+  00399	6a 00		 push	 0
+  0039b	6a 70		 push	 112			; 00000070H
+  0039d	68 00 00 00 00	 push	 OFFSET FLAT:$SG59682
+  003a2	b9 60 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+864
+  003a7	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 131  : 	ConfigEntry("resMap",		MemResNone),
+
+  003ac	6a 00		 push	 0
+  003ae	6a 70		 push	 112			; 00000070H
+  003b0	68 00 00 00 00	 push	 OFFSET FLAT:$SG59684
+  003b5	b9 78 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+888
+  003ba	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 132  : 	ConfigEntry("resSfx",		MemResNone),
+
+  003bf	6a 00		 push	 0
+  003c1	6a 70		 push	 112			; 00000070H
+  003c3	68 00 00 00 00	 push	 OFFSET FLAT:$SG59686
+  003c8	b9 90 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+912
+  003cd	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 133  : 	ConfigEntry("vmdSkip",		MemResNone,	"Yes(default) or No"),
+
+  003d2	68 00 00 00 00	 push	 OFFSET FLAT:$SG59688
+  003d7	6a 70		 push	 112			; 00000070H
+  003d9	68 00 00 00 00	 push	 OFFSET FLAT:$SG59689
+  003de	b9 a8 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+936
+  003e3	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 134  : 	ConfigEntry("soundDrv",		MemResNone),
+
+  003e8	6a 00		 push	 0
+  003ea	6a 70		 push	 112			; 00000070H
+  003ec	68 00 00 00 00	 push	 OFFSET FLAT:$SG59691
+  003f1	b9 c0 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+960
+  003f6	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 135  : 	ConfigEntry("staticFilter", MemResNone,	"Yes or No(default) to enhance low-volume audio"),
+
+  003fb	68 00 00 00 00	 push	 OFFSET FLAT:$SG59693
+  00400	6a 70		 push	 112			; 00000070H
+  00402	68 00 00 00 00	 push	 OFFSET FLAT:$SG59694
+  00407	b9 d8 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+984
+  0040c	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 136  : 	ConfigEntry("staticMemory", MemResNone,	"bytes excluded from SCI usage"),
+
+  00411	68 00 00 00 00	 push	 OFFSET FLAT:$SG59696
+  00416	6a 70		 push	 112			; 00000070H
+  00418	68 00 00 00 00	 push	 OFFSET FLAT:$SG59697
+  0041d	b9 f0 03 00 00	 mov	 ecx, OFFSET FLAT:_entries+1008
+  00422	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 137  : #ifdef DEBUG
+; 138  : 	ConfigEntry("thrashDetect",	MemResNone,	"turns on thrash detection (needs count)"),  
+; 139  : #endif
+; 140  : 	ConfigEntry("SystemFont",MemResNone, "systemFont xxxx where the font number is xxxx"),
+
+  00427	68 00 00 00 00	 push	 OFFSET FLAT:$SG59699
+  0042c	6a 70		 push	 112			; 00000070H
+  0042e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59700
+  00433	b9 08 04 00 00	 mov	 ecx, OFFSET FLAT:_entries+1032
+  00438	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 141  : 	ConfigEntry("tracking",		MemResNone),
+
+  0043d	6a 00		 push	 0
+  0043f	6a 70		 push	 112			; 00000070H
+  00441	68 00 00 00 00	 push	 OFFSET FLAT:$SG59702
+  00446	b9 20 04 00 00	 mov	 ecx, OFFSET FLAT:_entries+1056
+  0044b	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+
+; 142  : 	ConfigEntry("maxOpenVols",	MemResNone)
+; 143  : };
+
+  00450	6a 00		 push	 0
+  00452	6a 70		 push	 112			; 00000070H
+  00454	68 00 00 00 00	 push	 OFFSET FLAT:$SG59704
+  00459	b9 38 04 00 00	 mov	 ecx, OFFSET FLAT:_entries+1080
+  0045e	e8 00 00 00 00	 call	 ??0ConfigEntry@@QAE@PADW4MemType@@0@Z ; ConfigEntry::ConfigEntry
+  00463	5d		 pop	 ebp
+  00464	c3		 ret	 0
+_$E8	ENDP
+_TEXT	ENDS
+EXTRN	_atexit:NEAR
+_TEXT	SEGMENT
+_$E10	PROC NEAR
+  00465	55		 push	 ebp
+  00466	8b ec		 mov	 ebp, esp
+  00468	68 00 00 00 00	 push	 OFFSET FLAT:_$E9
+  0046d	e8 00 00 00 00	 call	 _atexit
+  00472	83 c4 04	 add	 esp, 4
+  00475	5d		 pop	 ebp
+  00476	c3		 ret	 0
+_$E10	ENDP
+_TEXT	ENDS
+PUBLIC	??1ConfigEntry@@QAE@XZ				; ConfigEntry::~ConfigEntry
+EXTRN	??_M@YGXPAXIHP6EX0@Z@Z:NEAR			; `eh vector destructor iterator'
+_TEXT	SEGMENT
+_$E9	PROC NEAR
+  00477	55		 push	 ebp
+  00478	8b ec		 mov	 ebp, esp
+  0047a	68 00 00 00 00	 push	 OFFSET FLAT:??1ConfigEntry@@QAE@XZ ; ConfigEntry::~ConfigEntry
+  0047f	6a 2e		 push	 46			; 0000002eH
+  00481	6a 18		 push	 24			; 00000018H
+  00483	68 00 00 00 00	 push	 OFFSET FLAT:_entries
+  00488	e8 00 00 00 00	 call	 ??_M@YGXPAXIHP6EX0@Z@Z	; `eh vector destructor iterator'
+  0048d	5d		 pop	 ebp
+  0048e	c3		 ret	 0
+_$E9	ENDP
+_TEXT	ENDS
+PUBLIC	??0ConfigMgr@@QAE@PBDHPAPAD@Z			; ConfigMgr::ConfigMgr
+PUBLIC	?ReadCommandLine@ConfigMgr@@IAEXPBDHPAPAD@Z	; ConfigMgr::ReadCommandLine
+PUBLIC	?ReadFile@ConfigMgr@@IAEXXZ			; ConfigMgr::ReadFile
+_TEXT	SEGMENT
+_defaultFileName$ = 8
+_argc$ = 12
+_argv$ = 16
+_this$ = -4
+??0ConfigMgr@@QAE@PBDHPAPAD@Z PROC NEAR			; ConfigMgr::ConfigMgr
+
+; 150  : {
+
+  0048f	55		 push	 ebp
+  00490	8b ec		 mov	 ebp, esp
+  00492	51		 push	 ecx
+  00493	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 151  : 	//	read the command line and the config file
+; 152  : 
+; 153  : 	*fileName = 0;
+
+  00496	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00499	c6 00 00	 mov	 BYTE PTR [eax], 0
+
+; 154  : 	ReadCommandLine(defaultFileName, argc, argv);
+
+  0049c	8b 4d 10	 mov	 ecx, DWORD PTR _argv$[ebp]
+  0049f	51		 push	 ecx
+  004a0	8b 55 0c	 mov	 edx, DWORD PTR _argc$[ebp]
+  004a3	52		 push	 edx
+  004a4	8b 45 08	 mov	 eax, DWORD PTR _defaultFileName$[ebp]
+  004a7	50		 push	 eax
+  004a8	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  004ab	e8 00 00 00 00	 call	 ?ReadCommandLine@ConfigMgr@@IAEXPBDHPAPAD@Z ; ConfigMgr::ReadCommandLine
+
+; 155  : 	ReadFile();
+
+  004b0	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  004b3	e8 00 00 00 00	 call	 ?ReadFile@ConfigMgr@@IAEXXZ ; ConfigMgr::ReadFile
+
+; 156  : }
+
+  004b8	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  004bb	8b e5		 mov	 esp, ebp
+  004bd	5d		 pop	 ebp
+  004be	c2 0c 00	 ret	 12			; 0000000cH
+??0ConfigMgr@@QAE@PBDHPAPAD@Z ENDP			; ConfigMgr::ConfigMgr
+_TEXT	ENDS
+PUBLIC	?FindConfigFile@ConfigMgr@@SAHPADPBD@Z		; ConfigMgr::FindConfigFile
+PUBLIC	?IsFlag@ConfigMgr@@IAE?AW4Flag@1@D@Z		; ConfigMgr::IsFlag
+EXTRN	__imp__strupr:NEAR
+EXTRN	?FullPath@@YAPADPADPBD@Z:NEAR			; FullPath
+EXTRN	__imp__isdigit:NEAR
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+EXTRN	__imp__sscanf:NEAR
+EXTRN	_strlen:NEAR
+_DATA	SEGMENT
+$SG59734 DB	'Config file name can not exceed %u characters', 0aH, 00H
+	ORG $+1
+$SG59740 DB	'%x', 00H
+	ORG $+1
+$SG59742 DB	'%d', 00H
+	ORG $+1
+$SG59745 DB	'Can''t find config file %s.  Please reinstall.', 0aH, 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_defaultFileName$ = 8
+_argc$ = 12
+_argv$ = 16
+_this$ = -12
+_i$ = -4
+_flag$59735 = -8
+?ReadCommandLine@ConfigMgr@@IAEXPBDHPAPAD@Z PROC NEAR	; ConfigMgr::ReadCommandLine
+
+; 160  : {
+
+  004c1	55		 push	 ebp
+  004c2	8b ec		 mov	 ebp, esp
+  004c4	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  004c7	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 161  : 	//	parse the command line, setting Flags and their arguments
+; 162  : 
+; 163  : 	for (int i = 1; i < argc; ++i) {
+
+  004ca	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 1
+  004d1	eb 09		 jmp	 SHORT $L59729
+$L59730:
+  004d3	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  004d6	83 c0 01	 add	 eax, 1
+  004d9	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L59729:
+  004dc	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  004df	3b 4d 0c	 cmp	 ecx, DWORD PTR _argc$[ebp]
+  004e2	0f 8d b5 01 00
+	00		 jge	 $L59731
+
+; 164  : 		if (*argv[i] != '-' && *argv[i] != '/') {
+
+  004e8	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  004eb	8b 45 10	 mov	 eax, DWORD PTR _argv$[ebp]
+  004ee	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  004f1	0f be 11	 movsx	 edx, BYTE PTR [ecx]
+  004f4	83 fa 2d	 cmp	 edx, 45			; 0000002dH
+  004f7	74 6b		 je	 SHORT $L59732
+  004f9	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  004fc	8b 4d 10	 mov	 ecx, DWORD PTR _argv$[ebp]
+  004ff	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  00502	0f be 02	 movsx	 eax, BYTE PTR [edx]
+  00505	83 f8 2f	 cmp	 eax, 47			; 0000002fH
+  00508	74 5a		 je	 SHORT $L59732
+
+; 165  : 			if (strlen(argv[i]) >= MaxPath)
+
+  0050a	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0050d	8b 55 10	 mov	 edx, DWORD PTR _argv$[ebp]
+  00510	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  00513	50		 push	 eax
+  00514	e8 00 00 00 00	 call	 _strlen
+  00519	83 c4 04	 add	 esp, 4
+  0051c	3d 04 01 00 00	 cmp	 eax, 260		; 00000104H
+  00521	72 19		 jb	 SHORT $L59733
+
+; 166  : 				msgMgr->Fatal("Config file name can not exceed %u characters\n",MaxPath);
+
+  00523	68 04 01 00 00	 push	 260			; 00000104H
+  00528	68 00 00 00 00	 push	 OFFSET FLAT:$SG59734
+  0052d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00533	51		 push	 ecx
+  00534	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00539	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59733:
+
+; 167  : 			FullPath(fileName, argv[i]);
+
+  0053c	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  0053f	8b 45 10	 mov	 eax, DWORD PTR _argv$[ebp]
+  00542	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  00545	51		 push	 ecx
+  00546	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00549	52		 push	 edx
+  0054a	e8 00 00 00 00	 call	 ?FullPath@@YAPADPADPBD@Z ; FullPath
+  0054f	83 c4 08	 add	 esp, 8
+
+; 168  : 			strupr(fileName);
+
+  00552	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00555	50		 push	 eax
+  00556	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strupr
+  0055c	83 c4 04	 add	 esp, 4
+
+; 169  : 			continue;
+
+  0055f	e9 6f ff ff ff	 jmp	 $L59730
+$L59732:
+
+; 171  : 
+; 172  : 		Flag flag = IsFlag(argv[i][1]);
+
+  00564	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00567	8b 55 10	 mov	 edx, DWORD PTR _argv$[ebp]
+  0056a	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  0056d	8a 48 01	 mov	 cl, BYTE PTR [eax+1]
+  00570	51		 push	 ecx
+  00571	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00574	e8 00 00 00 00	 call	 ?IsFlag@ConfigMgr@@IAE?AW4Flag@1@D@Z ; ConfigMgr::IsFlag
+  00579	89 45 f8	 mov	 DWORD PTR _flag$59735[ebp], eax
+
+; 173  : 
+; 174  : 		if (!flag)
+
+  0057c	83 7d f8 00	 cmp	 DWORD PTR _flag$59735[ebp], 0
+  00580	75 05		 jne	 SHORT $L59736
+
+; 175  : 			continue;
+
+  00582	e9 4c ff ff ff	 jmp	 $L59730
+$L59736:
+
+; 176  : 
+; 177  : 		if ( argv[i][1] == 'Z' ) 
+
+  00587	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  0058a	8b 45 10	 mov	 eax, DWORD PTR _argv$[ebp]
+  0058d	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  00590	0f be 51 01	 movsx	 edx, BYTE PTR [ecx+1]
+  00594	83 fa 5a	 cmp	 edx, 90			; 0000005aH
+  00597	75 05		 jne	 SHORT $L59737
+
+; 178  : 			break;
+
+  00599	e9 ff 00 00 00	 jmp	 $L59731
+$L59737:
+
+; 179  : 
+; 180  : 		flags[flag].set = True;
+
+  0059e	8b 45 f8	 mov	 eax, DWORD PTR _flag$59735[ebp]
+  005a1	6b c0 18	 imul	 eax, 24			; 00000018H
+  005a4	c7 80 04 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _flags[eax+4], 1
+
+; 181  : 		flags[flag].arg = False;
+
+  005ae	8b 4d f8	 mov	 ecx, DWORD PTR _flag$59735[ebp]
+  005b1	6b c9 18	 imul	 ecx, 24			; 00000018H
+  005b4	c7 81 08 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _flags[ecx+8], 0
+
+; 182  : 		flags[flag].str = &argv[i][2];
+
+  005be	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  005c1	8b 45 10	 mov	 eax, DWORD PTR _argv$[ebp]
+  005c4	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  005c7	83 c1 02	 add	 ecx, 2
+  005ca	8b 55 f8	 mov	 edx, DWORD PTR _flag$59735[ebp]
+  005cd	6b d2 18	 imul	 edx, 24			; 00000018H
+  005d0	89 8a 0c 00 00
+	00		 mov	 DWORD PTR _flags[edx+12], ecx
+
+; 183  : 		if (argv[i][2] == '$' || argv[i][2] == 'x' || argv[i][2] == 'X') {
+
+  005d6	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  005d9	8b 4d 10	 mov	 ecx, DWORD PTR _argv$[ebp]
+  005dc	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  005df	0f be 42 02	 movsx	 eax, BYTE PTR [edx+2]
+  005e3	83 f8 24	 cmp	 eax, 36			; 00000024H
+  005e6	74 24		 je	 SHORT $L59739
+  005e8	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  005eb	8b 55 10	 mov	 edx, DWORD PTR _argv$[ebp]
+  005ee	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  005f1	0f be 48 02	 movsx	 ecx, BYTE PTR [eax+2]
+  005f5	83 f9 78	 cmp	 ecx, 120		; 00000078H
+  005f8	74 12		 je	 SHORT $L59739
+  005fa	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  005fd	8b 45 10	 mov	 eax, DWORD PTR _argv$[ebp]
+  00600	8b 0c 90	 mov	 ecx, DWORD PTR [eax+edx*4]
+  00603	0f be 51 02	 movsx	 edx, BYTE PTR [ecx+2]
+  00607	83 fa 58	 cmp	 edx, 88			; 00000058H
+  0060a	75 39		 jne	 SHORT $L59738
+$L59739:
+
+; 184  : 			sscanf(&argv[i][3], "%x", &flags[flag].val);
+
+  0060c	8b 45 f8	 mov	 eax, DWORD PTR _flag$59735[ebp]
+  0060f	6b c0 18	 imul	 eax, 24			; 00000018H
+  00612	05 14 00 00 00	 add	 eax, OFFSET FLAT:_flags+20
+  00617	50		 push	 eax
+  00618	68 00 00 00 00	 push	 OFFSET FLAT:$SG59740
+  0061d	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00620	8b 55 10	 mov	 edx, DWORD PTR _argv$[ebp]
+  00623	8b 04 8a	 mov	 eax, DWORD PTR [edx+ecx*4]
+  00626	83 c0 03	 add	 eax, 3
+  00629	50		 push	 eax
+  0062a	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sscanf
+  00630	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 185  : 			flags[flag].arg = True;
+
+  00633	8b 4d f8	 mov	 ecx, DWORD PTR _flag$59735[ebp]
+  00636	6b c9 18	 imul	 ecx, 24			; 00000018H
+  00639	c7 81 08 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _flags[ecx+8], 1
+
+; 186  : 		} else {
+
+  00643	eb 53		 jmp	 SHORT $L59743
+$L59738:
+
+; 187  : 			sscanf(&argv[i][2], "%d", &flags[flag].val);
+
+  00645	8b 55 f8	 mov	 edx, DWORD PTR _flag$59735[ebp]
+  00648	6b d2 18	 imul	 edx, 24			; 00000018H
+  0064b	81 c2 14 00 00
+	00		 add	 edx, OFFSET FLAT:_flags+20
+  00651	52		 push	 edx
+  00652	68 00 00 00 00	 push	 OFFSET FLAT:$SG59742
+  00657	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0065a	8b 4d 10	 mov	 ecx, DWORD PTR _argv$[ebp]
+  0065d	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  00660	83 c2 02	 add	 edx, 2
+  00663	52		 push	 edx
+  00664	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sscanf
+  0066a	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 188  : 			if (isdigit(argv[i][2]))
+
+  0066d	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00670	8b 4d 10	 mov	 ecx, DWORD PTR _argv$[ebp]
+  00673	8b 14 81	 mov	 edx, DWORD PTR [ecx+eax*4]
+  00676	0f be 42 02	 movsx	 eax, BYTE PTR [edx+2]
+  0067a	50		 push	 eax
+  0067b	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__isdigit
+  00681	83 c4 04	 add	 esp, 4
+  00684	85 c0		 test	 eax, eax
+  00686	74 10		 je	 SHORT $L59743
+
+; 189  : 				flags[flag].arg = True;
+
+  00688	8b 4d f8	 mov	 ecx, DWORD PTR _flag$59735[ebp]
+  0068b	6b c9 18	 imul	 ecx, 24			; 00000018H
+  0068e	c7 81 08 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _flags[ecx+8], 1
+$L59743:
+
+; 191  : 
+; 192  : 		#ifdef DEBUG
+; 193  : 			switch(flag) {
+; 194  : 				case MemAllocate:
+; 195  : 					switch(argv[i][strlen(argv[i])-1]) {
+; 196  : 						case 'M':
+; 197  : 						case 'm':
+; 198  : 							flags[MemAllocate].val *= 1024;
+; 199  : 						case 'K':
+; 200  : 						case 'k':
+; 201  : 							flags[MemAllocate].val *= 1024;
+; 202  : 							break;
+; 203  : 					}
+; 204  : 					break;
+; 205  : 			}
+; 206  : 		#endif
+; 207  : 	}
+
+  00698	e9 36 fe ff ff	 jmp	 $L59730
+$L59731:
+
+; 208  : 
+; 209  : 	if (!FindConfigFile(fileName, defaultFileName))
+
+  0069d	8b 55 08	 mov	 edx, DWORD PTR _defaultFileName$[ebp]
+  006a0	52		 push	 edx
+  006a1	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  006a4	50		 push	 eax
+  006a5	e8 00 00 00 00	 call	 ?FindConfigFile@ConfigMgr@@SAHPADPBD@Z ; ConfigMgr::FindConfigFile
+  006aa	83 c4 08	 add	 esp, 8
+  006ad	85 c0		 test	 eax, eax
+  006af	75 18		 jne	 SHORT $L59744
+
+; 210  : 		msgMgr->Fatal("Can't find config file %s.  Please reinstall.\n", fileName);
+
+  006b1	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  006b4	51		 push	 ecx
+  006b5	68 00 00 00 00	 push	 OFFSET FLAT:$SG59745
+  006ba	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  006c0	52		 push	 edx
+  006c1	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  006c6	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59744:
+
+; 211  : }
+
+  006c9	8b e5		 mov	 esp, ebp
+  006cb	5d		 pop	 ebp
+  006cc	c2 0c 00	 ret	 12			; 0000000cH
+?ReadCommandLine@ConfigMgr@@IAEXPBDHPAPAD@Z ENDP	; ConfigMgr::ReadCommandLine
+_TEXT	ENDS
+EXTRN	__imp__access:NEAR
+EXTRN	_strcpy:NEAR
+_TEXT	SEGMENT
+_fileName$ = 8
+_defaultFileName$ = 12
+?FindConfigFile@ConfigMgr@@SAHPADPBD@Z PROC NEAR	; ConfigMgr::FindConfigFile
+
+; 215  : {
+
+  006cf	55		 push	 ebp
+  006d0	8b ec		 mov	 ebp, esp
+
+; 216  : 	strcpy ( fileName, defaultFileName );
+
+  006d2	8b 45 0c	 mov	 eax, DWORD PTR _defaultFileName$[ebp]
+  006d5	50		 push	 eax
+  006d6	8b 4d 08	 mov	 ecx, DWORD PTR _fileName$[ebp]
+  006d9	51		 push	 ecx
+  006da	e8 00 00 00 00	 call	 _strcpy
+  006df	83 c4 08	 add	 esp, 8
+
+; 217  : 	return !access ( fileName, 0 );
+
+  006e2	6a 00		 push	 0
+  006e4	8b 55 08	 mov	 edx, DWORD PTR _fileName$[ebp]
+  006e7	52		 push	 edx
+  006e8	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__access
+  006ee	83 c4 08	 add	 esp, 8
+  006f1	f7 d8		 neg	 eax
+  006f3	1b c0		 sbb	 eax, eax
+  006f5	40		 inc	 eax
+
+; 218  : }
+
+  006f6	5d		 pop	 ebp
+  006f7	c3		 ret	 0
+?FindConfigFile@ConfigMgr@@SAHPADPBD@Z ENDP		; ConfigMgr::FindConfigFile
+_flag$ = 8
+_this$ = -8
+_i$ = -4
+?IsFlag@ConfigMgr@@IAE?AW4Flag@1@D@Z PROC NEAR		; ConfigMgr::IsFlag
+
+; 222  : {
+
+  006f8	55		 push	 ebp
+  006f9	8b ec		 mov	 ebp, esp
+  006fb	83 ec 08	 sub	 esp, 8
+  006fe	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 223  : 	//	return the number of the flag specified by the argument
+; 224  : 
+; 225  : 	for (int i = None + 1; i < nFlags; ++i)
+
+  00701	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 1
+  00708	eb 09		 jmp	 SHORT $L59755
+$L59756:
+  0070a	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0070d	83 c0 01	 add	 eax, 1
+  00710	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L59755:
+  00713	83 7d fc 06	 cmp	 DWORD PTR _i$[ebp], 6
+  00717	7d 1c		 jge	 SHORT $L59757
+
+; 226  : 		if (flags[i].letter == flag)
+
+  00719	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0071c	6b c9 18	 imul	 ecx, 24			; 00000018H
+  0071f	0f be 91 00 00
+	00 00		 movsx	 edx, BYTE PTR _flags[ecx]
+  00726	0f be 45 08	 movsx	 eax, BYTE PTR _flag$[ebp]
+  0072a	3b d0		 cmp	 edx, eax
+  0072c	75 05		 jne	 SHORT $L59758
+
+; 227  : 			return (Flag) i;
+
+  0072e	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00731	eb 04		 jmp	 SHORT $L59753
+$L59758:
+
+; 228  : 	return None;
+
+  00733	eb d5		 jmp	 SHORT $L59756
+$L59757:
+  00735	33 c0		 xor	 eax, eax
+$L59753:
+
+; 229  : }
+
+  00737	8b e5		 mov	 esp, ebp
+  00739	5d		 pop	 ebp
+  0073a	c2 04 00	 ret	 4
+?IsFlag@ConfigMgr@@IAE?AW4Flag@1@D@Z ENDP		; ConfigMgr::IsFlag
+_TEXT	ENDS
+PUBLIC	?Usage@FlagEntry@@QAEXPAD@Z			; FlagEntry::Usage
+PUBLIC	?ShowUsage@ConfigMgr@@IBEXXZ			; ConfigMgr::ShowUsage
+EXTRN	__imp__exit:NEAR
+EXTRN	__imp__printf:NEAR
+_DATA	SEGMENT
+	ORG $+1
+$SG59765 DB	'PATHS:  ', 00H
+	ORG $+3
+$SG59770 DB	'%s ', 00H
+$SG59771 DB	0aH, 'TOKENS:', 0aH, 00H
+	ORG $+2
+$SG59775 DB	'  %-12s  %s', 0aH, 00H
+	ORG $+3
+$SG59776 DB	'COMMAND-LINE ARGUMENTS:', 0aH, 00H
+	ORG $+3
+$SG59780 DB	'  %s', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_this$ = -1032
+_buf$ = -1024
+_i$ = -1028
+?ShowUsage@ConfigMgr@@IBEXXZ PROC NEAR			; ConfigMgr::ShowUsage
+
+; 233  : {
+
+  0073d	55		 push	 ebp
+  0073e	8b ec		 mov	 ebp, esp
+  00740	81 ec 08 04 00
+	00		 sub	 esp, 1032		; 00000408H
+  00746	89 8d f8 fb ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 234  : 	char	buf[MsgMgr::MaxStr];
+; 235  : 	int i;
+; 236  : 	printf("PATHS:  ");
+
+  0074c	68 00 00 00 00	 push	 OFFSET FLAT:$SG59765
+  00751	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  00757	83 c4 04	 add	 esp, 4
+
+; 237  : 	for (i = 0; i < nEntries; i++) {
+
+  0075a	c7 85 fc fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  00764	eb 0f		 jmp	 SHORT $L59766
+$L59767:
+  00766	8b 85 fc fb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0076c	83 c0 01	 add	 eax, 1
+  0076f	89 85 fc fb ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L59766:
+  00775	83 bd fc fb ff
+	ff 2e		 cmp	 DWORD PTR _i$[ebp], 46	; 0000002eH
+  0077c	7d 34		 jge	 SHORT $L59768
+
+; 238  : 		if (entries[i].resType == MemResNone)
+
+  0077e	8b 8d fc fb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00784	6b c9 18	 imul	 ecx, 24			; 00000018H
+  00787	83 b9 0c 00 00
+	00 70		 cmp	 DWORD PTR _entries[ecx+12], 112 ; 00000070H
+  0078e	75 02		 jne	 SHORT $L59769
+
+; 239  : 			break;
+
+  00790	eb 20		 jmp	 SHORT $L59768
+$L59769:
+
+; 240  : 		printf("%s ",entries[i].label);
+
+  00792	8b 95 fc fb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00798	6b d2 18	 imul	 edx, 24			; 00000018H
+  0079b	8b 82 00 00 00
+	00		 mov	 eax, DWORD PTR _entries[edx]
+  007a1	50		 push	 eax
+  007a2	68 00 00 00 00	 push	 OFFSET FLAT:$SG59770
+  007a7	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  007ad	83 c4 08	 add	 esp, 8
+
+; 241  : 	}
+
+  007b0	eb b4		 jmp	 SHORT $L59767
+$L59768:
+
+; 242  : 	printf("\nTOKENS:\n");
+
+  007b2	68 00 00 00 00	 push	 OFFSET FLAT:$SG59771
+  007b7	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  007bd	83 c4 04	 add	 esp, 4
+
+; 243  : 	for ( ; i < nEntries; i++)
+
+  007c0	eb 0f		 jmp	 SHORT $L59772
+$L59773:
+  007c2	8b 8d fc fb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  007c8	83 c1 01	 add	 ecx, 1
+  007cb	89 8d fc fb ff
+	ff		 mov	 DWORD PTR _i$[ebp], ecx
+$L59772:
+  007d1	83 bd fc fb ff
+	ff 2e		 cmp	 DWORD PTR _i$[ebp], 46	; 0000002eH
+  007d8	7d 30		 jge	 SHORT $L59774
+
+; 244  : 		printf("  %-12s  %s\n",entries[i].label,entries[i].help);
+
+  007da	8b 95 fc fb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  007e0	6b d2 18	 imul	 edx, 24			; 00000018H
+  007e3	8b 82 10 00 00
+	00		 mov	 eax, DWORD PTR _entries[edx+16]
+  007e9	50		 push	 eax
+  007ea	8b 8d fc fb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  007f0	6b c9 18	 imul	 ecx, 24			; 00000018H
+  007f3	8b 91 00 00 00
+	00		 mov	 edx, DWORD PTR _entries[ecx]
+  007f9	52		 push	 edx
+  007fa	68 00 00 00 00	 push	 OFFSET FLAT:$SG59775
+  007ff	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  00805	83 c4 0c	 add	 esp, 12			; 0000000cH
+  00808	eb b8		 jmp	 SHORT $L59773
+$L59774:
+
+; 245  : 	printf("COMMAND-LINE ARGUMENTS:\n");
+
+  0080a	68 00 00 00 00	 push	 OFFSET FLAT:$SG59776
+  0080f	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  00815	83 c4 04	 add	 esp, 4
+
+; 246  : 	for (i = None + 1; i < nFlags; i++) {
+
+  00818	c7 85 fc fb ff
+	ff 01 00 00 00	 mov	 DWORD PTR _i$[ebp], 1
+  00822	eb 0f		 jmp	 SHORT $L59777
+$L59778:
+  00824	8b 85 fc fb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0082a	83 c0 01	 add	 eax, 1
+  0082d	89 85 fc fb ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L59777:
+  00833	83 bd fc fb ff
+	ff 06		 cmp	 DWORD PTR _i$[ebp], 6
+  0083a	7d 32		 jge	 SHORT $L59779
+
+; 247  : 		flags[i].Usage(buf);
+
+  0083c	8d 8d 00 fc ff
+	ff		 lea	 ecx, DWORD PTR _buf$[ebp]
+  00842	51		 push	 ecx
+  00843	8b 8d fc fb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00849	6b c9 18	 imul	 ecx, 24			; 00000018H
+  0084c	81 c1 00 00 00
+	00		 add	 ecx, OFFSET FLAT:_flags
+  00852	e8 00 00 00 00	 call	 ?Usage@FlagEntry@@QAEXPAD@Z ; FlagEntry::Usage
+
+; 248  : 		printf("  %s",buf);
+
+  00857	8d 95 00 fc ff
+	ff		 lea	 edx, DWORD PTR _buf$[ebp]
+  0085d	52		 push	 edx
+  0085e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59780
+  00863	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  00869	83 c4 08	 add	 esp, 8
+
+; 249  : 	}
+
+  0086c	eb b6		 jmp	 SHORT $L59778
+$L59779:
+
+; 250  : //	printf("SYSTEM MEMORY: %d   \n", memMgr->FreeMemory());
+; 251  : // BEW CLEANUP 	printf("INTERPRETER VERSION : %s   ", version);
+; 252  : // BEW CLEANUP 		printf("VERSION STAMP: %d   ", GetVerStamp());
+; 253  : 	exit(1);
+
+  0086e	6a 01		 push	 1
+  00870	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__exit
+$L59762:
+
+; 254  : }
+
+  00876	8b e5		 mov	 esp, ebp
+  00878	5d		 pop	 ebp
+  00879	c3		 ret	 0
+?ShowUsage@ConfigMgr@@IBEXXZ ENDP			; ConfigMgr::ShowUsage
+_TEXT	ENDS
+PUBLIC	?Claim@ConfigEntry@@QAEHPADHH@Z			; ConfigEntry::Claim
+PUBLIC	?Tokenize@ConfigMgr@@IAEHPAD@Z			; ConfigMgr::Tokenize
+EXTRN	?Open@@YAHPBDI@Z:NEAR				; Open
+EXTRN	?Close@@YAHH@Z:NEAR				; Close
+EXTRN	?ReadString@@YAPADPADHH@Z:NEAR			; ReadString
+_DATA	SEGMENT
+	ORG $+3
+$SG59786 DB	'Can''t open configuration file: %s', 0aH, 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_this$ = -264
+_fd$ = -248
+_buf$ = -244
+_len$59791 = -260
+_nTokens$59792 = -252
+_i$59793 = -256
+?ReadFile@ConfigMgr@@IAEXXZ PROC NEAR			; ConfigMgr::ReadFile
+
+; 258  : {
+
+  0087a	55		 push	 ebp
+  0087b	8b ec		 mov	 ebp, esp
+  0087d	81 ec 08 01 00
+	00		 sub	 esp, 264		; 00000108H
+  00883	89 8d f8 fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 259  : 	//	read the config file and assign each line (if possible) to a
+; 260  : 	//	ConfigEntry
+; 261  : 
+; 262  : 	int fd = Open(fileName, O_RDONLY);
+
+  00889	6a 00		 push	 0
+  0088b	8b 85 f8 fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00891	50		 push	 eax
+  00892	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  00897	83 c4 08	 add	 esp, 8
+  0089a	89 85 08 ff ff
+	ff		 mov	 DWORD PTR _fd$[ebp], eax
+
+; 263  : 	if (fd == -1) {
+
+  008a0	83 bd 08 ff ff
+	ff ff		 cmp	 DWORD PTR _fd$[ebp], -1
+  008a7	75 1d		 jne	 SHORT $L59785
+
+; 264  : 		printf("Can't open configuration file: %s\n", fileName);
+
+  008a9	8b 8d f8 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  008af	51		 push	 ecx
+  008b0	68 00 00 00 00	 push	 OFFSET FLAT:$SG59786
+  008b5	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__printf
+  008bb	83 c4 08	 add	 esp, 8
+
+; 265  : 		exit(1);
+
+  008be	6a 01		 push	 1
+  008c0	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__exit
+$L59785:
+
+; 269  : 	while (ReadString(buf, sizeof(buf), fd)) {
+
+  008c6	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _fd$[ebp]
+  008cc	52		 push	 edx
+  008cd	68 f1 00 00 00	 push	 241			; 000000f1H
+  008d2	8d 85 0c ff ff
+	ff		 lea	 eax, DWORD PTR _buf$[ebp]
+  008d8	50		 push	 eax
+  008d9	e8 00 00 00 00	 call	 ?ReadString@@YAPADPADHH@Z ; ReadString
+  008de	83 c4 0c	 add	 esp, 12			; 0000000cH
+  008e1	85 c0		 test	 eax, eax
+  008e3	0f 84 81 00 00
+	00		 je	 $L59790
+
+; 270  : 		int len = strlen(buf);
+
+  008e9	8d 8d 0c ff ff
+	ff		 lea	 ecx, DWORD PTR _buf$[ebp]
+  008ef	51		 push	 ecx
+  008f0	e8 00 00 00 00	 call	 _strlen
+  008f5	83 c4 04	 add	 esp, 4
+  008f8	89 85 fc fe ff
+	ff		 mov	 DWORD PTR _len$59791[ebp], eax
+
+; 271  : 		int nTokens = Tokenize(buf);
+
+  008fe	8d 95 0c ff ff
+	ff		 lea	 edx, DWORD PTR _buf$[ebp]
+  00904	52		 push	 edx
+  00905	8b 8d f8 fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0090b	e8 00 00 00 00	 call	 ?Tokenize@ConfigMgr@@IAEHPAD@Z ; ConfigMgr::Tokenize
+  00910	89 85 04 ff ff
+	ff		 mov	 DWORD PTR _nTokens$59792[ebp], eax
+
+; 272  : 		for (int i = 0 ; i < nEntries; i++)
+
+  00916	c7 85 00 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$59793[ebp], 0
+  00920	eb 0f		 jmp	 SHORT $L59794
+$L59795:
+  00922	8b 85 00 ff ff
+	ff		 mov	 eax, DWORD PTR _i$59793[ebp]
+  00928	83 c0 01	 add	 eax, 1
+  0092b	89 85 00 ff ff
+	ff		 mov	 DWORD PTR _i$59793[ebp], eax
+$L59794:
+  00931	83 bd 00 ff ff
+	ff 2e		 cmp	 DWORD PTR _i$59793[ebp], 46 ; 0000002eH
+  00938	7d 2b		 jge	 SHORT $L59796
+
+; 273  : 			// It's possible for more than one entry to
+; 274  : 			// claim a line. For example audio = is claimed
+; 275  : 			// by both MemResAudio and MemResWAVE
+; 276  : // HOOK
+; 277  : 			entries[i].Claim(buf, nTokens, len);
+
+  0093a	8b 8d fc fe ff
+	ff		 mov	 ecx, DWORD PTR _len$59791[ebp]
+  00940	51		 push	 ecx
+  00941	8b 95 04 ff ff
+	ff		 mov	 edx, DWORD PTR _nTokens$59792[ebp]
+  00947	52		 push	 edx
+  00948	8d 85 0c ff ff
+	ff		 lea	 eax, DWORD PTR _buf$[ebp]
+  0094e	50		 push	 eax
+  0094f	8b 8d 00 ff ff
+	ff		 mov	 ecx, DWORD PTR _i$59793[ebp]
+  00955	6b c9 18	 imul	 ecx, 24			; 00000018H
+  00958	81 c1 00 00 00
+	00		 add	 ecx, OFFSET FLAT:_entries
+  0095e	e8 00 00 00 00	 call	 ?Claim@ConfigEntry@@QAEHPADHH@Z ; ConfigEntry::Claim
+  00963	eb bd		 jmp	 SHORT $L59795
+$L59796:
+
+; 278  : //			if (entries[i].Claim(buf, nTokens, len))
+; 279  : //				break;
+; 280  : 	}
+
+  00965	e9 5c ff ff ff	 jmp	 $L59785
+$L59790:
+
+; 281  : 	
+; 282  : 	Close(fd);
+
+  0096a	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _fd$[ebp]
+  00970	51		 push	 ecx
+  00971	e8 00 00 00 00	 call	 ?Close@@YAHH@Z		; Close
+  00976	83 c4 04	 add	 esp, 4
+$L59783:
+
+; 283  : }
+
+  00979	8b e5		 mov	 esp, ebp
+  0097b	5d		 pop	 ebp
+  0097c	c3		 ret	 0
+?ReadFile@ConfigMgr@@IAEXXZ ENDP			; ConfigMgr::ReadFile
+_TEXT	ENDS
+EXTRN	__imp__strtok:NEAR
+_DATA	SEGMENT
+	ORG $+1
+$SG59805 DB	' ', 09H, '=', 00H
+$SG59809 DB	' =', 09H, ';,', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_buf$ = 8
+_this$ = -256
+_nTokens$ = -4
+_buf2$ = -248
+_tmp$ = -252
+?Tokenize@ConfigMgr@@IAEHPAD@Z PROC NEAR		; ConfigMgr::Tokenize
+
+; 287  : {
+
+  0097d	55		 push	 ebp
+  0097e	8b ec		 mov	 ebp, esp
+  00980	81 ec 00 01 00
+	00		 sub	 esp, 256		; 00000100H
+  00986	89 8d 00 ff ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 288  : 	//	convert a string into null-terminated tokens
+; 289  : 	//	return the number of tokens, not counting the first label
+; 290  : 	int nTokens;
+; 291  : 	char buf2[ConfigEntry::MaxLine + 1];
+; 292  : 	char*	tmp = buf2;
+
+  0098c	8d 85 08 ff ff
+	ff		 lea	 eax, DWORD PTR _buf2$[ebp]
+  00992	89 85 04 ff ff
+	ff		 mov	 DWORD PTR _tmp$[ebp], eax
+
+; 293  : 
+; 294  : 	strcpy(tmp, buf);
+
+  00998	8b 4d 08	 mov	 ecx, DWORD PTR _buf$[ebp]
+  0099b	51		 push	 ecx
+  0099c	8b 95 04 ff ff
+	ff		 mov	 edx, DWORD PTR _tmp$[ebp]
+  009a2	52		 push	 edx
+  009a3	e8 00 00 00 00	 call	 _strcpy
+  009a8	83 c4 08	 add	 esp, 8
+
+; 295  : 	
+; 296  : 	if (!(tmp = strtok(tmp, " \t=")))
+
+  009ab	68 00 00 00 00	 push	 OFFSET FLAT:$SG59805
+  009b0	8b 85 04 ff ff
+	ff		 mov	 eax, DWORD PTR _tmp$[ebp]
+  009b6	50		 push	 eax
+  009b7	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strtok
+  009bd	83 c4 08	 add	 esp, 8
+  009c0	89 85 04 ff ff
+	ff		 mov	 DWORD PTR _tmp$[ebp], eax
+  009c6	83 bd 04 ff ff
+	ff 00		 cmp	 DWORD PTR _tmp$[ebp], 0
+  009cd	75 07		 jne	 SHORT $L59804
+
+; 297  : 		return 0;
+
+  009cf	33 c0		 xor	 eax, eax
+  009d1	e9 8e 00 00 00	 jmp	 $L59800
+$L59804:
+
+; 298  : 	strcpy(buf, tmp);
+
+  009d6	8b 8d 04 ff ff
+	ff		 mov	 ecx, DWORD PTR _tmp$[ebp]
+  009dc	51		 push	 ecx
+  009dd	8b 55 08	 mov	 edx, DWORD PTR _buf$[ebp]
+  009e0	52		 push	 edx
+  009e1	e8 00 00 00 00	 call	 _strcpy
+  009e6	83 c4 08	 add	 esp, 8
+
+; 299  : 	buf += strlen(tmp) + 1;
+
+  009e9	8b 85 04 ff ff
+	ff		 mov	 eax, DWORD PTR _tmp$[ebp]
+  009ef	50		 push	 eax
+  009f0	e8 00 00 00 00	 call	 _strlen
+  009f5	83 c4 04	 add	 esp, 4
+  009f8	8b 4d 08	 mov	 ecx, DWORD PTR _buf$[ebp]
+  009fb	8d 54 01 01	 lea	 edx, DWORD PTR [ecx+eax+1]
+  009ff	89 55 08	 mov	 DWORD PTR _buf$[ebp], edx
+
+; 300  : 
+; 301  : 	for (nTokens = 0; tmp = strtok(0, " =\t;,"); nTokens++) {
+
+  00a02	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _nTokens$[ebp], 0
+  00a09	eb 09		 jmp	 SHORT $L59806
+$L59807:
+  00a0b	8b 45 fc	 mov	 eax, DWORD PTR _nTokens$[ebp]
+  00a0e	83 c0 01	 add	 eax, 1
+  00a11	89 45 fc	 mov	 DWORD PTR _nTokens$[ebp], eax
+$L59806:
+  00a14	68 00 00 00 00	 push	 OFFSET FLAT:$SG59809
+  00a19	6a 00		 push	 0
+  00a1b	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strtok
+  00a21	83 c4 08	 add	 esp, 8
+  00a24	89 85 04 ff ff
+	ff		 mov	 DWORD PTR _tmp$[ebp], eax
+  00a2a	83 bd 04 ff ff
+	ff 00		 cmp	 DWORD PTR _tmp$[ebp], 0
+  00a31	74 2e		 je	 SHORT $L59808
+
+; 302  : 		strcpy(buf, tmp);
+
+  00a33	8b 8d 04 ff ff
+	ff		 mov	 ecx, DWORD PTR _tmp$[ebp]
+  00a39	51		 push	 ecx
+  00a3a	8b 55 08	 mov	 edx, DWORD PTR _buf$[ebp]
+  00a3d	52		 push	 edx
+  00a3e	e8 00 00 00 00	 call	 _strcpy
+  00a43	83 c4 08	 add	 esp, 8
+
+; 303  : 		buf += strlen(tmp) + 1;
+
+  00a46	8b 85 04 ff ff
+	ff		 mov	 eax, DWORD PTR _tmp$[ebp]
+  00a4c	50		 push	 eax
+  00a4d	e8 00 00 00 00	 call	 _strlen
+  00a52	83 c4 04	 add	 esp, 4
+  00a55	8b 4d 08	 mov	 ecx, DWORD PTR _buf$[ebp]
+  00a58	8d 54 01 01	 lea	 edx, DWORD PTR [ecx+eax+1]
+  00a5c	89 55 08	 mov	 DWORD PTR _buf$[ebp], edx
+
+; 304  : 	}
+
+  00a5f	eb aa		 jmp	 SHORT $L59807
+$L59808:
+
+; 305  : 	
+; 306  : 	return nTokens;
+
+  00a61	8b 45 fc	 mov	 eax, DWORD PTR _nTokens$[ebp]
+$L59800:
+
+; 307  : }
+
+  00a64	8b e5		 mov	 esp, ebp
+  00a66	5d		 pop	 ebp
+  00a67	c2 04 00	 ret	 4
+?Tokenize@ConfigMgr@@IAEHPAD@Z ENDP			; ConfigMgr::Tokenize
+_TEXT	ENDS
+PUBLIC	?Get@ConfigEntry@@QAEPADH@Z			; ConfigEntry::Get
+PUBLIC	?GetNum@ConfigMgr@@QAEHPADHH@Z			; ConfigMgr::GetNum
+PUBLIC	?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z	; ConfigMgr::GetEntry
+EXTRN	__imp__strchr:NEAR
+_DATA	SEGMENT
+	ORG $+2
+$SG59823 DB	'%x', 00H
+	ORG $+1
+$SG59825 DB	'%d', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_name$ = 8
+_tokenNum$ = 12
+_defaultN$ = 16
+_this$ = -16
+_entry$ = -8
+_num$ = -12
+_str$ = -4
+?GetNum@ConfigMgr@@QAEHPADHH@Z PROC NEAR		; ConfigMgr::GetNum
+
+; 311  : {
+
+  00a6a	55		 push	 ebp
+  00a6b	8b ec		 mov	 ebp, esp
+  00a6d	83 ec 10	 sub	 esp, 16			; 00000010H
+  00a70	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 312  : 	// return the 'tokenNumth' token for 'name', converted to number
+; 313  : 
+; 314  : 	ConfigEntry* entry = GetEntry(name);
+
+  00a73	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  00a76	50		 push	 eax
+  00a77	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a7a	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z ; ConfigMgr::GetEntry
+  00a7f	89 45 f8	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 315  : 	if (!entry || tokenNum >= entry->nTokens)
+
+  00a82	83 7d f8 00	 cmp	 DWORD PTR _entry$[ebp], 0
+  00a86	74 0b		 je	 SHORT $L59818
+  00a88	8b 4d f8	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00a8b	8b 55 0c	 mov	 edx, DWORD PTR _tokenNum$[ebp]
+  00a8e	3b 51 04	 cmp	 edx, DWORD PTR [ecx+4]
+  00a91	7c 08		 jl	 SHORT $L59817
+$L59818:
+
+; 316  : 		return defaultN;
+
+  00a93	8b 45 10	 mov	 eax, DWORD PTR _defaultN$[ebp]
+  00a96	e9 c6 00 00 00	 jmp	 $L59815
+$L59817:
+
+; 318  : 	char* str = entry->Get(tokenNum);
+
+  00a9b	8b 45 0c	 mov	 eax, DWORD PTR _tokenNum$[ebp]
+  00a9e	50		 push	 eax
+  00a9f	8b 4d f8	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00aa2	e8 00 00 00 00	 call	 ?Get@ConfigEntry@@QAEPADH@Z ; ConfigEntry::Get
+  00aa7	89 45 fc	 mov	 DWORD PTR _str$[ebp], eax
+
+; 319  : 	if (strchr(str,'X') || strchr(str,'x'))
+
+  00aaa	6a 58		 push	 88			; 00000058H
+  00aac	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00aaf	51		 push	 ecx
+  00ab0	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  00ab6	83 c4 08	 add	 esp, 8
+  00ab9	85 c0		 test	 eax, eax
+  00abb	75 13		 jne	 SHORT $L59822
+  00abd	6a 78		 push	 120			; 00000078H
+  00abf	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00ac2	52		 push	 edx
+  00ac3	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  00ac9	83 c4 08	 add	 esp, 8
+  00acc	85 c0		 test	 eax, eax
+  00ace	74 18		 je	 SHORT $L59821
+$L59822:
+
+; 320  : 		sscanf(str, "%x", &num);
+
+  00ad0	8d 45 f4	 lea	 eax, DWORD PTR _num$[ebp]
+  00ad3	50		 push	 eax
+  00ad4	68 00 00 00 00	 push	 OFFSET FLAT:$SG59823
+  00ad9	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00adc	51		 push	 ecx
+  00add	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sscanf
+  00ae3	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 321  : 	else {
+
+  00ae6	eb 76		 jmp	 SHORT $L59829
+$L59821:
+
+; 322  : 		sscanf(str, "%d", &num);
+
+  00ae8	8d 55 f4	 lea	 edx, DWORD PTR _num$[ebp]
+  00aeb	52		 push	 edx
+  00aec	68 00 00 00 00	 push	 OFFSET FLAT:$SG59825
+  00af1	8b 45 fc	 mov	 eax, DWORD PTR _str$[ebp]
+  00af4	50		 push	 eax
+  00af5	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sscanf
+  00afb	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 323  : 		if (strchr(str,'K') || strchr(str,'k'))
+
+  00afe	6a 4b		 push	 75			; 0000004bH
+  00b00	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00b03	51		 push	 ecx
+  00b04	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  00b0a	83 c4 08	 add	 esp, 8
+  00b0d	85 c0		 test	 eax, eax
+  00b0f	75 13		 jne	 SHORT $L59827
+  00b11	6a 6b		 push	 107			; 0000006bH
+  00b13	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00b16	52		 push	 edx
+  00b17	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  00b1d	83 c4 08	 add	 esp, 8
+  00b20	85 c0		 test	 eax, eax
+  00b22	74 0b		 je	 SHORT $L59826
+$L59827:
+
+; 324  : 			num *= 1024;
+
+  00b24	8b 45 f4	 mov	 eax, DWORD PTR _num$[ebp]
+  00b27	c1 e0 0a	 shl	 eax, 10			; 0000000aH
+  00b2a	89 45 f4	 mov	 DWORD PTR _num$[ebp], eax
+
+; 325  : 		else if (strchr(str,'M') || strchr(str,'m'))
+
+  00b2d	eb 2f		 jmp	 SHORT $L59829
+$L59826:
+  00b2f	6a 4d		 push	 77			; 0000004dH
+  00b31	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00b34	51		 push	 ecx
+  00b35	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  00b3b	83 c4 08	 add	 esp, 8
+  00b3e	85 c0		 test	 eax, eax
+  00b40	75 13		 jne	 SHORT $L59830
+  00b42	6a 6d		 push	 109			; 0000006dH
+  00b44	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00b47	52		 push	 edx
+  00b48	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strchr
+  00b4e	83 c4 08	 add	 esp, 8
+  00b51	85 c0		 test	 eax, eax
+  00b53	74 09		 je	 SHORT $L59829
+$L59830:
+
+; 326  : 			num *= 1024 * 1024;
+
+  00b55	8b 45 f4	 mov	 eax, DWORD PTR _num$[ebp]
+  00b58	c1 e0 14	 shl	 eax, 20			; 00000014H
+  00b5b	89 45 f4	 mov	 DWORD PTR _num$[ebp], eax
+$L59829:
+
+; 328  : 	return num;
+
+  00b5e	8b 45 f4	 mov	 eax, DWORD PTR _num$[ebp]
+$L59815:
+
+; 329  : }
+
+  00b61	8b e5		 mov	 esp, ebp
+  00b63	5d		 pop	 ebp
+  00b64	c2 0c 00	 ret	 12			; 0000000cH
+?GetNum@ConfigMgr@@QAEHPADHH@Z ENDP			; ConfigMgr::GetNum
+_TEXT	ENDS
+PUBLIC	?Get@ConfigMgr@@QAEPADPADH@Z			; ConfigMgr::Get
+_BSS	SEGMENT
+$SG59837 DB	01H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_name$ = 8
+_tokenNum$ = 12
+_this$ = -8
+_entry$ = -4
+?Get@ConfigMgr@@QAEPADPADH@Z PROC NEAR			; ConfigMgr::Get
+
+; 333  : {
+
+  00b67	55		 push	 ebp
+  00b68	8b ec		 mov	 ebp, esp
+  00b6a	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00b6d	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 334  : 	// return the 'tokenNumth' token for 'name'
+; 335  : 
+; 336  : 	ConfigEntry* entry = GetEntry(name);
+
+  00b70	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  00b73	50		 push	 eax
+  00b74	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00b77	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z ; ConfigMgr::GetEntry
+  00b7c	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 337  : 	return entry ? entry->Get(tokenNum) : "";
+
+  00b7f	83 7d fc 00	 cmp	 DWORD PTR _entry$[ebp], 0
+  00b83	74 11		 je	 SHORT $L60213
+  00b85	8b 4d 0c	 mov	 ecx, DWORD PTR _tokenNum$[ebp]
+  00b88	51		 push	 ecx
+  00b89	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00b8c	e8 00 00 00 00	 call	 ?Get@ConfigEntry@@QAEPADH@Z ; ConfigEntry::Get
+  00b91	89 45 f4	 mov	 DWORD PTR -12+[ebp], eax
+  00b94	eb 07		 jmp	 SHORT $L60214
+$L60213:
+  00b96	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], OFFSET FLAT:$SG59837
+$L60214:
+  00b9d	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 338  : }
+
+  00ba0	8b e5		 mov	 esp, ebp
+  00ba2	5d		 pop	 ebp
+  00ba3	c2 08 00	 ret	 8
+?Get@ConfigMgr@@QAEPADPADH@Z ENDP			; ConfigMgr::Get
+_TEXT	ENDS
+PUBLIC	?Get@ConfigMgr@@QAEPADW4MemType@@H@Z		; ConfigMgr::Get
+PUBLIC	?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@W4MemType@@@Z ; ConfigMgr::GetEntry
+_BSS	SEGMENT
+	ALIGN	4
+
+$SG59844 DB	01H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_type$ = 8
+_tokenNum$ = 12
+_this$ = -8
+_entry$ = -4
+?Get@ConfigMgr@@QAEPADW4MemType@@H@Z PROC NEAR		; ConfigMgr::Get
+
+; 342  : {
+
+  00ba6	55		 push	 ebp
+  00ba7	8b ec		 mov	 ebp, esp
+  00ba9	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00bac	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 343  : 	ConfigEntry* entry = GetEntry(type);
+
+  00baf	8b 45 08	 mov	 eax, DWORD PTR _type$[ebp]
+  00bb2	50		 push	 eax
+  00bb3	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00bb6	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@W4MemType@@@Z ; ConfigMgr::GetEntry
+  00bbb	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 344  : 	return entry ? entry->Get(tokenNum) : "";
+
+  00bbe	83 7d fc 00	 cmp	 DWORD PTR _entry$[ebp], 0
+  00bc2	74 11		 je	 SHORT $L60216
+  00bc4	8b 4d 0c	 mov	 ecx, DWORD PTR _tokenNum$[ebp]
+  00bc7	51		 push	 ecx
+  00bc8	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00bcb	e8 00 00 00 00	 call	 ?Get@ConfigEntry@@QAEPADH@Z ; ConfigEntry::Get
+  00bd0	89 45 f4	 mov	 DWORD PTR -12+[ebp], eax
+  00bd3	eb 07		 jmp	 SHORT $L60217
+$L60216:
+  00bd5	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], OFFSET FLAT:$SG59844
+$L60217:
+  00bdc	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 345  : }
+
+  00bdf	8b e5		 mov	 esp, ebp
+  00be1	5d		 pop	 ebp
+  00be2	c2 08 00	 ret	 8
+?Get@ConfigMgr@@QAEPADW4MemType@@H@Z ENDP		; ConfigMgr::Get
+_TEXT	ENDS
+PUBLIC	?GetBool@ConfigMgr@@QAEHPADH@Z			; ConfigMgr::GetBool
+EXTRN	__imp__stricmp:NEAR
+_DATA	SEGMENT
+	ORG $+1
+$SG59854 DB	'yes', 00H
+$SG59855 DB	'true', 00H
+	ORG $+3
+$SG59856 DB	'y', 00H
+	ORG $+2
+$SG59857 DB	't', 00H
+	ORG $+2
+$SG59860 DB	'no', 00H
+	ORG $+1
+$SG59861 DB	'false', 00H
+	ORG $+2
+$SG59862 DB	'n', 00H
+	ORG $+2
+$SG59863 DB	'f', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_name$ = 8
+_tokenNum$ = 12
+_this$ = -8
+_str$ = -4
+?GetBool@ConfigMgr@@QAEHPADH@Z PROC NEAR		; ConfigMgr::GetBool
+
+; 349  : {
+
+  00be5	55		 push	 ebp
+  00be6	8b ec		 mov	 ebp, esp
+  00be8	83 ec 08	 sub	 esp, 8
+  00beb	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 350  : 	char*  str = configMgr->Get(name,tokenNum);
+
+  00bee	8b 45 0c	 mov	 eax, DWORD PTR _tokenNum$[ebp]
+  00bf1	50		 push	 eax
+  00bf2	8b 4d 08	 mov	 ecx, DWORD PTR _name$[ebp]
+  00bf5	51		 push	 ecx
+  00bf6	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00bfc	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADPADH@Z ; ConfigMgr::Get
+  00c01	89 45 fc	 mov	 DWORD PTR _str$[ebp], eax
+
+; 351  : 	if (str 	&& *str){
+
+  00c04	83 7d fc 00	 cmp	 DWORD PTR _str$[ebp], 0
+  00c08	0f 84 c9 00 00
+	00		 je	 $L59858
+  00c0e	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00c11	0f be 02	 movsx	 eax, BYTE PTR [edx]
+  00c14	85 c0		 test	 eax, eax
+  00c16	0f 84 bb 00 00
+	00		 je	 $L59858
+
+; 354  : 				|| !stricmp(str,"y") || !stricmp(str,"t"))
+
+  00c1c	68 00 00 00 00	 push	 OFFSET FLAT:$SG59854
+  00c21	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00c24	51		 push	 ecx
+  00c25	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00c2b	83 c4 08	 add	 esp, 8
+  00c2e	85 c0		 test	 eax, eax
+  00c30	74 42		 je	 SHORT $L59853
+  00c32	68 00 00 00 00	 push	 OFFSET FLAT:$SG59855
+  00c37	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00c3a	52		 push	 edx
+  00c3b	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00c41	83 c4 08	 add	 esp, 8
+  00c44	85 c0		 test	 eax, eax
+  00c46	74 2c		 je	 SHORT $L59853
+  00c48	68 00 00 00 00	 push	 OFFSET FLAT:$SG59856
+  00c4d	8b 45 fc	 mov	 eax, DWORD PTR _str$[ebp]
+  00c50	50		 push	 eax
+  00c51	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00c57	83 c4 08	 add	 esp, 8
+  00c5a	85 c0		 test	 eax, eax
+  00c5c	74 16		 je	 SHORT $L59853
+  00c5e	68 00 00 00 00	 push	 OFFSET FLAT:$SG59857
+  00c63	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00c66	51		 push	 ecx
+  00c67	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00c6d	83 c4 08	 add	 esp, 8
+  00c70	85 c0		 test	 eax, eax
+  00c72	75 07		 jne	 SHORT $L59852
+$L59853:
+
+; 355  : 			return True;
+
+  00c74	b8 01 00 00 00	 mov	 eax, 1
+  00c79	eb 5f		 jmp	 SHORT $L59849
+$L59852:
+
+; 357  : 				|| !stricmp(str,"n") || !stricmp(str,"f"))
+
+  00c7b	68 00 00 00 00	 push	 OFFSET FLAT:$SG59860
+  00c80	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00c83	52		 push	 edx
+  00c84	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00c8a	83 c4 08	 add	 esp, 8
+  00c8d	85 c0		 test	 eax, eax
+  00c8f	74 42		 je	 SHORT $L59859
+  00c91	68 00 00 00 00	 push	 OFFSET FLAT:$SG59861
+  00c96	8b 45 fc	 mov	 eax, DWORD PTR _str$[ebp]
+  00c99	50		 push	 eax
+  00c9a	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00ca0	83 c4 08	 add	 esp, 8
+  00ca3	85 c0		 test	 eax, eax
+  00ca5	74 2c		 je	 SHORT $L59859
+  00ca7	68 00 00 00 00	 push	 OFFSET FLAT:$SG59862
+  00cac	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00caf	51		 push	 ecx
+  00cb0	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00cb6	83 c4 08	 add	 esp, 8
+  00cb9	85 c0		 test	 eax, eax
+  00cbb	74 16		 je	 SHORT $L59859
+  00cbd	68 00 00 00 00	 push	 OFFSET FLAT:$SG59863
+  00cc2	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00cc5	52		 push	 edx
+  00cc6	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00ccc	83 c4 08	 add	 esp, 8
+  00ccf	85 c0		 test	 eax, eax
+  00cd1	75 04		 jne	 SHORT $L59858
+$L59859:
+
+; 358  : 			return False;
+
+  00cd3	33 c0		 xor	 eax, eax
+  00cd5	eb 03		 jmp	 SHORT $L59849
+$L59858:
+
+; 360  : 	//Returns -1 if not defined
+; 361  : 	return -1;
+
+  00cd7	83 c8 ff	 or	 eax, -1
+$L59849:
+
+; 362  : }
+
+  00cda	8b e5		 mov	 esp, ebp
+  00cdc	5d		 pop	 ebp
+  00cdd	c2 08 00	 ret	 8
+?GetBool@ConfigMgr@@QAEHPADH@Z ENDP			; ConfigMgr::GetBool
+_TEXT	ENDS
+PUBLIC	?GetBool@ConfigMgr@@QAEHW4MemType@@H@Z		; ConfigMgr::GetBool
+_DATA	SEGMENT
+	ORG $+2
+$SG59873 DB	'yes', 00H
+$SG59874 DB	'true', 00H
+	ORG $+3
+$SG59875 DB	'y', 00H
+	ORG $+2
+$SG59878 DB	'no', 00H
+	ORG $+1
+$SG59879 DB	'false', 00H
+	ORG $+2
+$SG59880 DB	'n', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_type$ = 8
+_tokenNum$ = 12
+_this$ = -8
+_str$ = -4
+?GetBool@ConfigMgr@@QAEHW4MemType@@H@Z PROC NEAR	; ConfigMgr::GetBool
+
+; 366  : {
+
+  00ce0	55		 push	 ebp
+  00ce1	8b ec		 mov	 ebp, esp
+  00ce3	83 ec 08	 sub	 esp, 8
+  00ce6	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 367  : 	char*  str = configMgr->Get(type,tokenNum);
+
+  00ce9	8b 45 0c	 mov	 eax, DWORD PTR _tokenNum$[ebp]
+  00cec	50		 push	 eax
+  00ced	8b 4d 08	 mov	 ecx, DWORD PTR _type$[ebp]
+  00cf0	51		 push	 ecx
+  00cf1	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  00cf7	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADW4MemType@@H@Z ; ConfigMgr::Get
+  00cfc	89 45 fc	 mov	 DWORD PTR _str$[ebp], eax
+
+; 368  : 	if (str 	&& *str){
+
+  00cff	83 7d fc 00	 cmp	 DWORD PTR _str$[ebp], 0
+  00d03	0f 84 9d 00 00
+	00		 je	 $L59876
+  00d09	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00d0c	0f be 02	 movsx	 eax, BYTE PTR [edx]
+  00d0f	85 c0		 test	 eax, eax
+  00d11	0f 84 8f 00 00
+	00		 je	 $L59876
+
+; 369  : 		//Got a string back
+; 370  : 		if (!stricmp(str,"yes") || !stricmp(str,"true") || !stricmp(str,"y")) 
+
+  00d17	68 00 00 00 00	 push	 OFFSET FLAT:$SG59873
+  00d1c	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00d1f	51		 push	 ecx
+  00d20	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00d26	83 c4 08	 add	 esp, 8
+  00d29	85 c0		 test	 eax, eax
+  00d2b	74 2c		 je	 SHORT $L59872
+  00d2d	68 00 00 00 00	 push	 OFFSET FLAT:$SG59874
+  00d32	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00d35	52		 push	 edx
+  00d36	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00d3c	83 c4 08	 add	 esp, 8
+  00d3f	85 c0		 test	 eax, eax
+  00d41	74 16		 je	 SHORT $L59872
+  00d43	68 00 00 00 00	 push	 OFFSET FLAT:$SG59875
+  00d48	8b 45 fc	 mov	 eax, DWORD PTR _str$[ebp]
+  00d4b	50		 push	 eax
+  00d4c	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00d52	83 c4 08	 add	 esp, 8
+  00d55	85 c0		 test	 eax, eax
+  00d57	75 07		 jne	 SHORT $L59871
+$L59872:
+
+; 371  : 			return True;
+
+  00d59	b8 01 00 00 00	 mov	 eax, 1
+  00d5e	eb 49		 jmp	 SHORT $L59868
+$L59871:
+
+; 372  : 		if (!stricmp(str,"no") || !stricmp(str,"false") || !stricmp(str,"n")) 
+
+  00d60	68 00 00 00 00	 push	 OFFSET FLAT:$SG59878
+  00d65	8b 4d fc	 mov	 ecx, DWORD PTR _str$[ebp]
+  00d68	51		 push	 ecx
+  00d69	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00d6f	83 c4 08	 add	 esp, 8
+  00d72	85 c0		 test	 eax, eax
+  00d74	74 2c		 je	 SHORT $L59877
+  00d76	68 00 00 00 00	 push	 OFFSET FLAT:$SG59879
+  00d7b	8b 55 fc	 mov	 edx, DWORD PTR _str$[ebp]
+  00d7e	52		 push	 edx
+  00d7f	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00d85	83 c4 08	 add	 esp, 8
+  00d88	85 c0		 test	 eax, eax
+  00d8a	74 16		 je	 SHORT $L59877
+  00d8c	68 00 00 00 00	 push	 OFFSET FLAT:$SG59880
+  00d91	8b 45 fc	 mov	 eax, DWORD PTR _str$[ebp]
+  00d94	50		 push	 eax
+  00d95	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00d9b	83 c4 08	 add	 esp, 8
+  00d9e	85 c0		 test	 eax, eax
+  00da0	75 04		 jne	 SHORT $L59876
+$L59877:
+
+; 373  : 			return False;
+
+  00da2	33 c0		 xor	 eax, eax
+  00da4	eb 03		 jmp	 SHORT $L59868
+$L59876:
+
+; 375  : 	//Returns -1 if not defined
+; 376  : 	return -1;
+
+  00da6	83 c8 ff	 or	 eax, -1
+$L59868:
+
+; 377  : }
+
+  00da9	8b e5		 mov	 esp, ebp
+  00dab	5d		 pop	 ebp
+  00dac	c2 08 00	 ret	 8
+?GetBool@ConfigMgr@@QAEHW4MemType@@H@Z ENDP		; ConfigMgr::GetBool
+_TEXT	ENDS
+PUBLIC	?Str@ConfigMgr@@QAEPADW4Flag@1@@Z		; ConfigMgr::Str
+_TEXT	SEGMENT
+_n$ = 8
+_this$ = -4
+?Str@ConfigMgr@@QAEPADW4Flag@1@@Z PROC NEAR		; ConfigMgr::Str
+
+; 381  : {
+
+  00daf	55		 push	 ebp
+  00db0	8b ec		 mov	 ebp, esp
+  00db2	51		 push	 ecx
+  00db3	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 382  : 	return flags[n].str;
+
+  00db6	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  00db9	6b c0 18	 imul	 eax, 24			; 00000018H
+  00dbc	8b 80 0c 00 00
+	00		 mov	 eax, DWORD PTR _flags[eax+12]
+
+; 383  : }
+
+  00dc2	8b e5		 mov	 esp, ebp
+  00dc4	5d		 pop	 ebp
+  00dc5	c2 04 00	 ret	 4
+?Str@ConfigMgr@@QAEPADW4Flag@1@@Z ENDP			; ConfigMgr::Str
+_TEXT	ENDS
+PUBLIC	?Get@ConfigMgr@@QAEHW4Flag@1@@Z			; ConfigMgr::Get
+_TEXT	SEGMENT
+_n$ = 8
+_this$ = -4
+?Get@ConfigMgr@@QAEHW4Flag@1@@Z PROC NEAR		; ConfigMgr::Get
+
+; 387  : {
+
+  00dc8	55		 push	 ebp
+  00dc9	8b ec		 mov	 ebp, esp
+  00dcb	51		 push	 ecx
+  00dcc	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 388  : 	return flags[n].set;
+
+  00dcf	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  00dd2	6b c0 18	 imul	 eax, 24			; 00000018H
+  00dd5	8b 80 04 00 00
+	00		 mov	 eax, DWORD PTR _flags[eax+4]
+
+; 389  : }
+
+  00ddb	8b e5		 mov	 esp, ebp
+  00ddd	5d		 pop	 ebp
+  00dde	c2 04 00	 ret	 4
+?Get@ConfigMgr@@QAEHW4Flag@1@@Z ENDP			; ConfigMgr::Get
+_TEXT	ENDS
+PUBLIC	?Arg@ConfigMgr@@QAEHW4Flag@1@@Z			; ConfigMgr::Arg
+_TEXT	SEGMENT
+_n$ = 8
+_this$ = -4
+?Arg@ConfigMgr@@QAEHW4Flag@1@@Z PROC NEAR		; ConfigMgr::Arg
+
+; 393  : {
+
+  00de1	55		 push	 ebp
+  00de2	8b ec		 mov	 ebp, esp
+  00de4	51		 push	 ecx
+  00de5	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 394  : 	return flags[n].arg;
+
+  00de8	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  00deb	6b c0 18	 imul	 eax, 24			; 00000018H
+  00dee	8b 80 08 00 00
+	00		 mov	 eax, DWORD PTR _flags[eax+8]
+
+; 395  : }
+
+  00df4	8b e5		 mov	 esp, ebp
+  00df6	5d		 pop	 ebp
+  00df7	c2 04 00	 ret	 4
+?Arg@ConfigMgr@@QAEHW4Flag@1@@Z ENDP			; ConfigMgr::Arg
+_TEXT	ENDS
+PUBLIC	?Val@ConfigMgr@@QAEHW4Flag@1@@Z			; ConfigMgr::Val
+_TEXT	SEGMENT
+_n$ = 8
+_this$ = -4
+?Val@ConfigMgr@@QAEHW4Flag@1@@Z PROC NEAR		; ConfigMgr::Val
+
+; 399  : {
+
+  00dfa	55		 push	 ebp
+  00dfb	8b ec		 mov	 ebp, esp
+  00dfd	51		 push	 ecx
+  00dfe	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 400  : 	return flags[n].val;
+
+  00e01	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  00e04	6b c0 18	 imul	 eax, 24			; 00000018H
+  00e07	8b 80 14 00 00
+	00		 mov	 eax, DWORD PTR _flags[eax+20]
+
+; 401  : }
+
+  00e0d	8b e5		 mov	 esp, ebp
+  00e0f	5d		 pop	 ebp
+  00e10	c2 04 00	 ret	 4
+?Val@ConfigMgr@@QAEHW4Flag@1@@Z ENDP			; ConfigMgr::Val
+_TEXT	ENDS
+PUBLIC	?GetNTokens@ConfigMgr@@QAEHPAD@Z		; ConfigMgr::GetNTokens
+_TEXT	SEGMENT
+_name$ = 8
+_this$ = -8
+_entry$ = -4
+?GetNTokens@ConfigMgr@@QAEHPAD@Z PROC NEAR		; ConfigMgr::GetNTokens
+
+; 405  : {
+
+  00e13	55		 push	 ebp
+  00e14	8b ec		 mov	 ebp, esp
+  00e16	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00e19	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 406  : 	// return the number of tokens for an entry
+; 407  : 
+; 408  : 	ConfigEntry* entry = GetEntry(name);
+
+  00e1c	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  00e1f	50		 push	 eax
+  00e20	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00e23	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z ; ConfigMgr::GetEntry
+  00e28	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 409  : 	return entry ? entry->nTokens : 0;
+
+  00e2b	83 7d fc 00	 cmp	 DWORD PTR _entry$[ebp], 0
+  00e2f	74 0b		 je	 SHORT $L60225
+  00e31	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00e34	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00e37	89 55 f4	 mov	 DWORD PTR -12+[ebp], edx
+  00e3a	eb 07		 jmp	 SHORT $L60226
+$L60225:
+  00e3c	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+$L60226:
+  00e43	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 410  : }
+
+  00e46	8b e5		 mov	 esp, ebp
+  00e48	5d		 pop	 ebp
+  00e49	c2 04 00	 ret	 4
+?GetNTokens@ConfigMgr@@QAEHPAD@Z ENDP			; ConfigMgr::GetNTokens
+_TEXT	ENDS
+PUBLIC	?GetNTokens@ConfigMgr@@QAEHW4MemType@@@Z	; ConfigMgr::GetNTokens
+_TEXT	SEGMENT
+_type$ = 8
+_this$ = -8
+_entry$ = -4
+?GetNTokens@ConfigMgr@@QAEHW4MemType@@@Z PROC NEAR	; ConfigMgr::GetNTokens
+
+; 414  : {
+
+  00e4c	55		 push	 ebp
+  00e4d	8b ec		 mov	 ebp, esp
+  00e4f	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00e52	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 415  : 	// return the number of tokens for an entry
+; 416  : 
+; 417  : 	ConfigEntry* entry = GetEntry(type);
+
+  00e55	8b 45 08	 mov	 eax, DWORD PTR _type$[ebp]
+  00e58	50		 push	 eax
+  00e59	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00e5c	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@W4MemType@@@Z ; ConfigMgr::GetEntry
+  00e61	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 418  : 	return entry ? entry->nTokens : 0;
+
+  00e64	83 7d fc 00	 cmp	 DWORD PTR _entry$[ebp], 0
+  00e68	74 0b		 je	 SHORT $L60228
+  00e6a	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00e6d	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00e70	89 55 f4	 mov	 DWORD PTR -12+[ebp], edx
+  00e73	eb 07		 jmp	 SHORT $L60229
+$L60228:
+  00e75	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+$L60229:
+  00e7c	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 419  : }
+
+  00e7f	8b e5		 mov	 esp, ebp
+  00e81	5d		 pop	 ebp
+  00e82	c2 04 00	 ret	 4
+?GetNTokens@ConfigMgr@@QAEHW4MemType@@@Z ENDP		; ConfigMgr::GetNTokens
+_TEXT	ENDS
+PUBLIC	?AddTokenToFront@ConfigMgr@@QAEXPAD0@Z		; ConfigMgr::AddTokenToFront
+EXTRN	??2@YAPAXI@Z:NEAR				; operator new
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+EXTRN	_memcpy:NEAR
+_TEXT	SEGMENT
+_name$ = 8
+_token$ = 12
+_this$ = -32
+_entry$59913 = -16
+_oldLen$59914 = -12
+_tokenNum$59915 = -4
+_newLen$59919 = -8
+_newTokens$59920 = -20
+$T60231 = -24
+$T60232 = -28
+?AddTokenToFront@ConfigMgr@@QAEXPAD0@Z PROC NEAR	; ConfigMgr::AddTokenToFront
+
+; 423  : {
+
+  00e85	55		 push	 ebp
+  00e86	8b ec		 mov	 ebp, esp
+  00e88	83 ec 20	 sub	 esp, 32			; 00000020H
+  00e8b	89 4d e0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 424  : 	if (strlen(token)) {
+
+  00e8e	8b 45 0c	 mov	 eax, DWORD PTR _token$[ebp]
+  00e91	50		 push	 eax
+  00e92	e8 00 00 00 00	 call	 _strlen
+  00e97	83 c4 04	 add	 esp, 4
+  00e9a	85 c0		 test	 eax, eax
+  00e9c	0f 84 df 00 00
+	00		 je	 $L59912
+
+; 425  : 		ConfigEntry* entry = GetEntry(name);
+
+  00ea2	8b 4d 08	 mov	 ecx, DWORD PTR _name$[ebp]
+  00ea5	51		 push	 ecx
+  00ea6	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ea9	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z ; ConfigMgr::GetEntry
+  00eae	89 45 f0	 mov	 DWORD PTR _entry$59913[ebp], eax
+
+; 426  : 
+; 427  : 		// get total length of old entry
+; 428  : 		int oldLen = 0;
+
+  00eb1	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _oldLen$59914[ebp], 0
+
+; 429  : 		for (int tokenNum = 0; tokenNum < GetNTokens(name); tokenNum++)
+
+  00eb8	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _tokenNum$59915[ebp], 0
+  00ebf	eb 09		 jmp	 SHORT $L59916
+$L59917:
+  00ec1	8b 55 fc	 mov	 edx, DWORD PTR _tokenNum$59915[ebp]
+  00ec4	83 c2 01	 add	 edx, 1
+  00ec7	89 55 fc	 mov	 DWORD PTR _tokenNum$59915[ebp], edx
+$L59916:
+  00eca	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  00ecd	50		 push	 eax
+  00ece	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ed1	e8 00 00 00 00	 call	 ?GetNTokens@ConfigMgr@@QAEHPAD@Z ; ConfigMgr::GetNTokens
+  00ed6	39 45 fc	 cmp	 DWORD PTR _tokenNum$59915[ebp], eax
+  00ed9	7d 25		 jge	 SHORT $L59918
+
+; 430  : 			oldLen += strlen(Get(name,tokenNum)) + 1;
+
+  00edb	8b 4d fc	 mov	 ecx, DWORD PTR _tokenNum$59915[ebp]
+  00ede	51		 push	 ecx
+  00edf	8b 55 08	 mov	 edx, DWORD PTR _name$[ebp]
+  00ee2	52		 push	 edx
+  00ee3	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ee6	e8 00 00 00 00	 call	 ?Get@ConfigMgr@@QAEPADPADH@Z ; ConfigMgr::Get
+  00eeb	50		 push	 eax
+  00eec	e8 00 00 00 00	 call	 _strlen
+  00ef1	83 c4 04	 add	 esp, 4
+  00ef4	8b 4d f4	 mov	 ecx, DWORD PTR _oldLen$59914[ebp]
+  00ef7	8d 54 01 01	 lea	 edx, DWORD PTR [ecx+eax+1]
+  00efb	89 55 f4	 mov	 DWORD PTR _oldLen$59914[ebp], edx
+  00efe	eb c1		 jmp	 SHORT $L59917
+$L59918:
+
+; 431  : 		int newLen = strlen(token) + 1;
+
+  00f00	8b 45 0c	 mov	 eax, DWORD PTR _token$[ebp]
+  00f03	50		 push	 eax
+  00f04	e8 00 00 00 00	 call	 _strlen
+  00f09	83 c4 04	 add	 esp, 4
+  00f0c	83 c0 01	 add	 eax, 1
+  00f0f	89 45 f8	 mov	 DWORD PTR _newLen$59919[ebp], eax
+
+; 432  : 
+; 433  : 		// make new copy starting with new token
+; 434  : 		char* newTokens = New char[newLen+oldLen];
+
+  00f12	8b 4d f8	 mov	 ecx, DWORD PTR _newLen$59919[ebp]
+  00f15	03 4d f4	 add	 ecx, DWORD PTR _oldLen$59914[ebp]
+  00f18	51		 push	 ecx
+  00f19	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  00f1e	83 c4 04	 add	 esp, 4
+  00f21	89 45 e8	 mov	 DWORD PTR $T60231[ebp], eax
+  00f24	8b 55 e8	 mov	 edx, DWORD PTR $T60231[ebp]
+  00f27	89 55 ec	 mov	 DWORD PTR _newTokens$59920[ebp], edx
+
+; 435  : 		strcpy(newTokens, token);
+
+  00f2a	8b 45 0c	 mov	 eax, DWORD PTR _token$[ebp]
+  00f2d	50		 push	 eax
+  00f2e	8b 4d ec	 mov	 ecx, DWORD PTR _newTokens$59920[ebp]
+  00f31	51		 push	 ecx
+  00f32	e8 00 00 00 00	 call	 _strcpy
+  00f37	83 c4 08	 add	 esp, 8
+
+; 436  : 		memcpy(newTokens+newLen, entry->tokens, oldLen);
+
+  00f3a	8b 55 f4	 mov	 edx, DWORD PTR _oldLen$59914[ebp]
+  00f3d	52		 push	 edx
+  00f3e	8b 45 f0	 mov	 eax, DWORD PTR _entry$59913[ebp]
+  00f41	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00f44	51		 push	 ecx
+  00f45	8b 55 ec	 mov	 edx, DWORD PTR _newTokens$59920[ebp]
+  00f48	03 55 f8	 add	 edx, DWORD PTR _newLen$59919[ebp]
+  00f4b	52		 push	 edx
+  00f4c	e8 00 00 00 00	 call	 _memcpy
+  00f51	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 437  : 
+; 438  : 		delete entry->tokens;
+
+  00f54	8b 45 f0	 mov	 eax, DWORD PTR _entry$59913[ebp]
+  00f57	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00f5a	89 4d e4	 mov	 DWORD PTR $T60232[ebp], ecx
+  00f5d	8b 55 e4	 mov	 edx, DWORD PTR $T60232[ebp]
+  00f60	52		 push	 edx
+  00f61	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00f66	83 c4 04	 add	 esp, 4
+
+; 439  : 		entry->tokens = newTokens;
+
+  00f69	8b 45 f0	 mov	 eax, DWORD PTR _entry$59913[ebp]
+  00f6c	8b 4d ec	 mov	 ecx, DWORD PTR _newTokens$59920[ebp]
+  00f6f	89 48 08	 mov	 DWORD PTR [eax+8], ecx
+
+; 440  : 		entry->nTokens++;
+
+  00f72	8b 55 f0	 mov	 edx, DWORD PTR _entry$59913[ebp]
+  00f75	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  00f78	83 c0 01	 add	 eax, 1
+  00f7b	8b 4d f0	 mov	 ecx, DWORD PTR _entry$59913[ebp]
+  00f7e	89 41 04	 mov	 DWORD PTR [ecx+4], eax
+$L59912:
+
+; 442  : }
+
+  00f81	8b e5		 mov	 esp, ebp
+  00f83	5d		 pop	 ebp
+  00f84	c2 08 00	 ret	 8
+?AddTokenToFront@ConfigMgr@@QAEXPAD0@Z ENDP		; ConfigMgr::AddTokenToFront
+_name$ = 8
+_this$ = -8
+_i$ = -4
+?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z PROC NEAR	; ConfigMgr::GetEntry
+
+; 446  : {
+
+  00f87	55		 push	 ebp
+  00f88	8b ec		 mov	 ebp, esp
+  00f8a	83 ec 08	 sub	 esp, 8
+  00f8d	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 447  : 	for (int i = 0; i < nEntries; i++)
+
+  00f90	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00f97	eb 09		 jmp	 SHORT $L59929
+$L59930:
+  00f99	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00f9c	83 c0 01	 add	 eax, 1
+  00f9f	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L59929:
+  00fa2	83 7d fc 2e	 cmp	 DWORD PTR _i$[ebp], 46	; 0000002eH
+  00fa6	7d 2d		 jge	 SHORT $L59931
+
+; 448  : 		if (!stricmp(name, entries[i].label))
+
+  00fa8	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00fab	6b c9 18	 imul	 ecx, 24			; 00000018H
+  00fae	8b 91 00 00 00
+	00		 mov	 edx, DWORD PTR _entries[ecx]
+  00fb4	52		 push	 edx
+  00fb5	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  00fb8	50		 push	 eax
+  00fb9	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  00fbf	83 c4 08	 add	 esp, 8
+  00fc2	85 c0		 test	 eax, eax
+  00fc4	75 0d		 jne	 SHORT $L59932
+
+; 449  : 			return &entries[i];
+
+  00fc6	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00fc9	6b c0 18	 imul	 eax, 24			; 00000018H
+  00fcc	05 00 00 00 00	 add	 eax, OFFSET FLAT:_entries
+  00fd1	eb 04		 jmp	 SHORT $L59927
+$L59932:
+
+; 450  : 	return 0;
+
+  00fd3	eb c4		 jmp	 SHORT $L59930
+$L59931:
+  00fd5	33 c0		 xor	 eax, eax
+$L59927:
+
+; 451  : }
+
+  00fd7	8b e5		 mov	 esp, ebp
+  00fd9	5d		 pop	 ebp
+  00fda	c2 04 00	 ret	 4
+?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z ENDP	; ConfigMgr::GetEntry
+_TEXT	ENDS
+PUBLIC	?Claimed@ConfigEntry@@QAEHXZ			; ConfigEntry::Claimed
+PUBLIC	?Claimed@ConfigMgr@@QAEHPAD@Z			; ConfigMgr::Claimed
+_TEXT	SEGMENT
+_name$ = 8
+_this$ = -8
+_entry$ = -4
+?Claimed@ConfigMgr@@QAEHPAD@Z PROC NEAR			; ConfigMgr::Claimed
+
+; 455  : {
+
+  00fdd	55		 push	 ebp
+  00fde	8b ec		 mov	 ebp, esp
+  00fe0	83 ec 08	 sub	 esp, 8
+  00fe3	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 456  : 	ConfigEntry* entry = GetEntry(name);
+
+  00fe6	8b 45 08	 mov	 eax, DWORD PTR _name$[ebp]
+  00fe9	50		 push	 eax
+  00fea	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00fed	e8 00 00 00 00	 call	 ?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@PAD@Z ; ConfigMgr::GetEntry
+  00ff2	89 45 fc	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 457  : 	return entry->Claimed();
+
+  00ff5	8b 4d fc	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00ff8	e8 00 00 00 00	 call	 ?Claimed@ConfigEntry@@QAEHXZ ; ConfigEntry::Claimed
+
+; 458  : }
+
+  00ffd	8b e5		 mov	 esp, ebp
+  00fff	5d		 pop	 ebp
+  01000	c2 04 00	 ret	 4
+?Claimed@ConfigMgr@@QAEHPAD@Z ENDP			; ConfigMgr::Claimed
+_TEXT	ENDS
+;	COMDAT ?Claimed@ConfigEntry@@QAEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Claimed@ConfigEntry@@QAEHXZ PROC NEAR			; ConfigEntry::Claimed, COMDAT
+
+; 77   : 	Bool	Claimed() {return claimed;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 14	 mov	 eax, DWORD PTR [eax+20]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?Claimed@ConfigEntry@@QAEHXZ ENDP			; ConfigEntry::Claimed
+_TEXT	ENDS
+_TEXT	SEGMENT
+_type$ = 8
+_this$ = -8
+_i$ = -4
+?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@W4MemType@@@Z PROC NEAR ; ConfigMgr::GetEntry
+
+; 463  : {
+
+  01003	55		 push	 ebp
+  01004	8b ec		 mov	 ebp, esp
+  01006	83 ec 08	 sub	 esp, 8
+  01009	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 464  : 	for (int i = 0; i < nEntries; i++)
+
+  0100c	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  01013	eb 09		 jmp	 SHORT $L59943
+$L59944:
+  01015	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  01018	83 c0 01	 add	 eax, 1
+  0101b	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L59943:
+  0101e	83 7d fc 2e	 cmp	 DWORD PTR _i$[ebp], 46	; 0000002eH
+  01022	7d 20		 jge	 SHORT $L59945
+
+; 465  : 		if (entries[i].resType == type)
+
+  01024	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  01027	6b c9 18	 imul	 ecx, 24			; 00000018H
+  0102a	8b 91 0c 00 00
+	00		 mov	 edx, DWORD PTR _entries[ecx+12]
+  01030	3b 55 08	 cmp	 edx, DWORD PTR _type$[ebp]
+  01033	75 0d		 jne	 SHORT $L59946
+
+; 466  : 			return &entries[i];
+
+  01035	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  01038	6b c0 18	 imul	 eax, 24			; 00000018H
+  0103b	05 00 00 00 00	 add	 eax, OFFSET FLAT:_entries
+  01040	eb 04		 jmp	 SHORT $L59941
+$L59946:
+
+; 467  : 	return 0;
+
+  01042	eb d1		 jmp	 SHORT $L59944
+$L59945:
+  01044	33 c0		 xor	 eax, eax
+$L59941:
+
+; 468  : }
+
+  01046	8b e5		 mov	 esp, ebp
+  01048	5d		 pop	 ebp
+  01049	c2 04 00	 ret	 4
+?GetEntry@ConfigMgr@@IAEPAVConfigEntry@@W4MemType@@@Z ENDP ; ConfigMgr::GetEntry
+_TEXT	ENDS
+PUBLIC	?GetLine@ConfigMgr@@QAEPADPAD@Z			; ConfigMgr::GetLine
+PUBLIC	?GetFileName@ConfigMgr@@QBEPBDXZ		; ConfigMgr::GetFileName
+EXTRN	?Fatal@MsgMgr@@QAAXDPADHHZZ:NEAR		; MsgMgr::Fatal
+_BSS	SEGMENT
+	ALIGN	4
+
+_?buf@?1??GetLine@ConfigMgr@@QAEPADPAD@Z@4PADA DB 0f1H DUP (?)
+_BSS	ENDS
+_DATA	SEGMENT
+	ORG $+2
+$SG59955 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Config'
+	DB	'.cpp', 00H
+	ORG $+3
+$SG59961 DB	'= ', 09H, 0aH, 00H
+	ORG $+3
+$SG59963 DB	' ', 09H, 0aH, 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_name$ = 8
+_this$ = -16
+_fd$ = -8
+_value$ = -4
+_cp$59960 = -12
+?GetLine@ConfigMgr@@QAEPADPAD@Z PROC NEAR		; ConfigMgr::GetLine
+
+; 472  : {
+
+  0104c	55		 push	 ebp
+  0104d	8b ec		 mov	 ebp, esp
+  0104f	83 ec 10	 sub	 esp, 16			; 00000010H
+  01052	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 473  : 	//	return an arbitrary line from the config file
+; 474  : 
+; 475  :    static char buf[ConfigEntry::MaxLine + 1];
+; 476  : 
+; 477  :    int fd = Open(GetFileName(), O_RDONLY);
+
+  01055	6a 00		 push	 0
+  01057	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0105a	e8 00 00 00 00	 call	 ?GetFileName@ConfigMgr@@QBEPBDXZ ; ConfigMgr::GetFileName
+  0105f	50		 push	 eax
+  01060	e8 00 00 00 00	 call	 ?Open@@YAHPBDI@Z	; Open
+  01065	83 c4 08	 add	 esp, 8
+  01068	89 45 f8	 mov	 DWORD PTR _fd$[ebp], eax
+
+; 478  :    if (fd == -1) 
+
+  0106b	83 7d f8 ff	 cmp	 DWORD PTR _fd$[ebp], -1
+  0106f	75 25		 jne	 SHORT $L59954
+
+; 479  : 		msgMgr->Fatal(SrcLoc, Msg_ConfigFileOpen, GetFileName());
+
+  01071	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  01074	e8 00 00 00 00	 call	 ?GetFileName@ConfigMgr@@QBEPBDXZ ; ConfigMgr::GetFileName
+  01079	50		 push	 eax
+  0107a	6a 5c		 push	 92			; 0000005cH
+  0107c	68 df 01 00 00	 push	 479			; 000001dfH
+  01081	68 00 00 00 00	 push	 OFFSET FLAT:$SG59955
+  01086	6a 61		 push	 97			; 00000061H
+  01088	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0108d	50		 push	 eax
+  0108e	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  01093	83 c4 18	 add	 esp, 24			; 00000018H
+$L59954:
+
+; 480  : 
+; 481  : 	char* value = 0;
+
+  01096	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _value$[ebp], 0
+$L59958:
+
+; 482  : 	while (ReadString(buf, sizeof buf, fd)) {
+
+  0109d	8b 4d f8	 mov	 ecx, DWORD PTR _fd$[ebp]
+  010a0	51		 push	 ecx
+  010a1	68 f1 00 00 00	 push	 241			; 000000f1H
+  010a6	68 00 00 00 00	 push	 OFFSET FLAT:_?buf@?1??GetLine@ConfigMgr@@QAEPADPAD@Z@4PADA
+  010ab	e8 00 00 00 00	 call	 ?ReadString@@YAPADPADHH@Z ; ReadString
+  010b0	83 c4 0c	 add	 esp, 12			; 0000000cH
+  010b3	85 c0		 test	 eax, eax
+  010b5	74 48		 je	 SHORT $L59959
+
+; 483  : 		char* cp = strtok(buf, "= \t\n");
+
+  010b7	68 00 00 00 00	 push	 OFFSET FLAT:$SG59961
+  010bc	68 00 00 00 00	 push	 OFFSET FLAT:_?buf@?1??GetLine@ConfigMgr@@QAEPADPAD@Z@4PADA
+  010c1	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strtok
+  010c7	83 c4 08	 add	 esp, 8
+  010ca	89 45 f4	 mov	 DWORD PTR _cp$59960[ebp], eax
+
+; 484  : 		if (cp && !stricmp(cp, name)) {
+
+  010cd	83 7d f4 00	 cmp	 DWORD PTR _cp$59960[ebp], 0
+  010d1	74 2a		 je	 SHORT $L59962
+  010d3	8b 55 08	 mov	 edx, DWORD PTR _name$[ebp]
+  010d6	52		 push	 edx
+  010d7	8b 45 f4	 mov	 eax, DWORD PTR _cp$59960[ebp]
+  010da	50		 push	 eax
+  010db	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  010e1	83 c4 08	 add	 esp, 8
+  010e4	85 c0		 test	 eax, eax
+  010e6	75 15		 jne	 SHORT $L59962
+
+; 485  : 			value = strtok(0, " \t\n");
+
+  010e8	68 00 00 00 00	 push	 OFFSET FLAT:$SG59963
+  010ed	6a 00		 push	 0
+  010ef	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__strtok
+  010f5	83 c4 08	 add	 esp, 8
+  010f8	89 45 fc	 mov	 DWORD PTR _value$[ebp], eax
+
+; 486  : 			break;
+
+  010fb	eb 02		 jmp	 SHORT $L59959
+$L59962:
+
+; 488  : 	}
+
+  010fd	eb 9e		 jmp	 SHORT $L59958
+$L59959:
+
+; 489  : 
+; 490  : 	Close(fd);
+
+  010ff	8b 4d f8	 mov	 ecx, DWORD PTR _fd$[ebp]
+  01102	51		 push	 ecx
+  01103	e8 00 00 00 00	 call	 ?Close@@YAHH@Z		; Close
+  01108	83 c4 04	 add	 esp, 4
+
+; 491  :    
+; 492  : 	return value;
+
+  0110b	8b 45 fc	 mov	 eax, DWORD PTR _value$[ebp]
+
+; 493  : }
+
+  0110e	8b e5		 mov	 esp, ebp
+  01110	5d		 pop	 ebp
+  01111	c2 04 00	 ret	 4
+?GetLine@ConfigMgr@@QAEPADPAD@Z ENDP			; ConfigMgr::GetLine
+_TEXT	ENDS
+PUBLIC	??DTextID@@QAEPADXZ				; TextID::operator*
+PUBLIC	?StrGetData@@YA?AVTextID@@VMemID@@@Z		; StrGetData
+PUBLIC	?KGetConfig@@YAXPAF@Z				; KGetConfig
+PUBLIC	??0MemID@@QAE@G@Z				; MemID::MemID
+EXTRN	?pm@@3VPMachine@@A:BYTE				; pm
+_TEXT	SEGMENT
+_args$ = 8
+_value$ = -4
+$T60240 = -12
+$T60242 = -20
+?KGetConfig@@YAXPAF@Z PROC NEAR				; KGetConfig
+
+; 497  : {
+
+  01114	55		 push	 ebp
+  01115	8b ec		 mov	 ebp, esp
+  01117	83 ec 14	 sub	 esp, 20			; 00000014H
+
+; 498  : 	//	find an entry in the config file and copy its value into dest.
+; 499  : 	//	return dest if entry is found, else 0
+; 500  : 
+; 501  : 	char* value = configMgr->GetLine(*StrGetData(arg(1)));
+
+  0111a	51		 push	 ecx
+  0111b	8b cc		 mov	 ecx, esp
+  0111d	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  01120	66 8b 50 02	 mov	 dx, WORD PTR [eax+2]
+  01124	52		 push	 edx
+  01125	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0112a	8d 45 f4	 lea	 eax, DWORD PTR $T60240[ebp]
+  0112d	50		 push	 eax
+  0112e	e8 00 00 00 00	 call	 ?StrGetData@@YA?AVTextID@@VMemID@@@Z ; StrGetData
+  01133	83 c4 08	 add	 esp, 8
+  01136	8b c8		 mov	 ecx, eax
+  01138	e8 00 00 00 00	 call	 ??DTextID@@QAEPADXZ	; TextID::operator*
+  0113d	50		 push	 eax
+  0113e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  01144	e8 00 00 00 00	 call	 ?GetLine@ConfigMgr@@QAEPADPAD@Z ; ConfigMgr::GetLine
+  01149	89 45 fc	 mov	 DWORD PTR _value$[ebp], eax
+
+; 502  : 	if (!value)
+
+  0114c	83 7d fc 00	 cmp	 DWORD PTR _value$[ebp], 0
+  01150	75 0c		 jne	 SHORT $L59970
+
+; 503  : 		pm.acc = 0;
+
+  01152	c7 05 04 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, 0
+
+; 504  : 	else {
+
+  0115c	eb 3c		 jmp	 SHORT $L59971
+$L59970:
+
+; 505  : 		strcpy(*StrGetData(arg(2)), value);
+
+  0115e	8b 4d fc	 mov	 ecx, DWORD PTR _value$[ebp]
+  01161	51		 push	 ecx
+  01162	51		 push	 ecx
+  01163	8b cc		 mov	 ecx, esp
+  01165	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  01168	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  0116c	50		 push	 eax
+  0116d	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  01172	8d 4d ec	 lea	 ecx, DWORD PTR $T60242[ebp]
+  01175	51		 push	 ecx
+  01176	e8 00 00 00 00	 call	 ?StrGetData@@YA?AVTextID@@VMemID@@@Z ; StrGetData
+  0117b	83 c4 08	 add	 esp, 8
+  0117e	8b c8		 mov	 ecx, eax
+  01180	e8 00 00 00 00	 call	 ??DTextID@@QAEPADXZ	; TextID::operator*
+  01185	50		 push	 eax
+  01186	e8 00 00 00 00	 call	 _strcpy
+  0118b	83 c4 08	 add	 esp, 8
+
+; 506  : 		pm.acc = arg(2);
+
+  0118e	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  01191	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  01195	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L59971:
+
+; 508  : }
+
+  0119a	8b e5		 mov	 esp, ebp
+  0119c	5d		 pop	 ebp
+  0119d	c3		 ret	 0
+?KGetConfig@@YAXPAF@Z ENDP				; KGetConfig
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0MemID@@QAE@G@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 23   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _h$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 24   : 	}
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b e5		 mov	 esp, ebp
+  00016	5d		 pop	 ebp
+  00017	c2 04 00	 ret	 4
+??0MemID@@QAE@G@Z ENDP					; MemID::MemID
+_TEXT	ENDS
+_TEXT	SEGMENT
+_letter$ = 8
+_help$ = 12
+_this$ = -4
+??0FlagEntry@@QAE@DPAD@Z PROC NEAR			; FlagEntry::FlagEntry
+
+; 515  : {
+
+  0119e	55		 push	 ebp
+  0119f	8b ec		 mov	 ebp, esp
+  011a1	51		 push	 ecx
+  011a2	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  011a5	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  011a8	8a 4d 08	 mov	 cl, BYTE PTR _letter$[ebp]
+  011ab	88 08		 mov	 BYTE PTR [eax], cl
+  011ad	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  011b0	c7 42 04 00 00
+	00 00		 mov	 DWORD PTR [edx+4], 0
+  011b7	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  011ba	8b 4d 0c	 mov	 ecx, DWORD PTR _help$[ebp]
+  011bd	89 48 10	 mov	 DWORD PTR [eax+16], ecx
+  011c0	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  011c3	c7 42 14 00 00
+	00 00		 mov	 DWORD PTR [edx+20], 0
+
+; 516  : }
+
+  011ca	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  011cd	8b e5		 mov	 esp, ebp
+  011cf	5d		 pop	 ebp
+  011d0	c2 08 00	 ret	 8
+??0FlagEntry@@QAE@DPAD@Z ENDP				; FlagEntry::FlagEntry
+_TEXT	ENDS
+EXTRN	__imp__sprintf:NEAR
+_DATA	SEGMENT
+$SG59983 DB	'-%c %s', 0aH, 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_dest$ = 8
+_this$ = -4
+?Usage@FlagEntry@@QAEXPAD@Z PROC NEAR			; FlagEntry::Usage
+
+; 520  : {
+
+  011d3	55		 push	 ebp
+  011d4	8b ec		 mov	 ebp, esp
+  011d6	51		 push	 ecx
+  011d7	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 521  : 	sprintf(dest, "-%c %s\n", letter, help);
+
+  011da	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  011dd	8b 48 10	 mov	 ecx, DWORD PTR [eax+16]
+  011e0	51		 push	 ecx
+  011e1	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  011e4	0f be 02	 movsx	 eax, BYTE PTR [edx]
+  011e7	50		 push	 eax
+  011e8	68 00 00 00 00	 push	 OFFSET FLAT:$SG59983
+  011ed	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  011f0	51		 push	 ecx
+  011f1	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sprintf
+  011f7	83 c4 10	 add	 esp, 16			; 00000010H
+
+; 522  : }
+
+  011fa	8b e5		 mov	 esp, ebp
+  011fc	5d		 pop	 ebp
+  011fd	c2 04 00	 ret	 4
+?Usage@FlagEntry@@QAEXPAD@Z ENDP			; FlagEntry::Usage
+_label$ = 8
+_resType$ = 12
+_help$ = 16
+_this$ = -4
+??0ConfigEntry@@QAE@PADW4MemType@@0@Z PROC NEAR		; ConfigEntry::ConfigEntry
+
+; 528  : {
+
+  01200	55		 push	 ebp
+  01201	8b ec		 mov	 ebp, esp
+  01203	51		 push	 ecx
+  01204	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  01207	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0120a	8b 4d 08	 mov	 ecx, DWORD PTR _label$[ebp]
+  0120d	89 08		 mov	 DWORD PTR [eax], ecx
+  0120f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  01212	c7 42 04 00 00
+	00 00		 mov	 DWORD PTR [edx+4], 0
+  01219	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0121c	c7 40 08 00 00
+	00 00		 mov	 DWORD PTR [eax+8], 0
+  01223	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  01226	8b 55 0c	 mov	 edx, DWORD PTR _resType$[ebp]
+  01229	89 51 0c	 mov	 DWORD PTR [ecx+12], edx
+  0122c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0122f	8b 4d 10	 mov	 ecx, DWORD PTR _help$[ebp]
+  01232	89 48 10	 mov	 DWORD PTR [eax+16], ecx
+
+; 529  : 	claimed = False;
+
+  01235	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  01238	c7 42 14 00 00
+	00 00		 mov	 DWORD PTR [edx+20], 0
+
+; 530  : }
+
+  0123f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01242	8b e5		 mov	 esp, ebp
+  01244	5d		 pop	 ebp
+  01245	c2 0c 00	 ret	 12			; 0000000cH
+??0ConfigEntry@@QAE@PADW4MemType@@0@Z ENDP		; ConfigEntry::ConfigEntry
+_this$ = -8
+$T60248 = -4
+??1ConfigEntry@@QAE@XZ PROC NEAR			; ConfigEntry::~ConfigEntry
+
+; 533  : {
+
+  01248	55		 push	 ebp
+  01249	8b ec		 mov	 ebp, esp
+  0124b	83 ec 08	 sub	 esp, 8
+  0124e	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 534  : 	delete[] tokens;
+
+  01251	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  01254	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  01257	89 4d fc	 mov	 DWORD PTR $T60248[ebp], ecx
+  0125a	8b 55 fc	 mov	 edx, DWORD PTR $T60248[ebp]
+  0125d	52		 push	 edx
+  0125e	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  01263	83 c4 04	 add	 esp, 4
+
+; 535  : }
+
+  01266	8b e5		 mov	 esp, ebp
+  01268	5d		 pop	 ebp
+  01269	c3		 ret	 0
+??1ConfigEntry@@QAE@XZ ENDP				; ConfigEntry::~ConfigEntry
+_line$ = 8
+_nTokens$ = 12
+_len$ = 16
+_this$ = -8
+$T60250 = -4
+?Claim@ConfigEntry@@QAEHPADHH@Z PROC NEAR		; ConfigEntry::Claim
+
+; 539  : {
+
+  0126a	55		 push	 ebp
+  0126b	8b ec		 mov	 ebp, esp
+  0126d	83 ec 08	 sub	 esp, 8
+  01270	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 540  : 	//	if this (tokenized) line is ours, grab it
+; 541  : 	
+; 542  : 	//	is it ours?
+; 543  : 	if (stricmp(line, label))
+
+  01273	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  01276	8b 08		 mov	 ecx, DWORD PTR [eax]
+  01278	51		 push	 ecx
+  01279	8b 55 08	 mov	 edx, DWORD PTR _line$[ebp]
+  0127c	52		 push	 edx
+  0127d	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__stricmp
+  01283	83 c4 08	 add	 esp, 8
+  01286	85 c0		 test	 eax, eax
+  01288	74 04		 je	 SHORT $L60000
+
+; 544  : 		return False;
+
+  0128a	33 c0		 xor	 eax, eax
+  0128c	eb 63		 jmp	 SHORT $L59999
+$L60000:
+
+; 545  : 
+; 546  : 	claimed = True;
+
+  0128e	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  01291	c7 40 14 01 00
+	00 00		 mov	 DWORD PTR [eax+20], 1
+
+; 547  : 
+; 548  : 	if (nTokens) {
+
+  01298	83 7d 0c 00	 cmp	 DWORD PTR _nTokens$[ebp], 0
+  0129c	74 4e		 je	 SHORT $L60001
+
+; 549  : 
+; 550  : 		//	skip over label name and make our own copy of the line
+; 551  : 		line += strlen(line) + 1;
+
+  0129e	8b 4d 08	 mov	 ecx, DWORD PTR _line$[ebp]
+  012a1	51		 push	 ecx
+  012a2	e8 00 00 00 00	 call	 _strlen
+  012a7	83 c4 04	 add	 esp, 4
+  012aa	8b 55 08	 mov	 edx, DWORD PTR _line$[ebp]
+  012ad	8d 44 02 01	 lea	 eax, DWORD PTR [edx+eax+1]
+  012b1	89 45 08	 mov	 DWORD PTR _line$[ebp], eax
+
+; 552  : 		this->nTokens = nTokens;
+
+  012b4	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  012b7	8b 55 0c	 mov	 edx, DWORD PTR _nTokens$[ebp]
+  012ba	89 51 04	 mov	 DWORD PTR [ecx+4], edx
+
+; 553  : 		tokens = New char[len];
+
+  012bd	8b 45 10	 mov	 eax, DWORD PTR _len$[ebp]
+  012c0	50		 push	 eax
+  012c1	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  012c6	83 c4 04	 add	 esp, 4
+  012c9	89 45 fc	 mov	 DWORD PTR $T60250[ebp], eax
+  012cc	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  012cf	8b 55 fc	 mov	 edx, DWORD PTR $T60250[ebp]
+  012d2	89 51 08	 mov	 DWORD PTR [ecx+8], edx
+
+; 554  : 		memcpy(tokens, line, len);
+
+  012d5	8b 45 10	 mov	 eax, DWORD PTR _len$[ebp]
+  012d8	50		 push	 eax
+  012d9	8b 4d 08	 mov	 ecx, DWORD PTR _line$[ebp]
+  012dc	51		 push	 ecx
+  012dd	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  012e0	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  012e3	50		 push	 eax
+  012e4	e8 00 00 00 00	 call	 _memcpy
+  012e9	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L60001:
+
+; 556  : 
+; 557  : 	return True;
+
+  012ec	b8 01 00 00 00	 mov	 eax, 1
+$L59999:
+
+; 558  : }
+
+  012f1	8b e5		 mov	 esp, ebp
+  012f3	5d		 pop	 ebp
+  012f4	c2 0c 00	 ret	 12			; 0000000cH
+?Claim@ConfigEntry@@QAEHPADHH@Z ENDP			; ConfigEntry::Claim
+_TEXT	ENDS
+_BSS	SEGMENT
+	ALIGN	4
+
+$SG60009 DB	01H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_n$ = 8
+_this$ = -12
+_cp$ = -4
+_i$ = -8
+?Get@ConfigEntry@@QAEPADH@Z PROC NEAR			; ConfigEntry::Get
+
+; 562  : {
+
+  012f7	55		 push	 ebp
+  012f8	8b ec		 mov	 ebp, esp
+  012fa	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  012fd	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 563  : 	//	return the nth token, or 0 if invalid
+; 564  : 
+; 565  : 	if (n >= nTokens)
+
+  01300	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  01303	8b 4d 08	 mov	 ecx, DWORD PTR _n$[ebp]
+  01306	3b 48 04	 cmp	 ecx, DWORD PTR [eax+4]
+  01309	7c 07		 jl	 SHORT $L60008
+
+; 566  : 		return "";
+
+  0130b	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$SG60009
+  01310	eb 3e		 jmp	 SHORT $L60007
+$L60008:
+
+; 567  : 
+; 568  : 	char* cp = tokens;
+
+  01312	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  01315	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  01318	89 45 fc	 mov	 DWORD PTR _cp$[ebp], eax
+
+; 569  : 	for (int i = 0; i < n; i++)
+
+  0131b	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  01322	eb 09		 jmp	 SHORT $L60012
+$L60013:
+  01324	8b 4d f8	 mov	 ecx, DWORD PTR _i$[ebp]
+  01327	83 c1 01	 add	 ecx, 1
+  0132a	89 4d f8	 mov	 DWORD PTR _i$[ebp], ecx
+$L60012:
+  0132d	8b 55 f8	 mov	 edx, DWORD PTR _i$[ebp]
+  01330	3b 55 08	 cmp	 edx, DWORD PTR _n$[ebp]
+  01333	7d 18		 jge	 SHORT $L60014
+
+; 570  : 		cp += strlen(cp) + 1;
+
+  01335	8b 45 fc	 mov	 eax, DWORD PTR _cp$[ebp]
+  01338	50		 push	 eax
+  01339	e8 00 00 00 00	 call	 _strlen
+  0133e	83 c4 04	 add	 esp, 4
+  01341	8b 4d fc	 mov	 ecx, DWORD PTR _cp$[ebp]
+  01344	8d 54 01 01	 lea	 edx, DWORD PTR [ecx+eax+1]
+  01348	89 55 fc	 mov	 DWORD PTR _cp$[ebp], edx
+  0134b	eb d7		 jmp	 SHORT $L60013
+$L60014:
+
+; 571  : 
+; 572  : 	return cp;
+
+  0134d	8b 45 fc	 mov	 eax, DWORD PTR _cp$[ebp]
+$L60007:
+
+; 573  : }
+
+  01350	8b e5		 mov	 esp, ebp
+  01352	5d		 pop	 ebp
+  01353	c2 04 00	 ret	 4
+?Get@ConfigEntry@@QAEPADH@Z ENDP			; ConfigEntry::Get
+_TEXT	ENDS
+;	COMDAT ?GetFileName@ConfigMgr@@QBEPBDXZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetFileName@ConfigMgr@@QBEPBDXZ PROC NEAR		; ConfigMgr::GetFileName, COMDAT
+
+; 57   : 	const char*		GetFileName() const { return fileName; }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b e5		 mov	 esp, ebp
+  0000c	5d		 pop	 ebp
+  0000d	c3		 ret	 0
+?GetFileName@ConfigMgr@@QBEPBDXZ ENDP			; ConfigMgr::GetFileName
+_TEXT	ENDS
+PUBLIC	??_C@_00A@?$AA@					; `string'
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+;	COMDAT ??_C@_00A@?$AA@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\textid.hpp
+_BSS	SEGMENT
+??_C@_00A@?$AA@ DB 01H DUP (?)				; `string'
+_BSS	ENDS
+;	COMDAT ??DTextID@@QAEPADXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DTextID@@QAEPADXZ PROC NEAR				; TextID::operator*, COMDAT
+
+; 24   : 	char	*operator *() { 
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 25   : 		return handle ? (char *)MemID::operator*() : ""; 
+
+  00009	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	33 c9		 xor	 ecx, ecx
+  0000e	66 8b 08	 mov	 cx, WORD PTR [eax]
+  00011	85 c9		 test	 ecx, ecx
+  00013	74 0d		 je	 SHORT $L60254
+  00015	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00018	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0001d	89 45 f8	 mov	 DWORD PTR -8+[ebp], eax
+  00020	eb 07		 jmp	 SHORT $L60255
+$L60254:
+  00022	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], OFFSET FLAT:??_C@_00A@?$AA@ ; `string'
+$L60255:
+  00029	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 26   : 	}
+
+  0002c	8b e5		 mov	 esp, ebp
+  0002e	5d		 pop	 ebp
+  0002f	c3		 ret	 0
+??DTextID@@QAEPADXZ ENDP				; TextID::operator*
+_TEXT	ENDS
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+EXTRN	_memMgr:DWORD
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+PUBLIC	??0TextID@@QAE@ABV0@@Z				; TextID::TextID
+PUBLIC	??0ObjectID@@QAE@ABVMemID@@@Z			; ObjectID::ObjectID
+PUBLIC	??0ObjectID@@QAE@ABV0@@Z			; ObjectID::ObjectID
+PUBLIC	?IsObject@ObjectID@@QBEHXZ			; ObjectID::IsObject
+PUBLIC	?GetProperty@ObjectID@@QBEFG@Z			; ObjectID::GetProperty
+EXTRN	??0TextID@@QAE@ABVMemID@@@Z:NEAR		; TextID::TextID
+EXTRN	??0TextID@@QAE@G@Z:NEAR				; TextID::TextID
+;	COMDAT ?StrGetData@@YA?AVTextID@@VMemID@@@Z
+_TEXT	SEGMENT
+_id$ = 12
+___$ReturnUdt$ = 8
+_obj$ = -4
+$T60260 = -8
+$T60261 = -12
+?StrGetData@@YA?AVTextID@@VMemID@@@Z PROC NEAR		; StrGetData, COMDAT
+
+; 41   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+
+; 42   : //	following code fails to compile with CodeWarrior 1.1.1.2.
+; 43   : //	ObjectID obj(id);
+; 44   : //	return (TextID) (obj.IsObject() ? obj.GetProperty(s_data) : obj);
+; 45   : //	replaced code with the following...
+; 46   : 
+; 47   : 	ObjectID	obj = (ObjectID) (id);
+
+  00006	8d 45 0c	 lea	 eax, DWORD PTR _id$[ebp]
+  00009	50		 push	 eax
+  0000a	8d 4d f8	 lea	 ecx, DWORD PTR $T60260[ebp]
+  0000d	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@ABVMemID@@@Z ; ObjectID::ObjectID
+  00012	50		 push	 eax
+  00013	8d 4d fc	 lea	 ecx, DWORD PTR _obj$[ebp]
+  00016	e8 00 00 00 00	 call	 ??0ObjectID@@QAE@ABV0@@Z ; ObjectID::ObjectID
+
+; 48   : 	if (obj.IsObject())
+
+  0001b	8d 4d fc	 lea	 ecx, DWORD PTR _obj$[ebp]
+  0001e	e8 00 00 00 00	 call	 ?IsObject@ObjectID@@QBEHXZ ; ObjectID::IsObject
+  00023	85 c0		 test	 eax, eax
+  00025	74 18		 je	 SHORT $L59491
+
+; 49   : 		return obj.GetProperty(s_data);
+
+  00027	6a 71		 push	 113			; 00000071H
+  00029	8d 4d fc	 lea	 ecx, DWORD PTR _obj$[ebp]
+  0002c	e8 00 00 00 00	 call	 ?GetProperty@ObjectID@@QBEFG@Z ; ObjectID::GetProperty
+  00031	50		 push	 eax
+  00032	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00035	e8 00 00 00 00	 call	 ??0TextID@@QAE@G@Z	; TextID::TextID
+  0003a	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+  0003d	eb 18		 jmp	 SHORT $L59492
+$L59491:
+
+; 51   : 		return (TextID) id;
+
+  0003f	8d 4d 0c	 lea	 ecx, DWORD PTR _id$[ebp]
+  00042	51		 push	 ecx
+  00043	8d 4d f4	 lea	 ecx, DWORD PTR $T60261[ebp]
+  00046	e8 00 00 00 00	 call	 ??0TextID@@QAE@ABVMemID@@@Z ; TextID::TextID
+  0004b	50		 push	 eax
+  0004c	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  0004f	e8 00 00 00 00	 call	 ??0TextID@@QAE@ABV0@@Z	; TextID::TextID
+  00054	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+$L59492:
+
+; 52   : }
+
+  00057	8b e5		 mov	 esp, ebp
+  00059	5d		 pop	 ebp
+  0005a	c3		 ret	 0
+?StrGetData@@YA?AVTextID@@VMemID@@@Z ENDP		; StrGetData
+_TEXT	ENDS
+PUBLIC	??0FakeObjectID@@QAE@ABVMemID@@@Z		; FakeObjectID::FakeObjectID
+;	COMDAT ??0ObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0ObjectID@@QAE@ABVMemID@@@Z PROC NEAR			; ObjectID::ObjectID, COMDAT
+
+; 228  : 	ObjectID(const MemID& id) : FakeObjectID(id) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _id$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0FakeObjectID@@QAE@ABVMemID@@@Z ; FakeObjectID::FakeObjectID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0ObjectID@@QAE@ABVMemID@@@Z ENDP			; ObjectID::ObjectID
+_TEXT	ENDS
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0FakeObjectID@@QAE@ABVMemID@@@Z PROC NEAR		; FakeObjectID::FakeObjectID, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _id$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0FakeObjectID@@QAE@ABVMemID@@@Z ENDP			; FakeObjectID::FakeObjectID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0ObjectID@@QAE@ABV0@@Z PROC NEAR			; ObjectID::ObjectID, COMDAT
+
+; 229  : 	ObjectID(const ObjectID& id) : FakeObjectID((MemID&) id) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _id$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0FakeObjectID@@QAE@ABVMemID@@@Z ; FakeObjectID::FakeObjectID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0ObjectID@@QAE@ABV0@@Z ENDP				; ObjectID::ObjectID
+_TEXT	ENDS
+PUBLIC	?IsValid@MemID@@QBEHXZ				; MemID::IsValid
+EXTRN	?GetMemType@MemID@@QBE?AW4MemType@@XZ:NEAR	; MemID::GetMemType
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsObject@ObjectID@@QBEHXZ PROC NEAR			; ObjectID::IsObject, COMDAT
+
+; 247  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 248  : 		return IsValid() && GetMemType() == MemObject;
+
+  00009	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ?IsValid@MemID@@QBEHXZ	; MemID::IsValid
+  00011	85 c0		 test	 eax, eax
+  00013	74 16		 je	 SHORT $L60267
+  00015	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00018	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  0001d	83 f8 34	 cmp	 eax, 52			; 00000034H
+  00020	75 09		 jne	 SHORT $L60267
+  00022	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+  00029	eb 07		 jmp	 SHORT $L60268
+$L60267:
+  0002b	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+$L60268:
+  00032	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 249  : 	}
+
+  00035	8b e5		 mov	 esp, ebp
+  00037	5d		 pop	 ebp
+  00038	c3		 ret	 0
+?IsObject@ObjectID@@QBEHXZ ENDP				; ObjectID::IsObject
+_TEXT	ENDS
+PUBLIC	?IsValid@MemoryMgr@@QAEHG@Z			; MemoryMgr::IsValid
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsValid@MemID@@QBEHXZ PROC NEAR			; MemID::IsValid, COMDAT
+
+; 62   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 63   : 		return memMgr->IsValid(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?IsValid@MemoryMgr@@QAEHG@Z ; MemoryMgr::IsValid
+
+; 64   : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+?IsValid@MemID@@QBEHXZ ENDP				; MemID::IsValid
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -8
+_tempID$ = -4
+?IsValid@MemoryMgr@@QAEHG@Z PROC NEAR			; MemoryMgr::IsValid, COMDAT
+
+; 475  : 	inline Bool MemoryMgr::IsValid(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 476  : 		unsigned short tempID = (unsigned short)theID;
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  0000d	66 89 45 fc	 mov	 WORD PTR _tempID$[ebp], ax
+
+; 477  : 
+; 478  : 		return(
+; 479  : 				(tempID)															&&
+; 480  : 				(tempID < maxDescriptors)									&&
+; 481  : 				(desc[tempID].memInfo.bits.freeDescriptor == False)	&&
+; 482  : 				(desc[tempID].memInfo.bits.freeMemory == False)
+; 483  : 				);
+
+  00011	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00014	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  0001a	85 c9		 test	 ecx, ecx
+  0001c	74 58		 je	 SHORT $L60271
+  0001e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00021	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00027	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0002a	3b 50 04	 cmp	 edx, DWORD PTR [eax+4]
+  0002d	73 47		 jae	 SHORT $L60271
+  0002f	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00032	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00038	c1 e1 04	 shl	 ecx, 4
+  0003b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0003e	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00041	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00044	c1 e1 0e	 shl	 ecx, 14			; 0000000eH
+  00047	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  0004a	85 c9		 test	 ecx, ecx
+  0004c	75 28		 jne	 SHORT $L60271
+  0004e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00051	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00057	c1 e2 04	 shl	 edx, 4
+  0005a	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0005d	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00060	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  00063	c1 e2 14	 shl	 edx, 20			; 00000014H
+  00066	c1 fa 1f	 sar	 edx, 31			; 0000001fH
+  00069	85 d2		 test	 edx, edx
+  0006b	75 09		 jne	 SHORT $L60271
+  0006d	c7 45 f4 01 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 1
+  00074	eb 07		 jmp	 SHORT $L60272
+$L60271:
+  00076	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+$L60272:
+  0007d	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 484  : 	}
+
+  00080	8b e5		 mov	 esp, ebp
+  00082	5d		 pop	 ebp
+  00083	c2 04 00	 ret	 4
+?IsValid@MemoryMgr@@QAEHG@Z ENDP			; MemoryMgr::IsValid
+_TEXT	ENDS
+PUBLIC	?GetProperty@Object@@QAEFG@Z			; Object::GetProperty
+PUBLIC	??CFakeObjectID@@QBEPAUObject@@XZ		; FakeObjectID::operator->
+PUBLIC	?AssureValid@ObjectID@@QBEXXZ			; ObjectID::AssureValid
+;	COMDAT ?GetProperty@ObjectID@@QBEFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -4
+?GetProperty@ObjectID@@QBEFG@Z PROC NEAR		; ObjectID::GetProperty, COMDAT
+
+; 290  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 291  : 		//	get a property given a selector
+; 292  : 		AssureValid();
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?AssureValid@ObjectID@@QBEXXZ ; ObjectID::AssureValid
+
+; 293  : 		return (*this)->GetProperty(selector);
+
+  0000f	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  00013	50		 push	 eax
+  00014	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00017	e8 00 00 00 00	 call	 ??CFakeObjectID@@QBEPAUObject@@XZ ; FakeObjectID::operator->
+  0001c	8b c8		 mov	 ecx, eax
+  0001e	e8 00 00 00 00	 call	 ?GetProperty@Object@@QAEFG@Z ; Object::GetProperty
+
+; 294  : 	}
+
+  00023	8b e5		 mov	 esp, ebp
+  00025	5d		 pop	 ebp
+  00026	c2 04 00	 ret	 4
+?GetProperty@ObjectID@@QBEFG@Z ENDP			; ObjectID::GetProperty
+_TEXT	ENDS
+PUBLIC	?GetPropAddrCheck@Object@@QAEPAFG@Z		; Object::GetPropAddrCheck
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -4
+?GetProperty@Object@@QAEFG@Z PROC NEAR			; Object::GetProperty, COMDAT
+
+; 170  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 171  : 		//	get a property given a selector
+; 172  : 		return *GetPropAddrCheck(selector);
+
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ?GetPropAddrCheck@Object@@QAEPAFG@Z ; Object::GetPropAddrCheck
+  00014	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 173  : 	}
+
+  00017	8b e5		 mov	 esp, ebp
+  00019	5d		 pop	 ebp
+  0001a	c2 04 00	 ret	 4
+?GetProperty@Object@@QAEFG@Z ENDP			; Object::GetProperty
+_TEXT	ENDS
+PUBLIC	?GetPropAddr@Object@@QAEPAFG@Z			; Object::GetPropAddr
+EXTRN	?Fatal@MsgMgr@@QAAXHZZ:NEAR			; MsgMgr::Fatal
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -8
+_property$ = -4
+?GetPropAddrCheck@Object@@QAEPAFG@Z PROC NEAR		; Object::GetPropAddrCheck, COMDAT
+
+; 153  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 154  : 		//	get a property's address, checking for valid property
+; 155  : 		Property* property = GetPropAddr(selector);
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  0000d	50		 push	 eax
+  0000e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00011	e8 00 00 00 00	 call	 ?GetPropAddr@Object@@QAEPAFG@Z ; Object::GetPropAddr
+  00016	89 45 fc	 mov	 DWORD PTR _property$[ebp], eax
+
+; 156  : 		if (!property)
+
+  00019	83 7d fc 00	 cmp	 DWORD PTR _property$[ebp], 0
+  0001d	75 1b		 jne	 SHORT $L59013
+
+; 157  : 			msgMgr->Fatal(Msg_InvalidProperty, selector);
+
+  0001f	8b 4d 08	 mov	 ecx, DWORD PTR _selector$[ebp]
+  00022	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00028	51		 push	 ecx
+  00029	6a 29		 push	 41			; 00000029H
+  0002b	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00031	52		 push	 edx
+  00032	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXHZZ	; MsgMgr::Fatal
+  00037	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59013:
+
+; 158  : 		return property;
+
+  0003a	8b 45 fc	 mov	 eax, DWORD PTR _property$[ebp]
+
+; 159  : 	}
+
+  0003d	8b e5		 mov	 esp, ebp
+  0003f	5d		 pop	 ebp
+  00040	c2 04 00	 ret	 4
+?GetPropAddrCheck@Object@@QAEPAFG@Z ENDP		; Object::GetPropAddrCheck
+_TEXT	ENDS
+PUBLIC	?selectorDict@Object@@QAEPAVSelectorDict@@XZ	; Object::selectorDict
+PUBLIC	??AObject@@QAEAAFH@Z				; Object::operator[]
+EXTRN	?get@SelectorDict@@QAEHG@Z:NEAR			; SelectorDict::get
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT
+_selector$ = 8
+_this$ = -8
+_index$ = -4
+?GetPropAddr@Object@@QAEPAFG@Z PROC NEAR		; Object::GetPropAddr, COMDAT
+
+; 127  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 128  : 		int index = selectorDict()->get ( selector );
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _selector$[ebp]
+  0000d	50		 push	 eax
+  0000e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00011	e8 00 00 00 00	 call	 ?selectorDict@Object@@QAEPAVSelectorDict@@XZ ; Object::selectorDict
+  00016	8b c8		 mov	 ecx, eax
+  00018	e8 00 00 00 00	 call	 ?get@SelectorDict@@QAEHG@Z ; SelectorDict::get
+  0001d	89 45 fc	 mov	 DWORD PTR _index$[ebp], eax
+
+; 129  : 
+; 130  : 		if ( index != -1 && !selectorDict()->script )
+
+  00020	83 7d fc ff	 cmp	 DWORD PTR _index$[ebp], -1
+  00024	74 2b		 je	 SHORT $L59004
+  00026	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00029	e8 00 00 00 00	 call	 ?selectorDict@Object@@QAEPAVSelectorDict@@XZ ; Object::selectorDict
+  0002e	33 c9		 xor	 ecx, ecx
+  00030	66 8b 48 16	 mov	 cx, WORD PTR [eax+22]
+  00034	85 c9		 test	 ecx, ecx
+  00036	75 19		 jne	 SHORT $L59004
+
+; 131  : 			return &(*this)[selectorDict()->offset]; 
+
+  00038	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0003b	e8 00 00 00 00	 call	 ?selectorDict@Object@@QAEPAVSelectorDict@@XZ ; Object::selectorDict
+  00040	33 d2		 xor	 edx, edx
+  00042	66 8b 50 14	 mov	 dx, WORD PTR [eax+20]
+  00046	52		 push	 edx
+  00047	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0004a	e8 00 00 00 00	 call	 ??AObject@@QAEAAFH@Z	; Object::operator[]
+  0004f	eb 02		 jmp	 SHORT $L59002
+$L59004:
+
+; 132  : 
+; 133  : 		return 0;
+
+  00051	33 c0		 xor	 eax, eax
+$L59002:
+
+; 134  : 	}
+
+  00053	8b e5		 mov	 esp, ebp
+  00055	5d		 pop	 ebp
+  00056	c2 04 00	 ret	 4
+?GetPropAddr@Object@@QAEPAFG@Z ENDP			; Object::GetPropAddr
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?selectorDict@Object@@QAEPAVSelectorDict@@XZ PROC NEAR	; Object::selectorDict, COMDAT
+
+; 102  : 	SelectorDict *selectorDict ( void ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 103  : 		return _selectorDict;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 04	 mov	 eax, DWORD PTR [eax+4]
+
+; 104  : 	};
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?selectorDict@Object@@QAEPAVSelectorDict@@XZ ENDP	; Object::selectorDict
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT
+_index$ = 8
+_this$ = -4
+??AObject@@QAEAAFH@Z PROC NEAR				; Object::operator[], COMDAT
+
+; 117  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : 		//	get a reference to a property given the number of the property
+; 119  : 		return ((Property*) this)[index];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _index$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8d 04 41	 lea	 eax, DWORD PTR [ecx+eax*2]
+
+; 120  : 	}
+
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??AObject@@QAEAAFH@Z ENDP				; Object::operator[]
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??CFakeObjectID@@QBEPAUObject@@XZ PROC NEAR		; FakeObjectID::operator->, COMDAT
+
+; 224  : FakeTemplateID(FakeObjectID, Object, MemObject)
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+??CFakeObjectID@@QBEPAUObject@@XZ ENDP			; FakeObjectID::operator->
+_TEXT	ENDS
+PUBLIC	??BMemID@@QBEGXZ				; MemID::operator unsigned short
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?AssureValid@ObjectID@@QBEXXZ PROC NEAR			; ObjectID::AssureValid, COMDAT
+
+; 238  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 239  : 		if (!IsObject())
+
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ?IsObject@ObjectID@@QBEHXZ ; ObjectID::IsObject
+  0000f	85 c0		 test	 eax, eax
+  00011	75 1e		 jne	 SHORT $L59172
+
+; 240  : 			msgMgr->Fatal(Msg_NotObject, (int) *this);
+
+  00013	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00016	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  0001b	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00020	50		 push	 eax
+  00021	6a 2f		 push	 47			; 0000002fH
+  00023	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00028	50		 push	 eax
+  00029	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXHZZ	; MsgMgr::Fatal
+  0002e	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59172:
+
+; 241  : 	}
+
+  00031	8b e5		 mov	 esp, ebp
+  00033	5d		 pop	 ebp
+  00034	c3		 ret	 0
+?AssureValid@ObjectID@@QBEXXZ ENDP			; ObjectID::AssureValid
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT
+_this$ = -4
+??BMemID@@QBEGXZ PROC NEAR				; MemID::operator unsigned short, COMDAT
+
+; 93   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 94   : 		return handle;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 95   : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+??BMemID@@QBEGXZ ENDP					; MemID::operator unsigned short
+_TEXT	ENDS
+;	COMDAT ??0TextID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+___that$ = 8
+_this$ = -4
+??0TextID@@QAE@ABV0@@Z PROC NEAR			; TextID::TextID, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR ___that$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0TextID@@QAE@ABV0@@Z ENDP				; TextID::TextID
+_TEXT	ENDS
+END

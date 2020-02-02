@@ -1,0 +1,5477 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Polyfuse.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Free@MemID@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SCI_Point@@QAEAAU0@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SCI_Point@@QAEAAU0@ABVFPoint@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4FPoint@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4FPoint@@QAEAAV0@ABUSCI_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??GFPoint@@QBE?AV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFPoint@@QBENABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??TFPoint@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8FPoint@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??9FPoint@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DistanceSquaredF@@YANAAVFPoint@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DTextID@@QAEPADXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScrollEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScrollEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScrollEntryID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@FakeScrollEntryID@@QAEXIIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@FakeScrollEntryID@@QAEXIW4ReservedHandle@@I@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@FakeScrollEntryID@@QAEXVMemID@@II@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScrollEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScrollEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScrollEntryID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Window@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Window@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GEventWindow@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCIScrollWindow@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSCIScrollWindow@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScrollWindowID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScrollWindowID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScrollWindowID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0PolyPatchF@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7PaletteMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7EventWindow@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SCIScrollWindow@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_Window@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	??_H@YGXPAXIHP6EX0@Z@Z				; `vector constructor iterator'
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+PUBLIC	??0MemID@@QAE@G@Z				; MemID::MemID
+PUBLIC	??0Array@@QAE@HW4ArrayType@@@Z			; Array::Array
+PUBLIC	??1Array@@QAE@XZ				; Array::~Array
+PUBLIC	?dataID@Array@@QAE?AVMemID@@XZ			; Array::dataID
+PUBLIC	?MergePolygonsF@@YA?AVMemID@@PAUSCI_Point@@HPAVSOL_PolygonF@@@Z ; MergePolygonsF
+PUBLIC	?MergePolygonF@@YAHPAVFPoint@@AAHAAVSOL_PolygonF@@@Z ; MergePolygonF
+PUBLIC	??4SCI_Point@@QAEAAU0@ABVFPoint@@@Z		; SCI_Point::operator=
+PUBLIC	??0FPoint@@QAE@XZ				; FPoint::FPoint
+PUBLIC	??4FPoint@@QAEAAV0@ABV0@@Z			; FPoint::operator=
+PUBLIC	??4FPoint@@QAEAAV0@ABUSCI_Point@@@Z		; FPoint::operator=
+EXTRN	?PolyIsInPolyF@@YAHPAVFPoint@@H0H@Z:NEAR	; PolyIsInPolyF
+EXTRN	?RemoveColinearLinesF@@YAXPAVFPoint@@PAH@Z:NEAR	; RemoveColinearLinesF
+EXTRN	?RemoveDuplicatePointsF@@YAXPAVFPoint@@PAH@Z:NEAR ; RemoveDuplicatePointsF
+EXTRN	?calcAddress@Array@@QAEPAXH@Z:NEAR		; Array::calcAddress
+EXTRN	__except_list:DWORD
+EXTRN	__fltused:NEAR
+EXTRN	___CxxFrameHandler:NEAR
+EXTRN	?Fatal@MsgMgr@@QAAXDPADHHZZ:NEAR		; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+_DATA	SEGMENT
+$SG62500 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Polyfu'
+	DB	'se.cpp', 00H
+_DATA	ENDS
+xdata$x	SEGMENT
+$T62923	DD	019930520H
+	DD	01H
+	DD	FLAT:$T62927
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T62927	DD	0ffffffffH
+	DD	FLAT:$L62919
+xdata$x	ENDS
+_TEXT	SEGMENT
+_polygon$ = 12
+_size$ = 16
+_polylist$ = 20
+___$ReturnUdt$ = 8
+_P$ = -4012
+_i$ = -4020
+_j$ = -4024
+_Ppoints$ = -4032
+_result$62510 = -4036
+_Q$62517 = -4040
+_Qpoints$62518 = -4044
+_fused$62526 = -4048
+_array$ = -4028
+_mergedPoly$ = -4016
+$T62918 = -4052
+__$EHRec$ = -12
+?MergePolygonsF@@YA?AVMemID@@PAUSCI_Point@@HPAVSOL_PolygonF@@@Z PROC NEAR ; MergePolygonsF
+
+; 30   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	6a ff		 push	 -1
+  00005	68 00 00 00 00	 push	 $L62924
+  0000a	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00010	50		 push	 eax
+  00011	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  00018	81 ec cc 0f 00
+	00		 sub	 esp, 4044		; 00000fccH
+
+; 31   :    FPoint   P[MAXPOLYPATH];
+
+  0001e	68 00 00 00 00	 push	 OFFSET FLAT:??0FPoint@@QAE@XZ ; FPoint::FPoint
+  00023	68 fa 00 00 00	 push	 250			; 000000faH
+  00028	6a 10		 push	 16			; 00000010H
+  0002a	8d 85 54 f0 ff
+	ff		 lea	 eax, DWORD PTR _P$[ebp]
+  00030	50		 push	 eax
+  00031	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+
+; 32   :    int      i,j;
+; 33   : 	int		Ppoints;
+; 34   : 
+; 35   :    if (size >= MAXPOLYPATH)
+
+  00036	81 7d 10 fa 00
+	00 00		 cmp	 DWORD PTR _size$[ebp], 250 ; 000000faH
+  0003d	7c 1a		 jl	 SHORT $L62499
+
+; 36   : 		msgMgr->Fatal(SrcLoc,Msg_MergedPolygonTooLarge);
+
+  0003f	6a 76		 push	 118			; 00000076H
+  00041	6a 24		 push	 36			; 00000024H
+  00043	68 00 00 00 00	 push	 OFFSET FLAT:$SG62500
+  00048	6a 61		 push	 97			; 00000061H
+  0004a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00050	51		 push	 ecx
+  00051	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  00056	83 c4 14	 add	 esp, 20			; 00000014H
+$L62499:
+
+; 37   : 
+; 38   :    // copy polygon to merge into P
+; 39   :    for (Ppoints=0;Ppoints < size;++Ppoints)
+
+  00059	c7 85 40 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _Ppoints$[ebp], 0
+  00063	eb 0f		 jmp	 SHORT $L62501
+$L62502:
+  00065	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  0006b	83 c2 01	 add	 edx, 1
+  0006e	89 95 40 f0 ff
+	ff		 mov	 DWORD PTR _Ppoints$[ebp], edx
+$L62501:
+  00074	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  0007a	3b 45 10	 cmp	 eax, DWORD PTR _size$[ebp]
+  0007d	7d 24		 jge	 SHORT $L62503
+
+; 40   :       P[Ppoints] = polygon[Ppoints];
+
+  0007f	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00085	8b 55 0c	 mov	 edx, DWORD PTR _polygon$[ebp]
+  00088	8d 04 8a	 lea	 eax, DWORD PTR [edx+ecx*4]
+  0008b	50		 push	 eax
+  0008c	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00092	c1 e1 04	 shl	 ecx, 4
+  00095	8d 8c 0d 54 f0
+	ff ff		 lea	 ecx, DWORD PTR _P$[ebp+ecx]
+  0009c	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABUSCI_Point@@@Z ; FPoint::operator=
+  000a1	eb c2		 jmp	 SHORT $L62502
+$L62503:
+
+; 41   : 
+; 42   :    P[Ppoints].x = ENDOFPATHF;
+
+  000a3	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  000a9	c1 e2 04	 shl	 edx, 4
+  000ac	c7 84 15 54 f0
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _P$[ebp+edx], 0
+  000b7	c7 84 15 58 f0
+	ff ff 00 61 be
+	40		 mov	 DWORD PTR _P$[ebp+edx+4], 1086218496 ; 40be6100H
+
+; 43   :    P[Ppoints].y = ENDOFPATHF;
+
+  000c2	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  000c8	c1 e0 04	 shl	 eax, 4
+  000cb	c7 84 05 5c f0
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _P$[ebp+eax+8], 0
+  000d6	c7 84 05 60 f0
+	ff ff 00 61 be
+	40		 mov	 DWORD PTR _P$[ebp+eax+12], 1086218496 ; 40be6100H
+
+; 44   : 
+; 45   : 	RemoveDuplicatePointsF(P,&Ppoints);
+
+  000e1	8d 8d 40 f0 ff
+	ff		 lea	 ecx, DWORD PTR _Ppoints$[ebp]
+  000e7	51		 push	 ecx
+  000e8	8d 95 54 f0 ff
+	ff		 lea	 edx, DWORD PTR _P$[ebp]
+  000ee	52		 push	 edx
+  000ef	e8 00 00 00 00	 call	 ?RemoveDuplicatePointsF@@YAXPAVFPoint@@PAH@Z ; RemoveDuplicatePointsF
+  000f4	83 c4 08	 add	 esp, 8
+
+; 46   :    if (Ppoints < 3)
+
+  000f7	83 bd 40 f0 ff
+	ff 03		 cmp	 DWORD PTR _Ppoints$[ebp], 3
+  000fe	7d 12		 jge	 SHORT $L62504
+
+; 47   : 	   // Degenerate case no polygon!!!
+; 48   :       return 0;
+
+  00100	6a 00		 push	 0
+  00102	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00105	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0010a	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+  0010d	e9 8c 03 00 00	 jmp	 $L62493
+$L62504:
+
+; 49   :    RemoveColinearLinesF(P,&Ppoints);
+
+  00112	8d 85 40 f0 ff
+	ff		 lea	 eax, DWORD PTR _Ppoints$[ebp]
+  00118	50		 push	 eax
+  00119	8d 8d 54 f0 ff
+	ff		 lea	 ecx, DWORD PTR _P$[ebp]
+  0011f	51		 push	 ecx
+  00120	e8 00 00 00 00	 call	 ?RemoveColinearLinesF@@YAXPAVFPoint@@PAH@Z ; RemoveColinearLinesF
+  00125	83 c4 08	 add	 esp, 8
+
+; 50   :    if (Ppoints < 3)
+
+  00128	83 bd 40 f0 ff
+	ff 03		 cmp	 DWORD PTR _Ppoints$[ebp], 3
+  0012f	7d 12		 jge	 SHORT $L62505
+
+; 51   : 	   // Degenerate case no polygon!!!
+; 52   :       return 0;
+
+  00131	6a 00		 push	 0
+  00133	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00136	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0013b	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+  0013e	e9 5b 03 00 00	 jmp	 $L62493
+$L62505:
+
+; 53   : 
+; 54   : #ifdef SHOWMERGE
+; 55   :    // Show the polygon to merge
+; 56   : 
+; 57   : 	static int mergeCount = 0;
+; 58   : 	++mergeCount;
+; 59   : 	// Put the points into an array
+; 60   : 	Array toMergeArray(2*Ppoints,INTARRAY);
+; 61   : 	SCI_Point* toMergePoly = (SCI_Point*) toMergeArray.calcAddress (0);
+; 62   :    for (int k=0;k < Ppoints;++k) 
+; 63   :       toMergePoly[k] = P[k];
+; 64   : 
+; 65   : 	int	z = 2;
+; 66   : 	// color close to blue
+; 67   : 	uchar	color = graphMgr->GPalette().Current().Match(Rgb24(0,0,255));
+; 68   : 	int	style = SOL_Line::tSolid;
+; 69   : 	int	pattern = 0;
+; 70   : 	int	thickness = 1;
+; 71   : 	SOL_Rect rect;
+; 72   : 
+; 73   : 	MemID BM1 = BuildPolygonBitmap(toMergeArray,
+; 74   :                                  Ppoints,
+; 75   : 										   color,
+; 76   : 										   style,
+; 77   : 										   pattern,
+; 78   : 										   thickness,
+; 79   : 										   rect);
+; 80   :    toMergeArray.dataID().Free();
+; 81   : 
+; 82   : 	Bitmap bitmap1(BM1);
+; 83   : 	polyMergeSi = New ScreenItem(polyPlane->Id(),bitmap1,rect);
+; 84   : 	polyMergeSi->SetPriority(z);
+; 85   : 	// add the screen item
+; 86   : 	graphMgr->AddScreenItem(polyMergeSi);
+; 87   : 	graphMgr->FrameOut();
+; 88   : 
+; 89   : 	WaitOnUser();
+; 90   : 
+; 91   : #endif   // SHOWMERGE
+; 92   :    // Merge given polygon with each polygon in the list
+; 93   :    // A merged polygon in the list will be marked as MERGED.
+; 94   : 
+; 95   :    // See if the given polygon is completely included within another
+; 96   :    for (i=0;polylist[i].n != 0;++i)
+
+  00143	c7 85 4c f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  0014d	eb 0f		 jmp	 SHORT $L62506
+$L62507:
+  0014f	8b 95 4c f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00155	83 c2 01	 add	 edx, 1
+  00158	89 95 4c f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L62506:
+  0015e	8b 85 4c f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00164	c1 e0 04	 shl	 eax, 4
+  00167	8b 4d 14	 mov	 ecx, DWORD PTR _polylist$[ebp]
+  0016a	83 7c 01 08 00	 cmp	 DWORD PTR [ecx+eax+8], 0
+  0016f	0f 84 53 01 00
+	00		 je	 $L62508
+
+; 98   :       // If this polygon has been marked as MERGED
+; 99   :       if (polylist[i].type < MERGED) 
+
+  00175	8b 95 4c f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0017b	c1 e2 04	 shl	 edx, 4
+  0017e	8b 45 14	 mov	 eax, DWORD PTR _polylist$[ebp]
+  00181	33 c9		 xor	 ecx, ecx
+  00183	8a 4c 10 04	 mov	 cl, BYTE PTR [eax+edx+4]
+  00187	83 f9 04	 cmp	 ecx, 4
+  0018a	0f 8d 33 01 00
+	00		 jge	 $L62512
+
+; 101  :          int result = PolyIsInPolyF(P,Ppoints,polylist[i].polyPoints,polylist[i].n);
+
+  00190	8b 95 4c f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00196	c1 e2 04	 shl	 edx, 4
+  00199	8b 45 14	 mov	 eax, DWORD PTR _polylist$[ebp]
+  0019c	8b 4c 10 08	 mov	 ecx, DWORD PTR [eax+edx+8]
+  001a0	51		 push	 ecx
+  001a1	8b 95 4c f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  001a7	c1 e2 04	 shl	 edx, 4
+  001aa	8b 45 14	 mov	 eax, DWORD PTR _polylist$[ebp]
+  001ad	8b 0c 10	 mov	 ecx, DWORD PTR [eax+edx]
+  001b0	51		 push	 ecx
+  001b1	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  001b7	52		 push	 edx
+  001b8	8d 85 54 f0 ff
+	ff		 lea	 eax, DWORD PTR _P$[ebp]
+  001be	50		 push	 eax
+  001bf	e8 00 00 00 00	 call	 ?PolyIsInPolyF@@YAHPAVFPoint@@H0H@Z ; PolyIsInPolyF
+  001c4	83 c4 10	 add	 esp, 16			; 00000010H
+  001c7	89 85 3c f0 ff
+	ff		 mov	 DWORD PTR _result$62510[ebp], eax
+
+; 103  :          {
+
+  001cd	8b 8d 3c f0 ff
+	ff		 mov	 ecx, DWORD PTR _result$62510[ebp]
+  001d3	89 8d 28 f0 ff
+	ff		 mov	 DWORD PTR -4056+[ebp], ecx
+  001d9	83 bd 28 f0 ff
+	ff 01		 cmp	 DWORD PTR -4056+[ebp], 1
+  001e0	74 0e		 je	 SHORT $L62515
+  001e2	83 bd 28 f0 ff
+	ff 02		 cmp	 DWORD PTR -4056+[ebp], 2
+  001e9	74 2d		 je	 SHORT $L62516
+  001eb	e9 d3 00 00 00	 jmp	 $L62512
+$L62515:
+
+; 104  :             case PContainsQ:
+; 105  :                      // P contains polylist[i]
+; 106  :                      polylist[i].type |= MERGED; 
+
+  001f0	8b 95 4c f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  001f6	c1 e2 04	 shl	 edx, 4
+  001f9	8b 45 14	 mov	 eax, DWORD PTR _polylist$[ebp]
+  001fc	8a 4c 10 04	 mov	 cl, BYTE PTR [eax+edx+4]
+  00200	80 c9 04	 or	 cl, 4
+  00203	8b 95 4c f0 ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  00209	c1 e2 04	 shl	 edx, 4
+  0020c	8b 45 14	 mov	 eax, DWORD PTR _polylist$[ebp]
+  0020f	88 4c 10 04	 mov	 BYTE PTR [eax+edx+4], cl
+
+; 107  :                      break;
+
+  00213	e9 ab 00 00 00	 jmp	 $L62512
+$L62516:
+
+; 108  :             case QContainsP:
+; 109  :                      // polylist[i] contains P
+; 110  :                      // replace P with polylist[i]
+; 111  :                      FPoint* Q = polylist[i].polyPoints;
+
+  00218	8b 8d 4c f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0021e	c1 e1 04	 shl	 ecx, 4
+  00221	8b 55 14	 mov	 edx, DWORD PTR _polylist$[ebp]
+  00224	8b 04 0a	 mov	 eax, DWORD PTR [edx+ecx]
+  00227	89 85 38 f0 ff
+	ff		 mov	 DWORD PTR _Q$62517[ebp], eax
+
+; 112  :                      int Qpoints = polylist[i].n;
+
+  0022d	8b 8d 4c f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  00233	c1 e1 04	 shl	 ecx, 4
+  00236	8b 55 14	 mov	 edx, DWORD PTR _polylist$[ebp]
+  00239	8b 44 0a 08	 mov	 eax, DWORD PTR [edx+ecx+8]
+  0023d	89 85 34 f0 ff
+	ff		 mov	 DWORD PTR _Qpoints$62518[ebp], eax
+
+; 113  :                      Ppoints = Qpoints;
+
+  00243	8b 8d 34 f0 ff
+	ff		 mov	 ecx, DWORD PTR _Qpoints$62518[ebp]
+  00249	89 8d 40 f0 ff
+	ff		 mov	 DWORD PTR _Ppoints$[ebp], ecx
+
+; 114  :                      for (j=0;j<Qpoints;++j)
+
+  0024f	c7 85 48 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _j$[ebp], 0
+  00259	eb 0f		 jmp	 SHORT $L62519
+$L62520:
+  0025b	8b 95 48 f0 ff
+	ff		 mov	 edx, DWORD PTR _j$[ebp]
+  00261	83 c2 01	 add	 edx, 1
+  00264	89 95 48 f0 ff
+	ff		 mov	 DWORD PTR _j$[ebp], edx
+$L62519:
+  0026a	8b 85 48 f0 ff
+	ff		 mov	 eax, DWORD PTR _j$[ebp]
+  00270	3b 85 34 f0 ff
+	ff		 cmp	 eax, DWORD PTR _Qpoints$62518[ebp]
+  00276	7d 29		 jge	 SHORT $L62521
+
+; 116  :                         P[j] = Q[j];
+
+  00278	8b 8d 48 f0 ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  0027e	c1 e1 04	 shl	 ecx, 4
+  00281	8b 95 38 f0 ff
+	ff		 mov	 edx, DWORD PTR _Q$62517[ebp]
+  00287	03 d1		 add	 edx, ecx
+  00289	52		 push	 edx
+  0028a	8b 85 48 f0 ff
+	ff		 mov	 eax, DWORD PTR _j$[ebp]
+  00290	c1 e0 04	 shl	 eax, 4
+  00293	8d 8c 05 54 f0
+	ff ff		 lea	 ecx, DWORD PTR _P$[ebp+eax]
+  0029a	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 117  :                      }
+
+  0029f	eb ba		 jmp	 SHORT $L62520
+$L62521:
+
+; 118  :                      polylist[i].type |= MERGED; 
+
+  002a1	8b 8d 4c f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  002a7	c1 e1 04	 shl	 ecx, 4
+  002aa	8b 55 14	 mov	 edx, DWORD PTR _polylist$[ebp]
+  002ad	8a 44 0a 04	 mov	 al, BYTE PTR [edx+ecx+4]
+  002b1	0c 04		 or	 al, 4
+  002b3	8b 8d 4c f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  002b9	c1 e1 04	 shl	 ecx, 4
+  002bc	8b 55 14	 mov	 edx, DWORD PTR _polylist$[ebp]
+  002bf	88 44 0a 04	 mov	 BYTE PTR [edx+ecx+4], al
+$L62512:
+
+; 123  :    }
+
+  002c3	e9 87 fe ff ff	 jmp	 $L62507
+$L62508:
+
+; 124  : 
+; 125  :    for (i=0;polylist[i].n != 0;++i)
+
+  002c8	c7 85 4c f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  002d2	eb 0f		 jmp	 SHORT $L62522
+$L62523:
+  002d4	8b 85 4c f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  002da	83 c0 01	 add	 eax, 1
+  002dd	89 85 4c f0 ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L62522:
+  002e3	8b 8d 4c f0 ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  002e9	c1 e1 04	 shl	 ecx, 4
+  002ec	8b 55 14	 mov	 edx, DWORD PTR _polylist$[ebp]
+  002ef	83 7c 0a 08 00	 cmp	 DWORD PTR [edx+ecx+8], 0
+  002f4	0f 84 b6 00 00
+	00		 je	 $L62524
+
+; 127  :       // If this polygon has been marked as MERGED
+; 128  :       if (polylist[i].type < MERGED) 
+
+  002fa	8b 85 4c f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  00300	c1 e0 04	 shl	 eax, 4
+  00303	8b 4d 14	 mov	 ecx, DWORD PTR _polylist$[ebp]
+  00306	33 d2		 xor	 edx, edx
+  00308	8a 54 01 04	 mov	 dl, BYTE PTR [ecx+eax+4]
+  0030c	83 fa 04	 cmp	 edx, 4
+  0030f	0f 8d 96 00 00
+	00		 jge	 $L62529
+
+; 130  :          Boolean fused = MergePolygonF(P,Ppoints,polylist[i]);
+
+  00315	8b 85 4c f0 ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0031b	c1 e0 04	 shl	 eax, 4
+  0031e	8b 4d 14	 mov	 ecx, DWORD PTR _polylist$[ebp]
+  00321	03 c8		 add	 ecx, eax
+  00323	51		 push	 ecx
+  00324	8d 95 40 f0 ff
+	ff		 lea	 edx, DWORD PTR _Ppoints$[ebp]
+  0032a	52		 push	 edx
+  0032b	8d 85 54 f0 ff
+	ff		 lea	 eax, DWORD PTR _P$[ebp]
+  00331	50		 push	 eax
+  00332	e8 00 00 00 00	 call	 ?MergePolygonF@@YAHPAVFPoint@@AAHAAVSOL_PolygonF@@@Z ; MergePolygonF
+  00337	83 c4 0c	 add	 esp, 12			; 0000000cH
+  0033a	89 85 30 f0 ff
+	ff		 mov	 DWORD PTR _fused$62526[ebp], eax
+
+; 131  :          // Set Ppoints to the number of points now in P
+; 132  :          if (fused)
+
+  00340	83 bd 30 f0 ff
+	ff 00		 cmp	 DWORD PTR _fused$62526[ebp], 0
+  00347	74 62		 je	 SHORT $L62529
+
+; 134  : 	         RemoveDuplicatePointsF(P,&Ppoints);
+
+  00349	8d 8d 40 f0 ff
+	ff		 lea	 ecx, DWORD PTR _Ppoints$[ebp]
+  0034f	51		 push	 ecx
+  00350	8d 95 54 f0 ff
+	ff		 lea	 edx, DWORD PTR _P$[ebp]
+  00356	52		 push	 edx
+  00357	e8 00 00 00 00	 call	 ?RemoveDuplicatePointsF@@YAXPAVFPoint@@PAH@Z ; RemoveDuplicatePointsF
+  0035c	83 c4 08	 add	 esp, 8
+
+; 135  :    			if (Ppoints < 3)
+
+  0035f	83 bd 40 f0 ff
+	ff 03		 cmp	 DWORD PTR _Ppoints$[ebp], 3
+  00366	7d 12		 jge	 SHORT $L62528
+
+; 136  : 	   			// Degenerate case no polygon!!!
+; 137  :       			return 0;
+
+  00368	6a 00		 push	 0
+  0036a	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  0036d	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00372	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+  00375	e9 24 01 00 00	 jmp	 $L62493
+$L62528:
+
+; 138  : 
+; 139  :             RemoveColinearLinesF(P,&Ppoints);
+
+  0037a	8d 85 40 f0 ff
+	ff		 lea	 eax, DWORD PTR _Ppoints$[ebp]
+  00380	50		 push	 eax
+  00381	8d 8d 54 f0 ff
+	ff		 lea	 ecx, DWORD PTR _P$[ebp]
+  00387	51		 push	 ecx
+  00388	e8 00 00 00 00	 call	 ?RemoveColinearLinesF@@YAXPAVFPoint@@PAH@Z ; RemoveColinearLinesF
+  0038d	83 c4 08	 add	 esp, 8
+
+; 140  :    			if (Ppoints < 3)
+
+  00390	83 bd 40 f0 ff
+	ff 03		 cmp	 DWORD PTR _Ppoints$[ebp], 3
+  00397	7d 12		 jge	 SHORT $L62529
+
+; 141  : 	   			// Degenerate case no polygon!!!
+; 142  :       			return 0;
+
+  00399	6a 00		 push	 0
+  0039b	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  0039e	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  003a3	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+  003a6	e9 f3 00 00 00	 jmp	 $L62493
+$L62529:
+
+; 145  :    }
+
+  003ab	e9 24 ff ff ff	 jmp	 $L62523
+$L62524:
+
+; 146  : 
+; 147  :    P[Ppoints].x = ENDOFPATHF;
+
+  003b0	8b 95 40 f0 ff
+	ff		 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  003b6	c1 e2 04	 shl	 edx, 4
+  003b9	c7 84 15 54 f0
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _P$[ebp+edx], 0
+  003c4	c7 84 15 58 f0
+	ff ff 00 61 be
+	40		 mov	 DWORD PTR _P$[ebp+edx+4], 1086218496 ; 40be6100H
+
+; 148  :    P[Ppoints].y = ENDOFPATHF;
+
+  003cf	8b 85 40 f0 ff
+	ff		 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  003d5	c1 e0 04	 shl	 eax, 4
+  003d8	c7 84 05 5c f0
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _P$[ebp+eax+8], 0
+  003e3	c7 84 05 60 f0
+	ff ff 00 61 be
+	40		 mov	 DWORD PTR _P$[ebp+eax+12], 1086218496 ; 40be6100H
+
+; 149  : 
+; 150  :    // return the new polygon
+; 151  : 	Array array (2*Ppoints,INTARRAY);
+
+  003ee	6a 00		 push	 0
+  003f0	8b 8d 40 f0 ff
+	ff		 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  003f6	d1 e1		 shl	 ecx, 1
+  003f8	51		 push	 ecx
+  003f9	8d 8d 44 f0 ff
+	ff		 lea	 ecx, DWORD PTR _array$[ebp]
+  003ff	e8 00 00 00 00	 call	 ??0Array@@QAE@HW4ArrayType@@@Z ; Array::Array
+  00404	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+
+; 152  : 
+; 153  : 	SCI_Point* mergedPoly = (SCI_Point*) array.calcAddress (0);
+
+  0040b	6a 00		 push	 0
+  0040d	8d 8d 44 f0 ff
+	ff		 lea	 ecx, DWORD PTR _array$[ebp]
+  00413	e8 00 00 00 00	 call	 ?calcAddress@Array@@QAEPAXH@Z ; Array::calcAddress
+  00418	89 85 50 f0 ff
+	ff		 mov	 DWORD PTR _mergedPoly$[ebp], eax
+
+; 154  : 
+; 155  :    for (j=0;j < Ppoints;++j) 
+
+  0041e	c7 85 48 f0 ff
+	ff 00 00 00 00	 mov	 DWORD PTR _j$[ebp], 0
+  00428	eb 0f		 jmp	 SHORT $L62533
+$L62534:
+  0042a	8b 95 48 f0 ff
+	ff		 mov	 edx, DWORD PTR _j$[ebp]
+  00430	83 c2 01	 add	 edx, 1
+  00433	89 95 48 f0 ff
+	ff		 mov	 DWORD PTR _j$[ebp], edx
+$L62533:
+  00439	8b 85 48 f0 ff
+	ff		 mov	 eax, DWORD PTR _j$[ebp]
+  0043f	3b 85 40 f0 ff
+	ff		 cmp	 eax, DWORD PTR _Ppoints$[ebp]
+  00445	7d 27		 jge	 SHORT $L62535
+
+; 156  :       mergedPoly[j] = P[j];
+
+  00447	8b 8d 48 f0 ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  0044d	c1 e1 04	 shl	 ecx, 4
+  00450	8d 94 0d 54 f0
+	ff ff		 lea	 edx, DWORD PTR _P$[ebp+ecx]
+  00457	52		 push	 edx
+  00458	8b 85 48 f0 ff
+	ff		 mov	 eax, DWORD PTR _j$[ebp]
+  0045e	8b 8d 50 f0 ff
+	ff		 mov	 ecx, DWORD PTR _mergedPoly$[ebp]
+  00464	8d 0c 81	 lea	 ecx, DWORD PTR [ecx+eax*4]
+  00467	e8 00 00 00 00	 call	 ??4SCI_Point@@QAEAAU0@ABVFPoint@@@Z ; SCI_Point::operator=
+  0046c	eb bc		 jmp	 SHORT $L62534
+$L62535:
+
+; 157  : 
+; 158  :    return array.dataID();
+
+  0046e	8d 95 2c f0 ff
+	ff		 lea	 edx, DWORD PTR $T62918[ebp]
+  00474	52		 push	 edx
+  00475	8d 8d 44 f0 ff
+	ff		 lea	 ecx, DWORD PTR _array$[ebp]
+  0047b	e8 00 00 00 00	 call	 ?dataID@Array@@QAE?AVMemID@@XZ ; Array::dataID
+  00480	50		 push	 eax
+  00481	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00484	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00489	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00490	8d 8d 44 f0 ff
+	ff		 lea	 ecx, DWORD PTR _array$[ebp]
+  00496	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  0049b	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+$L62493:
+
+; 159  : }
+
+  0049e	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  004a1	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  004a8	8b e5		 mov	 esp, ebp
+  004aa	5d		 pop	 ebp
+  004ab	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L62919:
+  00000	8d 8d 44 f0 ff
+	ff		 lea	 ecx, DWORD PTR _array$[ebp]
+  00006	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  0000b	c3		 ret	 0
+$L62924:
+  0000c	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T62923
+  00011	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?MergePolygonsF@@YA?AVMemID@@PAUSCI_Point@@HPAVSOL_PolygonF@@@Z ENDP ; MergePolygonsF
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0MemID@@QAE@G@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 23   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _h$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 24   : 	}
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b e5		 mov	 esp, ebp
+  00016	5d		 pop	 ebp
+  00017	c2 04 00	 ret	 4
+??0MemID@@QAE@G@Z ENDP					; MemID::MemID
+_TEXT	ENDS
+PUBLIC	??0MemID@@QAE@XZ				; MemID::MemID
+PUBLIC	??0ArrayID@@QAE@HW4ArrayType@@@Z		; ArrayID::ArrayID
+PUBLIC	?dataID@Array@@QAEXVMemID@@@Z			; Array::dataID
+;	COMDAT ??0Array@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT
+_count$ = 8
+_type$ = 12
+_this$ = -12
+$T62933 = -8
+??0Array@@QAE@HW4ArrayType@@@Z PROC NEAR		; Array::Array, COMDAT
+
+; 84   : 	Array ( int count, ArrayType type ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+
+; 85   : 		dataID ( ArrayID ( count, type ) );
+
+  00011	8b 45 0c	 mov	 eax, DWORD PTR _type$[ebp]
+  00014	50		 push	 eax
+  00015	8b 4d 08	 mov	 ecx, DWORD PTR _count$[ebp]
+  00018	51		 push	 ecx
+  00019	8d 4d f8	 lea	 ecx, DWORD PTR $T62933[ebp]
+  0001c	e8 00 00 00 00	 call	 ??0ArrayID@@QAE@HW4ArrayType@@@Z ; ArrayID::ArrayID
+  00021	51		 push	 ecx
+  00022	8b cc		 mov	 ecx, esp
+  00024	50		 push	 eax
+  00025	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0002a	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002d	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 86   : 	}
+
+  00032	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00035	8b e5		 mov	 esp, ebp
+  00037	5d		 pop	 ebp
+  00038	c2 08 00	 ret	 8
+??0Array@@QAE@HW4ArrayType@@@Z ENDP			; Array::Array
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0MemID@@QAE@XZ PROC NEAR				; MemID::MemID, COMDAT
+
+; 15   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 c7 00 00 00	 mov	 WORD PTR [eax], 0
+
+; 16   : 	}
+
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0MemID@@QAE@XZ ENDP					; MemID::MemID
+_TEXT	ENDS
+PUBLIC	??0FakeArrayID@@QAE@XZ				; FakeArrayID::FakeArrayID
+PUBLIC	??DFakeArrayID@@QBEPAUArrayHeader@@XZ		; FakeArrayID::operator*
+PUBLIC	?Get@ArrayID@@QAEXI@Z				; ArrayID::Get
+EXTRN	?ArrayElementSize@@3PAHA:BYTE			; ArrayElementSize
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT
+_size$ = 8
+_type$ = 12
+_this$ = -12
+_elementSize$ = -8
+_array$ = -4
+??0ArrayID@@QAE@HW4ArrayType@@@Z PROC NEAR		; ArrayID::ArrayID, COMDAT
+
+; 40   : 	ArrayID ( int size, ArrayType type )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0FakeArrayID@@QAE@XZ	; FakeArrayID::FakeArrayID
+
+; 41   : 	{
+; 42   : 		int elementSize = ArrayElementSize[type];
+
+  00011	8b 45 0c	 mov	 eax, DWORD PTR _type$[ebp]
+  00014	8b 0c 85 00 00
+	00 00		 mov	 ecx, DWORD PTR ?ArrayElementSize@@3PAHA[eax*4]
+  0001b	89 4d f8	 mov	 DWORD PTR _elementSize$[ebp], ecx
+
+; 43   : 
+; 44   : 		// allocate the base array
+; 45   : 		Get ( elementSize * size + sizeof ( ArrayHeader ) );
+
+  0001e	8b 55 f8	 mov	 edx, DWORD PTR _elementSize$[ebp]
+  00021	0f af 55 08	 imul	 edx, DWORD PTR _size$[ebp]
+  00025	83 c2 04	 add	 edx, 4
+  00028	52		 push	 edx
+  00029	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002c	e8 00 00 00 00	 call	 ?Get@ArrayID@@QAEXI@Z	; ArrayID::Get
+
+; 46   : 
+; 47   : 		// set the default values for the Array struct that I represent
+; 48   : 		ArrayHeader *array = **this;
+
+  00031	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00034	e8 00 00 00 00	 call	 ??DFakeArrayID@@QBEPAUArrayHeader@@XZ ; FakeArrayID::operator*
+  00039	89 45 fc	 mov	 DWORD PTR _array$[ebp], eax
+
+; 49   : 		array->elementSize = elementSize;
+
+  0003c	8b 45 fc	 mov	 eax, DWORD PTR _array$[ebp]
+  0003f	66 8b 4d f8	 mov	 cx, WORD PTR _elementSize$[ebp]
+  00043	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 50   : 		array->size = size;
+
+  00046	8b 55 fc	 mov	 edx, DWORD PTR _array$[ebp]
+  00049	66 8b 45 08	 mov	 ax, WORD PTR _size$[ebp]
+  0004d	66 89 42 02	 mov	 WORD PTR [edx+2], ax
+
+; 51   : 	}
+
+  00051	8b 45 f4	 mov	 eax, DWORD PTR _this$[ebp]
+  00054	8b e5		 mov	 esp, ebp
+  00056	5d		 pop	 ebp
+  00057	c2 08 00	 ret	 8
+??0ArrayID@@QAE@HW4ArrayType@@@Z ENDP			; ArrayID::ArrayID
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0FakeArrayID@@QAE@XZ PROC NEAR			; FakeArrayID::FakeArrayID, COMDAT
+
+; 34   : FakeTemplateID ( FakeArrayID, ArrayHeader, MemArray )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0FakeArrayID@@QAE@XZ ENDP				; FakeArrayID::FakeArrayID
+_TEXT	ENDS
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??DFakeArrayID@@QBEPAUArrayHeader@@XZ PROC NEAR		; FakeArrayID::operator*, COMDAT
+
+; 34   : FakeTemplateID ( FakeArrayID, ArrayHeader, MemArray )
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+??DFakeArrayID@@QBEPAUArrayHeader@@XZ ENDP		; FakeArrayID::operator*
+_TEXT	ENDS
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+EXTRN	_memMgr:DWORD
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+PUBLIC	?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT
+_size$ = 8
+_this$ = -4
+?Get@ArrayID@@QAEXI@Z PROC NEAR				; ArrayID::Get, COMDAT
+
+; 55   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 56   : 		// initialize arrays to 0
+; 57   : 
+; 58   : 		//	include defaulted args because CodeWarrior 1.1.1.2 doesn't
+; 59   : 		//	consider enums a separate type and so can't distinguish between
+; 60   : 		//	overloaded Get()s.
+; 61   : 		MemID::Get(MemArray, size, INITMEMORY | MOVEABLE, 0, 0, 0, IllegalHandle);
+
+  00007	6a 00		 push	 0
+  00009	6a 00		 push	 0
+  0000b	6a 00		 push	 0
+  0000d	6a 00		 push	 0
+  0000f	68 00 02 01 00	 push	 66048			; 00010200H
+  00014	8b 45 08	 mov	 eax, DWORD PTR _size$[ebp]
+  00017	50		 push	 eax
+  00018	6a 35		 push	 53			; 00000035H
+  0001a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001d	e8 00 00 00 00	 call	 ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemID::Get
+
+; 62   : 	}
+
+  00022	8b e5		 mov	 esp, ebp
+  00024	5d		 pop	 ebp
+  00025	c2 04 00	 ret	 4
+?Get@ArrayID@@QAEXI@Z ENDP				; ArrayID::Get
+_TEXT	ENDS
+EXTRN	?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z:NEAR ; MemoryMgr::Alloc
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT
+_type$ = 8
+_size$ = 12
+_a$ = 16
+_num$ = 20
+_client$ = 24
+_initChar$ = 28
+_h$ = 32
+_this$ = -4
+?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z PROC NEAR ; MemID::Get, COMDAT
+
+; 42   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 43   : 		handle = memMgr->Alloc(type | a, size, num, client, initChar, h);
+
+  00007	8b 45 20	 mov	 eax, DWORD PTR _h$[ebp]
+  0000a	50		 push	 eax
+  0000b	8a 4d 1c	 mov	 cl, BYTE PTR _initChar$[ebp]
+  0000e	51		 push	 ecx
+  0000f	8b 55 18	 mov	 edx, DWORD PTR _client$[ebp]
+  00012	52		 push	 edx
+  00013	8b 45 14	 mov	 eax, DWORD PTR _num$[ebp]
+  00016	50		 push	 eax
+  00017	8b 4d 0c	 mov	 ecx, DWORD PTR _size$[ebp]
+  0001a	51		 push	 ecx
+  0001b	8b 55 08	 mov	 edx, DWORD PTR _type$[ebp]
+  0001e	0b 55 10	 or	 edx, DWORD PTR _a$[ebp]
+  00021	52		 push	 edx
+  00022	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00028	e8 00 00 00 00	 call	 ?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemoryMgr::Alloc
+  0002d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00030	66 89 01	 mov	 WORD PTR [ecx], ax
+
+; 44   : 	}
+
+  00033	8b e5		 mov	 esp, ebp
+  00035	5d		 pop	 ebp
+  00036	c2 1c 00	 ret	 28			; 0000001cH
+?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z ENDP ; MemID::Get
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1Array@@QAE@XZ PROC NEAR				; Array::~Array, COMDAT
+
+; 88   : 	~Array() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c3		 ret	 0
+??1Array@@QAE@XZ ENDP					; Array::~Array
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT
+___$ReturnUdt$ = 8
+_this$ = -4
+?dataID@Array@@QAE?AVMemID@@XZ PROC NEAR		; Array::dataID, COMDAT
+
+; 96   : 	MemID dataID ( void ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 97   : 		return _dataID;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  00013	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+
+; 98   : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?dataID@Array@@QAE?AVMemID@@XZ ENDP			; Array::dataID
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT
+_memID$ = 8
+_this$ = -4
+?dataID@Array@@QAEXVMemID@@@Z PROC NEAR			; Array::dataID, COMDAT
+
+; 111  : 	void dataID ( MemID memID ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 112  : 		_dataID = memID;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _memID$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 113  : 	}
+
+  00011	8b e5		 mov	 esp, ebp
+  00013	5d		 pop	 ebp
+  00014	c2 04 00	 ret	 4
+?dataID@Array@@QAEXVMemID@@@Z ENDP			; Array::dataID
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0FPoint@@QAE@XZ PROC NEAR				; FPoint::FPoint, COMDAT
+
+; 87   : 	FPoint() : x(DefaultCoord), y(DefaultCoord) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], 0
+  00010	c7 40 04 00 61
+	be 40		 mov	 DWORD PTR [eax+4], 1086218496 ; 40be6100H
+  00017	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001a	c7 41 08 00 00
+	00 00		 mov	 DWORD PTR [ecx+8], 0
+  00021	c7 41 0c 00 61
+	be 40		 mov	 DWORD PTR [ecx+12], 1086218496 ; 40be6100H
+  00028	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0002b	8b e5		 mov	 esp, ebp
+  0002d	5d		 pop	 ebp
+  0002e	c3		 ret	 0
+??0FPoint@@QAE@XZ ENDP					; FPoint::FPoint
+_TEXT	ENDS
+PUBLIC	__real@8@00000000000000000000
+PUBLIC	__real@8@3ffe8000000000000000
+EXTRN	__ftol:NEAR
+;	COMDAT __real@8@00000000000000000000
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\point.hpp
+CONST	SEGMENT
+__real@8@00000000000000000000 DQ 00000000000000000r ; 0
+CONST	ENDS
+;	COMDAT __real@8@3ffe8000000000000000
+CONST	SEGMENT
+__real@8@3ffe8000000000000000 DQ 03fe0000000000000r ; 0.5
+CONST	ENDS
+;	COMDAT ??4SCI_Point@@QAEAAU0@ABVFPoint@@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??4SCI_Point@@QAEAAU0@ABVFPoint@@@Z PROC NEAR		; SCI_Point::operator=, COMDAT
+
+; 298  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 24	 sub	 esp, 36			; 00000024H
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 299  : 	x = (SCIWord) (p.x + signF(p.x)*0.5);
+
+  00009	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  0000c	dd 00		 fld	 QWORD PTR [eax]
+  0000e	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  00014	df e0		 fnstsw	 ax
+  00016	f6 c4 41	 test	 ah, 65			; 00000041H
+  00019	75 10		 jne	 SHORT $L62949
+  0001b	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+  00022	c7 45 f8 00 00
+	f0 3f		 mov	 DWORD PTR -12+[ebp+4], 1072693248 ; 3ff00000H
+  00029	eb 3c		 jmp	 SHORT $L62950
+$L62949:
+  0002b	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0002e	dd 01		 fld	 QWORD PTR [ecx]
+  00030	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  00036	df e0		 fnstsw	 ax
+  00038	f6 c4 01	 test	 ah, 1
+  0003b	74 10		 je	 SHORT $L62947
+  0003d	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR -20+[ebp], 0
+  00044	c7 45 f0 00 00
+	f0 bf		 mov	 DWORD PTR -20+[ebp+4], -1074790400 ; bff00000H
+  0004b	eb 0e		 jmp	 SHORT $L62948
+$L62947:
+  0004d	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR -20+[ebp], 0
+  00054	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR -20+[ebp+4], 0
+$L62948:
+  0005b	8b 55 ec	 mov	 edx, DWORD PTR -20+[ebp]
+  0005e	89 55 f4	 mov	 DWORD PTR -12+[ebp], edx
+  00061	8b 45 f0	 mov	 eax, DWORD PTR -20+[ebp+4]
+  00064	89 45 f8	 mov	 DWORD PTR -12+[ebp+4], eax
+$L62950:
+  00067	dd 45 f4	 fld	 QWORD PTR -12+[ebp]
+  0006a	dc 0d 00 00 00
+	00		 fmul	 QWORD PTR __real@8@3ffe8000000000000000
+  00070	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00073	dc 01		 fadd	 QWORD PTR [ecx]
+  00075	e8 00 00 00 00	 call	 __ftol
+  0007a	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0007d	66 89 02	 mov	 WORD PTR [edx], ax
+
+; 300  : 	y = (SCIWord) (p.y + signF(p.y)*0.5);
+
+  00080	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  00083	dd 40 08	 fld	 QWORD PTR [eax+8]
+  00086	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  0008c	df e0		 fnstsw	 ax
+  0008e	f6 c4 41	 test	 ah, 65			; 00000041H
+  00091	75 10		 jne	 SHORT $L62953
+  00093	c7 45 e4 00 00
+	00 00		 mov	 DWORD PTR -28+[ebp], 0
+  0009a	c7 45 e8 00 00
+	f0 3f		 mov	 DWORD PTR -28+[ebp+4], 1072693248 ; 3ff00000H
+  000a1	eb 3d		 jmp	 SHORT $L62954
+$L62953:
+  000a3	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  000a6	dd 41 08	 fld	 QWORD PTR [ecx+8]
+  000a9	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  000af	df e0		 fnstsw	 ax
+  000b1	f6 c4 01	 test	 ah, 1
+  000b4	74 10		 je	 SHORT $L62951
+  000b6	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR -36+[ebp], 0
+  000bd	c7 45 e0 00 00
+	f0 bf		 mov	 DWORD PTR -36+[ebp+4], -1074790400 ; bff00000H
+  000c4	eb 0e		 jmp	 SHORT $L62952
+$L62951:
+  000c6	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR -36+[ebp], 0
+  000cd	c7 45 e0 00 00
+	00 00		 mov	 DWORD PTR -36+[ebp+4], 0
+$L62952:
+  000d4	8b 55 dc	 mov	 edx, DWORD PTR -36+[ebp]
+  000d7	89 55 e4	 mov	 DWORD PTR -28+[ebp], edx
+  000da	8b 45 e0	 mov	 eax, DWORD PTR -36+[ebp+4]
+  000dd	89 45 e8	 mov	 DWORD PTR -28+[ebp+4], eax
+$L62954:
+  000e0	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  000e3	dd 45 e4	 fld	 QWORD PTR -28+[ebp]
+  000e6	dc 0d 00 00 00
+	00		 fmul	 QWORD PTR __real@8@3ffe8000000000000000
+  000ec	dc 41 08	 fadd	 QWORD PTR [ecx+8]
+  000ef	e8 00 00 00 00	 call	 __ftol
+  000f4	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  000f7	66 89 42 02	 mov	 WORD PTR [edx+2], ax
+
+; 301  : 	return *this;
+
+  000fb	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 302  : }
+
+  000fe	8b e5		 mov	 esp, ebp
+  00100	5d		 pop	 ebp
+  00101	c2 04 00	 ret	 4
+??4SCI_Point@@QAEAAU0@ABVFPoint@@@Z ENDP		; SCI_Point::operator=
+_TEXT	ENDS
+;	COMDAT ??4FPoint@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??4FPoint@@QAEAAV0@ABV0@@Z PROC NEAR			; FPoint::operator=, COMDAT
+
+; 314  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 315  : 	x = p.x;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+  00011	8b 49 04	 mov	 ecx, DWORD PTR [ecx+4]
+  00014	89 48 04	 mov	 DWORD PTR [eax+4], ecx
+
+; 316  : 	y = p.y;
+
+  00017	8b 55 08	 mov	 edx, DWORD PTR _p$[ebp]
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b 4a 08	 mov	 ecx, DWORD PTR [edx+8]
+  00020	89 48 08	 mov	 DWORD PTR [eax+8], ecx
+  00023	8b 52 0c	 mov	 edx, DWORD PTR [edx+12]
+  00026	89 50 0c	 mov	 DWORD PTR [eax+12], edx
+
+; 317  : 	return *this;
+
+  00029	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 318  : }
+
+  0002c	8b e5		 mov	 esp, ebp
+  0002e	5d		 pop	 ebp
+  0002f	c2 04 00	 ret	 4
+??4FPoint@@QAEAAV0@ABV0@@Z ENDP				; FPoint::operator=
+_TEXT	ENDS
+;	COMDAT ??4FPoint@@QAEAAV0@ABUSCI_Point@@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??4FPoint@@QAEAAV0@ABUSCI_Point@@@Z PROC NEAR		; FPoint::operator=, COMDAT
+
+; 322  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 323  : 	x = (double) p.x;
+
+  00009	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  0000c	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  0000f	89 4d f8	 mov	 DWORD PTR -8+[ebp], ecx
+  00012	db 45 f8	 fild	 DWORD PTR -8+[ebp]
+  00015	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00018	dd 1a		 fstp	 QWORD PTR [edx]
+
+; 324  : 	y = (double) p.y;
+
+  0001a	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  0001d	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00021	89 4d f4	 mov	 DWORD PTR -12+[ebp], ecx
+  00024	db 45 f4	 fild	 DWORD PTR -12+[ebp]
+  00027	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0002a	dd 5a 08	 fstp	 QWORD PTR [edx+8]
+
+; 325  : 	return *this;
+
+  0002d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 326  : }
+
+  00030	8b e5		 mov	 esp, ebp
+  00032	5d		 pop	 ebp
+  00033	c2 04 00	 ret	 4
+??4FPoint@@QAEAAV0@ABUSCI_Point@@@Z ENDP		; FPoint::operator=
+_TEXT	ENDS
+;	COMDAT ??_H@YGXPAXIHP6EX0@Z@Z
+_TEXT	SEGMENT
+___t$ = 8
+___s$ = 12
+___n$ = 16
+___f$ = 20
+??_H@YGXPAXIHP6EX0@Z@Z PROC NEAR			; `vector constructor iterator', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+$L62545:
+  00003	8b 45 10	 mov	 eax, DWORD PTR ___n$[ebp]
+  00006	83 e8 01	 sub	 eax, 1
+  00009	89 45 10	 mov	 DWORD PTR ___n$[ebp], eax
+  0000c	83 7d 10 00	 cmp	 DWORD PTR ___n$[ebp], 0
+  00010	7c 11		 jl	 SHORT $L62546
+  00012	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  00015	ff 55 14	 call	 DWORD PTR ___f$[ebp]
+  00018	8b 4d 08	 mov	 ecx, DWORD PTR ___t$[ebp]
+  0001b	03 4d 0c	 add	 ecx, DWORD PTR ___s$[ebp]
+  0001e	89 4d 08	 mov	 DWORD PTR ___t$[ebp], ecx
+  00021	eb e0		 jmp	 SHORT $L62545
+$L62546:
+  00023	5d		 pop	 ebp
+  00024	c2 10 00	 ret	 16			; 00000010H
+??_H@YGXPAXIHP6EX0@Z@Z ENDP				; `vector constructor iterator'
+_TEXT	ENDS
+PUBLIC	??0PolyPatchF@@QAE@XZ				; PolyPatchF::PolyPatchF
+PUBLIC	?PatchNodeF@@YAHAAVPolyPatchF@@HPAVFPoint@@@Z	; PatchNodeF
+PUBLIC	?DominatesF@@YAHAAVPolyPatchF@@0PAVFPoint@@@Z	; DominatesF
+PUBLIC	??0FPoint@@QAE@ABV0@@Z				; FPoint::FPoint
+PUBLIC	??8FPoint@@QBEHABV0@@Z				; FPoint::operator==
+PUBLIC	??9FPoint@@QBEHABV0@@Z				; FPoint::operator!=
+PUBLIC	??GFPoint@@QBE?AV0@ABV0@@Z			; FPoint::operator-
+PUBLIC	??DFPoint@@QBENABV0@@Z				; FPoint::operator*
+PUBLIC	??TFPoint@@QBEHABV0@@Z				; FPoint::operator^
+EXTRN	?ATan@@YAHHHHH@Z:NEAR				; ATan
+EXTRN	?IntersectSegmentsF@@YAHAAVFPoint@@000PAV1@H@Z:NEAR ; IntersectSegmentsF
+EXTRN	__chkstk:NEAR
+_DATA	SEGMENT
+	ORG $+1
+$SG62632 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Polyfu'
+	DB	'se.cpp', 00H
+	ORG $+1
+$SG62672 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Polyfu'
+	DB	'se.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_P$ = 8
+_Ppoints$ = 12
+_polygon$ = 16
+_i$ = -5244
+_j$ = -5256
+_k$ = -5264
+_p$ = -24
+_Qpoints$ = -1240
+_addNode$ = -20
+_fused$ = -1236
+_P_i$ = -1156
+_Q_i$ = -1152
+_P_j$ = -1168
+_Q_j$ = -1164
+_intersectResult$ = -1160
+_angleIn$ = -1176
+_angleOut$ = -5252
+_delta$ = -5248
+_angle$ = -1172
+_Q$ = -28
+_P_U$ = -5312
+_Q_U$ = -5296
+_Result$ = -5240
+_wrk1$ = -5280
+_wrk2$ = -16
+_Patch$ = -1148
+_newPatch$ = -1232
+_patches$ = -5260
+_wrk1$62644 = -5328
+_wrk2$62650 = -5344
+$T62964 = -5360
+$T62965 = -5376
+$T62966 = -5392
+$T62967 = -5408
+$T62968 = -5424
+$T62969 = -5440
+$T62970 = -5456
+$T62971 = -5472
+$T62972 = -5488
+$T62973 = -5504
+$T62974 = -5520
+$T62975 = -5536
+$T62976 = -5552
+$T62977 = -5568
+?MergePolygonF@@YAHPAVFPoint@@AAHAAVSOL_PolygonF@@@Z PROC NEAR ; MergePolygonF
+
+; 179  : {
+
+  004ac	55		 push	 ebp
+  004ad	8b ec		 mov	 ebp, esp
+  004af	b8 dc 15 00 00	 mov	 eax, 5596		; 000015dcH
+  004b4	e8 00 00 00 00	 call	 __chkstk
+  004b9	56		 push	 esi
+
+; 180  : 
+; 181  :    #define MAXPATCHES 20
+; 182  : 
+; 183  :    int         i,j,k,p; 
+; 184  : 	int			Qpoints;
+; 185  :    Boolean     addNode; 
+; 186  :    Boolean     fused = False; 
+
+  004ba	c7 85 2c fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _fused$[ebp], 0
+
+; 187  :    int         P_i,Q_i,P_j,Q_j; 
+; 188  :    int         intersectResult; 
+; 189  :    int         angleIn,angleOut,delta,angle; 
+; 190  :    FPoint*     Q;
+; 191  :    FPoint      P_U,Q_U,Result[MAXPOLYPATH];
+
+  004c4	8d 8d 40 eb ff
+	ff		 lea	 ecx, DWORD PTR _P_U$[ebp]
+  004ca	e8 00 00 00 00	 call	 ??0FPoint@@QAE@XZ	; FPoint::FPoint
+  004cf	8d 8d 50 eb ff
+	ff		 lea	 ecx, DWORD PTR _Q_U$[ebp]
+  004d5	e8 00 00 00 00	 call	 ??0FPoint@@QAE@XZ	; FPoint::FPoint
+  004da	68 00 00 00 00	 push	 OFFSET FLAT:??0FPoint@@QAE@XZ ; FPoint::FPoint
+  004df	68 fa 00 00 00	 push	 250			; 000000faH
+  004e4	6a 10		 push	 16			; 00000010H
+  004e6	8d 85 88 eb ff
+	ff		 lea	 eax, DWORD PTR _Result$[ebp]
+  004ec	50		 push	 eax
+  004ed	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+
+; 192  :    FPoint      wrk1,wrk2;
+
+  004f2	8d 8d 60 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$[ebp]
+  004f8	e8 00 00 00 00	 call	 ??0FPoint@@QAE@XZ	; FPoint::FPoint
+  004fd	8d 4d f0	 lea	 ecx, DWORD PTR _wrk2$[ebp]
+  00500	e8 00 00 00 00	 call	 ??0FPoint@@QAE@XZ	; FPoint::FPoint
+
+; 193  :    PolyPatchF  Patch[MAXPATCHES],newPatch;
+
+  00505	68 00 00 00 00	 push	 OFFSET FLAT:??0PolyPatchF@@QAE@XZ ; PolyPatchF::PolyPatchF
+  0050a	6a 14		 push	 20			; 00000014H
+  0050c	6a 38		 push	 56			; 00000038H
+  0050e	8d 8d 84 fb ff
+	ff		 lea	 ecx, DWORD PTR _Patch$[ebp]
+  00514	51		 push	 ecx
+  00515	e8 00 00 00 00	 call	 ??_H@YGXPAXIHP6EX0@Z@Z	; `vector constructor iterator'
+  0051a	8d 8d 30 fb ff
+	ff		 lea	 ecx, DWORD PTR _newPatch$[ebp]
+  00520	e8 00 00 00 00	 call	 ??0PolyPatchF@@QAE@XZ	; PolyPatchF::PolyPatchF
+
+; 194  :    int         patches = 0;
+
+  00525	c7 85 74 eb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _patches$[ebp], 0
+
+; 195  :    
+; 196  :    Q = polygon.polyPoints;
+
+  0052f	8b 55 10	 mov	 edx, DWORD PTR _polygon$[ebp]
+  00532	8b 02		 mov	 eax, DWORD PTR [edx]
+  00534	89 45 e4	 mov	 DWORD PTR _Q$[ebp], eax
+
+; 197  :    Qpoints = polygon.n;
+
+  00537	8b 4d 10	 mov	 ecx, DWORD PTR _polygon$[ebp]
+  0053a	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  0053d	89 95 28 fb ff
+	ff		 mov	 DWORD PTR _Qpoints$[ebp], edx
+
+; 198  : 
+; 199  :    for (P_i=0;P_i < Ppoints;++P_i)
+
+  00543	c7 85 7c fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _P_i$[ebp], 0
+  0054d	eb 0f		 jmp	 SHORT $L62581
+$L62582:
+  0054f	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  00555	83 c0 01	 add	 eax, 1
+  00558	89 85 7c fb ff
+	ff		 mov	 DWORD PTR _P_i$[ebp], eax
+$L62581:
+  0055e	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00561	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  00567	3b 11		 cmp	 edx, DWORD PTR [ecx]
+  00569	0f 8d c5 0c 00
+	00		 jge	 $L62583
+
+; 201  :       for (Q_i=0;Q_i < Qpoints;++Q_i)
+
+  0056f	c7 85 80 fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _Q_i$[ebp], 0
+  00579	eb 0f		 jmp	 SHORT $L62584
+$L62585:
+  0057b	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  00581	83 c0 01	 add	 eax, 1
+  00584	89 85 80 fb ff
+	ff		 mov	 DWORD PTR _Q_i$[ebp], eax
+$L62584:
+  0058a	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  00590	3b 8d 28 fb ff
+	ff		 cmp	 ecx, DWORD PTR _Qpoints$[ebp]
+  00596	0f 8d 93 0c 00
+	00		 jge	 $L62586
+
+; 203  :          intersectResult = IntersectSegmentsF(P[P_i],
+; 204  : 															 P[(P_i+1+Ppoints) % Ppoints],
+; 205  : 															 Q[Q_i],
+; 206  : 															 Q[(Q_i+1+Qpoints) % Qpoints],
+; 207  : 															 &P_U);
+
+  0059c	6a 00		 push	 0
+  0059e	8d 95 40 eb ff
+	ff		 lea	 edx, DWORD PTR _P_U$[ebp]
+  005a4	52		 push	 edx
+  005a5	8b 85 28 fb ff
+	ff		 mov	 eax, DWORD PTR _Qpoints$[ebp]
+  005ab	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  005b1	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  005b5	99		 cdq
+  005b6	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  005bc	c1 e2 04	 shl	 edx, 4
+  005bf	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  005c2	03 c2		 add	 eax, edx
+  005c4	50		 push	 eax
+  005c5	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  005cb	c1 e1 04	 shl	 ecx, 4
+  005ce	8b 55 e4	 mov	 edx, DWORD PTR _Q$[ebp]
+  005d1	03 d1		 add	 edx, ecx
+  005d3	52		 push	 edx
+  005d4	8b 45 0c	 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  005d7	8b 08		 mov	 ecx, DWORD PTR [eax]
+  005d9	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  005df	8d 44 0a 01	 lea	 eax, DWORD PTR [edx+ecx+1]
+  005e3	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  005e6	99		 cdq
+  005e7	f7 39		 idiv	 DWORD PTR [ecx]
+  005e9	c1 e2 04	 shl	 edx, 4
+  005ec	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  005ef	03 c2		 add	 eax, edx
+  005f1	50		 push	 eax
+  005f2	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  005f8	c1 e1 04	 shl	 ecx, 4
+  005fb	8b 55 08	 mov	 edx, DWORD PTR _P$[ebp]
+  005fe	03 d1		 add	 edx, ecx
+  00600	52		 push	 edx
+  00601	e8 00 00 00 00	 call	 ?IntersectSegmentsF@@YAHAAVFPoint@@000PAV1@H@Z ; IntersectSegmentsF
+  00606	83 c4 18	 add	 esp, 24			; 00000018H
+  00609	89 85 78 fb ff
+	ff		 mov	 DWORD PTR _intersectResult$[ebp], eax
+
+; 208  :          if ((intersectResult != NOINTERSECT) && (intersectResult != INTERSECT+INTERSECTD))
+
+  0060f	83 bd 78 fb ff
+	ff ff		 cmp	 DWORD PTR _intersectResult$[ebp], -1
+  00616	0f 84 0e 0c 00
+	00		 je	 $L62639
+  0061c	83 bd 78 fb ff
+	ff 11		 cmp	 DWORD PTR _intersectResult$[ebp], 17 ; 00000011H
+  00623	0f 84 01 0c 00
+	00		 je	 $L62639
+
+; 210  :             if (intersectResult == COLINEAR)
+
+  00629	83 bd 78 fb ff
+	ff 00		 cmp	 DWORD PTR _intersectResult$[ebp], 0
+  00630	0f 85 db 01 00
+	00		 jne	 $L62588
+
+; 212  :                // check that the lines are going different directions
+; 213  :                if (((P[(P_i+1+Ppoints) % Ppoints]-P[P_i])*(Q[(Q_i+1+Qpoints) % Qpoints]-Q[Q_i])) > 0.0)
+
+  00636	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  0063c	c1 e0 04	 shl	 eax, 4
+  0063f	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00642	03 c8		 add	 ecx, eax
+  00644	51		 push	 ecx
+  00645	8d 95 00 eb ff
+	ff		 lea	 edx, DWORD PTR $T62965[ebp]
+  0064b	52		 push	 edx
+  0064c	8b 85 28 fb ff
+	ff		 mov	 eax, DWORD PTR _Qpoints$[ebp]
+  00652	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  00658	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  0065c	99		 cdq
+  0065d	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00663	c1 e2 04	 shl	 edx, 4
+  00666	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00669	03 ca		 add	 ecx, edx
+  0066b	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00670	50		 push	 eax
+  00671	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  00677	c1 e2 04	 shl	 edx, 4
+  0067a	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  0067d	03 c2		 add	 eax, edx
+  0067f	50		 push	 eax
+  00680	8d 8d 10 eb ff
+	ff		 lea	 ecx, DWORD PTR $T62964[ebp]
+  00686	51		 push	 ecx
+  00687	8b 55 0c	 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  0068a	8b 02		 mov	 eax, DWORD PTR [edx]
+  0068c	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  00692	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  00696	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00699	99		 cdq
+  0069a	f7 39		 idiv	 DWORD PTR [ecx]
+  0069c	c1 e2 04	 shl	 edx, 4
+  0069f	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  006a2	03 ca		 add	 ecx, edx
+  006a4	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  006a9	8b c8		 mov	 ecx, eax
+  006ab	e8 00 00 00 00	 call	 ??DFPoint@@QBENABV0@@Z	; FPoint::operator*
+  006b0	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  006b6	df e0		 fnstsw	 ax
+  006b8	f6 c4 41	 test	 ah, 65			; 00000041H
+  006bb	75 05		 jne	 SHORT $L62591
+
+; 214  :                   continue;
+
+  006bd	e9 b9 fe ff ff	 jmp	 $L62585
+$L62591:
+
+; 215  :                // make sure the Q line does not stop within the P line
+; 216  :                if (((Q[(Q_i+1+Qpoints) % Qpoints]-P[P_i])*(Q[(Q_i+1+Qpoints) % Qpoints]-P[(P_i+1+Ppoints) % Ppoints])) <= 0.0 )
+
+  006c2	8b 55 0c	 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  006c5	8b 02		 mov	 eax, DWORD PTR [edx]
+  006c7	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  006cd	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  006d1	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  006d4	99		 cdq
+  006d5	f7 39		 idiv	 DWORD PTR [ecx]
+  006d7	c1 e2 04	 shl	 edx, 4
+  006da	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  006dd	03 c2		 add	 eax, edx
+  006df	50		 push	 eax
+  006e0	8d 8d e0 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62967[ebp]
+  006e6	51		 push	 ecx
+  006e7	8b 95 28 fb ff
+	ff		 mov	 edx, DWORD PTR _Qpoints$[ebp]
+  006ed	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  006f3	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  006f7	99		 cdq
+  006f8	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  006fe	c1 e2 04	 shl	 edx, 4
+  00701	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00704	03 ca		 add	 ecx, edx
+  00706	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  0070b	50		 push	 eax
+  0070c	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  00712	c1 e1 04	 shl	 ecx, 4
+  00715	8b 55 08	 mov	 edx, DWORD PTR _P$[ebp]
+  00718	03 d1		 add	 edx, ecx
+  0071a	52		 push	 edx
+  0071b	8d 85 f0 ea ff
+	ff		 lea	 eax, DWORD PTR $T62966[ebp]
+  00721	50		 push	 eax
+  00722	8b 8d 28 fb ff
+	ff		 mov	 ecx, DWORD PTR _Qpoints$[ebp]
+  00728	8b 95 80 fb ff
+	ff		 mov	 edx, DWORD PTR _Q_i$[ebp]
+  0072e	8d 44 0a 01	 lea	 eax, DWORD PTR [edx+ecx+1]
+  00732	99		 cdq
+  00733	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00739	c1 e2 04	 shl	 edx, 4
+  0073c	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  0073f	03 ca		 add	 ecx, edx
+  00741	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00746	8b c8		 mov	 ecx, eax
+  00748	e8 00 00 00 00	 call	 ??DFPoint@@QBENABV0@@Z	; FPoint::operator*
+  0074d	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  00753	df e0		 fnstsw	 ax
+  00755	f6 c4 41	 test	 ah, 65			; 00000041H
+  00758	74 05		 je	 SHORT $L62594
+
+; 217  :                   continue;
+
+  0075a	e9 1c fe ff ff	 jmp	 $L62585
+$L62594:
+
+; 218  :                // Now make sure Q is an exit not an entry to P
+; 219  :                if (((Q[(Q_i+1+Qpoints) % Qpoints]-Q[Q_i])^(P[P_i]-P[(P_i-1+Ppoints) % Ppoints])) < 0.0)
+
+  0075f	8b 45 0c	 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  00762	8b 08		 mov	 ecx, DWORD PTR [eax]
+  00764	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  0076a	8d 44 0a ff	 lea	 eax, DWORD PTR [edx+ecx-1]
+  0076e	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00771	99		 cdq
+  00772	f7 39		 idiv	 DWORD PTR [ecx]
+  00774	c1 e2 04	 shl	 edx, 4
+  00777	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  0077a	03 c2		 add	 eax, edx
+  0077c	50		 push	 eax
+  0077d	8d 8d c0 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62969[ebp]
+  00783	51		 push	 ecx
+  00784	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  0078a	c1 e2 04	 shl	 edx, 4
+  0078d	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  00790	03 ca		 add	 ecx, edx
+  00792	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00797	50		 push	 eax
+  00798	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  0079e	c1 e0 04	 shl	 eax, 4
+  007a1	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  007a4	03 c8		 add	 ecx, eax
+  007a6	51		 push	 ecx
+  007a7	8d 95 d0 ea ff
+	ff		 lea	 edx, DWORD PTR $T62968[ebp]
+  007ad	52		 push	 edx
+  007ae	8b 85 28 fb ff
+	ff		 mov	 eax, DWORD PTR _Qpoints$[ebp]
+  007b4	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  007ba	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  007be	99		 cdq
+  007bf	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  007c5	c1 e2 04	 shl	 edx, 4
+  007c8	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  007cb	03 ca		 add	 ecx, edx
+  007cd	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  007d2	8b c8		 mov	 ecx, eax
+  007d4	e8 00 00 00 00	 call	 ??TFPoint@@QBEHABV0@@Z	; FPoint::operator^
+  007d9	89 85 3c ea ff
+	ff		 mov	 DWORD PTR -5572+[ebp], eax
+  007df	db 85 3c ea ff
+	ff		 fild	 DWORD PTR -5572+[ebp]
+  007e5	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  007eb	df e0		 fnstsw	 ax
+  007ed	f6 c4 01	 test	 ah, 1
+  007f0	74 05		 je	 SHORT $L62597
+
+; 220  :                   continue;
+
+  007f2	e9 84 fd ff ff	 jmp	 $L62585
+$L62597:
+
+; 221  :                // This is a valid exit and should create a patch
+; 222  :                // The intersection point is
+; 223  : 
+; 224  :                P_U =  P[P_i];
+
+  007f7	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  007fd	c1 e2 04	 shl	 edx, 4
+  00800	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00803	03 c2		 add	 eax, edx
+  00805	50		 push	 eax
+  00806	8d 8d 40 eb ff
+	ff		 lea	 ecx, DWORD PTR _P_U$[ebp]
+  0080c	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+$L62588:
+
+; 226  : 
+; 227  :             /* Is this an exit from P intersection?
+; 228  :                   For example:
+; 229  :                                 *P[i+1]
+; 230  :                                *      
+; 231  :                               *           
+; 232  :                              *           
+; 233  :                    INSIDE   *   OUTSIDE
+; 234  :                            *     
+; 235  :                           *   
+; 236  :             Q[j]---------*---------------->Q[j+1]   This is an exiting
+; 237  :                         *                           intersection
+; 238  :                        *
+; 239  :                       *                     
+; 240  :                      *
+; 241  :                 P[i]*
+; 242  : 
+; 243  :                                 *P[i+1]
+; 244  :                                *      
+; 245  :                               *           
+; 246  :                              *           
+; 247  :                   INSIDE    *   OUTSIDE
+; 248  :                            *     
+; 249  :                           *   
+; 250  :             Q[j+1]<------*-----------------Q[j]     This is an entering
+; 251  :                         *                           intersection
+; 252  :                        *
+; 253  :                       *                     
+; 254  :                      *
+; 255  :                 P[i]*
+; 256  : 
+; 257  : 
+; 258  :             */
+; 259  :             // test for exit or entry
+; 260  :             wrk1 = P[(P_i+1+Ppoints) % Ppoints] - P[P_i];
+
+  00811	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  00817	c1 e1 04	 shl	 ecx, 4
+  0081a	8b 55 08	 mov	 edx, DWORD PTR _P$[ebp]
+  0081d	03 d1		 add	 edx, ecx
+  0081f	52		 push	 edx
+  00820	8d 85 b0 ea ff
+	ff		 lea	 eax, DWORD PTR $T62970[ebp]
+  00826	50		 push	 eax
+  00827	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  0082a	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0082c	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  00832	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  00836	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00839	99		 cdq
+  0083a	f7 39		 idiv	 DWORD PTR [ecx]
+  0083c	c1 e2 04	 shl	 edx, 4
+  0083f	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  00842	03 ca		 add	 ecx, edx
+  00844	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00849	50		 push	 eax
+  0084a	8d 8d 60 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$[ebp]
+  00850	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 261  :             wrk2 = Q[(Q_i+1+Qpoints) % Qpoints] - Q[Q_i];
+
+  00855	8b 95 80 fb ff
+	ff		 mov	 edx, DWORD PTR _Q_i$[ebp]
+  0085b	c1 e2 04	 shl	 edx, 4
+  0085e	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00861	03 c2		 add	 eax, edx
+  00863	50		 push	 eax
+  00864	8d 8d a0 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62971[ebp]
+  0086a	51		 push	 ecx
+  0086b	8b 95 28 fb ff
+	ff		 mov	 edx, DWORD PTR _Qpoints$[ebp]
+  00871	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  00877	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  0087b	99		 cdq
+  0087c	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00882	c1 e2 04	 shl	 edx, 4
+  00885	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00888	03 ca		 add	 ecx, edx
+  0088a	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  0088f	50		 push	 eax
+  00890	8d 4d f0	 lea	 ecx, DWORD PTR _wrk2$[ebp]
+  00893	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 262  :             if ((wrk1^wrk2) <= 0)
+
+  00898	8d 4d f0	 lea	 ecx, DWORD PTR _wrk2$[ebp]
+  0089b	51		 push	 ecx
+  0089c	8d 8d 60 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$[ebp]
+  008a2	e8 00 00 00 00	 call	 ??TFPoint@@QBEHABV0@@Z	; FPoint::operator^
+  008a7	85 c0		 test	 eax, eax
+  008a9	0f 8f 7b 09 00
+	00		 jg	 $L62639
+
+; 264  :                // now test for clock wise or counter clockwise
+; 265  :                angle = 0;
+
+  008af	c7 85 6c fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _angle$[ebp], 0
+
+; 266  :                angleIn = ATan((int)Q[Q_i].x,
+; 267  : 										(int)Q[Q_i].y,
+; 268  : 										(int)Q[(Q_i+1+Qpoints) % Qpoints].x,
+; 269  : 										(int)Q[(Q_i+1+Qpoints) % Qpoints].y);
+
+  008b9	8b 95 28 fb ff
+	ff		 mov	 edx, DWORD PTR _Qpoints$[ebp]
+  008bf	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  008c5	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  008c9	99		 cdq
+  008ca	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  008d0	c1 e2 04	 shl	 edx, 4
+  008d3	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  008d6	dd 44 11 08	 fld	 QWORD PTR [ecx+edx+8]
+  008da	e8 00 00 00 00	 call	 __ftol
+  008df	50		 push	 eax
+  008e0	8b 95 28 fb ff
+	ff		 mov	 edx, DWORD PTR _Qpoints$[ebp]
+  008e6	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  008ec	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  008f0	99		 cdq
+  008f1	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  008f7	c1 e2 04	 shl	 edx, 4
+  008fa	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  008fd	dd 04 11	 fld	 QWORD PTR [ecx+edx]
+  00900	e8 00 00 00 00	 call	 __ftol
+  00905	50		 push	 eax
+  00906	8b 95 80 fb ff
+	ff		 mov	 edx, DWORD PTR _Q_i$[ebp]
+  0090c	c1 e2 04	 shl	 edx, 4
+  0090f	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00912	dd 44 10 08	 fld	 QWORD PTR [eax+edx+8]
+  00916	e8 00 00 00 00	 call	 __ftol
+  0091b	50		 push	 eax
+  0091c	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  00922	c1 e1 04	 shl	 ecx, 4
+  00925	8b 55 e4	 mov	 edx, DWORD PTR _Q$[ebp]
+  00928	dd 04 0a	 fld	 QWORD PTR [edx+ecx]
+  0092b	e8 00 00 00 00	 call	 __ftol
+  00930	50		 push	 eax
+  00931	e8 00 00 00 00	 call	 ?ATan@@YAHHHHH@Z	; ATan
+  00936	83 c4 10	 add	 esp, 16			; 00000010H
+  00939	89 85 68 fb ff
+	ff		 mov	 DWORD PTR _angleIn$[ebp], eax
+
+; 270  :                for (Q_j=Q_i+1;Q_j <= Q_i + Qpoints;++Q_j)
+
+  0093f	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  00945	83 c0 01	 add	 eax, 1
+  00948	89 85 74 fb ff
+	ff		 mov	 DWORD PTR _Q_j$[ebp], eax
+  0094e	eb 0f		 jmp	 SHORT $L62605
+$L62606:
+  00950	8b 8d 74 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_j$[ebp]
+  00956	83 c1 01	 add	 ecx, 1
+  00959	89 8d 74 fb ff
+	ff		 mov	 DWORD PTR _Q_j$[ebp], ecx
+$L62605:
+  0095f	8b 95 80 fb ff
+	ff		 mov	 edx, DWORD PTR _Q_i$[ebp]
+  00965	03 95 28 fb ff
+	ff		 add	 edx, DWORD PTR _Qpoints$[ebp]
+  0096b	39 95 74 fb ff
+	ff		 cmp	 DWORD PTR _Q_j$[ebp], edx
+  00971	0f 8f 97 03 00
+	00		 jg	 $L62607
+
+; 272  :                   angleOut = ATan((int)Q[(Q_j+Qpoints) % Qpoints].x,
+; 273  : 											 (int)Q[(Q_j+Qpoints) % Qpoints].y,
+; 274  : 											 (int)Q[(Q_j+1+Qpoints) % Qpoints].x,
+; 275  : 											 (int)Q[(Q_j+1+Qpoints) % Qpoints].y);
+
+  00977	8b 85 28 fb ff
+	ff		 mov	 eax, DWORD PTR _Qpoints$[ebp]
+  0097d	8b 8d 74 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_j$[ebp]
+  00983	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  00987	99		 cdq
+  00988	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  0098e	c1 e2 04	 shl	 edx, 4
+  00991	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00994	dd 44 10 08	 fld	 QWORD PTR [eax+edx+8]
+  00998	e8 00 00 00 00	 call	 __ftol
+  0099d	50		 push	 eax
+  0099e	8b 8d 28 fb ff
+	ff		 mov	 ecx, DWORD PTR _Qpoints$[ebp]
+  009a4	8b 95 74 fb ff
+	ff		 mov	 edx, DWORD PTR _Q_j$[ebp]
+  009aa	8d 44 0a 01	 lea	 eax, DWORD PTR [edx+ecx+1]
+  009ae	99		 cdq
+  009af	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  009b5	c1 e2 04	 shl	 edx, 4
+  009b8	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  009bb	dd 04 10	 fld	 QWORD PTR [eax+edx]
+  009be	e8 00 00 00 00	 call	 __ftol
+  009c3	50		 push	 eax
+  009c4	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  009ca	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  009d0	99		 cdq
+  009d1	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  009d7	c1 e2 04	 shl	 edx, 4
+  009da	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  009dd	dd 44 11 08	 fld	 QWORD PTR [ecx+edx+8]
+  009e1	e8 00 00 00 00	 call	 __ftol
+  009e6	50		 push	 eax
+  009e7	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  009ed	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  009f3	99		 cdq
+  009f4	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  009fa	c1 e2 04	 shl	 edx, 4
+  009fd	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00a00	dd 04 10	 fld	 QWORD PTR [eax+edx]
+  00a03	e8 00 00 00 00	 call	 __ftol
+  00a08	50		 push	 eax
+  00a09	e8 00 00 00 00	 call	 ?ATan@@YAHHHHH@Z	; ATan
+  00a0e	83 c4 10	 add	 esp, 16			; 00000010H
+  00a11	89 85 7c eb ff
+	ff		 mov	 DWORD PTR _angleOut$[ebp], eax
+
+; 276  :                   delta = angleOut - angleIn;
+
+  00a17	8b 8d 7c eb ff
+	ff		 mov	 ecx, DWORD PTR _angleOut$[ebp]
+  00a1d	2b 8d 68 fb ff
+	ff		 sub	 ecx, DWORD PTR _angleIn$[ebp]
+  00a23	89 8d 80 eb ff
+	ff		 mov	 DWORD PTR _delta$[ebp], ecx
+
+; 277  :                   if (delta > 180) delta -= 360;
+
+  00a29	81 bd 80 eb ff
+	ff b4 00 00 00	 cmp	 DWORD PTR _delta$[ebp], 180 ; 000000b4H
+  00a33	7e 12		 jle	 SHORT $L62612
+  00a35	8b 95 80 eb ff
+	ff		 mov	 edx, DWORD PTR _delta$[ebp]
+  00a3b	81 ea 68 01 00
+	00		 sub	 edx, 360		; 00000168H
+  00a41	89 95 80 eb ff
+	ff		 mov	 DWORD PTR _delta$[ebp], edx
+$L62612:
+
+; 278  :                   if (delta < -180) delta += 360;
+
+  00a47	81 bd 80 eb ff
+	ff 4c ff ff ff	 cmp	 DWORD PTR _delta$[ebp], -180 ; ffffff4cH
+  00a51	7d 11		 jge	 SHORT $L62613
+  00a53	8b 85 80 eb ff
+	ff		 mov	 eax, DWORD PTR _delta$[ebp]
+  00a59	05 68 01 00 00	 add	 eax, 360		; 00000168H
+  00a5e	89 85 80 eb ff
+	ff		 mov	 DWORD PTR _delta$[ebp], eax
+$L62613:
+
+; 279  :                   angle += delta;
+
+  00a64	8b 8d 6c fb ff
+	ff		 mov	 ecx, DWORD PTR _angle$[ebp]
+  00a6a	03 8d 80 eb ff
+	ff		 add	 ecx, DWORD PTR _delta$[ebp]
+  00a70	89 8d 6c fb ff
+	ff		 mov	 DWORD PTR _angle$[ebp], ecx
+
+; 280  :                   angleIn = angleOut;
+
+  00a76	8b 95 7c eb ff
+	ff		 mov	 edx, DWORD PTR _angleOut$[ebp]
+  00a7c	89 95 68 fb ff
+	ff		 mov	 DWORD PTR _angleIn$[ebp], edx
+
+; 281  :                   for (P_j = P_i;P_j < P_i + Ppoints ;++P_j)
+
+  00a82	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  00a88	89 85 70 fb ff
+	ff		 mov	 DWORD PTR _P_j$[ebp], eax
+  00a8e	eb 0f		 jmp	 SHORT $L62614
+$L62615:
+  00a90	8b 8d 70 fb ff
+	ff		 mov	 ecx, DWORD PTR _P_j$[ebp]
+  00a96	83 c1 01	 add	 ecx, 1
+  00a99	89 8d 70 fb ff
+	ff		 mov	 DWORD PTR _P_j$[ebp], ecx
+$L62614:
+  00a9f	8b 55 0c	 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  00aa2	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  00aa8	03 02		 add	 eax, DWORD PTR [edx]
+  00aaa	39 85 70 fb ff
+	ff		 cmp	 DWORD PTR _P_j$[ebp], eax
+  00ab0	0f 8d 48 02 00
+	00		 jge	 $L62616
+
+; 283  :                      intersectResult = IntersectSegmentsF(P[(P_j + Ppoints) % Ppoints],
+; 284  : 																			P[(P_j+1+Ppoints) % Ppoints],
+; 285  : 																			Q[(Q_j+Qpoints) % Qpoints],
+; 286  : 																			Q[(Q_j+1+Qpoints) % Qpoints],
+; 287  : 																			&Q_U);
+
+  00ab6	6a 00		 push	 0
+  00ab8	8d 8d 50 eb ff
+	ff		 lea	 ecx, DWORD PTR _Q_U$[ebp]
+  00abe	51		 push	 ecx
+  00abf	8b 95 28 fb ff
+	ff		 mov	 edx, DWORD PTR _Qpoints$[ebp]
+  00ac5	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00acb	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  00acf	99		 cdq
+  00ad0	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00ad6	c1 e2 04	 shl	 edx, 4
+  00ad9	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00adc	03 ca		 add	 ecx, edx
+  00ade	51		 push	 ecx
+  00adf	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00ae5	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  00aeb	99		 cdq
+  00aec	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00af2	c1 e2 04	 shl	 edx, 4
+  00af5	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00af8	03 c2		 add	 eax, edx
+  00afa	50		 push	 eax
+  00afb	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00afe	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00b00	8b 85 70 fb ff
+	ff		 mov	 eax, DWORD PTR _P_j$[ebp]
+  00b06	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  00b0a	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00b0d	99		 cdq
+  00b0e	f7 39		 idiv	 DWORD PTR [ecx]
+  00b10	c1 e2 04	 shl	 edx, 4
+  00b13	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00b16	03 c2		 add	 eax, edx
+  00b18	50		 push	 eax
+  00b19	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00b1c	8b 85 70 fb ff
+	ff		 mov	 eax, DWORD PTR _P_j$[ebp]
+  00b22	03 01		 add	 eax, DWORD PTR [ecx]
+  00b24	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00b27	99		 cdq
+  00b28	f7 39		 idiv	 DWORD PTR [ecx]
+  00b2a	c1 e2 04	 shl	 edx, 4
+  00b2d	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00b30	03 c2		 add	 eax, edx
+  00b32	50		 push	 eax
+  00b33	e8 00 00 00 00	 call	 ?IntersectSegmentsF@@YAHAAVFPoint@@000PAV1@H@Z ; IntersectSegmentsF
+  00b38	83 c4 18	 add	 esp, 24			; 00000018H
+  00b3b	89 85 78 fb ff
+	ff		 mov	 DWORD PTR _intersectResult$[ebp], eax
+
+; 288  :                      if ((intersectResult != NOINTERSECT) && (intersectResult != INTERSECT+INTERSECTD))
+
+  00b41	83 bd 78 fb ff
+	ff ff		 cmp	 DWORD PTR _intersectResult$[ebp], -1
+  00b48	0f 84 a1 01 00
+	00		 je	 $L62617
+  00b4e	83 bd 78 fb ff
+	ff 11		 cmp	 DWORD PTR _intersectResult$[ebp], 17 ; 00000011H
+  00b55	0f 84 94 01 00
+	00		 je	 $L62617
+
+; 290  :                         if (intersectResult == COLINEAR)
+
+  00b5b	83 bd 78 fb ff
+	ff 00		 cmp	 DWORD PTR _intersectResult$[ebp], 0
+  00b62	0f 85 c7 00 00
+	00		 jne	 $L62622
+
+; 292  :                            // is Q_j is interior to P_j-P_j+1
+; 293  :                            if ((Q[Q_j % Qpoints]-P[P_j])*(Q[Q_j % Qpoints]-P[(P_j+1+Ppoints) % Ppoints]) < 0.0)
+
+  00b68	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00b6b	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00b6d	8b 85 70 fb ff
+	ff		 mov	 eax, DWORD PTR _P_j$[ebp]
+  00b73	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  00b77	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00b7a	99		 cdq
+  00b7b	f7 39		 idiv	 DWORD PTR [ecx]
+  00b7d	c1 e2 04	 shl	 edx, 4
+  00b80	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00b83	03 c2		 add	 eax, edx
+  00b85	50		 push	 eax
+  00b86	8d 8d 80 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62973[ebp]
+  00b8c	51		 push	 ecx
+  00b8d	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00b93	99		 cdq
+  00b94	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00b9a	c1 e2 04	 shl	 edx, 4
+  00b9d	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00ba0	03 ca		 add	 ecx, edx
+  00ba2	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00ba7	50		 push	 eax
+  00ba8	8b 95 70 fb ff
+	ff		 mov	 edx, DWORD PTR _P_j$[ebp]
+  00bae	c1 e2 04	 shl	 edx, 4
+  00bb1	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00bb4	03 c2		 add	 eax, edx
+  00bb6	50		 push	 eax
+  00bb7	8d 8d 90 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62972[ebp]
+  00bbd	51		 push	 ecx
+  00bbe	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00bc4	99		 cdq
+  00bc5	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00bcb	c1 e2 04	 shl	 edx, 4
+  00bce	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00bd1	03 ca		 add	 ecx, edx
+  00bd3	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00bd8	8b c8		 mov	 ecx, eax
+  00bda	e8 00 00 00 00	 call	 ??DFPoint@@QBENABV0@@Z	; FPoint::operator*
+  00bdf	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  00be5	df e0		 fnstsw	 ax
+  00be7	f6 c4 01	 test	 ah, 1
+  00bea	74 23		 je	 SHORT $L62621
+
+; 294  :                               Q_U = Q[Q_j % Qpoints];
+
+  00bec	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00bf2	99		 cdq
+  00bf3	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00bf9	c1 e2 04	 shl	 edx, 4
+  00bfc	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00bff	03 c2		 add	 eax, edx
+  00c01	50		 push	 eax
+  00c02	8d 8d 50 eb ff
+	ff		 lea	 ecx, DWORD PTR _Q_U$[ebp]
+  00c08	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 295  :                            else
+
+  00c0d	eb 20		 jmp	 SHORT $L62622
+$L62621:
+
+; 296  :                               Q_U = P[P_j % Ppoints];
+
+  00c0f	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00c12	8b 85 70 fb ff
+	ff		 mov	 eax, DWORD PTR _P_j$[ebp]
+  00c18	99		 cdq
+  00c19	f7 39		 idiv	 DWORD PTR [ecx]
+  00c1b	c1 e2 04	 shl	 edx, 4
+  00c1e	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00c21	03 c2		 add	 eax, edx
+  00c23	50		 push	 eax
+  00c24	8d 8d 50 eb ff
+	ff		 lea	 ecx, DWORD PTR _Q_U$[ebp]
+  00c2a	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+$L62622:
+
+; 298  :       
+; 299  :                         // test for exit or entry
+; 300  :                         wrk1 = P[(P_j+1+Ppoints) % Ppoints] - P[(P_j + Ppoints) % Ppoints];
+
+  00c2f	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00c32	8b 85 70 fb ff
+	ff		 mov	 eax, DWORD PTR _P_j$[ebp]
+  00c38	03 01		 add	 eax, DWORD PTR [ecx]
+  00c3a	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00c3d	99		 cdq
+  00c3e	f7 39		 idiv	 DWORD PTR [ecx]
+  00c40	c1 e2 04	 shl	 edx, 4
+  00c43	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00c46	03 c2		 add	 eax, edx
+  00c48	50		 push	 eax
+  00c49	8d 8d 70 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62974[ebp]
+  00c4f	51		 push	 ecx
+  00c50	8b 55 0c	 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  00c53	8b 02		 mov	 eax, DWORD PTR [edx]
+  00c55	8b 8d 70 fb ff
+	ff		 mov	 ecx, DWORD PTR _P_j$[ebp]
+  00c5b	8d 44 01 01	 lea	 eax, DWORD PTR [ecx+eax+1]
+  00c5f	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  00c62	99		 cdq
+  00c63	f7 39		 idiv	 DWORD PTR [ecx]
+  00c65	c1 e2 04	 shl	 edx, 4
+  00c68	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  00c6b	03 ca		 add	 ecx, edx
+  00c6d	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00c72	50		 push	 eax
+  00c73	8d 8d 60 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$[ebp]
+  00c79	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 301  :                         wrk2 = Q[(Q_j+1+Qpoints) % Qpoints] - Q[(Q_j + Qpoints) % Qpoints];
+
+  00c7e	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00c84	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  00c8a	99		 cdq
+  00c8b	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00c91	c1 e2 04	 shl	 edx, 4
+  00c94	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  00c97	03 c2		 add	 eax, edx
+  00c99	50		 push	 eax
+  00c9a	8d 8d 60 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62975[ebp]
+  00ca0	51		 push	 ecx
+  00ca1	8b 95 28 fb ff
+	ff		 mov	 edx, DWORD PTR _Qpoints$[ebp]
+  00ca7	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00cad	8d 44 10 01	 lea	 eax, DWORD PTR [eax+edx+1]
+  00cb1	99		 cdq
+  00cb2	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00cb8	c1 e2 04	 shl	 edx, 4
+  00cbb	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  00cbe	03 ca		 add	 ecx, edx
+  00cc0	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00cc5	50		 push	 eax
+  00cc6	8d 4d f0	 lea	 ecx, DWORD PTR _wrk2$[ebp]
+  00cc9	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 302  :                         if ((wrk1^wrk2) >= 0)
+
+  00cce	8d 4d f0	 lea	 ecx, DWORD PTR _wrk2$[ebp]
+  00cd1	51		 push	 ecx
+  00cd2	8d 8d 60 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$[ebp]
+  00cd8	e8 00 00 00 00	 call	 ??TFPoint@@QBEHABV0@@Z	; FPoint::operator^
+  00cdd	85 c0		 test	 eax, eax
+  00cdf	7c 02		 jl	 SHORT $L62625
+
+; 303  :                            break;
+
+  00ce1	eb 1b		 jmp	 SHORT $L62616
+$L62625:
+
+; 305  :                            intersectResult = NOINTERSECT;
+
+  00ce3	c7 85 78 fb ff
+	ff ff ff ff ff	 mov	 DWORD PTR _intersectResult$[ebp], -1
+
+; 307  :                      else
+
+  00ced	eb 0a		 jmp	 SHORT $L62627
+$L62617:
+
+; 308  :                         intersectResult = NOINTERSECT;
+
+  00cef	c7 85 78 fb ff
+	ff ff ff ff ff	 mov	 DWORD PTR _intersectResult$[ebp], -1
+$L62627:
+
+; 309  :                   }
+
+  00cf9	e9 92 fd ff ff	 jmp	 $L62615
+$L62616:
+
+; 310  :                   if (intersectResult != NOINTERSECT) break;
+
+  00cfe	83 bd 78 fb ff
+	ff ff		 cmp	 DWORD PTR _intersectResult$[ebp], -1
+  00d05	74 02		 je	 SHORT $L62628
+  00d07	eb 05		 jmp	 SHORT $L62607
+$L62628:
+
+; 311  :                }
+
+  00d09	e9 42 fc ff ff	 jmp	 $L62606
+$L62607:
+
+; 312  :                // we need to find an intersection
+; 313  :                if (intersectResult != NOINTERSECT)
+
+  00d0e	83 bd 78 fb ff
+	ff ff		 cmp	 DWORD PTR _intersectResult$[ebp], -1
+  00d15	0f 84 0f 05 00
+	00		 je	 $L62639
+
+; 315  :                   // If loop to add is screen clockwise add to P patches
+; 316  :                   if (angle > 0)
+
+  00d1b	83 bd 6c fb ff
+	ff 00		 cmp	 DWORD PTR _angle$[ebp], 0
+  00d22	0f 8e 02 05 00
+	00		 jle	 $L62639
+
+; 318  :                      if (patches >= MAXPATCHES)
+
+  00d28	83 bd 74 eb ff
+	ff 14		 cmp	 DWORD PTR _patches$[ebp], 20 ; 00000014H
+  00d2f	7c 1d		 jl	 SHORT $L62631
+
+; 319  : 		                  msgMgr->Fatal(SrcLoc,Msg_PolygonTooManyPatches);
+
+  00d31	6a 77		 push	 119			; 00000077H
+  00d33	68 3f 01 00 00	 push	 319			; 0000013fH
+  00d38	68 00 00 00 00	 push	 OFFSET FLAT:$SG62632
+  00d3d	6a 61		 push	 97			; 00000061H
+  00d3f	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00d45	52		 push	 edx
+  00d46	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  00d4b	83 c4 14	 add	 esp, 20			; 00000014H
+$L62631:
+
+; 320  :                      // add loop to patches
+; 321  :                      if(patches == 0)
+
+  00d4e	83 bd 74 eb ff
+	ff 00		 cmp	 DWORD PTR _patches$[ebp], 0
+  00d55	0f 85 d2 00 00
+	00		 jne	 $L62633
+
+; 323  :                         Patch[patches].P_i = P_i;
+
+  00d5b	8b 85 74 eb ff
+	ff		 mov	 eax, DWORD PTR _patches$[ebp]
+  00d61	6b c0 38	 imul	 eax, 56			; 00000038H
+  00d64	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  00d6a	89 8c 05 84 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+eax], ecx
+
+; 324  :                         Patch[patches].Q_i = Q_i;
+
+  00d71	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  00d77	6b d2 38	 imul	 edx, 56			; 00000038H
+  00d7a	8b 85 80 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_i$[ebp]
+  00d80	89 84 15 88 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+edx+4], eax
+
+; 325  :                         Patch[patches].P_U = P_U;
+
+  00d87	8d 8d 40 eb ff
+	ff		 lea	 ecx, DWORD PTR _P_U$[ebp]
+  00d8d	51		 push	 ecx
+  00d8e	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  00d94	6b d2 38	 imul	 edx, 56			; 00000038H
+  00d97	8d 8c 15 8c fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+edx+8]
+  00d9e	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 326  :                         Patch[patches].P_j = (P_j + Ppoints) % Ppoints;
+
+  00da3	8b 45 0c	 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  00da6	8b 8d 70 fb ff
+	ff		 mov	 ecx, DWORD PTR _P_j$[ebp]
+  00dac	03 08		 add	 ecx, DWORD PTR [eax]
+  00dae	8b 75 0c	 mov	 esi, DWORD PTR _Ppoints$[ebp]
+  00db1	8b c1		 mov	 eax, ecx
+  00db3	99		 cdq
+  00db4	f7 3e		 idiv	 DWORD PTR [esi]
+  00db6	8b 85 74 eb ff
+	ff		 mov	 eax, DWORD PTR _patches$[ebp]
+  00dbc	6b c0 38	 imul	 eax, 56			; 00000038H
+  00dbf	89 94 05 9c fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+eax+24], edx
+
+; 327  :                         Patch[patches].Q_j = (Q_j + Qpoints) % Qpoints;
+
+  00dc6	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00dcc	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  00dd2	99		 cdq
+  00dd3	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00dd9	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  00ddf	6b c9 38	 imul	 ecx, 56			; 00000038H
+  00de2	89 94 0d a0 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+ecx+28], edx
+
+; 328  :                         Patch[patches].Q_U = Q_U;
+
+  00de9	8d 95 50 eb ff
+	ff		 lea	 edx, DWORD PTR _Q_U$[ebp]
+  00def	52		 push	 edx
+  00df0	8b 85 74 eb ff
+	ff		 mov	 eax, DWORD PTR _patches$[ebp]
+  00df6	6b c0 38	 imul	 eax, 56			; 00000038H
+  00df9	8d 8c 05 a4 fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+32]
+  00e00	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 329  :                         Patch[patches++].deleteIt = False; 
+
+  00e05	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  00e0b	6b c9 38	 imul	 ecx, 56			; 00000038H
+  00e0e	c7 84 0d b4 fb
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _Patch$[ebp+ecx+48], 0
+  00e19	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  00e1f	83 c2 01	 add	 edx, 1
+  00e22	89 95 74 eb ff
+	ff		 mov	 DWORD PTR _patches$[ebp], edx
+
+; 331  :                      else
+
+  00e28	e9 fd 03 00 00	 jmp	 $L62639
+$L62633:
+
+; 333  :                         newPatch.P_i = P_i;
+
+  00e2d	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  00e33	89 85 30 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp], eax
+
+; 334  :                         newPatch.Q_i = Q_i;
+
+  00e39	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  00e3f	89 8d 34 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+4], ecx
+
+; 335  :                         newPatch.P_U = P_U;
+
+  00e45	8d 95 40 eb ff
+	ff		 lea	 edx, DWORD PTR _P_U$[ebp]
+  00e4b	52		 push	 edx
+  00e4c	8d 8d 38 fb ff
+	ff		 lea	 ecx, DWORD PTR _newPatch$[ebp+8]
+  00e52	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 336  :                         newPatch.P_j = (P_j + Ppoints) % Ppoints;
+
+  00e57	8b 45 0c	 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  00e5a	8b 8d 70 fb ff
+	ff		 mov	 ecx, DWORD PTR _P_j$[ebp]
+  00e60	03 08		 add	 ecx, DWORD PTR [eax]
+  00e62	8b 75 0c	 mov	 esi, DWORD PTR _Ppoints$[ebp]
+  00e65	8b c1		 mov	 eax, ecx
+  00e67	99		 cdq
+  00e68	f7 3e		 idiv	 DWORD PTR [esi]
+  00e6a	89 95 48 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+24], edx
+
+; 337  :                         newPatch.Q_j = (Q_j + Qpoints) % Qpoints;
+
+  00e70	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  00e76	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  00e7c	99		 cdq
+  00e7d	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  00e83	89 95 4c fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+28], edx
+
+; 338  :                         newPatch.Q_U = Q_U;
+
+  00e89	8d 95 50 eb ff
+	ff		 lea	 edx, DWORD PTR _Q_U$[ebp]
+  00e8f	52		 push	 edx
+  00e90	8d 8d 50 fb ff
+	ff		 lea	 ecx, DWORD PTR _newPatch$[ebp+32]
+  00e96	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 339  :                         newPatch.deleteIt = False; 
+
+  00e9b	c7 85 60 fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _newPatch$[ebp+48], 0
+
+; 340  : 								// If the new patch is dominated don't add to patches
+; 341  :                         for(p = 0;p < patches; p ++)
+
+  00ea5	c7 45 e8 00 00
+	00 00		 mov	 DWORD PTR _p$[ebp], 0
+  00eac	eb 09		 jmp	 SHORT $L62635
+$L62636:
+  00eae	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  00eb1	83 c0 01	 add	 eax, 1
+  00eb4	89 45 e8	 mov	 DWORD PTR _p$[ebp], eax
+$L62635:
+  00eb7	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  00eba	3b 8d 74 eb ff
+	ff		 cmp	 ecx, DWORD PTR _patches$[ebp]
+  00ec0	7d 29		 jge	 SHORT $L62637
+
+; 342  :                            if (DominatesF(Patch[p],newPatch,P)) break;
+
+  00ec2	8b 55 08	 mov	 edx, DWORD PTR _P$[ebp]
+  00ec5	52		 push	 edx
+  00ec6	8d 85 30 fb ff
+	ff		 lea	 eax, DWORD PTR _newPatch$[ebp]
+  00ecc	50		 push	 eax
+  00ecd	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  00ed0	6b c9 38	 imul	 ecx, 56			; 00000038H
+  00ed3	8d 94 0d 84 fb
+	ff ff		 lea	 edx, DWORD PTR _Patch$[ebp+ecx]
+  00eda	52		 push	 edx
+  00edb	e8 00 00 00 00	 call	 ?DominatesF@@YAHAAVPolyPatchF@@0PAVFPoint@@@Z ; DominatesF
+  00ee0	83 c4 0c	 add	 esp, 12			; 0000000cH
+  00ee3	85 c0		 test	 eax, eax
+  00ee5	74 02		 je	 SHORT $L62638
+  00ee7	eb 02		 jmp	 SHORT $L62637
+$L62638:
+
+; 343  :                         if(p == patches)
+
+  00ee9	eb c3		 jmp	 SHORT $L62636
+$L62637:
+  00eeb	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  00eee	3b 85 74 eb ff
+	ff		 cmp	 eax, DWORD PTR _patches$[ebp]
+  00ef4	0f 85 30 03 00
+	00		 jne	 $L62639
+
+; 345  : 									// If the new patch dominates a patch,
+; 346  : 									// remove it from the patches
+; 347  :                            for(p = 0;p < patches ; p++)
+
+  00efa	c7 45 e8 00 00
+	00 00		 mov	 DWORD PTR _p$[ebp], 0
+  00f01	eb 09		 jmp	 SHORT $L62640
+$L62641:
+  00f03	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  00f06	83 c1 01	 add	 ecx, 1
+  00f09	89 4d e8	 mov	 DWORD PTR _p$[ebp], ecx
+$L62640:
+  00f0c	8b 55 e8	 mov	 edx, DWORD PTR _p$[ebp]
+  00f0f	3b 95 74 eb ff
+	ff		 cmp	 edx, DWORD PTR _patches$[ebp]
+  00f15	7d 38		 jge	 SHORT $L62642
+
+; 348  :                               if (DominatesF(newPatch,Patch[p],P)) Patch[p].deleteIt = True;
+
+  00f17	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00f1a	50		 push	 eax
+  00f1b	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  00f1e	6b c9 38	 imul	 ecx, 56			; 00000038H
+  00f21	8d 94 0d 84 fb
+	ff ff		 lea	 edx, DWORD PTR _Patch$[ebp+ecx]
+  00f28	52		 push	 edx
+  00f29	8d 85 30 fb ff
+	ff		 lea	 eax, DWORD PTR _newPatch$[ebp]
+  00f2f	50		 push	 eax
+  00f30	e8 00 00 00 00	 call	 ?DominatesF@@YAHAAVPolyPatchF@@0PAVFPoint@@@Z ; DominatesF
+  00f35	83 c4 0c	 add	 esp, 12			; 0000000cH
+  00f38	85 c0		 test	 eax, eax
+  00f3a	74 11		 je	 SHORT $L62643
+  00f3c	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  00f3f	6b c9 38	 imul	 ecx, 56			; 00000038H
+  00f42	c7 84 0d b4 fb
+	ff ff 01 00 00
+	00		 mov	 DWORD PTR _Patch$[ebp+ecx+48], 1
+$L62643:
+
+; 349  : 
+; 350  : 									// There may be a patch for this same line
+; 351  : 									// that belongs in front of this patch!
+; 352  : 									FPoint wrk1 = P_U - P[P_i];
+
+  00f4d	eb b4		 jmp	 SHORT $L62641
+$L62642:
+  00f4f	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  00f55	c1 e2 04	 shl	 edx, 4
+  00f58	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00f5b	03 c2		 add	 eax, edx
+  00f5d	50		 push	 eax
+  00f5e	8d 8d 50 ea ff
+	ff		 lea	 ecx, DWORD PTR $T62976[ebp]
+  00f64	51		 push	 ecx
+  00f65	8d 8d 40 eb ff
+	ff		 lea	 ecx, DWORD PTR _P_U$[ebp]
+  00f6b	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00f70	50		 push	 eax
+  00f71	8d 8d 30 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$62644[ebp]
+  00f77	e8 00 00 00 00	 call	 ??0FPoint@@QAE@ABV0@@Z	; FPoint::FPoint
+
+; 353  :                         	for(p = patches -1;p >= 0;p--)
+
+  00f7c	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  00f82	83 ea 01	 sub	 edx, 1
+  00f85	89 55 e8	 mov	 DWORD PTR _p$[ebp], edx
+  00f88	eb 09		 jmp	 SHORT $L62646
+$L62647:
+  00f8a	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  00f8d	83 e8 01	 sub	 eax, 1
+  00f90	89 45 e8	 mov	 DWORD PTR _p$[ebp], eax
+$L62646:
+  00f93	83 7d e8 00	 cmp	 DWORD PTR _p$[ebp], 0
+  00f97	0f 8c 85 00 00
+	00		 jl	 $L62648
+
+; 355  : 										if (Patch[p].P_i == P_i)
+
+  00f9d	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  00fa0	6b c9 38	 imul	 ecx, 56			; 00000038H
+  00fa3	8b 94 0d 84 fb
+	ff ff		 mov	 edx, DWORD PTR _Patch$[ebp+ecx]
+  00faa	3b 95 7c fb ff
+	ff		 cmp	 edx, DWORD PTR _P_i$[ebp]
+  00fb0	75 70		 jne	 SHORT $L62649
+
+; 357  : 											FPoint wrk2 = Patch[p].P_U - P[P_i];
+
+  00fb2	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  00fb8	c1 e0 04	 shl	 eax, 4
+  00fbb	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  00fbe	03 c8		 add	 ecx, eax
+  00fc0	51		 push	 ecx
+  00fc1	8d 95 40 ea ff
+	ff		 lea	 edx, DWORD PTR $T62977[ebp]
+  00fc7	52		 push	 edx
+  00fc8	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  00fcb	6b c0 38	 imul	 eax, 56			; 00000038H
+  00fce	8d 8c 05 8c fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+8]
+  00fd5	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00fda	50		 push	 eax
+  00fdb	8d 8d 20 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk2$62650[ebp]
+  00fe1	e8 00 00 00 00	 call	 ??0FPoint@@QAE@ABV0@@Z	; FPoint::FPoint
+
+; 358  : 											if (wrk1*wrk1 < wrk2*wrk2)
+
+  00fe6	8d 8d 30 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$62644[ebp]
+  00fec	51		 push	 ecx
+  00fed	8d 8d 30 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk1$62644[ebp]
+  00ff3	e8 00 00 00 00	 call	 ??DFPoint@@QBENABV0@@Z	; FPoint::operator*
+  00ff8	dd 9d 34 ea ff
+	ff		 fstp	 QWORD PTR -5580+[ebp]
+  00ffe	8d 95 20 eb ff
+	ff		 lea	 edx, DWORD PTR _wrk2$62650[ebp]
+  01004	52		 push	 edx
+  01005	8d 8d 20 eb ff
+	ff		 lea	 ecx, DWORD PTR _wrk2$62650[ebp]
+  0100b	e8 00 00 00 00	 call	 ??DFPoint@@QBENABV0@@Z	; FPoint::operator*
+  01010	dc 9d 34 ea ff
+	ff		 fcomp	 QWORD PTR -5580+[ebp]
+  01016	df e0		 fnstsw	 ax
+  01018	f6 c4 41	 test	 ah, 65			; 00000041H
+  0101b	75 05		 jne	 SHORT $L62652
+
+; 359  : 												continue;
+
+  0101d	e9 68 ff ff ff	 jmp	 $L62647
+$L62652:
+$L62649:
+$L62648:
+
+; 366  : 
+; 367  : 									if (p != patches-1)
+
+  01022	8b 85 74 eb ff
+	ff		 mov	 eax, DWORD PTR _patches$[ebp]
+  01028	83 e8 01	 sub	 eax, 1
+  0102b	39 45 e8	 cmp	 DWORD PTR _p$[ebp], eax
+  0102e	0f 84 41 01 00
+	00		 je	 $L62655
+
+; 369  : 										// Should reverse the patches
+; 370  :                            	newPatch.P_i = Patch[++p].P_i;
+
+  01034	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  01037	83 c1 01	 add	 ecx, 1
+  0103a	89 4d e8	 mov	 DWORD PTR _p$[ebp], ecx
+  0103d	8b 55 e8	 mov	 edx, DWORD PTR _p$[ebp]
+  01040	6b d2 38	 imul	 edx, 56			; 00000038H
+  01043	8b 84 15 84 fb
+	ff ff		 mov	 eax, DWORD PTR _Patch$[ebp+edx]
+  0104a	89 85 30 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp], eax
+
+; 371  :                            	newPatch.Q_i = Patch[p].Q_i; 
+
+  01050	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  01053	6b c9 38	 imul	 ecx, 56			; 00000038H
+  01056	8b 94 0d 88 fb
+	ff ff		 mov	 edx, DWORD PTR _Patch$[ebp+ecx+4]
+  0105d	89 95 34 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+4], edx
+
+; 372  :                            	newPatch.P_U = Patch[p].P_U; 
+
+  01063	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  01066	6b c0 38	 imul	 eax, 56			; 00000038H
+  01069	8d 8c 05 8c fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+8]
+  01070	51		 push	 ecx
+  01071	8d 8d 38 fb ff
+	ff		 lea	 ecx, DWORD PTR _newPatch$[ebp+8]
+  01077	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 373  :                            	newPatch.P_j = Patch[p].P_j; 
+
+  0107c	8b 55 e8	 mov	 edx, DWORD PTR _p$[ebp]
+  0107f	6b d2 38	 imul	 edx, 56			; 00000038H
+  01082	8b 84 15 9c fb
+	ff ff		 mov	 eax, DWORD PTR _Patch$[ebp+edx+24]
+  01089	89 85 48 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+24], eax
+
+; 374  :                            	newPatch.Q_j = Patch[p].Q_j; 
+
+  0108f	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  01092	6b c9 38	 imul	 ecx, 56			; 00000038H
+  01095	8b 94 0d a0 fb
+	ff ff		 mov	 edx, DWORD PTR _Patch$[ebp+ecx+28]
+  0109c	89 95 4c fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+28], edx
+
+; 375  :                            	newPatch.Q_U = Patch[p].Q_U; 
+
+  010a2	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  010a5	6b c0 38	 imul	 eax, 56			; 00000038H
+  010a8	8d 8c 05 a4 fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+32]
+  010af	51		 push	 ecx
+  010b0	8d 8d 50 fb ff
+	ff		 lea	 ecx, DWORD PTR _newPatch$[ebp+32]
+  010b6	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 376  :                            	newPatch.deleteIt = Patch[p].deleteIt; 
+
+  010bb	8b 55 e8	 mov	 edx, DWORD PTR _p$[ebp]
+  010be	6b d2 38	 imul	 edx, 56			; 00000038H
+  010c1	8b 84 15 b4 fb
+	ff ff		 mov	 eax, DWORD PTR _Patch$[ebp+edx+48]
+  010c8	89 85 60 fb ff
+	ff		 mov	 DWORD PTR _newPatch$[ebp+48], eax
+
+; 377  : 
+; 378  : 										Patch[p].P_i = P_i;
+
+  010ce	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  010d1	6b c9 38	 imul	 ecx, 56			; 00000038H
+  010d4	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  010da	89 94 0d 84 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+ecx], edx
+
+; 379  : 										Patch[p].Q_i = Q_i;
+
+  010e1	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  010e4	6b c0 38	 imul	 eax, 56			; 00000038H
+  010e7	8b 8d 80 fb ff
+	ff		 mov	 ecx, DWORD PTR _Q_i$[ebp]
+  010ed	89 8c 05 88 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+eax+4], ecx
+
+; 380  : 										Patch[p].P_U = P_U;
+
+  010f4	8d 95 40 eb ff
+	ff		 lea	 edx, DWORD PTR _P_U$[ebp]
+  010fa	52		 push	 edx
+  010fb	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  010fe	6b c0 38	 imul	 eax, 56			; 00000038H
+  01101	8d 8c 05 8c fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+8]
+  01108	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 381  : 										Patch[p].P_j = (P_j + Ppoints) % Ppoints;
+
+  0110d	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  01110	8b 85 70 fb ff
+	ff		 mov	 eax, DWORD PTR _P_j$[ebp]
+  01116	03 01		 add	 eax, DWORD PTR [ecx]
+  01118	8b 4d 0c	 mov	 ecx, DWORD PTR _Ppoints$[ebp]
+  0111b	99		 cdq
+  0111c	f7 39		 idiv	 DWORD PTR [ecx]
+  0111e	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  01121	6b c0 38	 imul	 eax, 56			; 00000038H
+  01124	89 94 05 9c fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+eax+24], edx
+
+; 382  : 										Patch[p].Q_j = (Q_j + Qpoints) % Qpoints;
+
+  0112b	8b 85 74 fb ff
+	ff		 mov	 eax, DWORD PTR _Q_j$[ebp]
+  01131	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  01137	99		 cdq
+  01138	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  0113e	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  01141	6b c9 38	 imul	 ecx, 56			; 00000038H
+  01144	89 94 0d a0 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+ecx+28], edx
+
+; 383  : 										Patch[p].Q_U = Q_U;  
+
+  0114b	8d 95 50 eb ff
+	ff		 lea	 edx, DWORD PTR _Q_U$[ebp]
+  01151	52		 push	 edx
+  01152	8b 45 e8	 mov	 eax, DWORD PTR _p$[ebp]
+  01155	6b c0 38	 imul	 eax, 56			; 00000038H
+  01158	8d 8c 05 a4 fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+32]
+  0115f	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 384  :                            	Patch[p].deleteIt = False; 
+
+  01164	8b 4d e8	 mov	 ecx, DWORD PTR _p$[ebp]
+  01167	6b c9 38	 imul	 ecx, 56			; 00000038H
+  0116a	c7 84 0d b4 fb
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _Patch$[ebp+ecx+48], 0
+$L62655:
+
+; 386  : 
+; 387  :                            Patch[patches].P_i =	newPatch.P_i;
+
+  01175	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  0117b	6b d2 38	 imul	 edx, 56			; 00000038H
+  0117e	8b 85 30 fb ff
+	ff		 mov	 eax, DWORD PTR _newPatch$[ebp]
+  01184	89 84 15 84 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+edx], eax
+
+; 388  :                            Patch[patches].Q_i =	newPatch.Q_i;
+
+  0118b	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  01191	6b c9 38	 imul	 ecx, 56			; 00000038H
+  01194	8b 95 34 fb ff
+	ff		 mov	 edx, DWORD PTR _newPatch$[ebp+4]
+  0119a	89 94 0d 88 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+ecx+4], edx
+
+; 389  :                            Patch[patches].P_U =	newPatch.P_U;
+
+  011a1	8d 85 38 fb ff
+	ff		 lea	 eax, DWORD PTR _newPatch$[ebp+8]
+  011a7	50		 push	 eax
+  011a8	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  011ae	6b c9 38	 imul	 ecx, 56			; 00000038H
+  011b1	8d 8c 0d 8c fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+ecx+8]
+  011b8	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 390  :                            Patch[patches].P_j =	newPatch.P_j;
+
+  011bd	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  011c3	6b d2 38	 imul	 edx, 56			; 00000038H
+  011c6	8b 85 48 fb ff
+	ff		 mov	 eax, DWORD PTR _newPatch$[ebp+24]
+  011cc	89 84 15 9c fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+edx+24], eax
+
+; 391  :                            Patch[patches].Q_j =	newPatch.Q_j;
+
+  011d3	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  011d9	6b c9 38	 imul	 ecx, 56			; 00000038H
+  011dc	8b 95 4c fb ff
+	ff		 mov	 edx, DWORD PTR _newPatch$[ebp+28]
+  011e2	89 94 0d a0 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+ecx+28], edx
+
+; 392  :                            Patch[patches].Q_U =	newPatch.Q_U;
+
+  011e9	8d 85 50 fb ff
+	ff		 lea	 eax, DWORD PTR _newPatch$[ebp+32]
+  011ef	50		 push	 eax
+  011f0	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  011f6	6b c9 38	 imul	 ecx, 56			; 00000038H
+  011f9	8d 8c 0d a4 fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+ecx+32]
+  01200	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 393  :                            Patch[patches++].deleteIt = newPatch.deleteIt; 
+
+  01205	8b 95 74 eb ff
+	ff		 mov	 edx, DWORD PTR _patches$[ebp]
+  0120b	6b d2 38	 imul	 edx, 56			; 00000038H
+  0120e	8b 85 60 fb ff
+	ff		 mov	 eax, DWORD PTR _newPatch$[ebp+48]
+  01214	89 84 15 b4 fb
+	ff ff		 mov	 DWORD PTR _Patch$[ebp+edx+48], eax
+  0121b	8b 8d 74 eb ff
+	ff		 mov	 ecx, DWORD PTR _patches$[ebp]
+  01221	83 c1 01	 add	 ecx, 1
+  01224	89 8d 74 eb ff
+	ff		 mov	 DWORD PTR _patches$[ebp], ecx
+$L62639:
+
+; 400  :       }
+
+  0122a	e9 4c f3 ff ff	 jmp	 $L62585
+$L62586:
+
+; 401  :    }
+
+  0122f	e9 1b f3 ff ff	 jmp	 $L62582
+$L62583:
+
+; 402  :    if (patches)
+
+  01234	83 bd 74 eb ff
+	ff 00		 cmp	 DWORD PTR _patches$[ebp], 0
+  0123b	0f 84 23 04 00
+	00		 je	 $L62656
+
+; 404  :       // merge the polygons
+; 405  :       fused = True;
+
+  01241	c7 85 2c fb ff
+	ff 01 00 00 00	 mov	 DWORD PTR _fused$[ebp], 1
+
+; 406  : 
+; 407  :       // mark as merged polygon
+; 408  :       polygon.type |= MERGED; 
+
+  0124b	8b 55 10	 mov	 edx, DWORD PTR _polygon$[ebp]
+  0124e	8a 42 04	 mov	 al, BYTE PTR [edx+4]
+  01251	0c 04		 or	 al, 4
+  01253	8b 4d 10	 mov	 ecx, DWORD PTR _polygon$[ebp]
+  01256	88 41 04	 mov	 BYTE PTR [ecx+4], al
+
+; 409  :       j = 0;
+
+  01259	c7 85 78 eb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _j$[ebp], 0
+
+; 410  : 
+; 411  :       for (P_i=0;P_i < Ppoints;++P_i)
+
+  01263	c7 85 7c fb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _P_i$[ebp], 0
+  0126d	eb 0f		 jmp	 SHORT $L62657
+$L62658:
+  0126f	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  01275	83 c2 01	 add	 edx, 1
+  01278	89 95 7c fb ff
+	ff		 mov	 DWORD PTR _P_i$[ebp], edx
+$L62657:
+  0127e	8b 45 0c	 mov	 eax, DWORD PTR _Ppoints$[ebp]
+  01281	8b 8d 7c fb ff
+	ff		 mov	 ecx, DWORD PTR _P_i$[ebp]
+  01287	3b 08		 cmp	 ecx, DWORD PTR [eax]
+  01289	0f 8d 17 03 00
+	00		 jge	 $L62659
+
+; 413  :          // if P_i is not in a patch add node
+; 414  :          for (i=0,addNode=True;(i<patches) && (addNode == True);++i)
+
+  0128f	c7 85 84 eb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  01299	c7 45 ec 01 00
+	00 00		 mov	 DWORD PTR _addNode$[ebp], 1
+  012a0	eb 0f		 jmp	 SHORT $L62660
+$L62661:
+  012a2	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  012a8	83 c2 01	 add	 edx, 1
+  012ab	89 95 84 eb ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L62660:
+  012b1	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  012b7	3b 85 74 eb ff
+	ff		 cmp	 eax, DWORD PTR _patches$[ebp]
+  012bd	7d 4a		 jge	 SHORT $L62662
+  012bf	83 7d ec 01	 cmp	 DWORD PTR _addNode$[ebp], 1
+  012c3	75 44		 jne	 SHORT $L62662
+
+; 415  :             if(!Patch[i].deleteIt)
+
+  012c5	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  012cb	6b c9 38	 imul	 ecx, 56			; 00000038H
+  012ce	83 bc 0d b4 fb
+	ff ff 00	 cmp	 DWORD PTR _Patch$[ebp+ecx+48], 0
+  012d6	75 2f		 jne	 SHORT $L62664
+
+; 416  :                if (PatchNodeF(Patch[i],P_i,P))
+
+  012d8	8b 55 08	 mov	 edx, DWORD PTR _P$[ebp]
+  012db	52		 push	 edx
+  012dc	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  012e2	50		 push	 eax
+  012e3	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  012e9	6b c9 38	 imul	 ecx, 56			; 00000038H
+  012ec	8d 94 0d 84 fb
+	ff ff		 lea	 edx, DWORD PTR _Patch$[ebp+ecx]
+  012f3	52		 push	 edx
+  012f4	e8 00 00 00 00	 call	 ?PatchNodeF@@YAHAAVPolyPatchF@@HPAVFPoint@@@Z ; PatchNodeF
+  012f9	83 c4 0c	 add	 esp, 12			; 0000000cH
+  012fc	85 c0		 test	 eax, eax
+  012fe	74 07		 je	 SHORT $L62664
+
+; 417  :                   addNode = False;
+
+  01300	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR _addNode$[ebp], 0
+$L62664:
+
+; 418  :          if (addNode) Result[j++] = P[P_i];
+
+  01307	eb 99		 jmp	 SHORT $L62661
+$L62662:
+  01309	83 7d ec 00	 cmp	 DWORD PTR _addNode$[ebp], 0
+  0130d	74 3f		 je	 SHORT $L62665
+  0130f	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  01315	c1 e0 04	 shl	 eax, 4
+  01318	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  0131b	03 c8		 add	 ecx, eax
+  0131d	51		 push	 ecx
+  0131e	8b 95 78 eb ff
+	ff		 mov	 edx, DWORD PTR _j$[ebp]
+  01324	c1 e2 04	 shl	 edx, 4
+  01327	8d 84 15 88 eb
+	ff ff		 lea	 eax, DWORD PTR _Result$[ebp+edx]
+  0132e	89 85 30 ea ff
+	ff		 mov	 DWORD PTR -5584+[ebp], eax
+  01334	8b 8d 78 eb ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  0133a	83 c1 01	 add	 ecx, 1
+  0133d	89 8d 78 eb ff
+	ff		 mov	 DWORD PTR _j$[ebp], ecx
+  01343	8b 8d 30 ea ff
+	ff		 mov	 ecx, DWORD PTR -5584+[ebp]
+  01349	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+$L62665:
+
+; 419  :          // if at a patch, add the patch
+; 420  :          for (i=0;i<patches;++i)
+
+  0134e	c7 85 84 eb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  01358	eb 0f		 jmp	 SHORT $L62666
+$L62667:
+  0135a	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01360	83 c2 01	 add	 edx, 1
+  01363	89 95 84 eb ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L62666:
+  01369	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  0136f	3b 85 74 eb ff
+	ff		 cmp	 eax, DWORD PTR _patches$[ebp]
+  01375	0f 8d 26 02 00
+	00		 jge	 $L62668
+
+; 422  :             if(Patch[i].deleteIt == False)
+
+  0137b	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01381	6b c9 38	 imul	 ecx, 56			; 00000038H
+  01384	83 bc 0d b4 fb
+	ff ff 00	 cmp	 DWORD PTR _Patch$[ebp+ecx+48], 0
+  0138c	0f 85 0a 02 00
+	00		 jne	 $L62677
+
+; 424  :                if (P_i == Patch[i].P_i)
+
+  01392	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01398	6b d2 38	 imul	 edx, 56			; 00000038H
+  0139b	8b 85 7c fb ff
+	ff		 mov	 eax, DWORD PTR _P_i$[ebp]
+  013a1	3b 84 15 84 fb
+	ff ff		 cmp	 eax, DWORD PTR _Patch$[ebp+edx]
+  013a8	0f 85 ee 01 00
+	00		 jne	 $L62677
+
+; 426  :                   if (j >= MAXPOLYPATH)
+
+  013ae	81 bd 78 eb ff
+	ff fa 00 00 00	 cmp	 DWORD PTR _j$[ebp], 250	; 000000faH
+  013b8	7c 1d		 jl	 SHORT $L62671
+
+; 427  : 		               msgMgr->Fatal(SrcLoc,Msg_PolygonTooManyPoints);
+
+  013ba	6a 78		 push	 120			; 00000078H
+  013bc	68 ab 01 00 00	 push	 427			; 000001abH
+  013c1	68 00 00 00 00	 push	 OFFSET FLAT:$SG62672
+  013c6	6a 61		 push	 97			; 00000061H
+  013c8	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  013ce	51		 push	 ecx
+  013cf	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXDPADHHZZ ; MsgMgr::Fatal
+  013d4	83 c4 14	 add	 esp, 20			; 00000014H
+$L62671:
+
+; 428  :                   if (Patch[i].P_U != P[P_i])
+
+  013d7	8b 95 7c fb ff
+	ff		 mov	 edx, DWORD PTR _P_i$[ebp]
+  013dd	c1 e2 04	 shl	 edx, 4
+  013e0	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  013e3	03 c2		 add	 eax, edx
+  013e5	50		 push	 eax
+  013e6	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  013ec	6b c9 38	 imul	 ecx, 56			; 00000038H
+  013ef	8d 8c 0d 8c fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+ecx+8]
+  013f6	e8 00 00 00 00	 call	 ??9FPoint@@QBEHABV0@@Z	; FPoint::operator!=
+  013fb	85 c0		 test	 eax, eax
+  013fd	74 41		 je	 SHORT $L62673
+
+; 429  :                      Result[j++] = Patch[i].P_U;
+
+  013ff	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01405	6b d2 38	 imul	 edx, 56			; 00000038H
+  01408	8d 84 15 8c fb
+	ff ff		 lea	 eax, DWORD PTR _Patch$[ebp+edx+8]
+  0140f	50		 push	 eax
+  01410	8b 8d 78 eb ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  01416	c1 e1 04	 shl	 ecx, 4
+  01419	8d 94 0d 88 eb
+	ff ff		 lea	 edx, DWORD PTR _Result$[ebp+ecx]
+  01420	89 95 2c ea ff
+	ff		 mov	 DWORD PTR -5588+[ebp], edx
+  01426	8b 85 78 eb ff
+	ff		 mov	 eax, DWORD PTR _j$[ebp]
+  0142c	83 c0 01	 add	 eax, 1
+  0142f	89 85 78 eb ff
+	ff		 mov	 DWORD PTR _j$[ebp], eax
+  01435	8b 8d 2c ea ff
+	ff		 mov	 ecx, DWORD PTR -5588+[ebp]
+  0143b	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+$L62673:
+
+; 430  :                   for (k=(Patch[i].Q_i+1+Qpoints) % Qpoints;
+
+  01440	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01446	6b c9 38	 imul	 ecx, 56			; 00000038H
+  01449	8b 94 0d 88 fb
+	ff ff		 mov	 edx, DWORD PTR _Patch$[ebp+ecx+4]
+  01450	8b 85 28 fb ff
+	ff		 mov	 eax, DWORD PTR _Qpoints$[ebp]
+  01456	8d 44 02 01	 lea	 eax, DWORD PTR [edx+eax+1]
+  0145a	99		 cdq
+  0145b	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  01461	89 95 70 eb ff
+	ff		 mov	 DWORD PTR _k$[ebp], edx
+
+; 431  :                        k != Patch[i].Q_j;
+; 432  :                        k = (k+1+Qpoints) % Qpoints,++j) 
+
+  01467	eb 2c		 jmp	 SHORT $L62674
+$L62675:
+  01469	8b 8d 28 fb ff
+	ff		 mov	 ecx, DWORD PTR _Qpoints$[ebp]
+  0146f	8b 95 70 eb ff
+	ff		 mov	 edx, DWORD PTR _k$[ebp]
+  01475	8d 44 0a 01	 lea	 eax, DWORD PTR [edx+ecx+1]
+  01479	99		 cdq
+  0147a	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  01480	89 95 70 eb ff
+	ff		 mov	 DWORD PTR _k$[ebp], edx
+  01486	8b 85 78 eb ff
+	ff		 mov	 eax, DWORD PTR _j$[ebp]
+  0148c	83 c0 01	 add	 eax, 1
+  0148f	89 85 78 eb ff
+	ff		 mov	 DWORD PTR _j$[ebp], eax
+$L62674:
+  01495	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  0149b	6b c9 38	 imul	 ecx, 56			; 00000038H
+  0149e	8b 95 70 eb ff
+	ff		 mov	 edx, DWORD PTR _k$[ebp]
+  014a4	3b 94 0d a0 fb
+	ff ff		 cmp	 edx, DWORD PTR _Patch$[ebp+ecx+28]
+  014ab	74 33		 je	 SHORT $L62676
+
+; 433  :                      Result[j] = Q[(k+Qpoints) % Qpoints];
+
+  014ad	8b 85 70 eb ff
+	ff		 mov	 eax, DWORD PTR _k$[ebp]
+  014b3	03 85 28 fb ff
+	ff		 add	 eax, DWORD PTR _Qpoints$[ebp]
+  014b9	99		 cdq
+  014ba	f7 bd 28 fb ff
+	ff		 idiv	 DWORD PTR _Qpoints$[ebp]
+  014c0	c1 e2 04	 shl	 edx, 4
+  014c3	8b 45 e4	 mov	 eax, DWORD PTR _Q$[ebp]
+  014c6	03 c2		 add	 eax, edx
+  014c8	50		 push	 eax
+  014c9	8b 8d 78 eb ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  014cf	c1 e1 04	 shl	 ecx, 4
+  014d2	8d 8c 0d 88 eb
+	ff ff		 lea	 ecx, DWORD PTR _Result$[ebp+ecx]
+  014d9	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+  014de	eb 89		 jmp	 SHORT $L62675
+$L62676:
+
+; 434  :                   Result[j++] = Q[Patch[i].Q_j];
+
+  014e0	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  014e6	6b d2 38	 imul	 edx, 56			; 00000038H
+  014e9	8b 84 15 a0 fb
+	ff ff		 mov	 eax, DWORD PTR _Patch$[ebp+edx+28]
+  014f0	c1 e0 04	 shl	 eax, 4
+  014f3	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  014f6	03 c8		 add	 ecx, eax
+  014f8	51		 push	 ecx
+  014f9	8b 95 78 eb ff
+	ff		 mov	 edx, DWORD PTR _j$[ebp]
+  014ff	c1 e2 04	 shl	 edx, 4
+  01502	8d 84 15 88 eb
+	ff ff		 lea	 eax, DWORD PTR _Result$[ebp+edx]
+  01509	89 85 28 ea ff
+	ff		 mov	 DWORD PTR -5592+[ebp], eax
+  0150f	8b 8d 78 eb ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  01515	83 c1 01	 add	 ecx, 1
+  01518	89 8d 78 eb ff
+	ff		 mov	 DWORD PTR _j$[ebp], ecx
+  0151e	8b 8d 28 ea ff
+	ff		 mov	 ecx, DWORD PTR -5592+[ebp]
+  01524	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+
+; 435  :                   if (Patch[i].Q_U != Q[Patch[i].Q_j])                                           
+
+  01529	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  0152f	6b d2 38	 imul	 edx, 56			; 00000038H
+  01532	8b 84 15 a0 fb
+	ff ff		 mov	 eax, DWORD PTR _Patch$[ebp+edx+28]
+  01539	c1 e0 04	 shl	 eax, 4
+  0153c	8b 4d e4	 mov	 ecx, DWORD PTR _Q$[ebp]
+  0153f	03 c8		 add	 ecx, eax
+  01541	51		 push	 ecx
+  01542	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  01548	6b d2 38	 imul	 edx, 56			; 00000038H
+  0154b	8d 8c 15 a4 fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+edx+32]
+  01552	e8 00 00 00 00	 call	 ??9FPoint@@QBEHABV0@@Z	; FPoint::operator!=
+  01557	85 c0		 test	 eax, eax
+  01559	74 41		 je	 SHORT $L62677
+
+; 436  :                      Result[j++] = Patch[i].Q_U;
+
+  0155b	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01561	6b c0 38	 imul	 eax, 56			; 00000038H
+  01564	8d 8c 05 a4 fb
+	ff ff		 lea	 ecx, DWORD PTR _Patch$[ebp+eax+32]
+  0156b	51		 push	 ecx
+  0156c	8b 95 78 eb ff
+	ff		 mov	 edx, DWORD PTR _j$[ebp]
+  01572	c1 e2 04	 shl	 edx, 4
+  01575	8d 84 15 88 eb
+	ff ff		 lea	 eax, DWORD PTR _Result$[ebp+edx]
+  0157c	89 85 24 ea ff
+	ff		 mov	 DWORD PTR -5596+[ebp], eax
+  01582	8b 8d 78 eb ff
+	ff		 mov	 ecx, DWORD PTR _j$[ebp]
+  01588	83 c1 01	 add	 ecx, 1
+  0158b	89 8d 78 eb ff
+	ff		 mov	 DWORD PTR _j$[ebp], ecx
+  01591	8b 8d 24 ea ff
+	ff		 mov	 ecx, DWORD PTR -5596+[ebp]
+  01597	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+$L62677:
+
+; 439  :          }
+
+  0159c	e9 b9 fd ff ff	 jmp	 $L62667
+$L62668:
+
+; 440  :       }
+
+  015a1	e9 c9 fc ff ff	 jmp	 $L62658
+$L62659:
+
+; 441  :       for (i=0;i<j;++i) P[i] = Result[i];
+
+  015a6	c7 85 84 eb ff
+	ff 00 00 00 00	 mov	 DWORD PTR _i$[ebp], 0
+  015b0	eb 0f		 jmp	 SHORT $L62678
+$L62679:
+  015b2	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  015b8	83 c2 01	 add	 edx, 1
+  015bb	89 95 84 eb ff
+	ff		 mov	 DWORD PTR _i$[ebp], edx
+$L62678:
+  015c1	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  015c7	3b 85 78 eb ff
+	ff		 cmp	 eax, DWORD PTR _j$[ebp]
+  015cd	7d 26		 jge	 SHORT $L62680
+  015cf	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  015d5	c1 e1 04	 shl	 ecx, 4
+  015d8	8d 94 0d 88 eb
+	ff ff		 lea	 edx, DWORD PTR _Result$[ebp+ecx]
+  015df	52		 push	 edx
+  015e0	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  015e6	c1 e0 04	 shl	 eax, 4
+  015e9	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  015ec	03 c8		 add	 ecx, eax
+  015ee	e8 00 00 00 00	 call	 ??4FPoint@@QAEAAV0@ABV0@@Z ; FPoint::operator=
+  015f3	eb bd		 jmp	 SHORT $L62679
+$L62680:
+
+; 442  :       if (P[i-1] == P[0]) i--;
+
+  015f5	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  015f8	51		 push	 ecx
+  015f9	8b 95 84 eb ff
+	ff		 mov	 edx, DWORD PTR _i$[ebp]
+  015ff	83 ea 01	 sub	 edx, 1
+  01602	c1 e2 04	 shl	 edx, 4
+  01605	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  01608	03 ca		 add	 ecx, edx
+  0160a	e8 00 00 00 00	 call	 ??8FPoint@@QBEHABV0@@Z	; FPoint::operator==
+  0160f	85 c0		 test	 eax, eax
+  01611	74 0f		 je	 SHORT $L62681
+  01613	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01619	83 e8 01	 sub	 eax, 1
+  0161c	89 85 84 eb ff
+	ff		 mov	 DWORD PTR _i$[ebp], eax
+$L62681:
+
+; 443  :       P[i].x = ENDOFPATHF;
+
+  01622	8b 8d 84 eb ff
+	ff		 mov	 ecx, DWORD PTR _i$[ebp]
+  01628	c1 e1 04	 shl	 ecx, 4
+  0162b	8b 55 08	 mov	 edx, DWORD PTR _P$[ebp]
+  0162e	c7 04 0a 00 00
+	00 00		 mov	 DWORD PTR [edx+ecx], 0
+  01635	c7 44 0a 04 00
+	61 be 40	 mov	 DWORD PTR [edx+ecx+4], 1086218496 ; 40be6100H
+
+; 444  :       P[i].y = ENDOFPATHF;
+
+  0163d	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01643	c1 e0 04	 shl	 eax, 4
+  01646	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  01649	c7 44 01 08 00
+	00 00 00	 mov	 DWORD PTR [ecx+eax+8], 0
+  01651	c7 44 01 0c 00
+	61 be 40	 mov	 DWORD PTR [ecx+eax+12], 1086218496 ; 40be6100H
+
+; 445  :       // Update point count
+; 446  :       Ppoints = i;
+
+  01659	8b 55 0c	 mov	 edx, DWORD PTR _Ppoints$[ebp]
+  0165c	8b 85 84 eb ff
+	ff		 mov	 eax, DWORD PTR _i$[ebp]
+  01662	89 02		 mov	 DWORD PTR [edx], eax
+$L62656:
+
+; 448  :    return fused;
+
+  01664	8b 85 2c fb ff
+	ff		 mov	 eax, DWORD PTR _fused$[ebp]
+
+; 449  : }
+
+  0166a	5e		 pop	 esi
+  0166b	8b e5		 mov	 esp, ebp
+  0166d	5d		 pop	 ebp
+  0166e	c3		 ret	 0
+?MergePolygonF@@YAHPAVFPoint@@AAHAAVSOL_PolygonF@@@Z ENDP ; MergePolygonF
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??0FPoint@@QAE@ABV0@@Z PROC NEAR			; FPoint::FPoint, COMDAT
+
+; 89   : 	FPoint(const FPoint& p) : x(p.x), y(p.y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+  00011	8b 49 04	 mov	 ecx, DWORD PTR [ecx+4]
+  00014	89 48 04	 mov	 DWORD PTR [eax+4], ecx
+  00017	8b 55 08	 mov	 edx, DWORD PTR _p$[ebp]
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b 4a 08	 mov	 ecx, DWORD PTR [edx+8]
+  00020	89 48 08	 mov	 DWORD PTR [eax+8], ecx
+  00023	8b 52 0c	 mov	 edx, DWORD PTR [edx+12]
+  00026	89 50 0c	 mov	 DWORD PTR [eax+12], edx
+  00029	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0002c	8b e5		 mov	 esp, ebp
+  0002e	5d		 pop	 ebp
+  0002f	c2 04 00	 ret	 4
+??0FPoint@@QAE@ABV0@@Z ENDP				; FPoint::FPoint
+_TEXT	ENDS
+PUBLIC	??0FPoint@@QAE@NN@Z				; FPoint::FPoint
+;	COMDAT ??GFPoint@@QBE?AV0@ABV0@@Z
+_TEXT	SEGMENT
+$T62981 = -16
+_p$ = 12
+___$ReturnUdt$ = 8
+_this$ = -20
+??GFPoint@@QBE?AV0@ABV0@@Z PROC NEAR			; FPoint::operator-, COMDAT
+
+; 336  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 14	 sub	 esp, 20			; 00000014H
+  00006	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 337  :    return FPoint(x-p.x,y-p.y);
+
+  00009	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	8b 4d 0c	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000f	dd 40 08	 fld	 QWORD PTR [eax+8]
+  00012	dc 61 08	 fsub	 QWORD PTR [ecx+8]
+  00015	83 ec 08	 sub	 esp, 8
+  00018	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0001b	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  0001e	8b 45 0c	 mov	 eax, DWORD PTR _p$[ebp]
+  00021	dd 02		 fld	 QWORD PTR [edx]
+  00023	dc 20		 fsub	 QWORD PTR [eax]
+  00025	83 ec 08	 sub	 esp, 8
+  00028	dd 1c 24	 fstp	 QWORD PTR [esp]
+  0002b	8d 4d f0	 lea	 ecx, DWORD PTR $T62981[ebp]
+  0002e	e8 00 00 00 00	 call	 ??0FPoint@@QAE@NN@Z	; FPoint::FPoint
+  00033	50		 push	 eax
+  00034	8b 4d 08	 mov	 ecx, DWORD PTR ___$ReturnUdt$[ebp]
+  00037	e8 00 00 00 00	 call	 ??0FPoint@@QAE@ABV0@@Z	; FPoint::FPoint
+  0003c	8b 45 08	 mov	 eax, DWORD PTR ___$ReturnUdt$[ebp]
+
+; 338  : }
+
+  0003f	8b e5		 mov	 esp, ebp
+  00041	5d		 pop	 ebp
+  00042	c2 08 00	 ret	 8
+??GFPoint@@QBE?AV0@ABV0@@Z ENDP				; FPoint::operator-
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT
+_x$ = 8
+_y$ = 16
+_this$ = -4
+??0FPoint@@QAE@NN@Z PROC NEAR				; FPoint::FPoint, COMDAT
+
+; 88   : 	FPoint(double x, double y) : x(x), y(y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _x$[ebp]
+  0000d	89 08		 mov	 DWORD PTR [eax], ecx
+  0000f	8b 55 0c	 mov	 edx, DWORD PTR _x$[ebp+4]
+  00012	89 50 04	 mov	 DWORD PTR [eax+4], edx
+  00015	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00018	8b 4d 10	 mov	 ecx, DWORD PTR _y$[ebp]
+  0001b	89 48 08	 mov	 DWORD PTR [eax+8], ecx
+  0001e	8b 55 14	 mov	 edx, DWORD PTR _y$[ebp+4]
+  00021	89 50 0c	 mov	 DWORD PTR [eax+12], edx
+  00024	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00027	8b e5		 mov	 esp, ebp
+  00029	5d		 pop	 ebp
+  0002a	c2 10 00	 ret	 16			; 00000010H
+??0FPoint@@QAE@NN@Z ENDP				; FPoint::FPoint
+_TEXT	ENDS
+;	COMDAT ??DFPoint@@QBENABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??DFPoint@@QBENABV0@@Z PROC NEAR			; FPoint::operator*, COMDAT
+
+; 356  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 357  :    return x*p.x+y*p.y;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	dd 00		 fld	 QWORD PTR [eax]
+  0000f	dc 09		 fmul	 QWORD PTR [ecx]
+  00011	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00014	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  00017	dd 42 08	 fld	 QWORD PTR [edx+8]
+  0001a	dc 48 08	 fmul	 QWORD PTR [eax+8]
+  0001d	de c1		 faddp	 ST(1), ST(0)
+
+; 358  : }
+
+  0001f	8b e5		 mov	 esp, ebp
+  00021	5d		 pop	 ebp
+  00022	c2 04 00	 ret	 4
+??DFPoint@@QBENABV0@@Z ENDP				; FPoint::operator*
+_TEXT	ENDS
+;	COMDAT ??TFPoint@@QBEHABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -12
+_direction$ = -8
+??TFPoint@@QBEHABV0@@Z PROC NEAR			; FPoint::operator^, COMDAT
+
+; 364  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 365  :    double direction = x*p.y - y*p.x;
+
+  00009	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  0000c	8b 4d f4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	dd 01		 fld	 QWORD PTR [ecx]
+  00011	dc 48 08	 fmul	 QWORD PTR [eax+8]
+  00014	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00017	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  0001a	dd 42 08	 fld	 QWORD PTR [edx+8]
+  0001d	dc 08		 fmul	 QWORD PTR [eax]
+  0001f	de e9		 fsubp	 ST(1), ST(0)
+  00021	dd 5d f8	 fstp	 QWORD PTR _direction$[ebp]
+
+; 366  :    if (direction < 0.0)
+
+  00024	dd 45 f8	 fld	 QWORD PTR _direction$[ebp]
+  00027	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  0002d	df e0		 fnstsw	 ax
+  0002f	f6 c4 01	 test	 ah, 1
+  00032	74 05		 je	 SHORT $L55120
+
+; 367  :       return(-1);
+
+  00034	83 c8 ff	 or	 eax, -1
+  00037	eb 19		 jmp	 SHORT $L55118
+$L55120:
+
+; 368  :    if (direction > 0.0)
+
+  00039	dd 45 f8	 fld	 QWORD PTR _direction$[ebp]
+  0003c	dc 1d 00 00 00
+	00		 fcomp	 QWORD PTR __real@8@00000000000000000000
+  00042	df e0		 fnstsw	 ax
+  00044	f6 c4 41	 test	 ah, 65			; 00000041H
+  00047	75 07		 jne	 SHORT $L55121
+
+; 369  :       return(1);
+
+  00049	b8 01 00 00 00	 mov	 eax, 1
+  0004e	eb 02		 jmp	 SHORT $L55118
+$L55121:
+
+; 370  :    return(0);
+
+  00050	33 c0		 xor	 eax, eax
+$L55118:
+
+; 371  : }
+
+  00052	8b e5		 mov	 esp, ebp
+  00054	5d		 pop	 ebp
+  00055	c2 04 00	 ret	 4
+??TFPoint@@QBEHABV0@@Z ENDP				; FPoint::operator^
+_TEXT	ENDS
+;	COMDAT ??8FPoint@@QBEHABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??8FPoint@@QBEHABV0@@Z PROC NEAR			; FPoint::operator==, COMDAT
+
+; 391  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 392  : 	return x == p.x  &&  y == p.y;
+
+  00009	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000f	dd 00		 fld	 QWORD PTR [eax]
+  00011	dc 19		 fcomp	 QWORD PTR [ecx]
+  00013	df e0		 fnstsw	 ax
+  00015	f6 c4 40	 test	 ah, 64			; 00000040H
+  00018	74 1c		 je	 SHORT $L62986
+  0001a	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0001d	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  00020	dd 42 08	 fld	 QWORD PTR [edx+8]
+  00023	dc 58 08	 fcomp	 QWORD PTR [eax+8]
+  00026	df e0		 fnstsw	 ax
+  00028	f6 c4 40	 test	 ah, 64			; 00000040H
+  0002b	74 09		 je	 SHORT $L62986
+  0002d	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+  00034	eb 07		 jmp	 SHORT $L62987
+$L62986:
+  00036	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+$L62987:
+  0003d	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 393  : }
+
+  00040	8b e5		 mov	 esp, ebp
+  00042	5d		 pop	 ebp
+  00043	c2 04 00	 ret	 4
+??8FPoint@@QBEHABV0@@Z ENDP				; FPoint::operator==
+_TEXT	ENDS
+;	COMDAT ??9FPoint@@QBEHABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??9FPoint@@QBEHABV0@@Z PROC NEAR			; FPoint::operator!=, COMDAT
+
+; 397  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 398  : 	return x != p.x  ||  y != p.y;
+
+  00009	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000f	dd 00		 fld	 QWORD PTR [eax]
+  00011	dc 19		 fcomp	 QWORD PTR [ecx]
+  00013	df e0		 fnstsw	 ax
+  00015	f6 c4 40	 test	 ah, 64			; 00000040H
+  00018	74 1c		 je	 SHORT $L62989
+  0001a	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0001d	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  00020	dd 42 08	 fld	 QWORD PTR [edx+8]
+  00023	dc 58 08	 fcomp	 QWORD PTR [eax+8]
+  00026	df e0		 fnstsw	 ax
+  00028	f6 c4 40	 test	 ah, 64			; 00000040H
+  0002b	74 09		 je	 SHORT $L62989
+  0002d	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 0
+  00034	eb 07		 jmp	 SHORT $L62990
+$L62989:
+  00036	c7 45 f8 01 00
+	00 00		 mov	 DWORD PTR -8+[ebp], 1
+$L62990:
+  0003d	8b 45 f8	 mov	 eax, DWORD PTR -8+[ebp]
+
+; 399  : }
+
+  00040	8b e5		 mov	 esp, ebp
+  00042	5d		 pop	 ebp
+  00043	c2 04 00	 ret	 4
+??9FPoint@@QBEHABV0@@Z ENDP				; FPoint::operator!=
+_TEXT	ENDS
+;	COMDAT ??0PolyPatchF@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0PolyPatchF@@QAE@XZ PROC NEAR				; PolyPatchF::PolyPatchF, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	83 c1 08	 add	 ecx, 8
+  0000d	e8 00 00 00 00	 call	 ??0FPoint@@QAE@XZ	; FPoint::FPoint
+  00012	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00015	83 c1 20	 add	 ecx, 32			; 00000020H
+  00018	e8 00 00 00 00	 call	 ??0FPoint@@QAE@XZ	; FPoint::FPoint
+  0001d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00020	8b e5		 mov	 esp, ebp
+  00022	5d		 pop	 ebp
+  00023	c3		 ret	 0
+??0PolyPatchF@@QAE@XZ ENDP				; PolyPatchF::PolyPatchF
+_TEXT	ENDS
+PUBLIC	?DistanceSquaredF@@YANAAVFPoint@@0@Z		; DistanceSquaredF
+_TEXT	SEGMENT
+_Patch$ = 8
+_theNode$ = 12
+_thePoly$ = 16
+?PatchNodeF@@YAHAAVPolyPatchF@@HPAVFPoint@@@Z PROC NEAR	; PatchNodeF
+
+; 453  : {
+
+  0166f	55		 push	 ebp
+  01670	8b ec		 mov	 ebp, esp
+  01672	83 ec 08	 sub	 esp, 8
+
+; 454  :    if (Patch.P_i < Patch.P_j)
+
+  01675	8b 45 08	 mov	 eax, DWORD PTR _Patch$[ebp]
+  01678	8b 4d 08	 mov	 ecx, DWORD PTR _Patch$[ebp]
+  0167b	8b 10		 mov	 edx, DWORD PTR [eax]
+  0167d	3b 51 18	 cmp	 edx, DWORD PTR [ecx+24]
+  01680	7d 1f		 jge	 SHORT $L62690
+
+; 455  :       if ((Patch.P_i < theNode) && (theNode <= Patch.P_j))
+
+  01682	8b 45 08	 mov	 eax, DWORD PTR _Patch$[ebp]
+  01685	8b 08		 mov	 ecx, DWORD PTR [eax]
+  01687	3b 4d 0c	 cmp	 ecx, DWORD PTR _theNode$[ebp]
+  0168a	7d 15		 jge	 SHORT $L62690
+  0168c	8b 55 08	 mov	 edx, DWORD PTR _Patch$[ebp]
+  0168f	8b 45 0c	 mov	 eax, DWORD PTR _theNode$[ebp]
+  01692	3b 42 18	 cmp	 eax, DWORD PTR [edx+24]
+  01695	7f 0a		 jg	 SHORT $L62690
+
+; 456  :          return (True);
+
+  01697	b8 01 00 00 00	 mov	 eax, 1
+  0169c	e9 86 00 00 00	 jmp	 $L62688
+$L62690:
+
+; 457  :    if (Patch.P_j < Patch.P_i)
+
+  016a1	8b 4d 08	 mov	 ecx, DWORD PTR _Patch$[ebp]
+  016a4	8b 55 08	 mov	 edx, DWORD PTR _Patch$[ebp]
+  016a7	8b 41 18	 mov	 eax, DWORD PTR [ecx+24]
+  016aa	3b 02		 cmp	 eax, DWORD PTR [edx]
+  016ac	7d 1c		 jge	 SHORT $L62692
+
+; 458  :       if ((Patch.P_i < theNode) || (theNode <= Patch.P_j))
+
+  016ae	8b 4d 08	 mov	 ecx, DWORD PTR _Patch$[ebp]
+  016b1	8b 11		 mov	 edx, DWORD PTR [ecx]
+  016b3	3b 55 0c	 cmp	 edx, DWORD PTR _theNode$[ebp]
+  016b6	7c 0b		 jl	 SHORT $L62693
+  016b8	8b 45 08	 mov	 eax, DWORD PTR _Patch$[ebp]
+  016bb	8b 4d 0c	 mov	 ecx, DWORD PTR _theNode$[ebp]
+  016be	3b 48 18	 cmp	 ecx, DWORD PTR [eax+24]
+  016c1	7f 07		 jg	 SHORT $L62692
+$L62693:
+
+; 459  :          return (True);
+
+  016c3	b8 01 00 00 00	 mov	 eax, 1
+  016c8	eb 5d		 jmp	 SHORT $L62688
+$L62692:
+
+; 460  :    if (Patch.P_i == Patch.P_j)
+
+  016ca	8b 55 08	 mov	 edx, DWORD PTR _Patch$[ebp]
+  016cd	8b 45 08	 mov	 eax, DWORD PTR _Patch$[ebp]
+  016d0	8b 0a		 mov	 ecx, DWORD PTR [edx]
+  016d2	3b 48 18	 cmp	 ecx, DWORD PTR [eax+24]
+  016d5	75 4e		 jne	 SHORT $L62695
+
+; 462  :          DistanceSquaredF(Patch.P_U,thePoly[Patch.P_i]) > 
+; 463  :          DistanceSquaredF(Patch.Q_U,thePoly[Patch.P_i])
+; 464  :          )
+
+  016d7	8b 55 08	 mov	 edx, DWORD PTR _Patch$[ebp]
+  016da	8b 02		 mov	 eax, DWORD PTR [edx]
+  016dc	c1 e0 04	 shl	 eax, 4
+  016df	8b 4d 10	 mov	 ecx, DWORD PTR _thePoly$[ebp]
+  016e2	03 c8		 add	 ecx, eax
+  016e4	51		 push	 ecx
+  016e5	8b 55 08	 mov	 edx, DWORD PTR _Patch$[ebp]
+  016e8	83 c2 08	 add	 edx, 8
+  016eb	52		 push	 edx
+  016ec	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  016f1	dd 5d f8	 fstp	 QWORD PTR -8+[ebp]
+  016f4	83 c4 08	 add	 esp, 8
+  016f7	8b 45 08	 mov	 eax, DWORD PTR _Patch$[ebp]
+  016fa	8b 08		 mov	 ecx, DWORD PTR [eax]
+  016fc	c1 e1 04	 shl	 ecx, 4
+  016ff	8b 55 10	 mov	 edx, DWORD PTR _thePoly$[ebp]
+  01702	03 d1		 add	 edx, ecx
+  01704	52		 push	 edx
+  01705	8b 45 08	 mov	 eax, DWORD PTR _Patch$[ebp]
+  01708	83 c0 20	 add	 eax, 32			; 00000020H
+  0170b	50		 push	 eax
+  0170c	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01711	83 c4 08	 add	 esp, 8
+  01714	dc 5d f8	 fcomp	 QWORD PTR -8+[ebp]
+  01717	df e0		 fnstsw	 ax
+  01719	f6 c4 01	 test	 ah, 1
+  0171c	74 07		 je	 SHORT $L62695
+
+; 465  :          return (True);
+
+  0171e	b8 01 00 00 00	 mov	 eax, 1
+  01723	eb 02		 jmp	 SHORT $L62688
+$L62695:
+
+; 466  :    return (False);
+
+  01725	33 c0		 xor	 eax, eax
+$L62688:
+
+; 467  : }
+
+  01727	8b e5		 mov	 esp, ebp
+  01729	5d		 pop	 ebp
+  0172a	c3		 ret	 0
+?PatchNodeF@@YAHAAVPolyPatchF@@HPAVFPoint@@@Z ENDP	; PatchNodeF
+_TEXT	ENDS
+;	COMDAT ?DistanceSquaredF@@YANAAVFPoint@@0@Z
+_TEXT	SEGMENT
+_P2$ = 8
+_P1$ = 12
+$T62994 = -16
+$T62995 = -32
+?DistanceSquaredF@@YANAAVFPoint@@0@Z PROC NEAR		; DistanceSquaredF, COMDAT
+
+; 31   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 20	 sub	 esp, 32			; 00000020H
+
+; 32   :    return (P2-P1)*(P2-P1);
+
+  00006	8b 45 0c	 mov	 eax, DWORD PTR _P1$[ebp]
+  00009	50		 push	 eax
+  0000a	8d 4d e0	 lea	 ecx, DWORD PTR $T62995[ebp]
+  0000d	51		 push	 ecx
+  0000e	8b 4d 08	 mov	 ecx, DWORD PTR _P2$[ebp]
+  00011	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00016	50		 push	 eax
+  00017	8b 55 0c	 mov	 edx, DWORD PTR _P1$[ebp]
+  0001a	52		 push	 edx
+  0001b	8d 45 f0	 lea	 eax, DWORD PTR $T62994[ebp]
+  0001e	50		 push	 eax
+  0001f	8b 4d 08	 mov	 ecx, DWORD PTR _P2$[ebp]
+  00022	e8 00 00 00 00	 call	 ??GFPoint@@QBE?AV0@ABV0@@Z ; FPoint::operator-
+  00027	8b c8		 mov	 ecx, eax
+  00029	e8 00 00 00 00	 call	 ??DFPoint@@QBENABV0@@Z	; FPoint::operator*
+
+; 33   : 
+; 34   : }
+
+  0002e	8b e5		 mov	 esp, ebp
+  00030	5d		 pop	 ebp
+  00031	c3		 ret	 0
+?DistanceSquaredF@@YANAAVFPoint@@0@Z ENDP		; DistanceSquaredF
+_TEXT	ENDS
+_TEXT	SEGMENT
+_A$ = 8
+_B$ = 12
+_P$ = 16
+_Api$ = -8
+_Apj$ = -16
+_Bpi$ = -4
+_Bpj$ = -12
+?DominatesF@@YAHAAVPolyPatchF@@0PAVFPoint@@@Z PROC NEAR	; DominatesF
+
+; 471  : {
+
+  0172b	55		 push	 ebp
+  0172c	8b ec		 mov	 ebp, esp
+  0172e	83 ec 50	 sub	 esp, 80			; 00000050H
+
+; 472  : 	int Api = A.P_i;
+
+  01731	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  01734	8b 08		 mov	 ecx, DWORD PTR [eax]
+  01736	89 4d f8	 mov	 DWORD PTR _Api$[ebp], ecx
+
+; 473  :    int Apj = A.P_j;
+
+  01739	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  0173c	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  0173f	89 45 f0	 mov	 DWORD PTR _Apj$[ebp], eax
+
+; 474  :    int Bpi = B.P_i;
+
+  01742	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  01745	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01747	89 55 fc	 mov	 DWORD PTR _Bpi$[ebp], edx
+
+; 475  :    int Bpj = B.P_j;
+
+  0174a	8b 45 0c	 mov	 eax, DWORD PTR _B$[ebp]
+  0174d	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  01750	89 4d f4	 mov	 DWORD PTR _Bpj$[ebp], ecx
+
+; 476  :    if((A.P_U == B.P_U) && (A.Q_U == B.Q_U))
+
+  01753	8b 55 0c	 mov	 edx, DWORD PTR _B$[ebp]
+  01756	83 c2 08	 add	 edx, 8
+  01759	52		 push	 edx
+  0175a	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  0175d	83 c1 08	 add	 ecx, 8
+  01760	e8 00 00 00 00	 call	 ??8FPoint@@QBEHABV0@@Z	; FPoint::operator==
+  01765	85 c0		 test	 eax, eax
+  01767	74 20		 je	 SHORT $L62705
+  01769	8b 45 0c	 mov	 eax, DWORD PTR _B$[ebp]
+  0176c	83 c0 20	 add	 eax, 32			; 00000020H
+  0176f	50		 push	 eax
+  01770	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  01773	83 c1 20	 add	 ecx, 32			; 00000020H
+  01776	e8 00 00 00 00	 call	 ??8FPoint@@QBEHABV0@@Z	; FPoint::operator==
+  0177b	85 c0		 test	 eax, eax
+  0177d	74 0a		 je	 SHORT $L62705
+
+; 477  :       // The same patch!
+; 478  :       return(True);
+
+  0177f	b8 01 00 00 00	 mov	 eax, 1
+  01784	e9 c7 03 00 00	 jmp	 $L62700
+$L62705:
+
+; 479  : 
+; 480  :    if(Api != Apj)
+
+  01789	8b 4d f8	 mov	 ecx, DWORD PTR _Api$[ebp]
+  0178c	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  0178f	74 74		 je	 SHORT $L62712
+
+; 483  :          ((Api<Apj) && ((Api < Bpi) && (Bpi < Apj))) ||
+; 484  :          ((Api>Apj) && ((Api < Bpi) || (Bpi < Apj))) 
+; 485  :         )
+
+  01791	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  01794	3b 55 f0	 cmp	 edx, DWORD PTR _Apj$[ebp]
+  01797	7d 10		 jge	 SHORT $L62710
+  01799	8b 45 f8	 mov	 eax, DWORD PTR _Api$[ebp]
+  0179c	3b 45 fc	 cmp	 eax, DWORD PTR _Bpi$[ebp]
+  0179f	7d 08		 jge	 SHORT $L62710
+  017a1	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  017a4	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  017a7	7c 18		 jl	 SHORT $L62711
+$L62710:
+  017a9	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  017ac	3b 55 f0	 cmp	 edx, DWORD PTR _Apj$[ebp]
+  017af	7e 1a		 jle	 SHORT $L62707
+  017b1	8b 45 f8	 mov	 eax, DWORD PTR _Api$[ebp]
+  017b4	3b 45 fc	 cmp	 eax, DWORD PTR _Bpi$[ebp]
+  017b7	7c 08		 jl	 SHORT $L62711
+  017b9	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  017bc	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  017bf	7d 0a		 jge	 SHORT $L62707
+$L62711:
+
+; 486  :          /*
+; 487  :               patch A
+; 488  :          *-----------------------------*
+; 489  :          |                             |
+; 490  :          |    patch B                  |
+; 491  :          |  *----------...             |
+; 492  :          |  |                          |
+; 493  :          |  |                          |
+; 494  :          |  |       ********           |
+; 495  :          |  |      *        *          |
+; 496  :          |  *-----*          *         |
+; 497  :          |       *            *--------*
+; 498  :          |      *              *
+; 499  :          |     *                *
+; 500  :          |     *                 * 
+; 501  :          *-----*                  *
+; 502  :                *                   *  
+; 503  :                *                  *
+; 504  :                *                 *
+; 505  :                ******************   
+; 506  : 
+; 507  :          */
+; 508  :          return(True);
+
+  017c1	b8 01 00 00 00	 mov	 eax, 1
+  017c6	e9 85 03 00 00	 jmp	 $L62700
+$L62707:
+
+; 512  :          ((Api<Apj) && ((Api < Bpj) && (Bpj < Apj))) ||
+; 513  :          ((Api>Apj) && ((Api < Bpj) || (Bpj < Apj))) 
+; 514  :         )
+
+  017cb	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  017ce	3b 55 f0	 cmp	 edx, DWORD PTR _Apj$[ebp]
+  017d1	7d 10		 jge	 SHORT $L62715
+  017d3	8b 45 f8	 mov	 eax, DWORD PTR _Api$[ebp]
+  017d6	3b 45 f4	 cmp	 eax, DWORD PTR _Bpj$[ebp]
+  017d9	7d 08		 jge	 SHORT $L62715
+  017db	8b 4d f4	 mov	 ecx, DWORD PTR _Bpj$[ebp]
+  017de	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  017e1	7c 18		 jl	 SHORT $L62716
+$L62715:
+  017e3	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  017e6	3b 55 f0	 cmp	 edx, DWORD PTR _Apj$[ebp]
+  017e9	7e 1a		 jle	 SHORT $L62712
+  017eb	8b 45 f8	 mov	 eax, DWORD PTR _Api$[ebp]
+  017ee	3b 45 f4	 cmp	 eax, DWORD PTR _Bpj$[ebp]
+  017f1	7c 08		 jl	 SHORT $L62716
+  017f3	8b 4d f4	 mov	 ecx, DWORD PTR _Bpj$[ebp]
+  017f6	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  017f9	7d 0a		 jge	 SHORT $L62712
+$L62716:
+
+; 515  :          /*
+; 516  :               patch A
+; 517  :          *-----------------------------*
+; 518  :          |                             |
+; 519  :          |    patch B                  |
+; 520  :          |  *----------*               |
+; 521  :          |             |               |
+; 522  :          |             |               |
+; 523  :          |          ********           |
+; 524  :          |         *        *          |
+; 525  :          |        *          *         |
+; 526  :          |       *            *--------*
+; 527  :          |      *              *
+; 528  :          |     *                *
+; 529  :          |     *                 * 
+; 530  :          *-----*                  *
+; 531  :                *                   *  
+; 532  :                *                  *
+; 533  :                *                 *
+; 534  :                ******************   
+; 535  : 
+; 536  :          */
+; 537  :          return(True);
+
+  017fb	b8 01 00 00 00	 mov	 eax, 1
+  01800	e9 4b 03 00 00	 jmp	 $L62700
+$L62712:
+
+; 539  :    if(Bpi != Bpj)
+
+  01805	8b 55 fc	 mov	 edx, DWORD PTR _Bpi$[ebp]
+  01808	3b 55 f4	 cmp	 edx, DWORD PTR _Bpj$[ebp]
+  0180b	74 6e		 je	 SHORT $L62723
+
+; 542  :          ((Bpi<Bpj) && ((Bpi < Api) && (Api < Bpj))) ||
+; 543  :          ((Bpi>Bpj) && ((Bpi < Api) || (Api < Bpj))) 
+; 544  :        )
+
+  0180d	8b 45 fc	 mov	 eax, DWORD PTR _Bpi$[ebp]
+  01810	3b 45 f4	 cmp	 eax, DWORD PTR _Bpj$[ebp]
+  01813	7d 10		 jge	 SHORT $L62721
+  01815	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  01818	3b 4d f8	 cmp	 ecx, DWORD PTR _Api$[ebp]
+  0181b	7d 08		 jge	 SHORT $L62721
+  0181d	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  01820	3b 55 f4	 cmp	 edx, DWORD PTR _Bpj$[ebp]
+  01823	7c 18		 jl	 SHORT $L62722
+$L62721:
+  01825	8b 45 fc	 mov	 eax, DWORD PTR _Bpi$[ebp]
+  01828	3b 45 f4	 cmp	 eax, DWORD PTR _Bpj$[ebp]
+  0182b	7e 17		 jle	 SHORT $L62718
+  0182d	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  01830	3b 4d f8	 cmp	 ecx, DWORD PTR _Api$[ebp]
+  01833	7c 08		 jl	 SHORT $L62722
+  01835	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  01838	3b 55 f4	 cmp	 edx, DWORD PTR _Bpj$[ebp]
+  0183b	7d 07		 jge	 SHORT $L62718
+$L62722:
+
+; 545  :          /*
+; 546  :               patch B
+; 547  :          *-----------------------------*
+; 548  :          |                             |
+; 549  :          |    patch A                  |
+; 550  :          |  *----------...             |
+; 551  :          |  |                          |
+; 552  :          |  |                          |
+; 553  :          |  |       ********           |
+; 554  :          |  |      *        *          |
+; 555  :          |  *-----*          *         |
+; 556  :          |       *            *--------*
+; 557  :          |      *              *
+; 558  :          |     *                *
+; 559  :          |     *                 * 
+; 560  :          *-----*                  *
+; 561  :                *                   *  
+; 562  :                *                  *
+; 563  :                *                 *
+; 564  :                ******************   
+; 565  : 
+; 566  :          */
+; 567  :          return(False);
+
+  0183d	33 c0		 xor	 eax, eax
+  0183f	e9 0c 03 00 00	 jmp	 $L62700
+$L62718:
+
+; 569  :      
+; 570  :          ((Bpi<Bpj) && ((Bpi < Apj) && (Apj < Bpj))) ||
+; 571  :          ((Bpi>Bpj) && ((Bpi < Apj) || (Apj < Bpj))) 
+; 572  :        )
+
+  01844	8b 45 fc	 mov	 eax, DWORD PTR _Bpi$[ebp]
+  01847	3b 45 f4	 cmp	 eax, DWORD PTR _Bpj$[ebp]
+  0184a	7d 10		 jge	 SHORT $L62726
+  0184c	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  0184f	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  01852	7d 08		 jge	 SHORT $L62726
+  01854	8b 55 f0	 mov	 edx, DWORD PTR _Apj$[ebp]
+  01857	3b 55 f4	 cmp	 edx, DWORD PTR _Bpj$[ebp]
+  0185a	7c 18		 jl	 SHORT $L62727
+$L62726:
+  0185c	8b 45 fc	 mov	 eax, DWORD PTR _Bpi$[ebp]
+  0185f	3b 45 f4	 cmp	 eax, DWORD PTR _Bpj$[ebp]
+  01862	7e 17		 jle	 SHORT $L62723
+  01864	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  01867	3b 4d f0	 cmp	 ecx, DWORD PTR _Apj$[ebp]
+  0186a	7c 08		 jl	 SHORT $L62727
+  0186c	8b 55 f0	 mov	 edx, DWORD PTR _Apj$[ebp]
+  0186f	3b 55 f4	 cmp	 edx, DWORD PTR _Bpj$[ebp]
+  01872	7d 07		 jge	 SHORT $L62723
+$L62727:
+
+; 573  :          /*
+; 574  :               patch B
+; 575  :          *-----------------------------*
+; 576  :          |                             |
+; 577  :          |    patch A                  |
+; 578  :          |  *----------*               |
+; 579  :          |             |               |
+; 580  :          |             |               |
+; 581  :          |          ********           |
+; 582  :          |         *        *          |
+; 583  :          |        *          *         |
+; 584  :          |       *            *--------*
+; 585  :          |      *              *
+; 586  :          |     *                *
+; 587  :          |     *                 * 
+; 588  :          *-----*                  *
+; 589  :                *                   *  
+; 590  :                *                  *
+; 591  :                *                 *
+; 592  :                ******************   
+; 593  : 
+; 594  :          */
+; 595  :          return(False);
+
+  01874	33 c0		 xor	 eax, eax
+  01876	e9 d5 02 00 00	 jmp	 $L62700
+$L62723:
+
+; 597  :    if(Api != Apj)
+
+  0187b	8b 45 f8	 mov	 eax, DWORD PTR _Api$[ebp]
+  0187e	3b 45 f0	 cmp	 eax, DWORD PTR _Apj$[ebp]
+  01881	0f 84 35 01 00
+	00		 je	 $L62738
+
+; 599  :       if(Bpi == Bpj)
+
+  01887	8b 4d fc	 mov	 ecx, DWORD PTR _Bpi$[ebp]
+  0188a	3b 4d f4	 cmp	 ecx, DWORD PTR _Bpj$[ebp]
+  0188d	0f 85 c2 00 00
+	00		 jne	 $L62735
+
+; 601  :          if(Api == Bpi)
+
+  01893	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  01896	3b 55 fc	 cmp	 edx, DWORD PTR _Bpi$[ebp]
+  01899	75 58		 jne	 SHORT $L62732
+
+; 602  :             if (DistanceSquaredF(P[A.P_i],A.P_U) < DistanceSquaredF(P[A.P_i],B.P_U))
+
+  0189b	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  0189e	83 c0 08	 add	 eax, 8
+  018a1	50		 push	 eax
+  018a2	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  018a5	8b 11		 mov	 edx, DWORD PTR [ecx]
+  018a7	c1 e2 04	 shl	 edx, 4
+  018aa	8b 45 10	 mov	 eax, DWORD PTR _P$[ebp]
+  018ad	03 c2		 add	 eax, edx
+  018af	50		 push	 eax
+  018b0	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  018b5	dd 5d e8	 fstp	 QWORD PTR -24+[ebp]
+  018b8	83 c4 08	 add	 esp, 8
+  018bb	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  018be	83 c1 08	 add	 ecx, 8
+  018c1	51		 push	 ecx
+  018c2	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  018c5	8b 02		 mov	 eax, DWORD PTR [edx]
+  018c7	c1 e0 04	 shl	 eax, 4
+  018ca	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  018cd	03 c8		 add	 ecx, eax
+  018cf	51		 push	 ecx
+  018d0	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  018d5	83 c4 08	 add	 esp, 8
+  018d8	dc 5d e8	 fcomp	 QWORD PTR -24+[ebp]
+  018db	df e0		 fnstsw	 ax
+  018dd	f6 c4 41	 test	 ah, 65			; 00000041H
+  018e0	75 0a		 jne	 SHORT $L62731
+
+; 603  :                /*
+; 604  :                  patch A
+; 605  :                *----------------*       
+; 606  :                |                |      
+; 607  :                |  ************************
+; 608  :                |  *                      *
+; 609  :                |  *                      *-------*
+; 610  :                |  *                      *       |
+; 611  :                |  *                      *       |
+; 612  :                |  *                      *---*p  |
+; 613  :                |  *                      *   |a  |
+; 614  :                |  *                      *   |t  |
+; 615  :                |  *                      *   |c  |
+; 616  :                |  *                      *   |h  |
+; 617  :                |  *                      *   |B  |
+; 618  :                |  *                      *---*   |
+; 619  :                |  *                      *       |
+; 620  :                |  *                      *       |
+; 621  :                |  *                     *        |
+; 622  :                |  *                    *         |
+; 623  :                |  *********************          |
+; 624  :                |                                 |
+; 625  :                *---------------------------------*  
+; 626  :                */
+; 627  :                return(True);
+
+  018e2	b8 01 00 00 00	 mov	 eax, 1
+  018e7	e9 64 02 00 00	 jmp	 $L62700
+$L62731:
+
+; 629  :                /*
+; 630  :                  patch A
+; 631  :                *----------------*       
+; 632  :                |                |      
+; 633  :                |  ************************
+; 634  :                |  *                      *
+; 635  :                |  *                      *              
+; 636  :                |  *                      *     
+; 637  :                |  *                      *     
+; 638  :                |  *                      *---*p
+; 639  :                |  *                      *   |a
+; 640  :                |  *                      *   |t
+; 641  :                |  *                      *   |c
+; 642  :                |  *                      *   |h
+; 643  :                |  *                      *   |B
+; 644  :                |  *                      *---*          
+; 645  :                |  *                      *              
+; 646  :                |  *                      *-------*
+; 647  :                |  *                      *       |
+; 648  :                |  *                      *       |
+; 649  :                |  *                     *        |
+; 650  :                |  *                    *         |
+; 651  :                |  *********************          |
+; 652  :                |                                 |
+; 653  :                *---------------------------------*  
+; 654  :                */
+; 655  :                return(False);
+
+  018ec	33 c0		 xor	 eax, eax
+  018ee	e9 5d 02 00 00	 jmp	 $L62700
+$L62732:
+
+; 656  :          if(Apj == Bpi)
+
+  018f3	8b 55 f0	 mov	 edx, DWORD PTR _Apj$[ebp]
+  018f6	3b 55 fc	 cmp	 edx, DWORD PTR _Bpi$[ebp]
+  018f9	75 5a		 jne	 SHORT $L62735
+
+; 657  :             if (DistanceSquaredF(P[A.P_j],A.Q_U) > DistanceSquaredF(P[A.P_j],B.P_U))
+
+  018fb	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  018fe	83 c0 20	 add	 eax, 32			; 00000020H
+  01901	50		 push	 eax
+  01902	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  01905	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  01908	c1 e2 04	 shl	 edx, 4
+  0190b	8b 45 10	 mov	 eax, DWORD PTR _P$[ebp]
+  0190e	03 c2		 add	 eax, edx
+  01910	50		 push	 eax
+  01911	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01916	dd 5d e0	 fstp	 QWORD PTR -32+[ebp]
+  01919	83 c4 08	 add	 esp, 8
+  0191c	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  0191f	83 c1 08	 add	 ecx, 8
+  01922	51		 push	 ecx
+  01923	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  01926	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  01929	c1 e0 04	 shl	 eax, 4
+  0192c	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  0192f	03 c8		 add	 ecx, eax
+  01931	51		 push	 ecx
+  01932	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01937	83 c4 08	 add	 esp, 8
+  0193a	dc 5d e0	 fcomp	 QWORD PTR -32+[ebp]
+  0193d	df e0		 fnstsw	 ax
+  0193f	f6 c4 01	 test	 ah, 1
+  01942	74 0a		 je	 SHORT $L62734
+
+; 658  :                /*
+; 659  :                  patch A
+; 660  :                *----------------*       
+; 661  :                |                |      
+; 662  :                |    patch B     |      
+; 663  :                |    *-----*     |      
+; 664  :                |    |     |     |      
+; 665  :                |    |     |     |      
+; 666  :                |  ************************
+; 667  :                |  *                      *
+; 668  :                |  *                      *
+; 669  :                |  *                      *
+; 670  :                |  *                      *---*
+; 671  :                |  *                      *   |
+; 672  :                |  *                      *   |
+; 673  :                |  *                      *   |
+; 674  :                |  *                      *   |
+; 675  :                |  *                     *    |
+; 676  :                |  *                    *     |
+; 677  :                |  *********************      |
+; 678  :                |                             |
+; 679  :                *-----------------------------*  
+; 680  :                */
+; 681  :                return(True);
+
+  01944	b8 01 00 00 00	 mov	 eax, 1
+  01949	e9 02 02 00 00	 jmp	 $L62700
+$L62734:
+
+; 683  :                /*
+; 684  :                  patch A
+; 685  :                *---------*       
+; 686  :                |         |      
+; 687  :                |         |   patch B   
+; 688  :                |         |   *-----*   
+; 689  :                |         |   |     |   
+; 690  :                |         |   |     |   
+; 691  :                |  ************************
+; 692  :                |  *                      *
+; 693  :                |  *                      *
+; 694  :                |  *                      *
+; 695  :                |  *                      *---*
+; 696  :                |  *                      *   |
+; 697  :                |  *                      *   |
+; 698  :                |  *                      *   |
+; 699  :                |  *                      *   |
+; 700  :                |  *                     *    |
+; 701  :                |  *                    *     |
+; 702  :                |  *********************      |
+; 703  :                |                             |
+; 704  :                *-----------------------------*  
+; 705  :                */
+; 706  :                return(False);
+
+  0194e	33 c0		 xor	 eax, eax
+  01950	e9 fb 01 00 00	 jmp	 $L62700
+$L62735:
+
+; 708  :       if(Api != Bpi) 
+
+  01955	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  01958	3b 55 fc	 cmp	 edx, DWORD PTR _Bpi$[ebp]
+  0195b	74 07		 je	 SHORT $L62736
+
+; 709  :          /*
+; 710  :                                         
+; 711  :               patch A                            patch B                   
+; 712  :          *-------------*                    *-------------*                
+; 713  :          |             |                    |             |                
+; 714  :          |             |                    |             |                
+; 715  :          |          ********                |          ********            
+; 716  :          |         *        *               |         *        *           
+; 717  :          |        *          *              |        *          *          
+; 718  :          |       *            *--------*    |       *            *--------*
+; 719  :          |      *              *       |p   |      *              *       |p
+; 720  :          |     *                *      |a   |     *                *      |a
+; 721  :          |     *                 *     |t   |     *                 *     |t
+; 722  :          *-----*                  *    |c   *-----*                  *    |c
+; 723  :                *                   *   |h         *                   *   |h
+; 724  :                *                  *    |B         *                  *    |A
+; 725  :                *                 *-----*          *                 *-----*
+; 726  :                ******************                 ******************   
+; 727  : 
+; 728  :          */
+; 729  :          return(False);
+
+  0195d	33 c0		 xor	 eax, eax
+  0195f	e9 ec 01 00 00	 jmp	 $L62700
+$L62736:
+
+; 730  :       if (DistanceSquaredF(P[A.P_i],A.P_U) < DistanceSquaredF(P[A.P_i],B.P_U))
+
+  01964	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  01967	83 c0 08	 add	 eax, 8
+  0196a	50		 push	 eax
+  0196b	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  0196e	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01970	c1 e2 04	 shl	 edx, 4
+  01973	8b 45 10	 mov	 eax, DWORD PTR _P$[ebp]
+  01976	03 c2		 add	 eax, edx
+  01978	50		 push	 eax
+  01979	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  0197e	dd 5d d8	 fstp	 QWORD PTR -40+[ebp]
+  01981	83 c4 08	 add	 esp, 8
+  01984	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  01987	83 c1 08	 add	 ecx, 8
+  0198a	51		 push	 ecx
+  0198b	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  0198e	8b 02		 mov	 eax, DWORD PTR [edx]
+  01990	c1 e0 04	 shl	 eax, 4
+  01993	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  01996	03 c8		 add	 ecx, eax
+  01998	51		 push	 ecx
+  01999	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  0199e	83 c4 08	 add	 esp, 8
+  019a1	dc 5d d8	 fcomp	 QWORD PTR -40+[ebp]
+  019a4	df e0		 fnstsw	 ax
+  019a6	f6 c4 41	 test	 ah, 65			; 00000041H
+  019a9	75 0a		 jne	 SHORT $L62737
+
+; 731  :          /*
+; 732  :               patch A
+; 733  :          *-----------------------------*
+; 734  :          |                             |
+; 735  :          |    patch B                  |
+; 736  :          |  *----------*               |
+; 737  :          |  |          |               |
+; 738  :          |  |          |               |
+; 739  :          |  |       ********           |
+; 740  :          |  |      *        *          |
+; 741  :          |  |     *          *         |
+; 742  :          |  |    *            *--------*
+; 743  :          |  |   *              *
+; 744  :          |  |  *                *
+; 745  :          |  *--*                 * 
+; 746  :          *-----*                  *
+; 747  :                *                   *  
+; 748  :                *                  *
+; 749  :                *                 *
+; 750  :                ******************   
+; 751  : 
+; 752  :          */
+; 753  :          return(True);
+
+  019ab	b8 01 00 00 00	 mov	 eax, 1
+  019b0	e9 9b 01 00 00	 jmp	 $L62700
+$L62737:
+
+; 755  :          /*
+; 756  :               patch B
+; 757  :          *-----------------------------*
+; 758  :          |                             |
+; 759  :          |    patch A                  |
+; 760  :          |  *----------*               |
+; 761  :          |  |          |               |
+; 762  :          |  |          |               |
+; 763  :          |  |       ********           |
+; 764  :          |  |      *        *          |
+; 765  :          |  |     *          *         |
+; 766  :          |  |    *            *--------*
+; 767  :          |  |   *              *
+; 768  :          |  |  *                *
+; 769  :          |  *--*                 * 
+; 770  :          *-----*                  *
+; 771  :                *                   *  
+; 772  :                *                  *
+; 773  :                *                 *
+; 774  :                ******************   
+; 775  : 
+; 776  :          */
+; 777  :          return(False);
+
+  019b5	33 c0		 xor	 eax, eax
+  019b7	e9 94 01 00 00	 jmp	 $L62700
+$L62738:
+
+; 779  :    if((Api == Apj) && (Api != Bpi))
+
+  019bc	8b 55 f8	 mov	 edx, DWORD PTR _Api$[ebp]
+  019bf	3b 55 f0	 cmp	 edx, DWORD PTR _Apj$[ebp]
+  019c2	75 59		 jne	 SHORT $L62740
+  019c4	8b 45 f8	 mov	 eax, DWORD PTR _Api$[ebp]
+  019c7	3b 45 fc	 cmp	 eax, DWORD PTR _Bpi$[ebp]
+  019ca	74 51		 je	 SHORT $L62740
+
+; 781  :       // if A wraps around it dominates B.
+; 782  :       if (DistanceSquaredF(P[A.P_i],A.P_U) > DistanceSquaredF(P[A.P_i],A.Q_U))
+
+  019cc	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  019cf	83 c1 08	 add	 ecx, 8
+  019d2	51		 push	 ecx
+  019d3	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  019d6	8b 02		 mov	 eax, DWORD PTR [edx]
+  019d8	c1 e0 04	 shl	 eax, 4
+  019db	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  019de	03 c8		 add	 ecx, eax
+  019e0	51		 push	 ecx
+  019e1	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  019e6	dd 5d d0	 fstp	 QWORD PTR -48+[ebp]
+  019e9	83 c4 08	 add	 esp, 8
+  019ec	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  019ef	83 c2 20	 add	 edx, 32			; 00000020H
+  019f2	52		 push	 edx
+  019f3	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  019f6	8b 08		 mov	 ecx, DWORD PTR [eax]
+  019f8	c1 e1 04	 shl	 ecx, 4
+  019fb	8b 55 10	 mov	 edx, DWORD PTR _P$[ebp]
+  019fe	03 d1		 add	 edx, ecx
+  01a00	52		 push	 edx
+  01a01	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01a06	83 c4 08	 add	 esp, 8
+  01a09	dc 5d d0	 fcomp	 QWORD PTR -48+[ebp]
+  01a0c	df e0		 fnstsw	 ax
+  01a0e	f6 c4 01	 test	 ah, 1
+  01a11	74 0a		 je	 SHORT $L62740
+
+; 783  :          /*
+; 784  :               patch A
+; 785  :          *--------------------------------*
+; 786  :          |                                |
+; 787  :          |          ********              |
+; 788  :          |         *        *             |
+; 789  :          |        *          *--------*   |
+; 790  :          |       *            *       |p  |
+; 791  :          |      *              *      |a  |
+; 792  :          |     *                *     |t  |
+; 793  :          |     *                 *    |c  |
+; 794  :          *-----*                  *   |h  |
+; 795  :                *                   *  |B  |
+; 796  :          *-----*                  *---*   |
+; 797  :          |     *                 *        |
+; 798  :          |     ******************         |
+; 799  :          |                                |
+; 800  :          *--------------------------------*
+; 801  : 
+; 802  :          */
+; 803  :          return(True);
+
+  01a13	b8 01 00 00 00	 mov	 eax, 1
+  01a18	e9 33 01 00 00	 jmp	 $L62700
+$L62740:
+
+; 805  : 
+; 806  :    // if either patches wrap around then there can not be a dominance.
+; 807  :    if (DistanceSquaredF(P[A.P_i],A.P_U) > DistanceSquaredF(P[A.P_i],A.Q_U))
+
+  01a1d	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  01a20	83 c0 08	 add	 eax, 8
+  01a23	50		 push	 eax
+  01a24	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  01a27	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01a29	c1 e2 04	 shl	 edx, 4
+  01a2c	8b 45 10	 mov	 eax, DWORD PTR _P$[ebp]
+  01a2f	03 c2		 add	 eax, edx
+  01a31	50		 push	 eax
+  01a32	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01a37	dd 5d c8	 fstp	 QWORD PTR -56+[ebp]
+  01a3a	83 c4 08	 add	 esp, 8
+  01a3d	8b 4d 08	 mov	 ecx, DWORD PTR _A$[ebp]
+  01a40	83 c1 20	 add	 ecx, 32			; 00000020H
+  01a43	51		 push	 ecx
+  01a44	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  01a47	8b 02		 mov	 eax, DWORD PTR [edx]
+  01a49	c1 e0 04	 shl	 eax, 4
+  01a4c	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  01a4f	03 c8		 add	 ecx, eax
+  01a51	51		 push	 ecx
+  01a52	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01a57	83 c4 08	 add	 esp, 8
+  01a5a	dc 5d c8	 fcomp	 QWORD PTR -56+[ebp]
+  01a5d	df e0		 fnstsw	 ax
+  01a5f	f6 c4 01	 test	 ah, 1
+  01a62	74 07		 je	 SHORT $L62741
+
+; 808  :       /*
+; 809  :            patch A
+; 810  :       *-----------------------------*
+; 811  :       |                             |
+; 812  :       |          ********           |
+; 813  :       |         *        *          |
+; 814  :       |        *          *         |
+; 815  :       |       *            *        |
+; 816  :       |      *              *       |
+; 817  :       |     *                *      |
+; 818  :       |     *                 *     |
+; 819  :       *-----*                  *    |
+; 820  :             *                   *   |
+; 821  :       *-----*                  *    |
+; 822  :       |     *                 *     |
+; 823  :       |     ******************      |
+; 824  :       |                             |
+; 825  :       *-----------------------------*
+; 826  : 
+; 827  :       */
+; 828  :       return(False);
+
+  01a64	33 c0		 xor	 eax, eax
+  01a66	e9 e5 00 00 00	 jmp	 $L62700
+$L62741:
+
+; 829  :    if (DistanceSquaredF(P[B.P_i],B.P_U) > DistanceSquaredF(P[B.P_i],B.Q_U))
+
+  01a6b	8b 55 0c	 mov	 edx, DWORD PTR _B$[ebp]
+  01a6e	83 c2 08	 add	 edx, 8
+  01a71	52		 push	 edx
+  01a72	8b 45 0c	 mov	 eax, DWORD PTR _B$[ebp]
+  01a75	8b 08		 mov	 ecx, DWORD PTR [eax]
+  01a77	c1 e1 04	 shl	 ecx, 4
+  01a7a	8b 55 10	 mov	 edx, DWORD PTR _P$[ebp]
+  01a7d	03 d1		 add	 edx, ecx
+  01a7f	52		 push	 edx
+  01a80	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01a85	dd 5d c0	 fstp	 QWORD PTR -64+[ebp]
+  01a88	83 c4 08	 add	 esp, 8
+  01a8b	8b 45 0c	 mov	 eax, DWORD PTR _B$[ebp]
+  01a8e	83 c0 20	 add	 eax, 32			; 00000020H
+  01a91	50		 push	 eax
+  01a92	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  01a95	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01a97	c1 e2 04	 shl	 edx, 4
+  01a9a	8b 45 10	 mov	 eax, DWORD PTR _P$[ebp]
+  01a9d	03 c2		 add	 eax, edx
+  01a9f	50		 push	 eax
+  01aa0	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01aa5	83 c4 08	 add	 esp, 8
+  01aa8	dc 5d c0	 fcomp	 QWORD PTR -64+[ebp]
+  01aab	df e0		 fnstsw	 ax
+  01aad	f6 c4 01	 test	 ah, 1
+  01ab0	74 07		 je	 SHORT $L62742
+
+; 830  :       /*
+; 831  :            patch B
+; 832  :       *-----------------------------*
+; 833  :       |                             |
+; 834  :       |          ********           |
+; 835  :       |         *        *          |
+; 836  :       |        *          *         |
+; 837  :       |       *            *        |
+; 838  :       |      *              *       |
+; 839  :       |     *                *      |
+; 840  :       |     *                 *     |
+; 841  :       *-----*                  *    |
+; 842  :             *                   *   |
+; 843  :       *-----*                  *    |
+; 844  :       |     *                 *     |
+; 845  :       |     ******************      |
+; 846  :       |                             |
+; 847  :       *-----------------------------*
+; 848  : 
+; 849  :       */
+; 850  :       return(False);
+
+  01ab2	33 c0		 xor	 eax, eax
+  01ab4	e9 97 00 00 00	 jmp	 $L62700
+$L62742:
+
+; 851  : 
+; 852  :    if (DistanceSquaredF(P[B.P_i],B.P_U) > DistanceSquaredF(P[B.P_i],A.P_U))
+
+  01ab9	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  01abc	83 c1 08	 add	 ecx, 8
+  01abf	51		 push	 ecx
+  01ac0	8b 55 0c	 mov	 edx, DWORD PTR _B$[ebp]
+  01ac3	8b 02		 mov	 eax, DWORD PTR [edx]
+  01ac5	c1 e0 04	 shl	 eax, 4
+  01ac8	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  01acb	03 c8		 add	 ecx, eax
+  01acd	51		 push	 ecx
+  01ace	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01ad3	dd 5d b8	 fstp	 QWORD PTR -72+[ebp]
+  01ad6	83 c4 08	 add	 esp, 8
+  01ad9	8b 55 08	 mov	 edx, DWORD PTR _A$[ebp]
+  01adc	83 c2 08	 add	 edx, 8
+  01adf	52		 push	 edx
+  01ae0	8b 45 0c	 mov	 eax, DWORD PTR _B$[ebp]
+  01ae3	8b 08		 mov	 ecx, DWORD PTR [eax]
+  01ae5	c1 e1 04	 shl	 ecx, 4
+  01ae8	8b 55 10	 mov	 edx, DWORD PTR _P$[ebp]
+  01aeb	03 d1		 add	 edx, ecx
+  01aed	52		 push	 edx
+  01aee	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01af3	83 c4 08	 add	 esp, 8
+  01af6	dc 5d b8	 fcomp	 QWORD PTR -72+[ebp]
+  01af9	df e0		 fnstsw	 ax
+  01afb	f6 c4 01	 test	 ah, 1
+  01afe	74 4e		 je	 SHORT $L62744
+
+; 853  :       if (DistanceSquaredF(P[B.P_i],A.Q_U) > DistanceSquaredF(P[B.P_i],B.P_U))
+
+  01b00	8b 45 08	 mov	 eax, DWORD PTR _A$[ebp]
+  01b03	83 c0 20	 add	 eax, 32			; 00000020H
+  01b06	50		 push	 eax
+  01b07	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  01b0a	8b 11		 mov	 edx, DWORD PTR [ecx]
+  01b0c	c1 e2 04	 shl	 edx, 4
+  01b0f	8b 45 10	 mov	 eax, DWORD PTR _P$[ebp]
+  01b12	03 c2		 add	 eax, edx
+  01b14	50		 push	 eax
+  01b15	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01b1a	dd 5d b0	 fstp	 QWORD PTR -80+[ebp]
+  01b1d	83 c4 08	 add	 esp, 8
+  01b20	8b 4d 0c	 mov	 ecx, DWORD PTR _B$[ebp]
+  01b23	83 c1 08	 add	 ecx, 8
+  01b26	51		 push	 ecx
+  01b27	8b 55 0c	 mov	 edx, DWORD PTR _B$[ebp]
+  01b2a	8b 02		 mov	 eax, DWORD PTR [edx]
+  01b2c	c1 e0 04	 shl	 eax, 4
+  01b2f	8b 4d 10	 mov	 ecx, DWORD PTR _P$[ebp]
+  01b32	03 c8		 add	 ecx, eax
+  01b34	51		 push	 ecx
+  01b35	e8 00 00 00 00	 call	 ?DistanceSquaredF@@YANAAVFPoint@@0@Z ; DistanceSquaredF
+  01b3a	83 c4 08	 add	 esp, 8
+  01b3d	dc 5d b0	 fcomp	 QWORD PTR -80+[ebp]
+  01b40	df e0		 fnstsw	 ax
+  01b42	f6 c4 01	 test	 ah, 1
+  01b45	74 07		 je	 SHORT $L62744
+
+; 854  :          /*
+; 855  :                                          
+; 856  :                         *************         
+; 857  :                         *            *        
+; 858  :            *------------*             *       
+; 859  :          p |            *              *      
+; 860  :          a |            *               *     
+; 861  :          t |            *                *    
+; 862  :          c |   patchB   *                 *   
+; 863  :          h |  *---------*                  *  
+; 864  :          A |  |         *                   * 
+; 865  :            |  *---------*                  *  
+; 866  :            *------------*                 *   
+; 867  :                         ******************    
+; 868  :                                           
+; 869  : 
+; 870  :          */
+; 871  :          return(True);
+
+  01b47	b8 01 00 00 00	 mov	 eax, 1
+  01b4c	eb 02		 jmp	 SHORT $L62700
+$L62744:
+
+; 872  :    /*
+; 873  :                                                                 
+; 874  :                   ********                          ********         
+; 875  :                   *       *                         *       *        
+; 876  :      *------------*        *           *------------*        *       
+; 877  :    p |            *         *          |            *         *      
+; 878  :    a |            *          *         |            *          *     
+; 879  :    t |            *           *        *------------*           *    
+; 880  :    c |   patchB   *            *                    *            *   
+; 881  :    h |  *---------*             *      *------------*             *  
+; 882  :    A |  |         *              *     |            *              * 
+; 883  :      |  *---------*             *      |            *             *  
+; 884  :      *------------*            *       *------------*            *   
+; 885  :                   *************                     *************    
+; 886  :                                                                  
+; 887  : 
+; 888  :    */
+; 889  :    return(False);
+
+  01b4e	33 c0		 xor	 eax, eax
+$L62700:
+
+; 890  : }
+
+  01b50	8b e5		 mov	 esp, ebp
+  01b52	5d		 pop	 ebp
+  01b53	c3		 ret	 0
+?DominatesF@@YAHAAVPolyPatchF@@0PAVFPoint@@@Z ENDP	; DominatesF
+_TEXT	ENDS
+END

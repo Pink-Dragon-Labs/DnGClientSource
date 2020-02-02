@@ -1,0 +1,2155 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Math.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ?SinMult@@YAHHJ@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CosMult@@YAHHJ@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SinDiv@@YAHHJ@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CosDiv@@YAHHJ@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?mathMgr@@3UMathMgr@@A				; mathMgr
+PUBLIC	?bEncrypt@@3KA					; bEncrypt
+PUBLIC	?g_nSendSeed@@3KA				; g_nSendSeed
+PUBLIC	?g_nReceiveSeed@@3KA				; g_nReceiveSeed
+PUBLIC	?firstGuess@@3PAGA				; firstGuess
+_BSS	SEGMENT
+?mathMgr@@3UMathMgr@@A DB 01H DUP (?)			; mathMgr
+	ALIGN	4
+
+?bEncrypt@@3KA DD 01H DUP (?)				; bEncrypt
+?g_nSendSeed@@3KA DD 01H DUP (?)			; g_nSendSeed
+?g_nReceiveSeed@@3KA DD 01H DUP (?)			; g_nReceiveSeed
+_BSS	ENDS
+_DATA	SEGMENT
+_sinArray DD	00H
+	DD	0368H
+	DD	06c8H
+	DD	0a1cH
+	DD	0d5cH
+	DD	01082H
+	DD	01388H
+	DD	01668H
+	DD	0191cH
+	DD	01b9fH
+	DD	01decH
+	DD	02000H
+	DD	021d4H
+	DD	02367H
+	DD	024b5H
+	DD	025bbH
+	DD	02678H
+	DD	026eaH
+	DD	02710H
+_atanArray DD	036bH
+	DD	06e3H
+	DD	0a77H
+	DD	0e38H
+	DD	01237H
+	DD	0168eH
+	DD	01b5aH
+	DD	020c7H
+	DD	02710H
+?firstGuess@@3PAGA DW 01H				; firstGuess
+	DW	02H
+	DW	03H
+	DW	04H
+	DW	05H
+	DW	07H
+	DW	0aH
+	DW	0eH
+	DW	014H
+	DW	01cH
+	DW	027H
+	DW	037H
+	DW	04eH
+	DW	06fH
+	DW	09dH
+	DW	0deH
+	DW	0139H
+	DW	01bbH
+	DW	0273H
+	DW	0376H
+	DW	04e6H
+	DW	06edH
+	DW	09ccH
+	DW	0ddbH
+	DW	01398H
+	DW	01bb6H
+	DW	02731H
+	DW	0376cH
+	DW	04e62H
+	DW	06ed9H
+	DW	09cc4H
+	DW	0ffffH
+_DATA	ENDS
+PUBLIC	?sqrt@@YAIK@Z					; sqrt
+_TEXT	SEGMENT
+_n$ = 8
+_guess$ = -12
+_hold$ = -4
+_i$ = -8
+?sqrt@@YAIK@Z PROC NEAR					; sqrt
+
+; 82   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+
+; 83   : 
+; 84   :    uint guess, hold;
+; 85   :    int i;
+; 86   : 
+; 87   :    if (!n)
+
+  00006	83 7d 08 00	 cmp	 DWORD PTR _n$[ebp], 0
+  0000a	75 04		 jne	 SHORT $L58773
+
+; 88   :       return 0;
+
+  0000c	33 c0		 xor	 eax, eax
+  0000e	eb 69		 jmp	 SHORT $L58769
+$L58773:
+
+; 89   : 
+; 90   :    hold = n;
+
+  00010	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  00013	89 45 fc	 mov	 DWORD PTR _hold$[ebp], eax
+
+; 91   : 
+; 92   :    for(i = 0; i < 32; i++)
+
+  00016	c7 45 f8 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  0001d	eb 09		 jmp	 SHORT $L58774
+$L58775:
+  0001f	8b 4d f8	 mov	 ecx, DWORD PTR _i$[ebp]
+  00022	83 c1 01	 add	 ecx, 1
+  00025	89 4d f8	 mov	 DWORD PTR _i$[ebp], ecx
+$L58774:
+  00028	83 7d f8 20	 cmp	 DWORD PTR _i$[ebp], 32	; 00000020H
+  0002c	7d 12		 jge	 SHORT $L58776
+
+; 93   :       if(!(n = n >> 1))
+
+  0002e	8b 55 08	 mov	 edx, DWORD PTR _n$[ebp]
+  00031	d1 ea		 shr	 edx, 1
+  00033	89 55 08	 mov	 DWORD PTR _n$[ebp], edx
+  00036	83 7d 08 00	 cmp	 DWORD PTR _n$[ebp], 0
+  0003a	75 02		 jne	 SHORT $L58777
+
+; 94   :          break;
+
+  0003c	eb 02		 jmp	 SHORT $L58776
+$L58777:
+
+; 95   : 
+; 96   :    n = hold;
+
+  0003e	eb df		 jmp	 SHORT $L58775
+$L58776:
+  00040	8b 45 fc	 mov	 eax, DWORD PTR _hold$[ebp]
+  00043	89 45 08	 mov	 DWORD PTR _n$[ebp], eax
+
+; 97   : 
+; 98   :    guess = firstGuess[i];
+
+  00046	8b 4d f8	 mov	 ecx, DWORD PTR _i$[ebp]
+  00049	33 d2		 xor	 edx, edx
+  0004b	66 8b 14 4d 00
+	00 00 00	 mov	 dx, WORD PTR ?firstGuess@@3PAGA[ecx*2]
+  00053	89 55 f4	 mov	 DWORD PTR _guess$[ebp], edx
+
+; 99   :    guess = (guess + n/guess)/2;
+
+  00056	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  00059	33 d2		 xor	 edx, edx
+  0005b	f7 75 f4	 div	 DWORD PTR _guess$[ebp]
+  0005e	8b 4d f4	 mov	 ecx, DWORD PTR _guess$[ebp]
+  00061	03 c8		 add	 ecx, eax
+  00063	d1 e9		 shr	 ecx, 1
+  00065	89 4d f4	 mov	 DWORD PTR _guess$[ebp], ecx
+
+; 100  :    return (guess + n/guess)/2;
+
+  00068	8b 45 08	 mov	 eax, DWORD PTR _n$[ebp]
+  0006b	33 d2		 xor	 edx, edx
+  0006d	f7 75 f4	 div	 DWORD PTR _guess$[ebp]
+  00070	8b 55 f4	 mov	 edx, DWORD PTR _guess$[ebp]
+  00073	03 d0		 add	 edx, eax
+  00075	d1 ea		 shr	 edx, 1
+  00077	8b c2		 mov	 eax, edx
+$L58769:
+
+; 101  : }
+
+  00079	8b e5		 mov	 esp, ebp
+  0007b	5d		 pop	 ebp
+  0007c	c3		 ret	 0
+?sqrt@@YAIK@Z ENDP					; sqrt
+_TEXT	ENDS
+PUBLIC	?LCGRandom@@YAKXZ				; LCGRandom
+EXTRN	__imp__time:NEAR
+_BSS	SEGMENT
+_lcgSeed DD	01H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+?LCGRandom@@YAKXZ PROC NEAR				; LCGRandom
+
+; 106  : {
+
+  0007d	55		 push	 ebp
+  0007e	8b ec		 mov	 ebp, esp
+$L58781:
+
+; 107  :    while(!lcgSeed)
+
+  00080	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR _lcgSeed, 0
+  00087	75 10		 jne	 SHORT $L58782
+
+; 108  :       time((time_t*) &lcgSeed);
+
+  00089	68 00 00 00 00	 push	 OFFSET FLAT:_lcgSeed
+  0008e	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__time
+  00094	83 c4 04	 add	 esp, 4
+  00097	eb e7		 jmp	 SHORT $L58781
+$L58782:
+
+; 109  : 
+; 110  :    return(lcgSeed = (lcgSeed * Generator + Increment));
+
+  00099	a1 00 00 00 00	 mov	 eax, DWORD PTR _lcgSeed
+  0009e	69 c0 0d 66 19
+	00		 imul	 eax, 1664525		; 0019660dH
+  000a4	05 5f f3 6e 3c	 add	 eax, 1013904223		; 3c6ef35fH
+  000a9	a3 00 00 00 00	 mov	 DWORD PTR _lcgSeed, eax
+  000ae	a1 00 00 00 00	 mov	 eax, DWORD PTR _lcgSeed
+
+; 111  : }
+
+  000b3	5d		 pop	 ebp
+  000b4	c3		 ret	 0
+?LCGRandom@@YAKXZ ENDP					; LCGRandom
+_TEXT	ENDS
+PUBLIC	?LCGRandomA@@YAKXZ				; LCGRandomA
+_TEXT	SEGMENT
+?LCGRandomA@@YAKXZ PROC NEAR				; LCGRandomA
+
+; 116  : {
+
+  000b5	55		 push	 ebp
+  000b6	8b ec		 mov	 ebp, esp
+
+; 117  :    return ( g_nSendSeed = (g_nSendSeed * Generator + Increment));
+
+  000b8	a1 00 00 00 00	 mov	 eax, DWORD PTR ?g_nSendSeed@@3KA ; g_nSendSeed
+  000bd	69 c0 0d 66 19
+	00		 imul	 eax, 1664525		; 0019660dH
+  000c3	05 5f f3 6e 3c	 add	 eax, 1013904223		; 3c6ef35fH
+  000c8	a3 00 00 00 00	 mov	 DWORD PTR ?g_nSendSeed@@3KA, eax ; g_nSendSeed
+  000cd	a1 00 00 00 00	 mov	 eax, DWORD PTR ?g_nSendSeed@@3KA ; g_nSendSeed
+
+; 118  : }
+
+  000d2	5d		 pop	 ebp
+  000d3	c3		 ret	 0
+?LCGRandomA@@YAKXZ ENDP					; LCGRandomA
+_TEXT	ENDS
+PUBLIC	?LCGRandomB@@YAKXZ				; LCGRandomB
+_TEXT	SEGMENT
+?LCGRandomB@@YAKXZ PROC NEAR				; LCGRandomB
+
+; 123  : {
+
+  000d4	55		 push	 ebp
+  000d5	8b ec		 mov	 ebp, esp
+
+; 124  :    return ( g_nReceiveSeed = (g_nReceiveSeed * Generator + Increment));
+
+  000d7	a1 00 00 00 00	 mov	 eax, DWORD PTR ?g_nReceiveSeed@@3KA ; g_nReceiveSeed
+  000dc	69 c0 0d 66 19
+	00		 imul	 eax, 1664525		; 0019660dH
+  000e2	05 5f f3 6e 3c	 add	 eax, 1013904223		; 3c6ef35fH
+  000e7	a3 00 00 00 00	 mov	 DWORD PTR ?g_nReceiveSeed@@3KA, eax ; g_nReceiveSeed
+  000ec	a1 00 00 00 00	 mov	 eax, DWORD PTR ?g_nReceiveSeed@@3KA ; g_nReceiveSeed
+
+; 125  : }
+
+  000f1	5d		 pop	 ebp
+  000f2	c3		 ret	 0
+?LCGRandomB@@YAKXZ ENDP					; LCGRandomB
+_TEXT	ENDS
+PUBLIC	?KAbs@@YAXPAF@Z					; KAbs
+EXTRN	?pm@@3VPMachine@@A:BYTE				; pm
+_TEXT	SEGMENT
+_args$ = 8
+?KAbs@@YAXPAF@Z PROC NEAR				; KAbs
+
+; 129  : {
+
+  000f3	55		 push	 ebp
+  000f4	8b ec		 mov	 ebp, esp
+  000f6	51		 push	 ecx
+
+; 130  : 	pm.acc = Abs(arg(1));
+
+  000f7	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  000fa	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  000fe	85 c9		 test	 ecx, ecx
+  00100	7d 0e		 jge	 SHORT $L59050
+  00102	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00105	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  00109	f7 d8		 neg	 eax
+  0010b	89 45 fc	 mov	 DWORD PTR -4+[ebp], eax
+  0010e	eb 0a		 jmp	 SHORT $L59051
+$L59050:
+  00110	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00113	0f bf 51 02	 movsx	 edx, WORD PTR [ecx+2]
+  00117	89 55 fc	 mov	 DWORD PTR -4+[ebp], edx
+$L59051:
+  0011a	8b 45 fc	 mov	 eax, DWORD PTR -4+[ebp]
+  0011d	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 131  : }
+
+  00122	8b e5		 mov	 esp, ebp
+  00124	5d		 pop	 ebp
+  00125	c3		 ret	 0
+?KAbs@@YAXPAF@Z ENDP					; KAbs
+_TEXT	ENDS
+PUBLIC	?KSqrt@@YAXPAF@Z				; KSqrt
+_TEXT	SEGMENT
+_args$ = 8
+?KSqrt@@YAXPAF@Z PROC NEAR				; KSqrt
+
+; 135  : {
+
+  00126	55		 push	 ebp
+  00127	8b ec		 mov	 ebp, esp
+  00129	51		 push	 ecx
+
+; 136  : 	pm.acc = (Acc) sqrt(Abs(arg(1)));
+
+  0012a	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0012d	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00131	85 c9		 test	 ecx, ecx
+  00133	7d 0e		 jge	 SHORT $L59053
+  00135	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00138	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  0013c	f7 d8		 neg	 eax
+  0013e	89 45 fc	 mov	 DWORD PTR -4+[ebp], eax
+  00141	eb 0a		 jmp	 SHORT $L59054
+$L59053:
+  00143	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00146	0f bf 51 02	 movsx	 edx, WORD PTR [ecx+2]
+  0014a	89 55 fc	 mov	 DWORD PTR -4+[ebp], edx
+$L59054:
+  0014d	8b 45 fc	 mov	 eax, DWORD PTR -4+[ebp]
+  00150	50		 push	 eax
+  00151	e8 00 00 00 00	 call	 ?sqrt@@YAIK@Z		; sqrt
+  00156	83 c4 04	 add	 esp, 4
+  00159	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 137  : }
+
+  0015e	8b e5		 mov	 esp, ebp
+  00160	5d		 pop	 ebp
+  00161	c3		 ret	 0
+?KSqrt@@YAXPAF@Z ENDP					; KSqrt
+_TEXT	ENDS
+PUBLIC	?KMulDiv@@YAXPAF@Z				; KMulDiv
+EXTRN	?Alert@MsgMgr@@QAAHPADZZ:NEAR			; MsgMgr::Alert
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+_DATA	SEGMENT
+$SG58805 DB	'Divide by zero', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_args$ = 8
+_a1$ = -8
+_a2$ = -12
+_a3$ = -16
+_result$ = -4
+?KMulDiv@@YAXPAF@Z PROC NEAR				; KMulDiv
+
+; 141  : {
+
+  00162	55		 push	 ebp
+  00163	8b ec		 mov	 ebp, esp
+  00165	83 ec 20	 sub	 esp, 32			; 00000020H
+
+; 142  : 	// returns (arg1*arg2)/arg3 computed in 32 bit precision and rounded
+; 143  : 
+; 144  : 	int a1 = (int) arg(1);
+
+  00168	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0016b	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  0016f	89 4d f8	 mov	 DWORD PTR _a1$[ebp], ecx
+
+; 145  : 	int a2 = (int) arg(2);
+
+  00172	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00175	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  00179	89 45 f4	 mov	 DWORD PTR _a2$[ebp], eax
+
+; 146  : 	int a3 = (int) arg(3);
+
+  0017c	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  0017f	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  00183	89 55 f0	 mov	 DWORD PTR _a3$[ebp], edx
+
+; 147  : 
+; 148  : 	if (a3 == 0) {
+
+  00186	83 7d f0 00	 cmp	 DWORD PTR _a3$[ebp], 0
+  0018a	75 22		 jne	 SHORT $L58804
+
+; 149  : 		msgMgr->Alert("Divide by zero");
+
+  0018c	68 00 00 00 00	 push	 OFFSET FLAT:$SG58805
+  00191	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00196	50		 push	 eax
+  00197	e8 00 00 00 00	 call	 ?Alert@MsgMgr@@QAAHPADZZ ; MsgMgr::Alert
+  0019c	83 c4 08	 add	 esp, 8
+
+; 150  : 		pm.acc = 0;
+
+  0019f	c7 05 04 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, 0
+
+; 151  : 		return;
+
+  001a9	e9 a2 00 00 00	 jmp	 $L58797
+$L58804:
+
+; 153  : 
+; 154  : 	int result = (Abs(a1*a2) + Abs(a3)/2)/Abs(a3);
+
+  001ae	8b 4d f8	 mov	 ecx, DWORD PTR _a1$[ebp]
+  001b1	0f af 4d f4	 imul	 ecx, DWORD PTR _a2$[ebp]
+  001b5	85 c9		 test	 ecx, ecx
+  001b7	7d 0e		 jge	 SHORT $L59056
+  001b9	8b 55 f8	 mov	 edx, DWORD PTR _a1$[ebp]
+  001bc	0f af 55 f4	 imul	 edx, DWORD PTR _a2$[ebp]
+  001c0	f7 da		 neg	 edx
+  001c2	89 55 ec	 mov	 DWORD PTR -20+[ebp], edx
+  001c5	eb 0a		 jmp	 SHORT $L59057
+$L59056:
+  001c7	8b 45 f8	 mov	 eax, DWORD PTR _a1$[ebp]
+  001ca	0f af 45 f4	 imul	 eax, DWORD PTR _a2$[ebp]
+  001ce	89 45 ec	 mov	 DWORD PTR -20+[ebp], eax
+$L59057:
+  001d1	83 7d f0 00	 cmp	 DWORD PTR _a3$[ebp], 0
+  001d5	7d 0a		 jge	 SHORT $L59058
+  001d7	8b 4d f0	 mov	 ecx, DWORD PTR _a3$[ebp]
+  001da	f7 d9		 neg	 ecx
+  001dc	89 4d e8	 mov	 DWORD PTR -24+[ebp], ecx
+  001df	eb 06		 jmp	 SHORT $L59059
+$L59058:
+  001e1	8b 55 f0	 mov	 edx, DWORD PTR _a3$[ebp]
+  001e4	89 55 e8	 mov	 DWORD PTR -24+[ebp], edx
+$L59059:
+  001e7	83 7d f0 00	 cmp	 DWORD PTR _a3$[ebp], 0
+  001eb	7d 0a		 jge	 SHORT $L59060
+  001ed	8b 45 f0	 mov	 eax, DWORD PTR _a3$[ebp]
+  001f0	f7 d8		 neg	 eax
+  001f2	89 45 e4	 mov	 DWORD PTR -28+[ebp], eax
+  001f5	eb 06		 jmp	 SHORT $L59061
+$L59060:
+  001f7	8b 4d f0	 mov	 ecx, DWORD PTR _a3$[ebp]
+  001fa	89 4d e4	 mov	 DWORD PTR -28+[ebp], ecx
+$L59061:
+  001fd	8b 45 e8	 mov	 eax, DWORD PTR -24+[ebp]
+  00200	99		 cdq
+  00201	2b c2		 sub	 eax, edx
+  00203	d1 f8		 sar	 eax, 1
+  00205	8b 55 ec	 mov	 edx, DWORD PTR -20+[ebp]
+  00208	03 c2		 add	 eax, edx
+  0020a	99		 cdq
+  0020b	f7 7d e4	 idiv	 DWORD PTR -28+[ebp]
+  0020e	89 45 fc	 mov	 DWORD PTR _result$[ebp], eax
+
+; 155  : 	if (a1 && ((a1/Abs(a1))*a2*a3 < 0))
+
+  00211	83 7d f8 00	 cmp	 DWORD PTR _a1$[ebp], 0
+  00215	74 31		 je	 SHORT $L58807
+  00217	83 7d f8 00	 cmp	 DWORD PTR _a1$[ebp], 0
+  0021b	7d 0a		 jge	 SHORT $L59062
+  0021d	8b 45 f8	 mov	 eax, DWORD PTR _a1$[ebp]
+  00220	f7 d8		 neg	 eax
+  00222	89 45 e0	 mov	 DWORD PTR -32+[ebp], eax
+  00225	eb 06		 jmp	 SHORT $L59063
+$L59062:
+  00227	8b 4d f8	 mov	 ecx, DWORD PTR _a1$[ebp]
+  0022a	89 4d e0	 mov	 DWORD PTR -32+[ebp], ecx
+$L59063:
+  0022d	8b 45 f8	 mov	 eax, DWORD PTR _a1$[ebp]
+  00230	99		 cdq
+  00231	f7 7d e0	 idiv	 DWORD PTR -32+[ebp]
+  00234	0f af 45 f4	 imul	 eax, DWORD PTR _a2$[ebp]
+  00238	0f af 45 f0	 imul	 eax, DWORD PTR _a3$[ebp]
+  0023c	85 c0		 test	 eax, eax
+  0023e	7d 08		 jge	 SHORT $L58807
+
+; 156  : 		result = -result;
+
+  00240	8b 55 fc	 mov	 edx, DWORD PTR _result$[ebp]
+  00243	f7 da		 neg	 edx
+  00245	89 55 fc	 mov	 DWORD PTR _result$[ebp], edx
+$L58807:
+
+; 157  : 
+; 158  : 	pm.acc = (Acc) result;
+
+  00248	8b 45 fc	 mov	 eax, DWORD PTR _result$[ebp]
+  0024b	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L58797:
+
+; 159  : }
+
+  00250	8b e5		 mov	 esp, ebp
+  00252	5d		 pop	 ebp
+  00253	c3		 ret	 0
+?KMulDiv@@YAXPAF@Z ENDP					; KMulDiv
+_TEXT	ENDS
+PUBLIC	??0SOL_Point@@QAE@XZ				; SOL_Point::SOL_Point
+PUBLIC	?KGetAngle@@YAXPAF@Z				; KGetAngle
+PUBLIC	?RPtToAngle@@YAHPAVSOL_Point@@0@Z		; RPtToAngle
+_TEXT	SEGMENT
+_args$ = 8
+_sp$ = -8
+_dp$ = -16
+?KGetAngle@@YAXPAF@Z PROC NEAR				; KGetAngle
+
+; 163  : {
+
+  00254	55		 push	 ebp
+  00255	8b ec		 mov	 ebp, esp
+  00257	83 ec 10	 sub	 esp, 16			; 00000010H
+
+; 164  : 	SOL_Point	sp;
+
+  0025a	8d 4d f8	 lea	 ecx, DWORD PTR _sp$[ebp]
+  0025d	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 165  : 	SOL_Point	dp;
+
+  00262	8d 4d f0	 lea	 ecx, DWORD PTR _dp$[ebp]
+  00265	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 166  : 
+; 167  : 	sp.x = arg(1);
+
+  0026a	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0026d	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00271	89 4d f8	 mov	 DWORD PTR _sp$[ebp], ecx
+
+; 168  : 	sp.y = arg(2);
+
+  00274	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00277	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  0027b	89 45 fc	 mov	 DWORD PTR _sp$[ebp+4], eax
+
+; 169  : 	dp.x = arg(3);
+
+  0027e	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00281	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  00285	89 55 f0	 mov	 DWORD PTR _dp$[ebp], edx
+
+; 170  : 	dp.y = arg(4);
+
+  00288	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0028b	0f bf 48 08	 movsx	 ecx, WORD PTR [eax+8]
+  0028f	89 4d f4	 mov	 DWORD PTR _dp$[ebp+4], ecx
+
+; 171  : 	pm.acc = (Acc) RPtToAngle(&sp, &dp);
+
+  00292	8d 55 f0	 lea	 edx, DWORD PTR _dp$[ebp]
+  00295	52		 push	 edx
+  00296	8d 45 f8	 lea	 eax, DWORD PTR _sp$[ebp]
+  00299	50		 push	 eax
+  0029a	e8 00 00 00 00	 call	 ?RPtToAngle@@YAHPAVSOL_Point@@0@Z ; RPtToAngle
+  0029f	83 c4 08	 add	 esp, 8
+  002a2	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 172  : }
+
+  002a7	8b e5		 mov	 esp, ebp
+  002a9	5d		 pop	 ebp
+  002aa	c3		 ret	 0
+?KGetAngle@@YAXPAF@Z ENDP				; KGetAngle
+_TEXT	ENDS
+PUBLIC	?KGetDistance@@YAXPAF@Z				; KGetDistance
+PUBLIC	?CosDiv@@YAHHJ@Z				; CosDiv
+_TEXT	SEGMENT
+_args$ = 8
+_dx$ = -4
+_dy$ = -8
+?KGetDistance@@YAXPAF@Z PROC NEAR			; KGetDistance
+
+; 181  : {
+
+  002ab	55		 push	 ebp
+  002ac	8b ec		 mov	 ebp, esp
+  002ae	83 ec 10	 sub	 esp, 16			; 00000010H
+
+; 182  : 	long dx = Abs(arg(3) - arg(1));
+
+  002b1	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  002b4	0f bf 48 06	 movsx	 ecx, WORD PTR [eax+6]
+  002b8	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  002bb	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  002bf	2b c8		 sub	 ecx, eax
+  002c1	85 c9		 test	 ecx, ecx
+  002c3	7d 17		 jge	 SHORT $L59066
+  002c5	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  002c8	0f bf 51 06	 movsx	 edx, WORD PTR [ecx+6]
+  002cc	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  002cf	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  002d3	2b d1		 sub	 edx, ecx
+  002d5	f7 da		 neg	 edx
+  002d7	89 55 f4	 mov	 DWORD PTR -12+[ebp], edx
+  002da	eb 13		 jmp	 SHORT $L59067
+$L59066:
+  002dc	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  002df	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  002e3	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  002e6	0f bf 51 02	 movsx	 edx, WORD PTR [ecx+2]
+  002ea	2b c2		 sub	 eax, edx
+  002ec	89 45 f4	 mov	 DWORD PTR -12+[ebp], eax
+$L59067:
+  002ef	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+  002f2	89 45 fc	 mov	 DWORD PTR _dx$[ebp], eax
+
+; 183  : 	long dy = Abs(arg(4) - arg(2));
+
+  002f5	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  002f8	0f bf 51 08	 movsx	 edx, WORD PTR [ecx+8]
+  002fc	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  002ff	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  00303	2b d1		 sub	 edx, ecx
+  00305	85 d2		 test	 edx, edx
+  00307	7d 17		 jge	 SHORT $L59068
+  00309	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0030c	0f bf 42 08	 movsx	 eax, WORD PTR [edx+8]
+  00310	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00313	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00317	2b c2		 sub	 eax, edx
+  00319	f7 d8		 neg	 eax
+  0031b	89 45 f0	 mov	 DWORD PTR -16+[ebp], eax
+  0031e	eb 13		 jmp	 SHORT $L59069
+$L59068:
+  00320	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00323	0f bf 48 08	 movsx	 ecx, WORD PTR [eax+8]
+  00327	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0032a	0f bf 42 04	 movsx	 eax, WORD PTR [edx+4]
+  0032e	2b c8		 sub	 ecx, eax
+  00330	89 4d f0	 mov	 DWORD PTR -16+[ebp], ecx
+$L59069:
+  00333	8b 4d f0	 mov	 ecx, DWORD PTR -16+[ebp]
+  00336	89 4d f8	 mov	 DWORD PTR _dy$[ebp], ecx
+
+; 184  : 
+; 185  : 	if (argCount > 4)
+
+  00339	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0033c	0f bf 02	 movsx	 eax, WORD PTR [edx]
+  0033f	83 f8 04	 cmp	 eax, 4
+  00342	7e 17		 jle	 SHORT $L58820
+
+; 186  : 		dy = CosDiv(arg(5), dy);
+
+  00344	8b 4d f8	 mov	 ecx, DWORD PTR _dy$[ebp]
+  00347	51		 push	 ecx
+  00348	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0034b	0f bf 42 0a	 movsx	 eax, WORD PTR [edx+10]
+  0034f	50		 push	 eax
+  00350	e8 00 00 00 00	 call	 ?CosDiv@@YAHHJ@Z	; CosDiv
+  00355	83 c4 08	 add	 esp, 8
+  00358	89 45 f8	 mov	 DWORD PTR _dy$[ebp], eax
+$L58820:
+
+; 187  : 
+; 188  : 	pm.acc = (Acc) sqrt((dx * dx) + (dy * dy));
+
+  0035b	8b 4d fc	 mov	 ecx, DWORD PTR _dx$[ebp]
+  0035e	0f af 4d fc	 imul	 ecx, DWORD PTR _dx$[ebp]
+  00362	8b 55 f8	 mov	 edx, DWORD PTR _dy$[ebp]
+  00365	0f af 55 f8	 imul	 edx, DWORD PTR _dy$[ebp]
+  00369	03 ca		 add	 ecx, edx
+  0036b	51		 push	 ecx
+  0036c	e8 00 00 00 00	 call	 ?sqrt@@YAIK@Z		; sqrt
+  00371	83 c4 04	 add	 esp, 4
+  00374	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 189  : }
+
+  00379	8b e5		 mov	 esp, ebp
+  0037b	5d		 pop	 ebp
+  0037c	c3		 ret	 0
+?KGetDistance@@YAXPAF@Z ENDP				; KGetDistance
+_TEXT	ENDS
+PUBLIC	?ScaledCos@@YAJH@Z				; ScaledCos
+;	COMDAT ?CosDiv@@YAHHJ@Z
+_TEXT	SEGMENT
+_a$ = 8
+_n$ = 12
+?CosDiv@@YAHHJ@Z PROC NEAR				; CosDiv, COMDAT
+
+; 45   : 	{ return ((TrigScale * n) / ScaledCos(a)); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	56		 push	 esi
+  00004	8b 75 0c	 mov	 esi, DWORD PTR _n$[ebp]
+  00007	69 f6 10 27 00
+	00		 imul	 esi, 10000		; 00002710H
+  0000d	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00010	50		 push	 eax
+  00011	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  00016	83 c4 04	 add	 esp, 4
+  00019	8b c8		 mov	 ecx, eax
+  0001b	8b c6		 mov	 eax, esi
+  0001d	99		 cdq
+  0001e	f7 f9		 idiv	 ecx
+  00020	5e		 pop	 esi
+  00021	5d		 pop	 ebp
+  00022	c3		 ret	 0
+?CosDiv@@YAHHJ@Z ENDP					; CosDiv
+_TEXT	ENDS
+PUBLIC	?KSinMult@@YAXPAF@Z				; KSinMult
+PUBLIC	?SinMult@@YAHHJ@Z				; SinMult
+_TEXT	SEGMENT
+_args$ = 8
+?KSinMult@@YAXPAF@Z PROC NEAR				; KSinMult
+
+; 193  : {
+
+  0037d	55		 push	 ebp
+  0037e	8b ec		 mov	 ebp, esp
+
+; 194  : 	pm.acc = (Acc) SinMult(arg(1), arg(2));
+
+  00380	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00383	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  00387	51		 push	 ecx
+  00388	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0038b	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  0038f	50		 push	 eax
+  00390	e8 00 00 00 00	 call	 ?SinMult@@YAHHJ@Z	; SinMult
+  00395	83 c4 08	 add	 esp, 8
+  00398	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 195  : }
+
+  0039d	5d		 pop	 ebp
+  0039e	c3		 ret	 0
+?KSinMult@@YAXPAF@Z ENDP				; KSinMult
+_TEXT	ENDS
+PUBLIC	?ScaledSin@@YAJH@Z				; ScaledSin
+;	COMDAT ?SinMult@@YAHHJ@Z
+_TEXT	SEGMENT
+_a$ = 8
+_n$ = 12
+?SinMult@@YAHHJ@Z PROC NEAR				; SinMult, COMDAT
+
+; 36   : 	{ return ((ScaledSin(a) * n) / TrigScale); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00006	50		 push	 eax
+  00007	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  0000c	83 c4 04	 add	 esp, 4
+  0000f	0f af 45 0c	 imul	 eax, DWORD PTR _n$[ebp]
+  00013	99		 cdq
+  00014	b9 10 27 00 00	 mov	 ecx, 10000		; 00002710H
+  00019	f7 f9		 idiv	 ecx
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+?SinMult@@YAHHJ@Z ENDP					; SinMult
+_TEXT	ENDS
+PUBLIC	?KCosMult@@YAXPAF@Z				; KCosMult
+PUBLIC	?CosMult@@YAHHJ@Z				; CosMult
+_TEXT	SEGMENT
+_args$ = 8
+?KCosMult@@YAXPAF@Z PROC NEAR				; KCosMult
+
+; 199  : {
+
+  0039f	55		 push	 ebp
+  003a0	8b ec		 mov	 ebp, esp
+
+; 200  : 	pm.acc = (Acc) CosMult(arg(1), arg(2));
+
+  003a2	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  003a5	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  003a9	51		 push	 ecx
+  003aa	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  003ad	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  003b1	50		 push	 eax
+  003b2	e8 00 00 00 00	 call	 ?CosMult@@YAHHJ@Z	; CosMult
+  003b7	83 c4 08	 add	 esp, 8
+  003ba	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 201  : }
+
+  003bf	5d		 pop	 ebp
+  003c0	c3		 ret	 0
+?KCosMult@@YAXPAF@Z ENDP				; KCosMult
+_TEXT	ENDS
+;	COMDAT ?CosMult@@YAHHJ@Z
+_TEXT	SEGMENT
+_a$ = 8
+_n$ = 12
+?CosMult@@YAHHJ@Z PROC NEAR				; CosMult, COMDAT
+
+; 39   : 	{ return ((ScaledCos(a) * n) / TrigScale); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00006	50		 push	 eax
+  00007	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  0000c	83 c4 04	 add	 esp, 4
+  0000f	0f af 45 0c	 imul	 eax, DWORD PTR _n$[ebp]
+  00013	99		 cdq
+  00014	b9 10 27 00 00	 mov	 ecx, 10000		; 00002710H
+  00019	f7 f9		 idiv	 ecx
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+?CosMult@@YAHHJ@Z ENDP					; CosMult
+_TEXT	ENDS
+PUBLIC	?KSinDiv@@YAXPAF@Z				; KSinDiv
+PUBLIC	?SinDiv@@YAHHJ@Z				; SinDiv
+_TEXT	SEGMENT
+_args$ = 8
+?KSinDiv@@YAXPAF@Z PROC NEAR				; KSinDiv
+
+; 205  : {
+
+  003c1	55		 push	 ebp
+  003c2	8b ec		 mov	 ebp, esp
+
+; 206  : 	pm.acc = (Acc) SinDiv(arg(1), arg(2));
+
+  003c4	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  003c7	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  003cb	51		 push	 ecx
+  003cc	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  003cf	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  003d3	50		 push	 eax
+  003d4	e8 00 00 00 00	 call	 ?SinDiv@@YAHHJ@Z	; SinDiv
+  003d9	83 c4 08	 add	 esp, 8
+  003dc	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 207  : }
+
+  003e1	5d		 pop	 ebp
+  003e2	c3		 ret	 0
+?KSinDiv@@YAXPAF@Z ENDP					; KSinDiv
+_TEXT	ENDS
+;	COMDAT ?SinDiv@@YAHHJ@Z
+_TEXT	SEGMENT
+_a$ = 8
+_n$ = 12
+?SinDiv@@YAHHJ@Z PROC NEAR				; SinDiv, COMDAT
+
+; 42   : 	{ return ((TrigScale * n) / ScaledSin(a)); }
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	56		 push	 esi
+  00004	8b 75 0c	 mov	 esi, DWORD PTR _n$[ebp]
+  00007	69 f6 10 27 00
+	00		 imul	 esi, 10000		; 00002710H
+  0000d	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00010	50		 push	 eax
+  00011	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  00016	83 c4 04	 add	 esp, 4
+  00019	8b c8		 mov	 ecx, eax
+  0001b	8b c6		 mov	 eax, esi
+  0001d	99		 cdq
+  0001e	f7 f9		 idiv	 ecx
+  00020	5e		 pop	 esi
+  00021	5d		 pop	 ebp
+  00022	c3		 ret	 0
+?SinDiv@@YAHHJ@Z ENDP					; SinDiv
+_TEXT	ENDS
+PUBLIC	?KCosDiv@@YAXPAF@Z				; KCosDiv
+_TEXT	SEGMENT
+_args$ = 8
+?KCosDiv@@YAXPAF@Z PROC NEAR				; KCosDiv
+
+; 211  : {
+
+  003e3	55		 push	 ebp
+  003e4	8b ec		 mov	 ebp, esp
+
+; 212  : 	pm.acc = (Acc) CosDiv(arg(1), arg(2));
+
+  003e6	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  003e9	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  003ed	51		 push	 ecx
+  003ee	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  003f1	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  003f5	50		 push	 eax
+  003f6	e8 00 00 00 00	 call	 ?CosDiv@@YAHHJ@Z	; CosDiv
+  003fb	83 c4 08	 add	 esp, 8
+  003fe	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 213  : }
+
+  00403	5d		 pop	 ebp
+  00404	c3		 ret	 0
+?KCosDiv@@YAXPAF@Z ENDP					; KCosDiv
+_TEXT	ENDS
+PUBLIC	?KATan@@YAXPAF@Z				; KATan
+PUBLIC	?ATan@@YAHHHHH@Z				; ATan
+_TEXT	SEGMENT
+_args$ = 8
+?KATan@@YAXPAF@Z PROC NEAR				; KATan
+
+; 217  : {
+
+  00405	55		 push	 ebp
+  00406	8b ec		 mov	 ebp, esp
+
+; 218  : 	pm.acc = (Acc) ATan(arg(1), arg(2), arg(3), arg(4));
+
+  00408	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0040b	0f bf 48 08	 movsx	 ecx, WORD PTR [eax+8]
+  0040f	51		 push	 ecx
+  00410	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  00413	0f bf 42 06	 movsx	 eax, WORD PTR [edx+6]
+  00417	50		 push	 eax
+  00418	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  0041b	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  0041f	52		 push	 edx
+  00420	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00423	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00427	51		 push	 ecx
+  00428	e8 00 00 00 00	 call	 ?ATan@@YAHHHHH@Z	; ATan
+  0042d	83 c4 10	 add	 esp, 16			; 00000010H
+  00430	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 219  : }
+
+  00435	5d		 pop	 ebp
+  00436	c3		 ret	 0
+?KATan@@YAXPAF@Z ENDP					; KATan
+_TEXT	ENDS
+PUBLIC	?KRandom@@YAXPAF@Z				; KRandom
+_TEXT	SEGMENT
+_args$ = 8
+_low$ = -16
+_high$ = -4
+_range$ = -12
+_tmp$ = -8
+?KRandom@@YAXPAF@Z PROC NEAR				; KRandom
+
+; 223  : {
+
+  00437	55		 push	 ebp
+  00438	8b ec		 mov	 ebp, esp
+  0043a	83 ec 10	 sub	 esp, 16			; 00000010H
+
+; 224  : 	unsigned	low;
+; 225  : 	unsigned	high;
+; 226  : 	unsigned	range;
+; 227  : 	ulong	tmp;
+; 228  : 
+; 229  : 	if (argCount == 2) {
+
+  0043d	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00440	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  00443	83 f9 02	 cmp	 ecx, 2
+  00446	75 57		 jne	 SHORT $L58849
+
+; 230  : 		low = arg(1);
+
+  00448	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0044b	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  0044f	89 45 f0	 mov	 DWORD PTR _low$[ebp], eax
+
+; 231  : 		high = arg(2);
+
+  00452	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  00455	0f bf 51 04	 movsx	 edx, WORD PTR [ecx+4]
+  00459	89 55 fc	 mov	 DWORD PTR _high$[ebp], edx
+
+; 232  : 		range = (unsigned) (high - low + 1);
+
+  0045c	8b 45 fc	 mov	 eax, DWORD PTR _high$[ebp]
+  0045f	2b 45 f0	 sub	 eax, DWORD PTR _low$[ebp]
+  00462	83 c0 01	 add	 eax, 1
+  00465	89 45 f4	 mov	 DWORD PTR _range$[ebp], eax
+
+; 233  : 
+; 234  : 		tmp = (LCGRandom() & 0x00ffff00L) >> 8;
+
+  00468	e8 00 00 00 00	 call	 ?LCGRandom@@YAKXZ	; LCGRandom
+  0046d	25 00 ff ff 00	 and	 eax, 16776960		; 00ffff00H
+  00472	c1 e8 08	 shr	 eax, 8
+  00475	89 45 f8	 mov	 DWORD PTR _tmp$[ebp], eax
+
+; 235  : 		tmp *= range;
+
+  00478	8b 4d f8	 mov	 ecx, DWORD PTR _tmp$[ebp]
+  0047b	0f af 4d f4	 imul	 ecx, DWORD PTR _range$[ebp]
+  0047f	89 4d f8	 mov	 DWORD PTR _tmp$[ebp], ecx
+
+; 236  : 		tmp >>= 16;
+
+  00482	8b 55 f8	 mov	 edx, DWORD PTR _tmp$[ebp]
+  00485	c1 ea 10	 shr	 edx, 16			; 00000010H
+  00488	89 55 f8	 mov	 DWORD PTR _tmp$[ebp], edx
+
+; 237  : 		tmp += low;
+
+  0048b	8b 45 f8	 mov	 eax, DWORD PTR _tmp$[ebp]
+  0048e	03 45 f0	 add	 eax, DWORD PTR _low$[ebp]
+  00491	89 45 f8	 mov	 DWORD PTR _tmp$[ebp], eax
+
+; 238  : 
+; 239  : 		pm.acc = (Acc) tmp;
+
+  00494	8b 4d f8	 mov	 ecx, DWORD PTR _tmp$[ebp]
+  00497	89 0d 04 00 00
+	00		 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, ecx
+
+; 240  : 
+; 241  : 	} else if (argCount == 1) {
+
+  0049d	eb 56		 jmp	 SHORT $L58859
+$L58849:
+  0049f	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  004a2	0f bf 02	 movsx	 eax, WORD PTR [edx]
+  004a5	83 f8 01	 cmp	 eax, 1
+  004a8	75 1b		 jne	 SHORT $L58853
+
+; 242  : 		// Set seed to argument
+; 243  : 		lcgSeed = (int)((unsigned int)(SCIUWord)arg(1));
+
+  004aa	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  004ad	33 d2		 xor	 edx, edx
+  004af	66 8b 51 02	 mov	 dx, WORD PTR [ecx+2]
+  004b3	89 15 00 00 00
+	00		 mov	 DWORD PTR _lcgSeed, edx
+
+; 244  : 		pm.acc = False;
+
+  004b9	c7 05 04 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, 0
+
+; 245  : 
+; 246  : 	} else if (argCount == 3) {
+
+  004c3	eb 30		 jmp	 SHORT $L58859
+$L58853:
+  004c5	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  004c8	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  004cb	83 f9 03	 cmp	 ecx, 3
+  004ce	75 19		 jne	 SHORT $L58858
+
+; 247  : 		arg(3) = lcgSeed;
+
+  004d0	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  004d3	66 a1 00 00 00
+	00		 mov	 ax, WORD PTR _lcgSeed
+  004d9	66 89 42 06	 mov	 WORD PTR [edx+6], ax
+
+; 248  : 		pm.acc = False;
+
+  004dd	c7 05 04 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, 0
+
+; 249  : 
+; 250  : 	} else {
+
+  004e7	eb 0c		 jmp	 SHORT $L58859
+$L58858:
+
+; 251  : 		// assume argCount == 0
+; 252  : 		// Return seed value
+; 253  : 		pm.acc = (Acc) lcgSeed;
+
+  004e9	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _lcgSeed
+  004ef	89 0d 04 00 00
+	00		 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, ecx
+$L58859:
+
+; 255  : }
+
+  004f5	8b e5		 mov	 esp, ebp
+  004f7	5d		 pop	 ebp
+  004f8	c3		 ret	 0
+?KRandom@@YAXPAF@Z ENDP					; KRandom
+_TEXT	ENDS
+PUBLIC	?KRandomA@@YAXPAF@Z				; KRandomA
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+_DATA	SEGMENT
+	ORG $+1
+$SG58876 DB	'Internal error.  Memory checksum does not compute.  Help'
+	DB	'!!', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_args$ = 8
+?KRandomA@@YAXPAF@Z PROC NEAR				; KRandomA
+
+; 259  : {
+
+  004f9	55		 push	 ebp
+  004fa	8b ec		 mov	 ebp, esp
+  004fc	83 ec 10	 sub	 esp, 16			; 00000010H
+
+; 260  : 	unsigned	low;
+; 261  : 	unsigned	high;
+; 262  : 	unsigned	range;
+; 263  : 	ulong	tmp;
+; 264  : 
+; 265  : 	bEncrypt = 1;
+
+  004ff	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?bEncrypt@@3KA, 1 ; bEncrypt
+
+; 266  : 
+; 267  : 	// Set seed to argument
+; 268  : 	g_nSendSeed = (int)((unsigned int)(SCIUWord)arg(1));
+
+  00509	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  0050c	33 c9		 xor	 ecx, ecx
+  0050e	66 8b 48 02	 mov	 cx, WORD PTR [eax+2]
+  00512	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?g_nSendSeed@@3KA, ecx ; g_nSendSeed
+
+; 269  : 	g_nReceiveSeed = (int)((unsigned int)(SCIUWord)arg(2));
+
+  00518	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0051b	33 c0		 xor	 eax, eax
+  0051d	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  00521	a3 00 00 00 00	 mov	 DWORD PTR ?g_nReceiveSeed@@3KA, eax ; g_nReceiveSeed
+
+; 270  : 
+; 271  : 	if ( g_nSendSeed < 1 || g_nSendSeed > 55000 || g_nReceiveSeed < 1 || g_nReceiveSeed > 55000 )
+
+  00526	83 3d 00 00 00
+	00 01		 cmp	 DWORD PTR ?g_nSendSeed@@3KA, 1 ; g_nSendSeed
+  0052d	72 21		 jb	 SHORT $L58875
+  0052f	81 3d 00 00 00
+	00 d8 d6 00 00	 cmp	 DWORD PTR ?g_nSendSeed@@3KA, 55000 ; g_nSendSeed, 0000d6d8H
+  00539	77 15		 ja	 SHORT $L58875
+  0053b	83 3d 00 00 00
+	00 01		 cmp	 DWORD PTR ?g_nReceiveSeed@@3KA, 1 ; g_nReceiveSeed
+  00542	72 0c		 jb	 SHORT $L58875
+  00544	81 3d 00 00 00
+	00 d8 d6 00 00	 cmp	 DWORD PTR ?g_nReceiveSeed@@3KA, 55000 ; g_nReceiveSeed, 0000d6d8H
+  0054e	76 14		 jbe	 SHORT $L58874
+$L58875:
+
+; 272  : 		msgMgr->Fatal( "Internal error.  Memory checksum does not compute.  Help!!" );
+
+  00550	68 00 00 00 00	 push	 OFFSET FLAT:$SG58876
+  00555	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0055b	51		 push	 ecx
+  0055c	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00561	83 c4 08	 add	 esp, 8
+$L58874:
+
+; 273  : 
+; 274  : 	g_nSendSeed *= g_nSendSeed;
+
+  00564	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?g_nSendSeed@@3KA ; g_nSendSeed
+  0056a	0f af 15 00 00
+	00 00		 imul	 edx, DWORD PTR ?g_nSendSeed@@3KA ; g_nSendSeed
+  00571	89 15 00 00 00
+	00		 mov	 DWORD PTR ?g_nSendSeed@@3KA, edx ; g_nSendSeed
+
+; 275  : 	g_nReceiveSeed *= g_nReceiveSeed;
+
+  00577	a1 00 00 00 00	 mov	 eax, DWORD PTR ?g_nReceiveSeed@@3KA ; g_nReceiveSeed
+  0057c	0f af 05 00 00
+	00 00		 imul	 eax, DWORD PTR ?g_nReceiveSeed@@3KA ; g_nReceiveSeed
+  00583	a3 00 00 00 00	 mov	 DWORD PTR ?g_nReceiveSeed@@3KA, eax ; g_nReceiveSeed
+
+; 276  : 
+; 277  : 	g_nSendSeed += (int)((unsigned int)(SCIUWord)arg(3)) + 217;
+
+  00588	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  0058b	33 d2		 xor	 edx, edx
+  0058d	66 8b 51 06	 mov	 dx, WORD PTR [ecx+6]
+  00591	a1 00 00 00 00	 mov	 eax, DWORD PTR ?g_nSendSeed@@3KA ; g_nSendSeed
+  00596	8d 8c 10 d9 00
+	00 00		 lea	 ecx, DWORD PTR [eax+edx+217]
+  0059d	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?g_nSendSeed@@3KA, ecx ; g_nSendSeed
+
+; 278  : 	g_nReceiveSeed += (int)((unsigned int)(SCIUWord)arg(3)) + 1031;
+
+  005a3	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  005a6	33 c0		 xor	 eax, eax
+  005a8	66 8b 42 06	 mov	 ax, WORD PTR [edx+6]
+  005ac	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?g_nReceiveSeed@@3KA ; g_nReceiveSeed
+  005b2	8d 94 01 07 04
+	00 00		 lea	 edx, DWORD PTR [ecx+eax+1031]
+  005b9	89 15 00 00 00
+	00		 mov	 DWORD PTR ?g_nReceiveSeed@@3KA, edx ; g_nReceiveSeed
+
+; 279  : 
+; 280  : 	pm.acc = False;
+
+  005bf	c7 05 04 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, 0
+
+; 281  : }
+
+  005c9	8b e5		 mov	 esp, ebp
+  005cb	5d		 pop	 ebp
+  005cc	c3		 ret	 0
+?KRandomA@@YAXPAF@Z ENDP				; KRandomA
+_TEXT	ENDS
+PUBLIC	?KReadNumber@@YAXPAF@Z				; KReadNumber
+EXTRN	__imp__atoi:NEAR
+_TEXT	SEGMENT
+_args$ = 8
+?KReadNumber@@YAXPAF@Z PROC NEAR			; KReadNumber
+
+; 285  : {
+
+  005cd	55		 push	 ebp
+  005ce	8b ec		 mov	 ebp, esp
+
+; 286  : 	//	read a number from the input line
+; 287  : 
+; 288  : 	pm.acc = (Acc) atoi((char*) arg(1));
+
+  005d0	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  005d3	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  005d7	51		 push	 ecx
+  005d8	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__atoi
+  005de	83 c4 04	 add	 esp, 4
+  005e1	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 289  : }
+
+  005e6	5d		 pop	 ebp
+  005e7	c3		 ret	 0
+?KReadNumber@@YAXPAF@Z ENDP				; KReadNumber
+_sp$ = 8
+_dp$ = 12
+?RPtToAngle@@YAHPAVSOL_Point@@0@Z PROC NEAR		; RPtToAngle
+
+; 293  : {
+
+  005e8	55		 push	 ebp
+  005e9	8b ec		 mov	 ebp, esp
+
+; 294  : 	// return pseudo angle 0-359
+; 295  : 
+; 296  : 	return ATan(dp->y, sp->x, sp->y, dp->x);
+
+  005eb	8b 45 0c	 mov	 eax, DWORD PTR _dp$[ebp]
+  005ee	8b 08		 mov	 ecx, DWORD PTR [eax]
+  005f0	51		 push	 ecx
+  005f1	8b 55 08	 mov	 edx, DWORD PTR _sp$[ebp]
+  005f4	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  005f7	50		 push	 eax
+  005f8	8b 4d 08	 mov	 ecx, DWORD PTR _sp$[ebp]
+  005fb	8b 11		 mov	 edx, DWORD PTR [ecx]
+  005fd	52		 push	 edx
+  005fe	8b 45 0c	 mov	 eax, DWORD PTR _dp$[ebp]
+  00601	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00604	51		 push	 ecx
+  00605	e8 00 00 00 00	 call	 ?ATan@@YAHHHHH@Z	; ATan
+  0060a	83 c4 10	 add	 esp, 16			; 00000010H
+
+; 297  : }
+
+  0060d	5d		 pop	 ebp
+  0060e	c3		 ret	 0
+?RPtToAngle@@YAHPAVSOL_Point@@0@Z ENDP			; RPtToAngle
+_a$ = 8
+_entry$ = -12
+_entryValue$ = -4
+_deltaValue$ = -8
+?ScaledSin@@YAJH@Z PROC NEAR				; ScaledSin
+
+; 301  : {
+
+  0060f	55		 push	 ebp
+  00610	8b ec		 mov	 ebp, esp
+  00612	83 ec 0c	 sub	 esp, 12			; 0000000cH
+
+; 302  : 	unsigned	entry;
+; 303  : 	long	entryValue;
+; 304  : 	long	deltaValue;
+; 305  : 	
+; 306  : 	if (a <  0)
+
+  00615	83 7d 08 00	 cmp	 DWORD PTR _a$[ebp], 0
+  00619	7d 16		 jge	 SHORT $L58898
+
+; 307  : 		return ScaledSin(a + 360);
+
+  0061b	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  0061e	05 68 01 00 00	 add	 eax, 360		; 00000168H
+  00623	50		 push	 eax
+  00624	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  00629	83 c4 04	 add	 esp, 4
+  0062c	e9 be 00 00 00	 jmp	 $L58894
+$L58898:
+
+; 308  : 
+; 309  : 	if (a <= 90) {									// 1st quadrant, interpolate
+
+  00631	83 7d 08 5a	 cmp	 DWORD PTR _a$[ebp], 90	; 0000005aH
+  00635	7f 4e		 jg	 SHORT $L58899
+
+; 310  : 		entry = (unsigned) (a / TrigStep);
+
+  00637	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  0063a	99		 cdq
+  0063b	b9 05 00 00 00	 mov	 ecx, 5
+  00640	f7 f9		 idiv	 ecx
+  00642	89 45 f4	 mov	 DWORD PTR _entry$[ebp], eax
+
+; 311  : 		entryValue = sinArray[entry];
+
+  00645	8b 55 f4	 mov	 edx, DWORD PTR _entry$[ebp]
+  00648	8b 04 95 00 00
+	00 00		 mov	 eax, DWORD PTR _sinArray[edx*4]
+  0064f	89 45 fc	 mov	 DWORD PTR _entryValue$[ebp], eax
+
+; 312  : 		deltaValue = sinArray[entry+1] - entryValue;
+
+  00652	8b 4d f4	 mov	 ecx, DWORD PTR _entry$[ebp]
+  00655	8b 14 8d 04 00
+	00 00		 mov	 edx, DWORD PTR _sinArray[ecx*4+4]
+  0065c	2b 55 fc	 sub	 edx, DWORD PTR _entryValue$[ebp]
+  0065f	89 55 f8	 mov	 DWORD PTR _deltaValue$[ebp], edx
+
+; 313  : 		
+; 314  : 		return (long)
+; 315  : 	      (entryValue +
+; 316  : 	      ((deltaValue*(long)(a%TrigStep) + ((long)TrigStep/(long)2))
+; 317  : 		      / (long)TrigStep));
+
+  00662	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00665	99		 cdq
+  00666	b9 05 00 00 00	 mov	 ecx, 5
+  0066b	f7 f9		 idiv	 ecx
+  0066d	8b 45 f8	 mov	 eax, DWORD PTR _deltaValue$[ebp]
+  00670	0f af c2	 imul	 eax, edx
+  00673	83 c0 02	 add	 eax, 2
+  00676	99		 cdq
+  00677	b9 05 00 00 00	 mov	 ecx, 5
+  0067c	f7 f9		 idiv	 ecx
+  0067e	8b 55 fc	 mov	 edx, DWORD PTR _entryValue$[ebp]
+  00681	03 c2		 add	 eax, edx
+  00683	eb 6a		 jmp	 SHORT $L58894
+$L58899:
+
+; 319  : 
+; 320  : 	if (a <= 180)
+
+  00685	81 7d 08 b4 00
+	00 00		 cmp	 DWORD PTR _a$[ebp], 180	; 000000b4H
+  0068c	7f 13		 jg	 SHORT $L58906
+
+; 321  : 		return ScaledSin(180 - a);		// 2nd
+
+  0068e	b8 b4 00 00 00	 mov	 eax, 180		; 000000b4H
+  00693	2b 45 08	 sub	 eax, DWORD PTR _a$[ebp]
+  00696	50		 push	 eax
+  00697	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  0069c	83 c4 04	 add	 esp, 4
+  0069f	eb 4e		 jmp	 SHORT $L58894
+$L58906:
+
+; 322  : 	if (a <= 270)
+
+  006a1	81 7d 08 0e 01
+	00 00		 cmp	 DWORD PTR _a$[ebp], 270	; 0000010eH
+  006a8	7f 16		 jg	 SHORT $L58907
+
+; 323  : 		return -ScaledSin(a - 180);	// 3rd
+
+  006aa	8b 4d 08	 mov	 ecx, DWORD PTR _a$[ebp]
+  006ad	81 e9 b4 00 00
+	00		 sub	 ecx, 180		; 000000b4H
+  006b3	51		 push	 ecx
+  006b4	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  006b9	83 c4 04	 add	 esp, 4
+  006bc	f7 d8		 neg	 eax
+  006be	eb 2f		 jmp	 SHORT $L58894
+$L58907:
+
+; 324  : 	if (a <= 360)
+
+  006c0	81 7d 08 68 01
+	00 00		 cmp	 DWORD PTR _a$[ebp], 360	; 00000168H
+  006c7	7f 15		 jg	 SHORT $L58908
+
+; 325  : 		return -ScaledSin(360 - a);	// 4th
+
+  006c9	ba 68 01 00 00	 mov	 edx, 360		; 00000168H
+  006ce	2b 55 08	 sub	 edx, DWORD PTR _a$[ebp]
+  006d1	52		 push	 edx
+  006d2	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  006d7	83 c4 04	 add	 esp, 4
+  006da	f7 d8		 neg	 eax
+  006dc	eb 11		 jmp	 SHORT $L58894
+$L58908:
+
+; 326  : 
+; 327  : 	return ScaledSin(a - 360);
+
+  006de	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  006e1	2d 68 01 00 00	 sub	 eax, 360		; 00000168H
+  006e6	50		 push	 eax
+  006e7	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  006ec	83 c4 04	 add	 esp, 4
+$L58894:
+
+; 328  : }
+
+  006ef	8b e5		 mov	 esp, ebp
+  006f1	5d		 pop	 ebp
+  006f2	c3		 ret	 0
+?ScaledSin@@YAJH@Z ENDP					; ScaledSin
+_a$ = 8
+?ScaledCos@@YAJH@Z PROC NEAR				; ScaledCos
+
+; 332  : {
+
+  006f3	55		 push	 ebp
+  006f4	8b ec		 mov	 ebp, esp
+
+; 333  : 	if (a < 0)
+
+  006f6	83 7d 08 00	 cmp	 DWORD PTR _a$[ebp], 0
+  006fa	7d 16		 jge	 SHORT $L58912
+
+; 334  : 		return ScaledCos(a + 360);
+
+  006fc	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  006ff	05 68 01 00 00	 add	 eax, 360		; 00000168H
+  00704	50		 push	 eax
+  00705	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  0070a	83 c4 04	 add	 esp, 4
+  0070d	e9 83 00 00 00	 jmp	 $L58911
+$L58912:
+
+; 335  : 			
+; 336  : 	if (a <= 90)
+
+  00712	83 7d 08 5a	 cmp	 DWORD PTR _a$[ebp], 90	; 0000005aH
+  00716	7f 13		 jg	 SHORT $L58913
+
+; 337  : 		return ScaledSin(90 - a);		// 1st quadrant
+
+  00718	b9 5a 00 00 00	 mov	 ecx, 90			; 0000005aH
+  0071d	2b 4d 08	 sub	 ecx, DWORD PTR _a$[ebp]
+  00720	51		 push	 ecx
+  00721	e8 00 00 00 00	 call	 ?ScaledSin@@YAJH@Z	; ScaledSin
+  00726	83 c4 04	 add	 esp, 4
+  00729	eb 6a		 jmp	 SHORT $L58911
+$L58913:
+
+; 338  : 	
+; 339  : 	if (a <= 180)
+
+  0072b	81 7d 08 b4 00
+	00 00		 cmp	 DWORD PTR _a$[ebp], 180	; 000000b4H
+  00732	7f 15		 jg	 SHORT $L58914
+
+; 340  : 		return -ScaledCos(180 - a);	// 2nd
+
+  00734	ba b4 00 00 00	 mov	 edx, 180		; 000000b4H
+  00739	2b 55 08	 sub	 edx, DWORD PTR _a$[ebp]
+  0073c	52		 push	 edx
+  0073d	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  00742	83 c4 04	 add	 esp, 4
+  00745	f7 d8		 neg	 eax
+  00747	eb 4c		 jmp	 SHORT $L58911
+$L58914:
+
+; 341  : 	if (a <= 270)
+
+  00749	81 7d 08 0e 01
+	00 00		 cmp	 DWORD PTR _a$[ebp], 270	; 0000010eH
+  00750	7f 15		 jg	 SHORT $L58915
+
+; 342  : 		return -ScaledCos(a - 180);	// 3rd
+
+  00752	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00755	2d b4 00 00 00	 sub	 eax, 180		; 000000b4H
+  0075a	50		 push	 eax
+  0075b	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  00760	83 c4 04	 add	 esp, 4
+  00763	f7 d8		 neg	 eax
+  00765	eb 2e		 jmp	 SHORT $L58911
+$L58915:
+
+; 343  : 	if (a <= 360)
+
+  00767	81 7d 08 68 01
+	00 00		 cmp	 DWORD PTR _a$[ebp], 360	; 00000168H
+  0076e	7f 13		 jg	 SHORT $L58916
+
+; 344  : 		return ScaledCos(360 - a);		// 4th
+
+  00770	b9 68 01 00 00	 mov	 ecx, 360		; 00000168H
+  00775	2b 4d 08	 sub	 ecx, DWORD PTR _a$[ebp]
+  00778	51		 push	 ecx
+  00779	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  0077e	83 c4 04	 add	 esp, 4
+  00781	eb 12		 jmp	 SHORT $L58911
+$L58916:
+
+; 345  : 	
+; 346  : 	return ScaledCos(a - 360);
+
+  00783	8b 55 08	 mov	 edx, DWORD PTR _a$[ebp]
+  00786	81 ea 68 01 00
+	00		 sub	 edx, 360		; 00000168H
+  0078c	52		 push	 edx
+  0078d	e8 00 00 00 00	 call	 ?ScaledCos@@YAJH@Z	; ScaledCos
+  00792	83 c4 04	 add	 esp, 4
+$L58911:
+
+; 347  : }
+
+  00795	5d		 pop	 ebp
+  00796	c3		 ret	 0
+?ScaledCos@@YAJH@Z ENDP					; ScaledCos
+_x1$ = 8
+_y1$ = 12
+_x2$ = 16
+_y2$ = 20
+_major$ = -4
+?ATan@@YAHHHHH@Z PROC NEAR				; ATan
+
+; 351  : {
+
+  00797	55		 push	 ebp
+  00798	8b ec		 mov	 ebp, esp
+  0079a	51		 push	 ecx
+
+; 352  : 	// returns heading from (x1,y1) to (x2,y2) in degrees (always in the range
+; 353  : 	//	0-359)
+; 354  : 	
+; 355  : 	int major = getMajor(x1,y1,x2,y2);
+
+  0079b	8b 45 14	 mov	 eax, DWORD PTR _y2$[ebp]
+  0079e	50		 push	 eax
+  0079f	8b 4d 10	 mov	 ecx, DWORD PTR _x2$[ebp]
+  007a2	51		 push	 ecx
+  007a3	8b 55 0c	 mov	 edx, DWORD PTR _y1$[ebp]
+  007a6	52		 push	 edx
+  007a7	8b 45 08	 mov	 eax, DWORD PTR _x1$[ebp]
+  007aa	50		 push	 eax
+  007ab	e8 00 00 00 00	 call	 ?getMajor@@YAHHHHH@Z	; getMajor
+  007b0	83 c4 10	 add	 esp, 16			; 00000010H
+  007b3	89 45 fc	 mov	 DWORD PTR _major$[ebp], eax
+
+; 356  : 
+; 357  :    // 0 <= major <= 90 
+; 358  :    if (x2 < x1)
+
+  007b6	8b 4d 10	 mov	 ecx, DWORD PTR _x2$[ebp]
+  007b9	3b 4d 08	 cmp	 ecx, DWORD PTR _x1$[ebp]
+  007bc	7d 22		 jge	 SHORT $L58924
+
+; 359  :       if (y2 <= y1)
+
+  007be	8b 55 14	 mov	 edx, DWORD PTR _y2$[ebp]
+  007c1	3b 55 0c	 cmp	 edx, DWORD PTR _y1$[ebp]
+  007c4	7f 0d		 jg	 SHORT $L58925
+
+; 360  :          major += 180;
+
+  007c6	8b 45 fc	 mov	 eax, DWORD PTR _major$[ebp]
+  007c9	05 b4 00 00 00	 add	 eax, 180		; 000000b4H
+  007ce	89 45 fc	 mov	 DWORD PTR _major$[ebp], eax
+
+; 361  :       else
+
+  007d1	eb 0b		 jmp	 SHORT $L58926
+$L58925:
+
+; 362  : 	      major = 180 - major;
+
+  007d3	b9 b4 00 00 00	 mov	 ecx, 180		; 000000b4H
+  007d8	2b 4d fc	 sub	 ecx, DWORD PTR _major$[ebp]
+  007db	89 4d fc	 mov	 DWORD PTR _major$[ebp], ecx
+$L58926:
+
+; 363  :    else
+
+  007de	eb 13		 jmp	 SHORT $L58928
+$L58924:
+
+; 364  :       if (y2 < y1)
+
+  007e0	8b 55 14	 mov	 edx, DWORD PTR _y2$[ebp]
+  007e3	3b 55 0c	 cmp	 edx, DWORD PTR _y1$[ebp]
+  007e6	7d 0b		 jge	 SHORT $L58928
+
+; 365  :       	major = 360 - major;
+
+  007e8	b8 68 01 00 00	 mov	 eax, 360		; 00000168H
+  007ed	2b 45 fc	 sub	 eax, DWORD PTR _major$[ebp]
+  007f0	89 45 fc	 mov	 DWORD PTR _major$[ebp], eax
+$L58928:
+
+; 366  :       if (major == 360)
+
+  007f3	81 7d fc 68 01
+	00 00		 cmp	 DWORD PTR _major$[ebp], 360 ; 00000168H
+  007fa	75 07		 jne	 SHORT $L58929
+
+; 367  :       	major = 0;
+
+  007fc	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _major$[ebp], 0
+$L58929:
+
+; 368  : 
+; 369  :    return major;
+
+  00803	8b 45 fc	 mov	 eax, DWORD PTR _major$[ebp]
+
+; 370  : }
+
+  00806	8b e5		 mov	 esp, ebp
+  00808	5d		 pop	 ebp
+  00809	c3		 ret	 0
+?ATan@@YAHHHHH@Z ENDP					; ATan
+_x1$ = 8
+_y1$ = 12
+_x2$ = 16
+_y2$ = 20
+_deltaX$ = -12
+_deltaY$ = -16
+_index$ = -8
+_major$ = -4
+?getMajor@@YAHHHHH@Z PROC NEAR				; getMajor
+
+; 374  : {
+
+  0080a	55		 push	 ebp
+  0080b	8b ec		 mov	 ebp, esp
+  0080d	83 ec 18	 sub	 esp, 24			; 00000018H
+
+; 375  : 	// returns angle in the range 0-90
+; 376  : 
+; 377  : 	long	deltaX = Abs(x2 - x1);
+
+  00810	8b 45 10	 mov	 eax, DWORD PTR _x2$[ebp]
+  00813	2b 45 08	 sub	 eax, DWORD PTR _x1$[ebp]
+  00816	85 c0		 test	 eax, eax
+  00818	7d 0d		 jge	 SHORT $L59087
+  0081a	8b 4d 10	 mov	 ecx, DWORD PTR _x2$[ebp]
+  0081d	2b 4d 08	 sub	 ecx, DWORD PTR _x1$[ebp]
+  00820	f7 d9		 neg	 ecx
+  00822	89 4d ec	 mov	 DWORD PTR -20+[ebp], ecx
+  00825	eb 09		 jmp	 SHORT $L59088
+$L59087:
+  00827	8b 55 10	 mov	 edx, DWORD PTR _x2$[ebp]
+  0082a	2b 55 08	 sub	 edx, DWORD PTR _x1$[ebp]
+  0082d	89 55 ec	 mov	 DWORD PTR -20+[ebp], edx
+$L59088:
+  00830	8b 45 ec	 mov	 eax, DWORD PTR -20+[ebp]
+  00833	89 45 f4	 mov	 DWORD PTR _deltaX$[ebp], eax
+
+; 378  : 	long	deltaY = Abs(y2 - y1);
+
+  00836	8b 4d 14	 mov	 ecx, DWORD PTR _y2$[ebp]
+  00839	2b 4d 0c	 sub	 ecx, DWORD PTR _y1$[ebp]
+  0083c	85 c9		 test	 ecx, ecx
+  0083e	7d 0d		 jge	 SHORT $L59089
+  00840	8b 55 14	 mov	 edx, DWORD PTR _y2$[ebp]
+  00843	2b 55 0c	 sub	 edx, DWORD PTR _y1$[ebp]
+  00846	f7 da		 neg	 edx
+  00848	89 55 e8	 mov	 DWORD PTR -24+[ebp], edx
+  0084b	eb 09		 jmp	 SHORT $L59090
+$L59089:
+  0084d	8b 45 14	 mov	 eax, DWORD PTR _y2$[ebp]
+  00850	2b 45 0c	 sub	 eax, DWORD PTR _y1$[ebp]
+  00853	89 45 e8	 mov	 DWORD PTR -24+[ebp], eax
+$L59090:
+  00856	8b 4d e8	 mov	 ecx, DWORD PTR -24+[ebp]
+  00859	89 4d f0	 mov	 DWORD PTR _deltaY$[ebp], ecx
+
+; 379  :    long	index;
+; 380  : 	int major;
+; 381  : 
+; 382  :    // if (x1,y1) = (x2,y2) return 0
+; 383  :    if (!deltaX && !deltaY)
+
+  0085c	83 7d f4 00	 cmp	 DWORD PTR _deltaX$[ebp], 0
+  00860	75 0a		 jne	 SHORT $L58940
+  00862	83 7d f0 00	 cmp	 DWORD PTR _deltaY$[ebp], 0
+  00866	75 04		 jne	 SHORT $L58940
+
+; 384  :       return 0;
+
+  00868	33 c0		 xor	 eax, eax
+  0086a	eb 70		 jmp	 SHORT $L58935
+$L58940:
+
+; 385  : 
+; 386  :    if (deltaY <= deltaX) {
+
+  0086c	8b 55 f0	 mov	 edx, DWORD PTR _deltaY$[ebp]
+  0086f	3b 55 f4	 cmp	 edx, DWORD PTR _deltaX$[ebp]
+  00872	7f 43		 jg	 SHORT $L58941
+
+; 387  :       index = TrigScale * deltaY / deltaX;
+
+  00874	8b 45 f0	 mov	 eax, DWORD PTR _deltaY$[ebp]
+  00877	69 c0 10 27 00
+	00		 imul	 eax, 10000		; 00002710H
+  0087d	99		 cdq
+  0087e	f7 7d f4	 idiv	 DWORD PTR _deltaX$[ebp]
+  00881	89 45 f8	 mov	 DWORD PTR _index$[ebp], eax
+
+; 388  :       if (index < 1000)
+
+  00884	81 7d f8 e8 03
+	00 00		 cmp	 DWORD PTR _index$[ebp], 1000 ; 000003e8H
+  0088b	7d 19		 jge	 SHORT $L58942
+
+; 389  : 			major = (int) (((long)57*deltaY + (deltaX/(long)2)) /deltaX);
+
+  0088d	8b 4d f0	 mov	 ecx, DWORD PTR _deltaY$[ebp]
+  00890	6b c9 39	 imul	 ecx, 57			; 00000039H
+  00893	8b 45 f4	 mov	 eax, DWORD PTR _deltaX$[ebp]
+  00896	99		 cdq
+  00897	2b c2		 sub	 eax, edx
+  00899	d1 f8		 sar	 eax, 1
+  0089b	03 c1		 add	 eax, ecx
+  0089d	99		 cdq
+  0089e	f7 7d f4	 idiv	 DWORD PTR _deltaX$[ebp]
+  008a1	89 45 fc	 mov	 DWORD PTR _major$[ebp], eax
+
+; 390  :       else
+
+  008a4	eb 0f		 jmp	 SHORT $L58946
+$L58942:
+
+; 391  :          major = prorateATan(index);
+
+  008a6	8b 55 f8	 mov	 edx, DWORD PTR _index$[ebp]
+  008a9	52		 push	 edx
+  008aa	e8 00 00 00 00	 call	 ?prorateATan@@YAHJ@Z	; prorateATan
+  008af	83 c4 04	 add	 esp, 4
+  008b2	89 45 fc	 mov	 DWORD PTR _major$[ebp], eax
+$L58946:
+
+; 392  : 
+; 393  :    } else
+
+  008b5	eb 22		 jmp	 SHORT $L58947
+$L58941:
+
+; 394  :       major = 90 - getMajor(y1,x1,y2,x2);
+
+  008b7	8b 45 10	 mov	 eax, DWORD PTR _x2$[ebp]
+  008ba	50		 push	 eax
+  008bb	8b 4d 14	 mov	 ecx, DWORD PTR _y2$[ebp]
+  008be	51		 push	 ecx
+  008bf	8b 55 08	 mov	 edx, DWORD PTR _x1$[ebp]
+  008c2	52		 push	 edx
+  008c3	8b 45 0c	 mov	 eax, DWORD PTR _y1$[ebp]
+  008c6	50		 push	 eax
+  008c7	e8 00 00 00 00	 call	 ?getMajor@@YAHHHHH@Z	; getMajor
+  008cc	83 c4 10	 add	 esp, 16			; 00000010H
+  008cf	b9 5a 00 00 00	 mov	 ecx, 90			; 0000005aH
+  008d4	2b c8		 sub	 ecx, eax
+  008d6	89 4d fc	 mov	 DWORD PTR _major$[ebp], ecx
+$L58947:
+
+; 395  : 
+; 396  :    return major;
+
+  008d9	8b 45 fc	 mov	 eax, DWORD PTR _major$[ebp]
+$L58935:
+
+; 397  : }
+
+  008dc	8b e5		 mov	 esp, ebp
+  008de	5d		 pop	 ebp
+  008df	c3		 ret	 0
+?getMajor@@YAHHHHH@Z ENDP				; getMajor
+_index$ = 8
+_i$ = -4
+?prorateATan@@YAHJ@Z PROC NEAR				; prorateATan
+
+; 401  : {
+
+  008e0	55		 push	 ebp
+  008e1	8b ec		 mov	 ebp, esp
+  008e3	51		 push	 ecx
+  008e4	56		 push	 esi
+  008e5	57		 push	 edi
+
+; 402  : 	int i;
+; 403  : 	for (i = 0; atanArray[i] < index; i++)
+
+  008e6	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  008ed	eb 09		 jmp	 SHORT $L58952
+$L58953:
+  008ef	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  008f2	83 c0 01	 add	 eax, 1
+  008f5	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L58952:
+  008f8	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  008fb	8b 14 8d 00 00
+	00 00		 mov	 edx, DWORD PTR _atanArray[ecx*4]
+  00902	3b 55 08	 cmp	 edx, DWORD PTR _index$[ebp]
+  00905	7d 02		 jge	 SHORT $L58954
+
+; 404  : 		;
+
+  00907	eb e6		 jmp	 SHORT $L58953
+$L58954:
+
+; 405  : 
+; 406  :    return 5*i +
+; 407  : 		(int) ((((long)5*(index - atanArray[i-1])) +
+; 408  :    		((atanArray[i] - atanArray[i-1])/2))
+; 409  : 			/ (atanArray[i] - atanArray[i-1]));
+
+  00909	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0090c	6b c9 05	 imul	 ecx, 5
+  0090f	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00912	8b 75 08	 mov	 esi, DWORD PTR _index$[ebp]
+  00915	2b 34 95 fc ff
+	ff ff		 sub	 esi, DWORD PTR _atanArray[edx*4-4]
+  0091c	6b f6 05	 imul	 esi, 5
+  0091f	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00922	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00925	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR _atanArray[eax*4]
+  0092c	2b 04 95 fc ff
+	ff ff		 sub	 eax, DWORD PTR _atanArray[edx*4-4]
+  00933	99		 cdq
+  00934	2b c2		 sub	 eax, edx
+  00936	d1 f8		 sar	 eax, 1
+  00938	03 f0		 add	 esi, eax
+  0093a	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0093d	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00940	8b 3c 85 00 00
+	00 00		 mov	 edi, DWORD PTR _atanArray[eax*4]
+  00947	2b 3c 95 fc ff
+	ff ff		 sub	 edi, DWORD PTR _atanArray[edx*4-4]
+  0094e	8b c6		 mov	 eax, esi
+  00950	99		 cdq
+  00951	f7 ff		 idiv	 edi
+  00953	03 c1		 add	 eax, ecx
+
+; 410  : }
+
+  00955	5f		 pop	 edi
+  00956	5e		 pop	 esi
+  00957	8b e5		 mov	 esp, ebp
+  00959	5d		 pop	 ebp
+  0095a	c3		 ret	 0
+?prorateATan@@YAHJ@Z ENDP				; prorateATan
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Point@@QAE@XZ PROC NEAR				; SOL_Point::SOL_Point, COMDAT
+
+; 20   : 	SOL_Point() : x(DefaultCoord), y(DefaultCoord) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 ef cd ab
+	89		 mov	 DWORD PTR [eax], -1985229329 ; 89abcdefH
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c7 41 04 ef cd
+	ab 89		 mov	 DWORD PTR [ecx+4], -1985229329 ; 89abcdefH
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Point@@QAE@XZ ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+END

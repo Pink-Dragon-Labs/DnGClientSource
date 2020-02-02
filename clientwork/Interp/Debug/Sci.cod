@@ -1,0 +1,1839 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Sci.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@HHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPriority@SOL_Plane@@QAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AddPlane@GraphicsMgr@@QAEXPAVSOL_Plane@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FontMgr@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PointerDevice@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPointerDevice@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SOL_Mouse@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSwift@SOL_Mouse@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Vibrate@SOL_Mouse@@UBEXHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Mouse@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?InitExceptions@SCI@@MAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1TimeMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Reset@TimeMgr@@UAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GTimeMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSCI@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SCI@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PointerDevice@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_Mouse@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7TimeMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?sci@@3PAUSCI@@A				; sci
+_BSS	SEGMENT
+?sci@@3PAUSCI@@A DD 01H DUP (?)				; sci
+_BSS	ENDS
+PUBLIC	?Init@SCI@@MAEXHQAPAD@Z				; SCI::Init
+EXTRN	?GetNum@ConfigMgr@@QAEHPADHH@Z:NEAR		; ConfigMgr::GetNum
+EXTRN	?configMgr@@3PAVConfigMgr@@A:DWORD		; configMgr
+EXTRN	?Mono@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Mono
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+EXTRN	?resMgr@@3PAVResourceMgr@@A:DWORD		; resMgr
+EXTRN	?timeMgr@@3PAVTimeMgr@@A:DWORD			; timeMgr
+EXTRN	?Init@MemoryMgr@@QAEXI@Z:NEAR			; MemoryMgr::Init
+EXTRN	?graphMgr@@3PAVGraphicsMgr@@A:DWORD		; graphMgr
+EXTRN	_memMgr:DWORD
+EXTRN	?fontMgr@@3PAVFontMgr@@A:DWORD			; fontMgr
+EXTRN	?mouse@@3PAVSOL_Mouse@@A:DWORD			; mouse
+EXTRN	?eventMgr@@3PAUEventMgr@@A:DWORD		; eventMgr
+EXTRN	?NewRoom@RmResList@@QAEXG@Z:NEAR		; RmResList::NewRoom
+EXTRN	?rmResList@@3PAVRmResList@@A:DWORD		; rmResList
+_DATA	SEGMENT
+$SG34067 DB	'maxMemory', 00H
+	ORG $+2
+$SG34068 DB	'********** new mono screen **********', 0aH, 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_argc$ = 8
+_argv$ = 12
+_this$ = -4
+?Init@SCI@@MAEXHQAPAD@Z PROC NEAR			; SCI::Init
+
+; 36   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 37   : // zero out pointers, so if we fail we can delete cleanly
+; 38   : #ifdef DEBUG
+; 39   : 	debugger = 0;
+; 40   : #endif
+; 41   : 	timeMgr = 0;
+
+  00007	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?timeMgr@@3PAVTimeMgr@@A, 0 ; timeMgr
+
+; 42   : 	mouse = 0;
+
+  00011	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?mouse@@3PAVSOL_Mouse@@A, 0 ; mouse
+
+; 43   : 	fontMgr = 0;
+
+  0001b	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?fontMgr@@3PAVFontMgr@@A, 0 ; fontMgr
+
+; 44   : 	graphMgr = 0;
+
+  00025	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A, 0 ; graphMgr
+
+; 45   : 	eventMgr = 0;
+
+  0002f	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?eventMgr@@3PAUEventMgr@@A, 0 ; eventMgr
+
+; 46   : 	resMgr = 0;
+
+  00039	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?resMgr@@3PAVResourceMgr@@A, 0 ; resMgr
+
+; 47   : 	configMgr = 0;
+
+  00043	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?configMgr@@3PAVConfigMgr@@A, 0 ; configMgr
+
+; 48   : 	memMgr = 0;
+
+  0004d	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _memMgr, 0
+
+; 49   : 	msgMgr = 0;
+
+  00057	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?msgMgr@@3PAVMsgMgr@@A, 0 ; msgMgr
+
+; 50   : // BEW CLEANUP 	critErrHandler	= 0;
+; 51   : // BEW CLEANUP 	critErrHandler	= MakeCritErrHandler();
+; 52   : 	msgMgr 			= MakeMsgMgr();
+
+  00061	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00064	8b 10		 mov	 edx, DWORD PTR [eax]
+  00066	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00069	ff 52 3c	 call	 DWORD PTR [edx+60]
+  0006c	a3 00 00 00 00	 mov	 DWORD PTR ?msgMgr@@3PAVMsgMgr@@A, eax ; msgMgr
+
+; 53   : 	msgMgr->Init();        
+
+  00071	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00076	8b 10		 mov	 edx, DWORD PTR [eax]
+  00078	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0007e	ff 12		 call	 DWORD PTR [edx]
+
+; 54   : 	memMgr 			= MakeMemoryMgr();
+
+  00080	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00083	8b 10		 mov	 edx, DWORD PTR [eax]
+  00085	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00088	ff 52 34	 call	 DWORD PTR [edx+52]
+  0008b	a3 00 00 00 00	 mov	 DWORD PTR _memMgr, eax
+
+; 55   : 	configMgr		= MakeConfigMgr(argc, argv);
+
+  00090	8b 45 0c	 mov	 eax, DWORD PTR _argv$[ebp]
+  00093	50		 push	 eax
+  00094	8b 4d 08	 mov	 ecx, DWORD PTR _argc$[ebp]
+  00097	51		 push	 ecx
+  00098	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  0009b	8b 02		 mov	 eax, DWORD PTR [edx]
+  0009d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000a0	ff 50 24	 call	 DWORD PTR [eax+36]
+  000a3	a3 00 00 00 00	 mov	 DWORD PTR ?configMgr@@3PAVConfigMgr@@A, eax ; configMgr
+
+; 56   : 	timeMgr			= MakeTimeMgr();
+
+  000a8	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000ab	8b 11		 mov	 edx, DWORD PTR [ecx]
+  000ad	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000b0	ff 52 44	 call	 DWORD PTR [edx+68]
+  000b3	a3 00 00 00 00	 mov	 DWORD PTR ?timeMgr@@3PAVTimeMgr@@A, eax ; timeMgr
+
+; 57   : 	InitInterrupts();
+
+  000b8	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  000bb	8b 10		 mov	 edx, DWORD PTR [eax]
+  000bd	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000c0	ff 52 14	 call	 DWORD PTR [edx+20]
+
+; 58   : 
+; 59   : #ifdef DEBUG
+; 60   : 	#define	MAXIMUM_SYSTEM_MEMORY			8*1024*1024
+; 61   : 	size_t debugMemory = configMgr->Val(configMgr->MemAllocate);
+; 62   : 	if (debugMemory)
+; 63   : 		// Command line option chosen to restrict allocated memory
+; 64   : 		memMgr->Init(debugMemory);
+; 65   : 	else
+; 66   : 		memMgr->Init(configMgr->GetNum("maxMemory",0,MAXIMUM_SYSTEM_MEMORY));
+; 67   : #else
+; 68   : 	memMgr->Init(configMgr->GetNum("maxMemory",0,MAXIMUM_SYSTEM_MEMORY));
+
+  000c3	68 00 00 80 00	 push	 8388608			; 00800000H
+  000c8	6a 00		 push	 0
+  000ca	68 00 00 00 00	 push	 OFFSET FLAT:$SG34067
+  000cf	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  000d5	e8 00 00 00 00	 call	 ?GetNum@ConfigMgr@@QAEHPADHH@Z ; ConfigMgr::GetNum
+  000da	50		 push	 eax
+  000db	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  000e1	e8 00 00 00 00	 call	 ?Init@MemoryMgr@@QAEXI@Z ; MemoryMgr::Init
+
+; 69   : #endif
+; 70   : 
+; 71   : 	resMgr			= MakeResourceMgr();
+
+  000e6	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  000e9	8b 10		 mov	 edx, DWORD PTR [eax]
+  000eb	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000ee	ff 52 40	 call	 DWORD PTR [edx+64]
+  000f1	a3 00 00 00 00	 mov	 DWORD PTR ?resMgr@@3PAVResourceMgr@@A, eax ; resMgr
+
+; 72   : 	eventMgr		= MakeEventMgr();
+
+  000f6	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  000f9	8b 10		 mov	 edx, DWORD PTR [eax]
+  000fb	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000fe	ff 52 28	 call	 DWORD PTR [edx+40]
+  00101	a3 00 00 00 00	 mov	 DWORD PTR ?eventMgr@@3PAUEventMgr@@A, eax ; eventMgr
+
+; 73   : 	rmResList->NewRoom(0);
+
+  00106	6a 00		 push	 0
+  00108	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?rmResList@@3PAVRmResList@@A ; rmResList
+  0010e	e8 00 00 00 00	 call	 ?NewRoom@RmResList@@QAEXG@Z ; RmResList::NewRoom
+
+; 74   : 	graphMgr		= MakeGraphicsMgr();
+
+  00113	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00116	8b 10		 mov	 edx, DWORD PTR [eax]
+  00118	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0011b	ff 52 30	 call	 DWORD PTR [edx+48]
+  0011e	a3 00 00 00 00	 mov	 DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A, eax ; graphMgr
+
+; 75   : 	fontMgr			= MakeFontMgr();
+
+  00123	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00126	8b 10		 mov	 edx, DWORD PTR [eax]
+  00128	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0012b	ff 52 2c	 call	 DWORD PTR [edx+44]
+  0012e	a3 00 00 00 00	 mov	 DWORD PTR ?fontMgr@@3PAVFontMgr@@A, eax ; fontMgr
+
+; 76   : 	InitPalette();
+
+  00133	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00136	8b 10		 mov	 edx, DWORD PTR [eax]
+  00138	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0013b	ff 52 18	 call	 DWORD PTR [edx+24]
+
+; 77   : 
+; 78   : 	mouse			= MakeMouse();
+
+  0013e	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00141	8b 10		 mov	 edx, DWORD PTR [eax]
+  00143	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00146	ff 52 38	 call	 DWORD PTR [edx+56]
+  00149	a3 00 00 00 00	 mov	 DWORD PTR ?mouse@@3PAVSOL_Mouse@@A, eax ; mouse
+
+; 79   : 
+; 80   : 	InitPlane();
+
+  0014e	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00151	8b 10		 mov	 edx, DWORD PTR [eax]
+  00153	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00156	ff 52 1c	 call	 DWORD PTR [edx+28]
+
+; 81   : 
+; 82   : 	InitAudio();
+
+  00159	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0015c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0015e	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00161	ff 52 0c	 call	 DWORD PTR [edx+12]
+
+; 83   : 	
+; 84   : 	InitSound();
+
+  00164	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00167	8b 10		 mov	 edx, DWORD PTR [eax]
+  00169	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0016c	ff 52 20	 call	 DWORD PTR [edx+32]
+
+; 85   : 	
+; 86   : 	InitExceptions();
+
+  0016f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00172	8b 10		 mov	 edx, DWORD PTR [eax]
+  00174	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00177	ff 52 10	 call	 DWORD PTR [edx+16]
+
+; 87   : 	
+; 88   : #ifdef DEBUG
+; 89   : 	debugger			= New SCIDebugger;
+; 90   : #endif
+; 91   : 
+; 92   : // BEW CLEANUP 		VerifyVerStamp();
+; 93   : 
+; 94   : 	msgMgr->Mono ( "********** new mono screen **********\n" );
+
+  0017a	68 00 00 00 00	 push	 OFFSET FLAT:$SG34068
+  0017f	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00184	50		 push	 eax
+  00185	e8 00 00 00 00	 call	 ?Mono@MsgMgr@@QAAXPADZZ	; MsgMgr::Mono
+  0018a	83 c4 08	 add	 esp, 8
+
+; 95   : }
+
+  0018d	8b e5		 mov	 esp, ebp
+  0018f	5d		 pop	 ebp
+  00190	c2 08 00	 ret	 8
+?Init@SCI@@MAEXHQAPAD@Z ENDP				; SCI::Init
+_TEXT	ENDS
+PUBLIC	?InitPlane@SCI@@MAEXXZ				; SCI::InitPlane
+PUBLIC	?AddPlane@GraphicsMgr@@QAEXPAVSOL_Plane@@@Z	; GraphicsMgr::AddPlane
+PUBLIC	?SetPriority@SOL_Plane@@QAEXH@Z			; SOL_Plane::SetPriority
+PUBLIC	??0SOL_Rect@@QAE@HHHH@Z				; SOL_Rect::SOL_Rect
+EXTRN	??2@YAPAXI@Z:NEAR				; operator new
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+EXTRN	??0SOL_Plane@@QAE@ABVSOL_Rect@@@Z:NEAR		; SOL_Plane::SOL_Plane
+EXTRN	__except_list:DWORD
+EXTRN	___CxxFrameHandler:NEAR
+xdata$x	SEGMENT
+$T34366	DD	019930520H
+	DD	01H
+	DD	FLAT:$T34369
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T34369	DD	0ffffffffH
+	DD	FLAT:$L34362
+xdata$x	ENDS
+_TEXT	SEGMENT
+_this$ = -44
+_defaultPlane$ = -16
+$T34357 = -20
+$T34358 = -24
+$T34359 = -40
+__$EHRec$ = -12
+?InitPlane@SCI@@MAEXXZ PROC NEAR			; SCI::InitPlane
+
+; 99   : {
+
+  00193	55		 push	 ebp
+  00194	8b ec		 mov	 ebp, esp
+  00196	6a ff		 push	 -1
+  00198	68 00 00 00 00	 push	 $L34367
+  0019d	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  001a3	50		 push	 eax
+  001a4	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  001ab	83 ec 24	 sub	 esp, 36			; 00000024H
+  001ae	89 4d d4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 100  : 	SOL_Plane* defaultPlane = New SOL_Plane(SOL_Rect(0,0,SCIRESX-1,SCIRESY-1));
+
+  001b1	68 c8 9c 00 00	 push	 40136			; 00009cc8H
+  001b6	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  001bb	83 c4 04	 add	 esp, 4
+  001be	89 45 e8	 mov	 DWORD PTR $T34358[ebp], eax
+  001c1	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  001c8	83 7d e8 00	 cmp	 DWORD PTR $T34358[ebp], 0
+  001cc	74 24		 je	 SHORT $L34360
+  001ce	68 df 01 00 00	 push	 479			; 000001dfH
+  001d3	68 7f 02 00 00	 push	 639			; 0000027fH
+  001d8	6a 00		 push	 0
+  001da	6a 00		 push	 0
+  001dc	8d 4d d8	 lea	 ecx, DWORD PTR $T34359[ebp]
+  001df	e8 00 00 00 00	 call	 ??0SOL_Rect@@QAE@HHHH@Z	; SOL_Rect::SOL_Rect
+  001e4	50		 push	 eax
+  001e5	8b 4d e8	 mov	 ecx, DWORD PTR $T34358[ebp]
+  001e8	e8 00 00 00 00	 call	 ??0SOL_Plane@@QAE@ABVSOL_Rect@@@Z ; SOL_Plane::SOL_Plane
+  001ed	89 45 d0	 mov	 DWORD PTR -48+[ebp], eax
+  001f0	eb 07		 jmp	 SHORT $L34361
+$L34360:
+  001f2	c7 45 d0 00 00
+	00 00		 mov	 DWORD PTR -48+[ebp], 0
+$L34361:
+  001f9	8b 45 d0	 mov	 eax, DWORD PTR -48+[ebp]
+  001fc	89 45 ec	 mov	 DWORD PTR $T34357[ebp], eax
+  001ff	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00206	8b 4d ec	 mov	 ecx, DWORD PTR $T34357[ebp]
+  00209	89 4d f0	 mov	 DWORD PTR _defaultPlane$[ebp], ecx
+
+; 101  : 	defaultPlane->SetPriority(0);
+
+  0020c	6a 00		 push	 0
+  0020e	8b 4d f0	 mov	 ecx, DWORD PTR _defaultPlane$[ebp]
+  00211	e8 00 00 00 00	 call	 ?SetPriority@SOL_Plane@@QAEXH@Z ; SOL_Plane::SetPriority
+
+; 102  : 	assert(graphMgr);
+; 103  : 	graphMgr->AddPlane(defaultPlane);
+
+  00216	8b 55 f0	 mov	 edx, DWORD PTR _defaultPlane$[ebp]
+  00219	52		 push	 edx
+  0021a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00220	e8 00 00 00 00	 call	 ?AddPlane@GraphicsMgr@@QAEXPAVSOL_Plane@@@Z ; GraphicsMgr::AddPlane
+
+; 104  : }
+
+  00225	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  00228	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  0022f	8b e5		 mov	 esp, ebp
+  00231	5d		 pop	 ebp
+  00232	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L34362:
+  00000	8b 45 e8	 mov	 eax, DWORD PTR $T34358[ebp]
+  00003	50		 push	 eax
+  00004	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00009	59		 pop	 ecx
+  0000a	c3		 ret	 0
+$L34367:
+  0000b	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T34366
+  00010	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?InitPlane@SCI@@MAEXXZ ENDP				; SCI::InitPlane
+PUBLIC	??0SOL_Point@@QAE@XZ				; SOL_Point::SOL_Point
+;	COMDAT ??0SOL_Rect@@QAE@HHHH@Z
+_TEXT	SEGMENT
+_xa$ = 8
+_ya$ = 12
+_xb$ = 16
+_yb$ = 20
+_this$ = -4
+??0SOL_Rect@@QAE@HHHH@Z PROC NEAR			; SOL_Rect::SOL_Rect, COMDAT
+
+; 55   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0000f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00012	83 c1 08	 add	 ecx, 8
+  00015	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 56   : 	A.x = xa;
+
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b 4d 08	 mov	 ecx, DWORD PTR _xa$[ebp]
+  00020	89 08		 mov	 DWORD PTR [eax], ecx
+
+; 57   : 	A.y = ya;
+
+  00022	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00025	8b 45 0c	 mov	 eax, DWORD PTR _ya$[ebp]
+  00028	89 42 04	 mov	 DWORD PTR [edx+4], eax
+
+; 58   : 	B.x = xb;
+
+  0002b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002e	8b 55 10	 mov	 edx, DWORD PTR _xb$[ebp]
+  00031	89 51 08	 mov	 DWORD PTR [ecx+8], edx
+
+; 59   : 	B.y = yb;
+
+  00034	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00037	8b 4d 14	 mov	 ecx, DWORD PTR _yb$[ebp]
+  0003a	89 48 0c	 mov	 DWORD PTR [eax+12], ecx
+
+; 60   : }
+
+  0003d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00040	8b e5		 mov	 esp, ebp
+  00042	5d		 pop	 ebp
+  00043	c2 10 00	 ret	 16			; 00000010H
+??0SOL_Rect@@QAE@HHHH@Z ENDP				; SOL_Rect::SOL_Rect
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Point@@QAE@XZ PROC NEAR				; SOL_Point::SOL_Point, COMDAT
+
+; 20   : 	SOL_Point() : x(DefaultCoord), y(DefaultCoord) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 ef cd ab
+	89		 mov	 DWORD PTR [eax], -1985229329 ; 89abcdefH
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c7 41 04 ef cd
+	ab 89		 mov	 DWORD PTR [ecx+4], -1985229329 ; 89abcdefH
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Point@@QAE@XZ ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+;	COMDAT ?SetPriority@SOL_Plane@@QAEXH@Z
+_TEXT	SEGMENT
+_pri$ = 8
+_this$ = -4
+?SetPriority@SOL_Plane@@QAEXH@Z PROC NEAR		; SOL_Plane::SetPriority, COMDAT
+
+; 120  : 	void				SetPriority(int pri)		{priority = pri;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _pri$[ebp]
+  0000d	89 48 24	 mov	 DWORD PTR [eax+36], ecx
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+?SetPriority@SOL_Plane@@QAEXH@Z ENDP			; SOL_Plane::SetPriority
+_TEXT	ENDS
+EXTRN	?AddPlane@Screen@@QAEXPAVSOL_Plane@@@Z:NEAR	; Screen::AddPlane
+;	COMDAT ?AddPlane@GraphicsMgr@@QAEXPAVSOL_Plane@@@Z
+_TEXT	SEGMENT
+_plane$ = 8
+_this$ = -4
+?AddPlane@GraphicsMgr@@QAEXPAVSOL_Plane@@@Z PROC NEAR	; GraphicsMgr::AddPlane, COMDAT
+
+; 59   : 	void		AddPlane(SOL_Plane* plane)				{next.AddPlane(plane);}	// cant be const
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _plane$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	83 c1 14	 add	 ecx, 20			; 00000014H
+  00011	e8 00 00 00 00	 call	 ?AddPlane@Screen@@QAEXPAVSOL_Plane@@@Z ; Screen::AddPlane
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?AddPlane@GraphicsMgr@@QAEXPAVSOL_Plane@@@Z ENDP	; GraphicsMgr::AddPlane
+_TEXT	ENDS
+PUBLIC	?MakeFontMgr@SCI@@MAEPAVFontMgr@@XZ		; SCI::MakeFontMgr
+PUBLIC	??0FontMgr@@QAE@G@Z				; FontMgr::FontMgr
+EXTRN	?systemFont@@3GA:WORD				; systemFont
+xdata$x	SEGMENT
+$T34382	DD	019930520H
+	DD	01H
+	DD	FLAT:$T34384
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T34384	DD	0ffffffffH
+	DD	FLAT:$L34380
+xdata$x	ENDS
+_TEXT	SEGMENT
+_this$ = -24
+$T34376 = -16
+$T34377 = -20
+__$EHRec$ = -12
+?MakeFontMgr@SCI@@MAEPAVFontMgr@@XZ PROC NEAR		; SCI::MakeFontMgr
+
+; 108  : {
+
+  00233	55		 push	 ebp
+  00234	8b ec		 mov	 ebp, esp
+  00236	6a ff		 push	 -1
+  00238	68 00 00 00 00	 push	 $L34383
+  0023d	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00243	50		 push	 eax
+  00244	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  0024b	83 ec 10	 sub	 esp, 16			; 00000010H
+  0024e	89 4d e8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 109  : 	#ifdef DEBUG
+; 110  : 		if (configMgr->Claimed("systemFont"))
+; 111  : 			systemFont = configMgr->GetNum("systemFont",0,0);
+; 112  : 	#endif
+; 113  : 	return New FontMgr();
+
+  00251	68 58 02 00 00	 push	 600			; 00000258H
+  00256	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  0025b	83 c4 04	 add	 esp, 4
+  0025e	89 45 ec	 mov	 DWORD PTR $T34377[ebp], eax
+  00261	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  00268	83 7d ec 00	 cmp	 DWORD PTR $T34377[ebp], 0
+  0026c	74 14		 je	 SHORT $L34378
+  0026e	66 a1 00 00 00
+	00		 mov	 ax, WORD PTR ?systemFont@@3GA ; systemFont
+  00274	50		 push	 eax
+  00275	8b 4d ec	 mov	 ecx, DWORD PTR $T34377[ebp]
+  00278	e8 00 00 00 00	 call	 ??0FontMgr@@QAE@G@Z	; FontMgr::FontMgr
+  0027d	89 45 e4	 mov	 DWORD PTR -28+[ebp], eax
+  00280	eb 07		 jmp	 SHORT $L34379
+$L34378:
+  00282	c7 45 e4 00 00
+	00 00		 mov	 DWORD PTR -28+[ebp], 0
+$L34379:
+  00289	8b 4d e4	 mov	 ecx, DWORD PTR -28+[ebp]
+  0028c	89 4d f0	 mov	 DWORD PTR $T34376[ebp], ecx
+  0028f	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00296	8b 45 f0	 mov	 eax, DWORD PTR $T34376[ebp]
+
+; 114  : }
+
+  00299	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  0029c	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  002a3	8b e5		 mov	 esp, ebp
+  002a5	5d		 pop	 ebp
+  002a6	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L34380:
+  00015	8b 45 ec	 mov	 eax, DWORD PTR $T34377[ebp]
+  00018	50		 push	 eax
+  00019	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  0001e	59		 pop	 ecx
+  0001f	c3		 ret	 0
+$L34383:
+  00020	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T34382
+  00025	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?MakeFontMgr@SCI@@MAEPAVFontMgr@@XZ ENDP		; SCI::MakeFontMgr
+PUBLIC	??0Bitmap@@QAE@XZ				; Bitmap::Bitmap
+PUBLIC	??0MemID@@QAE@XZ				; MemID::MemID
+PUBLIC	??0SOL_Rect@@QAE@XZ				; SOL_Rect::SOL_Rect
+EXTRN	?BuildFontTable@FontMgr@@IAEXH@Z:NEAR		; FontMgr::BuildFontTable
+;	COMDAT ??0FontMgr@@QAE@G@Z
+_TEXT	SEGMENT
+_theFont$ = 8
+_this$ = -4
+??0FontMgr@@QAE@G@Z PROC NEAR				; FontMgr::FontMgr, COMDAT
+
+; 45   : 	FontMgr(ushort theFont = systemFont) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	83 c1 0e	 add	 ecx, 14			; 0000000eH
+  0000d	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+  00012	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00015	83 c1 14	 add	 ecx, 20			; 00000014H
+  00018	e8 00 00 00 00	 call	 ??0SOL_Rect@@QAE@XZ	; SOL_Rect::SOL_Rect
+  0001d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00020	83 c1 24	 add	 ecx, 36			; 00000024H
+  00023	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+  00028	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002b	83 c1 30	 add	 ecx, 48			; 00000030H
+  0002e	e8 00 00 00 00	 call	 ??0Bitmap@@QAE@XZ	; Bitmap::Bitmap
+  00033	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00036	83 c1 4e	 add	 ecx, 78			; 0000004eH
+  00039	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+
+; 46   : 		font = theFont+1;	// if font==theFont BuildFontTable just returns
+
+  0003e	8b 45 08	 mov	 eax, DWORD PTR _theFont$[ebp]
+  00041	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00046	83 c0 01	 add	 eax, 1
+  00049	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0004c	66 89 41 28	 mov	 WORD PTR [ecx+40], ax
+
+; 47   : 		BuildFontTable(theFont);
+
+  00050	8b 55 08	 mov	 edx, DWORD PTR _theFont$[ebp]
+  00053	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00059	52		 push	 edx
+  0005a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0005d	e8 00 00 00 00	 call	 ?BuildFontTable@FontMgr@@IAEXH@Z ; FontMgr::BuildFontTable
+
+; 48   : 	}
+
+  00062	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00065	8b e5		 mov	 esp, ebp
+  00067	5d		 pop	 ebp
+  00068	c2 04 00	 ret	 4
+??0FontMgr@@QAE@G@Z ENDP				; FontMgr::FontMgr
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0MemID@@QAE@XZ PROC NEAR				; MemID::MemID, COMDAT
+
+; 15   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 c7 00 00 00	 mov	 WORD PTR [eax], 0
+
+; 16   : 	}
+
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0MemID@@QAE@XZ ENDP					; MemID::MemID
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0Bitmap@@QAE@XZ PROC NEAR				; Bitmap::Bitmap, COMDAT
+
+; 130  : 	Bitmap() 													{view = loop = cel = 0; type = tMem;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	83 c1 10	 add	 ecx, 16			; 00000010H
+  0000d	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+  00012	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00015	c7 40 0c 00 00
+	00 00		 mov	 DWORD PTR [eax+12], 0
+  0001c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001f	c7 41 08 00 00
+	00 00		 mov	 DWORD PTR [ecx+8], 0
+  00026	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00029	c7 42 04 00 00
+	00 00		 mov	 DWORD PTR [edx+4], 0
+  00030	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00033	c7 00 02 00 00
+	00		 mov	 DWORD PTR [eax], 2
+  00039	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0003c	8b e5		 mov	 esp, ebp
+  0003e	5d		 pop	 ebp
+  0003f	c3		 ret	 0
+??0Bitmap@@QAE@XZ ENDP					; Bitmap::Bitmap
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Rect@@QAE@XZ PROC NEAR				; SOL_Rect::SOL_Rect, COMDAT
+
+; 13   : 	SOL_Rect()  {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0000f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00012	83 c1 08	 add	 ecx, 8
+  00015	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Rect@@QAE@XZ ENDP				; SOL_Rect::SOL_Rect
+_TEXT	ENDS
+PUBLIC	?MakeResourceMgr@SCI@@MAEPAVResourceMgr@@XZ	; SCI::MakeResourceMgr
+EXTRN	??0ResourceMgr@@QAE@XZ:NEAR			; ResourceMgr::ResourceMgr
+xdata$x	SEGMENT
+$T34396	DD	019930520H
+	DD	01H
+	DD	FLAT:$T34398
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T34398	DD	0ffffffffH
+	DD	FLAT:$L34394
+xdata$x	ENDS
+_TEXT	SEGMENT
+_this$ = -24
+$T34390 = -16
+$T34391 = -20
+__$EHRec$ = -12
+?MakeResourceMgr@SCI@@MAEPAVResourceMgr@@XZ PROC NEAR	; SCI::MakeResourceMgr
+
+; 118  : {
+
+  002a7	55		 push	 ebp
+  002a8	8b ec		 mov	 ebp, esp
+  002aa	6a ff		 push	 -1
+  002ac	68 00 00 00 00	 push	 $L34397
+  002b1	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  002b7	50		 push	 eax
+  002b8	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  002bf	83 ec 10	 sub	 esp, 16			; 00000010H
+  002c2	89 4d e8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 119  : 	return New ResourceMgr;
+
+  002c5	68 f2 00 00 00	 push	 242			; 000000f2H
+  002ca	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  002cf	83 c4 04	 add	 esp, 4
+  002d2	89 45 ec	 mov	 DWORD PTR $T34391[ebp], eax
+  002d5	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  002dc	83 7d ec 00	 cmp	 DWORD PTR $T34391[ebp], 0
+  002e0	74 0d		 je	 SHORT $L34392
+  002e2	8b 4d ec	 mov	 ecx, DWORD PTR $T34391[ebp]
+  002e5	e8 00 00 00 00	 call	 ??0ResourceMgr@@QAE@XZ	; ResourceMgr::ResourceMgr
+  002ea	89 45 e4	 mov	 DWORD PTR -28+[ebp], eax
+  002ed	eb 07		 jmp	 SHORT $L34393
+$L34392:
+  002ef	c7 45 e4 00 00
+	00 00		 mov	 DWORD PTR -28+[ebp], 0
+$L34393:
+  002f6	8b 45 e4	 mov	 eax, DWORD PTR -28+[ebp]
+  002f9	89 45 f0	 mov	 DWORD PTR $T34390[ebp], eax
+  002fc	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00303	8b 45 f0	 mov	 eax, DWORD PTR $T34390[ebp]
+
+; 120  : }
+
+  00306	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  00309	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  00310	8b e5		 mov	 esp, ebp
+  00312	5d		 pop	 ebp
+  00313	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L34394:
+  0002a	8b 45 ec	 mov	 eax, DWORD PTR $T34391[ebp]
+  0002d	50		 push	 eax
+  0002e	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00033	59		 pop	 ecx
+  00034	c3		 ret	 0
+$L34397:
+  00035	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T34396
+  0003a	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+?MakeResourceMgr@SCI@@MAEPAVResourceMgr@@XZ ENDP	; SCI::MakeResourceMgr
+PUBLIC	?Run@SCI@@UAEXHQAPAD@Z				; SCI::Run
+EXTRN	?pmRun@@YAXXZ:NEAR				; pmRun
+_TEXT	SEGMENT
+_argc$ = 8
+_argv$ = 12
+_this$ = -4
+?Run@SCI@@UAEXHQAPAD@Z PROC NEAR			; SCI::Run
+
+; 124  : {
+
+  00314	55		 push	 ebp
+  00315	8b ec		 mov	 ebp, esp
+  00317	51		 push	 ecx
+  00318	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 125  : //	MessageBox ( NULL, "before init", "Info", MB_OK );
+; 126  : 
+; 127  : 	Init(argc, argv);
+
+  0031b	8b 45 0c	 mov	 eax, DWORD PTR _argv$[ebp]
+  0031e	50		 push	 eax
+  0031f	8b 4d 08	 mov	 ecx, DWORD PTR _argc$[ebp]
+  00322	51		 push	 ecx
+  00323	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00326	8b 02		 mov	 eax, DWORD PTR [edx]
+  00328	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0032b	ff 50 08	 call	 DWORD PTR [eax+8]
+
+; 128  : 
+; 129  : //	MessageBox ( NULL, "after init", "Info", MB_OK );
+; 130  : #ifdef DEBUG
+; 131  : 	if (configMgr->Get(configMgr->ExtractResource))
+; 132  : 		resMgr->ExtractResources();
+; 133  : 	else
+; 134  : #endif
+; 135  : 	pmRun();
+
+  0032e	e8 00 00 00 00	 call	 ?pmRun@@YAXXZ		; pmRun
+
+; 136  : }
+
+  00333	8b e5		 mov	 esp, ebp
+  00335	5d		 pop	 ebp
+  00336	c2 08 00	 ret	 8
+?Run@SCI@@UAEXHQAPAD@Z ENDP				; SCI::Run
+_TEXT	ENDS
+PUBLIC	??1SCI@@UAE@XZ					; SCI::~SCI
+PUBLIC	?InitExceptions@SCI@@MAEXXZ			; SCI::InitExceptions
+PUBLIC	??_7SCI@@6B@					; SCI::`vftable'
+PUBLIC	??_GSCI@@UAEPAXI@Z				; SCI::`scalar deleting destructor'
+PUBLIC	??_ESCI@@UAEPAXI@Z				; SCI::`vector deleting destructor'
+EXTRN	__purecall:NEAR
+EXTRN	?pmEnd@@YAXXZ:NEAR				; pmEnd
+;	COMDAT ??_7SCI@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Sci.cpp
+CONST	SEGMENT
+??_7SCI@@6B@ DD	FLAT:??_ESCI@@UAEPAXI@Z			; SCI::`vftable'
+	DD	FLAT:?Run@SCI@@UAEXHQAPAD@Z
+	DD	FLAT:?Init@SCI@@MAEXHQAPAD@Z
+	DD	FLAT:__purecall
+	DD	FLAT:?InitExceptions@SCI@@MAEXXZ
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:?InitPlane@SCI@@MAEXXZ
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:?MakeFontMgr@SCI@@MAEPAVFontMgr@@XZ
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:?MakeResourceMgr@SCI@@MAEPAVResourceMgr@@XZ
+	DD	FLAT:__purecall
+CONST	ENDS
+_TEXT	SEGMENT
+_this$ = -64
+$T34401 = -4
+$T34402 = -8
+$T34405 = -12
+$T34406 = -16
+$T34409 = -20
+$T34410 = -24
+$T34411 = -28
+$T34414 = -32
+$T34415 = -36
+$T34418 = -40
+$T34419 = -44
+$T34422 = -48
+$T34423 = -52
+$T34424 = -56
+$T34427 = -60
+??1SCI@@UAE@XZ PROC NEAR				; SCI::~SCI
+
+; 139  : {
+
+  00339	55		 push	 ebp
+  0033a	8b ec		 mov	 ebp, esp
+  0033c	83 ec 58	 sub	 esp, 88			; 00000058H
+  0033f	89 4d c0	 mov	 DWORD PTR _this$[ebp], ecx
+  00342	8b 45 c0	 mov	 eax, DWORD PTR _this$[ebp]
+  00345	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7SCI@@6B@ ; SCI::`vftable'
+
+; 140  : 	pmEnd();  
+
+  0034b	e8 00 00 00 00	 call	 ?pmEnd@@YAXXZ		; pmEnd
+
+; 141  : 
+; 142  : #ifdef DEBUG
+; 143  : 	delete debugger;
+; 144  : #endif
+; 145  : 
+; 146  : 	delete timeMgr;
+
+  00350	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00356	89 4d f8	 mov	 DWORD PTR $T34402[ebp], ecx
+  00359	8b 55 f8	 mov	 edx, DWORD PTR $T34402[ebp]
+  0035c	89 55 fc	 mov	 DWORD PTR $T34401[ebp], edx
+  0035f	83 7d fc 00	 cmp	 DWORD PTR $T34401[ebp], 0
+  00363	74 11		 je	 SHORT $L34403
+  00365	6a 01		 push	 1
+  00367	8b 45 fc	 mov	 eax, DWORD PTR $T34401[ebp]
+  0036a	8b 10		 mov	 edx, DWORD PTR [eax]
+  0036c	8b 4d fc	 mov	 ecx, DWORD PTR $T34401[ebp]
+  0036f	ff 12		 call	 DWORD PTR [edx]
+  00371	89 45 bc	 mov	 DWORD PTR -68+[ebp], eax
+  00374	eb 07		 jmp	 SHORT $L34404
+$L34403:
+  00376	c7 45 bc 00 00
+	00 00		 mov	 DWORD PTR -68+[ebp], 0
+$L34404:
+
+; 147  : 	delete mouse;
+
+  0037d	a1 00 00 00 00	 mov	 eax, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  00382	89 45 f0	 mov	 DWORD PTR $T34406[ebp], eax
+  00385	8b 4d f0	 mov	 ecx, DWORD PTR $T34406[ebp]
+  00388	89 4d f4	 mov	 DWORD PTR $T34405[ebp], ecx
+  0038b	83 7d f4 00	 cmp	 DWORD PTR $T34405[ebp], 0
+  0038f	74 11		 je	 SHORT $L34407
+  00391	6a 01		 push	 1
+  00393	8b 55 f4	 mov	 edx, DWORD PTR $T34405[ebp]
+  00396	8b 02		 mov	 eax, DWORD PTR [edx]
+  00398	8b 4d f4	 mov	 ecx, DWORD PTR $T34405[ebp]
+  0039b	ff 10		 call	 DWORD PTR [eax]
+  0039d	89 45 b8	 mov	 DWORD PTR -72+[ebp], eax
+  003a0	eb 07		 jmp	 SHORT $L34408
+$L34407:
+  003a2	c7 45 b8 00 00
+	00 00		 mov	 DWORD PTR -72+[ebp], 0
+$L34408:
+
+; 148  : // BEW CLEANUP 	delete errorMgr;
+; 149  : 	delete fontMgr;
+
+  003a9	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?fontMgr@@3PAVFontMgr@@A ; fontMgr
+  003af	89 4d ec	 mov	 DWORD PTR $T34409[ebp], ecx
+  003b2	8b 55 ec	 mov	 edx, DWORD PTR $T34409[ebp]
+  003b5	52		 push	 edx
+  003b6	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  003bb	83 c4 04	 add	 esp, 4
+
+; 150  : 	delete graphMgr;
+
+  003be	a1 00 00 00 00	 mov	 eax, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  003c3	89 45 e4	 mov	 DWORD PTR $T34411[ebp], eax
+  003c6	8b 4d e4	 mov	 ecx, DWORD PTR $T34411[ebp]
+  003c9	89 4d e8	 mov	 DWORD PTR $T34410[ebp], ecx
+  003cc	83 7d e8 00	 cmp	 DWORD PTR $T34410[ebp], 0
+  003d0	74 11		 je	 SHORT $L34412
+  003d2	6a 01		 push	 1
+  003d4	8b 55 e8	 mov	 edx, DWORD PTR $T34410[ebp]
+  003d7	8b 02		 mov	 eax, DWORD PTR [edx]
+  003d9	8b 4d e8	 mov	 ecx, DWORD PTR $T34410[ebp]
+  003dc	ff 10		 call	 DWORD PTR [eax]
+  003de	89 45 b4	 mov	 DWORD PTR -76+[ebp], eax
+  003e1	eb 07		 jmp	 SHORT $L34413
+$L34412:
+  003e3	c7 45 b4 00 00
+	00 00		 mov	 DWORD PTR -76+[ebp], 0
+$L34413:
+
+; 151  : 	delete eventMgr;
+
+  003ea	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  003f0	89 4d dc	 mov	 DWORD PTR $T34415[ebp], ecx
+  003f3	8b 55 dc	 mov	 edx, DWORD PTR $T34415[ebp]
+  003f6	89 55 e0	 mov	 DWORD PTR $T34414[ebp], edx
+  003f9	83 7d e0 00	 cmp	 DWORD PTR $T34414[ebp], 0
+  003fd	74 11		 je	 SHORT $L34416
+  003ff	6a 01		 push	 1
+  00401	8b 45 e0	 mov	 eax, DWORD PTR $T34414[ebp]
+  00404	8b 10		 mov	 edx, DWORD PTR [eax]
+  00406	8b 4d e0	 mov	 ecx, DWORD PTR $T34414[ebp]
+  00409	ff 12		 call	 DWORD PTR [edx]
+  0040b	89 45 b0	 mov	 DWORD PTR -80+[ebp], eax
+  0040e	eb 07		 jmp	 SHORT $L34417
+$L34416:
+  00410	c7 45 b0 00 00
+	00 00		 mov	 DWORD PTR -80+[ebp], 0
+$L34417:
+
+; 152  : 	delete resMgr;
+
+  00417	a1 00 00 00 00	 mov	 eax, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  0041c	89 45 d4	 mov	 DWORD PTR $T34419[ebp], eax
+  0041f	8b 4d d4	 mov	 ecx, DWORD PTR $T34419[ebp]
+  00422	89 4d d8	 mov	 DWORD PTR $T34418[ebp], ecx
+  00425	83 7d d8 00	 cmp	 DWORD PTR $T34418[ebp], 0
+  00429	74 12		 je	 SHORT $L34420
+  0042b	6a 01		 push	 1
+  0042d	8b 55 d8	 mov	 edx, DWORD PTR $T34418[ebp]
+  00430	8b 02		 mov	 eax, DWORD PTR [edx]
+  00432	8b 4d d8	 mov	 ecx, DWORD PTR $T34418[ebp]
+  00435	ff 50 04	 call	 DWORD PTR [eax+4]
+  00438	89 45 ac	 mov	 DWORD PTR -84+[ebp], eax
+  0043b	eb 07		 jmp	 SHORT $L34421
+$L34420:
+  0043d	c7 45 ac 00 00
+	00 00		 mov	 DWORD PTR -84+[ebp], 0
+$L34421:
+
+; 153  : 	delete configMgr;
+
+  00444	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  0044a	89 4d d0	 mov	 DWORD PTR $T34422[ebp], ecx
+  0044d	8b 55 d0	 mov	 edx, DWORD PTR $T34422[ebp]
+  00450	52		 push	 edx
+  00451	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00456	83 c4 04	 add	 esp, 4
+
+; 154  : 	delete memMgr;
+
+  00459	a1 00 00 00 00	 mov	 eax, DWORD PTR _memMgr
+  0045e	89 45 c8	 mov	 DWORD PTR $T34424[ebp], eax
+  00461	8b 4d c8	 mov	 ecx, DWORD PTR $T34424[ebp]
+  00464	89 4d cc	 mov	 DWORD PTR $T34423[ebp], ecx
+  00467	83 7d cc 00	 cmp	 DWORD PTR $T34423[ebp], 0
+  0046b	74 11		 je	 SHORT $L34425
+  0046d	6a 01		 push	 1
+  0046f	8b 55 cc	 mov	 edx, DWORD PTR $T34423[ebp]
+  00472	8b 02		 mov	 eax, DWORD PTR [edx]
+  00474	8b 4d cc	 mov	 ecx, DWORD PTR $T34423[ebp]
+  00477	ff 10		 call	 DWORD PTR [eax]
+  00479	89 45 a8	 mov	 DWORD PTR -88+[ebp], eax
+  0047c	eb 07		 jmp	 SHORT $L34426
+$L34425:
+  0047e	c7 45 a8 00 00
+	00 00		 mov	 DWORD PTR -88+[ebp], 0
+$L34426:
+
+; 155  : 	delete msgMgr;
+
+  00485	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0048b	89 4d c4	 mov	 DWORD PTR $T34427[ebp], ecx
+  0048e	8b 55 c4	 mov	 edx, DWORD PTR $T34427[ebp]
+  00491	52		 push	 edx
+  00492	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00497	83 c4 04	 add	 esp, 4
+
+; 156  : // BEW CLEANUP 	delete critErrHandler;
+; 157  : 	
+; 158  : // BEW CLEANUP #if CHECKHEAPLEAKS
+; 159  : // BEW CLEANUP 	delete heapLeakChecker;
+; 160  : // BEW CLEANUP #endif
+; 161  : }
+
+  0049a	8b e5		 mov	 esp, ebp
+  0049c	5d		 pop	 ebp
+  0049d	c3		 ret	 0
+??1SCI@@UAE@XZ ENDP					; SCI::~SCI
+_TEXT	ENDS
+;	COMDAT ?InitExceptions@SCI@@MAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?InitExceptions@SCI@@MAEXXZ PROC NEAR			; SCI::InitExceptions, COMDAT
+
+; 27   : 	virtual void            InitExceptions() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c3		 ret	 0
+?InitExceptions@SCI@@MAEXXZ ENDP			; SCI::InitExceptions
+_TEXT	ENDS
+;	COMDAT ??_GSCI@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GSCI@@UAEPAXI@Z PROC NEAR				; SCI::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1SCI@@UAE@XZ		; SCI::~SCI
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L34119
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L34119:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GSCI@@UAEPAXI@Z ENDP					; SCI::`scalar deleting destructor'
+_TEXT	ENDS
+END

@@ -1,0 +1,4164 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Memmgr.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT PARA USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CRT$XCA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCA	ENDS
+CRT$XCU	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCU	ENDS
+CRT$XCL	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCL	ENDS
+CRT$XCC	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCC	ENDS
+CRT$XCZ	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCZ	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Descriptor@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2Descriptor@@SAPAXIPAX@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS, CRT$XCA, CRT$XCU, CRT$XCL, CRT$XCC, CRT$XCZ
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?gCheckHeap@@3HA				; gCheckHeap
+PUBLIC	?signatureTripped@@3HA				; signatureTripped
+PUBLIC	?gBufferOverflow@@3HA				; gBufferOverflow
+PUBLIC	_memMgr
+PUBLIC	?_descList@@3HA					; _descList
+PUBLIC	?_descListEnd@@3HA				; _descListEnd
+PUBLIC	?_descCount@@3HA				; _descCount
+PUBLIC	?gAllocSize@@3HA				; gAllocSize
+PUBLIC	?gHandleCount@@3HA				; gHandleCount
+PUBLIC	?gPurgeList@@3VSOL_List@@A			; gPurgeList
+PUBLIC	?gViewList@@3VSOL_List@@A			; gViewList
+PUBLIC	?gPurgeThreshold@@3HA				; gPurgeThreshold
+PUBLIC	?gPurgeSize@@3HA				; gPurgeSize
+_BSS	SEGMENT
+?gCheckHeap@@3HA DD 01H DUP (?)				; gCheckHeap
+?signatureTripped@@3HA DD 01H DUP (?)			; signatureTripped
+?gBufferOverflow@@3HA DD 01H DUP (?)			; gBufferOverflow
+_memMgr	DD	01H DUP (?)
+?_descList@@3HA DD 01H DUP (?)				; _descList
+?_descListEnd@@3HA DD 01H DUP (?)			; _descListEnd
+?_descCount@@3HA DD 01H DUP (?)				; _descCount
+?gAllocSize@@3HA DD 01H DUP (?)				; gAllocSize
+?gHandleCount@@3HA DD 01H DUP (?)			; gHandleCount
+	ALIGN	8
+
+?gPurgeList@@3VSOL_List@@A DQ 01H DUP (?)		; gPurgeList
+?gViewList@@3VSOL_List@@A DQ 01H DUP (?)		; gViewList
+?gPurgeSize@@3HA DD 01H DUP (?)				; gPurgeSize
+_BSS	ENDS
+CRT$XCU	SEGMENT
+_$S9	DD	FLAT:_$E8
+CRT$XCU	ENDS
+_DATA	SEGMENT
+?gPurgeThreshold@@3HA DD 0300000H			; gPurgeThreshold
+_DATA	ENDS
+_TEXT	SEGMENT
+_$E8	PROC NEAR
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	e8 00 00 00 00	 call	 _$E5
+  00008	e8 00 00 00 00	 call	 _$E7
+  0000d	5d		 pop	 ebp
+  0000e	c3		 ret	 0
+_$E8	ENDP
+_TEXT	ENDS
+PUBLIC	??0SOL_List@@QAE@XZ				; SOL_List::SOL_List
+_TEXT	SEGMENT
+_$E5	PROC NEAR
+
+; 52   : SOL_List gPurgeList, gViewList;
+
+  0000f	55		 push	 ebp
+  00010	8b ec		 mov	 ebp, esp
+  00012	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  00017	e8 00 00 00 00	 call	 ??0SOL_List@@QAE@XZ	; SOL_List::SOL_List
+  0001c	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gViewList@@3VSOL_List@@A
+  00021	e8 00 00 00 00	 call	 ??0SOL_List@@QAE@XZ	; SOL_List::SOL_List
+  00026	5d		 pop	 ebp
+  00027	c3		 ret	 0
+_$E5	ENDP
+_TEXT	ENDS
+PUBLIC	??0Array@@QAE@XZ				; Array::Array
+PUBLIC	??1Array@@QAE@XZ				; Array::~Array
+PUBLIC	?size@SOL_List@@QAEAAHXZ			; SOL_List::size
+EXTRN	__except_list:DWORD
+EXTRN	___CxxFrameHandler:NEAR
+;	COMDAT xdata$x
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\list.hpp
+xdata$x	SEGMENT
+$T59905	DD	019930520H
+	DD	01H
+	DD	FLAT:$T59908
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T59908	DD	0ffffffffH
+	DD	FLAT:$L59901
+xdata$x	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT
+__$EHRec$ = -12
+_this$ = -16
+??0SOL_List@@QAE@XZ PROC NEAR				; SOL_List::SOL_List, COMDAT
+
+; 19   : 	SOL_List() {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	6a ff		 push	 -1
+  00005	68 00 00 00 00	 push	 $L59906
+  0000a	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00010	50		 push	 eax
+  00011	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  00018	51		 push	 ecx
+  00019	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+  0001c	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001f	e8 00 00 00 00	 call	 ??0Array@@QAE@XZ	; Array::Array
+  00024	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+
+; 20   : 		size() = 0;
+
+  0002b	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002e	e8 00 00 00 00	 call	 ?size@SOL_List@@QAEAAHXZ ; SOL_List::size
+  00033	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], 0
+
+; 21   : 	} 
+
+  00039	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  00040	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00043	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  00046	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  0004d	8b e5		 mov	 esp, ebp
+  0004f	5d		 pop	 ebp
+  00050	c3		 ret	 0
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+$L59901:
+  00000	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00003	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  00008	c3		 ret	 0
+$L59906:
+  00009	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T59905
+  0000e	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+??0SOL_List@@QAE@XZ ENDP				; SOL_List::SOL_List
+PUBLIC	??0MemID@@QAE@XZ				; MemID::MemID
+PUBLIC	??0MemID@@QAE@G@Z				; MemID::MemID
+PUBLIC	?dataID@Array@@QAEXVMemID@@@Z			; Array::dataID
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -8
+??0Array@@QAE@XZ PROC NEAR				; Array::Array, COMDAT
+
+; 74   : 	Array() {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+  00009	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ??0MemID@@QAE@XZ	; MemID::MemID
+
+; 75   : 		dataID ( 0 );
+
+  00011	51		 push	 ecx
+  00012	8b cc		 mov	 ecx, esp
+  00014	6a 00		 push	 0
+  00016	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  0001b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001e	e8 00 00 00 00	 call	 ?dataID@Array@@QAEXVMemID@@@Z ; Array::dataID
+
+; 76   : 	}
+
+  00023	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00026	8b e5		 mov	 esp, ebp
+  00028	5d		 pop	 ebp
+  00029	c3		 ret	 0
+??0Array@@QAE@XZ ENDP					; Array::Array
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0MemID@@QAE@XZ PROC NEAR				; MemID::MemID, COMDAT
+
+; 15   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 c7 00 00 00	 mov	 WORD PTR [eax], 0
+
+; 16   : 	}
+
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+??0MemID@@QAE@XZ ENDP					; MemID::MemID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT
+_h$ = 8
+_this$ = -4
+??0MemID@@QAE@G@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 23   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _h$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 24   : 	}
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b e5		 mov	 esp, ebp
+  00016	5d		 pop	 ebp
+  00017	c2 04 00	 ret	 4
+??0MemID@@QAE@G@Z ENDP					; MemID::MemID
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1Array@@QAE@XZ PROC NEAR				; Array::~Array, COMDAT
+
+; 88   : 	~Array() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c3		 ret	 0
+??1Array@@QAE@XZ ENDP					; Array::~Array
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT
+_memID$ = 8
+_this$ = -4
+?dataID@Array@@QAEXVMemID@@@Z PROC NEAR			; Array::dataID, COMDAT
+
+; 111  : 	void dataID ( MemID memID ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 112  : 		_dataID = memID;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 4d 08	 mov	 cx, WORD PTR _memID$[ebp]
+  0000e	66 89 08	 mov	 WORD PTR [eax], cx
+
+; 113  : 	}
+
+  00011	8b e5		 mov	 esp, ebp
+  00013	5d		 pop	 ebp
+  00014	c2 04 00	 ret	 4
+?dataID@Array@@QAEXVMemID@@@Z ENDP			; Array::dataID
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?size@SOL_List@@QAEAAHXZ PROC NEAR			; SOL_List::size, COMDAT
+
+; 24   : 	inline int &size ( void ) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 25   : 		return _size;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	83 c0 04	 add	 eax, 4
+
+; 26   : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?size@SOL_List@@QAEAAHXZ ENDP				; SOL_List::size
+_TEXT	ENDS
+EXTRN	_atexit:NEAR
+_TEXT	SEGMENT
+_$E7	PROC NEAR
+  00028	55		 push	 ebp
+  00029	8b ec		 mov	 ebp, esp
+  0002b	68 00 00 00 00	 push	 OFFSET FLAT:_$E6
+  00030	e8 00 00 00 00	 call	 _atexit
+  00035	83 c4 04	 add	 esp, 4
+  00038	5d		 pop	 ebp
+  00039	c3		 ret	 0
+_$E7	ENDP
+_TEXT	ENDS
+PUBLIC	??1SOL_List@@QAE@XZ				; SOL_List::~SOL_List
+_TEXT	SEGMENT
+_$E6	PROC NEAR
+  0003a	55		 push	 ebp
+  0003b	8b ec		 mov	 ebp, esp
+  0003d	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gViewList@@3VSOL_List@@A
+  00042	e8 00 00 00 00	 call	 ??1SOL_List@@QAE@XZ	; SOL_List::~SOL_List
+  00047	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  0004c	e8 00 00 00 00	 call	 ??1SOL_List@@QAE@XZ	; SOL_List::~SOL_List
+  00051	5d		 pop	 ebp
+  00052	c3		 ret	 0
+_$E6	ENDP
+_TEXT	ENDS
+;	COMDAT ??1SOL_List@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1SOL_List@@QAE@XZ PROC NEAR				; SOL_List::~SOL_List, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1Array@@QAE@XZ	; Array::~Array
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+??1SOL_List@@QAE@XZ ENDP				; SOL_List::~SOL_List
+_TEXT	ENDS
+PUBLIC	?CheckHeap@@YAXPADH@Z				; CheckHeap
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+EXTRN	__imp___heapchk:NEAR
+_DATA	SEGMENT
+$SG59395 DB	'Heap is bad at %s(%d)', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_file$ = 8
+_line$ = 12
+?CheckHeap@@YAXPADH@Z PROC NEAR				; CheckHeap
+
+; 56   : {
+
+  00053	55		 push	 ebp
+  00054	8b ec		 mov	 ebp, esp
+  00056	51		 push	 ecx
+
+; 57   : 	switch ( _heapchk() ) {
+
+  00057	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp___heapchk
+  0005d	89 45 fc	 mov	 DWORD PTR -4+[ebp], eax
+  00060	83 7d fc fc	 cmp	 DWORD PTR -4+[ebp], -4	; fffffffcH
+  00064	7c 24		 jl	 SHORT $L59391
+  00066	83 7d fc fd	 cmp	 DWORD PTR -4+[ebp], -3	; fffffffdH
+  0006a	7e 02		 jle	 SHORT $L59394
+  0006c	eb 1c		 jmp	 SHORT $L59391
+$L59394:
+
+; 58   : 		case _HEAPBADBEGIN:
+; 59   : 		case _HEAPBADNODE:
+; 60   : 			msgMgr->Fatal ( "Heap is bad at %s(%d)", file, line );
+
+  0006e	8b 45 0c	 mov	 eax, DWORD PTR _line$[ebp]
+  00071	50		 push	 eax
+  00072	8b 4d 08	 mov	 ecx, DWORD PTR _file$[ebp]
+  00075	51		 push	 ecx
+  00076	68 00 00 00 00	 push	 OFFSET FLAT:$SG59395
+  0007b	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00081	52		 push	 edx
+  00082	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00087	83 c4 10	 add	 esp, 16			; 00000010H
+$L59391:
+
+; 62   : }
+
+  0008a	8b e5		 mov	 esp, ebp
+  0008c	5d		 pop	 ebp
+  0008d	c3		 ret	 0
+?CheckHeap@@YAXPADH@Z ENDP				; CheckHeap
+_TEXT	ENDS
+PUBLIC	?_ValidateMemID@@YAXVMemID@@PADH@Z		; _ValidateMemID
+PUBLIC	??BMemID@@QBEGXZ				; MemID::operator unsigned short
+PUBLIC	??DMemID@@QBEPAXXZ				; MemID::operator*
+EXTRN	?GetMemTypeStr@@YAPBDW4MemType@@@Z:NEAR		; GetMemTypeStr
+_DATA	SEGMENT
+	ORG $+2
+$SG59420 DB	'(%s:%d) Front signature buffer has been overwritten for '
+	DB	'( 0x%x, %d, 0x%x ) (type = ''%s'', size = %d)', 00H
+$SG59427 DB	'(%s:%d): End signature buffer has been overwritten for ('
+	DB	' 0x%x, %d, 0x%x ) (type = ''%s'', size = %d)', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_id$ = 8
+_file$ = 12
+_line$ = 16
+_i$ = -20
+_tempID$ = -16
+_desc$ = -8
+_ptr$ = -4
+_start$ = -24
+_end$ = -12
+?_ValidateMemID@@YAXVMemID@@PADH@Z PROC NEAR		; _ValidateMemID
+
+; 75   : {
+
+  0008e	55		 push	 ebp
+  0008f	8b ec		 mov	 ebp, esp
+  00091	83 ec 18	 sub	 esp, 24			; 00000018H
+
+; 76   : 	int i;
+; 77   : 	if ( !gBufferOverflow )
+
+  00094	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?gBufferOverflow@@3HA, 0 ; gBufferOverflow
+  0009b	75 05		 jne	 SHORT $L59405
+
+; 78   : 		return;
+
+  0009d	e9 71 01 00 00	 jmp	 $L59403
+$L59405:
+
+; 79   : 
+; 80   : 	unsigned int tempID = (unsigned int)(SCIUWord)id;
+
+  000a2	8d 4d 08	 lea	 ecx, DWORD PTR _id$[ebp]
+  000a5	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  000aa	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  000af	89 45 f0	 mov	 DWORD PTR _tempID$[ebp], eax
+
+; 81   : 	Descriptor *desc = memMgr->desc;
+
+  000b2	a1 00 00 00 00	 mov	 eax, DWORD PTR _memMgr
+  000b7	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  000ba	89 4d f8	 mov	 DWORD PTR _desc$[ebp], ecx
+
+; 82   : 
+; 83   : 	char *ptr = (char *)*id;
+
+  000bd	8d 4d 08	 lea	 ecx, DWORD PTR _id$[ebp]
+  000c0	e8 00 00 00 00	 call	 ??DMemID@@QBEPAXXZ	; MemID::operator*
+  000c5	89 45 fc	 mov	 DWORD PTR _ptr$[ebp], eax
+
+; 84   : 	char *start = ptr - gBufferOverflow;
+
+  000c8	8b 55 fc	 mov	 edx, DWORD PTR _ptr$[ebp]
+  000cb	2b 15 00 00 00
+	00		 sub	 edx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  000d1	89 55 e8	 mov	 DWORD PTR _start$[ebp], edx
+
+; 85   : 	char *end = ptr + desc[tempID].size;
+
+  000d4	8b 45 f0	 mov	 eax, DWORD PTR _tempID$[ebp]
+  000d7	c1 e0 04	 shl	 eax, 4
+  000da	8b 4d f8	 mov	 ecx, DWORD PTR _desc$[ebp]
+  000dd	8b 55 fc	 mov	 edx, DWORD PTR _ptr$[ebp]
+  000e0	03 54 01 08	 add	 edx, DWORD PTR [ecx+eax+8]
+  000e4	89 55 f4	 mov	 DWORD PTR _end$[ebp], edx
+
+; 86   : 
+; 87   : 	for (i=0; i<gBufferOverflow; i++ ) {
+
+  000e7	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  000ee	eb 09		 jmp	 SHORT $L59414
+$L59415:
+  000f0	8b 45 ec	 mov	 eax, DWORD PTR _i$[ebp]
+  000f3	83 c0 01	 add	 eax, 1
+  000f6	89 45 ec	 mov	 DWORD PTR _i$[ebp], eax
+$L59414:
+  000f9	8b 4d ec	 mov	 ecx, DWORD PTR _i$[ebp]
+  000fc	3b 0d 00 00 00
+	00		 cmp	 ecx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00102	7d 79		 jge	 SHORT $L59416
+
+; 88   : 		if ( *start != 'S' ) {
+
+  00104	8b 55 e8	 mov	 edx, DWORD PTR _start$[ebp]
+  00107	0f be 02	 movsx	 eax, BYTE PTR [edx]
+  0010a	83 f8 53	 cmp	 eax, 83			; 00000053H
+  0010d	74 60		 je	 SHORT $L59417
+
+; 89   : 			signatureTripped = 1;	
+
+  0010f	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?signatureTripped@@3HA, 1 ; signatureTripped
+
+; 90   : 			msgMgr->Fatal ( "(%s:%d) Front signature buffer has been overwritten for ( 0x%x, %d, 0x%x ) (type = '%s', size = %d)", file, line, (unsigned short)tempID, i, *start, GetMemTypeStr ( (MemType) desc[tempID].memInfo.type ), desc[tempID].size );
+
+  00119	8b 4d f0	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  0011c	c1 e1 04	 shl	 ecx, 4
+  0011f	8b 55 f8	 mov	 edx, DWORD PTR _desc$[ebp]
+  00122	8b 44 0a 08	 mov	 eax, DWORD PTR [edx+ecx+8]
+  00126	50		 push	 eax
+  00127	8b 4d f0	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  0012a	c1 e1 04	 shl	 ecx, 4
+  0012d	8b 55 f8	 mov	 edx, DWORD PTR _desc$[ebp]
+  00130	0f be 04 0a	 movsx	 eax, BYTE PTR [edx+ecx]
+  00134	50		 push	 eax
+  00135	e8 00 00 00 00	 call	 ?GetMemTypeStr@@YAPBDW4MemType@@@Z ; GetMemTypeStr
+  0013a	83 c4 04	 add	 esp, 4
+  0013d	50		 push	 eax
+  0013e	8b 4d e8	 mov	 ecx, DWORD PTR _start$[ebp]
+  00141	0f be 11	 movsx	 edx, BYTE PTR [ecx]
+  00144	52		 push	 edx
+  00145	8b 45 ec	 mov	 eax, DWORD PTR _i$[ebp]
+  00148	50		 push	 eax
+  00149	8b 4d f0	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  0014c	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00152	51		 push	 ecx
+  00153	8b 55 10	 mov	 edx, DWORD PTR _line$[ebp]
+  00156	52		 push	 edx
+  00157	8b 45 0c	 mov	 eax, DWORD PTR _file$[ebp]
+  0015a	50		 push	 eax
+  0015b	68 00 00 00 00	 push	 OFFSET FLAT:$SG59420
+  00160	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00166	51		 push	 ecx
+  00167	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  0016c	83 c4 24	 add	 esp, 36			; 00000024H
+$L59417:
+
+; 92   : 
+; 93   : 		start++;
+
+  0016f	8b 55 e8	 mov	 edx, DWORD PTR _start$[ebp]
+  00172	83 c2 01	 add	 edx, 1
+  00175	89 55 e8	 mov	 DWORD PTR _start$[ebp], edx
+
+; 94   : 	}
+
+  00178	e9 73 ff ff ff	 jmp	 $L59415
+$L59416:
+
+; 95   : 
+; 96   : 	for ( i=0; i<gBufferOverflow; i++ ) {
+
+  0017d	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00184	eb 09		 jmp	 SHORT $L59421
+$L59422:
+  00186	8b 45 ec	 mov	 eax, DWORD PTR _i$[ebp]
+  00189	83 c0 01	 add	 eax, 1
+  0018c	89 45 ec	 mov	 DWORD PTR _i$[ebp], eax
+$L59421:
+  0018f	8b 4d ec	 mov	 ecx, DWORD PTR _i$[ebp]
+  00192	3b 0d 00 00 00
+	00		 cmp	 ecx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00198	7d 79		 jge	 SHORT $L59423
+
+; 97   : 		if ( *end != 'S' ) {
+
+  0019a	8b 55 f4	 mov	 edx, DWORD PTR _end$[ebp]
+  0019d	0f be 02	 movsx	 eax, BYTE PTR [edx]
+  001a0	83 f8 53	 cmp	 eax, 83			; 00000053H
+  001a3	74 60		 je	 SHORT $L59424
+
+; 98   : 			signatureTripped = 1;	
+
+  001a5	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?signatureTripped@@3HA, 1 ; signatureTripped
+
+; 99   : 			msgMgr->Fatal ( "(%s:%d): End signature buffer has been overwritten for ( 0x%x, %d, 0x%x ) (type = '%s', size = %d)", file, line, (unsigned short)tempID, i, *start, GetMemTypeStr ( (MemType) desc[tempID].memInfo.type ), desc[tempID].size );
+
+  001af	8b 4d f0	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  001b2	c1 e1 04	 shl	 ecx, 4
+  001b5	8b 55 f8	 mov	 edx, DWORD PTR _desc$[ebp]
+  001b8	8b 44 0a 08	 mov	 eax, DWORD PTR [edx+ecx+8]
+  001bc	50		 push	 eax
+  001bd	8b 4d f0	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  001c0	c1 e1 04	 shl	 ecx, 4
+  001c3	8b 55 f8	 mov	 edx, DWORD PTR _desc$[ebp]
+  001c6	0f be 04 0a	 movsx	 eax, BYTE PTR [edx+ecx]
+  001ca	50		 push	 eax
+  001cb	e8 00 00 00 00	 call	 ?GetMemTypeStr@@YAPBDW4MemType@@@Z ; GetMemTypeStr
+  001d0	83 c4 04	 add	 esp, 4
+  001d3	50		 push	 eax
+  001d4	8b 4d e8	 mov	 ecx, DWORD PTR _start$[ebp]
+  001d7	0f be 11	 movsx	 edx, BYTE PTR [ecx]
+  001da	52		 push	 edx
+  001db	8b 45 ec	 mov	 eax, DWORD PTR _i$[ebp]
+  001de	50		 push	 eax
+  001df	8b 4d f0	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  001e2	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  001e8	51		 push	 ecx
+  001e9	8b 55 10	 mov	 edx, DWORD PTR _line$[ebp]
+  001ec	52		 push	 edx
+  001ed	8b 45 0c	 mov	 eax, DWORD PTR _file$[ebp]
+  001f0	50		 push	 eax
+  001f1	68 00 00 00 00	 push	 OFFSET FLAT:$SG59427
+  001f6	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  001fc	51		 push	 ecx
+  001fd	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00202	83 c4 24	 add	 esp, 36			; 00000024H
+$L59424:
+
+; 101  : 
+; 102  : 		end++;
+
+  00205	8b 55 f4	 mov	 edx, DWORD PTR _end$[ebp]
+  00208	83 c2 01	 add	 edx, 1
+  0020b	89 55 f4	 mov	 DWORD PTR _end$[ebp], edx
+
+; 103  : 	}
+
+  0020e	e9 73 ff ff ff	 jmp	 $L59422
+$L59423:
+$L59403:
+
+; 104  : }
+
+  00213	8b e5		 mov	 esp, ebp
+  00215	5d		 pop	 ebp
+  00216	c3		 ret	 0
+?_ValidateMemID@@YAXVMemID@@PADH@Z ENDP			; _ValidateMemID
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT
+_this$ = -4
+??BMemID@@QBEGXZ PROC NEAR				; MemID::operator unsigned short, COMDAT
+
+; 93   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 94   : 		return handle;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 95   : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+??BMemID@@QBEGXZ ENDP					; MemID::operator unsigned short
+_TEXT	ENDS
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT
+_this$ = -4
+??DMemID@@QBEPAXXZ PROC NEAR				; MemID::operator*, COMDAT
+
+; 98   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 99   : 		return memMgr->GetAddr(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+
+; 100  : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??DMemID@@QBEPAXXZ ENDP					; MemID::operator*
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+PUBLIC	?DescribePrevMemID@@YAXVMemID@@@Z		; DescribePrevMemID
+PUBLIC	??0MemID@@QAE@ABV0@@Z				; MemID::MemID
+PUBLIC	?IsValid@MemID@@QBEHXZ				; MemID::IsValid
+_DATA	SEGMENT
+	ORG $+1
+$SG59441 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Memmgr'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_i$ = -4
+$T59929 = -8
+$T59931 = -16
+?DescribePrevMemID@@YAXVMemID@@@Z PROC NEAR		; DescribePrevMemID
+
+; 107  : {
+
+  00217	55		 push	 ebp
+  00218	8b ec		 mov	 ebp, esp
+  0021a	83 ec 10	 sub	 esp, 16			; 00000010H
+
+; 108  : 	for ( int i=0; i<NUMDESCRIPTORS; i++ ) {
+
+  0021d	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00224	eb 09		 jmp	 SHORT $L59432
+$L59433:
+  00226	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00229	83 c0 01	 add	 eax, 1
+  0022c	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L59432:
+  0022f	81 7d fc ee 7f
+	00 00		 cmp	 DWORD PTR _i$[ebp], 32750 ; 00007feeH
+  00236	7d 3f		 jge	 SHORT $L59434
+
+; 109  : 		if ( ((MemID)i).IsValid() ) 
+
+  00238	66 8b 4d fc	 mov	 cx, WORD PTR _i$[ebp]
+  0023c	51		 push	 ecx
+  0023d	8d 4d f8	 lea	 ecx, DWORD PTR $T59929[ebp]
+  00240	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00245	8b c8		 mov	 ecx, eax
+  00247	e8 00 00 00 00	 call	 ?IsValid@MemID@@QBEHXZ	; MemID::IsValid
+  0024c	85 c0		 test	 eax, eax
+  0024e	74 25		 je	 SHORT $L59437
+
+; 110  : 			ValidateMemID ( (MemID)i );
+
+  00250	6a 6e		 push	 110			; 0000006eH
+  00252	68 00 00 00 00	 push	 OFFSET FLAT:$SG59441
+  00257	66 8b 55 fc	 mov	 dx, WORD PTR _i$[ebp]
+  0025b	52		 push	 edx
+  0025c	8d 4d f0	 lea	 ecx, DWORD PTR $T59931[ebp]
+  0025f	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00264	51		 push	 ecx
+  00265	8b cc		 mov	 ecx, esp
+  00267	50		 push	 eax
+  00268	e8 00 00 00 00	 call	 ??0MemID@@QAE@ABV0@@Z	; MemID::MemID
+  0026d	e8 00 00 00 00	 call	 ?_ValidateMemID@@YAXVMemID@@PADH@Z ; _ValidateMemID
+  00272	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59437:
+
+; 111  : 	}
+
+  00275	eb af		 jmp	 SHORT $L59433
+$L59434:
+
+; 112  : }
+
+  00277	8b e5		 mov	 esp, ebp
+  00279	5d		 pop	 ebp
+  0027a	c3		 ret	 0
+?DescribePrevMemID@@YAXVMemID@@@Z ENDP			; DescribePrevMemID
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_id$ = 8
+_this$ = -4
+??0MemID@@QAE@ABV0@@Z PROC NEAR				; MemID::MemID, COMDAT
+
+; 19   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _id$[ebp]
+  0000d	66 8b 11	 mov	 dx, WORD PTR [ecx]
+  00010	66 89 10	 mov	 WORD PTR [eax], dx
+
+; 20   : 	}
+
+  00013	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+??0MemID@@QAE@ABV0@@Z ENDP				; MemID::MemID
+_TEXT	ENDS
+PUBLIC	?IsValid@MemoryMgr@@QAEHG@Z			; MemoryMgr::IsValid
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsValid@MemID@@QBEHXZ PROC NEAR			; MemID::IsValid, COMDAT
+
+; 62   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 63   : 		return memMgr->IsValid(handle);
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 08	 mov	 cx, WORD PTR [eax]
+  0000d	51		 push	 ecx
+  0000e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  00014	e8 00 00 00 00	 call	 ?IsValid@MemoryMgr@@QAEHG@Z ; MemoryMgr::IsValid
+
+; 64   : 	}
+
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+?IsValid@MemID@@QBEHXZ ENDP				; MemID::IsValid
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -8
+_tempID$ = -4
+?IsValid@MemoryMgr@@QAEHG@Z PROC NEAR			; MemoryMgr::IsValid, COMDAT
+
+; 475  : 	inline Bool MemoryMgr::IsValid(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 476  : 		unsigned short tempID = (unsigned short)theID;
+
+  00009	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  0000d	66 89 45 fc	 mov	 WORD PTR _tempID$[ebp], ax
+
+; 477  : 
+; 478  : 		return(
+; 479  : 				(tempID)															&&
+; 480  : 				(tempID < maxDescriptors)									&&
+; 481  : 				(desc[tempID].memInfo.bits.freeDescriptor == False)	&&
+; 482  : 				(desc[tempID].memInfo.bits.freeMemory == False)
+; 483  : 				);
+
+  00011	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00014	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  0001a	85 c9		 test	 ecx, ecx
+  0001c	74 58		 je	 SHORT $L59935
+  0001e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00021	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00027	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0002a	3b 50 04	 cmp	 edx, DWORD PTR [eax+4]
+  0002d	73 47		 jae	 SHORT $L59935
+  0002f	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00032	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00038	c1 e1 04	 shl	 ecx, 4
+  0003b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0003e	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00041	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00044	c1 e1 0e	 shl	 ecx, 14			; 0000000eH
+  00047	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  0004a	85 c9		 test	 ecx, ecx
+  0004c	75 28		 jne	 SHORT $L59935
+  0004e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00051	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00057	c1 e2 04	 shl	 edx, 4
+  0005a	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0005d	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00060	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  00063	c1 e2 14	 shl	 edx, 20			; 00000014H
+  00066	c1 fa 1f	 sar	 edx, 31			; 0000001fH
+  00069	85 d2		 test	 edx, edx
+  0006b	75 09		 jne	 SHORT $L59935
+  0006d	c7 45 f4 01 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 1
+  00074	eb 07		 jmp	 SHORT $L59936
+$L59935:
+  00076	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR -12+[ebp], 0
+$L59936:
+  0007d	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+
+; 484  : 	}
+
+  00080	8b e5		 mov	 esp, ebp
+  00082	5d		 pop	 ebp
+  00083	c2 04 00	 ret	 4
+?IsValid@MemoryMgr@@QAEHG@Z ENDP			; MemoryMgr::IsValid
+_TEXT	ENDS
+PUBLIC	??0MemoryMgr@@QAE@XZ				; MemoryMgr::MemoryMgr
+PUBLIC	??_7MemoryMgr@@6B@				; MemoryMgr::`vftable'
+PUBLIC	??_GMemoryMgr@@UAEPAXI@Z			; MemoryMgr::`scalar deleting destructor'
+PUBLIC	??_EMemoryMgr@@UAEPAXI@Z			; MemoryMgr::`vector deleting destructor'
+EXTRN	__purecall:NEAR
+;	COMDAT ??_7MemoryMgr@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Memmgr.cpp
+CONST	SEGMENT
+??_7MemoryMgr@@6B@ DD FLAT:??_EMemoryMgr@@UAEPAXI@Z	; MemoryMgr::`vftable'
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+CONST	ENDS
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+??0MemoryMgr@@QAE@XZ PROC NEAR				; MemoryMgr::MemoryMgr
+
+; 135  : {
+
+  0027b	55		 push	 ebp
+  0027c	8b ec		 mov	 ebp, esp
+  0027e	83 ec 08	 sub	 esp, 8
+  00281	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+  00284	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00287	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7MemoryMgr@@6B@ ; MemoryMgr::`vftable'
+
+; 136  : 	//	MemInfo depends on knowing the sizeof a MemType for its union to work
+; 137  : 	//	Even this depends on a char being 8 bits
+; 138  : 	//	The "volatile" stuff is an attempt to prevent the compiler from
+; 139  : 	//	complaining that this test is always True
+; 140  : 	volatile size_t i = sizeof(MemType);
+
+  0028d	c7 45 fc 04 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 4
+
+; 141  : 	assert(i == 4);
+; 142  : 	i = SIGNATURESIZE & 3;
+
+  00294	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+
+; 143  : 	assert(i == 0);
+; 144  : 	totalMemory = 0;
+
+  0029b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0029e	c7 41 18 00 00
+	00 00		 mov	 DWORD PTR [ecx+24], 0
+
+; 145  : }
+
+  002a5	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  002a8	8b e5		 mov	 esp, ebp
+  002aa	5d		 pop	 ebp
+  002ab	c3		 ret	 0
+??0MemoryMgr@@QAE@XZ ENDP				; MemoryMgr::MemoryMgr
+_TEXT	ENDS
+PUBLIC	??1MemoryMgr@@UAE@XZ				; MemoryMgr::~MemoryMgr
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GMemoryMgr@@UAEPAXI@Z PROC NEAR			; MemoryMgr::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1MemoryMgr@@UAE@XZ	; MemoryMgr::~MemoryMgr
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L54768
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L54768:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GMemoryMgr@@UAEPAXI@Z ENDP				; MemoryMgr::`scalar deleting destructor'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1MemoryMgr@@UAE@XZ PROC NEAR				; MemoryMgr::~MemoryMgr, COMDAT
+
+; 291  : 	virtual ~MemoryMgr() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7MemoryMgr@@6B@ ; MemoryMgr::`vftable'
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+??1MemoryMgr@@UAE@XZ ENDP				; MemoryMgr::~MemoryMgr
+_TEXT	ENDS
+PUBLIC	??0Descriptor@@QAE@XZ				; Descriptor::Descriptor
+PUBLIC	??2Descriptor@@SAPAXIPAX@Z			; Descriptor::operator new
+PUBLIC	?Init@MemoryMgr@@QAEXI@Z			; MemoryMgr::Init
+PUBLIC	?GetNewDescriptor@MemoryMgr@@QAEGW4ReservedHandle@@@Z ; MemoryMgr::GetNewDescriptor
+EXTRN	?Printf@@YAHPADZZ:NEAR				; Printf
+EXTRN	?GetNum@ConfigMgr@@QAEHPADHH@Z:NEAR		; ConfigMgr::GetNum
+EXTRN	?configMgr@@3PAVConfigMgr@@A:DWORD		; configMgr
+EXTRN	?_descTablePtr@@3PAXA:DWORD			; _descTablePtr
+EXTRN	__imp__exit:NEAR
+EXTRN	__imp__malloc:NEAR
+EXTRN	_memset:NEAR
+_DATA	SEGMENT
+	ORG $+3
+$SG59473 DB	'minMemory', 00H
+	ORG $+2
+$SG59474 DB	'Insufficient memory; %d more bytes required', 0aH, 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_maxMemory$ = 8
+_this$ = -32
+_i$ = -16
+_sysMem$ = -4
+_theDescriptorsSize$ = -20
+_ii$ = -12
+_DescriptorsAddr$ = -8
+$T59941 = -24
+$T59944 = -28
+?Init@MemoryMgr@@QAEXI@Z PROC NEAR			; MemoryMgr::Init
+
+; 149  : {
+
+  002ac	55		 push	 ebp
+  002ad	8b ec		 mov	 ebp, esp
+  002af	83 ec 28	 sub	 esp, 40			; 00000028H
+  002b2	56		 push	 esi
+  002b3	89 4d e0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 150  : 	int i;
+; 151  : #ifdef DEBUG
+; 152  : 	moveToFront = True;
+; 153  : //	strcpy(signature,"END OF MEMORY BLOCK");
+; 154  : 	checkVolatile = 0;
+; 155  : #endif
+; 156  : 	int sysMem = GetSysMemAvail();
+
+  002b6	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  002b9	8b 10		 mov	 edx, DWORD PTR [eax]
+  002bb	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002be	ff 52 10	 call	 DWORD PTR [edx+16]
+  002c1	89 45 fc	 mov	 DWORD PTR _sysMem$[ebp], eax
+
+; 157  : 
+; 158  : 	if (sysMem > maxMemory)
+
+  002c4	8b 45 fc	 mov	 eax, DWORD PTR _sysMem$[ebp]
+  002c7	3b 45 08	 cmp	 eax, DWORD PTR _maxMemory$[ebp]
+  002ca	76 06		 jbe	 SHORT $L59471
+
+; 159  : 		sysMem = maxMemory;
+
+  002cc	8b 4d 08	 mov	 ecx, DWORD PTR _maxMemory$[ebp]
+  002cf	89 4d fc	 mov	 DWORD PTR _sysMem$[ebp], ecx
+$L59471:
+
+; 160  : 
+; 161  : 	if (sysMem < (totalMemory = configMgr->GetNum("minMemory",0,sysMem)))
+
+  002d2	8b 55 fc	 mov	 edx, DWORD PTR _sysMem$[ebp]
+  002d5	52		 push	 edx
+  002d6	6a 00		 push	 0
+  002d8	68 00 00 00 00	 push	 OFFSET FLAT:$SG59473
+  002dd	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?configMgr@@3PAVConfigMgr@@A ; configMgr
+  002e3	e8 00 00 00 00	 call	 ?GetNum@ConfigMgr@@QAEHPADHH@Z ; ConfigMgr::GetNum
+  002e8	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002eb	89 41 18	 mov	 DWORD PTR [ecx+24], eax
+  002ee	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  002f1	8b 45 fc	 mov	 eax, DWORD PTR _sysMem$[ebp]
+  002f4	3b 42 18	 cmp	 eax, DWORD PTR [edx+24]
+  002f7	73 1e		 jae	 SHORT $L59472
+
+; 162  : 		exit(Printf("Insufficient memory; %d more bytes required\n",totalMemory-sysMem));
+
+  002f9	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  002fc	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  002ff	2b 55 fc	 sub	 edx, DWORD PTR _sysMem$[ebp]
+  00302	52		 push	 edx
+  00303	68 00 00 00 00	 push	 OFFSET FLAT:$SG59474
+  00308	e8 00 00 00 00	 call	 ?Printf@@YAHPADZZ	; Printf
+  0030d	83 c4 08	 add	 esp, 8
+  00310	50		 push	 eax
+  00311	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__exit
+$L59472:
+
+; 163  : 
+; 164  :   	// Get system memory
+; 165  : 	// paragraph align
+; 166  : 
+; 167  :   	// Set up the Descriptors
+; 168  : 	maxDescriptors = NUMDESCRIPTORS;
+
+  00317	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  0031a	c7 40 04 ee 7f
+	00 00		 mov	 DWORD PTR [eax+4], 32750 ; 00007feeH
+
+; 169  : 	needMoreDescs = False;
+
+  00321	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00324	c7 41 10 00 00
+	00 00		 mov	 DWORD PTR [ecx+16], 0
+
+; 170  : 	size_t theDescriptorsSize = maxDescriptors * sizeof(Descriptor);
+
+  0032b	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  0032e	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  00331	c1 e0 04	 shl	 eax, 4
+  00334	89 45 ec	 mov	 DWORD PTR _theDescriptorsSize$[ebp], eax
+
+; 171  : 	size_t ii = theDescriptorsSize & 3;
+
+  00337	8b 4d ec	 mov	 ecx, DWORD PTR _theDescriptorsSize$[ebp]
+  0033a	83 e1 03	 and	 ecx, 3
+  0033d	89 4d f4	 mov	 DWORD PTR _ii$[ebp], ecx
+
+; 172  : 	assert (ii == 0);
+; 173  : 
+; 174  :   	char* DescriptorsAddr = (char *)malloc ( theDescriptorsSize + (gBufferOverflow * 2) );
+
+  00340	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00346	8b 45 ec	 mov	 eax, DWORD PTR _theDescriptorsSize$[ebp]
+  00349	8d 0c 50	 lea	 ecx, DWORD PTR [eax+edx*2]
+  0034c	51		 push	 ecx
+  0034d	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__malloc
+  00353	83 c4 04	 add	 esp, 4
+  00356	89 45 f8	 mov	 DWORD PTR _DescriptorsAddr$[ebp], eax
+
+; 175  : 
+; 176  : 	memset ( DescriptorsAddr, 'S', theDescriptorsSize + (gBufferOverflow * 2));
+
+  00359	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  0035f	8b 45 ec	 mov	 eax, DWORD PTR _theDescriptorsSize$[ebp]
+  00362	8d 0c 50	 lea	 ecx, DWORD PTR [eax+edx*2]
+  00365	51		 push	 ecx
+  00366	6a 53		 push	 83			; 00000053H
+  00368	8b 55 f8	 mov	 edx, DWORD PTR _DescriptorsAddr$[ebp]
+  0036b	52		 push	 edx
+  0036c	e8 00 00 00 00	 call	 _memset
+  00371	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 177  : 	DescriptorsAddr += gBufferOverflow;
+
+  00374	8b 45 f8	 mov	 eax, DWORD PTR _DescriptorsAddr$[ebp]
+  00377	03 05 00 00 00
+	00		 add	 eax, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  0037d	89 45 f8	 mov	 DWORD PTR _DescriptorsAddr$[ebp], eax
+
+; 178  : 
+; 179  : 	desc = new(DescriptorsAddr) Descriptor;
+
+  00380	8b 4d f8	 mov	 ecx, DWORD PTR _DescriptorsAddr$[ebp]
+  00383	51		 push	 ecx
+  00384	6a 10		 push	 16			; 00000010H
+  00386	e8 00 00 00 00	 call	 ??2Descriptor@@SAPAXIPAX@Z ; Descriptor::operator new
+  0038b	83 c4 08	 add	 esp, 8
+  0038e	89 45 e8	 mov	 DWORD PTR $T59941[ebp], eax
+  00391	83 7d e8 00	 cmp	 DWORD PTR $T59941[ebp], 0
+  00395	74 0d		 je	 SHORT $L59942
+  00397	8b 4d e8	 mov	 ecx, DWORD PTR $T59941[ebp]
+  0039a	e8 00 00 00 00	 call	 ??0Descriptor@@QAE@XZ	; Descriptor::Descriptor
+  0039f	89 45 dc	 mov	 DWORD PTR -36+[ebp], eax
+  003a2	eb 07		 jmp	 SHORT $L59943
+$L59942:
+  003a4	c7 45 dc 00 00
+	00 00		 mov	 DWORD PTR -36+[ebp], 0
+$L59943:
+  003ab	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  003ae	8b 45 dc	 mov	 eax, DWORD PTR -36+[ebp]
+  003b1	89 42 08	 mov	 DWORD PTR [edx+8], eax
+
+; 180  : 	_descTablePtr = desc;
+
+  003b4	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  003b7	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  003ba	89 15 00 00 00
+	00		 mov	 DWORD PTR ?_descTablePtr@@3PAXA, edx ; _descTablePtr
+
+; 181  : 
+; 182  : 	for (i = 1; i < maxDescriptors; ++i) {
+
+  003c0	c7 45 f0 01 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 1
+  003c7	eb 09		 jmp	 SHORT $L59485
+$L59486:
+  003c9	8b 45 f0	 mov	 eax, DWORD PTR _i$[ebp]
+  003cc	83 c0 01	 add	 eax, 1
+  003cf	89 45 f0	 mov	 DWORD PTR _i$[ebp], eax
+$L59485:
+  003d2	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  003d5	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  003d8	3b 51 04	 cmp	 edx, DWORD PTR [ecx+4]
+  003db	73 57		 jae	 SHORT $L59487
+
+; 183  : 		new(DescriptorsAddr + i*sizeof(Descriptor)) Descriptor;
+
+  003dd	8b 45 f0	 mov	 eax, DWORD PTR _i$[ebp]
+  003e0	c1 e0 04	 shl	 eax, 4
+  003e3	8b 4d f8	 mov	 ecx, DWORD PTR _DescriptorsAddr$[ebp]
+  003e6	03 c8		 add	 ecx, eax
+  003e8	51		 push	 ecx
+  003e9	6a 10		 push	 16			; 00000010H
+  003eb	e8 00 00 00 00	 call	 ??2Descriptor@@SAPAXIPAX@Z ; Descriptor::operator new
+  003f0	83 c4 08	 add	 esp, 8
+  003f3	89 45 e4	 mov	 DWORD PTR $T59944[ebp], eax
+  003f6	83 7d e4 00	 cmp	 DWORD PTR $T59944[ebp], 0
+  003fa	74 0d		 je	 SHORT $L59945
+  003fc	8b 4d e4	 mov	 ecx, DWORD PTR $T59944[ebp]
+  003ff	e8 00 00 00 00	 call	 ??0Descriptor@@QAE@XZ	; Descriptor::Descriptor
+  00404	89 45 d8	 mov	 DWORD PTR -40+[ebp], eax
+  00407	eb 07		 jmp	 SHORT $L59946
+$L59945:
+  00409	c7 45 d8 00 00
+	00 00		 mov	 DWORD PTR -40+[ebp], 0
+$L59946:
+
+; 184  : 		desc[i].data = 0;
+
+  00410	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  00413	c1 e2 04	 shl	 edx, 4
+  00416	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00419	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  0041c	c7 44 11 04 00
+	00 00 00	 mov	 DWORD PTR [ecx+edx+4], 0
+
+; 185  : 		_descPtrTable[i] = 0;
+
+  00424	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  00427	c7 04 95 00 00
+	00 00 00 00 00
+	00		 mov	 DWORD PTR __descPtrTable[edx*4], 0
+
+; 186  : 	}
+
+  00432	eb 95		 jmp	 SHORT $L59486
+$L59487:
+
+; 187  : 
+; 188  : 	_descList = RESERVEDHANDLES;
+
+  00434	c7 05 00 00 00
+	00 2b 00 00 00	 mov	 DWORD PTR ?_descList@@3HA, 43 ; _descList, 0000002bH
+
+; 189  : 	_descListEnd = maxDescriptors-1;
+
+  0043e	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00441	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00444	83 e9 01	 sub	 ecx, 1
+  00447	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?_descListEnd@@3HA, ecx ; _descListEnd
+
+; 190  : 	for (i=RESERVEDHANDLES;i < maxDescriptors-1;++i)	{
+
+  0044d	c7 45 f0 2b 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 43	; 0000002bH
+  00454	eb 09		 jmp	 SHORT $L59493
+$L59494:
+  00456	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  00459	83 c2 01	 add	 edx, 1
+  0045c	89 55 f0	 mov	 DWORD PTR _i$[ebp], edx
+$L59493:
+  0045f	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00462	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00465	83 e9 01	 sub	 ecx, 1
+  00468	39 4d f0	 cmp	 DWORD PTR _i$[ebp], ecx
+  0046b	73 18		 jae	 SHORT $L59495
+
+; 191  : 		desc[i].data = (char *)i+1;
+
+  0046d	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  00470	83 c2 01	 add	 edx, 1
+  00473	8b 45 f0	 mov	 eax, DWORD PTR _i$[ebp]
+  00476	c1 e0 04	 shl	 eax, 4
+  00479	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0047c	8b 49 08	 mov	 ecx, DWORD PTR [ecx+8]
+  0047f	89 54 01 04	 mov	 DWORD PTR [ecx+eax+4], edx
+
+; 192  : 	}
+
+  00483	eb d1		 jmp	 SHORT $L59494
+$L59495:
+
+; 193  : 	desc[i].data = (char *)0;
+
+  00485	8b 55 f0	 mov	 edx, DWORD PTR _i$[ebp]
+  00488	c1 e2 04	 shl	 edx, 4
+  0048b	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  0048e	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00491	c7 44 11 04 00
+	00 00 00	 mov	 DWORD PTR [ecx+edx+4], 0
+
+; 194  : 
+; 195  : 	_descCount = maxDescriptors - RESERVEDHANDLES;
+
+  00499	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  0049c	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  0049f	83 e8 2b	 sub	 eax, 43			; 0000002bH
+  004a2	a3 00 00 00 00	 mov	 DWORD PTR ?_descCount@@3HA, eax ; _descCount
+
+; 196  : 
+; 197  : 	descID = GetNewDescriptor(DescriptorTableHandle);
+
+  004a7	6a 01		 push	 1
+  004a9	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  004ac	e8 00 00 00 00	 call	 ?GetNewDescriptor@MemoryMgr@@QAEGW4ReservedHandle@@@Z ; MemoryMgr::GetNewDescriptor
+  004b1	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  004b4	66 89 41 14	 mov	 WORD PTR [ecx+20], ax
+
+; 198  : 	desc[descID].size = theDescriptorsSize;
+
+  004b8	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  004bb	33 c0		 xor	 eax, eax
+  004bd	66 8b 42 14	 mov	 ax, WORD PTR [edx+20]
+  004c1	c1 e0 04	 shl	 eax, 4
+  004c4	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  004c7	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  004ca	8b 4d ec	 mov	 ecx, DWORD PTR _theDescriptorsSize$[ebp]
+  004cd	89 4c 02 08	 mov	 DWORD PTR [edx+eax+8], ecx
+
+; 199  : 	desc[descID].data = DescriptorsAddr;
+
+  004d1	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  004d4	33 c0		 xor	 eax, eax
+  004d6	66 8b 42 14	 mov	 ax, WORD PTR [edx+20]
+  004da	c1 e0 04	 shl	 eax, 4
+  004dd	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  004e0	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  004e3	8b 4d f8	 mov	 ecx, DWORD PTR _DescriptorsAddr$[ebp]
+  004e6	89 4c 02 04	 mov	 DWORD PTR [edx+eax+4], ecx
+
+; 200  : 	_descPtrTable[descID] = desc[descID].data;
+
+  004ea	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  004ed	33 c0		 xor	 eax, eax
+  004ef	66 8b 42 14	 mov	 ax, WORD PTR [edx+20]
+  004f3	c1 e0 04	 shl	 eax, 4
+  004f6	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  004f9	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  004fc	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  004ff	33 f6		 xor	 esi, esi
+  00501	66 8b 71 14	 mov	 si, WORD PTR [ecx+20]
+  00505	8b 54 02 04	 mov	 edx, DWORD PTR [edx+eax+4]
+  00509	89 14 b5 00 00
+	00 00		 mov	 DWORD PTR __descPtrTable[esi*4], edx
+
+; 201  : 	desc[descID].memInfo.attributes = HANDLESATTRIBUTES;
+
+  00510	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00513	33 c9		 xor	 ecx, ecx
+  00515	66 8b 48 14	 mov	 cx, WORD PTR [eax+20]
+  00519	c1 e1 04	 shl	 ecx, 4
+  0051c	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  0051f	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00522	c7 04 08 00 43
+	00 00		 mov	 DWORD PTR [eax+ecx], 17152 ; 00004300H
+
+; 202  : 	desc[descID].memInfo.type = MemDescriptors;
+
+  00529	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0052c	33 d2		 xor	 edx, edx
+  0052e	66 8b 51 14	 mov	 dx, WORD PTR [ecx+20]
+  00532	c1 e2 04	 shl	 edx, 4
+  00535	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00538	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  0053b	c6 04 11 4d	 mov	 BYTE PTR [ecx+edx], 77	; 0000004dH
+$L59468:
+
+; 203  : 	#ifdef DEBUG
+; 204  : 		WriteSignature(descID);
+; 205  : 	#endif
+; 206  : 
+; 207  : #ifdef DEBUG
+; 208  : 	// If desired hold back memory so that upon running out
+; 209  : 	// of memory the memory stats can be displayed
+; 210  : 	if (configMgr->GetBool("memoryStats") > 0) {
+; 211  : 		#define MEMORYFORSTATS  350000
+; 212  : 		Alloc(MEMORYSTATSATTRIBUTES,MEMORYFORSTATS,0,0,0,MemoryStatsHandle);
+; 213  : 	}
+; 214  : #endif
+; 215  : }
+
+  0053f	5e		 pop	 esi
+  00540	8b e5		 mov	 esp, ebp
+  00542	5d		 pop	 ebp
+  00543	c2 04 00	 ret	 4
+?Init@MemoryMgr@@QAEXI@Z ENDP				; MemoryMgr::Init
+_TEXT	ENDS
+PUBLIC	??0MemInfo@@QAE@XZ				; MemInfo::MemInfo
+;	COMDAT ??0Descriptor@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0Descriptor@@QAE@XZ PROC NEAR				; Descriptor::Descriptor, COMDAT
+
+; 255  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0MemInfo@@QAE@XZ	; MemInfo::MemInfo
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	c7 40 08 00 00
+	00 00		 mov	 DWORD PTR [eax+8], 0
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	c6 41 0e 00	 mov	 BYTE PTR [ecx+14], 0
+
+; 256  : 	}
+
+  00020	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00023	8b e5		 mov	 esp, ebp
+  00025	5d		 pop	 ebp
+  00026	c3		 ret	 0
+??0Descriptor@@QAE@XZ ENDP				; Descriptor::Descriptor
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0MemInfo@@QAE@XZ PROC NEAR				; MemInfo::MemInfo, COMDAT
+
+; 231  : MemInfo()
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 232  : 		{
+; 233  : 		attributes = MEMATTRIBUTES;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 0c 02
+	00		 mov	 DWORD PTR [eax], 134144	; 00020c00H
+
+; 234  : 		type = MemFree;
+
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c6 01 71	 mov	 BYTE PTR [ecx], 113	; 00000071H
+
+; 235  :    	}
+
+  00016	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00019	8b e5		 mov	 esp, ebp
+  0001b	5d		 pop	 ebp
+  0001c	c3		 ret	 0
+??0MemInfo@@QAE@XZ ENDP					; MemInfo::MemInfo
+_TEXT	ENDS
+;	COMDAT ??2Descriptor@@SAPAXIPAX@Z
+_TEXT	SEGMENT
+_where$ = 12
+??2Descriptor@@SAPAXIPAX@Z PROC NEAR			; Descriptor::operator new, COMDAT
+
+; 259  : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+
+; 260  : 		return where;
+
+  00003	8b 45 0c	 mov	 eax, DWORD PTR _where$[ebp]
+
+; 261  : 	}
+
+  00006	5d		 pop	 ebp
+  00007	c3		 ret	 0
+??2Descriptor@@SAPAXIPAX@Z ENDP				; Descriptor::operator new
+_TEXT	ENDS
+EXTRN	?Alert@MsgMgr@@QAAHPADZZ:NEAR			; MsgMgr::Alert
+_DATA	SEGMENT
+	ORG $+3
+$SG59507 DB	'desc[i].next assigned to descList, which became %d', 00H
+	ORG $+1
+$SG59511 DB	'free descriptor list corrupt', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_requestHandle$ = 8
+_this$ = -8
+_i$ = -4
+?GetNewDescriptor@MemoryMgr@@QAEGW4ReservedHandle@@@Z PROC NEAR ; MemoryMgr::GetNewDescriptor
+
+; 220  : {
+
+  00546	55		 push	 ebp
+  00547	8b ec		 mov	 ebp, esp
+  00549	83 ec 08	 sub	 esp, 8
+  0054c	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 221  : 	int	i;
+; 222  : 
+; 223  : 	if (requestHandle != IllegalHandle) {
+
+  0054f	83 7d 08 00	 cmp	 DWORD PTR _requestHandle$[ebp], 0
+  00553	74 4f		 je	 SHORT $L59503
+
+; 224  : 
+; 225  : 		#ifdef DEBUG
+; 226  : 			if (!desc[requestHandle].memInfo.bits.freeDescriptor)
+; 227  : 				msgMgr->Fatal(SrcLoc,"Reserved handle %d unavailable",requestHandle);
+; 228  : 		#endif
+; 229  : 		desc[requestHandle].memInfo.bits.freeDescriptor = False;
+
+  00555	8b 45 08	 mov	 eax, DWORD PTR _requestHandle$[ebp]
+  00558	c1 e0 04	 shl	 eax, 4
+  0055b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0055e	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00561	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  00564	25 ff ff fd ff	 and	 eax, -131073		; fffdffffH
+  00569	8b 4d 08	 mov	 ecx, DWORD PTR _requestHandle$[ebp]
+  0056c	c1 e1 04	 shl	 ecx, 4
+  0056f	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00572	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  00575	89 04 0a	 mov	 DWORD PTR [edx+ecx], eax
+
+; 230  : 		desc[requestHandle].memInfo.bits.freeMemory = False;
+
+  00578	8b 45 08	 mov	 eax, DWORD PTR _requestHandle$[ebp]
+  0057b	c1 e0 04	 shl	 eax, 4
+  0057e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00581	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00584	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  00587	80 e4 f7	 and	 ah, -9			; fffffff7H
+  0058a	8b 4d 08	 mov	 ecx, DWORD PTR _requestHandle$[ebp]
+  0058d	c1 e1 04	 shl	 ecx, 4
+  00590	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00593	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  00596	89 04 0a	 mov	 DWORD PTR [edx+ecx], eax
+
+; 231  : 		i = requestHandle;
+
+  00599	8b 45 08	 mov	 eax, DWORD PTR _requestHandle$[ebp]
+  0059c	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+
+; 232  : 
+; 233  : 	} else {
+
+  0059f	e9 db 00 00 00	 jmp	 $L59504
+$L59503:
+
+; 234  : 		i = _descList;
+
+  005a4	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?_descList@@3HA ; _descList
+  005aa	89 4d fc	 mov	 DWORD PTR _i$[ebp], ecx
+
+; 235  : 		_descList = (int)desc[i].data;
+
+  005ad	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  005b0	c1 e2 04	 shl	 edx, 4
+  005b3	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  005b6	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  005b9	8b 54 11 04	 mov	 edx, DWORD PTR [ecx+edx+4]
+  005bd	89 15 00 00 00
+	00		 mov	 DWORD PTR ?_descList@@3HA, edx ; _descList
+
+; 236  : 		if (_descList < RESERVEDHANDLES)
+
+  005c3	83 3d 00 00 00
+	00 2b		 cmp	 DWORD PTR ?_descList@@3HA, 43 ; _descList, 0000002bH
+  005ca	7d 1a		 jge	 SHORT $L59506
+
+; 238  : 			msgMgr->Alert("desc[i].next assigned to descList, which became %d",_descList);
+
+  005cc	a1 00 00 00 00	 mov	 eax, DWORD PTR ?_descList@@3HA ; _descList
+  005d1	50		 push	 eax
+  005d2	68 00 00 00 00	 push	 OFFSET FLAT:$SG59507
+  005d7	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  005dd	51		 push	 ecx
+  005de	e8 00 00 00 00	 call	 ?Alert@MsgMgr@@QAAHPADZZ ; MsgMgr::Alert
+  005e3	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59506:
+
+; 240  : 
+; 241  : 		--_descCount;
+
+  005e6	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?_descCount@@3HA ; _descCount
+  005ec	83 ea 01	 sub	 edx, 1
+  005ef	89 15 00 00 00
+	00		 mov	 DWORD PTR ?_descCount@@3HA, edx ; _descCount
+
+; 242  : 		if (_descCount <= 10)
+
+  005f5	83 3d 00 00 00
+	00 0a		 cmp	 DWORD PTR ?_descCount@@3HA, 10 ; _descCount, 0000000aH
+  005fc	7f 0a		 jg	 SHORT $L59508
+
+; 243  : 			needMoreDescs = True;
+
+  005fe	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00601	c7 40 10 01 00
+	00 00		 mov	 DWORD PTR [eax+16], 1
+$L59508:
+
+; 244  : 
+; 245  : 		if(!i || !desc[i].memInfo.bits.freeDescriptor)
+
+  00608	83 7d fc 00	 cmp	 DWORD PTR _i$[ebp], 0
+  0060c	74 19		 je	 SHORT $L59510
+  0060e	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00611	c1 e1 04	 shl	 ecx, 4
+  00614	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00617	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  0061a	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  0061d	c1 e1 0e	 shl	 ecx, 14			; 0000000eH
+  00620	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  00623	85 c9		 test	 ecx, ecx
+  00625	75 14		 jne	 SHORT $L59509
+$L59510:
+
+; 246  : 			msgMgr->Fatal("free descriptor list corrupt");
+
+  00627	68 00 00 00 00	 push	 OFFSET FLAT:$SG59511
+  0062c	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00632	52		 push	 edx
+  00633	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00638	83 c4 08	 add	 esp, 8
+$L59509:
+
+; 247  : 
+; 248  : 		#ifdef DEBUG
+; 249  : 			if (i == maxDescriptors)
+; 250  : 				msgMgr->Fatal(SrcLoc,Msg_NoHandles,maxDescriptors);
+; 251  : 		#endif
+; 252  : 
+; 253  : 		// we have found an available handle
+; 254  : 		desc[i].memInfo.bits.freeDescriptor = False;
+
+  0063b	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0063e	c1 e0 04	 shl	 eax, 4
+  00641	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00644	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00647	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  0064a	25 ff ff fd ff	 and	 eax, -131073		; fffdffffH
+  0064f	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00652	c1 e1 04	 shl	 ecx, 4
+  00655	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00658	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  0065b	89 04 0a	 mov	 DWORD PTR [edx+ecx], eax
+
+; 255  : 		desc[i].memInfo.bits.freeMemory = False;
+
+  0065e	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00661	c1 e0 04	 shl	 eax, 4
+  00664	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00667	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  0066a	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  0066d	80 e4 f7	 and	 ah, -9			; fffffff7H
+  00670	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00673	c1 e1 04	 shl	 ecx, 4
+  00676	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00679	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  0067c	89 04 0a	 mov	 DWORD PTR [edx+ecx], eax
+$L59504:
+
+; 257  : 
+; 258  : 	return (SOL_Handle) i;
+
+  0067f	66 8b 45 fc	 mov	 ax, WORD PTR _i$[ebp]
+
+; 259  : }
+
+  00683	8b e5		 mov	 esp, ebp
+  00685	5d		 pop	 ebp
+  00686	c2 04 00	 ret	 4
+?GetNewDescriptor@MemoryMgr@@QAEGW4ReservedHandle@@@Z ENDP ; MemoryMgr::GetNewDescriptor
+_TEXT	ENDS
+PUBLIC	?GetMoreDescriptors@MemoryMgr@@QAEXI@Z		; MemoryMgr::GetMoreDescriptors
+_DATA	SEGMENT
+	ORG $+3
+$SG59517 DB	'Out of available handles.', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+?GetMoreDescriptors@MemoryMgr@@QAEXI@Z PROC NEAR	; MemoryMgr::GetMoreDescriptors
+
+; 264  : {
+
+  00689	55		 push	 ebp
+  0068a	8b ec		 mov	 ebp, esp
+  0068c	51		 push	 ecx
+  0068d	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 265  : 	msgMgr->Fatal ( "Out of available handles." );
+
+  00690	68 00 00 00 00	 push	 OFFSET FLAT:$SG59517
+  00695	a1 00 00 00 00	 mov	 eax, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  0069a	50		 push	 eax
+  0069b	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  006a0	83 c4 08	 add	 esp, 8
+
+; 266  : }
+
+  006a3	8b e5		 mov	 esp, ebp
+  006a5	5d		 pop	 ebp
+  006a6	c2 04 00	 ret	 4
+?GetMoreDescriptors@MemoryMgr@@QAEXI@Z ENDP		; MemoryMgr::GetMoreDescriptors
+_TEXT	ENDS
+PUBLIC	?FreeDescriptor@MemoryMgr@@QAEXG@Z		; MemoryMgr::FreeDescriptor
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -12
+_info$ = -8
+_tempID$ = -4
+?FreeDescriptor@MemoryMgr@@QAEXG@Z PROC NEAR		; MemoryMgr::FreeDescriptor
+
+; 271  : {
+
+  006a9	55		 push	 ebp
+  006aa	8b ec		 mov	 ebp, esp
+  006ac	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  006af	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 272  : 	MemInfo info;
+
+  006b2	8d 4d f8	 lea	 ecx, DWORD PTR _info$[ebp]
+  006b5	e8 00 00 00 00	 call	 ??0MemInfo@@QAE@XZ	; MemInfo::MemInfo
+
+; 273  : 
+; 274  : 	unsigned int tempID = (unsigned int)((unsigned short)theID);
+
+  006ba	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  006bd	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  006c2	89 45 fc	 mov	 DWORD PTR _tempID$[ebp], eax
+
+; 275  : 
+; 276  : 	// Save the last type in the checksum area.
+; 277  : 	// This is to allow invalid handles to report
+; 278  : 	// the type of the previous allocation
+; 279  : 	desc[tempID].memInfo = info;
+
+  006c5	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  006c8	c1 e1 04	 shl	 ecx, 4
+  006cb	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  006ce	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  006d1	8b 55 f8	 mov	 edx, DWORD PTR _info$[ebp]
+  006d4	89 14 08	 mov	 DWORD PTR [eax+ecx], edx
+
+; 280  : 
+; 281  : 	if (tempID >= RESERVEDHANDLES) {
+
+  006d7	83 7d fc 2b	 cmp	 DWORD PTR _tempID$[ebp], 43 ; 0000002bH
+  006db	72 47		 jb	 SHORT $L59526
+
+; 282  : 		++_descCount;
+
+  006dd	a1 00 00 00 00	 mov	 eax, DWORD PTR ?_descCount@@3HA ; _descCount
+  006e2	83 c0 01	 add	 eax, 1
+  006e5	a3 00 00 00 00	 mov	 DWORD PTR ?_descCount@@3HA, eax ; _descCount
+
+; 283  : 		desc[_descListEnd].data = (char *)tempID;
+
+  006ea	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?_descListEnd@@3HA ; _descListEnd
+  006f0	c1 e1 04	 shl	 ecx, 4
+  006f3	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  006f6	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  006f9	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  006fc	89 54 08 04	 mov	 DWORD PTR [eax+ecx+4], edx
+
+; 284  : 		_descListEnd = theID;
+
+  00700	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  00703	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00708	a3 00 00 00 00	 mov	 DWORD PTR ?_descListEnd@@3HA, eax ; _descListEnd
+
+; 285  : 		desc[_descListEnd].data = (char *)0;
+
+  0070d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?_descListEnd@@3HA ; _descListEnd
+  00713	c1 e1 04	 shl	 ecx, 4
+  00716	8b 55 f4	 mov	 edx, DWORD PTR _this$[ebp]
+  00719	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  0071c	c7 44 08 04 00
+	00 00 00	 mov	 DWORD PTR [eax+ecx+4], 0
+$L59526:
+
+; 287  : }
+
+  00724	8b e5		 mov	 esp, ebp
+  00726	5d		 pop	 ebp
+  00727	c2 04 00	 ret	 4
+?FreeDescriptor@MemoryMgr@@QAEXG@Z ENDP			; MemoryMgr::FreeDescriptor
+_TEXT	ENDS
+PUBLIC	?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z ; MemoryMgr::Alloc
+PUBLIC	?Free@MemoryMgr@@QAEXG@Z			; MemoryMgr::Free
+PUBLIC	?FreeMemory@MemoryMgr@@QAEIXZ			; MemoryMgr::FreeMemory
+EXTRN	?at@SOL_List@@QAEGH@Z:NEAR			; SOL_List::at
+EXTRN	?addToEnd@SOL_List@@QAEXG@Z:NEAR		; SOL_List::addToEnd
+_DATA	SEGMENT
+	ORG $+2
+$SG59546 DB	'Out of Memory:%u bytes requested,Type=%s,Num=%d,attribut'
+	DB	'es=%x avail mem=%d', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_theMemAttrs$ = 8
+_theSize$ = 12
+_theNumber$ = 16
+_theChar$ = 24
+_requestHandle$ = 28
+_this$ = -28
+_theID$ = -12
+_ptr$ = -4
+_tempID$ = -8
+_i$59556 = -16
+_handle$59560 = -20
+_dPtr$59562 = -24
+?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z PROC NEAR ; MemoryMgr::Alloc
+
+; 297  : {
+
+  0072a	55		 push	 ebp
+  0072b	8b ec		 mov	 ebp, esp
+  0072d	83 ec 1c	 sub	 esp, 28			; 0000001cH
+  00730	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 298  : 	unsigned int theID;
+; 299  : 
+; 300  : 	if (!theSize) 
+
+  00733	83 7d 0c 00	 cmp	 DWORD PTR _theSize$[ebp], 0
+  00737	75 07		 jne	 SHORT $L59539
+
+; 301  : 		theSize = 1;
+
+  00739	c7 45 0c 01 00
+	00 00		 mov	 DWORD PTR _theSize$[ebp], 1
+$L59539:
+
+; 302  : 
+; 303  : 	// The following routine is here to prevent recursion.
+; 304  : 	if (needMoreDescs)
+
+  00740	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00743	83 78 10 00	 cmp	 DWORD PTR [eax+16], 0
+  00747	74 18		 je	 SHORT $L59540
+
+; 305  : 		GetMoreDescriptors(maxDescriptors/10);
+
+  00749	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0074c	8b 41 04	 mov	 eax, DWORD PTR [ecx+4]
+  0074f	33 d2		 xor	 edx, edx
+  00751	b9 0a 00 00 00	 mov	 ecx, 10			; 0000000aH
+  00756	f7 f1		 div	 ecx
+  00758	50		 push	 eax
+  00759	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  0075c	e8 00 00 00 00	 call	 ?GetMoreDescriptors@MemoryMgr@@QAEXI@Z ; MemoryMgr::GetMoreDescriptors
+$L59540:
+
+; 306  : 
+; 307  : 	theID = (unsigned int)GetNewDescriptor ( requestHandle );
+
+  00761	8b 55 1c	 mov	 edx, DWORD PTR _requestHandle$[ebp]
+  00764	52		 push	 edx
+  00765	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00768	e8 00 00 00 00	 call	 ?GetNewDescriptor@MemoryMgr@@QAEGW4ReservedHandle@@@Z ; MemoryMgr::GetNewDescriptor
+  0076d	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  00772	89 45 f4	 mov	 DWORD PTR _theID$[ebp], eax
+
+; 308  : 
+; 309  : 	// get the memory from the OS
+; 310  : 	char *ptr = (char *)malloc ( theSize + (gBufferOverflow * 2) );
+
+  00775	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  0077a	8b 4d 0c	 mov	 ecx, DWORD PTR _theSize$[ebp]
+  0077d	8d 14 41	 lea	 edx, DWORD PTR [ecx+eax*2]
+  00780	52		 push	 edx
+  00781	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__malloc
+  00787	83 c4 04	 add	 esp, 4
+  0078a	89 45 fc	 mov	 DWORD PTR _ptr$[ebp], eax
+
+; 311  : 
+; 312  : 	if ( ptr == NULL ) {
+
+  0078d	83 7d fc 00	 cmp	 DWORD PTR _ptr$[ebp], 0
+  00791	75 3c		 jne	 SHORT $L59544
+
+; 313  : 			msgMgr->Fatal("Out of Memory:%u bytes requested"
+; 314  : 							  ",Type=%s,Num=%d,attributes=%x avail mem=%d",
+; 315  : 							  	theSize,
+; 316  : 								::GetMemTypeStr((MemType) (theMemAttrs & 0xff)),
+; 317  : 								theNumber,
+; 318  : 							  	theMemAttrs,
+; 319  : 								FreeMemory());
+
+  00793	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00796	e8 00 00 00 00	 call	 ?FreeMemory@MemoryMgr@@QAEIXZ ; MemoryMgr::FreeMemory
+  0079b	50		 push	 eax
+  0079c	8b 45 08	 mov	 eax, DWORD PTR _theMemAttrs$[ebp]
+  0079f	50		 push	 eax
+  007a0	8b 4d 10	 mov	 ecx, DWORD PTR _theNumber$[ebp]
+  007a3	51		 push	 ecx
+  007a4	8b 55 08	 mov	 edx, DWORD PTR _theMemAttrs$[ebp]
+  007a7	81 e2 ff 00 00
+	00		 and	 edx, 255		; 000000ffH
+  007ad	52		 push	 edx
+  007ae	e8 00 00 00 00	 call	 ?GetMemTypeStr@@YAPBDW4MemType@@@Z ; GetMemTypeStr
+  007b3	83 c4 04	 add	 esp, 4
+  007b6	50		 push	 eax
+  007b7	8b 45 0c	 mov	 eax, DWORD PTR _theSize$[ebp]
+  007ba	50		 push	 eax
+  007bb	68 00 00 00 00	 push	 OFFSET FLAT:$SG59546
+  007c0	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  007c6	51		 push	 ecx
+  007c7	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  007cc	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L59544:
+
+; 321  : 
+; 322  : 	gHandleCount++;
+
+  007cf	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gHandleCount@@3HA ; gHandleCount
+  007d5	83 c2 01	 add	 edx, 1
+  007d8	89 15 00 00 00
+	00		 mov	 DWORD PTR ?gHandleCount@@3HA, edx ; gHandleCount
+
+; 323  : 	gAllocSize += theSize;
+
+  007de	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gAllocSize@@3HA ; gAllocSize
+  007e3	03 45 0c	 add	 eax, DWORD PTR _theSize$[ebp]
+  007e6	a3 00 00 00 00	 mov	 DWORD PTR ?gAllocSize@@3HA, eax ; gAllocSize
+
+; 324  : 
+; 325  : 	memset ( ptr, 'S', gBufferOverflow );
+
+  007eb	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  007f1	51		 push	 ecx
+  007f2	6a 53		 push	 83			; 00000053H
+  007f4	8b 55 fc	 mov	 edx, DWORD PTR _ptr$[ebp]
+  007f7	52		 push	 edx
+  007f8	e8 00 00 00 00	 call	 _memset
+  007fd	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 326  : 	ptr += gBufferOverflow;
+
+  00800	8b 45 fc	 mov	 eax, DWORD PTR _ptr$[ebp]
+  00803	03 05 00 00 00
+	00		 add	 eax, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00809	89 45 fc	 mov	 DWORD PTR _ptr$[ebp], eax
+
+; 327  : 
+; 328  : 	unsigned int tempID = (unsigned int)((unsigned short)theID);
+
+  0080c	8b 4d f4	 mov	 ecx, DWORD PTR _theID$[ebp]
+  0080f	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00815	89 4d f8	 mov	 DWORD PTR _tempID$[ebp], ecx
+
+; 329  : 
+; 330  : 	// initialize the handle
+; 331  : 	desc[tempID].size = theSize;
+
+  00818	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  0081b	c1 e2 04	 shl	 edx, 4
+  0081e	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00821	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00824	8b 45 0c	 mov	 eax, DWORD PTR _theSize$[ebp]
+  00827	89 44 11 08	 mov	 DWORD PTR [ecx+edx+8], eax
+
+; 332  : 	desc[tempID].data = (char *)ptr;
+
+  0082b	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  0082e	c1 e1 04	 shl	 ecx, 4
+  00831	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  00834	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00837	8b 55 fc	 mov	 edx, DWORD PTR _ptr$[ebp]
+  0083a	89 54 08 04	 mov	 DWORD PTR [eax+ecx+4], edx
+
+; 333  : 	_descPtrTable[tempID] = (char *)ptr;
+
+  0083e	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00841	8b 4d fc	 mov	 ecx, DWORD PTR _ptr$[ebp]
+  00844	89 0c 85 00 00
+	00 00		 mov	 DWORD PTR __descPtrTable[eax*4], ecx
+
+; 334  : 
+; 335  : 	// Save the initilization character
+; 336  : 	desc[tempID].initChar = theChar;
+
+  0084b	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  0084e	c1 e2 04	 shl	 edx, 4
+  00851	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00854	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00857	8a 45 18	 mov	 al, BYTE PTR _theChar$[ebp]
+  0085a	88 44 11 0f	 mov	 BYTE PTR [ecx+edx+15], al
+
+; 337  : 
+; 338  : 	// Set the attributes
+; 339  : 	desc[tempID].memInfo.attributes = theMemAttrs & (~UNUSEDATTRS);
+
+  0085e	8b 4d 08	 mov	 ecx, DWORD PTR _theMemAttrs$[ebp]
+  00861	81 e1 ff ff ff
+	83		 and	 ecx, -2080374785	; 83ffffffH
+  00867	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  0086a	c1 e2 04	 shl	 edx, 4
+  0086d	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00870	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  00873	89 0c 10	 mov	 DWORD PTR [eax+edx], ecx
+
+; 340  : 	desc[tempID].memInfo.bits.alignBytes = 0; //(4 - (theSize & 3)) & 3;
+
+  00876	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00879	c1 e1 04	 shl	 ecx, 4
+  0087c	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  0087f	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00882	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00885	81 e1 ff ff ff
+	fc		 and	 ecx, -50331649		; fcffffffH
+  0088b	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  0088e	c1 e2 04	 shl	 edx, 4
+  00891	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00894	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  00897	89 0c 10	 mov	 DWORD PTR [eax+edx], ecx
+
+; 341  : 
+; 342  : 	// Initialize the memory if requested
+; 343  : 	if (theMemAttrs & INITMEMORY) {
+
+  0089a	8b 4d 08	 mov	 ecx, DWORD PTR _theMemAttrs$[ebp]
+  0089d	81 e1 00 00 01
+	00		 and	 ecx, 65536		; 00010000H
+  008a3	85 c9		 test	 ecx, ecx
+  008a5	74 22		 je	 SHORT $L59552
+
+; 344  : 		#ifdef DEBUG
+; 345  : 			if (theChar == FREE_MARK_CHAR)
+; 346  : 				msgMgr->Fatal(SrcLoc,Msg_MemInitError);
+; 347  : 		#endif
+; 348  : 		memset(desc[tempID].data,theChar,theSize );
+
+  008a7	8b 55 0c	 mov	 edx, DWORD PTR _theSize$[ebp]
+  008aa	52		 push	 edx
+  008ab	0f be 45 18	 movsx	 eax, BYTE PTR _theChar$[ebp]
+  008af	50		 push	 eax
+  008b0	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  008b3	c1 e1 04	 shl	 ecx, 4
+  008b6	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  008b9	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  008bc	8b 4c 08 04	 mov	 ecx, DWORD PTR [eax+ecx+4]
+  008c0	51		 push	 ecx
+  008c1	e8 00 00 00 00	 call	 _memset
+  008c6	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59552:
+
+; 350  : 
+; 351  : 	memset ( desc[tempID].data + theSize, 'S', gBufferOverflow );
+
+  008c9	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  008cf	52		 push	 edx
+  008d0	6a 53		 push	 83			; 00000053H
+  008d2	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  008d5	c1 e0 04	 shl	 eax, 4
+  008d8	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  008db	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  008de	8b 44 02 04	 mov	 eax, DWORD PTR [edx+eax+4]
+  008e2	03 45 0c	 add	 eax, DWORD PTR _theSize$[ebp]
+  008e5	50		 push	 eax
+  008e6	e8 00 00 00 00	 call	 _memset
+  008eb	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 352  : 
+; 353  : #ifdef DEBUG
+; 354  : 	WriteSignature ( theID );
+; 355  : #endif
+; 356  : 
+; 357  : 	// handle purgable list on discardable allocation
+; 358  : 	if ( desc[tempID].memInfo.bits.discardable ) {
+
+  008ee	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  008f1	c1 e1 04	 shl	 ecx, 4
+  008f4	8b 55 e4	 mov	 edx, DWORD PTR _this$[ebp]
+  008f7	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  008fa	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  008fd	c1 e1 15	 shl	 ecx, 21			; 00000015H
+  00900	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  00903	85 c9		 test	 ecx, ecx
+  00905	0f 84 08 01 00
+	00		 je	 $L59559
+
+; 359  : 		desc[tempID].memInfo.bits.resource = 1;
+
+  0090b	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  0090e	c1 e2 04	 shl	 edx, 4
+  00911	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00914	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00917	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  0091a	81 ca 00 00 00
+	04		 or	 edx, 67108864		; 04000000H
+  00920	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00923	c1 e0 04	 shl	 eax, 4
+  00926	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00929	8b 49 08	 mov	 ecx, DWORD PTR [ecx+8]
+  0092c	89 14 01	 mov	 DWORD PTR [ecx+eax], edx
+
+; 360  : 
+; 361  : 		if ( desc[tempID].memInfo.type == MemResView ) 
+
+  0092f	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00932	c1 e2 04	 shl	 edx, 4
+  00935	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  00938	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  0093b	0f be 14 11	 movsx	 edx, BYTE PTR [ecx+edx]
+  0093f	85 d2		 test	 edx, edx
+  00941	75 0f		 jne	 SHORT $L59554
+
+; 362  : 			gViewList.addToEnd ( tempID );
+
+  00943	66 8b 45 f8	 mov	 ax, WORD PTR _tempID$[ebp]
+  00947	50		 push	 eax
+  00948	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gViewList@@3VSOL_List@@A
+  0094d	e8 00 00 00 00	 call	 ?addToEnd@SOL_List@@QAEXG@Z ; SOL_List::addToEnd
+$L59554:
+
+; 363  : 
+; 364  : 		gPurgeList.addToEnd ( tempID );
+
+  00952	66 8b 4d f8	 mov	 cx, WORD PTR _tempID$[ebp]
+  00956	51		 push	 ecx
+  00957	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  0095c	e8 00 00 00 00	 call	 ?addToEnd@SOL_List@@QAEXG@Z ; SOL_List::addToEnd
+
+; 365  : 		gPurgeSize += theSize;
+
+  00961	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gPurgeSize@@3HA ; gPurgeSize
+  00967	03 55 0c	 add	 edx, DWORD PTR _theSize$[ebp]
+  0096a	89 15 00 00 00
+	00		 mov	 DWORD PTR ?gPurgeSize@@3HA, edx ; gPurgeSize
+
+; 366  : 
+; 367  : 		if ( gPurgeSize > gPurgeThreshold ) {
+
+  00970	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gPurgeSize@@3HA ; gPurgeSize
+  00975	3b 05 00 00 00
+	00		 cmp	 eax, DWORD PTR ?gPurgeThreshold@@3HA ; gPurgeThreshold
+  0097b	0f 8e 92 00 00
+	00		 jle	 $L59559
+
+; 368  : 			for ( int i=0; i<gPurgeList.size() && (gPurgeSize > gPurgeThreshold); i++ ) {
+
+  00981	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR _i$59556[ebp], 0
+  00988	eb 09		 jmp	 SHORT $L59557
+$L59558:
+  0098a	8b 4d f0	 mov	 ecx, DWORD PTR _i$59556[ebp]
+  0098d	83 c1 01	 add	 ecx, 1
+  00990	89 4d f0	 mov	 DWORD PTR _i$59556[ebp], ecx
+$L59557:
+  00993	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  00998	e8 00 00 00 00	 call	 ?size@SOL_List@@QAEAAHXZ ; SOL_List::size
+  0099d	8b 55 f0	 mov	 edx, DWORD PTR _i$59556[ebp]
+  009a0	3b 10		 cmp	 edx, DWORD PTR [eax]
+  009a2	7d 6f		 jge	 SHORT $L59559
+  009a4	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gPurgeSize@@3HA ; gPurgeSize
+  009a9	3b 05 00 00 00
+	00		 cmp	 eax, DWORD PTR ?gPurgeThreshold@@3HA ; gPurgeThreshold
+  009af	7e 62		 jle	 SHORT $L59559
+
+; 369  : 				SOL_Handle handle = (SOL_Handle)gPurgeList.at ( i );
+
+  009b1	8b 4d f0	 mov	 ecx, DWORD PTR _i$59556[ebp]
+  009b4	51		 push	 ecx
+  009b5	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  009ba	e8 00 00 00 00	 call	 ?at@SOL_List@@QAEGH@Z	; SOL_List::at
+  009bf	66 89 45 ec	 mov	 WORD PTR _handle$59560[ebp], ax
+
+; 370  : 
+; 371  : 				Descriptor *dPtr = &desc[(unsigned int)handle];
+
+  009c3	8b 55 ec	 mov	 edx, DWORD PTR _handle$59560[ebp]
+  009c6	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  009cc	c1 e2 04	 shl	 edx, 4
+  009cf	8b 45 e4	 mov	 eax, DWORD PTR _this$[ebp]
+  009d2	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  009d5	03 ca		 add	 ecx, edx
+  009d7	89 4d e8	 mov	 DWORD PTR _dPtr$59562[ebp], ecx
+
+; 372  : 
+; 373  : 				if ( dPtr->memInfo.bits.discardable && dPtr->memInfo.bits.moveable ) {
+
+  009da	8b 55 e8	 mov	 edx, DWORD PTR _dPtr$59562[ebp]
+  009dd	8b 02		 mov	 eax, DWORD PTR [edx]
+  009df	c1 e0 15	 shl	 eax, 21			; 00000015H
+  009e2	c1 f8 1f	 sar	 eax, 31			; 0000001fH
+  009e5	85 c0		 test	 eax, eax
+  009e7	74 25		 je	 SHORT $L59564
+  009e9	8b 4d e8	 mov	 ecx, DWORD PTR _dPtr$59562[ebp]
+  009ec	8b 11		 mov	 edx, DWORD PTR [ecx]
+  009ee	c1 e2 16	 shl	 edx, 22			; 00000016H
+  009f1	c1 fa 1f	 sar	 edx, 31			; 0000001fH
+  009f4	85 d2		 test	 edx, edx
+  009f6	74 16		 je	 SHORT $L59564
+
+; 374  : //					msgMgr->Mono ( "purging resource: 0x%x (%s)\n", handle, GetMemTypeStr ( handle ) );
+; 375  : 					Free ( handle );
+
+  009f8	66 8b 45 ec	 mov	 ax, WORD PTR _handle$59560[ebp]
+  009fc	50		 push	 eax
+  009fd	8b 4d e4	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a00	e8 00 00 00 00	 call	 ?Free@MemoryMgr@@QAEXG@Z ; MemoryMgr::Free
+
+; 376  : 					i--;
+
+  00a05	8b 4d f0	 mov	 ecx, DWORD PTR _i$59556[ebp]
+  00a08	83 e9 01	 sub	 ecx, 1
+  00a0b	89 4d f0	 mov	 DWORD PTR _i$59556[ebp], ecx
+$L59564:
+
+; 378  : 			}
+
+  00a0e	e9 77 ff ff ff	 jmp	 $L59558
+$L59559:
+
+; 381  : 
+; 382  : 	// Return the ID
+; 383  : 	return ((SOL_Handle)theID);
+
+  00a13	66 8b 45 f4	 mov	 ax, WORD PTR _theID$[ebp]
+
+; 384  : }
+
+  00a17	8b e5		 mov	 esp, ebp
+  00a19	5d		 pop	 ebp
+  00a1a	c2 18 00	 ret	 24			; 00000018H
+?Alloc@MemoryMgr@@QAEGIIIPAUMemClient@@DW4ReservedHandle@@@Z ENDP ; MemoryMgr::Alloc
+_TEXT	ENDS
+PUBLIC	?CheckValid@MemoryMgr@@QAEXG@Z			; MemoryMgr::CheckValid
+EXTRN	__imp__free:NEAR
+EXTRN	?del@SOL_List@@QAEHG@Z:NEAR			; SOL_List::del
+EXTRN	?indexOf@SOL_List@@QAEHG@Z:NEAR			; SOL_List::indexOf
+EXTRN	?resMgr@@3PAVResourceMgr@@A:DWORD		; resMgr
+_DATA	SEGMENT
+	ORG $+1
+$SG59572 DB	'MemoryMgr::Free ( 0x%x ): MemID is not valid when freed.'
+	DB	00H
+	ORG $+3
+$SG59578 DB	'MemoryMgr::Free ( 0x%x ): QLT does not match.', 00H
+	ORG $+2
+$SG59581 DB	'MemoryMgr::Free ( 0x%x ): MemID has already been freed.', 00H
+$SG59584 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Memmgr'
+	DB	'.cpp', 00H
+	ORG $+3
+$SG59590 DB	'Resource marked MemID is not in purgable list!', 00H
+	ORG $+1
+$SG59594 DB	'Purgable list contains MemID that is not resource marked'
+	DB	'.', 00H
+	ORG $+2
+$SG59596 DB	'C:\Documents and Settings\don\Desktop\sciw\Interp\Memmgr'
+	DB	'.cpp', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -16
+_tempID$ = -4
+_info$ = -8
+?Free@MemoryMgr@@QAEXG@Z PROC NEAR			; MemoryMgr::Free
+
+; 389  : {
+
+  00a1d	55		 push	 ebp
+  00a1e	8b ec		 mov	 ebp, esp
+  00a20	83 ec 10	 sub	 esp, 16			; 00000010H
+  00a23	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 390  : 	if ( !IsValid ( theID ) ) 
+
+  00a26	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00a2a	50		 push	 eax
+  00a2b	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a2e	e8 00 00 00 00	 call	 ?IsValid@MemoryMgr@@QAEHG@Z ; MemoryMgr::IsValid
+  00a33	85 c0		 test	 eax, eax
+  00a35	75 1e		 jne	 SHORT $L59570
+
+; 391  : 		msgMgr->Fatal ( "MemoryMgr::Free ( 0x%x ): MemID is not valid when freed.", (unsigned short)theID );
+
+  00a37	8b 4d 08	 mov	 ecx, DWORD PTR _theID$[ebp]
+  00a3a	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00a40	51		 push	 ecx
+  00a41	68 00 00 00 00	 push	 OFFSET FLAT:$SG59572
+  00a46	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00a4c	52		 push	 edx
+  00a4d	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00a52	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59570:
+
+; 392  : 
+; 393  : 	// Signatures may not be valid at this time 
+; 394  : 	// due to an internal call from the memory manager.
+; 395  : 	CheckValid(theID);
+
+  00a55	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00a59	50		 push	 eax
+  00a5a	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a5d	e8 00 00 00 00	 call	 ?CheckValid@MemoryMgr@@QAEXG@Z ; MemoryMgr::CheckValid
+
+; 396  : 
+; 397  : 	unsigned int tempID = (unsigned int)((unsigned short)theID);
+
+  00a62	8b 4d 08	 mov	 ecx, DWORD PTR _theID$[ebp]
+  00a65	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00a6b	89 4d fc	 mov	 DWORD PTR _tempID$[ebp], ecx
+
+; 398  : 
+; 399  : 	if ( _descPtrTable[tempID] != desc[tempID].data ) 
+
+  00a6e	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00a71	c1 e2 04	 shl	 edx, 4
+  00a74	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00a77	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00a7a	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00a7d	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+  00a84	3b 44 11 04	 cmp	 eax, DWORD PTR [ecx+edx+4]
+  00a88	74 1e		 je	 SHORT $L59576
+
+; 400  : 		msgMgr->Fatal ( "MemoryMgr::Free ( 0x%x ): QLT does not match.", (unsigned short)tempID );
+
+  00a8a	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00a8d	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00a93	51		 push	 ecx
+  00a94	68 00 00 00 00	 push	 OFFSET FLAT:$SG59578
+  00a99	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00a9f	52		 push	 edx
+  00aa0	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00aa5	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59576:
+
+; 401  : 
+; 402  : 	// check to make sure we are not freeing this MemID more than once
+; 403  : 	if ( desc[tempID].memInfo.type == MemFree )
+
+  00aa8	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00aab	c1 e0 04	 shl	 eax, 4
+  00aae	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ab1	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00ab4	0f be 04 02	 movsx	 eax, BYTE PTR [edx+eax]
+  00ab8	83 f8 71	 cmp	 eax, 113		; 00000071H
+  00abb	75 1e		 jne	 SHORT $L59579
+
+; 404  : 		msgMgr->Fatal ( "MemoryMgr::Free ( 0x%x ): MemID has already been freed.", (unsigned short)tempID );
+
+  00abd	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00ac0	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00ac6	51		 push	 ecx
+  00ac7	68 00 00 00 00	 push	 OFFSET FLAT:$SG59581
+  00acc	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00ad2	52		 push	 edx
+  00ad3	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00ad8	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59579:
+
+; 405  : 
+; 406  : 	// check the overflow buffer
+; 407  : 	if ( !signatureTripped ) 
+
+  00adb	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?signatureTripped@@3HA, 0 ; signatureTripped
+  00ae2	75 1f		 jne	 SHORT $L59582
+
+; 408  : 		ValidateMemID ( theID );
+
+  00ae4	68 98 01 00 00	 push	 408			; 00000198H
+  00ae9	68 00 00 00 00	 push	 OFFSET FLAT:$SG59584
+  00aee	51		 push	 ecx
+  00aef	8b cc		 mov	 ecx, esp
+  00af1	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00af5	50		 push	 eax
+  00af6	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  00afb	e8 00 00 00 00	 call	 ?_ValidateMemID@@YAXVMemID@@PADH@Z ; _ValidateMemID
+  00b00	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59582:
+
+; 409  : 
+; 410  : 	gAllocSize -= desc[tempID].size;
+
+  00b03	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00b06	c1 e1 04	 shl	 ecx, 4
+  00b09	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00b0c	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00b0f	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gAllocSize@@3HA ; gAllocSize
+  00b15	2b 54 08 08	 sub	 edx, DWORD PTR [eax+ecx+8]
+  00b19	89 15 00 00 00
+	00		 mov	 DWORD PTR ?gAllocSize@@3HA, edx ; gAllocSize
+
+; 411  : 	gHandleCount--;
+
+  00b1f	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gHandleCount@@3HA ; gHandleCount
+  00b24	83 e8 01	 sub	 eax, 1
+  00b27	a3 00 00 00 00	 mov	 DWORD PTR ?gHandleCount@@3HA, eax ; gHandleCount
+
+; 412  : 
+; 413  : 	// Save the last type in the checksum area.
+; 414  : 	// This is to allow invalid handles to report
+; 415  : 	// the type of the previous allocation
+; 416  : 	desc[tempID].checksum = (int) desc[tempID].memInfo.type;
+
+  00b2c	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00b2f	c1 e1 04	 shl	 ecx, 4
+  00b32	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00b35	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00b38	66 0f be 0c 08	 movsx	 cx, BYTE PTR [eax+ecx]
+  00b3d	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00b40	c1 e2 04	 shl	 edx, 4
+  00b43	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00b46	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  00b49	66 89 4c 10 0c	 mov	 WORD PTR [eax+edx+12], cx
+
+; 417  : 
+; 418  : 	MemInfo  	info;
+
+  00b4e	8d 4d f8	 lea	 ecx, DWORD PTR _info$[ebp]
+  00b51	e8 00 00 00 00	 call	 ??0MemInfo@@QAE@XZ	; MemInfo::MemInfo
+
+; 419  : 
+; 420  : 	if ( desc[tempID].memInfo.bits.resource ) {
+
+  00b56	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00b59	c1 e1 04	 shl	 ecx, 4
+  00b5c	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00b5f	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00b62	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00b65	c1 e1 05	 shl	 ecx, 5
+  00b68	c1 f9 1f	 sar	 ecx, 31			; 0000001fH
+  00b6b	85 c9		 test	 ecx, ecx
+  00b6d	74 64		 je	 SHORT $L59589
+
+; 421  : 		if ( gPurgeList.indexOf ( tempID ) != -1 ) {
+
+  00b6f	66 8b 55 fc	 mov	 dx, WORD PTR _tempID$[ebp]
+  00b73	52		 push	 edx
+  00b74	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  00b79	e8 00 00 00 00	 call	 ?indexOf@SOL_List@@QAEHG@Z ; SOL_List::indexOf
+  00b7e	83 f8 ff	 cmp	 eax, -1
+  00b81	74 3c		 je	 SHORT $L59588
+
+; 422  : 			gPurgeSize -= desc[tempID].size;
+
+  00b83	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00b86	c1 e0 04	 shl	 eax, 4
+  00b89	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00b8c	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00b8f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?gPurgeSize@@3HA ; gPurgeSize
+  00b95	2b 4c 02 08	 sub	 ecx, DWORD PTR [edx+eax+8]
+  00b99	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?gPurgeSize@@3HA, ecx ; gPurgeSize
+
+; 423  : 			gPurgeList.del ( tempID );
+
+  00b9f	66 8b 55 fc	 mov	 dx, WORD PTR _tempID$[ebp]
+  00ba3	52		 push	 edx
+  00ba4	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  00ba9	e8 00 00 00 00	 call	 ?del@SOL_List@@QAEHG@Z	; SOL_List::del
+
+; 424  : 			gViewList.del ( tempID );
+
+  00bae	66 8b 45 fc	 mov	 ax, WORD PTR _tempID$[ebp]
+  00bb2	50		 push	 eax
+  00bb3	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gViewList@@3VSOL_List@@A
+  00bb8	e8 00 00 00 00	 call	 ?del@SOL_List@@QAEHG@Z	; SOL_List::del
+
+; 425  : 		} else {
+
+  00bbd	eb 14		 jmp	 SHORT $L59589
+$L59588:
+
+; 426  : 			msgMgr->Fatal ( "Resource marked MemID is not in purgable list!" );
+
+  00bbf	68 00 00 00 00	 push	 OFFSET FLAT:$SG59590
+  00bc4	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00bca	51		 push	 ecx
+  00bcb	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00bd0	83 c4 08	 add	 esp, 8
+$L59589:
+
+; 429  : 
+; 430  : 	if ( desc[tempID].memInfo.type < MemResLast )
+
+  00bd3	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00bd6	c1 e2 04	 shl	 edx, 4
+  00bd9	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00bdc	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00bdf	0f be 14 11	 movsx	 edx, BYTE PTR [ecx+edx]
+  00be3	83 fa 17	 cmp	 edx, 23			; 00000017H
+  00be6	7d 26		 jge	 SHORT $L59591
+
+; 431  : 		resMgr->Free ( (MemType) desc[tempID].memInfo.type, theID );
+
+  00be8	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00bec	50		 push	 eax
+  00bed	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00bf0	c1 e1 04	 shl	 ecx, 4
+  00bf3	8b 55 f0	 mov	 edx, DWORD PTR _this$[ebp]
+  00bf6	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00bf9	0f be 0c 08	 movsx	 ecx, BYTE PTR [eax+ecx]
+  00bfd	51		 push	 ecx
+  00bfe	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00c04	8b 02		 mov	 eax, DWORD PTR [edx]
+  00c06	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?resMgr@@3PAVResourceMgr@@A ; resMgr
+  00c0c	ff 10		 call	 DWORD PTR [eax]
+$L59591:
+
+; 432  : 
+; 433  : 	if ( gPurgeList.indexOf ( tempID ) != -1 ) 
+
+  00c0e	66 8b 4d fc	 mov	 cx, WORD PTR _tempID$[ebp]
+  00c12	51		 push	 ecx
+  00c13	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:?gPurgeList@@3VSOL_List@@A
+  00c18	e8 00 00 00 00	 call	 ?indexOf@SOL_List@@QAEHG@Z ; SOL_List::indexOf
+  00c1d	83 f8 ff	 cmp	 eax, -1
+  00c20	74 14		 je	 SHORT $L59593
+
+; 434  : 		msgMgr->Fatal ( "Purgable list contains MemID that is not resource marked." );
+
+  00c22	68 00 00 00 00	 push	 OFFSET FLAT:$SG59594
+  00c27	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00c2d	52		 push	 edx
+  00c2e	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00c33	83 c4 08	 add	 esp, 8
+$L59593:
+
+; 435  : 
+; 436  : 	#ifdef DEBUG
+; 437  :   		EraseSignature(theID);
+; 438  : 	#endif
+; 439  : 
+; 440  : 	desc[tempID].memInfo = info;
+
+  00c36	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00c39	c1 e0 04	 shl	 eax, 4
+  00c3c	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c3f	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00c42	8b 4d f8	 mov	 ecx, DWORD PTR _info$[ebp]
+  00c45	89 0c 02	 mov	 DWORD PTR [edx+eax], ecx
+
+; 441  : 	desc[tempID].memInfo.bits.freeDescriptor = False;
+
+  00c48	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00c4b	c1 e2 04	 shl	 edx, 4
+  00c4e	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00c51	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00c54	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  00c57	81 e2 ff ff fd
+	ff		 and	 edx, -131073		; fffdffffH
+  00c5d	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00c60	c1 e0 04	 shl	 eax, 4
+  00c63	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c66	8b 49 08	 mov	 ecx, DWORD PTR [ecx+8]
+  00c69	89 14 01	 mov	 DWORD PTR [ecx+eax], edx
+
+; 442  : 	
+; 443  : 	#ifdef DEBUG
+; 444  : 		if (checkIntegrity & CHECK_FREE)
+; 445  : 	  		// fill the freed memory
+; 446  : 			memset(desc[tempID].data,FREE_MARK_CHAR,desc[tempID].size);
+; 447  : 	#endif
+; 448  : 
+; 449  : 	free ( desc[tempID].data - gBufferOverflow );
+
+  00c6c	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00c6f	c1 e2 04	 shl	 edx, 4
+  00c72	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00c75	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00c78	8b 54 11 04	 mov	 edx, DWORD PTR [ecx+edx+4]
+  00c7c	2b 15 00 00 00
+	00		 sub	 edx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00c82	52		 push	 edx
+  00c83	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__free
+  00c89	83 c4 04	 add	 esp, 4
+
+; 450  : 
+; 451  : 	if ( gCheckHeap )
+
+  00c8c	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?gCheckHeap@@3HA, 0 ; gCheckHeap
+  00c93	74 12		 je	 SHORT $L59595
+
+; 452  : 		CheckHeap ( __FILE__, __LINE__ );
+
+  00c95	68 c4 01 00 00	 push	 452			; 000001c4H
+  00c9a	68 00 00 00 00	 push	 OFFSET FLAT:$SG59596
+  00c9f	e8 00 00 00 00	 call	 ?CheckHeap@@YAXPADH@Z	; CheckHeap
+  00ca4	83 c4 08	 add	 esp, 8
+$L59595:
+
+; 453  : 
+; 454  :    FreeDescriptor ( theID );
+
+  00ca7	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00cab	50		 push	 eax
+  00cac	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00caf	e8 00 00 00 00	 call	 ?FreeDescriptor@MemoryMgr@@QAEXG@Z ; MemoryMgr::FreeDescriptor
+
+; 455  : }
+
+  00cb4	8b e5		 mov	 esp, ebp
+  00cb6	5d		 pop	 ebp
+  00cb7	c2 04 00	 ret	 4
+?Free@MemoryMgr@@QAEXG@Z ENDP				; MemoryMgr::Free
+_TEXT	ENDS
+PUBLIC	?NotValid@MemoryMgr@@QAEXG@Z			; MemoryMgr::NotValid
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?CheckValid@MemoryMgr@@QAEXG@Z PROC NEAR		; MemoryMgr::CheckValid, COMDAT
+
+; 468  : 	inline void MemoryMgr::CheckValid(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 469  : 		if (!IsValid(theID)) {
+
+  00007	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  0000b	50		 push	 eax
+  0000c	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000f	e8 00 00 00 00	 call	 ?IsValid@MemoryMgr@@QAEHG@Z ; MemoryMgr::IsValid
+  00014	85 c0		 test	 eax, eax
+  00016	75 0d		 jne	 SHORT $L54760
+
+; 470  : 			NotValid(theID);
+
+  00018	66 8b 4d 08	 mov	 cx, WORD PTR _theID$[ebp]
+  0001c	51		 push	 ecx
+  0001d	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00020	e8 00 00 00 00	 call	 ?NotValid@MemoryMgr@@QAEXG@Z ; MemoryMgr::NotValid
+$L54760:
+
+; 472  : 	}
+
+  00025	8b e5		 mov	 esp, ebp
+  00027	5d		 pop	 ebp
+  00028	c2 04 00	 ret	 4
+?CheckValid@MemoryMgr@@QAEXG@Z ENDP			; MemoryMgr::CheckValid
+_TEXT	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+?FreeMemory@MemoryMgr@@QAEIXZ PROC NEAR			; MemoryMgr::FreeMemory
+
+; 460  : {
+
+  00cba	55		 push	 ebp
+  00cbb	8b ec		 mov	 ebp, esp
+  00cbd	51		 push	 ecx
+  00cbe	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 461  : 	// Returns the maximum amount of memory available as one allocation
+; 462  : 	return GetSysMemAvail();
+
+  00cc1	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00cc4	8b 10		 mov	 edx, DWORD PTR [eax]
+  00cc6	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00cc9	ff 52 10	 call	 DWORD PTR [edx+16]
+
+; 463  : }
+
+  00ccc	8b e5		 mov	 esp, ebp
+  00cce	5d		 pop	 ebp
+  00ccf	c3		 ret	 0
+?FreeMemory@MemoryMgr@@QAEIXZ ENDP			; MemoryMgr::FreeMemory
+_TEXT	ENDS
+PUBLIC	?TotalMemory@MemoryMgr@@QAEIXZ			; MemoryMgr::TotalMemory
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+?TotalMemory@MemoryMgr@@QAEIXZ PROC NEAR		; MemoryMgr::TotalMemory
+
+; 469  : {
+
+  00cd0	55		 push	 ebp
+  00cd1	8b ec		 mov	 ebp, esp
+  00cd3	83 ec 08	 sub	 esp, 8
+  00cd6	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 470  : //	return (totalMemory/1024U);
+; 471  : 
+; 472  : //* * * THIS FUNCTION HAS BEEN COMANDERED FOR SWAT TO DUMP DUMY VIEW 777s
+; 473  : 
+; 474  : 	for (int i = 1; i < maxDescriptors; ++i)
+
+  00cd9	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 1
+  00ce0	eb 09		 jmp	 SHORT $L59604
+$L59605:
+  00ce2	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00ce5	83 c0 01	 add	 eax, 1
+  00ce8	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L59604:
+  00ceb	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00cee	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00cf1	3b 51 04	 cmp	 edx, DWORD PTR [ecx+4]
+  00cf4	73 3c		 jae	 SHORT $L59606
+
+; 475  : 		if (desc[i].memInfo.type == MemResView)
+
+  00cf6	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00cf9	c1 e0 04	 shl	 eax, 4
+  00cfc	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00cff	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00d02	0f be 04 02	 movsx	 eax, BYTE PTR [edx+eax]
+  00d06	85 c0		 test	 eax, eax
+  00d08	75 26		 jne	 SHORT $L59608
+
+; 476  : 			if (desc[i].memInfo.attributes & SWAPMEMORY)
+
+  00d0a	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00d0d	c1 e1 04	 shl	 ecx, 4
+  00d10	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00d13	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00d16	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00d19	81 e1 00 20 00
+	00		 and	 ecx, 8192		; 00002000H
+  00d1f	85 c9		 test	 ecx, ecx
+  00d21	74 0d		 je	 SHORT $L59608
+
+; 477  : 				Free(i);
+
+  00d23	66 8b 55 fc	 mov	 dx, WORD PTR _i$[ebp]
+  00d27	52		 push	 edx
+  00d28	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d2b	e8 00 00 00 00	 call	 ?Free@MemoryMgr@@QAEXG@Z ; MemoryMgr::Free
+$L59608:
+
+; 478  : 	return 0;
+
+  00d30	eb b0		 jmp	 SHORT $L59605
+$L59606:
+  00d32	33 c0		 xor	 eax, eax
+
+; 479  : }
+
+  00d34	8b e5		 mov	 esp, ebp
+  00d36	5d		 pop	 ebp
+  00d37	c3		 ret	 0
+?TotalMemory@MemoryMgr@@QAEIXZ ENDP			; MemoryMgr::TotalMemory
+_TEXT	ENDS
+PUBLIC	?Purge@MemoryMgr@@QAEGI@Z			; MemoryMgr::Purge
+_TEXT	SEGMENT
+_this$ = -4
+?Purge@MemoryMgr@@QAEGI@Z PROC NEAR			; MemoryMgr::Purge
+
+; 484  : {
+
+  00d38	55		 push	 ebp
+  00d39	8b ec		 mov	 ebp, esp
+  00d3b	51		 push	 ecx
+  00d3c	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 485  : 	return 0;
+
+  00d3f	66 33 c0	 xor	 ax, ax
+
+; 486  : }
+
+  00d42	8b e5		 mov	 esp, ebp
+  00d44	5d		 pop	 ebp
+  00d45	c2 04 00	 ret	 4
+?Purge@MemoryMgr@@QAEGI@Z ENDP				; MemoryMgr::Purge
+_TEXT	ENDS
+PUBLIC	?Pack@MemoryMgr@@QAEII@Z			; MemoryMgr::Pack
+_TEXT	SEGMENT
+_theSize$ = 8
+_this$ = -4
+?Pack@MemoryMgr@@QAEII@Z PROC NEAR			; MemoryMgr::Pack
+
+; 491  : {
+
+  00d48	55		 push	 ebp
+  00d49	8b ec		 mov	 ebp, esp
+  00d4b	51		 push	 ecx
+  00d4c	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 492  : 	return theSize;
+
+  00d4f	8b 45 08	 mov	 eax, DWORD PTR _theSize$[ebp]
+
+; 493  : }
+
+  00d52	8b e5		 mov	 esp, ebp
+  00d54	5d		 pop	 ebp
+  00d55	c2 04 00	 ret	 4
+?Pack@MemoryMgr@@QAEII@Z ENDP				; MemoryMgr::Pack
+_TEXT	ENDS
+PUBLIC	?Lock@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::Lock
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -8
+_tempID$ = -4
+?Lock@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::Lock
+
+; 498  : {
+
+  00d58	55		 push	 ebp
+  00d59	8b ec		 mov	 ebp, esp
+  00d5b	83 ec 08	 sub	 esp, 8
+  00d5e	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 499  : 	CheckValid ( theID );
+
+  00d61	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00d65	50		 push	 eax
+  00d66	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d69	e8 00 00 00 00	 call	 ?CheckValid@MemoryMgr@@QAEXG@Z ; MemoryMgr::CheckValid
+
+; 500  : 
+; 501  : 	unsigned int tempID = (unsigned int)((unsigned short)theID);
+
+  00d6e	8b 4d 08	 mov	 ecx, DWORD PTR _theID$[ebp]
+  00d71	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00d77	89 4d fc	 mov	 DWORD PTR _tempID$[ebp], ecx
+
+; 502  : 
+; 503  : 	if ( desc[tempID].memInfo.bits.moveable ) {
+
+  00d7a	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00d7d	c1 e2 04	 shl	 edx, 4
+  00d80	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00d83	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00d86	8b 14 11	 mov	 edx, DWORD PTR [ecx+edx]
+  00d89	c1 e2 16	 shl	 edx, 22			; 00000016H
+  00d8c	c1 fa 1f	 sar	 edx, 31			; 0000001fH
+  00d8f	85 d2		 test	 edx, edx
+  00d91	74 34		 je	 SHORT $L59624
+
+; 504  : 		desc[tempID].memInfo.bits.moveable = 0;
+
+  00d93	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00d96	c1 e0 04	 shl	 eax, 4
+  00d99	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00d9c	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00d9f	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  00da2	80 e4 fd	 and	 ah, -3			; fffffffdH
+  00da5	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00da8	c1 e1 04	 shl	 ecx, 4
+  00dab	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00dae	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  00db1	89 04 0a	 mov	 DWORD PTR [edx+ecx], eax
+
+; 505  : 		desc[tempID].lockCount = 1;
+
+  00db4	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00db7	c1 e0 04	 shl	 eax, 4
+  00dba	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00dbd	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00dc0	c6 44 02 0e 01	 mov	 BYTE PTR [edx+eax+14], 1
+
+; 506  : 	} else {
+
+  00dc5	eb 3d		 jmp	 SHORT $L59626
+$L59624:
+
+; 507  : 		if ( desc[tempID].lockCount < MAXLOCKCOUNT )
+
+  00dc7	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00dca	c1 e0 04	 shl	 eax, 4
+  00dcd	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00dd0	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00dd3	33 c9		 xor	 ecx, ecx
+  00dd5	8a 4c 02 0e	 mov	 cl, BYTE PTR [edx+eax+14]
+  00dd9	81 f9 ff 00 00
+	00		 cmp	 ecx, 255		; 000000ffH
+  00ddf	7d 23		 jge	 SHORT $L59626
+
+; 508  : 			desc[tempID].lockCount++;
+
+  00de1	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00de4	c1 e2 04	 shl	 edx, 4
+  00de7	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00dea	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00ded	8a 54 11 0e	 mov	 dl, BYTE PTR [ecx+edx+14]
+  00df1	80 c2 01	 add	 dl, 1
+  00df4	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00df7	c1 e0 04	 shl	 eax, 4
+  00dfa	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00dfd	8b 49 08	 mov	 ecx, DWORD PTR [ecx+8]
+  00e00	88 54 01 0e	 mov	 BYTE PTR [ecx+eax+14], dl
+$L59626:
+
+; 510  : 
+; 511  : 	return desc[tempID].data;
+
+  00e04	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00e07	c1 e2 04	 shl	 edx, 4
+  00e0a	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00e0d	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00e10	8b 44 11 04	 mov	 eax, DWORD PTR [ecx+edx+4]
+
+; 512  : }
+
+  00e14	8b e5		 mov	 esp, ebp
+  00e16	5d		 pop	 ebp
+  00e17	c2 04 00	 ret	 4
+?Lock@MemoryMgr@@QAEPAXG@Z ENDP				; MemoryMgr::Lock
+_TEXT	ENDS
+PUBLIC	?Unlock@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::Unlock
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -8
+_tempID$ = -4
+?Unlock@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::Unlock
+
+; 517  : {
+
+  00e1a	55		 push	 ebp
+  00e1b	8b ec		 mov	 ebp, esp
+  00e1d	83 ec 08	 sub	 esp, 8
+  00e20	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 518  : 	CheckValid ( theID );
+
+  00e23	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00e27	50		 push	 eax
+  00e28	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00e2b	e8 00 00 00 00	 call	 ?CheckValid@MemoryMgr@@QAEXG@Z ; MemoryMgr::CheckValid
+
+; 519  : 
+; 520  : 	unsigned int tempID = (unsigned int)((unsigned short)theID);
+
+  00e30	8b 4d 08	 mov	 ecx, DWORD PTR _theID$[ebp]
+  00e33	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00e39	89 4d fc	 mov	 DWORD PTR _tempID$[ebp], ecx
+
+; 521  : 
+; 522  : 	if ( desc[tempID].lockCount )
+
+  00e3c	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00e3f	c1 e2 04	 shl	 edx, 4
+  00e42	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00e45	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00e48	33 c0		 xor	 eax, eax
+  00e4a	8a 44 11 0e	 mov	 al, BYTE PTR [ecx+edx+14]
+  00e4e	85 c0		 test	 eax, eax
+  00e50	74 23		 je	 SHORT $L59634
+
+; 523  : 		desc[tempID].lockCount--;
+
+  00e52	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00e55	c1 e1 04	 shl	 ecx, 4
+  00e58	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00e5b	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00e5e	8a 4c 08 0e	 mov	 cl, BYTE PTR [eax+ecx+14]
+  00e62	80 e9 01	 sub	 cl, 1
+  00e65	8b 55 fc	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00e68	c1 e2 04	 shl	 edx, 4
+  00e6b	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00e6e	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  00e71	88 4c 10 0e	 mov	 BYTE PTR [eax+edx+14], cl
+$L59634:
+
+; 524  : 
+; 525  : 	if ( !desc[tempID].lockCount )
+
+  00e75	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00e78	c1 e1 04	 shl	 ecx, 4
+  00e7b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00e7e	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00e81	33 d2		 xor	 edx, edx
+  00e83	8a 54 08 0e	 mov	 dl, BYTE PTR [eax+ecx+14]
+  00e87	85 d2		 test	 edx, edx
+  00e89	75 21		 jne	 SHORT $L59635
+
+; 526  : 		desc[tempID].memInfo.bits.moveable = 1;
+
+  00e8b	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00e8e	c1 e0 04	 shl	 eax, 4
+  00e91	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00e94	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00e97	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  00e9a	80 cc 02	 or	 ah, 2
+  00e9d	8b 4d fc	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00ea0	c1 e1 04	 shl	 ecx, 4
+  00ea3	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00ea6	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  00ea9	89 04 0a	 mov	 DWORD PTR [edx+ecx], eax
+$L59635:
+
+; 527  : 
+; 528  : 	return desc[tempID].data;
+
+  00eac	8b 45 fc	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00eaf	c1 e0 04	 shl	 eax, 4
+  00eb2	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00eb5	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00eb8	8b 44 02 04	 mov	 eax, DWORD PTR [edx+eax+4]
+
+; 529  : }
+
+  00ebc	8b e5		 mov	 esp, ebp
+  00ebe	5d		 pop	 ebp
+  00ebf	c2 04 00	 ret	 4
+?Unlock@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::Unlock
+_TEXT	ENDS
+PUBLIC	?Realloc@MemoryMgr@@QAEXGI@Z			; MemoryMgr::Realloc
+EXTRN	__imp__realloc:NEAR
+_DATA	SEGMENT
+	ORG $+3
+$SG59648 DB	'Out of memory on MemoryMgr::Realloc!', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_theID$ = 8
+_theNewSize$ = 12
+_this$ = -20
+_tempID$ = -8
+_memorySize$ = -12
+_ptr$ = -4
+_moreBytes$59650 = -16
+?Realloc@MemoryMgr@@QAEXGI@Z PROC NEAR			; MemoryMgr::Realloc
+
+; 534  : {
+
+  00ec2	55		 push	 ebp
+  00ec3	8b ec		 mov	 ebp, esp
+  00ec5	83 ec 14	 sub	 esp, 20			; 00000014H
+  00ec8	56		 push	 esi
+  00ec9	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 535  : 	#ifdef DEBUG
+; 536  : 		if (checkVolatile)
+; 537  : 			VolatileMethod("Realloc");
+; 538  : 	#endif
+; 539  : 
+; 540  : 	CheckValid(theID);
+
+  00ecc	66 8b 45 08	 mov	 ax, WORD PTR _theID$[ebp]
+  00ed0	50		 push	 eax
+  00ed1	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ed4	e8 00 00 00 00	 call	 ?CheckValid@MemoryMgr@@QAEXG@Z ; MemoryMgr::CheckValid
+
+; 541  : 	unsigned int tempID = (unsigned int)((unsigned short)theID);
+
+  00ed9	8b 4d 08	 mov	 ecx, DWORD PTR _theID$[ebp]
+  00edc	81 e1 ff ff 00
+	00		 and	 ecx, 65535		; 0000ffffH
+  00ee2	89 4d f8	 mov	 DWORD PTR _tempID$[ebp], ecx
+
+; 542  : 
+; 543  : 	size_t memorySize = theNewSize;
+
+  00ee5	8b 55 0c	 mov	 edx, DWORD PTR _theNewSize$[ebp]
+  00ee8	89 55 f4	 mov	 DWORD PTR _memorySize$[ebp], edx
+
+; 544  : 	
+; 545  : 	char *ptr = (char *)realloc ( desc[tempID].data - gBufferOverflow, memorySize + (gBufferOverflow * 2));
+
+  00eeb	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00ef0	8b 4d f4	 mov	 ecx, DWORD PTR _memorySize$[ebp]
+  00ef3	8d 14 41	 lea	 edx, DWORD PTR [ecx+eax*2]
+  00ef6	52		 push	 edx
+  00ef7	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00efa	c1 e0 04	 shl	 eax, 4
+  00efd	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00f00	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00f03	8b 44 02 04	 mov	 eax, DWORD PTR [edx+eax+4]
+  00f07	2b 05 00 00 00
+	00		 sub	 eax, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00f0d	50		 push	 eax
+  00f0e	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__realloc
+  00f14	83 c4 08	 add	 esp, 8
+  00f17	89 45 fc	 mov	 DWORD PTR _ptr$[ebp], eax
+
+; 546  : 
+; 547  : 	if ( !ptr ) 
+
+  00f1a	83 7d fc 00	 cmp	 DWORD PTR _ptr$[ebp], 0
+  00f1e	75 14		 jne	 SHORT $L59647
+
+; 548  : 		msgMgr->Fatal ( "Out of memory on MemoryMgr::Realloc!" );
+
+  00f20	68 00 00 00 00	 push	 OFFSET FLAT:$SG59648
+  00f25	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  00f2b	51		 push	 ecx
+  00f2c	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  00f31	83 c4 08	 add	 esp, 8
+$L59647:
+
+; 549  : 
+; 550  : 	ptr += gBufferOverflow;
+
+  00f34	8b 55 fc	 mov	 edx, DWORD PTR _ptr$[ebp]
+  00f37	03 15 00 00 00
+	00		 add	 edx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  00f3d	89 55 fc	 mov	 DWORD PTR _ptr$[ebp], edx
+
+; 551  : 	desc[tempID].data = ptr;
+
+  00f40	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00f43	c1 e0 04	 shl	 eax, 4
+  00f46	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00f49	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00f4c	8b 4d fc	 mov	 ecx, DWORD PTR _ptr$[ebp]
+  00f4f	89 4c 02 04	 mov	 DWORD PTR [edx+eax+4], ecx
+
+; 552  : 
+; 553  : 	if ( desc[tempID].size < memorySize && desc[tempID].memInfo.bits.initMemory ) {
+
+  00f53	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00f56	c1 e2 04	 shl	 edx, 4
+  00f59	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00f5c	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00f5f	8b 54 11 08	 mov	 edx, DWORD PTR [ecx+edx+8]
+  00f63	3b 55 f4	 cmp	 edx, DWORD PTR _memorySize$[ebp]
+  00f66	73 6e		 jae	 SHORT $L59649
+  00f68	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00f6b	c1 e0 04	 shl	 eax, 4
+  00f6e	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00f71	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00f74	8b 04 02	 mov	 eax, DWORD PTR [edx+eax]
+  00f77	c1 e0 0f	 shl	 eax, 15			; 0000000fH
+  00f7a	c1 f8 1f	 sar	 eax, 31			; 0000001fH
+  00f7d	85 c0		 test	 eax, eax
+  00f7f	74 55		 je	 SHORT $L59649
+
+; 554  : 		int moreBytes = memorySize - desc[tempID].size;
+
+  00f81	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00f84	c1 e1 04	 shl	 ecx, 4
+  00f87	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  00f8a	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00f8d	8b 55 f4	 mov	 edx, DWORD PTR _memorySize$[ebp]
+  00f90	2b 54 08 08	 sub	 edx, DWORD PTR [eax+ecx+8]
+  00f94	89 55 f0	 mov	 DWORD PTR _moreBytes$59650[ebp], edx
+
+; 555  : 		memset ( desc[tempID].data + desc[tempID].size, desc[tempID].initChar, moreBytes );
+
+  00f97	8b 45 f0	 mov	 eax, DWORD PTR _moreBytes$59650[ebp]
+  00f9a	50		 push	 eax
+  00f9b	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00f9e	c1 e1 04	 shl	 ecx, 4
+  00fa1	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  00fa4	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00fa7	0f be 4c 08 0f	 movsx	 ecx, BYTE PTR [eax+ecx+15]
+  00fac	51		 push	 ecx
+  00fad	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00fb0	c1 e2 04	 shl	 edx, 4
+  00fb3	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00fb6	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00fb9	8b 45 f8	 mov	 eax, DWORD PTR _tempID$[ebp]
+  00fbc	c1 e0 04	 shl	 eax, 4
+  00fbf	8b 75 ec	 mov	 esi, DWORD PTR _this$[ebp]
+  00fc2	8b 76 08	 mov	 esi, DWORD PTR [esi+8]
+  00fc5	8b 4c 11 04	 mov	 ecx, DWORD PTR [ecx+edx+4]
+  00fc9	03 4c 06 08	 add	 ecx, DWORD PTR [esi+eax+8]
+  00fcd	51		 push	 ecx
+  00fce	e8 00 00 00 00	 call	 _memset
+  00fd3	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59649:
+
+; 557  : 
+; 558  : 	desc[tempID].size = memorySize;
+
+  00fd6	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  00fd9	c1 e2 04	 shl	 edx, 4
+  00fdc	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00fdf	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00fe2	8b 45 f4	 mov	 eax, DWORD PTR _memorySize$[ebp]
+  00fe5	89 44 11 08	 mov	 DWORD PTR [ecx+edx+8], eax
+
+; 559  : 	desc[tempID].memInfo.bits.alignBytes = 0; //(4 - (theNewSize & 3)) & 3;
+
+  00fe9	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  00fec	c1 e1 04	 shl	 ecx, 4
+  00fef	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  00ff2	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00ff5	8b 0c 08	 mov	 ecx, DWORD PTR [eax+ecx]
+  00ff8	81 e1 ff ff ff
+	fc		 and	 ecx, -50331649		; fcffffffH
+  00ffe	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  01001	c1 e2 04	 shl	 edx, 4
+  01004	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  01007	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  0100a	89 0c 10	 mov	 DWORD PTR [eax+edx], ecx
+
+; 560  : 
+; 561  : 	_descPtrTable[tempID] = desc[tempID].data;
+
+  0100d	8b 4d f8	 mov	 ecx, DWORD PTR _tempID$[ebp]
+  01010	c1 e1 04	 shl	 ecx, 4
+  01013	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  01016	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  01019	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  0101c	8b 44 08 04	 mov	 eax, DWORD PTR [eax+ecx+4]
+  01020	89 04 95 00 00
+	00 00		 mov	 DWORD PTR __descPtrTable[edx*4], eax
+
+; 562  : 
+; 563  : 	memset ( desc[tempID].data + theNewSize, 'S', gBufferOverflow );
+
+  01027	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?gBufferOverflow@@3HA ; gBufferOverflow
+  0102d	51		 push	 ecx
+  0102e	6a 53		 push	 83			; 00000053H
+  01030	8b 55 f8	 mov	 edx, DWORD PTR _tempID$[ebp]
+  01033	c1 e2 04	 shl	 edx, 4
+  01036	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  01039	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  0103c	8b 54 11 04	 mov	 edx, DWORD PTR [ecx+edx+4]
+  01040	03 55 0c	 add	 edx, DWORD PTR _theNewSize$[ebp]
+  01043	52		 push	 edx
+  01044	e8 00 00 00 00	 call	 _memset
+  01049	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 564  : 
+; 565  : 	#ifdef DEBUG
+; 566  :  		WriteSignature(theID);
+; 567  :  	#endif
+; 568  : }
+
+  0104c	5e		 pop	 esi
+  0104d	8b e5		 mov	 esp, ebp
+  0104f	5d		 pop	 ebp
+  01050	c2 08 00	 ret	 8
+?Realloc@MemoryMgr@@QAEXGI@Z ENDP			; MemoryMgr::Realloc
+_TEXT	ENDS
+PUBLIC	?Split@MemoryMgr@@QAEGGHIIPAUMemClient@@@Z	; MemoryMgr::Split
+_TEXT	SEGMENT
+_this$ = -4
+?Split@MemoryMgr@@QAEGGHIIPAUMemClient@@@Z PROC NEAR	; MemoryMgr::Split
+
+; 577  : {
+
+  01053	55		 push	 ebp
+  01054	8b ec		 mov	 ebp, esp
+  01056	51		 push	 ecx
+  01057	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 578  :    return 0;
+
+  0105a	66 33 c0	 xor	 ax, ax
+
+; 579  : }
+
+  0105d	8b e5		 mov	 esp, ebp
+  0105f	5d		 pop	 ebp
+  01060	c2 14 00	 ret	 20			; 00000014H
+?Split@MemoryMgr@@QAEGGHIIPAUMemClient@@@Z ENDP		; MemoryMgr::Split
+_TEXT	ENDS
+PUBLIC	??4Descriptor@@QAEAAV0@ABVSaveDescriptor@@@Z	; Descriptor::operator=
+_TEXT	SEGMENT
+_theDesc$ = 8
+_this$ = -4
+??4Descriptor@@QAEAAV0@ABVSaveDescriptor@@@Z PROC NEAR	; Descriptor::operator=
+
+; 584  : {
+
+  01063	55		 push	 ebp
+  01064	8b ec		 mov	 ebp, esp
+  01066	51		 push	 ecx
+  01067	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 585  : 	memInfo = theDesc.memInfo;
+
+  0106a	8b 45 08	 mov	 eax, DWORD PTR _theDesc$[ebp]
+  0106d	8b 08		 mov	 ecx, DWORD PTR [eax]
+  0106f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  01072	89 0a		 mov	 DWORD PTR [edx], ecx
+
+; 586  : 	size = theDesc.size;
+
+  01074	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01077	8b 4d 08	 mov	 ecx, DWORD PTR _theDesc$[ebp]
+  0107a	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0107d	89 50 08	 mov	 DWORD PTR [eax+8], edx
+
+; 587  : 	initChar = theDesc.initChar;
+
+  01080	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  01083	8b 4d 08	 mov	 ecx, DWORD PTR _theDesc$[ebp]
+  01086	8a 51 08	 mov	 dl, BYTE PTR [ecx+8]
+  01089	88 50 0f	 mov	 BYTE PTR [eax+15], dl
+
+; 588  : 	lockCount = theDesc.lockCount;
+
+  0108c	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0108f	8b 4d 08	 mov	 ecx, DWORD PTR _theDesc$[ebp]
+  01092	8a 51 09	 mov	 dl, BYTE PTR [ecx+9]
+  01095	88 50 0e	 mov	 BYTE PTR [eax+14], dl
+
+; 589  : 	return *this;
+
+  01098	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 590  : }
+
+  0109b	8b e5		 mov	 esp, ebp
+  0109d	5d		 pop	 ebp
+  0109e	c2 04 00	 ret	 4
+??4Descriptor@@QAEAAV0@ABVSaveDescriptor@@@Z ENDP	; Descriptor::operator=
+_TEXT	ENDS
+PUBLIC	?KPurge@@YAXPAF@Z				; KPurge
+EXTRN	?pm@@3VPMachine@@A:BYTE				; pm
+_TEXT	SEGMENT
+_args$ = 8
+?KPurge@@YAXPAF@Z PROC NEAR				; KPurge
+
+; 606  : {
+
+  010a1	55		 push	 ebp
+  010a2	8b ec		 mov	 ebp, esp
+
+; 607  : 	// Input
+; 608  : 	//      arg1-----the size to purge (in K)
+; 609  : 	// Output
+; 610  : 	// 	  acc------True if able to purge the requested amount
+; 611  : 	// 	  acc------False if unable to purge the requested amount
+; 612  : 	pm.acc = (Acc)memMgr->Purge(arg(1) * 1024U);
+
+  010a4	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  010a7	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  010ab	c1 e1 0a	 shl	 ecx, 10			; 0000000aH
+  010ae	51		 push	 ecx
+  010af	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  010b5	e8 00 00 00 00	 call	 ?Purge@MemoryMgr@@QAEGI@Z ; MemoryMgr::Purge
+  010ba	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  010bf	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 613  : }
+
+  010c4	5d		 pop	 ebp
+  010c5	c3		 ret	 0
+?KPurge@@YAXPAF@Z ENDP					; KPurge
+_TEXT	ENDS
+PUBLIC	?KMemoryInfo@@YAXPAF@Z				; KMemoryInfo
+EXTRN	?TotalType@MemoryMgr@@QAEHW4MemType@@@Z:NEAR	; MemoryMgr::TotalType
+EXTRN	?GetMemType@MemID@@QBE?AW4MemType@@XZ:NEAR	; MemID::GetMemType
+_TEXT	SEGMENT
+_args$ = 8
+$T59968 = -4
+$T59969 = -8
+?KMemoryInfo@@YAXPAF@Z PROC NEAR			; KMemoryInfo
+
+; 626  : {
+
+  010c6	55		 push	 ebp
+  010c7	8b ec		 mov	 ebp, esp
+  010c9	83 ec 0c	 sub	 esp, 12			; 0000000cH
+
+; 627  : 	switch (arg(1)) {
+
+  010cc	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  010cf	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  010d3	89 4d f4	 mov	 DWORD PTR -12+[ebp], ecx
+  010d6	83 7d f4 05	 cmp	 DWORD PTR -12+[ebp], 5
+  010da	0f 87 b7 00 00
+	00		 ja	 $L59695
+  010e0	8b 55 f4	 mov	 edx, DWORD PTR -12+[ebp]
+  010e3	ff 24 95 00 00
+	00 00		 jmp	 DWORD PTR $L59970[edx*4]
+$L59698:
+
+; 628  : 		case MIFreeK:
+; 629  : 			pm.acc = Acc(memMgr->FreeMemory() / 1024);
+
+  010ea	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  010f0	e8 00 00 00 00	 call	 ?FreeMemory@MemoryMgr@@QAEIXZ ; MemoryMgr::FreeMemory
+  010f5	c1 e8 0a	 shr	 eax, 10			; 0000000aH
+  010f8	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 630  : 			break;
+
+  010fd	e9 95 00 00 00	 jmp	 $L59695
+$L59699:
+
+; 631  : 
+; 632  : 		case MIFreeLow:
+; 633  : 			pm.acc = SCIUWord(memMgr->FreeMemory());
+
+  01102	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  01108	e8 00 00 00 00	 call	 ?FreeMemory@MemoryMgr@@QAEIXZ ; MemoryMgr::FreeMemory
+  0110d	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  01112	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 634  : 			break;
+
+  01117	eb 7e		 jmp	 SHORT $L59695
+$L59700:
+
+; 635  : 
+; 636  : 		case MIFreeHigh:
+; 637  : 			pm.acc = memMgr->FreeMemory() >> 16;
+
+  01119	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  0111f	e8 00 00 00 00	 call	 ?FreeMemory@MemoryMgr@@QAEIXZ ; MemoryMgr::FreeMemory
+  01124	c1 e8 10	 shr	 eax, 16			; 00000010H
+  01127	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 638  : 			break;
+
+  0112c	eb 69		 jmp	 SHORT $L59695
+$L59701:
+
+; 639  : 
+; 640  : 		case MITotalType:
+; 641  : 			pm.acc = memMgr->TotalType((MemType) arg(2));
+
+  0112e	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  01131	0f bf 48 04	 movsx	 ecx, WORD PTR [eax+4]
+  01135	51		 push	 ecx
+  01136	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  0113c	e8 00 00 00 00	 call	 ?TotalType@MemoryMgr@@QAEHW4MemType@@@Z ; MemoryMgr::TotalType
+  01141	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 642  : 			break;
+
+  01146	eb 4f		 jmp	 SHORT $L59695
+$L59703:
+
+; 643  : 
+; 644  : 		case MIGetType:
+; 645  : 			if (((MemID) arg(2)).IsValid())
+
+  01148	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  0114b	66 8b 42 04	 mov	 ax, WORD PTR [edx+4]
+  0114f	50		 push	 eax
+  01150	8d 4d fc	 lea	 ecx, DWORD PTR $T59968[ebp]
+  01153	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  01158	8b c8		 mov	 ecx, eax
+  0115a	e8 00 00 00 00	 call	 ?IsValid@MemID@@QBEHXZ	; MemID::IsValid
+  0115f	85 c0		 test	 eax, eax
+  01161	74 1e		 je	 SHORT $L59706
+
+; 646  : 				pm.acc = ((MemID) arg(2)).GetMemType();
+
+  01163	8b 4d 08	 mov	 ecx, DWORD PTR _args$[ebp]
+  01166	66 8b 51 04	 mov	 dx, WORD PTR [ecx+4]
+  0116a	52		 push	 edx
+  0116b	8d 4d f8	 lea	 ecx, DWORD PTR $T59969[ebp]
+  0116e	e8 00 00 00 00	 call	 ??0MemID@@QAE@G@Z	; MemID::MemID
+  01173	8b c8		 mov	 ecx, eax
+  01175	e8 00 00 00 00	 call	 ?GetMemType@MemID@@QBE?AW4MemType@@XZ ; MemID::GetMemType
+  0117a	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 647  : 			else
+
+  0117f	eb 0a		 jmp	 SHORT $L59709
+$L59706:
+
+; 648  : 				pm.acc = -1;
+
+  01181	c7 05 04 00 00
+	00 ff ff ff ff	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, -1
+$L59709:
+
+; 649  : 			break;
+
+  0118b	eb 0a		 jmp	 SHORT $L59695
+$L59710:
+
+; 650  : 
+; 651  : 		case MIGetHandleCount:
+; 652  : 			pm.acc = (Acc)gHandleCount;
+
+  0118d	a1 00 00 00 00	 mov	 eax, DWORD PTR ?gHandleCount@@3HA ; gHandleCount
+  01192	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L59695:
+
+; 660  : }
+
+  01197	8b e5		 mov	 esp, ebp
+  01199	5d		 pop	 ebp
+  0119a	c3		 ret	 0
+$L59970:
+  0119b	00 00 00 00	 DD	 $L59698
+  0119f	00 00 00 00	 DD	 $L59699
+  011a3	00 00 00 00	 DD	 $L59700
+  011a7	00 00 00 00	 DD	 $L59701
+  011ab	00 00 00 00	 DD	 $L59703
+  011af	00 00 00 00	 DD	 $L59710
+?KMemoryInfo@@YAXPAF@Z ENDP				; KMemoryInfo
+_TEXT	ENDS
+PUBLIC	?GetHandle@MemoryMgr@@QAEGPAX@Z			; MemoryMgr::GetHandle
+_TEXT	SEGMENT
+_this$ = -4
+?GetHandle@MemoryMgr@@QAEGPAX@Z PROC NEAR		; MemoryMgr::GetHandle
+
+; 663  : {
+
+  011b3	55		 push	 ebp
+  011b4	8b ec		 mov	 ebp, esp
+  011b6	51		 push	 ecx
+  011b7	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 664  : 	return 0;
+
+  011ba	66 33 c0	 xor	 ax, ax
+
+; 665  : }
+
+  011bd	8b e5		 mov	 esp, ebp
+  011bf	5d		 pop	 ebp
+  011c0	c2 04 00	 ret	 4
+?GetHandle@MemoryMgr@@QAEGPAX@Z ENDP			; MemoryMgr::GetHandle
+_TEXT	ENDS
+EXTRN	__imp__sprintf:NEAR
+_DATA	SEGMENT
+	ORG $+3
+$SG59722 DB	'zero handle', 00H
+$SG59725 DB	'handle too big', 00H
+	ORG $+1
+$SG59728 DB	'handle has previous type of %s', 00H
+	ORG $+1
+$SG59730 DB	'Invalid handle 0x%x! (%s)', 00H
+_DATA	ENDS
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -1028
+_str$ = -1024
+?NotValid@MemoryMgr@@QAEXG@Z PROC NEAR			; MemoryMgr::NotValid
+
+; 672  : {
+
+  011c3	55		 push	 ebp
+  011c4	8b ec		 mov	 ebp, esp
+  011c6	81 ec 04 04 00
+	00		 sub	 esp, 1028		; 00000404H
+  011cc	89 8d fc fb ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 673  : 	char str[1024];
+; 674  : 
+; 675  : 	if (!theID)
+
+  011d2	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  011d5	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  011da	85 c0		 test	 eax, eax
+  011dc	75 17		 jne	 SHORT $L59721
+
+; 676  : 		sprintf ( str, "zero handle" );
+
+  011de	68 00 00 00 00	 push	 OFFSET FLAT:$SG59722
+  011e3	8d 8d 00 fc ff
+	ff		 lea	 ecx, DWORD PTR _str$[ebp]
+  011e9	51		 push	 ecx
+  011ea	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sprintf
+  011f0	83 c4 08	 add	 esp, 8
+
+; 677  : 
+; 678  : 	else if (theID >= maxDescriptors)
+
+  011f3	eb 66		 jmp	 SHORT $L59726
+$L59721:
+  011f5	8b 55 08	 mov	 edx, DWORD PTR _theID$[ebp]
+  011f8	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  011fe	8b 85 fc fb ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01204	3b 50 04	 cmp	 edx, DWORD PTR [eax+4]
+  01207	72 17		 jb	 SHORT $L59724
+
+; 679  : 		sprintf ( str, "handle too big" );
+
+  01209	68 00 00 00 00	 push	 OFFSET FLAT:$SG59725
+  0120e	8d 8d 00 fc ff
+	ff		 lea	 ecx, DWORD PTR _str$[ebp]
+  01214	51		 push	 ecx
+  01215	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sprintf
+  0121b	83 c4 08	 add	 esp, 8
+
+; 680  : 
+; 681  : 	else {
+
+  0121e	eb 3b		 jmp	 SHORT $L59726
+$L59724:
+
+; 682  : 		sprintf ( str, "handle has previous type of %s", ::GetMemTypeStr ( (MemType)desc[theID].checksum ) );
+
+  01220	8b 55 08	 mov	 edx, DWORD PTR _theID$[ebp]
+  01223	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  01229	c1 e2 04	 shl	 edx, 4
+  0122c	8b 85 fc fb ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  01232	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  01235	33 c0		 xor	 eax, eax
+  01237	66 8b 44 11 0c	 mov	 ax, WORD PTR [ecx+edx+12]
+  0123c	50		 push	 eax
+  0123d	e8 00 00 00 00	 call	 ?GetMemTypeStr@@YAPBDW4MemType@@@Z ; GetMemTypeStr
+  01242	83 c4 04	 add	 esp, 4
+  01245	50		 push	 eax
+  01246	68 00 00 00 00	 push	 OFFSET FLAT:$SG59728
+  0124b	8d 8d 00 fc ff
+	ff		 lea	 ecx, DWORD PTR _str$[ebp]
+  01251	51		 push	 ecx
+  01252	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__sprintf
+  01258	83 c4 0c	 add	 esp, 12			; 0000000cH
+$L59726:
+
+; 684  : 
+; 685  : 	msgMgr->Fatal ( "Invalid handle 0x%x! (%s)", (SCIUWord)theID, str );
+
+  0125b	8d 95 00 fc ff
+	ff		 lea	 edx, DWORD PTR _str$[ebp]
+  01261	52		 push	 edx
+  01262	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  01265	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0126a	50		 push	 eax
+  0126b	68 00 00 00 00	 push	 OFFSET FLAT:$SG59730
+  01270	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  01276	51		 push	 ecx
+  01277	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  0127c	83 c4 10	 add	 esp, 16			; 00000010H
+
+; 686  : }
+
+  0127f	8b e5		 mov	 esp, ebp
+  01281	5d		 pop	 ebp
+  01282	c2 04 00	 ret	 4
+?NotValid@MemoryMgr@@QAEXG@Z ENDP			; MemoryMgr::NotValid
+_TEXT	ENDS
+END

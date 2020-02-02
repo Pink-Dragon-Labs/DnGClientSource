@@ -1,0 +1,1728 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Lzss.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	??0LZSS@@QAE@XZ					; LZSS::LZSS
+EXTRN	??2@YAPAXI@Z:NEAR				; operator new
+_TEXT	SEGMENT
+_this$ = -20
+$T1681 = -4
+$T1682 = -8
+$T1683 = -12
+$T1684 = -16
+??0LZSS@@QAE@XZ PROC NEAR				; LZSS::LZSS
+
+; 30   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 14	 sub	 esp, 20			; 00000014H
+  00006	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 31   : 	initError = FALSE;
+
+  00009	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  0000c	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], 0
+
+; 32   : 	textsize = 0;
+
+  00012	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00015	c7 41 04 00 00
+	00 00		 mov	 DWORD PTR [ecx+4], 0
+
+; 33   : 	codesize = 0;
+
+  0001c	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  0001f	c7 42 08 00 00
+	00 00		 mov	 DWORD PTR [edx+8], 0
+
+; 34   : 	text_buf = New unsigned char[N + F - 1];
+
+  00026	68 11 10 00 00	 push	 4113			; 00001011H
+  0002b	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  00030	83 c4 04	 add	 esp, 4
+  00033	89 45 fc	 mov	 DWORD PTR $T1681[ebp], eax
+  00036	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00039	8b 4d fc	 mov	 ecx, DWORD PTR $T1681[ebp]
+  0003c	89 48 0c	 mov	 DWORD PTR [eax+12], ecx
+
+; 35   : 	lson = New short[N + 1];
+
+  0003f	68 02 20 00 00	 push	 8194			; 00002002H
+  00044	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  00049	83 c4 04	 add	 esp, 4
+  0004c	89 45 f8	 mov	 DWORD PTR $T1682[ebp], eax
+  0004f	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  00052	8b 45 f8	 mov	 eax, DWORD PTR $T1682[ebp]
+  00055	89 42 14	 mov	 DWORD PTR [edx+20], eax
+
+; 36   : 	rson = New short[N + 257];
+
+  00058	68 02 22 00 00	 push	 8706			; 00002202H
+  0005d	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  00062	83 c4 04	 add	 esp, 4
+  00065	89 45 f4	 mov	 DWORD PTR $T1683[ebp], eax
+  00068	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  0006b	8b 55 f4	 mov	 edx, DWORD PTR $T1683[ebp]
+  0006e	89 51 18	 mov	 DWORD PTR [ecx+24], edx
+
+; 37   : 	dad = New short[N + 1];
+
+  00071	68 02 20 00 00	 push	 8194			; 00002002H
+  00076	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  0007b	83 c4 04	 add	 esp, 4
+  0007e	89 45 f0	 mov	 DWORD PTR $T1684[ebp], eax
+  00081	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00084	8b 4d f0	 mov	 ecx, DWORD PTR $T1684[ebp]
+  00087	89 48 1c	 mov	 DWORD PTR [eax+28], ecx
+
+; 38   : 
+; 39   : 	if(!text_buf || !lson || !rson || !dad)
+
+  0008a	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  0008d	83 7a 0c 00	 cmp	 DWORD PTR [edx+12], 0
+  00091	74 1b		 je	 SHORT $L1524
+  00093	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00096	83 78 14 00	 cmp	 DWORD PTR [eax+20], 0
+  0009a	74 12		 je	 SHORT $L1524
+  0009c	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  0009f	83 79 18 00	 cmp	 DWORD PTR [ecx+24], 0
+  000a3	74 09		 je	 SHORT $L1524
+  000a5	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  000a8	83 7a 1c 00	 cmp	 DWORD PTR [edx+28], 0
+  000ac	75 09		 jne	 SHORT $L1523
+$L1524:
+
+; 40   : 		initError = TRUE;
+
+  000ae	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  000b1	c7 00 01 00 00
+	00		 mov	 DWORD PTR [eax], 1
+$L1523:
+
+; 41   : 
+; 42   : }
+
+  000b7	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  000ba	8b e5		 mov	 esp, ebp
+  000bc	5d		 pop	 ebp
+  000bd	c3		 ret	 0
+??0LZSS@@QAE@XZ ENDP					; LZSS::LZSS
+_TEXT	ENDS
+PUBLIC	??1LZSS@@QAE@XZ					; LZSS::~LZSS
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+_TEXT	SEGMENT
+_this$ = -20
+$T1686 = -4
+$T1687 = -8
+$T1688 = -12
+$T1689 = -16
+??1LZSS@@QAE@XZ PROC NEAR				; LZSS::~LZSS
+
+; 45   : {
+
+  000be	55		 push	 ebp
+  000bf	8b ec		 mov	 ebp, esp
+  000c1	83 ec 14	 sub	 esp, 20			; 00000014H
+  000c4	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 46   : 	delete[] text_buf;
+
+  000c7	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  000ca	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
+  000cd	89 4d fc	 mov	 DWORD PTR $T1686[ebp], ecx
+  000d0	8b 55 fc	 mov	 edx, DWORD PTR $T1686[ebp]
+  000d3	52		 push	 edx
+  000d4	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  000d9	83 c4 04	 add	 esp, 4
+
+; 47   : 	delete[] lson;
+
+  000dc	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  000df	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  000e2	89 4d f8	 mov	 DWORD PTR $T1687[ebp], ecx
+  000e5	8b 55 f8	 mov	 edx, DWORD PTR $T1687[ebp]
+  000e8	52		 push	 edx
+  000e9	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  000ee	83 c4 04	 add	 esp, 4
+
+; 48   : 	delete[] rson;
+
+  000f1	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  000f4	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  000f7	89 4d f4	 mov	 DWORD PTR $T1688[ebp], ecx
+  000fa	8b 55 f4	 mov	 edx, DWORD PTR $T1688[ebp]
+  000fd	52		 push	 edx
+  000fe	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00103	83 c4 04	 add	 esp, 4
+
+; 49   : 	delete[] dad;
+
+  00106	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00109	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  0010c	89 4d f0	 mov	 DWORD PTR $T1689[ebp], ecx
+  0010f	8b 55 f0	 mov	 edx, DWORD PTR $T1689[ebp]
+  00112	52		 push	 edx
+  00113	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00118	83 c4 04	 add	 esp, 4
+
+; 50   : 
+; 51   : 
+; 52   : }
+
+  0011b	8b e5		 mov	 esp, ebp
+  0011d	5d		 pop	 ebp
+  0011e	c3		 ret	 0
+??1LZSS@@QAE@XZ ENDP					; LZSS::~LZSS
+_TEXT	ENDS
+PUBLIC	?InitTree@LZSS@@AAEXXZ				; LZSS::InitTree
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+?InitTree@LZSS@@AAEXXZ PROC NEAR			; LZSS::InitTree
+
+; 56   : {
+
+  0011f	55		 push	 ebp
+  00120	8b ec		 mov	 ebp, esp
+  00122	83 ec 08	 sub	 esp, 8
+  00125	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 57   : 	int  i;
+; 58   : 
+; 59   : 	/* For i = 0 to N - 1, rson[i] and lson[i] will be the right and
+; 60   : 	   left children of node i.  These nodes need not be initialized.
+; 61   : 	   Also, dad[i] is the parent of node i.  These are initialized to
+; 62   : 	   NIL (= N), which stands for 'not used.'
+; 63   : 	   For i = 0 to 255, rson[N + i + 1] is the root of the tree
+; 64   : 	   for strings that begin with character i.  These are initialized
+; 65   : 	   to NIL.  Note there are 256 trees. */
+; 66   : 
+; 67   : 	for (i = N + 1; i <= N + 256; i++)
+
+  00128	c7 45 fc 01 10
+	00 00		 mov	 DWORD PTR _i$[ebp], 4097 ; 00001001H
+  0012f	eb 09		 jmp	 SHORT $L1537
+$L1538:
+  00131	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00134	83 c0 01	 add	 eax, 1
+  00137	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L1537:
+  0013a	81 7d fc 00 11
+	00 00		 cmp	 DWORD PTR _i$[ebp], 4352 ; 00001100H
+  00141	7f 11		 jg	 SHORT $L1539
+
+; 68   : 		rson[i] = NIL;
+
+  00143	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00146	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  00149	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0014c	66 c7 04 42 00
+	10		 mov	 WORD PTR [edx+eax*2], 4096 ; 00001000H
+  00152	eb dd		 jmp	 SHORT $L1538
+$L1539:
+
+; 69   : 
+; 70   : 	for (i = 0; i < N; i++)
+
+  00154	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  0015b	eb 09		 jmp	 SHORT $L1540
+$L1541:
+  0015d	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00160	83 c1 01	 add	 ecx, 1
+  00163	89 4d fc	 mov	 DWORD PTR _i$[ebp], ecx
+$L1540:
+  00166	81 7d fc 00 10
+	00 00		 cmp	 DWORD PTR _i$[ebp], 4096 ; 00001000H
+  0016d	7d 11		 jge	 SHORT $L1542
+
+; 71   : 		dad[i] = NIL;
+
+  0016f	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00172	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  00175	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00178	66 c7 04 48 00
+	10		 mov	 WORD PTR [eax+ecx*2], 4096 ; 00001000H
+  0017e	eb dd		 jmp	 SHORT $L1541
+$L1542:
+
+; 72   : 
+; 73   : }
+
+  00180	8b e5		 mov	 esp, ebp
+  00182	5d		 pop	 ebp
+  00183	c3		 ret	 0
+?InitTree@LZSS@@AAEXXZ ENDP				; LZSS::InitTree
+_TEXT	ENDS
+PUBLIC	?InsertNode@LZSS@@AAEXF@Z			; LZSS::InsertNode
+_TEXT	SEGMENT
+_r$ = 8
+_this$ = -20
+_i$ = -12
+_p$ = -4
+_cmp$ = -16
+_key$ = -8
+?InsertNode@LZSS@@AAEXF@Z PROC NEAR			; LZSS::InsertNode
+
+; 82   : {
+
+  00184	55		 push	 ebp
+  00185	8b ec		 mov	 ebp, esp
+  00187	83 ec 14	 sub	 esp, 20			; 00000014H
+  0018a	53		 push	 ebx
+  0018b	56		 push	 esi
+  0018c	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 83   : 	short  i, p, cmp;
+; 84   : 	unsigned char  *key;
+; 85   : 
+; 86   : 	cmp = 1;
+
+  0018f	66 c7 45 f0 01
+	00		 mov	 WORD PTR _cmp$[ebp], 1
+
+; 87   : 	key = &text_buf[r];
+
+  00195	0f bf 45 08	 movsx	 eax, WORD PTR _r$[ebp]
+  00199	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  0019c	8b 51 0c	 mov	 edx, DWORD PTR [ecx+12]
+  0019f	03 d0		 add	 edx, eax
+  001a1	89 55 f8	 mov	 DWORD PTR _key$[ebp], edx
+
+; 88   : 	p = N + 1 + key[0];
+
+  001a4	8b 45 f8	 mov	 eax, DWORD PTR _key$[ebp]
+  001a7	33 c9		 xor	 ecx, ecx
+  001a9	8a 08		 mov	 cl, BYTE PTR [eax]
+  001ab	81 c1 01 10 00
+	00		 add	 ecx, 4097		; 00001001H
+  001b1	66 89 4d fc	 mov	 WORD PTR _p$[ebp], cx
+
+; 89   : 	rson[r] = lson[r] = NIL;
+
+  001b5	0f bf 55 08	 movsx	 edx, WORD PTR _r$[ebp]
+  001b9	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  001bc	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  001bf	66 c7 04 51 00
+	10		 mov	 WORD PTR [ecx+edx*2], 4096 ; 00001000H
+  001c5	0f bf 55 08	 movsx	 edx, WORD PTR _r$[ebp]
+  001c9	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  001cc	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  001cf	66 c7 04 51 00
+	10		 mov	 WORD PTR [ecx+edx*2], 4096 ; 00001000H
+
+; 90   : 	match_length = 0;
+
+  001d5	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  001d8	66 c7 42 12 00
+	00		 mov	 WORD PTR [edx+18], 0
+$L1552:
+
+; 93   : 		if (cmp >= 0) {
+
+  001de	0f bf 45 f0	 movsx	 eax, WORD PTR _cmp$[ebp]
+  001e2	85 c0		 test	 eax, eax
+  001e4	7c 55		 jl	 SHORT $L1554
+
+; 94   : 			if (rson[p] != NIL) p = rson[p];
+
+  001e6	0f bf 4d fc	 movsx	 ecx, WORD PTR _p$[ebp]
+  001ea	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  001ed	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  001f0	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  001f4	81 f9 00 10 00
+	00		 cmp	 ecx, 4096		; 00001000H
+  001fa	74 14		 je	 SHORT $L1555
+  001fc	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  00200	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00203	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  00206	66 8b 14 51	 mov	 dx, WORD PTR [ecx+edx*2]
+  0020a	66 89 55 fc	 mov	 WORD PTR _p$[ebp], dx
+
+; 95   : 			else {  rson[p] = r;  dad[r] = p;  return;  }
+
+  0020e	eb 29		 jmp	 SHORT $L1556
+$L1555:
+  00210	0f bf 45 fc	 movsx	 eax, WORD PTR _p$[ebp]
+  00214	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00217	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  0021a	66 8b 4d 08	 mov	 cx, WORD PTR _r$[ebp]
+  0021e	66 89 0c 42	 mov	 WORD PTR [edx+eax*2], cx
+  00222	0f bf 55 08	 movsx	 edx, WORD PTR _r$[ebp]
+  00226	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00229	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  0022c	66 8b 45 fc	 mov	 ax, WORD PTR _p$[ebp]
+  00230	66 89 04 51	 mov	 WORD PTR [ecx+edx*2], ax
+  00234	e9 d0 01 00 00	 jmp	 $L1546
+$L1556:
+
+; 96   : 		} else {
+
+  00239	eb 53		 jmp	 SHORT $L1559
+$L1554:
+
+; 97   : 			if (lson[p] != NIL) p = lson[p];
+
+  0023b	0f bf 4d fc	 movsx	 ecx, WORD PTR _p$[ebp]
+  0023f	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  00242	8b 42 14	 mov	 eax, DWORD PTR [edx+20]
+  00245	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  00249	81 f9 00 10 00
+	00		 cmp	 ecx, 4096		; 00001000H
+  0024f	74 14		 je	 SHORT $L1558
+  00251	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  00255	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00258	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  0025b	66 8b 14 51	 mov	 dx, WORD PTR [ecx+edx*2]
+  0025f	66 89 55 fc	 mov	 WORD PTR _p$[ebp], dx
+
+; 98   : 			else {  lson[p] = r;  dad[r] = p;  return;  }
+
+  00263	eb 29		 jmp	 SHORT $L1559
+$L1558:
+  00265	0f bf 45 fc	 movsx	 eax, WORD PTR _p$[ebp]
+  00269	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  0026c	8b 51 14	 mov	 edx, DWORD PTR [ecx+20]
+  0026f	66 8b 4d 08	 mov	 cx, WORD PTR _r$[ebp]
+  00273	66 89 0c 42	 mov	 WORD PTR [edx+eax*2], cx
+  00277	0f bf 55 08	 movsx	 edx, WORD PTR _r$[ebp]
+  0027b	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  0027e	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  00281	66 8b 45 fc	 mov	 ax, WORD PTR _p$[ebp]
+  00285	66 89 04 51	 mov	 WORD PTR [ecx+edx*2], ax
+  00289	e9 7b 01 00 00	 jmp	 $L1546
+$L1559:
+
+; 100  : 		for (i = 1; i < F; i++)
+
+  0028e	66 c7 45 f4 01
+	00		 mov	 WORD PTR _i$[ebp], 1
+  00294	eb 0c		 jmp	 SHORT $L1560
+$L1561:
+  00296	66 8b 4d f4	 mov	 cx, WORD PTR _i$[ebp]
+  0029a	66 83 c1 01	 add	 cx, 1
+  0029e	66 89 4d f4	 mov	 WORD PTR _i$[ebp], cx
+$L1560:
+  002a2	0f bf 55 f4	 movsx	 edx, WORD PTR _i$[ebp]
+  002a6	83 fa 12	 cmp	 edx, 18			; 00000012H
+  002a9	7d 33		 jge	 SHORT $L1562
+
+; 101  : 			if ((cmp = key[i] - text_buf[p + i]) != 0)  break;
+
+  002ab	0f bf 45 f4	 movsx	 eax, WORD PTR _i$[ebp]
+  002af	8b 4d f8	 mov	 ecx, DWORD PTR _key$[ebp]
+  002b2	33 d2		 xor	 edx, edx
+  002b4	8a 14 01	 mov	 dl, BYTE PTR [ecx+eax]
+  002b7	0f bf 45 fc	 movsx	 eax, WORD PTR _p$[ebp]
+  002bb	0f bf 4d f4	 movsx	 ecx, WORD PTR _i$[ebp]
+  002bf	03 c1		 add	 eax, ecx
+  002c1	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  002c4	8b 49 0c	 mov	 ecx, DWORD PTR [ecx+12]
+  002c7	33 db		 xor	 ebx, ebx
+  002c9	8a 1c 01	 mov	 bl, BYTE PTR [ecx+eax]
+  002cc	2b d3		 sub	 edx, ebx
+  002ce	66 89 55 f0	 mov	 WORD PTR _cmp$[ebp], dx
+  002d2	0f bf 55 f0	 movsx	 edx, WORD PTR _cmp$[ebp]
+  002d6	85 d2		 test	 edx, edx
+  002d8	74 02		 je	 SHORT $L1563
+  002da	eb 02		 jmp	 SHORT $L1562
+$L1563:
+
+; 102  : 		if (i > match_length) {
+
+  002dc	eb b8		 jmp	 SHORT $L1561
+$L1562:
+  002de	0f bf 45 f4	 movsx	 eax, WORD PTR _i$[ebp]
+  002e2	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  002e5	0f bf 51 12	 movsx	 edx, WORD PTR [ecx+18]
+  002e9	3b c2		 cmp	 eax, edx
+  002eb	7e 21		 jle	 SHORT $L1565
+
+; 103  : 			match_position = p;
+
+  002ed	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  002f0	66 8b 4d fc	 mov	 cx, WORD PTR _p$[ebp]
+  002f4	66 89 48 10	 mov	 WORD PTR [eax+16], cx
+
+; 104  : 			if ((match_length = i) >= F)  break;
+
+  002f8	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  002fb	66 8b 45 f4	 mov	 ax, WORD PTR _i$[ebp]
+  002ff	66 89 42 12	 mov	 WORD PTR [edx+18], ax
+  00303	0f bf 4d f4	 movsx	 ecx, WORD PTR _i$[ebp]
+  00307	83 f9 12	 cmp	 ecx, 18			; 00000012H
+  0030a	7c 02		 jl	 SHORT $L1565
+  0030c	eb 05		 jmp	 SHORT $L1553
+$L1565:
+
+; 106  : 	}
+
+  0030e	e9 cb fe ff ff	 jmp	 $L1552
+$L1553:
+
+; 107  : 	dad[r] = dad[p];
+
+  00313	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  00317	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  0031a	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  0031d	0f bf 45 08	 movsx	 eax, WORD PTR _r$[ebp]
+  00321	8b 75 ec	 mov	 esi, DWORD PTR _this$[ebp]
+  00324	8b 76 1c	 mov	 esi, DWORD PTR [esi+28]
+  00327	66 8b 0c 51	 mov	 cx, WORD PTR [ecx+edx*2]
+  0032b	66 89 0c 46	 mov	 WORD PTR [esi+eax*2], cx
+
+; 108  : 	lson[r] = lson[p];
+
+  0032f	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  00333	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00336	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  00339	0f bf 45 08	 movsx	 eax, WORD PTR _r$[ebp]
+  0033d	8b 75 ec	 mov	 esi, DWORD PTR _this$[ebp]
+  00340	8b 76 14	 mov	 esi, DWORD PTR [esi+20]
+  00343	66 8b 0c 51	 mov	 cx, WORD PTR [ecx+edx*2]
+  00347	66 89 0c 46	 mov	 WORD PTR [esi+eax*2], cx
+
+; 109  : 	rson[r] = rson[p];
+
+  0034b	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  0034f	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00352	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  00355	0f bf 45 08	 movsx	 eax, WORD PTR _r$[ebp]
+  00359	8b 75 ec	 mov	 esi, DWORD PTR _this$[ebp]
+  0035c	8b 76 18	 mov	 esi, DWORD PTR [esi+24]
+  0035f	66 8b 0c 51	 mov	 cx, WORD PTR [ecx+edx*2]
+  00363	66 89 0c 46	 mov	 WORD PTR [esi+eax*2], cx
+
+; 110  : 	dad[lson[p]] = r;
+
+  00367	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  0036b	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  0036e	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  00371	0f bf 14 51	 movsx	 edx, WORD PTR [ecx+edx*2]
+  00375	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00378	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  0037b	66 8b 45 08	 mov	 ax, WORD PTR _r$[ebp]
+  0037f	66 89 04 51	 mov	 WORD PTR [ecx+edx*2], ax
+
+; 111  : 	dad[rson[p]] = r;
+
+  00383	0f bf 4d fc	 movsx	 ecx, WORD PTR _p$[ebp]
+  00387	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  0038a	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  0038d	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  00391	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  00394	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  00397	66 8b 55 08	 mov	 dx, WORD PTR _r$[ebp]
+  0039b	66 89 14 48	 mov	 WORD PTR [eax+ecx*2], dx
+
+; 112  : 	if (rson[dad[p]] == p)
+
+  0039f	0f bf 45 fc	 movsx	 eax, WORD PTR _p$[ebp]
+  003a3	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  003a6	8b 51 1c	 mov	 edx, DWORD PTR [ecx+28]
+  003a9	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  003ad	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  003b0	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  003b3	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  003b7	0f bf 4d fc	 movsx	 ecx, WORD PTR _p$[ebp]
+  003bb	3b c1		 cmp	 eax, ecx
+  003bd	75 1e		 jne	 SHORT $L1566
+
+; 113  : 		rson[dad[p]] = r;
+
+  003bf	0f bf 55 fc	 movsx	 edx, WORD PTR _p$[ebp]
+  003c3	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  003c6	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  003c9	0f bf 14 51	 movsx	 edx, WORD PTR [ecx+edx*2]
+  003cd	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  003d0	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  003d3	66 8b 45 08	 mov	 ax, WORD PTR _r$[ebp]
+  003d7	66 89 04 51	 mov	 WORD PTR [ecx+edx*2], ax
+
+; 114  : 	else                   lson[dad[p]] = r;
+
+  003db	eb 1c		 jmp	 SHORT $L1567
+$L1566:
+  003dd	0f bf 4d fc	 movsx	 ecx, WORD PTR _p$[ebp]
+  003e1	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  003e4	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  003e7	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  003eb	8b 55 ec	 mov	 edx, DWORD PTR _this$[ebp]
+  003ee	8b 42 14	 mov	 eax, DWORD PTR [edx+20]
+  003f1	66 8b 55 08	 mov	 dx, WORD PTR _r$[ebp]
+  003f5	66 89 14 48	 mov	 WORD PTR [eax+ecx*2], dx
+$L1567:
+
+; 115  : 		dad[p] = NIL;  /* remove p */
+
+  003f9	0f bf 45 fc	 movsx	 eax, WORD PTR _p$[ebp]
+  003fd	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00400	8b 51 1c	 mov	 edx, DWORD PTR [ecx+28]
+  00403	66 c7 04 42 00
+	10		 mov	 WORD PTR [edx+eax*2], 4096 ; 00001000H
+$L1546:
+
+; 116  : }
+
+  00409	5e		 pop	 esi
+  0040a	5b		 pop	 ebx
+  0040b	8b e5		 mov	 esp, ebp
+  0040d	5d		 pop	 ebp
+  0040e	c2 04 00	 ret	 4
+?InsertNode@LZSS@@AAEXF@Z ENDP				; LZSS::InsertNode
+_TEXT	ENDS
+PUBLIC	?DeleteNode@LZSS@@AAEXF@Z			; LZSS::DeleteNode
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -8
+_q$ = -4
+?DeleteNode@LZSS@@AAEXF@Z PROC NEAR			; LZSS::DeleteNode
+
+; 119  : {
+
+  00411	55		 push	 ebp
+  00412	8b ec		 mov	 ebp, esp
+  00414	83 ec 08	 sub	 esp, 8
+  00417	56		 push	 esi
+  00418	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 120  : 	short  q;
+; 121  : 	
+; 122  : 	if (dad[p] == NIL) return;  /* not in tree */
+
+  0041b	0f bf 45 08	 movsx	 eax, WORD PTR _p$[ebp]
+  0041f	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00422	8b 51 1c	 mov	 edx, DWORD PTR [ecx+28]
+  00425	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  00429	3d 00 10 00 00	 cmp	 eax, 4096		; 00001000H
+  0042e	75 05		 jne	 SHORT $L1573
+  00430	e9 ee 01 00 00	 jmp	 $L1571
+$L1573:
+
+; 123  : 	if (rson[p] == NIL) q = lson[p];
+
+  00435	0f bf 4d 08	 movsx	 ecx, WORD PTR _p$[ebp]
+  00439	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0043c	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  0043f	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  00443	81 f9 00 10 00
+	00		 cmp	 ecx, 4096		; 00001000H
+  00449	75 17		 jne	 SHORT $L1574
+  0044b	0f bf 55 08	 movsx	 edx, WORD PTR _p$[ebp]
+  0044f	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00452	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  00455	66 8b 14 51	 mov	 dx, WORD PTR [ecx+edx*2]
+  00459	66 89 55 fc	 mov	 WORD PTR _q$[ebp], dx
+
+; 124  : 	else if (lson[p] == NIL) q = rson[p];
+
+  0045d	e9 3b 01 00 00	 jmp	 $L1577
+$L1574:
+  00462	0f bf 45 08	 movsx	 eax, WORD PTR _p$[ebp]
+  00466	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00469	8b 51 14	 mov	 edx, DWORD PTR [ecx+20]
+  0046c	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  00470	3d 00 10 00 00	 cmp	 eax, 4096		; 00001000H
+  00475	75 17		 jne	 SHORT $L1576
+  00477	0f bf 4d 08	 movsx	 ecx, WORD PTR _p$[ebp]
+  0047b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0047e	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  00481	66 8b 0c 48	 mov	 cx, WORD PTR [eax+ecx*2]
+  00485	66 89 4d fc	 mov	 WORD PTR _q$[ebp], cx
+
+; 125  : 	else {
+
+  00489	e9 0f 01 00 00	 jmp	 $L1577
+$L1576:
+
+; 126  : 		q = lson[p];
+
+  0048e	0f bf 55 08	 movsx	 edx, WORD PTR _p$[ebp]
+  00492	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00495	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  00498	66 8b 14 51	 mov	 dx, WORD PTR [ecx+edx*2]
+  0049c	66 89 55 fc	 mov	 WORD PTR _q$[ebp], dx
+
+; 127  : 		if (rson[q] != NIL) {
+
+  004a0	0f bf 45 fc	 movsx	 eax, WORD PTR _q$[ebp]
+  004a4	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  004a7	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  004aa	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  004ae	3d 00 10 00 00	 cmp	 eax, 4096		; 00001000H
+  004b3	0f 84 ac 00 00
+	00		 je	 $L1578
+$L1579:
+
+; 128  : 			do {  q = rson[q];  } while (rson[q] != NIL);
+
+  004b9	0f bf 4d fc	 movsx	 ecx, WORD PTR _q$[ebp]
+  004bd	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  004c0	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  004c3	66 8b 0c 48	 mov	 cx, WORD PTR [eax+ecx*2]
+  004c7	66 89 4d fc	 mov	 WORD PTR _q$[ebp], cx
+  004cb	0f bf 55 fc	 movsx	 edx, WORD PTR _q$[ebp]
+  004cf	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  004d2	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  004d5	0f bf 14 51	 movsx	 edx, WORD PTR [ecx+edx*2]
+  004d9	81 fa 00 10 00
+	00		 cmp	 edx, 4096		; 00001000H
+  004df	75 d8		 jne	 SHORT $L1579
+
+; 129  : 			rson[dad[q]] = lson[q];  dad[lson[q]] = dad[q];
+
+  004e1	0f bf 45 fc	 movsx	 eax, WORD PTR _q$[ebp]
+  004e5	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  004e8	8b 51 14	 mov	 edx, DWORD PTR [ecx+20]
+  004eb	0f bf 4d fc	 movsx	 ecx, WORD PTR _q$[ebp]
+  004ef	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  004f2	8b 76 1c	 mov	 esi, DWORD PTR [esi+28]
+  004f5	0f bf 0c 4e	 movsx	 ecx, WORD PTR [esi+ecx*2]
+  004f9	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  004fc	8b 76 18	 mov	 esi, DWORD PTR [esi+24]
+  004ff	66 8b 14 42	 mov	 dx, WORD PTR [edx+eax*2]
+  00503	66 89 14 4e	 mov	 WORD PTR [esi+ecx*2], dx
+  00507	0f bf 45 fc	 movsx	 eax, WORD PTR _q$[ebp]
+  0050b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0050e	8b 51 1c	 mov	 edx, DWORD PTR [ecx+28]
+  00511	0f bf 4d fc	 movsx	 ecx, WORD PTR _q$[ebp]
+  00515	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  00518	8b 76 14	 mov	 esi, DWORD PTR [esi+20]
+  0051b	0f bf 0c 4e	 movsx	 ecx, WORD PTR [esi+ecx*2]
+  0051f	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  00522	8b 76 1c	 mov	 esi, DWORD PTR [esi+28]
+  00525	66 8b 14 42	 mov	 dx, WORD PTR [edx+eax*2]
+  00529	66 89 14 4e	 mov	 WORD PTR [esi+ecx*2], dx
+
+; 130  : 			lson[q] = lson[p];  dad[lson[p]] = q;
+
+  0052d	0f bf 45 08	 movsx	 eax, WORD PTR _p$[ebp]
+  00531	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00534	8b 51 14	 mov	 edx, DWORD PTR [ecx+20]
+  00537	0f bf 4d fc	 movsx	 ecx, WORD PTR _q$[ebp]
+  0053b	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  0053e	8b 76 14	 mov	 esi, DWORD PTR [esi+20]
+  00541	66 8b 14 42	 mov	 dx, WORD PTR [edx+eax*2]
+  00545	66 89 14 4e	 mov	 WORD PTR [esi+ecx*2], dx
+  00549	0f bf 45 08	 movsx	 eax, WORD PTR _p$[ebp]
+  0054d	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00550	8b 51 14	 mov	 edx, DWORD PTR [ecx+20]
+  00553	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  00557	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0055a	8b 51 1c	 mov	 edx, DWORD PTR [ecx+28]
+  0055d	66 8b 4d fc	 mov	 cx, WORD PTR _q$[ebp]
+  00561	66 89 0c 42	 mov	 WORD PTR [edx+eax*2], cx
+$L1578:
+
+; 132  : 		rson[q] = rson[p];  dad[rson[p]] = q;
+
+  00565	0f bf 55 08	 movsx	 edx, WORD PTR _p$[ebp]
+  00569	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0056c	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  0056f	0f bf 45 fc	 movsx	 eax, WORD PTR _q$[ebp]
+  00573	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  00576	8b 76 18	 mov	 esi, DWORD PTR [esi+24]
+  00579	66 8b 0c 51	 mov	 cx, WORD PTR [ecx+edx*2]
+  0057d	66 89 0c 46	 mov	 WORD PTR [esi+eax*2], cx
+  00581	0f bf 55 08	 movsx	 edx, WORD PTR _p$[ebp]
+  00585	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00588	8b 48 18	 mov	 ecx, DWORD PTR [eax+24]
+  0058b	0f bf 14 51	 movsx	 edx, WORD PTR [ecx+edx*2]
+  0058f	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00592	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  00595	66 8b 45 fc	 mov	 ax, WORD PTR _q$[ebp]
+  00599	66 89 04 51	 mov	 WORD PTR [ecx+edx*2], ax
+$L1577:
+
+; 134  : 	dad[q] = dad[p];
+
+  0059d	0f bf 4d 08	 movsx	 ecx, WORD PTR _p$[ebp]
+  005a1	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  005a4	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  005a7	0f bf 55 fc	 movsx	 edx, WORD PTR _q$[ebp]
+  005ab	8b 75 f8	 mov	 esi, DWORD PTR _this$[ebp]
+  005ae	8b 76 1c	 mov	 esi, DWORD PTR [esi+28]
+  005b1	66 8b 04 48	 mov	 ax, WORD PTR [eax+ecx*2]
+  005b5	66 89 04 56	 mov	 WORD PTR [esi+edx*2], ax
+
+; 135  : 	if (rson[dad[p]] == p) rson[dad[p]] = q;  else lson[dad[p]] = q;
+
+  005b9	0f bf 4d 08	 movsx	 ecx, WORD PTR _p$[ebp]
+  005bd	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  005c0	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  005c3	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  005c7	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  005ca	8b 42 18	 mov	 eax, DWORD PTR [edx+24]
+  005cd	0f bf 0c 48	 movsx	 ecx, WORD PTR [eax+ecx*2]
+  005d1	0f bf 55 08	 movsx	 edx, WORD PTR _p$[ebp]
+  005d5	3b ca		 cmp	 ecx, edx
+  005d7	75 1e		 jne	 SHORT $L1582
+  005d9	0f bf 45 08	 movsx	 eax, WORD PTR _p$[ebp]
+  005dd	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  005e0	8b 51 1c	 mov	 edx, DWORD PTR [ecx+28]
+  005e3	0f bf 04 42	 movsx	 eax, WORD PTR [edx+eax*2]
+  005e7	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  005ea	8b 51 18	 mov	 edx, DWORD PTR [ecx+24]
+  005ed	66 8b 4d fc	 mov	 cx, WORD PTR _q$[ebp]
+  005f1	66 89 0c 42	 mov	 WORD PTR [edx+eax*2], cx
+  005f5	eb 1c		 jmp	 SHORT $L1583
+$L1582:
+  005f7	0f bf 55 08	 movsx	 edx, WORD PTR _p$[ebp]
+  005fb	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  005fe	8b 48 1c	 mov	 ecx, DWORD PTR [eax+28]
+  00601	0f bf 14 51	 movsx	 edx, WORD PTR [ecx+edx*2]
+  00605	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00608	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  0060b	66 8b 45 fc	 mov	 ax, WORD PTR _q$[ebp]
+  0060f	66 89 04 51	 mov	 WORD PTR [ecx+edx*2], ax
+$L1583:
+
+; 136  : 	dad[p] = NIL;
+
+  00613	0f bf 4d 08	 movsx	 ecx, WORD PTR _p$[ebp]
+  00617	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0061a	8b 42 1c	 mov	 eax, DWORD PTR [edx+28]
+  0061d	66 c7 04 48 00
+	10		 mov	 WORD PTR [eax+ecx*2], 4096 ; 00001000H
+$L1571:
+
+; 137  : }
+
+  00623	5e		 pop	 esi
+  00624	8b e5		 mov	 esp, ebp
+  00626	5d		 pop	 ebp
+  00627	c2 04 00	 ret	 4
+?DeleteNode@LZSS@@AAEXF@Z ENDP				; LZSS::DeleteNode
+_TEXT	ENDS
+PUBLIC	?Encode@LZSS@@QAEJPADJ0@Z			; LZSS::Encode
+_TEXT	SEGMENT
+_inBuffer$ = 8
+_remaining$ = 12
+_outBuffer$ = 16
+_this$ = -56
+_i$ = -36
+_c$ = -12
+_len$ = -48
+_r$ = -4
+_s$ = -8
+_last_match_length$ = -40
+_code_buf_ptr$ = -52
+_code_buf$ = -32
+_mask$ = -44
+?Encode@LZSS@@QAEJPADJ0@Z PROC NEAR			; LZSS::Encode
+
+; 140  : {
+
+  0062a	55		 push	 ebp
+  0062b	8b ec		 mov	 ebp, esp
+  0062d	83 ec 38	 sub	 esp, 56			; 00000038H
+  00630	89 4d c8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 141  : 	short i, c, len, r, s, last_match_length, code_buf_ptr;
+; 142  : 	unsigned char  code_buf[17], mask;
+; 143  : 	codesize = 0;
+
+  00633	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00636	c7 40 08 00 00
+	00 00		 mov	 DWORD PTR [eax+8], 0
+
+; 144  : 
+; 145  : 	if(initError)
+
+  0063d	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00640	83 39 00	 cmp	 DWORD PTR [ecx], 0
+  00643	74 07		 je	 SHORT $L1599
+
+; 146  : 		return 0;
+
+  00645	33 c0		 xor	 eax, eax
+  00647	e9 ab 03 00 00	 jmp	 $L1589
+$L1599:
+
+; 147  : 	
+; 148  : 	InitTree();  /* initialize trees */
+
+  0064c	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0064f	e8 00 00 00 00	 call	 ?InitTree@LZSS@@AAEXXZ	; LZSS::InitTree
+
+; 149  : 	code_buf[0] = 0;  /* code_buf[1..16] saves eight units of code, and
+
+  00654	c6 45 e0 00	 mov	 BYTE PTR _code_buf$[ebp], 0
+
+; 150  : 		code_buf[0] works as eight flags, "1" representing that the unit
+; 151  : 		is an unencoded letter (1 byte), "0" a position-and-length pair
+; 152  : 		(2 bytes).  Thus, eight units require at most 16 bytes of code. */
+; 153  : 	code_buf_ptr = mask = 1;
+
+  00658	c6 45 d4 01	 mov	 BYTE PTR _mask$[ebp], 1
+  0065c	66 0f b6 55 d4	 movzx	 dx, BYTE PTR _mask$[ebp]
+  00661	66 89 55 cc	 mov	 WORD PTR _code_buf_ptr$[ebp], dx
+
+; 154  : 	s = 0;  r = N - F;
+
+  00665	66 c7 45 f8 00
+	00		 mov	 WORD PTR _s$[ebp], 0
+  0066b	66 c7 45 fc ee
+	0f		 mov	 WORD PTR _r$[ebp], 4078	; 00000feeH
+
+; 155  : 	for (i = s; i < r; i++) text_buf[i] = ' ';  /* Clear the buffer with
+
+  00671	66 8b 45 f8	 mov	 ax, WORD PTR _s$[ebp]
+  00675	66 89 45 dc	 mov	 WORD PTR _i$[ebp], ax
+  00679	eb 0c		 jmp	 SHORT $L1600
+$L1601:
+  0067b	66 8b 4d dc	 mov	 cx, WORD PTR _i$[ebp]
+  0067f	66 83 c1 01	 add	 cx, 1
+  00683	66 89 4d dc	 mov	 WORD PTR _i$[ebp], cx
+$L1600:
+  00687	0f bf 55 dc	 movsx	 edx, WORD PTR _i$[ebp]
+  0068b	0f bf 45 fc	 movsx	 eax, WORD PTR _r$[ebp]
+  0068f	3b d0		 cmp	 edx, eax
+  00691	7d 10		 jge	 SHORT $L1602
+  00693	0f bf 4d dc	 movsx	 ecx, WORD PTR _i$[ebp]
+  00697	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  0069a	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  0069d	c6 04 08 20	 mov	 BYTE PTR [eax+ecx], 32	; 00000020H
+  006a1	eb d8		 jmp	 SHORT $L1601
+$L1602:
+
+; 156  : 		any character that will appear often. */
+; 157  : 
+; 158  : 	for (len = 0; len < F && remaining-- > 0; len++)
+
+  006a3	66 c7 45 d0 00
+	00		 mov	 WORD PTR _len$[ebp], 0
+  006a9	eb 0c		 jmp	 SHORT $L1603
+$L1604:
+  006ab	66 8b 4d d0	 mov	 cx, WORD PTR _len$[ebp]
+  006af	66 83 c1 01	 add	 cx, 1
+  006b3	66 89 4d d0	 mov	 WORD PTR _len$[ebp], cx
+$L1603:
+  006b7	0f bf 55 d0	 movsx	 edx, WORD PTR _len$[ebp]
+  006bb	83 fa 12	 cmp	 edx, 18			; 00000012H
+  006be	7d 33		 jge	 SHORT $L1605
+  006c0	8b 45 0c	 mov	 eax, DWORD PTR _remaining$[ebp]
+  006c3	8b 4d 0c	 mov	 ecx, DWORD PTR _remaining$[ebp]
+  006c6	83 e9 01	 sub	 ecx, 1
+  006c9	89 4d 0c	 mov	 DWORD PTR _remaining$[ebp], ecx
+  006cc	85 c0		 test	 eax, eax
+  006ce	7e 23		 jle	 SHORT $L1605
+
+; 159  : 		text_buf[r + len] = *inBuffer++;  /* Read F bytes into the last F bytes of
+
+  006d0	0f bf 55 fc	 movsx	 edx, WORD PTR _r$[ebp]
+  006d4	0f bf 45 d0	 movsx	 eax, WORD PTR _len$[ebp]
+  006d8	03 d0		 add	 edx, eax
+  006da	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  006dd	8b 41 0c	 mov	 eax, DWORD PTR [ecx+12]
+  006e0	8b 4d 08	 mov	 ecx, DWORD PTR _inBuffer$[ebp]
+  006e3	8a 09		 mov	 cl, BYTE PTR [ecx]
+  006e5	88 0c 10	 mov	 BYTE PTR [eax+edx], cl
+  006e8	8b 55 08	 mov	 edx, DWORD PTR _inBuffer$[ebp]
+  006eb	83 c2 01	 add	 edx, 1
+  006ee	89 55 08	 mov	 DWORD PTR _inBuffer$[ebp], edx
+  006f1	eb b8		 jmp	 SHORT $L1604
+$L1605:
+
+; 160  : 			the buffer */
+; 161  : 
+; 162  : 	if ((textsize = len) == 0)
+
+  006f3	0f bf 45 d0	 movsx	 eax, WORD PTR _len$[ebp]
+  006f7	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  006fa	89 41 04	 mov	 DWORD PTR [ecx+4], eax
+  006fd	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  00700	83 7a 04 00	 cmp	 DWORD PTR [edx+4], 0
+  00704	75 0b		 jne	 SHORT $L1606
+
+; 163  : 		return codesize ;  /* text of size zero */
+
+  00706	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00709	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  0070c	e9 e6 02 00 00	 jmp	 $L1589
+$L1606:
+
+; 164  : 	for (i = 1; i <= F; i++) InsertNode(r - i);  /* Insert the F strings,
+
+  00711	66 c7 45 dc 01
+	00		 mov	 WORD PTR _i$[ebp], 1
+  00717	eb 0c		 jmp	 SHORT $L1607
+$L1608:
+  00719	66 8b 4d dc	 mov	 cx, WORD PTR _i$[ebp]
+  0071d	66 83 c1 01	 add	 cx, 1
+  00721	66 89 4d dc	 mov	 WORD PTR _i$[ebp], cx
+$L1607:
+  00725	0f bf 55 dc	 movsx	 edx, WORD PTR _i$[ebp]
+  00729	83 fa 12	 cmp	 edx, 18			; 00000012H
+  0072c	7f 15		 jg	 SHORT $L1609
+  0072e	0f bf 45 fc	 movsx	 eax, WORD PTR _r$[ebp]
+  00732	0f bf 4d dc	 movsx	 ecx, WORD PTR _i$[ebp]
+  00736	2b c1		 sub	 eax, ecx
+  00738	50		 push	 eax
+  00739	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0073c	e8 00 00 00 00	 call	 ?InsertNode@LZSS@@AAEXF@Z ; LZSS::InsertNode
+  00741	eb d6		 jmp	 SHORT $L1608
+$L1609:
+
+; 165  : 		each of which begins with one or more 'space' characters.  Note
+; 166  : 		the order in which these strings are inserted.  This way,
+; 167  : 		degenerate trees will be less likely to occur. */
+; 168  : 	InsertNode(r);  /* Finally, insert the whole string just read.  The
+
+  00743	66 8b 55 fc	 mov	 dx, WORD PTR _r$[ebp]
+  00747	52		 push	 edx
+  00748	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0074b	e8 00 00 00 00	 call	 ?InsertNode@LZSS@@AAEXF@Z ; LZSS::InsertNode
+$L1610:
+
+; 171  : 		if (match_length > len) match_length = len;  /* match_length
+
+  00750	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00753	0f bf 48 12	 movsx	 ecx, WORD PTR [eax+18]
+  00757	0f bf 55 d0	 movsx	 edx, WORD PTR _len$[ebp]
+  0075b	3b ca		 cmp	 ecx, edx
+  0075d	7e 0b		 jle	 SHORT $L1613
+  0075f	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00762	66 8b 4d d0	 mov	 cx, WORD PTR _len$[ebp]
+  00766	66 89 48 12	 mov	 WORD PTR [eax+18], cx
+$L1613:
+
+; 172  : 			may be spuriously long near the end of text. */
+; 173  : 		if (match_length <= THRESHOLD) {
+
+  0076a	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  0076d	0f bf 42 12	 movsx	 eax, WORD PTR [edx+18]
+  00771	83 f8 02	 cmp	 eax, 2
+  00774	7f 35		 jg	 SHORT $L1614
+
+; 174  : 			match_length = 1;  /* Not long enough match.  Send one byte. */
+
+  00776	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00779	66 c7 41 12 01
+	00		 mov	 WORD PTR [ecx+18], 1
+
+; 175  : 			code_buf[0] |= mask;  /* 'send one byte' flag */
+
+  0077f	8a 55 e0	 mov	 dl, BYTE PTR _code_buf$[ebp]
+  00782	0a 55 d4	 or	 dl, BYTE PTR _mask$[ebp]
+  00785	88 55 e0	 mov	 BYTE PTR _code_buf$[ebp], dl
+
+; 176  : 			code_buf[code_buf_ptr++] = text_buf[r];  /* Send uncoded. */
+
+  00788	0f bf 45 fc	 movsx	 eax, WORD PTR _r$[ebp]
+  0078c	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0078f	8b 51 0c	 mov	 edx, DWORD PTR [ecx+12]
+  00792	0f bf 4d cc	 movsx	 ecx, WORD PTR _code_buf_ptr$[ebp]
+  00796	8a 14 02	 mov	 dl, BYTE PTR [edx+eax]
+  00799	88 54 0d e0	 mov	 BYTE PTR _code_buf$[ebp+ecx], dl
+  0079d	66 8b 45 cc	 mov	 ax, WORD PTR _code_buf_ptr$[ebp]
+  007a1	66 05 01 00	 add	 ax, 1
+  007a5	66 89 45 cc	 mov	 WORD PTR _code_buf_ptr$[ebp], ax
+
+; 177  : 		} else {
+
+  007a9	eb 49		 jmp	 SHORT $L1615
+$L1614:
+
+; 178  : 			code_buf[code_buf_ptr++] = (unsigned char) match_position;
+
+  007ab	0f bf 4d cc	 movsx	 ecx, WORD PTR _code_buf_ptr$[ebp]
+  007af	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  007b2	8a 42 10	 mov	 al, BYTE PTR [edx+16]
+  007b5	88 44 0d e0	 mov	 BYTE PTR _code_buf$[ebp+ecx], al
+  007b9	66 8b 4d cc	 mov	 cx, WORD PTR _code_buf_ptr$[ebp]
+  007bd	66 83 c1 01	 add	 cx, 1
+  007c1	66 89 4d cc	 mov	 WORD PTR _code_buf_ptr$[ebp], cx
+
+; 179  : 			code_buf[code_buf_ptr++] = (unsigned char)
+; 180  : 				(((match_position >> 4) & 0xf0)
+; 181  : 			  | (match_length - (THRESHOLD + 1)));  /* Send position and
+
+  007c5	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  007c8	0f bf 42 10	 movsx	 eax, WORD PTR [edx+16]
+  007cc	c1 f8 04	 sar	 eax, 4
+  007cf	25 f0 00 00 00	 and	 eax, 240		; 000000f0H
+  007d4	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  007d7	0f bf 51 12	 movsx	 edx, WORD PTR [ecx+18]
+  007db	83 ea 03	 sub	 edx, 3
+  007de	0b c2		 or	 eax, edx
+  007e0	0f bf 4d cc	 movsx	 ecx, WORD PTR _code_buf_ptr$[ebp]
+  007e4	88 44 0d e0	 mov	 BYTE PTR _code_buf$[ebp+ecx], al
+  007e8	66 8b 55 cc	 mov	 dx, WORD PTR _code_buf_ptr$[ebp]
+  007ec	66 83 c2 01	 add	 dx, 1
+  007f0	66 89 55 cc	 mov	 WORD PTR _code_buf_ptr$[ebp], dx
+$L1615:
+
+; 184  : 		if ((mask <<= 1) == 0) {  /* Shift mask left one bit. */
+
+  007f4	8a 45 d4	 mov	 al, BYTE PTR _mask$[ebp]
+  007f7	d0 e0		 shl	 al, 1
+  007f9	88 45 d4	 mov	 BYTE PTR _mask$[ebp], al
+  007fc	8b 4d d4	 mov	 ecx, DWORD PTR _mask$[ebp]
+  007ff	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  00805	85 c9		 test	 ecx, ecx
+  00807	75 5b		 jne	 SHORT $L1618
+
+; 185  : 			for (i = 0; i < code_buf_ptr; i++)  /* Send at most 8 units of */
+
+  00809	66 c7 45 dc 00
+	00		 mov	 WORD PTR _i$[ebp], 0
+  0080f	eb 0c		 jmp	 SHORT $L1619
+$L1620:
+  00811	66 8b 55 dc	 mov	 dx, WORD PTR _i$[ebp]
+  00815	66 83 c2 01	 add	 dx, 1
+  00819	66 89 55 dc	 mov	 WORD PTR _i$[ebp], dx
+$L1619:
+  0081d	0f bf 45 dc	 movsx	 eax, WORD PTR _i$[ebp]
+  00821	0f bf 4d cc	 movsx	 ecx, WORD PTR _code_buf_ptr$[ebp]
+  00825	3b c1		 cmp	 eax, ecx
+  00827	7d 18		 jge	 SHORT $L1621
+
+; 186  : 				*outBuffer++ = code_buf[i];    /* code together */
+
+  00829	0f bf 55 dc	 movsx	 edx, WORD PTR _i$[ebp]
+  0082d	8b 45 10	 mov	 eax, DWORD PTR _outBuffer$[ebp]
+  00830	8a 4c 15 e0	 mov	 cl, BYTE PTR _code_buf$[ebp+edx]
+  00834	88 08		 mov	 BYTE PTR [eax], cl
+  00836	8b 55 10	 mov	 edx, DWORD PTR _outBuffer$[ebp]
+  00839	83 c2 01	 add	 edx, 1
+  0083c	89 55 10	 mov	 DWORD PTR _outBuffer$[ebp], edx
+  0083f	eb d0		 jmp	 SHORT $L1620
+$L1621:
+
+; 187  : 
+; 188  : 			codesize += code_buf_ptr;
+
+  00841	0f bf 45 cc	 movsx	 eax, WORD PTR _code_buf_ptr$[ebp]
+  00845	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00848	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  0084b	03 d0		 add	 edx, eax
+  0084d	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00850	89 50 08	 mov	 DWORD PTR [eax+8], edx
+
+; 189  : 			code_buf[0] = 0;  code_buf_ptr = mask = 1;
+
+  00853	c6 45 e0 00	 mov	 BYTE PTR _code_buf$[ebp], 0
+  00857	c6 45 d4 01	 mov	 BYTE PTR _mask$[ebp], 1
+  0085b	66 0f b6 4d d4	 movzx	 cx, BYTE PTR _mask$[ebp]
+  00860	66 89 4d cc	 mov	 WORD PTR _code_buf_ptr$[ebp], cx
+$L1618:
+
+; 191  : 		last_match_length = match_length;
+
+  00864	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  00867	66 8b 42 12	 mov	 ax, WORD PTR [edx+18]
+  0086b	66 89 45 d8	 mov	 WORD PTR _last_match_length$[ebp], ax
+
+; 192  : 		for (i = 0; i < last_match_length && remaining-- > 0;i++) {
+
+  0086f	66 c7 45 dc 00
+	00		 mov	 WORD PTR _i$[ebp], 0
+  00875	eb 0c		 jmp	 SHORT $L1622
+$L1623:
+  00877	66 8b 4d dc	 mov	 cx, WORD PTR _i$[ebp]
+  0087b	66 83 c1 01	 add	 cx, 1
+  0087f	66 89 4d dc	 mov	 WORD PTR _i$[ebp], cx
+$L1622:
+  00883	0f bf 55 dc	 movsx	 edx, WORD PTR _i$[ebp]
+  00887	0f bf 45 d8	 movsx	 eax, WORD PTR _last_match_length$[ebp]
+  0088b	3b d0		 cmp	 edx, eax
+  0088d	0f 8d 95 00 00
+	00		 jge	 $L1624
+  00893	8b 4d 0c	 mov	 ecx, DWORD PTR _remaining$[ebp]
+  00896	8b 55 0c	 mov	 edx, DWORD PTR _remaining$[ebp]
+  00899	83 ea 01	 sub	 edx, 1
+  0089c	89 55 0c	 mov	 DWORD PTR _remaining$[ebp], edx
+  0089f	85 c9		 test	 ecx, ecx
+  008a1	0f 8e 81 00 00
+	00		 jle	 $L1624
+
+; 193  : 			c = *inBuffer++;
+
+  008a7	8b 45 08	 mov	 eax, DWORD PTR _inBuffer$[ebp]
+  008aa	66 0f be 08	 movsx	 cx, BYTE PTR [eax]
+  008ae	66 89 4d f4	 mov	 WORD PTR _c$[ebp], cx
+  008b2	8b 55 08	 mov	 edx, DWORD PTR _inBuffer$[ebp]
+  008b5	83 c2 01	 add	 edx, 1
+  008b8	89 55 08	 mov	 DWORD PTR _inBuffer$[ebp], edx
+
+; 194  : 			DeleteNode(s);		/* Delete old strings and */
+
+  008bb	66 8b 45 f8	 mov	 ax, WORD PTR _s$[ebp]
+  008bf	50		 push	 eax
+  008c0	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  008c3	e8 00 00 00 00	 call	 ?DeleteNode@LZSS@@AAEXF@Z ; LZSS::DeleteNode
+
+; 195  : 			text_buf[s] = (char) c;	/* read new bytes */
+
+  008c8	0f bf 4d f8	 movsx	 ecx, WORD PTR _s$[ebp]
+  008cc	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  008cf	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  008d2	8a 55 f4	 mov	 dl, BYTE PTR _c$[ebp]
+  008d5	88 14 08	 mov	 BYTE PTR [eax+ecx], dl
+
+; 196  : 			if (s < F - 1) text_buf[s + N] = (char) c;  /* If the position is
+
+  008d8	0f bf 45 f8	 movsx	 eax, WORD PTR _s$[ebp]
+  008dc	83 f8 11	 cmp	 eax, 17			; 00000011H
+  008df	7d 14		 jge	 SHORT $L1626
+  008e1	0f bf 4d f8	 movsx	 ecx, WORD PTR _s$[ebp]
+  008e5	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  008e8	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  008eb	8a 55 f4	 mov	 dl, BYTE PTR _c$[ebp]
+  008ee	88 94 08 00 10
+	00 00		 mov	 BYTE PTR [eax+ecx+4096], dl
+$L1626:
+
+; 197  : 				near the end of buffer, extend the buffer to make
+; 198  : 				string comparison easier. */
+; 199  : 			s = (s + 1) & (N - 1);  r = (r + 1) & (N - 1);
+
+  008f5	0f bf 45 f8	 movsx	 eax, WORD PTR _s$[ebp]
+  008f9	83 c0 01	 add	 eax, 1
+  008fc	25 ff 0f 00 00	 and	 eax, 4095		; 00000fffH
+  00901	66 89 45 f8	 mov	 WORD PTR _s$[ebp], ax
+  00905	0f bf 4d fc	 movsx	 ecx, WORD PTR _r$[ebp]
+  00909	83 c1 01	 add	 ecx, 1
+  0090c	81 e1 ff 0f 00
+	00		 and	 ecx, 4095		; 00000fffH
+  00912	66 89 4d fc	 mov	 WORD PTR _r$[ebp], cx
+
+; 200  : 				/* Since this is a ring buffer, increment the position
+; 201  : 				   modulo N. */
+; 202  : 			InsertNode(r);	/* Register the string in text_buf[r..r+F-1] */
+
+  00916	66 8b 55 fc	 mov	 dx, WORD PTR _r$[ebp]
+  0091a	52		 push	 edx
+  0091b	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0091e	e8 00 00 00 00	 call	 ?InsertNode@LZSS@@AAEXF@Z ; LZSS::InsertNode
+
+; 203  : 		}
+
+  00923	e9 4f ff ff ff	 jmp	 $L1623
+$L1624:
+
+; 204  : 
+; 205  : 		while (i++ < last_match_length) {	/* After the end of text, */
+
+  00928	0f bf 45 dc	 movsx	 eax, WORD PTR _i$[ebp]
+  0092c	0f bf 4d d8	 movsx	 ecx, WORD PTR _last_match_length$[ebp]
+  00930	66 8b 55 dc	 mov	 dx, WORD PTR _i$[ebp]
+  00934	66 83 c2 01	 add	 dx, 1
+  00938	66 89 55 dc	 mov	 WORD PTR _i$[ebp], dx
+  0093c	3b c1		 cmp	 eax, ecx
+  0093e	7d 52		 jge	 SHORT $L1630
+
+; 206  : 			DeleteNode(s);					/* no need to read, but */
+
+  00940	66 8b 45 f8	 mov	 ax, WORD PTR _s$[ebp]
+  00944	50		 push	 eax
+  00945	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00948	e8 00 00 00 00	 call	 ?DeleteNode@LZSS@@AAEXF@Z ; LZSS::DeleteNode
+
+; 207  : 			s = (s + 1) & (N - 1);  r = (r + 1) & (N - 1);
+
+  0094d	0f bf 4d f8	 movsx	 ecx, WORD PTR _s$[ebp]
+  00951	83 c1 01	 add	 ecx, 1
+  00954	81 e1 ff 0f 00
+	00		 and	 ecx, 4095		; 00000fffH
+  0095a	66 89 4d f8	 mov	 WORD PTR _s$[ebp], cx
+  0095e	0f bf 55 fc	 movsx	 edx, WORD PTR _r$[ebp]
+  00962	83 c2 01	 add	 edx, 1
+  00965	81 e2 ff 0f 00
+	00		 and	 edx, 4095		; 00000fffH
+  0096b	66 89 55 fc	 mov	 WORD PTR _r$[ebp], dx
+
+; 208  : 			if (--len) InsertNode(r);		/* buffer may not be empty. */
+
+  0096f	66 8b 45 d0	 mov	 ax, WORD PTR _len$[ebp]
+  00973	66 2d 01 00	 sub	 ax, 1
+  00977	66 89 45 d0	 mov	 WORD PTR _len$[ebp], ax
+  0097b	0f bf 4d d0	 movsx	 ecx, WORD PTR _len$[ebp]
+  0097f	85 c9		 test	 ecx, ecx
+  00981	74 0d		 je	 SHORT $L1631
+  00983	66 8b 55 fc	 mov	 dx, WORD PTR _r$[ebp]
+  00987	52		 push	 edx
+  00988	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0098b	e8 00 00 00 00	 call	 ?InsertNode@LZSS@@AAEXF@Z ; LZSS::InsertNode
+$L1631:
+
+; 209  : 		}
+
+  00990	eb 96		 jmp	 SHORT $L1624
+$L1630:
+
+; 210  : 	} while (len > 0);	/* until length of string to be processed is zero */
+
+  00992	0f bf 45 d0	 movsx	 eax, WORD PTR _len$[ebp]
+  00996	85 c0		 test	 eax, eax
+  00998	0f 8f b2 fd ff
+	ff		 jg	 $L1610
+
+; 211  : 	if (code_buf_ptr > 1) {		/* Send remaining code. */
+
+  0099e	0f bf 4d cc	 movsx	 ecx, WORD PTR _code_buf_ptr$[ebp]
+  009a2	83 f9 01	 cmp	 ecx, 1
+  009a5	7e 4a		 jle	 SHORT $L1632
+
+; 212  : 		for (i = 0; i < code_buf_ptr; i++)
+
+  009a7	66 c7 45 dc 00
+	00		 mov	 WORD PTR _i$[ebp], 0
+  009ad	eb 0c		 jmp	 SHORT $L1633
+$L1634:
+  009af	66 8b 55 dc	 mov	 dx, WORD PTR _i$[ebp]
+  009b3	66 83 c2 01	 add	 dx, 1
+  009b7	66 89 55 dc	 mov	 WORD PTR _i$[ebp], dx
+$L1633:
+  009bb	0f bf 45 dc	 movsx	 eax, WORD PTR _i$[ebp]
+  009bf	0f bf 4d cc	 movsx	 ecx, WORD PTR _code_buf_ptr$[ebp]
+  009c3	3b c1		 cmp	 eax, ecx
+  009c5	7d 18		 jge	 SHORT $L1635
+
+; 213  : 			*outBuffer++ = code_buf[i];
+
+  009c7	0f bf 55 dc	 movsx	 edx, WORD PTR _i$[ebp]
+  009cb	8b 45 10	 mov	 eax, DWORD PTR _outBuffer$[ebp]
+  009ce	8a 4c 15 e0	 mov	 cl, BYTE PTR _code_buf$[ebp+edx]
+  009d2	88 08		 mov	 BYTE PTR [eax], cl
+  009d4	8b 55 10	 mov	 edx, DWORD PTR _outBuffer$[ebp]
+  009d7	83 c2 01	 add	 edx, 1
+  009da	89 55 10	 mov	 DWORD PTR _outBuffer$[ebp], edx
+  009dd	eb d0		 jmp	 SHORT $L1634
+$L1635:
+
+; 214  : 
+; 215  : 		codesize += code_buf_ptr;
+
+  009df	0f bf 45 cc	 movsx	 eax, WORD PTR _code_buf_ptr$[ebp]
+  009e3	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  009e6	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  009e9	03 d0		 add	 edx, eax
+  009eb	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  009ee	89 50 08	 mov	 DWORD PTR [eax+8], edx
+$L1632:
+
+; 217  : 	/*
+; 218  : 	printf("In : %ld bytes\n", textsize);	
+; 219  : 	printf("Out: %ld bytes\n", codesize);
+; 220  : 	printf("Out/In: %.3f\n", (double)codesize / textsize);
+; 221  : 	*/
+; 222  : 
+; 223  : 	return codesize;
+
+  009f1	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  009f4	8b 41 08	 mov	 eax, DWORD PTR [ecx+8]
+$L1589:
+
+; 224  : }
+
+  009f7	8b e5		 mov	 esp, ebp
+  009f9	5d		 pop	 ebp
+  009fa	c2 0c 00	 ret	 12			; 0000000cH
+?Encode@LZSS@@QAEJPADJ0@Z ENDP				; LZSS::Encode
+_TEXT	ENDS
+PUBLIC	?Decode@LZSS@@QAEJPADJ0J@Z			; LZSS::Decode
+_TEXT	SEGMENT
+_inBuffer$ = 8
+_remaining$ = 12
+_outBuffer$ = 16
+_outputLength$ = 20
+_this$ = -32
+_i$ = -20
+_j$ = -24
+_k$ = -28
+_r$ = -8
+_c$ = -12
+_flags$ = -4
+_originalPtr$ = -16
+?Decode@LZSS@@QAEJPADJ0J@Z PROC NEAR			; LZSS::Decode
+
+; 227  : {
+
+  009fd	55		 push	 ebp
+  009fe	8b ec		 mov	 ebp, esp
+  00a00	83 ec 20	 sub	 esp, 32			; 00000020H
+  00a03	89 4d e0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 228  : 	short  i, j, k, r, c;
+; 229  : 	unsigned short int  flags;
+; 230  : 	char * originalPtr = outBuffer;
+
+  00a06	8b 45 10	 mov	 eax, DWORD PTR _outBuffer$[ebp]
+  00a09	89 45 f0	 mov	 DWORD PTR _originalPtr$[ebp], eax
+
+; 231  : 
+; 232  : 	if(initError)
+
+  00a0c	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00a0f	83 39 00	 cmp	 DWORD PTR [ecx], 0
+  00a12	74 07		 je	 SHORT $L1650
+
+; 233  : 		return 0;
+
+  00a14	33 c0		 xor	 eax, eax
+  00a16	e9 32 02 00 00	 jmp	 $L1642
+$L1650:
+
+; 234  : 	
+; 235  : 	for (i = 0; i < N - F; i++) text_buf[i] = ' ';
+
+  00a1b	66 c7 45 ec 00
+	00		 mov	 WORD PTR _i$[ebp], 0
+  00a21	eb 0c		 jmp	 SHORT $L1651
+$L1652:
+  00a23	66 8b 55 ec	 mov	 dx, WORD PTR _i$[ebp]
+  00a27	66 83 c2 01	 add	 dx, 1
+  00a2b	66 89 55 ec	 mov	 WORD PTR _i$[ebp], dx
+$L1651:
+  00a2f	0f bf 45 ec	 movsx	 eax, WORD PTR _i$[ebp]
+  00a33	3d ee 0f 00 00	 cmp	 eax, 4078		; 00000feeH
+  00a38	7d 10		 jge	 SHORT $L1653
+  00a3a	0f bf 4d ec	 movsx	 ecx, WORD PTR _i$[ebp]
+  00a3e	8b 55 e0	 mov	 edx, DWORD PTR _this$[ebp]
+  00a41	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  00a44	c6 04 08 20	 mov	 BYTE PTR [eax+ecx], 32	; 00000020H
+  00a48	eb d9		 jmp	 SHORT $L1652
+$L1653:
+
+; 236  : 	r = N - F;  flags = 0;
+
+  00a4a	66 c7 45 f8 ee
+	0f		 mov	 WORD PTR _r$[ebp], 4078	; 00000feeH
+  00a50	66 c7 45 fc 00
+	00		 mov	 WORD PTR _flags$[ebp], 0
+$L1655:
+
+; 238  : 		if (((flags >>= 1) & 256) == 0) {
+
+  00a56	66 8b 4d fc	 mov	 cx, WORD PTR _flags$[ebp]
+  00a5a	66 d1 e9	 shr	 cx, 1
+  00a5d	66 89 4d fc	 mov	 WORD PTR _flags$[ebp], cx
+  00a61	8b 55 fc	 mov	 edx, DWORD PTR _flags$[ebp]
+  00a64	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00a6a	81 e2 00 01 00
+	00		 and	 edx, 256		; 00000100H
+  00a70	85 d2		 test	 edx, edx
+  00a72	75 35		 jne	 SHORT $L1659
+
+; 239  : 			if(remaining > 0) {
+
+  00a74	83 7d 0c 00	 cmp	 DWORD PTR _remaining$[ebp], 0
+  00a78	7e 2a		 jle	 SHORT $L1658
+
+; 240  : 				remaining--;
+
+  00a7a	8b 45 0c	 mov	 eax, DWORD PTR _remaining$[ebp]
+  00a7d	83 e8 01	 sub	 eax, 1
+  00a80	89 45 0c	 mov	 DWORD PTR _remaining$[ebp], eax
+
+; 241  : 				c = *inBuffer++;
+
+  00a83	8b 4d 08	 mov	 ecx, DWORD PTR _inBuffer$[ebp]
+  00a86	66 0f be 11	 movsx	 dx, BYTE PTR [ecx]
+  00a8a	66 89 55 f4	 mov	 WORD PTR _c$[ebp], dx
+  00a8e	8b 45 08	 mov	 eax, DWORD PTR _inBuffer$[ebp]
+  00a91	83 c0 01	 add	 eax, 1
+  00a94	89 45 08	 mov	 DWORD PTR _inBuffer$[ebp], eax
+
+; 242  : 				flags = c | 0xff00;		/* uses higher byte cleverly */
+
+  00a97	0f bf 4d f4	 movsx	 ecx, WORD PTR _c$[ebp]
+  00a9b	80 cd ff	 or	 ch, -1
+  00a9e	66 89 4d fc	 mov	 WORD PTR _flags$[ebp], cx
+
+; 244  : 			else
+
+  00aa2	eb 05		 jmp	 SHORT $L1659
+$L1658:
+
+; 245  : 				break;
+
+  00aa4	e9 9e 01 00 00	 jmp	 $L1656
+$L1659:
+
+; 247  : 
+; 248  : 		if (flags & 1) {
+
+  00aa9	8b 55 fc	 mov	 edx, DWORD PTR _flags$[ebp]
+  00aac	81 e2 ff ff 00
+	00		 and	 edx, 65535		; 0000ffffH
+  00ab2	83 e2 01	 and	 edx, 1
+  00ab5	85 d2		 test	 edx, edx
+  00ab7	74 7f		 je	 SHORT $L1660
+
+; 249  : 			if(remaining > 0) {
+
+  00ab9	83 7d 0c 00	 cmp	 DWORD PTR _remaining$[ebp], 0
+  00abd	7e 6f		 jle	 SHORT $L1661
+
+; 250  : 				remaining--;
+
+  00abf	8b 45 0c	 mov	 eax, DWORD PTR _remaining$[ebp]
+  00ac2	83 e8 01	 sub	 eax, 1
+  00ac5	89 45 0c	 mov	 DWORD PTR _remaining$[ebp], eax
+
+; 251  : 				c = *inBuffer++;
+
+  00ac8	8b 4d 08	 mov	 ecx, DWORD PTR _inBuffer$[ebp]
+  00acb	66 0f be 11	 movsx	 dx, BYTE PTR [ecx]
+  00acf	66 89 55 f4	 mov	 WORD PTR _c$[ebp], dx
+  00ad3	8b 45 08	 mov	 eax, DWORD PTR _inBuffer$[ebp]
+  00ad6	83 c0 01	 add	 eax, 1
+  00ad9	89 45 08	 mov	 DWORD PTR _inBuffer$[ebp], eax
+
+; 252  : 				outputLength--;
+
+  00adc	8b 4d 14	 mov	 ecx, DWORD PTR _outputLength$[ebp]
+  00adf	83 e9 01	 sub	 ecx, 1
+  00ae2	89 4d 14	 mov	 DWORD PTR _outputLength$[ebp], ecx
+
+; 253  : 				if(outputLength < 0)
+
+  00ae5	83 7d 14 00	 cmp	 DWORD PTR _outputLength$[ebp], 0
+  00ae9	7d 07		 jge	 SHORT $L1662
+
+; 254  : 					return FALSE;
+
+  00aeb	33 c0		 xor	 eax, eax
+  00aed	e9 5b 01 00 00	 jmp	 $L1642
+$L1662:
+
+; 255  : 				*outBuffer++ = (char) c;
+
+  00af2	8b 55 10	 mov	 edx, DWORD PTR _outBuffer$[ebp]
+  00af5	8a 45 f4	 mov	 al, BYTE PTR _c$[ebp]
+  00af8	88 02		 mov	 BYTE PTR [edx], al
+  00afa	8b 4d 10	 mov	 ecx, DWORD PTR _outBuffer$[ebp]
+  00afd	83 c1 01	 add	 ecx, 1
+  00b00	89 4d 10	 mov	 DWORD PTR _outBuffer$[ebp], ecx
+
+; 256  : 
+; 257  : 				text_buf[r++] = (char) c;
+
+  00b03	0f bf 55 f8	 movsx	 edx, WORD PTR _r$[ebp]
+  00b07	8b 45 e0	 mov	 eax, DWORD PTR _this$[ebp]
+  00b0a	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
+  00b0d	8a 45 f4	 mov	 al, BYTE PTR _c$[ebp]
+  00b10	88 04 11	 mov	 BYTE PTR [ecx+edx], al
+  00b13	66 8b 4d f8	 mov	 cx, WORD PTR _r$[ebp]
+  00b17	66 83 c1 01	 add	 cx, 1
+  00b1b	66 89 4d f8	 mov	 WORD PTR _r$[ebp], cx
+
+; 258  : 				r &= (N - 1);
+
+  00b1f	66 8b 55 f8	 mov	 dx, WORD PTR _r$[ebp]
+  00b23	66 81 e2 ff 0f	 and	 dx, 4095		; 00000fffH
+  00b28	66 89 55 f8	 mov	 WORD PTR _r$[ebp], dx
+
+; 260  : 			else
+
+  00b2c	eb 05		 jmp	 SHORT $L1665
+$L1661:
+
+; 261  : 				break;
+
+  00b2e	e9 14 01 00 00	 jmp	 $L1656
+$L1665:
+
+; 264  : 		else {
+
+  00b33	e9 0a 01 00 00	 jmp	 $L1674
+$L1660:
+
+; 265  : 			if(remaining > 0) {
+
+  00b38	83 7d 0c 00	 cmp	 DWORD PTR _remaining$[ebp], 0
+  00b3c	7e 1f		 jle	 SHORT $L1667
+
+; 266  : 				remaining--;
+
+  00b3e	8b 45 0c	 mov	 eax, DWORD PTR _remaining$[ebp]
+  00b41	83 e8 01	 sub	 eax, 1
+  00b44	89 45 0c	 mov	 DWORD PTR _remaining$[ebp], eax
+
+; 267  : 				i = (unsigned char) *inBuffer++;
+
+  00b47	8b 4d 08	 mov	 ecx, DWORD PTR _inBuffer$[ebp]
+  00b4a	66 0f b6 11	 movzx	 dx, BYTE PTR [ecx]
+  00b4e	66 89 55 ec	 mov	 WORD PTR _i$[ebp], dx
+  00b52	8b 45 08	 mov	 eax, DWORD PTR _inBuffer$[ebp]
+  00b55	83 c0 01	 add	 eax, 1
+  00b58	89 45 08	 mov	 DWORD PTR _inBuffer$[ebp], eax
+
+; 269  : 			else
+
+  00b5b	eb 05		 jmp	 SHORT $L1669
+$L1667:
+
+; 270  : 				break;
+
+  00b5d	e9 e5 00 00 00	 jmp	 $L1656
+$L1669:
+
+; 271  : 
+; 272  : 			if(remaining > 0) {
+
+  00b62	83 7d 0c 00	 cmp	 DWORD PTR _remaining$[ebp], 0
+  00b66	7e 1f		 jle	 SHORT $L1670
+
+; 273  : 				remaining--;
+
+  00b68	8b 4d 0c	 mov	 ecx, DWORD PTR _remaining$[ebp]
+  00b6b	83 e9 01	 sub	 ecx, 1
+  00b6e	89 4d 0c	 mov	 DWORD PTR _remaining$[ebp], ecx
+
+; 274  : 				j = *inBuffer++;
+
+  00b71	8b 55 08	 mov	 edx, DWORD PTR _inBuffer$[ebp]
+  00b74	66 0f be 02	 movsx	 ax, BYTE PTR [edx]
+  00b78	66 89 45 e8	 mov	 WORD PTR _j$[ebp], ax
+  00b7c	8b 4d 08	 mov	 ecx, DWORD PTR _inBuffer$[ebp]
+  00b7f	83 c1 01	 add	 ecx, 1
+  00b82	89 4d 08	 mov	 DWORD PTR _inBuffer$[ebp], ecx
+
+; 276  : 			else
+
+  00b85	eb 05		 jmp	 SHORT $L1671
+$L1670:
+
+; 277  : 				break;
+
+  00b87	e9 bb 00 00 00	 jmp	 $L1656
+$L1671:
+
+; 278  : 
+; 279  : 			i |= ((j & 0xf0) << 4);
+
+  00b8c	0f bf 55 e8	 movsx	 edx, WORD PTR _j$[ebp]
+  00b90	81 e2 f0 00 00
+	00		 and	 edx, 240		; 000000f0H
+  00b96	c1 e2 04	 shl	 edx, 4
+  00b99	66 8b 45 ec	 mov	 ax, WORD PTR _i$[ebp]
+  00b9d	66 0b c2	 or	 ax, dx
+  00ba0	66 89 45 ec	 mov	 WORD PTR _i$[ebp], ax
+
+; 280  : 			j = (j & 0x0f) + THRESHOLD;
+
+  00ba4	0f bf 4d e8	 movsx	 ecx, WORD PTR _j$[ebp]
+  00ba8	83 e1 0f	 and	 ecx, 15			; 0000000fH
+  00bab	83 c1 02	 add	 ecx, 2
+  00bae	66 89 4d e8	 mov	 WORD PTR _j$[ebp], cx
+
+; 281  : 
+; 282  : 			for (k = 0; k <= j; k++) {
+
+  00bb2	66 c7 45 e4 00
+	00		 mov	 WORD PTR _k$[ebp], 0
+  00bb8	eb 0c		 jmp	 SHORT $L1672
+$L1673:
+  00bba	66 8b 55 e4	 mov	 dx, WORD PTR _k$[ebp]
+  00bbe	66 83 c2 01	 add	 dx, 1
+  00bc2	66 89 55 e4	 mov	 WORD PTR _k$[ebp], dx
+$L1672:
+  00bc6	0f bf 45 e4	 movsx	 eax, WORD PTR _k$[ebp]
+  00bca	0f bf 4d e8	 movsx	 ecx, WORD PTR _j$[ebp]
+  00bce	3b c1		 cmp	 eax, ecx
+  00bd0	7f 70		 jg	 SHORT $L1674
+
+; 283  : 				c = text_buf[(i + k) & (N - 1)];
+
+  00bd2	0f bf 55 ec	 movsx	 edx, WORD PTR _i$[ebp]
+  00bd6	0f bf 45 e4	 movsx	 eax, WORD PTR _k$[ebp]
+  00bda	03 d0		 add	 edx, eax
+  00bdc	81 e2 ff 0f 00
+	00		 and	 edx, 4095		; 00000fffH
+  00be2	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00be5	8b 41 0c	 mov	 eax, DWORD PTR [ecx+12]
+  00be8	66 0f b6 0c 10	 movzx	 cx, BYTE PTR [eax+edx]
+  00bed	66 89 4d f4	 mov	 WORD PTR _c$[ebp], cx
+
+; 284  : 				outputLength--;
+
+  00bf1	8b 55 14	 mov	 edx, DWORD PTR _outputLength$[ebp]
+  00bf4	83 ea 01	 sub	 edx, 1
+  00bf7	89 55 14	 mov	 DWORD PTR _outputLength$[ebp], edx
+
+; 285  : 				if(outputLength < 0)
+
+  00bfa	83 7d 14 00	 cmp	 DWORD PTR _outputLength$[ebp], 0
+  00bfe	7d 04		 jge	 SHORT $L1675
+
+; 286  : 					return FALSE;
+
+  00c00	33 c0		 xor	 eax, eax
+  00c02	eb 49		 jmp	 SHORT $L1642
+$L1675:
+
+; 287  : 
+; 288  : 				*outBuffer++ = (char) c;
+
+  00c04	8b 45 10	 mov	 eax, DWORD PTR _outBuffer$[ebp]
+  00c07	8a 4d f4	 mov	 cl, BYTE PTR _c$[ebp]
+  00c0a	88 08		 mov	 BYTE PTR [eax], cl
+  00c0c	8b 55 10	 mov	 edx, DWORD PTR _outBuffer$[ebp]
+  00c0f	83 c2 01	 add	 edx, 1
+  00c12	89 55 10	 mov	 DWORD PTR _outBuffer$[ebp], edx
+
+; 289  : 				text_buf[r++] = (char) c;
+
+  00c15	0f bf 45 f8	 movsx	 eax, WORD PTR _r$[ebp]
+  00c19	8b 4d e0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00c1c	8b 51 0c	 mov	 edx, DWORD PTR [ecx+12]
+  00c1f	8a 4d f4	 mov	 cl, BYTE PTR _c$[ebp]
+  00c22	88 0c 02	 mov	 BYTE PTR [edx+eax], cl
+  00c25	66 8b 55 f8	 mov	 dx, WORD PTR _r$[ebp]
+  00c29	66 83 c2 01	 add	 dx, 1
+  00c2d	66 89 55 f8	 mov	 WORD PTR _r$[ebp], dx
+
+; 290  : 				r &= (N - 1);
+
+  00c31	66 8b 45 f8	 mov	 ax, WORD PTR _r$[ebp]
+  00c35	66 25 ff 0f	 and	 ax, 4095		; 00000fffH
+  00c39	66 89 45 f8	 mov	 WORD PTR _r$[ebp], ax
+
+; 291  : 			}
+
+  00c3d	e9 78 ff ff ff	 jmp	 $L1673
+$L1674:
+
+; 293  : 	}
+
+  00c42	e9 0f fe ff ff	 jmp	 $L1655
+$L1656:
+
+; 294  : 	return (outBuffer - originalPtr);
+
+  00c47	8b 45 10	 mov	 eax, DWORD PTR _outBuffer$[ebp]
+  00c4a	2b 45 f0	 sub	 eax, DWORD PTR _originalPtr$[ebp]
+$L1642:
+
+; 295  : 
+; 296  : }
+
+  00c4d	8b e5		 mov	 esp, ebp
+  00c4f	5d		 pop	 ebp
+  00c50	c2 10 00	 ret	 16			; 00000010H
+?Decode@LZSS@@QAEJPADJ0J@Z ENDP				; LZSS::Decode
+_TEXT	ENDS
+END

@@ -1,0 +1,760 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Palmgrt.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??9SOLPalette@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??ASOLPalette@@QAEAAVRgb24F@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Current@PaletteMgrIndex@@UBEABVSOLPalette@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Source@PaletteMgrIndex@@UBEABVSOLPalette@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Next@PaletteMgrIndex@@UBEABVSOLPalette@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CycleMap@PaletteMgrIndex@@UBEPBEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?VaryPercent@PaletteMgrIndex@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?VaryPause@PaletteMgrIndex@@UAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgrTrue@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgrTrue@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1TimeMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Reset@TimeMgr@@UAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GTimeMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7PaletteMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PaletteMgrTrue@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7TimeMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	??9SOLPalette@@QBEHABV0@@Z			; SOLPalette::operator!=
+PUBLIC	?UpdateForFrame@PaletteMgrTrue@@UAEHXZ		; PaletteMgrTrue::UpdateForFrame
+PUBLIC	?ApplyAll@PaletteMgrTrue@@IAEXXZ		; PaletteMgrTrue::ApplyAll
+PUBLIC	?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ		; GraphicsMgr::GRemapper
+EXTRN	?RemapAllTables@Remap@@QAEHH@Z:NEAR		; Remap::RemapAllTables
+EXTRN	?graphMgr@@3PAVGraphicsMgr@@A:DWORD		; graphMgr
+_TEXT	SEGMENT
+_this$ = -8
+_paletteChanged$ = -4
+?UpdateForFrame@PaletteMgrTrue@@UAEHXZ PROC NEAR	; PaletteMgrTrue::UpdateForFrame
+
+; 11   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+  00006	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 12   : 	ApplyAll();
+
+  00009	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000c	e8 00 00 00 00	 call	 ?ApplyAll@PaletteMgrTrue@@IAEXXZ ; PaletteMgrTrue::ApplyAll
+
+; 13   : 	needUpdate = False;
+
+  00011	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	c7 40 20 00 00
+	00 00		 mov	 DWORD PTR [eax+32], 0
+
+; 14   : 
+; 15   : 	Bool paletteChanged = (current != next);
+
+  0001b	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001e	81 c1 60 0d 00
+	00		 add	 ecx, 3424		; 00000d60H
+  00024	51		 push	 ecx
+  00025	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00028	81 c1 60 09 00
+	00		 add	 ecx, 2400		; 00000960H
+  0002e	e8 00 00 00 00	 call	 ??9SOLPalette@@QBEHABV0@@Z ; SOLPalette::operator!=
+  00033	89 45 fc	 mov	 DWORD PTR _paletteChanged$[ebp], eax
+
+; 16   : 	return graphMgr->GRemapper().RemapAllTables(paletteChanged);
+
+  00036	8b 55 fc	 mov	 edx, DWORD PTR _paletteChanged$[ebp]
+  00039	52		 push	 edx
+  0003a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00040	e8 00 00 00 00	 call	 ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ; GraphicsMgr::GRemapper
+  00045	8b c8		 mov	 ecx, eax
+  00047	e8 00 00 00 00	 call	 ?RemapAllTables@Remap@@QAEHH@Z ; Remap::RemapAllTables
+
+; 17   : }
+
+  0004c	8b e5		 mov	 esp, ebp
+  0004e	5d		 pop	 ebp
+  0004f	c3		 ret	 0
+?UpdateForFrame@PaletteMgrTrue@@UAEHXZ ENDP		; PaletteMgrTrue::UpdateForFrame
+_TEXT	ENDS
+EXTRN	??8SOLPalette@@QBEHABV0@@Z:NEAR			; SOLPalette::operator==
+;	COMDAT ??9SOLPalette@@QBEHABV0@@Z
+_TEXT	SEGMENT
+_src$ = 8
+_this$ = -4
+??9SOLPalette@@QBEHABV0@@Z PROC NEAR			; SOLPalette::operator!=, COMDAT
+
+; 36   : 	int				operator!=(const SOLPalette& src) const {return !operator==(src);}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _src$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??8SOLPalette@@QBEHABV0@@Z ; SOLPalette::operator==
+  00013	f7 d8		 neg	 eax
+  00015	1b c0		 sbb	 eax, eax
+  00017	40		 inc	 eax
+  00018	8b e5		 mov	 esp, ebp
+  0001a	5d		 pop	 ebp
+  0001b	c2 04 00	 ret	 4
+??9SOLPalette@@QBEHABV0@@Z ENDP				; SOLPalette::operator!=
+_TEXT	ENDS
+;	COMDAT ?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ PROC NEAR	; GraphicsMgr::GRemapper, COMDAT
+
+; 70   : 	Remap&	GRemapper() 							{return remapper;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	05 68 11 00 00	 add	 eax, 4456		; 00001168H
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c3		 ret	 0
+?GRemapper@GraphicsMgr@@QAEAAVRemap@@XZ ENDP		; GraphicsMgr::GRemapper
+_TEXT	ENDS
+PUBLIC	?ApplyCycles@PaletteMgrTrue@@IAEXXZ		; PaletteMgrTrue::ApplyCycles
+PUBLIC	?ApplyVary@PaletteMgrTrue@@IAEXXZ		; PaletteMgrTrue::ApplyVary
+PUBLIC	?ApplyFade@PaletteMgrTrue@@IAEXXZ		; PaletteMgrTrue::ApplyFade
+_TEXT	SEGMENT
+_this$ = -4
+?ApplyAll@PaletteMgrTrue@@IAEXXZ PROC NEAR		; PaletteMgrTrue::ApplyAll
+
+; 21   : {
+
+  00050	55		 push	 ebp
+  00051	8b ec		 mov	 ebp, esp
+  00053	51		 push	 ecx
+  00054	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 22   : 	ApplyVary();
+
+  00057	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0005a	e8 00 00 00 00	 call	 ?ApplyVary@PaletteMgrTrue@@IAEXXZ ; PaletteMgrTrue::ApplyVary
+
+; 23   : 	ApplyCycles();
+
+  0005f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00062	e8 00 00 00 00	 call	 ?ApplyCycles@PaletteMgrTrue@@IAEXXZ ; PaletteMgrTrue::ApplyCycles
+
+; 24   : 	ApplyFade();
+
+  00067	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0006a	e8 00 00 00 00	 call	 ?ApplyFade@PaletteMgrTrue@@IAEXXZ ; PaletteMgrTrue::ApplyFade
+
+; 25   : }
+
+  0006f	8b e5		 mov	 esp, ebp
+  00071	5d		 pop	 ebp
+  00072	c3		 ret	 0
+?ApplyAll@PaletteMgrTrue@@IAEXXZ ENDP			; PaletteMgrTrue::ApplyAll
+_TEXT	ENDS
+EXTRN	?timeMgr@@3PAVTimeMgr@@A:DWORD			; timeMgr
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+?ApplyCycles@PaletteMgrTrue@@IAEXXZ PROC NEAR		; PaletteMgrTrue::ApplyCycles
+
+; 29   : {
+
+  00073	55		 push	 ebp
+  00074	8b ec		 mov	 ebp, esp
+  00076	83 ec 08	 sub	 esp, 8
+  00079	56		 push	 esi
+  0007a	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 30   : 	for (int i = 0; i < MAXCYCLES; i++) {
+
+  0007d	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00084	eb 09		 jmp	 SHORT $L58221
+$L58222:
+  00086	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00089	83 c0 01	 add	 eax, 1
+  0008c	89 45 fc	 mov	 DWORD PTR _i$[ebp], eax
+$L58221:
+  0008f	83 7d fc 0a	 cmp	 DWORD PTR _i$[ebp], 10	; 0000000aH
+  00093	0f 8d 43 01 00
+	00		 jge	 $L58223
+
+; 31   : 		if (cycle[i]) {
+
+  00099	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0009c	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0009f	83 bc 8a 28 05
+	00 00 00	 cmp	 DWORD PTR [edx+ecx*4+1320], 0
+  000a7	0f 84 2a 01 00
+	00		 je	 $L58228
+
+; 32   : 
+; 33   : 			if (cycle[i]->deltaTime && !(cycle[i]->pause)) {
+
+  000ad	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  000b0	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000b3	8b 94 81 28 05
+	00 00		 mov	 edx, DWORD PTR [ecx+eax*4+1320]
+  000ba	83 7a 14 00	 cmp	 DWORD PTR [edx+20], 0
+  000be	0f 84 13 01 00
+	00		 je	 $L58228
+  000c4	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  000c7	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000ca	8b 94 81 28 05
+	00 00		 mov	 edx, DWORD PTR [ecx+eax*4+1320]
+  000d1	83 7a 18 00	 cmp	 DWORD PTR [edx+24], 0
+  000d5	0f 85 fc 00 00
+	00		 jne	 $L58228
+$L58227:
+
+; 34   : 
+; 35   : 				while (cycle[i]->lastUpdate + cycle[i]->deltaTime < timeMgr->GetTickCount()) {
+
+  000db	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  000de	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000e1	8b 94 81 28 05
+	00 00		 mov	 edx, DWORD PTR [ecx+eax*4+1320]
+  000e8	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  000eb	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000ee	8b 84 81 28 05
+	00 00		 mov	 eax, DWORD PTR [ecx+eax*4+1320]
+  000f5	8b 72 10	 mov	 esi, DWORD PTR [edx+16]
+  000f8	03 70 14	 add	 esi, DWORD PTR [eax+20]
+  000fb	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00101	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00103	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00109	ff 52 04	 call	 DWORD PTR [edx+4]
+  0010c	3b f0		 cmp	 esi, eax
+  0010e	0f 83 c3 00 00
+	00		 jae	 $L58228
+
+; 36   : 					if (cycle[i]->forward)
+
+  00114	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00117	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0011a	8b 94 81 28 05
+	00 00		 mov	 edx, DWORD PTR [ecx+eax*4+1320]
+  00121	83 7a 0c 00	 cmp	 DWORD PTR [edx+12], 0
+  00125	74 36		 je	 SHORT $L58229
+
+; 37   : 						cycle[i]->current = (cycle[i]->current + 1) % cycle[i]->range;
+
+  00127	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0012a	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0012d	8b 94 81 28 05
+	00 00		 mov	 edx, DWORD PTR [ecx+eax*4+1320]
+  00134	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00137	83 c0 01	 add	 eax, 1
+  0013a	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  0013d	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00140	8b 8c 8a 28 05
+	00 00		 mov	 ecx, DWORD PTR [edx+ecx*4+1320]
+  00147	99		 cdq
+  00148	f7 79 04	 idiv	 DWORD PTR [ecx+4]
+  0014b	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0014e	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00151	8b 84 81 28 05
+	00 00		 mov	 eax, DWORD PTR [ecx+eax*4+1320]
+  00158	89 50 08	 mov	 DWORD PTR [eax+8], edx
+
+; 38   : 					else
+
+  0015b	eb 45		 jmp	 SHORT $L58230
+$L58229:
+
+; 39   : 						cycle[i]->current = ((cycle[i]->current - 1 + cycle[i]->range) % cycle[i]->range);
+
+  0015d	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00160	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00163	8b 84 8a 28 05
+	00 00		 mov	 eax, DWORD PTR [edx+ecx*4+1320]
+  0016a	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  0016d	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00170	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00173	8b 94 90 28 05
+	00 00		 mov	 edx, DWORD PTR [eax+edx*4+1320]
+  0017a	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  0017d	8d 44 01 ff	 lea	 eax, DWORD PTR [ecx+eax-1]
+  00181	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00184	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00187	8b 8c 8a 28 05
+	00 00		 mov	 ecx, DWORD PTR [edx+ecx*4+1320]
+  0018e	99		 cdq
+  0018f	f7 79 04	 idiv	 DWORD PTR [ecx+4]
+  00192	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  00195	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00198	8b 84 81 28 05
+	00 00		 mov	 eax, DWORD PTR [ecx+eax*4+1320]
+  0019f	89 50 08	 mov	 DWORD PTR [eax+8], edx
+$L58230:
+
+; 40   : 
+; 41   : 					cycle[i]->lastUpdate += cycle[i]->deltaTime;
+
+  001a2	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  001a5	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  001a8	8b 84 8a 28 05
+	00 00		 mov	 eax, DWORD PTR [edx+ecx*4+1320]
+  001af	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  001b2	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  001b5	8b 8c 8a 28 05
+	00 00		 mov	 ecx, DWORD PTR [edx+ecx*4+1320]
+  001bc	8b 50 10	 mov	 edx, DWORD PTR [eax+16]
+  001bf	03 51 14	 add	 edx, DWORD PTR [ecx+20]
+  001c2	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  001c5	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  001c8	8b 84 81 28 05
+	00 00		 mov	 eax, DWORD PTR [ecx+eax*4+1320]
+  001cf	89 50 10	 mov	 DWORD PTR [eax+16], edx
+
+; 42   : 				}      
+
+  001d2	e9 04 ff ff ff	 jmp	 $L58227
+$L58228:
+
+; 45   : 	}
+
+  001d7	e9 aa fe ff ff	 jmp	 $L58222
+$L58223:
+
+; 46   : }
+
+  001dc	5e		 pop	 esi
+  001dd	8b e5		 mov	 esp, ebp
+  001df	5d		 pop	 ebp
+  001e0	c3		 ret	 0
+?ApplyCycles@PaletteMgrTrue@@IAEXXZ ENDP		; PaletteMgrTrue::ApplyCycles
+_TEXT	ENDS
+PUBLIC	??ASOLPalette@@QAEAAVRgb24F@@H@Z		; SOLPalette::operator[]
+_TEXT	SEGMENT
+_this$ = -8
+_i$ = -4
+?ApplyVary@PaletteMgrTrue@@IAEXXZ PROC NEAR		; PaletteMgrTrue::ApplyVary
+
+; 51   : {
+
+  001e1	55		 push	 ebp
+  001e2	8b ec		 mov	 ebp, esp
+  001e4	83 ec 08	 sub	 esp, 8
+  001e7	56		 push	 esi
+  001e8	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+$L58235:
+
+; 52   : 	while((int)(timeMgr->GetTickCount() - timeLastVary) > deltaTimeVary && varyDirection) {
+
+  001eb	a1 00 00 00 00	 mov	 eax, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  001f0	8b 10		 mov	 edx, DWORD PTR [eax]
+  001f2	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  001f8	ff 52 04	 call	 DWORD PTR [edx+4]
+  001fb	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  001fe	2b 81 50 05 00
+	00		 sub	 eax, DWORD PTR [ecx+1360]
+  00204	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00207	3b 42 24	 cmp	 eax, DWORD PTR [edx+36]
+  0020a	7e 4d		 jle	 SHORT $L58236
+  0020c	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  0020f	83 78 08 00	 cmp	 DWORD PTR [eax+8], 0
+  00213	74 44		 je	 SHORT $L58236
+
+; 53   : 		timeLastVary += deltaTimeVary;
+
+  00215	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00218	8b 91 50 05 00
+	00		 mov	 edx, DWORD PTR [ecx+1360]
+  0021e	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00221	03 50 24	 add	 edx, DWORD PTR [eax+36]
+  00224	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00227	89 91 50 05 00
+	00		 mov	 DWORD PTR [ecx+1360], edx
+
+; 54   : 		if (varyPercent == targetVaryPercent)
+
+  0022d	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  00230	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00233	8b 4a 0c	 mov	 ecx, DWORD PTR [edx+12]
+  00236	3b 48 10	 cmp	 ecx, DWORD PTR [eax+16]
+  00239	75 0a		 jne	 SHORT $L58238
+
+; 55   : 			varyDirection = 0;
+
+  0023b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0023e	c7 42 08 00 00
+	00 00		 mov	 DWORD PTR [edx+8], 0
+$L58238:
+
+; 56   : 
+; 57   : 		varyPercent += varyDirection;
+
+  00245	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00248	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
+  0024b	8b 55 f8	 mov	 edx, DWORD PTR _this$[ebp]
+  0024e	03 4a 08	 add	 ecx, DWORD PTR [edx+8]
+  00251	8b 45 f8	 mov	 eax, DWORD PTR _this$[ebp]
+  00254	89 48 0c	 mov	 DWORD PTR [eax+12], ecx
+
+; 58   : 	}
+
+  00257	eb 92		 jmp	 SHORT $L58235
+$L58236:
+
+; 59   : 
+; 60   : 	for (int i = 0; i < MaxColors; i++)
+
+  00259	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _i$[ebp], 0
+  00260	eb 09		 jmp	 SHORT $L58240
+$L58241:
+  00262	8b 4d fc	 mov	 ecx, DWORD PTR _i$[ebp]
+  00265	83 c1 01	 add	 ecx, 1
+  00268	89 4d fc	 mov	 DWORD PTR _i$[ebp], ecx
+$L58240:
+  0026b	81 7d fc 00 01
+	00 00		 cmp	 DWORD PTR _i$[ebp], 256	; 00000100H
+  00272	7d 2a		 jge	 SHORT $L58242
+
+; 61   : 		next[i] = source[i];
+
+  00274	8b 55 fc	 mov	 edx, DWORD PTR _i$[ebp]
+  00277	52		 push	 edx
+  00278	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0027b	81 c1 58 05 00
+	00		 add	 ecx, 1368		; 00000558H
+  00281	e8 00 00 00 00	 call	 ??ASOLPalette@@QAEAAVRgb24F@@H@Z ; SOLPalette::operator[]
+  00286	8b 30		 mov	 esi, DWORD PTR [eax]
+  00288	8b 45 fc	 mov	 eax, DWORD PTR _i$[ebp]
+  0028b	50		 push	 eax
+  0028c	8b 4d f8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0028f	81 c1 60 0d 00
+	00		 add	 ecx, 3424		; 00000d60H
+  00295	e8 00 00 00 00	 call	 ??ASOLPalette@@QAEAAVRgb24F@@H@Z ; SOLPalette::operator[]
+  0029a	89 30		 mov	 DWORD PTR [eax], esi
+  0029c	eb c4		 jmp	 SHORT $L58241
+$L58242:
+
+; 62   : }
+
+  0029e	5e		 pop	 esi
+  0029f	8b e5		 mov	 esp, ebp
+  002a1	5d		 pop	 ebp
+  002a2	c3		 ret	 0
+?ApplyVary@PaletteMgrTrue@@IAEXXZ ENDP			; PaletteMgrTrue::ApplyVary
+_TEXT	ENDS
+;	COMDAT ??ASOLPalette@@QAEAAVRgb24F@@H@Z
+_TEXT	SEGMENT
+_i$ = 8
+_this$ = -4
+??ASOLPalette@@QAEAAVRgb24F@@H@Z PROC NEAR		; SOLPalette::operator[], COMDAT
+
+; 42   : 	Rgb24F&	operator[](int i)					{return colors[i];}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _i$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8d 04 81	 lea	 eax, DWORD PTR [ecx+eax*4]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c2 04 00	 ret	 4
+??ASOLPalette@@QAEAAVRgb24F@@H@Z ENDP			; SOLPalette::operator[]
+_TEXT	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+?ApplyFade@PaletteMgrTrue@@IAEXXZ PROC NEAR		; PaletteMgrTrue::ApplyFade
+
+; 67   : {
+
+  002a3	55		 push	 ebp
+  002a4	8b ec		 mov	 ebp, esp
+  002a6	51		 push	 ecx
+  002a7	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 68   : }
+
+  002aa	8b e5		 mov	 esp, ebp
+  002ac	5d		 pop	 ebp
+  002ad	c3		 ret	 0
+?ApplyFade@PaletteMgrTrue@@IAEXXZ ENDP			; PaletteMgrTrue::ApplyFade
+_TEXT	ENDS
+END

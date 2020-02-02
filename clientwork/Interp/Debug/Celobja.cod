@@ -1,0 +1,2815 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Celobja.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07CCG@ResView?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KCEF@?4v56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06IAEF@ResPic?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04EODC@?4p56?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08OCKJ@ResChunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PIPI@?4chk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07ICMB@ResHunk?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GG@?4scr?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08BLBP@ResSound?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KPDA@?4snd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NNMB@ResVocab?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04PGDD@?4voc?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08FLKK@ResPatch?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CEHK@?4pat?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07MKGC@ResFont?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IDCK@?4fon?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06DEEM@ResPal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04NJLC@?4pal?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07HFNL@ResHeap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04GFFD@?4hep?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06HDCC@ResMsg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JONM@?4msg?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08NFDN@ResAudio?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MOHF@?4aud?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BKMJ@ResWave?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0L@IMEI@ResAudio36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_07BONB@ResSync?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04KFFK@?4syn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_09CBJE@ResSync36?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06MIEL@ResMap?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04CFLF@?4map?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BC@LIAH@ResMsgTranslation?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04JFJA@?4trn?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_08JLOL@ResRobot?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04LLKI@?4rbt?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_06OEMP@ResVMD?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_04IOID@?4vmd?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?XDim@Buffer@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?YDim@Buffer@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PaletteMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPaletteMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetExtension@SOL_ResType@@UBEPBDXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSupported@SOL_ResType@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAttrs@SOL_ResType@@UBEIXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@SOL_ResType@@MBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResView@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPic@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResChunk@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResScript@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSound@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVocab@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPatch@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResFont@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResPal@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResHeap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsg@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResWave@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResAudio36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResSync36@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMap@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetFileType@ResMsgTranslation@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResRobot@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetType@ResVMD@@UBE?AW4MemType@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7ResPic@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PaletteMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPal@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResHeap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResWave@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResRobot@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResPatch@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsgTranslation@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResScript@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMsg@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio36@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResAudio@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResFont@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResMap@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVMD@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResChunk@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSync@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResVocab@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7ResSound@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?DrawHzFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ; CelObj::DrawHzFlipNoMD
+PUBLIC	?Xlen@SOL_Rect@@QBEHXZ				; SOL_Rect::Xlen
+PUBLIC	?Ylen@SOL_Rect@@QBEHXZ				; SOL_Rect::Ylen
+EXTRN	_destptr:DWORD
+EXTRN	_pixelcount:DWORD
+EXTRN	_beginindex:DWORD
+EXTRN	_skipval:BYTE
+EXTRN	_WriteCompSkipLineBack:NEAR
+EXTRN	_WriteCompLineBack:NEAR
+_TEXT	SEGMENT
+_dest$ = 8
+_toBuffer$ = 12
+_ul$ = 16
+_this$ = -48
+_rowLen$ = -4
+_srcCol$ = -36
+_srcRow$ = -28
+_hRun$ = -16
+_vRun$ = -8
+_resBuffer$ = -44
+_celPtr$ = -24
+_controlData$ = -12
+_colorData$ = -40
+_controlTable$ = -32
+_colorTable$ = -20
+?DrawHzFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z PROC NEAR ; CelObj::DrawHzFlipNoMD
+
+; 22   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 30	 sub	 esp, 48			; 00000030H
+  00006	56		 push	 esi
+  00007	89 4d d0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 23   : 	assert(dest.Assert());
+; 24   : 	assert(toBuffer.IsWithin(dest.XDim(), dest.YDim()));
+; 25   : 
+; 26   : 	// ***********************************************************************
+; 27   : 	// Non scaled drawing mirrored.
+; 28   : 	// ***********************************************************************
+; 29   : 	// Get a pointer to the drawing area(a static buffer).
+; 30   : 
+; 31   : 	int rowLen = toBuffer.Xlen();
+
+  0000a	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0000d	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  00012	89 45 fc	 mov	 DWORD PTR _rowLen$[ebp], eax
+
+; 32   : 	int srcCol = width - (toBuffer.A.x - ul.x + toBuffer.Xlen());
+
+  00015	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  00018	8b 30		 mov	 esi, DWORD PTR [eax]
+  0001a	2b 75 10	 sub	 esi, DWORD PTR _ul$[ebp]
+  0001d	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00020	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  00025	03 f0		 add	 esi, eax
+  00027	8b 4d d0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002a	8b 51 20	 mov	 edx, DWORD PTR [ecx+32]
+  0002d	2b d6		 sub	 edx, esi
+  0002f	89 55 dc	 mov	 DWORD PTR _srcCol$[ebp], edx
+
+; 33   : 	int srcRow = toBuffer.A.y - ul.y;
+
+  00032	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  00035	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00038	2b 4d 14	 sub	 ecx, DWORD PTR _ul$[ebp+4]
+  0003b	89 4d e4	 mov	 DWORD PTR _srcRow$[ebp], ecx
+
+; 34   : 	int hRun = width - toBuffer.A.x + ul.x;
+
+  0003e	8b 55 d0	 mov	 edx, DWORD PTR _this$[ebp]
+  00041	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  00044	8b 4a 20	 mov	 ecx, DWORD PTR [edx+32]
+  00047	2b 08		 sub	 ecx, DWORD PTR [eax]
+  00049	03 4d 10	 add	 ecx, DWORD PTR _ul$[ebp]
+  0004c	89 4d f0	 mov	 DWORD PTR _hRun$[ebp], ecx
+
+; 35   : 	int vRun = toBuffer.Ylen();
+
+  0004f	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00052	e8 00 00 00 00	 call	 ?Ylen@SOL_Rect@@QBEHXZ	; SOL_Rect::Ylen
+  00057	89 45 f8	 mov	 DWORD PTR _vRun$[ebp], eax
+
+; 36   : 
+; 37   : 	// The view can't move until the draw is done!
+; 38   : 	// Get a pointer to the cel.
+; 39   : 	uchar* resBuffer = ResPointer();
+
+  0005a	8b 55 d0	 mov	 edx, DWORD PTR _this$[ebp]
+  0005d	8b 02		 mov	 eax, DWORD PTR [edx]
+  0005f	8b 4d d0	 mov	 ecx, DWORD PTR _this$[ebp]
+  00062	ff 50 14	 call	 DWORD PTR [eax+20]
+  00065	89 45 d4	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 40   : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  00068	8b 4d d0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0006b	8b 55 d4	 mov	 edx, DWORD PTR _resBuffer$[ebp]
+  0006e	03 51 18	 add	 edx, DWORD PTR [ecx+24]
+  00071	89 55 e8	 mov	 DWORD PTR _celPtr$[ebp], edx
+
+; 41   : 
+; 42   : 	uchar* controlData = resBuffer + celPtr->controlOffset;
+
+  00074	8b 45 e8	 mov	 eax, DWORD PTR _celPtr$[ebp]
+  00077	8b 4d d4	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  0007a	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  0007d	89 4d f4	 mov	 DWORD PTR _controlData$[ebp], ecx
+
+; 43   : 	uchar* colorData = resBuffer + celPtr->colorOffset;
+
+  00080	8b 55 e8	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  00083	8b 45 d4	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  00086	03 42 1c	 add	 eax, DWORD PTR [edx+28]
+  00089	89 45 d8	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 44   : 
+; 45   : 	long* controlTable = (long *) (resBuffer + celPtr->rowTableOffset);
+
+  0008c	8b 4d e8	 mov	 ecx, DWORD PTR _celPtr$[ebp]
+  0008f	8b 55 d4	 mov	 edx, DWORD PTR _resBuffer$[ebp]
+  00092	03 51 20	 add	 edx, DWORD PTR [ecx+32]
+  00095	89 55 e0	 mov	 DWORD PTR _controlTable$[ebp], edx
+
+; 46   : 	long* colorTable = controlTable + height;
+
+  00098	8b 45 d0	 mov	 eax, DWORD PTR _this$[ebp]
+  0009b	8b 48 24	 mov	 ecx, DWORD PTR [eax+36]
+  0009e	8b 55 e0	 mov	 edx, DWORD PTR _controlTable$[ebp]
+  000a1	8d 04 8a	 lea	 eax, DWORD PTR [edx+ecx*4]
+  000a4	89 45 ec	 mov	 DWORD PTR _colorTable$[ebp], eax
+
+; 47   : 
+; 48   : 	// Draw the inset rectangle
+; 49   : 	skipval = skip;
+
+  000a7	8b 4d d0	 mov	 ecx, DWORD PTR _this$[ebp]
+  000aa	8a 51 38	 mov	 dl, BYTE PTR [ecx+56]
+  000ad	88 15 00 00 00
+	00		 mov	 BYTE PTR _skipval, dl
+
+; 50   : 	beginindex = srcCol;
+
+  000b3	8b 45 dc	 mov	 eax, DWORD PTR _srcCol$[ebp]
+  000b6	a3 00 00 00 00	 mov	 DWORD PTR _beginindex, eax
+
+; 51   : 	pixelcount = rowLen;
+
+  000bb	8b 4d fc	 mov	 ecx, DWORD PTR _rowLen$[ebp]
+  000be	89 0d 00 00 00
+	00		 mov	 DWORD PTR _pixelcount, ecx
+
+; 52   : 
+; 53   : 	destptr = dest.Addr(toBuffer.A.x, toBuffer.A.y) + rowLen - 1;
+
+  000c4	8b 55 0c	 mov	 edx, DWORD PTR _toBuffer$[ebp]
+  000c7	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  000ca	50		 push	 eax
+  000cb	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  000ce	8b 11		 mov	 edx, DWORD PTR [ecx]
+  000d0	52		 push	 edx
+  000d1	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  000d4	8b 10		 mov	 edx, DWORD PTR [eax]
+  000d6	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  000d9	ff 12		 call	 DWORD PTR [edx]
+  000db	8b 4d fc	 mov	 ecx, DWORD PTR _rowLen$[ebp]
+  000de	8d 54 08 ff	 lea	 edx, DWORD PTR [eax+ecx-1]
+  000e2	89 15 00 00 00
+	00		 mov	 DWORD PTR _destptr, edx
+
+; 54   : 
+; 55   : 	if ( hasSkip )
+
+  000e8	8b 45 d0	 mov	 eax, DWORD PTR _this$[ebp]
+  000eb	83 78 3c 00	 cmp	 DWORD PTR [eax+60], 0
+  000ef	74 43		 je	 SHORT $L58693
+
+; 56   : 		WriteCompSkipLineBack(vRun, dest.Addr(0, 1) - dest.Addr(0, 0), srcRow, controlData, colorData, controlTable, colorTable);
+
+  000f1	8b 4d ec	 mov	 ecx, DWORD PTR _colorTable$[ebp]
+  000f4	51		 push	 ecx
+  000f5	8b 55 e0	 mov	 edx, DWORD PTR _controlTable$[ebp]
+  000f8	52		 push	 edx
+  000f9	8b 45 d8	 mov	 eax, DWORD PTR _colorData$[ebp]
+  000fc	50		 push	 eax
+  000fd	8b 4d f4	 mov	 ecx, DWORD PTR _controlData$[ebp]
+  00100	51		 push	 ecx
+  00101	8b 55 e4	 mov	 edx, DWORD PTR _srcRow$[ebp]
+  00104	52		 push	 edx
+  00105	6a 01		 push	 1
+  00107	6a 00		 push	 0
+  00109	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  0010c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0010e	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00111	ff 12		 call	 DWORD PTR [edx]
+  00113	8b f0		 mov	 esi, eax
+  00115	6a 00		 push	 0
+  00117	6a 00		 push	 0
+  00119	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  0011c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0011e	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00121	ff 12		 call	 DWORD PTR [edx]
+  00123	2b f0		 sub	 esi, eax
+  00125	56		 push	 esi
+  00126	8b 45 f8	 mov	 eax, DWORD PTR _vRun$[ebp]
+  00129	50		 push	 eax
+  0012a	e8 00 00 00 00	 call	 _WriteCompSkipLineBack
+  0012f	83 c4 1c	 add	 esp, 28			; 0000001cH
+
+; 57   : 	else
+
+  00132	eb 41		 jmp	 SHORT $L58694
+$L58693:
+
+; 58   : 		WriteCompLineBack(vRun, dest.Addr(0, 1) - dest.Addr(0, 0), srcRow, controlData, colorData, controlTable, colorTable);
+
+  00134	8b 4d ec	 mov	 ecx, DWORD PTR _colorTable$[ebp]
+  00137	51		 push	 ecx
+  00138	8b 55 e0	 mov	 edx, DWORD PTR _controlTable$[ebp]
+  0013b	52		 push	 edx
+  0013c	8b 45 d8	 mov	 eax, DWORD PTR _colorData$[ebp]
+  0013f	50		 push	 eax
+  00140	8b 4d f4	 mov	 ecx, DWORD PTR _controlData$[ebp]
+  00143	51		 push	 ecx
+  00144	8b 55 e4	 mov	 edx, DWORD PTR _srcRow$[ebp]
+  00147	52		 push	 edx
+  00148	6a 01		 push	 1
+  0014a	6a 00		 push	 0
+  0014c	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  0014f	8b 10		 mov	 edx, DWORD PTR [eax]
+  00151	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00154	ff 12		 call	 DWORD PTR [edx]
+  00156	8b f0		 mov	 esi, eax
+  00158	6a 00		 push	 0
+  0015a	6a 00		 push	 0
+  0015c	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  0015f	8b 10		 mov	 edx, DWORD PTR [eax]
+  00161	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00164	ff 12		 call	 DWORD PTR [edx]
+  00166	2b f0		 sub	 esi, eax
+  00168	56		 push	 esi
+  00169	8b 45 f8	 mov	 eax, DWORD PTR _vRun$[ebp]
+  0016c	50		 push	 eax
+  0016d	e8 00 00 00 00	 call	 _WriteCompLineBack
+  00172	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L58694:
+
+; 59   : }
+
+  00175	5e		 pop	 esi
+  00176	8b e5		 mov	 esp, ebp
+  00178	5d		 pop	 ebp
+  00179	c2 10 00	 ret	 16			; 00000010H
+?DrawHzFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ENDP ; CelObj::DrawHzFlipNoMD
+_TEXT	ENDS
+PUBLIC	?DrawNoFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ; CelObj::DrawNoFlipNoMD
+EXTRN	_WriteCompSkipLine:NEAR
+EXTRN	_WriteCompLine:NEAR
+_TEXT	SEGMENT
+_dest$ = 8
+_toBuffer$ = 12
+_ul$ = 16
+_this$ = -48
+_rowLen$ = -4
+_srcCol$ = -36
+_srcRow$ = -28
+_hRun$ = -16
+_vRun$ = -8
+_resBuffer$ = -44
+_celPtr$ = -24
+_controlData$ = -12
+_colorData$ = -40
+_controlTable$ = -32
+_colorTable$ = -20
+?DrawNoFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z PROC NEAR ; CelObj::DrawNoFlipNoMD
+
+; 63   : {
+
+  0017c	55		 push	 ebp
+  0017d	8b ec		 mov	 ebp, esp
+  0017f	83 ec 30	 sub	 esp, 48			; 00000030H
+  00182	56		 push	 esi
+  00183	89 4d d0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 64   : 	assert(dest.Assert());
+; 65   : 	assert(toBuffer.IsWithin(dest.XDim(), dest.YDim()));
+; 66   : 
+; 67   : 	// ***********************************************************************
+; 68   : 	// Non scaled drawing.
+; 69   : 	// ***********************************************************************
+; 70   : 	// Get a pointer to the drawing area(a static buffer).
+; 71   : 
+; 72   : 	int rowLen = toBuffer.Xlen();
+
+  00186	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00189	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  0018e	89 45 fc	 mov	 DWORD PTR _rowLen$[ebp], eax
+
+; 73   : 	int srcCol = toBuffer.A.x - ul.x;
+
+  00191	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  00194	8b 08		 mov	 ecx, DWORD PTR [eax]
+  00196	2b 4d 10	 sub	 ecx, DWORD PTR _ul$[ebp]
+  00199	89 4d dc	 mov	 DWORD PTR _srcCol$[ebp], ecx
+
+; 74   : 	int srcRow = toBuffer.A.y - ul.y;
+
+  0019c	8b 55 0c	 mov	 edx, DWORD PTR _toBuffer$[ebp]
+  0019f	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  001a2	2b 45 14	 sub	 eax, DWORD PTR _ul$[ebp+4]
+  001a5	89 45 e4	 mov	 DWORD PTR _srcRow$[ebp], eax
+
+; 75   : 	int hRun = toBuffer.B.x - ul.x + 1;
+
+  001a8	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  001ab	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  001ae	2b 55 10	 sub	 edx, DWORD PTR _ul$[ebp]
+  001b1	83 c2 01	 add	 edx, 1
+  001b4	89 55 f0	 mov	 DWORD PTR _hRun$[ebp], edx
+
+; 76   : 	int vRun = toBuffer.Ylen();
+
+  001b7	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  001ba	e8 00 00 00 00	 call	 ?Ylen@SOL_Rect@@QBEHXZ	; SOL_Rect::Ylen
+  001bf	89 45 f8	 mov	 DWORD PTR _vRun$[ebp], eax
+
+; 77   : 
+; 78   : 	// The view can't move until the draw is done!
+; 79   : 	// Get a pointer to the cel.
+; 80   : 	uchar* resBuffer = ResPointer();
+
+  001c2	8b 45 d0	 mov	 eax, DWORD PTR _this$[ebp]
+  001c5	8b 10		 mov	 edx, DWORD PTR [eax]
+  001c7	8b 4d d0	 mov	 ecx, DWORD PTR _this$[ebp]
+  001ca	ff 52 14	 call	 DWORD PTR [edx+20]
+  001cd	89 45 d4	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 81   : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  001d0	8b 45 d0	 mov	 eax, DWORD PTR _this$[ebp]
+  001d3	8b 4d d4	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  001d6	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  001d9	89 4d e8	 mov	 DWORD PTR _celPtr$[ebp], ecx
+
+; 82   : 
+; 83   : 	uchar* controlData = resBuffer + celPtr->controlOffset;
+
+  001dc	8b 55 e8	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  001df	8b 45 d4	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  001e2	03 42 18	 add	 eax, DWORD PTR [edx+24]
+  001e5	89 45 f4	 mov	 DWORD PTR _controlData$[ebp], eax
+
+; 84   : 	uchar* colorData = resBuffer + celPtr->colorOffset;
+
+  001e8	8b 4d e8	 mov	 ecx, DWORD PTR _celPtr$[ebp]
+  001eb	8b 55 d4	 mov	 edx, DWORD PTR _resBuffer$[ebp]
+  001ee	03 51 1c	 add	 edx, DWORD PTR [ecx+28]
+  001f1	89 55 d8	 mov	 DWORD PTR _colorData$[ebp], edx
+
+; 85   : 
+; 86   : 	long* controlTable = (long *) (resBuffer + celPtr->rowTableOffset);
+
+  001f4	8b 45 e8	 mov	 eax, DWORD PTR _celPtr$[ebp]
+  001f7	8b 4d d4	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  001fa	03 48 20	 add	 ecx, DWORD PTR [eax+32]
+  001fd	89 4d e0	 mov	 DWORD PTR _controlTable$[ebp], ecx
+
+; 87   : 	long* colorTable = controlTable + height;
+
+  00200	8b 55 d0	 mov	 edx, DWORD PTR _this$[ebp]
+  00203	8b 42 24	 mov	 eax, DWORD PTR [edx+36]
+  00206	8b 4d e0	 mov	 ecx, DWORD PTR _controlTable$[ebp]
+  00209	8d 14 81	 lea	 edx, DWORD PTR [ecx+eax*4]
+  0020c	89 55 ec	 mov	 DWORD PTR _colorTable$[ebp], edx
+
+; 88   : 
+; 89   : 	// Draw the inset rectangle
+; 90   : 	skipval = skip;
+
+  0020f	8b 45 d0	 mov	 eax, DWORD PTR _this$[ebp]
+  00212	8a 48 38	 mov	 cl, BYTE PTR [eax+56]
+  00215	88 0d 00 00 00
+	00		 mov	 BYTE PTR _skipval, cl
+
+; 91   : 	beginindex = srcCol;
+
+  0021b	8b 55 dc	 mov	 edx, DWORD PTR _srcCol$[ebp]
+  0021e	89 15 00 00 00
+	00		 mov	 DWORD PTR _beginindex, edx
+
+; 92   : 	pixelcount = rowLen;
+
+  00224	8b 45 fc	 mov	 eax, DWORD PTR _rowLen$[ebp]
+  00227	a3 00 00 00 00	 mov	 DWORD PTR _pixelcount, eax
+
+; 93   : 
+; 94   : 	destptr = dest.Addr(toBuffer.A.x, toBuffer.A.y);
+
+  0022c	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0022f	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00232	52		 push	 edx
+  00233	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  00236	8b 08		 mov	 ecx, DWORD PTR [eax]
+  00238	51		 push	 ecx
+  00239	8b 55 08	 mov	 edx, DWORD PTR _dest$[ebp]
+  0023c	8b 02		 mov	 eax, DWORD PTR [edx]
+  0023e	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00241	ff 10		 call	 DWORD PTR [eax]
+  00243	a3 00 00 00 00	 mov	 DWORD PTR _destptr, eax
+
+; 95   : 
+; 96   : 	if ( hasSkip )
+
+  00248	8b 4d d0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0024b	83 79 3c 00	 cmp	 DWORD PTR [ecx+60], 0
+  0024f	74 43		 je	 SHORT $L58716
+
+; 97   : 		WriteCompSkipLine(vRun, dest.Addr(0, 1) - dest.Addr(0, 0), srcRow, controlData, colorData, controlTable, colorTable);
+
+  00251	8b 55 ec	 mov	 edx, DWORD PTR _colorTable$[ebp]
+  00254	52		 push	 edx
+  00255	8b 45 e0	 mov	 eax, DWORD PTR _controlTable$[ebp]
+  00258	50		 push	 eax
+  00259	8b 4d d8	 mov	 ecx, DWORD PTR _colorData$[ebp]
+  0025c	51		 push	 ecx
+  0025d	8b 55 f4	 mov	 edx, DWORD PTR _controlData$[ebp]
+  00260	52		 push	 edx
+  00261	8b 45 e4	 mov	 eax, DWORD PTR _srcRow$[ebp]
+  00264	50		 push	 eax
+  00265	6a 01		 push	 1
+  00267	6a 00		 push	 0
+  00269	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  0026c	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0026e	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00271	ff 12		 call	 DWORD PTR [edx]
+  00273	8b f0		 mov	 esi, eax
+  00275	6a 00		 push	 0
+  00277	6a 00		 push	 0
+  00279	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  0027c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0027e	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00281	ff 12		 call	 DWORD PTR [edx]
+  00283	2b f0		 sub	 esi, eax
+  00285	56		 push	 esi
+  00286	8b 45 f8	 mov	 eax, DWORD PTR _vRun$[ebp]
+  00289	50		 push	 eax
+  0028a	e8 00 00 00 00	 call	 _WriteCompSkipLine
+  0028f	83 c4 1c	 add	 esp, 28			; 0000001cH
+
+; 98   : 	else
+
+  00292	eb 41		 jmp	 SHORT $L58717
+$L58716:
+
+; 99   : 		WriteCompLine(vRun, dest.Addr(0, 1) - dest.Addr(0, 0), srcRow, controlData, colorData, controlTable, colorTable);
+
+  00294	8b 4d ec	 mov	 ecx, DWORD PTR _colorTable$[ebp]
+  00297	51		 push	 ecx
+  00298	8b 55 e0	 mov	 edx, DWORD PTR _controlTable$[ebp]
+  0029b	52		 push	 edx
+  0029c	8b 45 d8	 mov	 eax, DWORD PTR _colorData$[ebp]
+  0029f	50		 push	 eax
+  002a0	8b 4d f4	 mov	 ecx, DWORD PTR _controlData$[ebp]
+  002a3	51		 push	 ecx
+  002a4	8b 55 e4	 mov	 edx, DWORD PTR _srcRow$[ebp]
+  002a7	52		 push	 edx
+  002a8	6a 01		 push	 1
+  002aa	6a 00		 push	 0
+  002ac	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  002af	8b 10		 mov	 edx, DWORD PTR [eax]
+  002b1	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  002b4	ff 12		 call	 DWORD PTR [edx]
+  002b6	8b f0		 mov	 esi, eax
+  002b8	6a 00		 push	 0
+  002ba	6a 00		 push	 0
+  002bc	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  002bf	8b 10		 mov	 edx, DWORD PTR [eax]
+  002c1	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  002c4	ff 12		 call	 DWORD PTR [edx]
+  002c6	2b f0		 sub	 esi, eax
+  002c8	56		 push	 esi
+  002c9	8b 45 f8	 mov	 eax, DWORD PTR _vRun$[ebp]
+  002cc	50		 push	 eax
+  002cd	e8 00 00 00 00	 call	 _WriteCompLine
+  002d2	83 c4 1c	 add	 esp, 28			; 0000001cH
+$L58717:
+
+; 100  : }
+
+  002d5	5e		 pop	 esi
+  002d6	8b e5		 mov	 esp, ebp
+  002d8	5d		 pop	 ebp
+  002d9	c2 10 00	 ret	 16			; 00000010H
+?DrawNoFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ENDP ; CelObj::DrawNoFlipNoMD
+_TEXT	ENDS
+PUBLIC	?XDim@Buffer@@QBEHXZ				; Buffer::XDim
+PUBLIC	?YDim@Buffer@@QBEHXZ				; Buffer::YDim
+PUBLIC	?DrawUncompNoFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ; CelObj::DrawUncompNoFlipNoMD
+EXTRN	_colorptr:DWORD
+EXTRN	_WriteUncompLine:NEAR
+EXTRN	?IsWithin@SOL_Rect@@QBEHHH@Z:NEAR		; SOL_Rect::IsWithin
+_TEXT	SEGMENT
+_dest$ = 8
+_toBuffer$ = 12
+_ul$ = 16
+_this$ = -40
+_hRun$ = -8
+_vRun$ = -4
+_xSize$ = -16
+_resBuffer$ = -36
+_celPtr$ = -12
+_colorData$ = -32
+_srcCol$ = -28
+_srcRow$ = -24
+_y$ = -20
+?DrawUncompNoFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z PROC NEAR ; CelObj::DrawUncompNoFlipNoMD
+
+; 104  : {
+
+  002dc	55		 push	 ebp
+  002dd	8b ec		 mov	 ebp, esp
+  002df	83 ec 28	 sub	 esp, 40			; 00000028H
+  002e2	89 4d d8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 105  : 	assert(dest.Assert());
+; 106  : 
+; 107  : 	if ( !toBuffer.IsWithin(dest.XDim(), dest.YDim()) )
+
+  002e5	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  002e8	e8 00 00 00 00	 call	 ?YDim@Buffer@@QBEHXZ	; Buffer::YDim
+  002ed	50		 push	 eax
+  002ee	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  002f1	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  002f6	50		 push	 eax
+  002f7	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  002fa	e8 00 00 00 00	 call	 ?IsWithin@SOL_Rect@@QBEHHH@Z ; SOL_Rect::IsWithin
+  002ff	85 c0		 test	 eax, eax
+  00301	75 05		 jne	 SHORT $L58725
+
+; 108  : 		return;
+
+  00303	e9 dc 00 00 00	 jmp	 $L58723
+$L58725:
+
+; 109  : 
+; 110  : 	// ***********************************************************************
+; 111  : 	// Non scaled drawing.
+; 112  : 	// ***********************************************************************
+; 113  : 
+; 114  : 	int hRun = toBuffer.Xlen();
+
+  00308	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0030b	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  00310	89 45 f8	 mov	 DWORD PTR _hRun$[ebp], eax
+
+; 115  : 	int vRun = toBuffer.Ylen();
+
+  00313	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00316	e8 00 00 00 00	 call	 ?Ylen@SOL_Rect@@QBEHXZ	; SOL_Rect::Ylen
+  0031b	89 45 fc	 mov	 DWORD PTR _vRun$[ebp], eax
+
+; 116  : 	int xSize = dest.XDim();
+
+  0031e	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00321	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  00326	89 45 f0	 mov	 DWORD PTR _xSize$[ebp], eax
+
+; 117  : 
+; 118  : 	uchar* resBuffer = ResPointer();
+
+  00329	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  0032c	8b 10		 mov	 edx, DWORD PTR [eax]
+  0032e	8b 4d d8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00331	ff 52 14	 call	 DWORD PTR [edx+20]
+  00334	89 45 dc	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 119  : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  00337	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  0033a	8b 4d dc	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  0033d	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  00340	89 4d f4	 mov	 DWORD PTR _celPtr$[ebp], ecx
+
+; 120  : 	uchar* colorData = resBuffer + celPtr->controlOffset;	//  Correct !
+
+  00343	8b 55 f4	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  00346	8b 45 dc	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  00349	03 42 18	 add	 eax, DWORD PTR [edx+24]
+  0034c	89 45 e0	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 121  : 	int srcCol = toBuffer.A.x - ul.x;
+
+  0034f	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00352	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00354	2b 55 10	 sub	 edx, DWORD PTR _ul$[ebp]
+  00357	89 55 e4	 mov	 DWORD PTR _srcCol$[ebp], edx
+
+; 122  : 	int srcRow = toBuffer.A.y - ul.y;
+
+  0035a	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  0035d	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00360	2b 4d 14	 sub	 ecx, DWORD PTR _ul$[ebp+4]
+  00363	89 4d e8	 mov	 DWORD PTR _srcRow$[ebp], ecx
+
+; 123  : 	colorData += (srcRow * width) + srcCol;
+
+  00366	8b 55 d8	 mov	 edx, DWORD PTR _this$[ebp]
+  00369	8b 45 e8	 mov	 eax, DWORD PTR _srcRow$[ebp]
+  0036c	0f af 42 20	 imul	 eax, DWORD PTR [edx+32]
+  00370	03 45 e4	 add	 eax, DWORD PTR _srcCol$[ebp]
+  00373	8b 4d e0	 mov	 ecx, DWORD PTR _colorData$[ebp]
+  00376	03 c8		 add	 ecx, eax
+  00378	89 4d e0	 mov	 DWORD PTR _colorData$[ebp], ecx
+
+; 124  : 
+; 125  : 	skipval = skip;
+
+  0037b	8b 55 d8	 mov	 edx, DWORD PTR _this$[ebp]
+  0037e	8a 42 38	 mov	 al, BYTE PTR [edx+56]
+  00381	a2 00 00 00 00	 mov	 BYTE PTR _skipval, al
+
+; 126  : 	pixelcount = hRun;
+
+  00386	8b 4d f8	 mov	 ecx, DWORD PTR _hRun$[ebp]
+  00389	89 0d 00 00 00
+	00		 mov	 DWORD PTR _pixelcount, ecx
+
+; 127  : 
+; 128  : 
+; 129  : 	// Draw the inset rectangle
+; 130  : 	for (int y = 0; y < vRun; y++)
+
+  0038f	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR _y$[ebp], 0
+  00396	eb 09		 jmp	 SHORT $L58736
+$L58737:
+  00398	8b 55 ec	 mov	 edx, DWORD PTR _y$[ebp]
+  0039b	83 c2 01	 add	 edx, 1
+  0039e	89 55 ec	 mov	 DWORD PTR _y$[ebp], edx
+$L58736:
+  003a1	8b 45 ec	 mov	 eax, DWORD PTR _y$[ebp]
+  003a4	3b 45 fc	 cmp	 eax, DWORD PTR _vRun$[ebp]
+  003a7	7d 3b		 jge	 SHORT $L58738
+
+; 132  : 		destptr = dest.Addr(toBuffer.A.x, toBuffer.A.y + y);
+
+  003a9	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  003ac	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  003af	03 55 ec	 add	 edx, DWORD PTR _y$[ebp]
+  003b2	52		 push	 edx
+  003b3	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  003b6	8b 08		 mov	 ecx, DWORD PTR [eax]
+  003b8	51		 push	 ecx
+  003b9	8b 55 08	 mov	 edx, DWORD PTR _dest$[ebp]
+  003bc	8b 02		 mov	 eax, DWORD PTR [edx]
+  003be	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  003c1	ff 10		 call	 DWORD PTR [eax]
+  003c3	a3 00 00 00 00	 mov	 DWORD PTR _destptr, eax
+
+; 133  : 		colorptr = colorData;
+
+  003c8	8b 4d e0	 mov	 ecx, DWORD PTR _colorData$[ebp]
+  003cb	89 0d 00 00 00
+	00		 mov	 DWORD PTR _colorptr, ecx
+
+; 134  : 		WriteUncompLine();
+
+  003d1	e8 00 00 00 00	 call	 _WriteUncompLine
+
+; 135  : 		colorData += width;
+
+  003d6	8b 55 d8	 mov	 edx, DWORD PTR _this$[ebp]
+  003d9	8b 45 e0	 mov	 eax, DWORD PTR _colorData$[ebp]
+  003dc	03 42 20	 add	 eax, DWORD PTR [edx+32]
+  003df	89 45 e0	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 136  : 	}
+
+  003e2	eb b4		 jmp	 SHORT $L58737
+$L58738:
+$L58723:
+
+; 137  : }
+
+  003e4	8b e5		 mov	 esp, ebp
+  003e6	5d		 pop	 ebp
+  003e7	c2 10 00	 ret	 16			; 00000010H
+?DrawUncompNoFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ENDP ; CelObj::DrawUncompNoFlipNoMD
+_TEXT	ENDS
+PUBLIC	?DrawUncompNoFlipNoMDNoSkip@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ; CelObj::DrawUncompNoFlipNoMDNoSkip
+EXTRN	_memcpy:NEAR
+_TEXT	SEGMENT
+_dest$ = 8
+_toBuffer$ = 12
+_ul$ = 16
+_this$ = -36
+_hRun$ = -8
+_vRun$ = -4
+_resBuffer$ = -32
+_celPtr$ = -12
+_colorData$ = -28
+_srcCol$ = -24
+_srcRow$ = -20
+_y$ = -16
+?DrawUncompNoFlipNoMDNoSkip@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z PROC NEAR ; CelObj::DrawUncompNoFlipNoMDNoSkip
+
+; 142  : {
+
+  003ea	55		 push	 ebp
+  003eb	8b ec		 mov	 ebp, esp
+  003ed	83 ec 24	 sub	 esp, 36			; 00000024H
+  003f0	89 4d dc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 143  : 	assert(dest.Assert());
+; 144  : 
+; 145  : 	if ( !toBuffer.IsWithin(dest.XDim(), dest.YDim()) )
+
+  003f3	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  003f6	e8 00 00 00 00	 call	 ?YDim@Buffer@@QBEHXZ	; Buffer::YDim
+  003fb	50		 push	 eax
+  003fc	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  003ff	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  00404	50		 push	 eax
+  00405	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00408	e8 00 00 00 00	 call	 ?IsWithin@SOL_Rect@@QBEHHH@Z ; SOL_Rect::IsWithin
+  0040d	85 c0		 test	 eax, eax
+  0040f	75 05		 jne	 SHORT $L58746
+
+; 146  : 		return;
+
+  00411	e9 bb 00 00 00	 jmp	 $L58744
+$L58746:
+
+; 147  : 
+; 148  : 	int hRun = toBuffer.Xlen();
+
+  00416	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00419	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  0041e	89 45 f8	 mov	 DWORD PTR _hRun$[ebp], eax
+
+; 149  : 	int vRun = toBuffer.Ylen();
+
+  00421	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00424	e8 00 00 00 00	 call	 ?Ylen@SOL_Rect@@QBEHXZ	; SOL_Rect::Ylen
+  00429	89 45 fc	 mov	 DWORD PTR _vRun$[ebp], eax
+
+; 150  : 
+; 151  : 	uchar* resBuffer = ResPointer();
+
+  0042c	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  0042f	8b 10		 mov	 edx, DWORD PTR [eax]
+  00431	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00434	ff 52 14	 call	 DWORD PTR [edx+20]
+  00437	89 45 e0	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 152  : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  0043a	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  0043d	8b 4d e0	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  00440	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  00443	89 4d f4	 mov	 DWORD PTR _celPtr$[ebp], ecx
+
+; 153  : 	uchar* colorData = resBuffer + celPtr->controlOffset;	//  Correct !
+
+  00446	8b 55 f4	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  00449	8b 45 e0	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  0044c	03 42 18	 add	 eax, DWORD PTR [edx+24]
+  0044f	89 45 e4	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 154  : 	int srcCol = toBuffer.A.x - ul.x;
+
+  00452	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00455	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00457	2b 55 10	 sub	 edx, DWORD PTR _ul$[ebp]
+  0045a	89 55 e8	 mov	 DWORD PTR _srcCol$[ebp], edx
+
+; 155  : 	int srcRow = toBuffer.A.y - ul.y;
+
+  0045d	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  00460	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00463	2b 4d 14	 sub	 ecx, DWORD PTR _ul$[ebp+4]
+  00466	89 4d ec	 mov	 DWORD PTR _srcRow$[ebp], ecx
+
+; 156  : 	colorData += (srcRow * width) + srcCol;
+
+  00469	8b 55 dc	 mov	 edx, DWORD PTR _this$[ebp]
+  0046c	8b 45 ec	 mov	 eax, DWORD PTR _srcRow$[ebp]
+  0046f	0f af 42 20	 imul	 eax, DWORD PTR [edx+32]
+  00473	03 45 e8	 add	 eax, DWORD PTR _srcCol$[ebp]
+  00476	8b 4d e4	 mov	 ecx, DWORD PTR _colorData$[ebp]
+  00479	03 c8		 add	 ecx, eax
+  0047b	89 4d e4	 mov	 DWORD PTR _colorData$[ebp], ecx
+
+; 157  : 
+; 158  : 	// Draw the inset rectangle
+; 159  : 	for (int y = 0; y < vRun; y++)
+
+  0047e	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR _y$[ebp], 0
+  00485	eb 09		 jmp	 SHORT $L58756
+$L58757:
+  00487	8b 55 f0	 mov	 edx, DWORD PTR _y$[ebp]
+  0048a	83 c2 01	 add	 edx, 1
+  0048d	89 55 f0	 mov	 DWORD PTR _y$[ebp], edx
+$L58756:
+  00490	8b 45 f0	 mov	 eax, DWORD PTR _y$[ebp]
+  00493	3b 45 fc	 cmp	 eax, DWORD PTR _vRun$[ebp]
+  00496	7d 39		 jge	 SHORT $L58758
+
+; 161  : 		memcpy(dest.Addr(toBuffer.A.x, toBuffer.A.y + y), colorData, hRun);
+
+  00498	8b 4d f8	 mov	 ecx, DWORD PTR _hRun$[ebp]
+  0049b	51		 push	 ecx
+  0049c	8b 55 e4	 mov	 edx, DWORD PTR _colorData$[ebp]
+  0049f	52		 push	 edx
+  004a0	8b 45 0c	 mov	 eax, DWORD PTR _toBuffer$[ebp]
+  004a3	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  004a6	03 4d f0	 add	 ecx, DWORD PTR _y$[ebp]
+  004a9	51		 push	 ecx
+  004aa	8b 55 0c	 mov	 edx, DWORD PTR _toBuffer$[ebp]
+  004ad	8b 02		 mov	 eax, DWORD PTR [edx]
+  004af	50		 push	 eax
+  004b0	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  004b3	8b 11		 mov	 edx, DWORD PTR [ecx]
+  004b5	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  004b8	ff 12		 call	 DWORD PTR [edx]
+  004ba	50		 push	 eax
+  004bb	e8 00 00 00 00	 call	 _memcpy
+  004c0	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 162  : 		colorData += width;
+
+  004c3	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  004c6	8b 4d e4	 mov	 ecx, DWORD PTR _colorData$[ebp]
+  004c9	03 48 20	 add	 ecx, DWORD PTR [eax+32]
+  004cc	89 4d e4	 mov	 DWORD PTR _colorData$[ebp], ecx
+
+; 163  : 	}
+
+  004cf	eb b6		 jmp	 SHORT $L58757
+$L58758:
+$L58744:
+
+; 164  : }
+
+  004d1	8b e5		 mov	 esp, ebp
+  004d3	5d		 pop	 ebp
+  004d4	c2 10 00	 ret	 16			; 00000010H
+?DrawUncompNoFlipNoMDNoSkip@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ENDP ; CelObj::DrawUncompNoFlipNoMDNoSkip
+_TEXT	ENDS
+PUBLIC	?DrawUncompHzFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ; CelObj::DrawUncompHzFlipNoMD
+EXTRN	_WriteUncompLineBack:NEAR
+_TEXT	SEGMENT
+_dest$ = 8
+_toBuffer$ = 12
+_ul$ = 16
+_this$ = -40
+_resBuffer$ = -36
+_celPtr$ = -12
+_hRun$ = -8
+_vRun$ = -4
+_xSize$ = -16
+_colorData$ = -32
+_srcCol$ = -28
+_srcRow$ = -24
+_y$ = -20
+?DrawUncompHzFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z PROC NEAR ; CelObj::DrawUncompHzFlipNoMD
+
+; 168  : {
+
+  004d7	55		 push	 ebp
+  004d8	8b ec		 mov	 ebp, esp
+  004da	83 ec 28	 sub	 esp, 40			; 00000028H
+  004dd	56		 push	 esi
+  004de	89 4d d8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 169  : 	assert(dest.Assert());
+; 170  : 
+; 171  : 	if ( !toBuffer.IsWithin(dest.XDim(), dest.YDim()) )
+
+  004e1	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  004e4	e8 00 00 00 00	 call	 ?YDim@Buffer@@QBEHXZ	; Buffer::YDim
+  004e9	50		 push	 eax
+  004ea	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  004ed	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  004f2	50		 push	 eax
+  004f3	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  004f6	e8 00 00 00 00	 call	 ?IsWithin@SOL_Rect@@QBEHHH@Z ; SOL_Rect::IsWithin
+  004fb	85 c0		 test	 eax, eax
+  004fd	75 05		 jne	 SHORT $L58766
+
+; 172  : 		return;
+
+  004ff	e9 f6 00 00 00	 jmp	 $L58764
+$L58766:
+
+; 173  : 
+; 174  : 	// ***********************************************************************
+; 175  : 	// Non scaled drawing mirrored.
+; 176  : 	// ***********************************************************************
+; 177  : 
+; 178  : 	uchar* resBuffer = ResPointer();
+
+  00504	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  00507	8b 10		 mov	 edx, DWORD PTR [eax]
+  00509	8b 4d d8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0050c	ff 52 14	 call	 DWORD PTR [edx+20]
+  0050f	89 45 dc	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 179  : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  00512	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  00515	8b 4d dc	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  00518	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  0051b	89 4d f4	 mov	 DWORD PTR _celPtr$[ebp], ecx
+
+; 180  : 
+; 181  : 	int hRun = toBuffer.Xlen();
+
+  0051e	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00521	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  00526	89 45 f8	 mov	 DWORD PTR _hRun$[ebp], eax
+
+; 182  : 	int vRun = toBuffer.Ylen();
+
+  00529	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0052c	e8 00 00 00 00	 call	 ?Ylen@SOL_Rect@@QBEHXZ	; SOL_Rect::Ylen
+  00531	89 45 fc	 mov	 DWORD PTR _vRun$[ebp], eax
+
+; 183  : 	int xSize = dest.XDim();
+
+  00534	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00537	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  0053c	89 45 f0	 mov	 DWORD PTR _xSize$[ebp], eax
+
+; 184  : 
+; 185  : 	uchar* colorData = resBuffer + celPtr->controlOffset;	//  Correct !
+
+  0053f	8b 55 f4	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  00542	8b 45 dc	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  00545	03 42 18	 add	 eax, DWORD PTR [edx+24]
+  00548	89 45 e0	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 186  : 	int srcCol = width - (toBuffer.A.x - ul.x + toBuffer.Xlen());
+
+  0054b	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0054e	8b 31		 mov	 esi, DWORD PTR [ecx]
+  00550	2b 75 10	 sub	 esi, DWORD PTR _ul$[ebp]
+  00553	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00556	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  0055b	03 f0		 add	 esi, eax
+  0055d	8b 55 d8	 mov	 edx, DWORD PTR _this$[ebp]
+  00560	8b 42 20	 mov	 eax, DWORD PTR [edx+32]
+  00563	2b c6		 sub	 eax, esi
+  00565	89 45 e4	 mov	 DWORD PTR _srcCol$[ebp], eax
+
+; 187  : 	int srcRow = toBuffer.A.y - ul.y;
+
+  00568	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0056b	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0056e	2b 55 14	 sub	 edx, DWORD PTR _ul$[ebp+4]
+  00571	89 55 e8	 mov	 DWORD PTR _srcRow$[ebp], edx
+
+; 188  : 	colorData += (srcRow * width) + srcCol;
+
+  00574	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  00577	8b 4d e8	 mov	 ecx, DWORD PTR _srcRow$[ebp]
+  0057a	0f af 48 20	 imul	 ecx, DWORD PTR [eax+32]
+  0057e	03 4d e4	 add	 ecx, DWORD PTR _srcCol$[ebp]
+  00581	8b 55 e0	 mov	 edx, DWORD PTR _colorData$[ebp]
+  00584	03 d1		 add	 edx, ecx
+  00586	89 55 e0	 mov	 DWORD PTR _colorData$[ebp], edx
+
+; 189  : 
+; 190  : 	skipval = skip;
+
+  00589	8b 45 d8	 mov	 eax, DWORD PTR _this$[ebp]
+  0058c	8a 48 38	 mov	 cl, BYTE PTR [eax+56]
+  0058f	88 0d 00 00 00
+	00		 mov	 BYTE PTR _skipval, cl
+
+; 191  : 	pixelcount = hRun;
+
+  00595	8b 55 f8	 mov	 edx, DWORD PTR _hRun$[ebp]
+  00598	89 15 00 00 00
+	00		 mov	 DWORD PTR _pixelcount, edx
+
+; 192  : 
+; 193  : 	// Draw the inset rectangle
+; 194  : 	for (int y = 0; y < vRun; y++)
+
+  0059e	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR _y$[ebp], 0
+  005a5	eb 09		 jmp	 SHORT $L58777
+$L58778:
+  005a7	8b 45 ec	 mov	 eax, DWORD PTR _y$[ebp]
+  005aa	83 c0 01	 add	 eax, 1
+  005ad	89 45 ec	 mov	 DWORD PTR _y$[ebp], eax
+$L58777:
+  005b0	8b 4d ec	 mov	 ecx, DWORD PTR _y$[ebp]
+  005b3	3b 4d fc	 cmp	 ecx, DWORD PTR _vRun$[ebp]
+  005b6	7d 42		 jge	 SHORT $L58779
+
+; 196  : 		destptr = dest.Addr(toBuffer.A.x, toBuffer.A.y + y) + hRun - 1;
+
+  005b8	8b 55 0c	 mov	 edx, DWORD PTR _toBuffer$[ebp]
+  005bb	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  005be	03 45 ec	 add	 eax, DWORD PTR _y$[ebp]
+  005c1	50		 push	 eax
+  005c2	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  005c5	8b 11		 mov	 edx, DWORD PTR [ecx]
+  005c7	52		 push	 edx
+  005c8	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  005cb	8b 10		 mov	 edx, DWORD PTR [eax]
+  005cd	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  005d0	ff 12		 call	 DWORD PTR [edx]
+  005d2	8b 4d f8	 mov	 ecx, DWORD PTR _hRun$[ebp]
+  005d5	8d 54 08 ff	 lea	 edx, DWORD PTR [eax+ecx-1]
+  005d9	89 15 00 00 00
+	00		 mov	 DWORD PTR _destptr, edx
+
+; 197  : 		colorptr = colorData;
+
+  005df	8b 45 e0	 mov	 eax, DWORD PTR _colorData$[ebp]
+  005e2	a3 00 00 00 00	 mov	 DWORD PTR _colorptr, eax
+
+; 198  : 		WriteUncompLineBack();
+
+  005e7	e8 00 00 00 00	 call	 _WriteUncompLineBack
+
+; 199  : 		colorData += width;
+
+  005ec	8b 4d d8	 mov	 ecx, DWORD PTR _this$[ebp]
+  005ef	8b 55 e0	 mov	 edx, DWORD PTR _colorData$[ebp]
+  005f2	03 51 20	 add	 edx, DWORD PTR [ecx+32]
+  005f5	89 55 e0	 mov	 DWORD PTR _colorData$[ebp], edx
+
+; 200  : 	}
+
+  005f8	eb ad		 jmp	 SHORT $L58778
+$L58779:
+$L58764:
+
+; 201  : }
+
+  005fa	5e		 pop	 esi
+  005fb	8b e5		 mov	 esp, ebp
+  005fd	5d		 pop	 ebp
+  005fe	c2 10 00	 ret	 16			; 00000010H
+?DrawUncompHzFlipNoMD@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ENDP ; CelObj::DrawUncompHzFlipNoMD
+_TEXT	ENDS
+PUBLIC	?DrawUncompHzFlipNoMDNoSkip@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ; CelObj::DrawUncompHzFlipNoMDNoSkip
+EXTRN	_WriteUncompLineBackNoSkip:NEAR
+_TEXT	SEGMENT
+_dest$ = 8
+_toBuffer$ = 12
+_ul$ = 16
+_this$ = -36
+_resBuffer$ = -32
+_celPtr$ = -12
+_hRun$ = -8
+_vRun$ = -4
+_colorData$ = -28
+_srcCol$ = -24
+_srcRow$ = -20
+_y$ = -16
+?DrawUncompHzFlipNoMDNoSkip@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z PROC NEAR ; CelObj::DrawUncompHzFlipNoMDNoSkip
+
+; 206  : {
+
+  00601	55		 push	 ebp
+  00602	8b ec		 mov	 ebp, esp
+  00604	83 ec 24	 sub	 esp, 36			; 00000024H
+  00607	56		 push	 esi
+  00608	89 4d dc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 207  : 	assert(dest.Assert());
+; 208  : 
+; 209  : 	if ( !toBuffer.IsWithin(dest.XDim(), dest.YDim()) )
+
+  0060b	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  0060e	e8 00 00 00 00	 call	 ?YDim@Buffer@@QBEHXZ	; Buffer::YDim
+  00613	50		 push	 eax
+  00614	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00617	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  0061c	50		 push	 eax
+  0061d	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00620	e8 00 00 00 00	 call	 ?IsWithin@SOL_Rect@@QBEHHH@Z ; SOL_Rect::IsWithin
+  00625	85 c0		 test	 eax, eax
+  00627	75 05		 jne	 SHORT $L58787
+
+; 210  : 		return;
+
+  00629	e9 eb 00 00 00	 jmp	 $L58785
+$L58787:
+
+; 211  : 
+; 212  : 	uchar* resBuffer = ResPointer();
+
+  0062e	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  00631	8b 10		 mov	 edx, DWORD PTR [eax]
+  00633	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00636	ff 52 14	 call	 DWORD PTR [edx+20]
+  00639	89 45 e0	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 213  : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  0063c	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  0063f	8b 4d e0	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  00642	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  00645	89 4d f4	 mov	 DWORD PTR _celPtr$[ebp], ecx
+
+; 214  : 
+; 215  : 	int hRun = toBuffer.Xlen();
+
+  00648	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0064b	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  00650	89 45 f8	 mov	 DWORD PTR _hRun$[ebp], eax
+
+; 216  : 	int vRun = toBuffer.Ylen();
+
+  00653	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00656	e8 00 00 00 00	 call	 ?Ylen@SOL_Rect@@QBEHXZ	; SOL_Rect::Ylen
+  0065b	89 45 fc	 mov	 DWORD PTR _vRun$[ebp], eax
+
+; 217  : 
+; 218  : 	uchar* colorData = resBuffer + celPtr->controlOffset;	//  Correct !
+
+  0065e	8b 55 f4	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  00661	8b 45 e0	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  00664	03 42 18	 add	 eax, DWORD PTR [edx+24]
+  00667	89 45 e4	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 219  : 	int srcCol = width - (toBuffer.A.x - ul.x + toBuffer.Xlen());
+
+  0066a	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0066d	8b 31		 mov	 esi, DWORD PTR [ecx]
+  0066f	2b 75 10	 sub	 esi, DWORD PTR _ul$[ebp]
+  00672	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  00675	e8 00 00 00 00	 call	 ?Xlen@SOL_Rect@@QBEHXZ	; SOL_Rect::Xlen
+  0067a	03 f0		 add	 esi, eax
+  0067c	8b 55 dc	 mov	 edx, DWORD PTR _this$[ebp]
+  0067f	8b 42 20	 mov	 eax, DWORD PTR [edx+32]
+  00682	2b c6		 sub	 eax, esi
+  00684	89 45 e8	 mov	 DWORD PTR _srcCol$[ebp], eax
+
+; 220  : 	int srcRow = toBuffer.A.y - ul.y;
+
+  00687	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  0068a	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0068d	2b 55 14	 sub	 edx, DWORD PTR _ul$[ebp+4]
+  00690	89 55 ec	 mov	 DWORD PTR _srcRow$[ebp], edx
+
+; 221  : 	colorData += (srcRow * width) + srcCol;
+
+  00693	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  00696	8b 4d ec	 mov	 ecx, DWORD PTR _srcRow$[ebp]
+  00699	0f af 48 20	 imul	 ecx, DWORD PTR [eax+32]
+  0069d	03 4d e8	 add	 ecx, DWORD PTR _srcCol$[ebp]
+  006a0	8b 55 e4	 mov	 edx, DWORD PTR _colorData$[ebp]
+  006a3	03 d1		 add	 edx, ecx
+  006a5	89 55 e4	 mov	 DWORD PTR _colorData$[ebp], edx
+
+; 222  : 
+; 223  : 	skipval = skip;
+
+  006a8	8b 45 dc	 mov	 eax, DWORD PTR _this$[ebp]
+  006ab	8a 48 38	 mov	 cl, BYTE PTR [eax+56]
+  006ae	88 0d 00 00 00
+	00		 mov	 BYTE PTR _skipval, cl
+
+; 224  : 	pixelcount = hRun;
+
+  006b4	8b 55 f8	 mov	 edx, DWORD PTR _hRun$[ebp]
+  006b7	89 15 00 00 00
+	00		 mov	 DWORD PTR _pixelcount, edx
+
+; 225  : 
+; 226  : 	// Draw the inset rectangle
+; 227  : 	for (int y = 0; y < vRun; y++)
+
+  006bd	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR _y$[ebp], 0
+  006c4	eb 09		 jmp	 SHORT $L58797
+$L58798:
+  006c6	8b 45 f0	 mov	 eax, DWORD PTR _y$[ebp]
+  006c9	83 c0 01	 add	 eax, 1
+  006cc	89 45 f0	 mov	 DWORD PTR _y$[ebp], eax
+$L58797:
+  006cf	8b 4d f0	 mov	 ecx, DWORD PTR _y$[ebp]
+  006d2	3b 4d fc	 cmp	 ecx, DWORD PTR _vRun$[ebp]
+  006d5	7d 42		 jge	 SHORT $L58799
+
+; 229  : 		destptr = dest.Addr(toBuffer.A.x, toBuffer.A.y + y) + hRun - 1;
+
+  006d7	8b 55 0c	 mov	 edx, DWORD PTR _toBuffer$[ebp]
+  006da	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  006dd	03 45 f0	 add	 eax, DWORD PTR _y$[ebp]
+  006e0	50		 push	 eax
+  006e1	8b 4d 0c	 mov	 ecx, DWORD PTR _toBuffer$[ebp]
+  006e4	8b 11		 mov	 edx, DWORD PTR [ecx]
+  006e6	52		 push	 edx
+  006e7	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  006ea	8b 10		 mov	 edx, DWORD PTR [eax]
+  006ec	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  006ef	ff 12		 call	 DWORD PTR [edx]
+  006f1	8b 4d f8	 mov	 ecx, DWORD PTR _hRun$[ebp]
+  006f4	8d 54 08 ff	 lea	 edx, DWORD PTR [eax+ecx-1]
+  006f8	89 15 00 00 00
+	00		 mov	 DWORD PTR _destptr, edx
+
+; 230  : 		colorptr = colorData;
+
+  006fe	8b 45 e4	 mov	 eax, DWORD PTR _colorData$[ebp]
+  00701	a3 00 00 00 00	 mov	 DWORD PTR _colorptr, eax
+
+; 231  : 		WriteUncompLineBackNoSkip();
+
+  00706	e8 00 00 00 00	 call	 _WriteUncompLineBackNoSkip
+
+; 232  : 		colorData += width;
+
+  0070b	8b 4d dc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0070e	8b 55 e4	 mov	 edx, DWORD PTR _colorData$[ebp]
+  00711	03 51 20	 add	 edx, DWORD PTR [ecx+32]
+  00714	89 55 e4	 mov	 DWORD PTR _colorData$[ebp], edx
+
+; 233  : 	}
+
+  00717	eb ad		 jmp	 SHORT $L58798
+$L58799:
+$L58785:
+
+; 234  : }
+
+  00719	5e		 pop	 esi
+  0071a	8b e5		 mov	 esp, ebp
+  0071c	5d		 pop	 ebp
+  0071d	c2 10 00	 ret	 16			; 00000010H
+?DrawUncompHzFlipNoMDNoSkip@CelObj@@QAEXABVBuffer@@ABVSOL_Rect@@VSOL_Point@@@Z ENDP ; CelObj::DrawUncompHzFlipNoMDNoSkip
+_TEXT	ENDS
+PUBLIC	?ScaleDrawNoMD@CelObj@@QAEXABVBuffer@@ABVRatio@@1ABVSOL_Rect@@ABVSOL_Point@@@Z ; CelObj::ScaleDrawNoMD
+EXTRN	_memset:NEAR
+EXTRN	?ScaleTables@CelObj@@QAEXABVRatio@@0@Z:NEAR	; CelObj::ScaleTables
+EXTRN	_scaleptr:DWORD
+EXTRN	_WriteUncompScaleLine:NEAR
+EXTRN	?scaleX1@CelObj@@2PAHA:BYTE			; CelObj::scaleX1
+EXTRN	?scaleY1@CelObj@@2PAHA:BYTE			; CelObj::scaleY1
+EXTRN	?line@CelObj@@2PAEA:BYTE			; CelObj::line
+EXTRN	?scaleX@CelObj@@2PAHA:DWORD			; CelObj::scaleX
+EXTRN	?scaleY@CelObj@@2PAHA:DWORD			; CelObj::scaleY
+_TEXT	SEGMENT
+_dest$ = 8
+_ratioX$ = 12
+_ratioY$ = 16
+_drawRect$ = 20
+_pt$ = 24
+_this$ = -104
+_doubleHorz$ = -60
+_x1$ = -32
+_y1$ = -52
+_x2$ = -40
+_y2$ = -56
+_celX1$ = -4
+_celY1$ = -16
+_y$ = -36
+_hBuild$ = -12
+_maxx$58826 = -72
+_x$58827 = -68
+_x$58832 = -76
+_resBuffer$ = -64
+_celPtr$ = -24
+_controlData$ = -8
+_colorData$ = -48
+_controlTable$ = -44
+_colorTable$ = -20
+_lastyi$ = -28
+_target$58851 = -80
+_controlPtr$58853 = -88
+_colorPtr$58854 = -92
+_j$58855 = -84
+_control$58859 = -96
+_color$58864 = -100
+?ScaleDrawNoMD@CelObj@@QAEXABVBuffer@@ABVRatio@@1ABVSOL_Rect@@ABVSOL_Point@@@Z PROC NEAR ; CelObj::ScaleDrawNoMD
+
+; 238  : {
+
+  00720	55		 push	 ebp
+  00721	8b ec		 mov	 ebp, esp
+  00723	83 ec 68	 sub	 esp, 104		; 00000068H
+  00726	89 4d 98	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 239  : 	assert(dest.Assert());
+; 240  : 
+; 241  : 	if ( !drawRect.IsWithin(dest.XDim(), dest.YDim()) )
+
+  00729	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  0072c	e8 00 00 00 00	 call	 ?YDim@Buffer@@QBEHXZ	; Buffer::YDim
+  00731	50		 push	 eax
+  00732	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00735	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  0073a	50		 push	 eax
+  0073b	8b 4d 14	 mov	 ecx, DWORD PTR _drawRect$[ebp]
+  0073e	e8 00 00 00 00	 call	 ?IsWithin@SOL_Rect@@QBEHHH@Z ; SOL_Rect::IsWithin
+  00743	85 c0		 test	 eax, eax
+  00745	75 05		 jne	 SHORT $L58809
+
+; 242  : 		return;
+
+  00747	e9 5e 03 00 00	 jmp	 $L58807
+$L58809:
+
+; 245  : 	assert(ratioY.Assert());
+; 246  : 
+; 247  : 	// Calculate the scaling tables
+; 248  : 	ScaleTables(ratioX, ratioY);
+
+  0074c	8b 45 10	 mov	 eax, DWORD PTR _ratioY$[ebp]
+  0074f	50		 push	 eax
+  00750	8b 4d 0c	 mov	 ecx, DWORD PTR _ratioX$[ebp]
+  00753	51		 push	 ecx
+  00754	8b 4d 98	 mov	 ecx, DWORD PTR _this$[ebp]
+  00757	e8 00 00 00 00	 call	 ?ScaleTables@CelObj@@QAEXABVRatio@@0@Z ; CelObj::ScaleTables
+
+; 249  : 	Bool doubleHorz = ratioX.numer == (ratioX.denom * 2);
+
+  0075c	8b 55 0c	 mov	 edx, DWORD PTR _ratioX$[ebp]
+  0075f	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  00762	d1 e0		 shl	 eax, 1
+  00764	8b 4d 0c	 mov	 ecx, DWORD PTR _ratioX$[ebp]
+  00767	33 d2		 xor	 edx, edx
+  00769	39 01		 cmp	 DWORD PTR [ecx], eax
+  0076b	0f 94 c2	 sete	 dl
+  0076e	89 55 c4	 mov	 DWORD PTR _doubleHorz$[ebp], edx
+
+; 250  : 
+; 251  : 	int x1 = drawRect.A.x;
+
+  00771	8b 45 14	 mov	 eax, DWORD PTR _drawRect$[ebp]
+  00774	8b 08		 mov	 ecx, DWORD PTR [eax]
+  00776	89 4d e0	 mov	 DWORD PTR _x1$[ebp], ecx
+
+; 252  : 	int y1 = drawRect.A.y;
+
+  00779	8b 55 14	 mov	 edx, DWORD PTR _drawRect$[ebp]
+  0077c	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  0077f	89 45 cc	 mov	 DWORD PTR _y1$[ebp], eax
+
+; 253  : 	int x2 = drawRect.B.x;
+
+  00782	8b 4d 14	 mov	 ecx, DWORD PTR _drawRect$[ebp]
+  00785	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  00788	89 55 d8	 mov	 DWORD PTR _x2$[ebp], edx
+
+; 254  : 	int y2 = drawRect.B.y;
+
+  0078b	8b 45 14	 mov	 eax, DWORD PTR _drawRect$[ebp]
+  0078e	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
+  00791	89 4d c8	 mov	 DWORD PTR _y2$[ebp], ecx
+
+; 255  : 	int celX1 = pt.x;
+
+  00794	8b 55 18	 mov	 edx, DWORD PTR _pt$[ebp]
+  00797	8b 02		 mov	 eax, DWORD PTR [edx]
+  00799	89 45 fc	 mov	 DWORD PTR _celX1$[ebp], eax
+
+; 256  : 	int celY1 = pt.y;
+
+  0079c	8b 4d 18	 mov	 ecx, DWORD PTR _pt$[ebp]
+  0079f	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  007a2	89 55 f0	 mov	 DWORD PTR _celY1$[ebp], edx
+
+; 257  : 	int y;
+; 258  : 
+; 259  : 	assert(x1 <= x2);
+; 260  : 	assert(y1 <= y2);
+; 261  : 	assert(celX1 <= x1);
+; 262  : 	assert(celY1 <= y1);
+; 263  : 
+; 264  : 	int hBuild;
+; 265  : 
+; 266  : 	//  Build horizontal table
+; 267  : 	//  If mirroring, adjust scaling table to do it automatically
+; 268  : 	if (horzFlip)
+
+  007a5	8b 45 98	 mov	 eax, DWORD PTR _this$[ebp]
+  007a8	83 78 4c 00	 cmp	 DWORD PTR [eax+76], 0
+  007ac	74 52		 je	 SHORT $L58825
+
+; 270  : 		int maxx = width - 1;
+
+  007ae	8b 4d 98	 mov	 ecx, DWORD PTR _this$[ebp]
+  007b1	8b 51 20	 mov	 edx, DWORD PTR [ecx+32]
+  007b4	83 ea 01	 sub	 edx, 1
+  007b7	89 55 b8	 mov	 DWORD PTR _maxx$58826[ebp], edx
+
+; 271  : 		for (int x = x1; x <= x2; x++)
+
+  007ba	8b 45 e0	 mov	 eax, DWORD PTR _x1$[ebp]
+  007bd	89 45 bc	 mov	 DWORD PTR _x$58827[ebp], eax
+  007c0	eb 09		 jmp	 SHORT $L58828
+$L58829:
+  007c2	8b 4d bc	 mov	 ecx, DWORD PTR _x$58827[ebp]
+  007c5	83 c1 01	 add	 ecx, 1
+  007c8	89 4d bc	 mov	 DWORD PTR _x$58827[ebp], ecx
+$L58828:
+  007cb	8b 55 bc	 mov	 edx, DWORD PTR _x$58827[ebp]
+  007ce	3b 55 d8	 cmp	 edx, DWORD PTR _x2$[ebp]
+  007d1	7f 1e		 jg	 SHORT $L58830
+
+; 273  : 			scaleX1[x] = maxx - (scaleX[x - celX1]);
+
+  007d3	8b 45 bc	 mov	 eax, DWORD PTR _x$58827[ebp]
+  007d6	2b 45 fc	 sub	 eax, DWORD PTR _celX1$[ebp]
+  007d9	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?scaleX@CelObj@@2PAHA ; CelObj::scaleX
+  007df	8b 55 b8	 mov	 edx, DWORD PTR _maxx$58826[ebp]
+  007e2	2b 14 81	 sub	 edx, DWORD PTR [ecx+eax*4]
+  007e5	8b 45 bc	 mov	 eax, DWORD PTR _x$58827[ebp]
+  007e8	89 14 85 00 00
+	00 00		 mov	 DWORD PTR ?scaleX1@CelObj@@2PAHA[eax*4], edx
+
+; 274  : //			assert(scaleX1[x] >= 0);
+; 275  : //			assert(scaleX1[x] < width);
+; 276  : 		}
+
+  007ef	eb d1		 jmp	 SHORT $L58829
+$L58830:
+
+; 277  : 
+; 278  : 		hBuild = scaleX1[x1];
+
+  007f1	8b 4d e0	 mov	 ecx, DWORD PTR _x1$[ebp]
+  007f4	8b 14 8d 00 00
+	00 00		 mov	 edx, DWORD PTR ?scaleX1@CelObj@@2PAHA[ecx*4]
+  007fb	89 55 f4	 mov	 DWORD PTR _hBuild$[ebp], edx
+
+; 280  : 	else
+
+  007fe	eb 41		 jmp	 SHORT $L58831
+$L58825:
+
+; 282  : 		for (int x = x1; x <= x2; x++)
+
+  00800	8b 45 e0	 mov	 eax, DWORD PTR _x1$[ebp]
+  00803	89 45 b4	 mov	 DWORD PTR _x$58832[ebp], eax
+  00806	eb 09		 jmp	 SHORT $L58833
+$L58834:
+  00808	8b 4d b4	 mov	 ecx, DWORD PTR _x$58832[ebp]
+  0080b	83 c1 01	 add	 ecx, 1
+  0080e	89 4d b4	 mov	 DWORD PTR _x$58832[ebp], ecx
+$L58833:
+  00811	8b 55 b4	 mov	 edx, DWORD PTR _x$58832[ebp]
+  00814	3b 55 d8	 cmp	 edx, DWORD PTR _x2$[ebp]
+  00817	7f 1b		 jg	 SHORT $L58835
+
+; 284  : 			scaleX1[x] = scaleX[x - celX1];
+
+  00819	8b 45 b4	 mov	 eax, DWORD PTR _x$58832[ebp]
+  0081c	2b 45 fc	 sub	 eax, DWORD PTR _celX1$[ebp]
+  0081f	8b 4d b4	 mov	 ecx, DWORD PTR _x$58832[ebp]
+  00822	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?scaleX@CelObj@@2PAHA ; CelObj::scaleX
+  00828	8b 04 82	 mov	 eax, DWORD PTR [edx+eax*4]
+  0082b	89 04 8d 00 00
+	00 00		 mov	 DWORD PTR ?scaleX1@CelObj@@2PAHA[ecx*4], eax
+
+; 285  : //			assert(scaleX1[x] >= 0);
+; 286  : //			assert(scaleX1[x] < width);
+; 287  : 		}
+
+  00832	eb d4		 jmp	 SHORT $L58834
+$L58835:
+
+; 288  : 
+; 289  : 		hBuild = scaleX1[x2];
+
+  00834	8b 4d d8	 mov	 ecx, DWORD PTR _x2$[ebp]
+  00837	8b 14 8d 00 00
+	00 00		 mov	 edx, DWORD PTR ?scaleX1@CelObj@@2PAHA[ecx*4]
+  0083e	89 55 f4	 mov	 DWORD PTR _hBuild$[ebp], edx
+$L58831:
+
+; 291  : 
+; 292  : 	hBuild++;
+
+  00841	8b 45 f4	 mov	 eax, DWORD PTR _hBuild$[ebp]
+  00844	83 c0 01	 add	 eax, 1
+  00847	89 45 f4	 mov	 DWORD PTR _hBuild$[ebp], eax
+
+; 293  : //	msgMgr->Mono("Height %d  y1: %d  y2: %d  celY1: %d\n", height, y1, y2, celY1);
+; 294  : 
+; 295  : 	//  Build vertical table
+; 296  : 	for (y = y1; y <= y2; y++)
+
+  0084a	8b 4d cc	 mov	 ecx, DWORD PTR _y1$[ebp]
+  0084d	89 4d dc	 mov	 DWORD PTR _y$[ebp], ecx
+  00850	eb 09		 jmp	 SHORT $L58836
+$L58837:
+  00852	8b 55 dc	 mov	 edx, DWORD PTR _y$[ebp]
+  00855	83 c2 01	 add	 edx, 1
+  00858	89 55 dc	 mov	 DWORD PTR _y$[ebp], edx
+$L58836:
+  0085b	8b 45 dc	 mov	 eax, DWORD PTR _y$[ebp]
+  0085e	3b 45 c8	 cmp	 eax, DWORD PTR _y2$[ebp]
+  00861	7f 1a		 jg	 SHORT $L58838
+
+; 298  : 		scaleY1[y] = scaleY[y - celY1];
+
+  00863	8b 4d dc	 mov	 ecx, DWORD PTR _y$[ebp]
+  00866	2b 4d f0	 sub	 ecx, DWORD PTR _celY1$[ebp]
+  00869	8b 55 dc	 mov	 edx, DWORD PTR _y$[ebp]
+  0086c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?scaleY@CelObj@@2PAHA ; CelObj::scaleY
+  00871	8b 0c 88	 mov	 ecx, DWORD PTR [eax+ecx*4]
+  00874	89 0c 95 00 00
+	00 00		 mov	 DWORD PTR ?scaleY1@CelObj@@2PAHA[edx*4], ecx
+
+; 299  : //		msgMgr->Mono("%d: %d", y, scaleY1[y]);
+; 300  : //		assert(scaleY1[y] >= 0);
+; 301  : //		assert(scaleY1[y] < height);
+; 302  : 	}
+
+  0087b	eb d5		 jmp	 SHORT $L58837
+$L58838:
+
+; 303  : 
+; 304  : 	uchar* resBuffer = ResPointer();
+
+  0087d	8b 55 98	 mov	 edx, DWORD PTR _this$[ebp]
+  00880	8b 02		 mov	 eax, DWORD PTR [edx]
+  00882	8b 4d 98	 mov	 ecx, DWORD PTR _this$[ebp]
+  00885	ff 50 14	 call	 DWORD PTR [eax+20]
+  00888	89 45 c0	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 305  : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  0088b	8b 4d 98	 mov	 ecx, DWORD PTR _this$[ebp]
+  0088e	8b 55 c0	 mov	 edx, DWORD PTR _resBuffer$[ebp]
+  00891	03 51 18	 add	 edx, DWORD PTR [ecx+24]
+  00894	89 55 e8	 mov	 DWORD PTR _celPtr$[ebp], edx
+
+; 306  : 	uchar* controlData = resBuffer + celPtr->controlOffset;
+
+  00897	8b 45 e8	 mov	 eax, DWORD PTR _celPtr$[ebp]
+  0089a	8b 4d c0	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  0089d	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  008a0	89 4d f8	 mov	 DWORD PTR _controlData$[ebp], ecx
+
+; 307  : 	uchar* colorData = resBuffer + celPtr->colorOffset;
+
+  008a3	8b 55 e8	 mov	 edx, DWORD PTR _celPtr$[ebp]
+  008a6	8b 45 c0	 mov	 eax, DWORD PTR _resBuffer$[ebp]
+  008a9	03 42 1c	 add	 eax, DWORD PTR [edx+28]
+  008ac	89 45 d0	 mov	 DWORD PTR _colorData$[ebp], eax
+
+; 308  : 
+; 309  : 	long* controlTable = (long*) (resBuffer + celPtr->rowTableOffset);
+
+  008af	8b 4d e8	 mov	 ecx, DWORD PTR _celPtr$[ebp]
+  008b2	8b 55 c0	 mov	 edx, DWORD PTR _resBuffer$[ebp]
+  008b5	03 51 20	 add	 edx, DWORD PTR [ecx+32]
+  008b8	89 55 d4	 mov	 DWORD PTR _controlTable$[ebp], edx
+
+; 310  : 	long* colorTable = controlTable + height;
+
+  008bb	8b 45 98	 mov	 eax, DWORD PTR _this$[ebp]
+  008be	8b 48 24	 mov	 ecx, DWORD PTR [eax+36]
+  008c1	8b 55 d4	 mov	 edx, DWORD PTR _controlTable$[ebp]
+  008c4	8d 04 8a	 lea	 eax, DWORD PTR [edx+ecx*4]
+  008c7	89 45 ec	 mov	 DWORD PTR _colorTable$[ebp], eax
+
+; 311  : 
+; 312  : 	// Draw the inset rectangle
+; 313  : 	int lastyi = -1;
+
+  008ca	c7 45 e4 ff ff
+	ff ff		 mov	 DWORD PTR _lastyi$[ebp], -1
+
+; 314  : 	for (y = y1; y <= y2; y++)
+
+  008d1	8b 4d cc	 mov	 ecx, DWORD PTR _y1$[ebp]
+  008d4	89 4d dc	 mov	 DWORD PTR _y$[ebp], ecx
+  008d7	eb 09		 jmp	 SHORT $L58848
+$L58849:
+  008d9	8b 55 dc	 mov	 edx, DWORD PTR _y$[ebp]
+  008dc	83 c2 01	 add	 edx, 1
+  008df	89 55 dc	 mov	 DWORD PTR _y$[ebp], edx
+$L58848:
+  008e2	8b 45 dc	 mov	 eax, DWORD PTR _y$[ebp]
+  008e5	3b 45 c8	 cmp	 eax, DWORD PTR _y2$[ebp]
+  008e8	0f 8f bc 01 00
+	00		 jg	 $L58850
+
+; 316  : 		uchar* target = dest.Addr(x1, y);
+
+  008ee	8b 4d dc	 mov	 ecx, DWORD PTR _y$[ebp]
+  008f1	51		 push	 ecx
+  008f2	8b 55 e0	 mov	 edx, DWORD PTR _x1$[ebp]
+  008f5	52		 push	 edx
+  008f6	8b 45 08	 mov	 eax, DWORD PTR _dest$[ebp]
+  008f9	8b 10		 mov	 edx, DWORD PTR [eax]
+  008fb	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  008fe	ff 12		 call	 DWORD PTR [edx]
+  00900	89 45 b0	 mov	 DWORD PTR _target$58851[ebp], eax
+
+; 317  : 
+; 318  : 		//  If new line needs to be constructed, do it
+; 319  : 		if (lastyi != scaleY1[y])
+
+  00903	8b 45 dc	 mov	 eax, DWORD PTR _y$[ebp]
+  00906	8b 4d e4	 mov	 ecx, DWORD PTR _lastyi$[ebp]
+  00909	3b 0c 85 00 00
+	00 00		 cmp	 ecx, DWORD PTR ?scaleY1@CelObj@@2PAHA[eax*4]
+  00910	0f 84 4a 01 00
+	00		 je	 $L58858
+
+; 321  : 			// Find the row data
+; 322  : 			lastyi = scaleY1[y];
+
+  00916	8b 55 dc	 mov	 edx, DWORD PTR _y$[ebp]
+  00919	8b 04 95 00 00
+	00 00		 mov	 eax, DWORD PTR ?scaleY1@CelObj@@2PAHA[edx*4]
+  00920	89 45 e4	 mov	 DWORD PTR _lastyi$[ebp], eax
+
+; 323  : 			uchar* controlPtr = controlData + controlTable[lastyi];
+
+  00923	8b 4d e4	 mov	 ecx, DWORD PTR _lastyi$[ebp]
+  00926	8b 55 d4	 mov	 edx, DWORD PTR _controlTable$[ebp]
+  00929	8b 45 f8	 mov	 eax, DWORD PTR _controlData$[ebp]
+  0092c	03 04 8a	 add	 eax, DWORD PTR [edx+ecx*4]
+  0092f	89 45 a8	 mov	 DWORD PTR _controlPtr$58853[ebp], eax
+
+; 324  : 			uchar* colorPtr = colorData + colorTable[lastyi];
+
+  00932	8b 4d e4	 mov	 ecx, DWORD PTR _lastyi$[ebp]
+  00935	8b 55 ec	 mov	 edx, DWORD PTR _colorTable$[ebp]
+  00938	8b 45 d0	 mov	 eax, DWORD PTR _colorData$[ebp]
+  0093b	03 04 8a	 add	 eax, DWORD PTR [edx+ecx*4]
+  0093e	89 45 a4	 mov	 DWORD PTR _colorPtr$58854[ebp], eax
+
+; 325  : 
+; 326  : 			// Build a line
+; 327  : 			for (int j = 0; j < hBuild; )
+
+  00941	c7 45 ac 00 00
+	00 00		 mov	 DWORD PTR _j$58855[ebp], 0
+$L58857:
+  00948	8b 4d ac	 mov	 ecx, DWORD PTR _j$58855[ebp]
+  0094b	3b 4d f4	 cmp	 ecx, DWORD PTR _hBuild$[ebp]
+  0094e	0f 8d 0c 01 00
+	00		 jge	 $L58858
+
+; 329  : 				// Get the control character
+; 330  : 				uchar control = *controlPtr++;
+
+  00954	8b 55 a8	 mov	 edx, DWORD PTR _controlPtr$58853[ebp]
+  00957	8a 02		 mov	 al, BYTE PTR [edx]
+  00959	88 45 a0	 mov	 BYTE PTR _control$58859[ebp], al
+  0095c	8b 4d a8	 mov	 ecx, DWORD PTR _controlPtr$58853[ebp]
+  0095f	83 c1 01	 add	 ecx, 1
+  00962	89 4d a8	 mov	 DWORD PTR _controlPtr$58853[ebp], ecx
+
+; 331  : 				if (!(control & REPEATC))
+
+  00965	8b 55 a0	 mov	 edx, DWORD PTR _control$58859[ebp]
+  00968	81 e2 ff 00 00
+	00		 and	 edx, 255		; 000000ffH
+  0096e	81 e2 80 00 00
+	00		 and	 edx, 128		; 00000080H
+  00974	85 d2		 test	 edx, edx
+  00976	75 45		 jne	 SHORT $L58860
+
+; 333  : 					// Do a run of unique bytes
+; 334  : 					memcpy(&line[j], colorPtr, control);
+
+  00978	8b 45 a0	 mov	 eax, DWORD PTR _control$58859[ebp]
+  0097b	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  00980	50		 push	 eax
+  00981	8b 4d a4	 mov	 ecx, DWORD PTR _colorPtr$58854[ebp]
+  00984	51		 push	 ecx
+  00985	8b 55 ac	 mov	 edx, DWORD PTR _j$58855[ebp]
+  00988	81 c2 00 00 00
+	00		 add	 edx, OFFSET FLAT:?line@CelObj@@2PAEA ; CelObj::line
+  0098e	52		 push	 edx
+  0098f	e8 00 00 00 00	 call	 _memcpy
+  00994	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 335  : 					colorPtr += control;
+
+  00997	8b 45 a0	 mov	 eax, DWORD PTR _control$58859[ebp]
+  0099a	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  0099f	8b 4d a4	 mov	 ecx, DWORD PTR _colorPtr$58854[ebp]
+  009a2	03 c8		 add	 ecx, eax
+  009a4	89 4d a4	 mov	 DWORD PTR _colorPtr$58854[ebp], ecx
+
+; 336  : 					j += control;
+
+  009a7	8b 55 a0	 mov	 edx, DWORD PTR _control$58859[ebp]
+  009aa	81 e2 ff 00 00
+	00		 and	 edx, 255		; 000000ffH
+  009b0	8b 45 ac	 mov	 eax, DWORD PTR _j$58855[ebp]
+  009b3	03 c2		 add	 eax, edx
+  009b5	89 45 ac	 mov	 DWORD PTR _j$58855[ebp], eax
+
+; 338  : 				else
+
+  009b8	e9 9e 00 00 00	 jmp	 $L58863
+$L58860:
+
+; 340  : 					if (control & REPSKIP)
+
+  009bd	8b 4d a0	 mov	 ecx, DWORD PTR _control$58859[ebp]
+  009c0	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  009c6	83 e1 40	 and	 ecx, 64			; 00000040H
+  009c9	85 c9		 test	 ecx, ecx
+  009cb	74 3f		 je	 SHORT $L58862
+
+; 342  : 						// Do a run of repeated skip
+; 343  : 						control &= 0x3f;
+
+  009cd	8a 55 a0	 mov	 dl, BYTE PTR _control$58859[ebp]
+  009d0	80 e2 3f	 and	 dl, 63			; 0000003fH
+  009d3	88 55 a0	 mov	 BYTE PTR _control$58859[ebp], dl
+
+; 344  : 						memset(&line[j], skip, control);
+
+  009d6	8b 45 a0	 mov	 eax, DWORD PTR _control$58859[ebp]
+  009d9	25 ff 00 00 00	 and	 eax, 255		; 000000ffH
+  009de	50		 push	 eax
+  009df	8b 4d 98	 mov	 ecx, DWORD PTR _this$[ebp]
+  009e2	33 d2		 xor	 edx, edx
+  009e4	8a 51 38	 mov	 dl, BYTE PTR [ecx+56]
+  009e7	52		 push	 edx
+  009e8	8b 45 ac	 mov	 eax, DWORD PTR _j$58855[ebp]
+  009eb	05 00 00 00 00	 add	 eax, OFFSET FLAT:?line@CelObj@@2PAEA ; CelObj::line
+  009f0	50		 push	 eax
+  009f1	e8 00 00 00 00	 call	 _memset
+  009f6	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 345  : 						j += control;
+
+  009f9	8b 4d a0	 mov	 ecx, DWORD PTR _control$58859[ebp]
+  009fc	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  00a02	8b 55 ac	 mov	 edx, DWORD PTR _j$58855[ebp]
+  00a05	03 d1		 add	 edx, ecx
+  00a07	89 55 ac	 mov	 DWORD PTR _j$58855[ebp], edx
+
+; 347  : 					else
+
+  00a0a	eb 4f		 jmp	 SHORT $L58863
+$L58862:
+
+; 349  : 						// Do a run of repeated color
+; 350  : 						control &= 0x3f;
+
+  00a0c	8a 45 a0	 mov	 al, BYTE PTR _control$58859[ebp]
+  00a0f	24 3f		 and	 al, 63			; 0000003fH
+  00a11	88 45 a0	 mov	 BYTE PTR _control$58859[ebp], al
+
+; 351  : 						uchar color = *colorPtr++;
+
+  00a14	8b 4d a4	 mov	 ecx, DWORD PTR _colorPtr$58854[ebp]
+  00a17	8a 11		 mov	 dl, BYTE PTR [ecx]
+  00a19	88 55 9c	 mov	 BYTE PTR _color$58864[ebp], dl
+  00a1c	8b 45 a4	 mov	 eax, DWORD PTR _colorPtr$58854[ebp]
+  00a1f	83 c0 01	 add	 eax, 1
+  00a22	89 45 a4	 mov	 DWORD PTR _colorPtr$58854[ebp], eax
+
+; 352  : 						memset(&line[j], color, control);
+
+  00a25	8b 4d a0	 mov	 ecx, DWORD PTR _control$58859[ebp]
+  00a28	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  00a2e	51		 push	 ecx
+  00a2f	8b 55 9c	 mov	 edx, DWORD PTR _color$58864[ebp]
+  00a32	81 e2 ff 00 00
+	00		 and	 edx, 255		; 000000ffH
+  00a38	52		 push	 edx
+  00a39	8b 45 ac	 mov	 eax, DWORD PTR _j$58855[ebp]
+  00a3c	05 00 00 00 00	 add	 eax, OFFSET FLAT:?line@CelObj@@2PAEA ; CelObj::line
+  00a41	50		 push	 eax
+  00a42	e8 00 00 00 00	 call	 _memset
+  00a47	83 c4 0c	 add	 esp, 12			; 0000000cH
+
+; 353  : 						j += control;
+
+  00a4a	8b 4d a0	 mov	 ecx, DWORD PTR _control$58859[ebp]
+  00a4d	81 e1 ff 00 00
+	00		 and	 ecx, 255		; 000000ffH
+  00a53	8b 55 ac	 mov	 edx, DWORD PTR _j$58855[ebp]
+  00a56	03 d1		 add	 edx, ecx
+  00a58	89 55 ac	 mov	 DWORD PTR _j$58855[ebp], edx
+$L58863:
+
+; 356  : 			}
+
+  00a5b	e9 e8 fe ff ff	 jmp	 $L58857
+$L58858:
+
+; 358  : 
+; 359  : 		colorptr = line;
+
+  00a60	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _colorptr, OFFSET FLAT:?line@CelObj@@2PAEA ; CelObj::line
+
+; 360  : 		destptr = target;
+
+  00a6a	8b 45 b0	 mov	 eax, DWORD PTR _target$58851[ebp]
+  00a6d	a3 00 00 00 00	 mov	 DWORD PTR _destptr, eax
+
+; 361  : 		scaleptr = scaleX1;
+
+  00a72	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _scaleptr, OFFSET FLAT:?scaleX1@CelObj@@2PAHA ; CelObj::scaleX1
+
+; 362  : 		beginindex = x1;
+
+  00a7c	8b 4d e0	 mov	 ecx, DWORD PTR _x1$[ebp]
+  00a7f	89 0d 00 00 00
+	00		 mov	 DWORD PTR _beginindex, ecx
+
+; 363  : 		pixelcount = x2 - x1 + 1;
+
+  00a85	8b 55 d8	 mov	 edx, DWORD PTR _x2$[ebp]
+  00a88	2b 55 e0	 sub	 edx, DWORD PTR _x1$[ebp]
+  00a8b	83 c2 01	 add	 edx, 1
+  00a8e	89 15 00 00 00
+	00		 mov	 DWORD PTR _pixelcount, edx
+
+; 364  : 		skipval = skip;
+
+  00a94	8b 45 98	 mov	 eax, DWORD PTR _this$[ebp]
+  00a97	8a 48 38	 mov	 cl, BYTE PTR [eax+56]
+  00a9a	88 0d 00 00 00
+	00		 mov	 BYTE PTR _skipval, cl
+
+; 365  : #ifndef WINDOWS	//causing problems in QG4
+; 366  : 		if (doubleHorz)					//  BUGBUG - DDF - 8/15/95 - why does this cause trouble in Windows?
+; 367  : 			WriteUncompScaleLine2();
+; 368  : 		else
+; 369  : #endif
+; 370  : 			WriteUncompScaleLine();
+
+  00aa0	e8 00 00 00 00	 call	 _WriteUncompScaleLine
+
+; 371  : 
+; 372  : 		// Draw a line
+; 373  : //		for (int x = x1; x <= x2; x++) {
+; 374  : //			uchar color = line[scaleX1[x]];
+; 375  : //			if (color != skip)
+; 376  : //				*target = color;
+; 377  : //			target++;
+; 378  : //		}
+; 379  : 	}
+
+  00aa5	e9 2f fe ff ff	 jmp	 $L58849
+$L58850:
+$L58807:
+
+; 380  : }
+
+  00aaa	8b e5		 mov	 esp, ebp
+  00aac	5d		 pop	 ebp
+  00aad	c2 14 00	 ret	 20			; 00000014H
+?ScaleDrawNoMD@CelObj@@QAEXABVBuffer@@ABVRatio@@1ABVSOL_Rect@@ABVSOL_Point@@@Z ENDP ; CelObj::ScaleDrawNoMD
+_TEXT	ENDS
+PUBLIC	?ScaleDrawUncompNoMD@CelObj@@QAEXABVBuffer@@ABVRatio@@1ABVSOL_Rect@@ABVSOL_Point@@@Z ; CelObj::ScaleDrawUncompNoMD
+_TEXT	SEGMENT
+_dest$ = 8
+_ratioX$ = 12
+_ratioY$ = 16
+_drawRect$ = 20
+_pt$ = 24
+_this$ = -56
+_x1$ = -16
+_y1$ = -32
+_x2$ = -24
+_y2$ = -36
+_celX1$ = -4
+_celY1$ = -8
+_y$ = -20
+_maxx$58889 = -48
+_x$58890 = -44
+_x$58895 = -52
+_resBuffer$ = -40
+_celPtr$ = -12
+_colorData$ = -28
+?ScaleDrawUncompNoMD@CelObj@@QAEXABVBuffer@@ABVRatio@@1ABVSOL_Rect@@ABVSOL_Point@@@Z PROC NEAR ; CelObj::ScaleDrawUncompNoMD
+
+; 397  : {
+
+  00ab0	55		 push	 ebp
+  00ab1	8b ec		 mov	 ebp, esp
+  00ab3	83 ec 38	 sub	 esp, 56			; 00000038H
+  00ab6	89 4d c8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 398  : 	// Calculate the scaling tables
+; 399  : //	char buffer[300];
+; 400  : 	assert(dest.Assert());
+; 401  : 
+; 402  : 	if ( !drawRect.IsWithin(dest.XDim(), dest.YDim()) )
+
+  00ab9	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00abc	e8 00 00 00 00	 call	 ?YDim@Buffer@@QBEHXZ	; Buffer::YDim
+  00ac1	50		 push	 eax
+  00ac2	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00ac5	e8 00 00 00 00	 call	 ?XDim@Buffer@@QBEHXZ	; Buffer::XDim
+  00aca	50		 push	 eax
+  00acb	8b 4d 14	 mov	 ecx, DWORD PTR _drawRect$[ebp]
+  00ace	e8 00 00 00 00	 call	 ?IsWithin@SOL_Rect@@QBEHHH@Z ; SOL_Rect::IsWithin
+  00ad3	85 c0		 test	 eax, eax
+  00ad5	75 05		 jne	 SHORT $L58874
+
+; 403  : 		return;
+
+  00ad7	e9 9e 01 00 00	 jmp	 $L58872
+$L58874:
+
+; 406  : 	assert(ratioY.Assert());
+; 407  : 
+; 408  : 	ScaleTables(ratioX, ratioY);
+
+  00adc	8b 45 10	 mov	 eax, DWORD PTR _ratioY$[ebp]
+  00adf	50		 push	 eax
+  00ae0	8b 4d 0c	 mov	 ecx, DWORD PTR _ratioX$[ebp]
+  00ae3	51		 push	 ecx
+  00ae4	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00ae7	e8 00 00 00 00	 call	 ?ScaleTables@CelObj@@QAEXABVRatio@@0@Z ; CelObj::ScaleTables
+
+; 409  : 	#ifdef DEBUG
+; 410  : 	for (int ii = 0; ii < maxScaledLine; ii++)
+; 411  : 	{
+; 412  : 		scaleX1[ii] = -1;
+; 413  : 		scaleY1[ii] = -1;
+; 414  : 	}
+; 415  : 	#endif
+; 416  : 
+; 417  : 	// Get a pointer to the drawing area(a static buffer).
+; 418  : 	int x1 = drawRect.A.x;
+
+  00aec	8b 55 14	 mov	 edx, DWORD PTR _drawRect$[ebp]
+  00aef	8b 02		 mov	 eax, DWORD PTR [edx]
+  00af1	89 45 f0	 mov	 DWORD PTR _x1$[ebp], eax
+
+; 419  : 	int y1 = drawRect.A.y;
+
+  00af4	8b 4d 14	 mov	 ecx, DWORD PTR _drawRect$[ebp]
+  00af7	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00afa	89 55 e0	 mov	 DWORD PTR _y1$[ebp], edx
+
+; 420  : 	int x2 = drawRect.B.x;
+
+  00afd	8b 45 14	 mov	 eax, DWORD PTR _drawRect$[ebp]
+  00b00	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00b03	89 4d e8	 mov	 DWORD PTR _x2$[ebp], ecx
+
+; 421  : 	int y2 = drawRect.B.y;
+
+  00b06	8b 55 14	 mov	 edx, DWORD PTR _drawRect$[ebp]
+  00b09	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  00b0c	89 45 dc	 mov	 DWORD PTR _y2$[ebp], eax
+
+; 422  : 	int celX1 = pt.x;
+
+  00b0f	8b 4d 18	 mov	 ecx, DWORD PTR _pt$[ebp]
+  00b12	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00b14	89 55 fc	 mov	 DWORD PTR _celX1$[ebp], edx
+
+; 423  : 	int celY1 = pt.y;
+
+  00b17	8b 45 18	 mov	 eax, DWORD PTR _pt$[ebp]
+  00b1a	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00b1d	89 4d f8	 mov	 DWORD PTR _celY1$[ebp], ecx
+
+; 424  : 	int y;
+; 425  : 
+; 426  : 	assert(x1 <= x2);
+; 427  : 	assert(y1 <= y2);
+; 428  : 	assert(celX1 <= x1);
+; 429  : 	assert(celY1 <= y1);
+; 430  : 
+; 431  : //	char buffer[300];
+; 432  : //	sprintf(buffer, "x1:%d  y1:%d  x2:%d  y2:%d  Cx1:%d  Cy1:%d\n", x1, y1, x2, y2, celX1, celY1);
+; 433  : //	MessageBox(NULL, buffer, "Scale #1", MB_OK);
+; 434  : 
+; 435  : 	if (horzFlip)
+
+  00b20	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  00b23	83 7a 4c 00	 cmp	 DWORD PTR [edx+76], 0
+  00b27	74 44		 je	 SHORT $L58888
+
+; 437  : 		int maxx = width - 1;
+
+  00b29	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00b2c	8b 48 20	 mov	 ecx, DWORD PTR [eax+32]
+  00b2f	83 e9 01	 sub	 ecx, 1
+  00b32	89 4d d0	 mov	 DWORD PTR _maxx$58889[ebp], ecx
+
+; 438  : 		for (int x = x1; x <= x2; x++)
+
+  00b35	8b 55 f0	 mov	 edx, DWORD PTR _x1$[ebp]
+  00b38	89 55 d4	 mov	 DWORD PTR _x$58890[ebp], edx
+  00b3b	eb 09		 jmp	 SHORT $L58891
+$L58892:
+  00b3d	8b 45 d4	 mov	 eax, DWORD PTR _x$58890[ebp]
+  00b40	83 c0 01	 add	 eax, 1
+  00b43	89 45 d4	 mov	 DWORD PTR _x$58890[ebp], eax
+$L58891:
+  00b46	8b 4d d4	 mov	 ecx, DWORD PTR _x$58890[ebp]
+  00b49	3b 4d e8	 cmp	 ecx, DWORD PTR _x2$[ebp]
+  00b4c	7f 1d		 jg	 SHORT $L58893
+
+; 440  : 			scaleX1[x] = maxx - (scaleX[x - celX1]);
+
+  00b4e	8b 55 d4	 mov	 edx, DWORD PTR _x$58890[ebp]
+  00b51	2b 55 fc	 sub	 edx, DWORD PTR _celX1$[ebp]
+  00b54	a1 00 00 00 00	 mov	 eax, DWORD PTR ?scaleX@CelObj@@2PAHA ; CelObj::scaleX
+  00b59	8b 4d d0	 mov	 ecx, DWORD PTR _maxx$58889[ebp]
+  00b5c	2b 0c 90	 sub	 ecx, DWORD PTR [eax+edx*4]
+  00b5f	8b 55 d4	 mov	 edx, DWORD PTR _x$58890[ebp]
+  00b62	89 0c 95 00 00
+	00 00		 mov	 DWORD PTR ?scaleX1@CelObj@@2PAHA[edx*4], ecx
+
+; 441  : 		}
+
+  00b69	eb d2		 jmp	 SHORT $L58892
+$L58893:
+
+; 443  : 	else
+
+  00b6b	eb 34		 jmp	 SHORT $L58898
+$L58888:
+
+; 445  : 		for (int x = x1; x <= x2; x++)
+
+  00b6d	8b 45 f0	 mov	 eax, DWORD PTR _x1$[ebp]
+  00b70	89 45 cc	 mov	 DWORD PTR _x$58895[ebp], eax
+  00b73	eb 09		 jmp	 SHORT $L58896
+$L58897:
+  00b75	8b 4d cc	 mov	 ecx, DWORD PTR _x$58895[ebp]
+  00b78	83 c1 01	 add	 ecx, 1
+  00b7b	89 4d cc	 mov	 DWORD PTR _x$58895[ebp], ecx
+$L58896:
+  00b7e	8b 55 cc	 mov	 edx, DWORD PTR _x$58895[ebp]
+  00b81	3b 55 e8	 cmp	 edx, DWORD PTR _x2$[ebp]
+  00b84	7f 1b		 jg	 SHORT $L58898
+
+; 447  : 			scaleX1[x] = scaleX[x - celX1];
+
+  00b86	8b 45 cc	 mov	 eax, DWORD PTR _x$58895[ebp]
+  00b89	2b 45 fc	 sub	 eax, DWORD PTR _celX1$[ebp]
+  00b8c	8b 4d cc	 mov	 ecx, DWORD PTR _x$58895[ebp]
+  00b8f	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?scaleX@CelObj@@2PAHA ; CelObj::scaleX
+  00b95	8b 04 82	 mov	 eax, DWORD PTR [edx+eax*4]
+  00b98	89 04 8d 00 00
+	00 00		 mov	 DWORD PTR ?scaleX1@CelObj@@2PAHA[ecx*4], eax
+
+; 448  : 		}
+
+  00b9f	eb d4		 jmp	 SHORT $L58897
+$L58898:
+
+; 450  : 
+; 451  : 	for (y = y1; y <= y2; y++)
+
+  00ba1	8b 4d e0	 mov	 ecx, DWORD PTR _y1$[ebp]
+  00ba4	89 4d ec	 mov	 DWORD PTR _y$[ebp], ecx
+  00ba7	eb 09		 jmp	 SHORT $L58899
+$L58900:
+  00ba9	8b 55 ec	 mov	 edx, DWORD PTR _y$[ebp]
+  00bac	83 c2 01	 add	 edx, 1
+  00baf	89 55 ec	 mov	 DWORD PTR _y$[ebp], edx
+$L58899:
+  00bb2	8b 45 ec	 mov	 eax, DWORD PTR _y$[ebp]
+  00bb5	3b 45 dc	 cmp	 eax, DWORD PTR _y2$[ebp]
+  00bb8	7f 1a		 jg	 SHORT $L58901
+
+; 453  : 		scaleY1[y] = scaleY[y - celY1];
+
+  00bba	8b 4d ec	 mov	 ecx, DWORD PTR _y$[ebp]
+  00bbd	2b 4d f8	 sub	 ecx, DWORD PTR _celY1$[ebp]
+  00bc0	8b 55 ec	 mov	 edx, DWORD PTR _y$[ebp]
+  00bc3	a1 00 00 00 00	 mov	 eax, DWORD PTR ?scaleY@CelObj@@2PAHA ; CelObj::scaleY
+  00bc8	8b 0c 88	 mov	 ecx, DWORD PTR [eax+ecx*4]
+  00bcb	89 0c 95 00 00
+	00 00		 mov	 DWORD PTR ?scaleY1@CelObj@@2PAHA[edx*4], ecx
+
+; 454  : 	}
+
+  00bd2	eb d5		 jmp	 SHORT $L58900
+$L58901:
+
+; 455  : 
+; 456  : 	// Get a pointer to the cel.
+; 457  : 	uchar* resBuffer = ResPointer();
+
+  00bd4	8b 55 c8	 mov	 edx, DWORD PTR _this$[ebp]
+  00bd7	8b 02		 mov	 eax, DWORD PTR [edx]
+  00bd9	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00bdc	ff 50 14	 call	 DWORD PTR [eax+20]
+  00bdf	89 45 d8	 mov	 DWORD PTR _resBuffer$[ebp], eax
+
+; 458  : 	CelHeader* celPtr = (CelHeader*) (resBuffer + celOffset);
+
+  00be2	8b 4d c8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00be5	8b 55 d8	 mov	 edx, DWORD PTR _resBuffer$[ebp]
+  00be8	03 51 18	 add	 edx, DWORD PTR [ecx+24]
+  00beb	89 55 f4	 mov	 DWORD PTR _celPtr$[ebp], edx
+
+; 459  : 	uchar* colorData = resBuffer + celPtr->controlOffset;
+
+  00bee	8b 45 f4	 mov	 eax, DWORD PTR _celPtr$[ebp]
+  00bf1	8b 4d d8	 mov	 ecx, DWORD PTR _resBuffer$[ebp]
+  00bf4	03 48 18	 add	 ecx, DWORD PTR [eax+24]
+  00bf7	89 4d e4	 mov	 DWORD PTR _colorData$[ebp], ecx
+
+; 460  : 
+; 461  : 	// Draw the inset rectangle
+; 462  : 	for (y = y1; y <= y2; y++)
+
+  00bfa	8b 55 e0	 mov	 edx, DWORD PTR _y1$[ebp]
+  00bfd	89 55 ec	 mov	 DWORD PTR _y$[ebp], edx
+  00c00	eb 09		 jmp	 SHORT $L58906
+$L58907:
+  00c02	8b 45 ec	 mov	 eax, DWORD PTR _y$[ebp]
+  00c05	83 c0 01	 add	 eax, 1
+  00c08	89 45 ec	 mov	 DWORD PTR _y$[ebp], eax
+$L58906:
+  00c0b	8b 4d ec	 mov	 ecx, DWORD PTR _y$[ebp]
+  00c0e	3b 4d dc	 cmp	 ecx, DWORD PTR _y2$[ebp]
+  00c11	7f 67		 jg	 SHORT $L58908
+
+; 464  : 		destptr = dest.Addr(x1, y);
+
+  00c13	8b 55 ec	 mov	 edx, DWORD PTR _y$[ebp]
+  00c16	52		 push	 edx
+  00c17	8b 45 f0	 mov	 eax, DWORD PTR _x1$[ebp]
+  00c1a	50		 push	 eax
+  00c1b	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00c1e	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00c20	8b 4d 08	 mov	 ecx, DWORD PTR _dest$[ebp]
+  00c23	ff 12		 call	 DWORD PTR [edx]
+  00c25	a3 00 00 00 00	 mov	 DWORD PTR _destptr, eax
+
+; 465  : 		colorptr = colorData + (width * scaleY1[y]);
+
+  00c2a	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00c2d	8b 4d ec	 mov	 ecx, DWORD PTR _y$[ebp]
+  00c30	8b 50 20	 mov	 edx, DWORD PTR [eax+32]
+  00c33	0f af 14 8d 00
+	00 00 00	 imul	 edx, DWORD PTR ?scaleY1@CelObj@@2PAHA[ecx*4]
+  00c3b	8b 45 e4	 mov	 eax, DWORD PTR _colorData$[ebp]
+  00c3e	03 c2		 add	 eax, edx
+  00c40	a3 00 00 00 00	 mov	 DWORD PTR _colorptr, eax
+
+; 466  : 		scaleptr = scaleX1;
+
+  00c45	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _scaleptr, OFFSET FLAT:?scaleX1@CelObj@@2PAHA ; CelObj::scaleX1
+
+; 467  :  		beginindex = x1;
+
+  00c4f	8b 4d f0	 mov	 ecx, DWORD PTR _x1$[ebp]
+  00c52	89 0d 00 00 00
+	00		 mov	 DWORD PTR _beginindex, ecx
+
+; 468  : 		pixelcount = x2 - x1 + 1;
+
+  00c58	8b 55 e8	 mov	 edx, DWORD PTR _x2$[ebp]
+  00c5b	2b 55 f0	 sub	 edx, DWORD PTR _x1$[ebp]
+  00c5e	83 c2 01	 add	 edx, 1
+  00c61	89 15 00 00 00
+	00		 mov	 DWORD PTR _pixelcount, edx
+
+; 469  : 		skipval = skip;
+
+  00c67	8b 45 c8	 mov	 eax, DWORD PTR _this$[ebp]
+  00c6a	8a 48 38	 mov	 cl, BYTE PTR [eax+56]
+  00c6d	88 0d 00 00 00
+	00		 mov	 BYTE PTR _skipval, cl
+
+; 470  : 
+; 471  : #ifndef WINDOWS	//causing problems in QG4
+; 472  : //		if (ratioX.numer == (ratioX.denom * 2))
+; 473  : //			WriteUncompScaleLine2();
+; 474  : //		else
+; 475  : #endif
+; 476  : 
+; 477  : 			WriteUncompScaleLine();
+
+  00c73	e8 00 00 00 00	 call	 _WriteUncompScaleLine
+
+; 478  : 
+; 479  : 		// Draw a line
+; 480  : //		uchar* target = dest.Addr(x1, y);
+; 481  : //		uchar* colorPtr = colorData + (width * scaleY1[y]);
+; 482  : //		for (int x = x1; x <= x2; x++) {
+; 483  : //			int index = scaleX1[x];
+; 484  : //			if (index < 0  ||  index >= width)
+; 485  : //				msgMgr->Fatal("Index out of range: %d!\n", index);
+; 486  : //			uchar color = colorPtr[index];
+; 487  : //			if (color != skip)
+; 488  : //				*target = color;
+; 489  : //			target++;
+; 490  : //		}
+; 491  : 	}
+
+  00c78	eb 88		 jmp	 SHORT $L58907
+$L58908:
+$L58872:
+
+; 492  : }
+
+  00c7a	8b e5		 mov	 esp, ebp
+  00c7c	5d		 pop	 ebp
+  00c7d	c2 14 00	 ret	 20			; 00000014H
+?ScaleDrawUncompNoMD@CelObj@@QAEXABVBuffer@@ABVRatio@@1ABVSOL_Rect@@ABVSOL_Point@@@Z ENDP ; CelObj::ScaleDrawUncompNoMD
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Xlen@SOL_Rect@@QBEHXZ PROC NEAR			; SOL_Rect::Xlen, COMDAT
+
+; 153  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 154  : 	return B.x - A.x + 1;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  00010	2b 01		 sub	 eax, DWORD PTR [ecx]
+  00012	83 c0 01	 add	 eax, 1
+
+; 155  : }
+
+  00015	8b e5		 mov	 esp, ebp
+  00017	5d		 pop	 ebp
+  00018	c3		 ret	 0
+?Xlen@SOL_Rect@@QBEHXZ ENDP				; SOL_Rect::Xlen
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Ylen@SOL_Rect@@QBEHXZ PROC NEAR			; SOL_Rect::Ylen, COMDAT
+
+; 161  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 162  : 	return B.y - A.y + 1;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000d	8b 40 0c	 mov	 eax, DWORD PTR [eax+12]
+  00010	2b 41 04	 sub	 eax, DWORD PTR [ecx+4]
+  00013	83 c0 01	 add	 eax, 1
+
+; 163  : }
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c3		 ret	 0
+?Ylen@SOL_Rect@@QBEHXZ ENDP				; SOL_Rect::Ylen
+_TEXT	ENDS
+;	COMDAT ?XDim@Buffer@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?XDim@Buffer@@QBEHXZ PROC NEAR				; Buffer::XDim, COMDAT
+
+; 12   : 	int		XDim() const							{return xDim;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 08	 mov	 eax, DWORD PTR [eax+8]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?XDim@Buffer@@QBEHXZ ENDP				; Buffer::XDim
+_TEXT	ENDS
+;	COMDAT ?YDim@Buffer@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?YDim@Buffer@@QBEHXZ PROC NEAR				; Buffer::YDim, COMDAT
+
+; 13   : 	int		YDim() const							{return yDim;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 40 0c	 mov	 eax, DWORD PTR [eax+12]
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+?YDim@Buffer@@QBEHXZ ENDP				; Buffer::YDim
+_TEXT	ENDS
+END

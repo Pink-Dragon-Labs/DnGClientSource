@@ -1,0 +1,2524 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Line.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Min@@YAHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Max@@YAHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?DrawThin@SOL_Line@@QAEXEHHVMemID@@H@Z		; SOL_Line::DrawThin
+PUBLIC	?GetAddr@MemoryMgr@@QAEPAXG@Z			; MemoryMgr::GetAddr
+PUBLIC	?Min@@YAHHH@Z					; Min
+PUBLIC	?Max@@YAHHH@Z					; Max
+PUBLIC	??BMemID@@QBEGXZ				; MemID::operator unsigned short
+PUBLIC	??0SOL_Point@@QAE@HH@Z				; SOL_Point::SOL_Point
+EXTRN	_memMgr:DWORD
+_TEXT	SEGMENT
+_color$ = 8
+_style$ = 12
+_pattern$ = 16
+_BM$ = 20
+_BMWidth$ = 24
+_this$ = -240
+_P$ = -132
+_pIndex$ = -176
+_BMAddr$ = -4
+_yStart$58505 = -212
+_yEnd$58512 = -216
+_pixelAddr$58519 = -220
+_pixelAddr$58525 = -228
+_xStart$58526 = -224
+_pixelAddr$ = -208
+_T$ = -160
+_t00$58535 = -236
+_t10$58536 = -232
+_start$ = -188
+_end$ = -144
+_dx$ = -196
+_dy$ = -204
+_d$ = -136
+_incrE$ = -192
+_incrNE$ = -180
+_x$ = -168
+_y$ = -172
+_xOffset$ = -200
+_yOffset$ = -164
+?DrawThin@SOL_Line@@QAEXEHHVMemID@@H@Z PROC NEAR	; SOL_Line::DrawThin
+
+; 13   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	81 ec f4 00 00
+	00		 sub	 esp, 244		; 000000f4H
+  00009	89 8d 10 ff ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 14   : 	// Mid Point algorithm used
+; 15   : 	// See:
+; 16   : 	//		Foley,van Dam,Feiner,Hughes 
+; 17   : 	//		"Computer Graphics principles and practice" Second Edition
+; 18   : 	//
+; 19   : 
+; 20   : 	// To insure the slope is between 0 and 1, one of the following
+; 21   : 	//	transformations will be used
+; 22   : 	/*
+; 23   : 
+; 24   : 															 
+; 25   : 					  *				 |					*
+; 26   : 					   *				 |				  *
+; 27   : 					    *	  x = y	 |	x = y		 *
+; 28   : 					  	  *  y = -x	 |	y = x		*
+; 29   : 					  	   *			 |	        *
+; 30   : 					  	    *		    |		    *
+; 31   : 					        *		 |       *
+; 32   : 					     	   *		 |      *
+; 33   : 					  		    *	    |	    *
+; 34   : 					x = -x  	  *	 |    *	 x = x
+; 35   : 					y = y	  		*	 |	  *	 y = y	
+; 36   : 					  			    *  |  *
+; 37   : 					  				  * | *
+; 38   : 					  				   *|*
+; 39   : 	           ------------------------------------
+; 40   : 										*|*
+; 41   : 									  * |	*
+; 42   : 					x = -x		 *	 |	 *		 x = x
+; 43   : 					y = -y		*	 |	  *	 y = -y	
+; 44   : 								  *	 |		*
+; 45   : 								 *		 |		 *
+; 46   : 								*		 |		  *
+; 47   : 							  *		 |			*
+; 48   : 							 *			 |			 *
+; 49   : 							*			 |			  *
+; 50   : 						  *			 |				*
+; 51   : 						 *	  x = -y	 |	x = -y	 *
+; 52   : 						*	  y = -x	 |	y = x		  *
+; 53   : 					  *				 |					*
+; 54   : 	*/
+; 55   : 	// All lines are draw from left to right so four
+; 56   : 	// of the above transformations will not occur
+; 57   : 
+; 58   : 	// Set pattern	if not given
+; 59   : 	switch (style) {
+
+  0000f	8b 45 0c	 mov	 eax, DWORD PTR _style$[ebp]
+  00012	89 85 0c ff ff
+	ff		 mov	 DWORD PTR -244+[ebp], eax
+  00018	83 bd 0c ff ff
+	ff 00		 cmp	 DWORD PTR -244+[ebp], 0
+  0001f	74 0b		 je	 SHORT $L58492
+  00021	83 bd 0c ff ff
+	ff 01		 cmp	 DWORD PTR -244+[ebp], 1
+  00028	74 0b		 je	 SHORT $L58493
+  0002a	eb 10		 jmp	 SHORT $L58489
+$L58492:
+
+; 60   : 		case tSolid:
+; 61   : 			pattern = -1;
+
+  0002c	c7 45 10 ff ff
+	ff ff		 mov	 DWORD PTR _pattern$[ebp], -1
+
+; 62   : 			break;
+
+  00033	eb 07		 jmp	 SHORT $L58489
+$L58493:
+
+; 63   : 		case tDashed:
+; 64   : 			pattern = 0xff00ff00;
+
+  00035	c7 45 10 00 ff
+	00 ff		 mov	 DWORD PTR _pattern$[ebp], -16711936 ; ff00ff00H
+$L58489:
+
+; 69   : 	int P[32];
+; 70   : 	int pIndex = 0;
+
+  0003c	c7 85 50 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 0
+
+; 71   : 	for (;pIndex<32;++pIndex) {
+
+  00046	eb 0f		 jmp	 SHORT $L58497
+$L58498:
+  00048	8b 8d 50 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  0004e	83 c1 01	 add	 ecx, 1
+  00051	89 8d 50 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], ecx
+$L58497:
+  00057	83 bd 50 ff ff
+	ff 20		 cmp	 DWORD PTR _pIndex$[ebp], 32 ; 00000020H
+  0005e	7d 34		 jge	 SHORT $L58499
+
+; 72   : 		if (pattern < 0 )
+
+  00060	83 7d 10 00	 cmp	 DWORD PTR _pattern$[ebp], 0
+  00064	7d 13		 jge	 SHORT $L58500
+
+; 73   : 			P[pIndex] = 1;
+
+  00066	8b 95 50 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  0006c	c7 84 95 7c ff
+	ff ff 01 00 00
+	00		 mov	 DWORD PTR _P$[ebp+edx*4], 1
+
+; 74   : 		else
+
+  00077	eb 11		 jmp	 SHORT $L58501
+$L58500:
+
+; 75   : 			P[pIndex] = 0;
+
+  00079	8b 85 50 ff ff
+	ff		 mov	 eax, DWORD PTR _pIndex$[ebp]
+  0007f	c7 84 85 7c ff
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _P$[ebp+eax*4], 0
+$L58501:
+
+; 76   : 		pattern = pattern << 1;
+
+  0008a	8b 4d 10	 mov	 ecx, DWORD PTR _pattern$[ebp]
+  0008d	d1 e1		 shl	 ecx, 1
+  0008f	89 4d 10	 mov	 DWORD PTR _pattern$[ebp], ecx
+
+; 77   : 	}
+
+  00092	eb b4		 jmp	 SHORT $L58498
+$L58499:
+
+; 78   : 
+; 79   : 	// Calculate the first bitmap pixel address
+; 80   : 	uchar* BMAddr = ((uchar*) memMgr->GetAddr(BM)) + CELHEADERSIZE;
+
+  00094	8d 4d 14	 lea	 ecx, DWORD PTR _BM$[ebp]
+  00097	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  0009c	50		 push	 eax
+  0009d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  000a3	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+  000a8	83 c0 2e	 add	 eax, 46			; 0000002eH
+  000ab	89 45 fc	 mov	 DWORD PTR _BMAddr$[ebp], eax
+
+; 81   : 
+; 82   : 	// Optimize for horizontal and vertical lines
+; 83   : 	if ((A.x-B.x) == 0) {
+
+  000ae	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  000b4	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  000ba	8b 0a		 mov	 ecx, DWORD PTR [edx]
+  000bc	2b 48 08	 sub	 ecx, DWORD PTR [eax+8]
+  000bf	85 c9		 test	 ecx, ecx
+  000c1	0f 85 d6 00 00
+	00		 jne	 $L58504
+
+; 84   : 		// Vertical line
+; 85   : 		pIndex = 0;
+
+  000c7	c7 85 50 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 0
+
+; 86   : 		int yStart = Min(A.y,B.y);
+
+  000d1	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  000d7	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  000da	50		 push	 eax
+  000db	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  000e1	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  000e4	52		 push	 edx
+  000e5	e8 00 00 00 00	 call	 ?Min@@YAHHH@Z		; Min
+  000ea	83 c4 08	 add	 esp, 8
+  000ed	89 85 2c ff ff
+	ff		 mov	 DWORD PTR _yStart$58505[ebp], eax
+
+; 87   : 		int yEnd = Max(A.y,B.y);
+
+  000f3	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  000f9	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
+  000fc	51		 push	 ecx
+  000fd	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00103	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  00106	50		 push	 eax
+  00107	e8 00 00 00 00	 call	 ?Max@@YAHHH@Z		; Max
+  0010c	83 c4 08	 add	 esp, 8
+  0010f	89 85 28 ff ff
+	ff		 mov	 DWORD PTR _yEnd$58512[ebp], eax
+
+; 88   : 		// Calculate the first line pixel address
+; 89   : 		uchar* pixelAddr = BMAddr + yStart*BMWidth + A.x;
+
+  00115	8b 8d 2c ff ff
+	ff		 mov	 ecx, DWORD PTR _yStart$58505[ebp]
+  0011b	0f af 4d 18	 imul	 ecx, DWORD PTR _BMWidth$[ebp]
+  0011f	8b 55 fc	 mov	 edx, DWORD PTR _BMAddr$[ebp]
+  00122	03 d1		 add	 edx, ecx
+  00124	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0012a	03 10		 add	 edx, DWORD PTR [eax]
+  0012c	89 95 24 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58519[ebp], edx
+$L58521:
+
+; 90   : 		while (yStart <= yEnd) {
+
+  00132	8b 8d 2c ff ff
+	ff		 mov	 ecx, DWORD PTR _yStart$58505[ebp]
+  00138	3b 8d 28 ff ff
+	ff		 cmp	 ecx, DWORD PTR _yEnd$58512[ebp]
+  0013e	7f 58		 jg	 SHORT $L58522
+
+; 91   : 			if (P[(pIndex++ % 32)])
+
+  00140	8b 95 50 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  00146	81 e2 1f 00 00
+	80		 and	 edx, -2147483617	; 8000001fH
+  0014c	79 05		 jns	 SHORT $L58762
+  0014e	4a		 dec	 edx
+  0014f	83 ca e0	 or	 edx, -32		; ffffffe0H
+  00152	42		 inc	 edx
+$L58762:
+  00153	8b 84 95 7c ff
+	ff ff		 mov	 eax, DWORD PTR _P$[ebp+edx*4]
+  0015a	8b 8d 50 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  00160	83 c1 01	 add	 ecx, 1
+  00163	89 8d 50 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], ecx
+  00169	85 c0		 test	 eax, eax
+  0016b	74 0b		 je	 SHORT $L58523
+
+; 92   : 				*pixelAddr = color;
+
+  0016d	8b 95 24 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$58519[ebp]
+  00173	8a 45 08	 mov	 al, BYTE PTR _color$[ebp]
+  00176	88 02		 mov	 BYTE PTR [edx], al
+$L58523:
+
+; 93   : 			++yStart;
+
+  00178	8b 8d 2c ff ff
+	ff		 mov	 ecx, DWORD PTR _yStart$58505[ebp]
+  0017e	83 c1 01	 add	 ecx, 1
+  00181	89 8d 2c ff ff
+	ff		 mov	 DWORD PTR _yStart$58505[ebp], ecx
+
+; 94   : 			pixelAddr += BMWidth;
+
+  00187	8b 95 24 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$58519[ebp]
+  0018d	03 55 18	 add	 edx, DWORD PTR _BMWidth$[ebp]
+  00190	89 95 24 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58519[ebp], edx
+
+; 95   : 		}
+
+  00196	eb 9a		 jmp	 SHORT $L58521
+$L58522:
+
+; 96   : 		return;
+
+  00198	e9 d5 03 00 00	 jmp	 $L58487
+$L58504:
+
+; 98   : 	if ((A.y-B.y) == 0) {
+
+  0019d	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  001a3	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  001a9	8b 50 04	 mov	 edx, DWORD PTR [eax+4]
+  001ac	2b 51 0c	 sub	 edx, DWORD PTR [ecx+12]
+  001af	85 d2		 test	 edx, edx
+  001b1	0f 85 a6 00 00
+	00		 jne	 $L58524
+
+; 99   : 		// Vertical line
+; 100  : 		pIndex = 0;
+
+  001b7	c7 85 50 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 0
+
+; 101  : 		// Calculate the first line pixel address
+; 102  : 		uchar* pixelAddr = BMAddr + A.y*BMWidth + A.x;
+
+  001c1	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  001c7	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  001ca	0f af 4d 18	 imul	 ecx, DWORD PTR _BMWidth$[ebp]
+  001ce	8b 55 fc	 mov	 edx, DWORD PTR _BMAddr$[ebp]
+  001d1	03 d1		 add	 edx, ecx
+  001d3	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  001d9	03 10		 add	 edx, DWORD PTR [eax]
+  001db	89 95 1c ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58525[ebp], edx
+
+; 103  : 		int xStart = A.x;
+
+  001e1	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  001e7	8b 11		 mov	 edx, DWORD PTR [ecx]
+  001e9	89 95 20 ff ff
+	ff		 mov	 DWORD PTR _xStart$58526[ebp], edx
+$L58528:
+
+; 104  : 		while (xStart <= B.x) {
+
+  001ef	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  001f5	8b 8d 20 ff ff
+	ff		 mov	 ecx, DWORD PTR _xStart$58526[ebp]
+  001fb	3b 48 08	 cmp	 ecx, DWORD PTR [eax+8]
+  001fe	7f 58		 jg	 SHORT $L58529
+
+; 105  : 			if (P[(pIndex++ % 32)])
+
+  00200	8b 95 50 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  00206	81 e2 1f 00 00
+	80		 and	 edx, -2147483617	; 8000001fH
+  0020c	79 05		 jns	 SHORT $L58763
+  0020e	4a		 dec	 edx
+  0020f	83 ca e0	 or	 edx, -32		; ffffffe0H
+  00212	42		 inc	 edx
+$L58763:
+  00213	8b 84 95 7c ff
+	ff ff		 mov	 eax, DWORD PTR _P$[ebp+edx*4]
+  0021a	8b 8d 50 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  00220	83 c1 01	 add	 ecx, 1
+  00223	89 8d 50 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], ecx
+  00229	85 c0		 test	 eax, eax
+  0022b	74 0b		 je	 SHORT $L58530
+
+; 106  : 				*pixelAddr = color;
+
+  0022d	8b 95 1c ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$58525[ebp]
+  00233	8a 45 08	 mov	 al, BYTE PTR _color$[ebp]
+  00236	88 02		 mov	 BYTE PTR [edx], al
+$L58530:
+
+; 107  : 			++xStart;
+
+  00238	8b 8d 20 ff ff
+	ff		 mov	 ecx, DWORD PTR _xStart$58526[ebp]
+  0023e	83 c1 01	 add	 ecx, 1
+  00241	89 8d 20 ff ff
+	ff		 mov	 DWORD PTR _xStart$58526[ebp], ecx
+
+; 108  : 			++pixelAddr;
+
+  00247	8b 95 1c ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$58525[ebp]
+  0024d	83 c2 01	 add	 edx, 1
+  00250	89 95 1c ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58525[ebp], edx
+
+; 109  : 		}
+
+  00256	eb 97		 jmp	 SHORT $L58528
+$L58529:
+
+; 110  : 		return;
+
+  00258	e9 15 03 00 00	 jmp	 $L58487
+$L58524:
+
+; 112  : 
+; 113  : 	// Calculate the first line pixel address
+; 114  : 	uchar* pixelAddr = BMAddr + A.y*BMWidth + A.x;
+
+  0025d	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00263	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  00266	0f af 4d 18	 imul	 ecx, DWORD PTR _BMWidth$[ebp]
+  0026a	8b 55 fc	 mov	 edx, DWORD PTR _BMAddr$[ebp]
+  0026d	03 d1		 add	 edx, ecx
+  0026f	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00275	03 10		 add	 edx, DWORD PTR [eax]
+  00277	89 95 30 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$[ebp], edx
+
+; 115  : 
+; 116  : 	// Set up the transformation
+; 117  : 	int T[2][2];
+; 118  : 	T[0][0] = 1;
+
+  0027d	c7 85 60 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _T$[ebp], 1
+
+; 119  : 	T[0][1] = 0;
+
+  00287	c7 85 64 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _T$[ebp+4], 0
+
+; 120  : 	T[1][0] = 0;
+
+  00291	c7 85 68 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _T$[ebp+8], 0
+
+; 121  : 	T[1][1] = 1;
+
+  0029b	c7 85 6c ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _T$[ebp+12], 1
+
+; 122  : 
+; 123  : 	if ((B.y-A.y) < 0)
+
+  002a5	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  002ab	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  002b1	8b 41 0c	 mov	 eax, DWORD PTR [ecx+12]
+  002b4	2b 42 04	 sub	 eax, DWORD PTR [edx+4]
+  002b7	85 c0		 test	 eax, eax
+  002b9	7d 0a		 jge	 SHORT $L58533
+
+; 124  : 		T[1][1] = -1;
+
+  002bb	c7 85 6c ff ff
+	ff ff ff ff ff	 mov	 DWORD PTR _T$[ebp+12], -1
+$L58533:
+
+; 125  : 	if (((B.y-A.y)*T[1][1]) > (B.x-A.x)) {
+
+  002c5	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  002cb	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  002d1	8b 41 0c	 mov	 eax, DWORD PTR [ecx+12]
+  002d4	2b 42 04	 sub	 eax, DWORD PTR [edx+4]
+  002d7	0f af 85 6c ff
+	ff ff		 imul	 eax, DWORD PTR _T$[ebp+12]
+  002de	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  002e4	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  002ea	8b 49 08	 mov	 ecx, DWORD PTR [ecx+8]
+  002ed	2b 0a		 sub	 ecx, DWORD PTR [edx]
+  002ef	3b c1		 cmp	 eax, ecx
+  002f1	7e 48		 jle	 SHORT $L58534
+
+; 126  : 		int t00 = T[0][0];
+
+  002f3	8b 95 60 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp]
+  002f9	89 95 14 ff ff
+	ff		 mov	 DWORD PTR _t00$58535[ebp], edx
+
+; 127  : 		int t10 = T[1][0];
+
+  002ff	8b 85 68 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+8]
+  00305	89 85 18 ff ff
+	ff		 mov	 DWORD PTR _t10$58536[ebp], eax
+
+; 128  : 		T[0][0] = T[0][1];
+
+  0030b	8b 8d 64 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+4]
+  00311	89 8d 60 ff ff
+	ff		 mov	 DWORD PTR _T$[ebp], ecx
+
+; 129  : 		T[1][0] = T[1][1];
+
+  00317	8b 95 6c ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+12]
+  0031d	89 95 68 ff ff
+	ff		 mov	 DWORD PTR _T$[ebp+8], edx
+
+; 130  : 		T[0][1] = t00;
+
+  00323	8b 85 14 ff ff
+	ff		 mov	 eax, DWORD PTR _t00$58535[ebp]
+  00329	89 85 64 ff ff
+	ff		 mov	 DWORD PTR _T$[ebp+4], eax
+
+; 131  : 		T[1][1] = t10;
+
+  0032f	8b 8d 18 ff ff
+	ff		 mov	 ecx, DWORD PTR _t10$58536[ebp]
+  00335	89 8d 6c ff ff
+	ff		 mov	 DWORD PTR _T$[ebp+12], ecx
+$L58534:
+
+; 133  : 
+; 134  : 	// transform so that 0 <= Slope <= 1
+; 135  : 	SOL_Point start(T[0][0]*A.x + T[1][0]*A.y,T[0][1]*A.x + T[1][1]*A.y);
+
+  0033b	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00341	8b 85 64 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+4]
+  00347	0f af 02	 imul	 eax, DWORD PTR [edx]
+  0034a	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00350	8b 95 6c ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+12]
+  00356	0f af 51 04	 imul	 edx, DWORD PTR [ecx+4]
+  0035a	03 c2		 add	 eax, edx
+  0035c	50		 push	 eax
+  0035d	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00363	8b 8d 60 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp]
+  00369	0f af 08	 imul	 ecx, DWORD PTR [eax]
+  0036c	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00372	8b 85 68 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+8]
+  00378	0f af 42 04	 imul	 eax, DWORD PTR [edx+4]
+  0037c	03 c8		 add	 ecx, eax
+  0037e	51		 push	 ecx
+  0037f	8d 8d 44 ff ff
+	ff		 lea	 ecx, DWORD PTR _start$[ebp]
+  00385	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+
+; 136  : 	SOL_Point end(T[0][0]*B.x + T[1][0]*B.y,T[0][1]*B.x + T[1][1]*B.y);
+
+  0038a	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00390	8b 95 64 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+4]
+  00396	0f af 51 08	 imul	 edx, DWORD PTR [ecx+8]
+  0039a	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  003a0	8b 8d 6c ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+12]
+  003a6	0f af 48 0c	 imul	 ecx, DWORD PTR [eax+12]
+  003aa	03 d1		 add	 edx, ecx
+  003ac	52		 push	 edx
+  003ad	8b 95 10 ff ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  003b3	8b 85 60 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp]
+  003b9	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  003bd	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  003c3	8b 95 68 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+8]
+  003c9	0f af 51 0c	 imul	 edx, DWORD PTR [ecx+12]
+  003cd	03 c2		 add	 eax, edx
+  003cf	50		 push	 eax
+  003d0	8d 8d 70 ff ff
+	ff		 lea	 ecx, DWORD PTR _end$[ebp]
+  003d6	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+
+; 137  : 
+; 138  : 
+; 139  : 	// Slope is positive less equal to 1
+; 140  : 	int dx = end.x-start.x;
+
+  003db	8b 85 70 ff ff
+	ff		 mov	 eax, DWORD PTR _end$[ebp]
+  003e1	2b 85 44 ff ff
+	ff		 sub	 eax, DWORD PTR _start$[ebp]
+  003e7	89 85 3c ff ff
+	ff		 mov	 DWORD PTR _dx$[ebp], eax
+
+; 141  : 	int dy = end.y-start.y;
+
+  003ed	8b 8d 74 ff ff
+	ff		 mov	 ecx, DWORD PTR _end$[ebp+4]
+  003f3	2b 8d 48 ff ff
+	ff		 sub	 ecx, DWORD PTR _start$[ebp+4]
+  003f9	89 8d 34 ff ff
+	ff		 mov	 DWORD PTR _dy$[ebp], ecx
+
+; 142  : 
+; 143  : 	int d = 2*dy - dx;		// initial value of d
+
+  003ff	8b 95 34 ff ff
+	ff		 mov	 edx, DWORD PTR _dy$[ebp]
+  00405	d1 e2		 shl	 edx, 1
+  00407	2b 95 3c ff ff
+	ff		 sub	 edx, DWORD PTR _dx$[ebp]
+  0040d	89 95 78 ff ff
+	ff		 mov	 DWORD PTR _d$[ebp], edx
+
+; 144  : 	int incrE =2*dy;			// increment for move East
+
+  00413	8b 85 34 ff ff
+	ff		 mov	 eax, DWORD PTR _dy$[ebp]
+  00419	d1 e0		 shl	 eax, 1
+  0041b	89 85 40 ff ff
+	ff		 mov	 DWORD PTR _incrE$[ebp], eax
+
+; 145  : 	int incrNE = 2*(dy-dx);	// increment for move North East
+
+  00421	8b 8d 34 ff ff
+	ff		 mov	 ecx, DWORD PTR _dy$[ebp]
+  00427	2b 8d 3c ff ff
+	ff		 sub	 ecx, DWORD PTR _dx$[ebp]
+  0042d	d1 e1		 shl	 ecx, 1
+  0042f	89 8d 4c ff ff
+	ff		 mov	 DWORD PTR _incrNE$[ebp], ecx
+
+; 146  : 	int x = start.x;
+
+  00435	8b 95 44 ff ff
+	ff		 mov	 edx, DWORD PTR _start$[ebp]
+  0043b	89 95 58 ff ff
+	ff		 mov	 DWORD PTR _x$[ebp], edx
+
+; 147  : 	int y = start.y;
+
+  00441	8b 85 48 ff ff
+	ff		 mov	 eax, DWORD PTR _start$[ebp+4]
+  00447	89 85 54 ff ff
+	ff		 mov	 DWORD PTR _y$[ebp], eax
+
+; 148  : 
+; 149  : 	int xOffset = T[0][0] + T[1][0]*BMWidth;
+
+  0044d	8b 8d 68 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+8]
+  00453	0f af 4d 18	 imul	 ecx, DWORD PTR _BMWidth$[ebp]
+  00457	8b 95 60 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp]
+  0045d	03 d1		 add	 edx, ecx
+  0045f	89 95 38 ff ff
+	ff		 mov	 DWORD PTR _xOffset$[ebp], edx
+
+; 150  : 	int yOffset = T[0][1] + T[1][1]*BMWidth;
+
+  00465	8b 85 6c ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+12]
+  0046b	0f af 45 18	 imul	 eax, DWORD PTR _BMWidth$[ebp]
+  0046f	8b 8d 64 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+4]
+  00475	03 c8		 add	 ecx, eax
+  00477	89 8d 5c ff ff
+	ff		 mov	 DWORD PTR _yOffset$[ebp], ecx
+
+; 151  : 
+; 152  : 	// Write first pixel
+; 153  : 	if (P[0])
+
+  0047d	83 bd 7c ff ff
+	ff 00		 cmp	 DWORD PTR _P$[ebp], 0
+  00484	74 0b		 je	 SHORT $L58548
+
+; 154  : 		*pixelAddr = color;
+
+  00486	8b 95 30 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$[ebp]
+  0048c	8a 45 08	 mov	 al, BYTE PTR _color$[ebp]
+  0048f	88 02		 mov	 BYTE PTR [edx], al
+$L58548:
+
+; 155  : 	// Write the remainder of the line
+; 156  : 	pIndex = 1;
+
+  00491	c7 85 50 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 1
+$L58550:
+
+; 157  : 	while (x < end.x) {
+
+  0049b	8b 8d 58 ff ff
+	ff		 mov	 ecx, DWORD PTR _x$[ebp]
+  004a1	3b 8d 70 ff ff
+	ff		 cmp	 ecx, DWORD PTR _end$[ebp]
+  004a7	0f 8d c5 00 00
+	00		 jge	 $L58551
+
+; 158  : 		if (d <= 0) {
+
+  004ad	83 bd 78 ff ff
+	ff 00		 cmp	 DWORD PTR _d$[ebp], 0
+  004b4	7f 35		 jg	 SHORT $L58552
+
+; 159  : 			d += incrE;
+
+  004b6	8b 95 78 ff ff
+	ff		 mov	 edx, DWORD PTR _d$[ebp]
+  004bc	03 95 40 ff ff
+	ff		 add	 edx, DWORD PTR _incrE$[ebp]
+  004c2	89 95 78 ff ff
+	ff		 mov	 DWORD PTR _d$[ebp], edx
+
+; 160  : 			++x;
+
+  004c8	8b 85 58 ff ff
+	ff		 mov	 eax, DWORD PTR _x$[ebp]
+  004ce	83 c0 01	 add	 eax, 1
+  004d1	89 85 58 ff ff
+	ff		 mov	 DWORD PTR _x$[ebp], eax
+
+; 161  : 			pixelAddr += xOffset;
+
+  004d7	8b 8d 30 ff ff
+	ff		 mov	 ecx, DWORD PTR _pixelAddr$[ebp]
+  004dd	03 8d 38 ff ff
+	ff		 add	 ecx, DWORD PTR _xOffset$[ebp]
+  004e3	89 8d 30 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$[ebp], ecx
+
+; 163  : 		else {
+
+  004e9	eb 4a		 jmp	 SHORT $L58553
+$L58552:
+
+; 164  : 			d += incrNE;
+
+  004eb	8b 95 78 ff ff
+	ff		 mov	 edx, DWORD PTR _d$[ebp]
+  004f1	03 95 4c ff ff
+	ff		 add	 edx, DWORD PTR _incrNE$[ebp]
+  004f7	89 95 78 ff ff
+	ff		 mov	 DWORD PTR _d$[ebp], edx
+
+; 165  : 			++x;
+
+  004fd	8b 85 58 ff ff
+	ff		 mov	 eax, DWORD PTR _x$[ebp]
+  00503	83 c0 01	 add	 eax, 1
+  00506	89 85 58 ff ff
+	ff		 mov	 DWORD PTR _x$[ebp], eax
+
+; 166  : 			++y;
+
+  0050c	8b 8d 54 ff ff
+	ff		 mov	 ecx, DWORD PTR _y$[ebp]
+  00512	83 c1 01	 add	 ecx, 1
+  00515	89 8d 54 ff ff
+	ff		 mov	 DWORD PTR _y$[ebp], ecx
+
+; 167  : 			pixelAddr += yOffset + xOffset;
+
+  0051b	8b 95 5c ff ff
+	ff		 mov	 edx, DWORD PTR _yOffset$[ebp]
+  00521	03 95 38 ff ff
+	ff		 add	 edx, DWORD PTR _xOffset$[ebp]
+  00527	8b 85 30 ff ff
+	ff		 mov	 eax, DWORD PTR _pixelAddr$[ebp]
+  0052d	03 c2		 add	 eax, edx
+  0052f	89 85 30 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$[ebp], eax
+$L58553:
+
+; 169  : 		// Output new point
+; 170  : 		if (P[(pIndex++ % 32)])
+
+  00535	8b 8d 50 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  0053b	81 e1 1f 00 00
+	80		 and	 ecx, -2147483617	; 8000001fH
+  00541	79 05		 jns	 SHORT $L58764
+  00543	49		 dec	 ecx
+  00544	83 c9 e0	 or	 ecx, -32		; ffffffe0H
+  00547	41		 inc	 ecx
+$L58764:
+  00548	8b 94 8d 7c ff
+	ff ff		 mov	 edx, DWORD PTR _P$[ebp+ecx*4]
+  0054f	8b 85 50 ff ff
+	ff		 mov	 eax, DWORD PTR _pIndex$[ebp]
+  00555	83 c0 01	 add	 eax, 1
+  00558	89 85 50 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], eax
+  0055e	85 d2		 test	 edx, edx
+  00560	74 0b		 je	 SHORT $L58554
+
+; 171  : 			*pixelAddr = color;
+
+  00562	8b 8d 30 ff ff
+	ff		 mov	 ecx, DWORD PTR _pixelAddr$[ebp]
+  00568	8a 55 08	 mov	 dl, BYTE PTR _color$[ebp]
+  0056b	88 11		 mov	 BYTE PTR [ecx], dl
+$L58554:
+
+; 172  : 	}
+
+  0056d	e9 29 ff ff ff	 jmp	 $L58550
+$L58551:
+$L58487:
+
+; 173  : }
+
+  00572	8b e5		 mov	 esp, ebp
+  00574	5d		 pop	 ebp
+  00575	c2 14 00	 ret	 20			; 00000014H
+?DrawThin@SOL_Line@@QAEXEHHVMemID@@H@Z ENDP		; SOL_Line::DrawThin
+_TEXT	ENDS
+EXTRN	__descPtrTable:BYTE
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT
+_theID$ = 8
+_this$ = -4
+?GetAddr@MemoryMgr@@QAEPAXG@Z PROC NEAR			; MemoryMgr::GetAddr, COMDAT
+
+; 462  : 	inline void* MemoryMgr::GetAddr(SOL_Handle theID) {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 463  : //		CheckValid(theID);
+; 464  : 		return _descPtrTable[(unsigned int)((unsigned short)theID)];
+
+  00007	8b 45 08	 mov	 eax, DWORD PTR _theID$[ebp]
+  0000a	25 ff ff 00 00	 and	 eax, 65535		; 0000ffffH
+  0000f	8b 04 85 00 00
+	00 00		 mov	 eax, DWORD PTR __descPtrTable[eax*4]
+
+; 465  : 	}
+
+  00016	8b e5		 mov	 esp, ebp
+  00018	5d		 pop	 ebp
+  00019	c2 04 00	 ret	 4
+?GetAddr@MemoryMgr@@QAEPAXG@Z ENDP			; MemoryMgr::GetAddr
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT
+_this$ = -4
+??BMemID@@QBEGXZ PROC NEAR				; MemID::operator unsigned short, COMDAT
+
+; 93   : 	{
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 94   : 		return handle;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	66 8b 00	 mov	 ax, WORD PTR [eax]
+
+; 95   : 	}
+
+  0000d	8b e5		 mov	 esp, ebp
+  0000f	5d		 pop	 ebp
+  00010	c3		 ret	 0
+??BMemID@@QBEGXZ ENDP					; MemID::operator unsigned short
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT
+_x$ = 8
+_y$ = 12
+_this$ = -4
+??0SOL_Point@@QAE@HH@Z PROC NEAR			; SOL_Point::SOL_Point, COMDAT
+
+; 21   : 	SOL_Point(Coord x, Coord y) : x(x), y(y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _x$[ebp]
+  0000d	89 08		 mov	 DWORD PTR [eax], ecx
+  0000f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00012	8b 45 0c	 mov	 eax, DWORD PTR _y$[ebp]
+  00015	89 42 04	 mov	 DWORD PTR [edx+4], eax
+  00018	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001b	8b e5		 mov	 esp, ebp
+  0001d	5d		 pop	 ebp
+  0001e	c2 08 00	 ret	 8
+??0SOL_Point@@QAE@HH@Z ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+PUBLIC	?DrawThick@SOL_Line@@QAEXEHHHVMemID@@H@Z	; SOL_Line::DrawThick
+_TEXT	SEGMENT
+_color$ = 8
+_thickness$ = 12
+_style$ = 16
+_pattern$ = 20
+_BM$ = 24
+_BMWidth$ = 28
+_this$ = -292
+_P$ = -136
+_pIndex$ = -184
+_BMAddr$ = -8
+_yStart$58581 = -220
+_yEnd$58587 = -224
+_pixelAddr$58593 = -228
+_writeAddr$58598 = -236
+_pixels$58599 = -232
+_pixelAddr$58604 = -248
+_thickOffset$58605 = -244
+_xStart$58606 = -240
+_writeAddr$58611 = -256
+_pixels$58612 = -252
+_thickInX$ = -4
+_thickOffset$ = -176
+_pixelAddr$ = -216
+_T$ = -164
+_t00$58624 = -264
+_t10$58625 = -260
+_start$ = -196
+_end$ = -148
+_dx$ = -204
+_dy$ = -212
+_d$ = -140
+_incrE$ = -200
+_incrNE$ = -188
+_x$ = -172
+_y$ = -180
+_xOffset$ = -208
+_yOffset$ = -168
+_pixels$58638 = -268
+_writeAddr$58640 = -272
+_writeAddr$58645 = -276
+_pixels$58655 = -280
+_writeAddr$58657 = -284
+_writeAddr$58662 = -288
+?DrawThick@SOL_Line@@QAEXEHHHVMemID@@H@Z PROC NEAR	; SOL_Line::DrawThick
+
+; 177  : {
+
+  00578	55		 push	 ebp
+  00579	8b ec		 mov	 ebp, esp
+  0057b	81 ec 30 01 00
+	00		 sub	 esp, 304		; 00000130H
+  00581	89 8d dc fe ff
+	ff		 mov	 DWORD PTR _this$[ebp], ecx
+
+; 178  : 	// Mid Point algorithm used
+; 179  : 	// See:
+; 180  : 	//		Foley,van Dam,Feiner,Hughes 
+; 181  : 	//		"Computer Graphics principles and practice" Second Edition
+; 182  : 	//
+; 183  : 
+; 184  : 	// To insure the slope is between 0 and 1, one of the following
+; 185  : 	//	transformations will be used
+; 186  : 	/*
+; 187  : 
+; 188  : 															 
+; 189  : 					  *				 |					*
+; 190  : 					   *				 |				  *
+; 191  : 					    *	  x = y	 |	x = y		 *
+; 192  : 					  	  *  y = -x	 |	y = x		*
+; 193  : 					  	   *			 |	        *
+; 194  : 					  	    *		    |		    *
+; 195  : 					        *		 |       *
+; 196  : 					     	   *		 |      *
+; 197  : 					  		    *	    |	    *
+; 198  : 					x = -x  	  *	 |    *	 x = x
+; 199  : 					y = y	  		*	 |	  *	 y = y	
+; 200  : 					  			    *  |  *
+; 201  : 					  				  * | *
+; 202  : 					  				   *|*
+; 203  : 	           ------------------------------------
+; 204  : 										*|*
+; 205  : 									  * |	*
+; 206  : 					x = -x		 *	 |	 *		 x = x
+; 207  : 					y = -y		*	 |	  *	 y = -y	
+; 208  : 								  *	 |		*
+; 209  : 								 *		 |		 *
+; 210  : 								*		 |		  *
+; 211  : 							  *		 |			*
+; 212  : 							 *			 |			 *
+; 213  : 							*			 |			  *
+; 214  : 						  *			 |				*
+; 215  : 						 *	  x = -y	 |	x = -y	 *
+; 216  : 						*	  y = -x	 |	y = x		  *
+; 217  : 					  *				 |					*
+; 218  : 	*/
+; 219  : 	// All lines are draw from left to right so four
+; 220  : 	// of the above transformations will not occur
+; 221  : 
+; 222  : 	// The line will be 2*thickness+1 pixels thick
+; 223  : 
+; 224  : 	// Set pattern	if not given
+; 225  : 	switch (style) {
+
+  00587	8b 45 10	 mov	 eax, DWORD PTR _style$[ebp]
+  0058a	89 85 d8 fe ff
+	ff		 mov	 DWORD PTR -296+[ebp], eax
+  00590	83 bd d8 fe ff
+	ff 00		 cmp	 DWORD PTR -296+[ebp], 0
+  00597	74 0b		 je	 SHORT $L58568
+  00599	83 bd d8 fe ff
+	ff 01		 cmp	 DWORD PTR -296+[ebp], 1
+  005a0	74 0b		 je	 SHORT $L58569
+  005a2	eb 10		 jmp	 SHORT $L58565
+$L58568:
+
+; 226  : 		case tSolid:
+; 227  : 			pattern = -1;
+
+  005a4	c7 45 14 ff ff
+	ff ff		 mov	 DWORD PTR _pattern$[ebp], -1
+
+; 228  : 			break;
+
+  005ab	eb 07		 jmp	 SHORT $L58565
+$L58569:
+
+; 229  : 		case tDashed:
+; 230  : 			pattern = 0xff00ff00;
+
+  005ad	c7 45 14 00 ff
+	00 ff		 mov	 DWORD PTR _pattern$[ebp], -16711936 ; ff00ff00H
+$L58565:
+
+; 235  : 	int P[32];
+; 236  : 	int pIndex = 0;
+
+  005b4	c7 85 48 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 0
+
+; 237  : 	for (;pIndex<32;++pIndex) {
+
+  005be	eb 0f		 jmp	 SHORT $L58573
+$L58574:
+  005c0	8b 8d 48 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  005c6	83 c1 01	 add	 ecx, 1
+  005c9	89 8d 48 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], ecx
+$L58573:
+  005cf	83 bd 48 ff ff
+	ff 20		 cmp	 DWORD PTR _pIndex$[ebp], 32 ; 00000020H
+  005d6	7d 34		 jge	 SHORT $L58575
+
+; 238  : 		if (pattern < 0 )
+
+  005d8	83 7d 14 00	 cmp	 DWORD PTR _pattern$[ebp], 0
+  005dc	7d 13		 jge	 SHORT $L58576
+
+; 239  : 			P[pIndex] = 1;
+
+  005de	8b 95 48 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  005e4	c7 84 95 78 ff
+	ff ff 01 00 00
+	00		 mov	 DWORD PTR _P$[ebp+edx*4], 1
+
+; 240  : 		else
+
+  005ef	eb 11		 jmp	 SHORT $L58577
+$L58576:
+
+; 241  : 			P[pIndex] = 0;
+
+  005f1	8b 85 48 ff ff
+	ff		 mov	 eax, DWORD PTR _pIndex$[ebp]
+  005f7	c7 84 85 78 ff
+	ff ff 00 00 00
+	00		 mov	 DWORD PTR _P$[ebp+eax*4], 0
+$L58577:
+
+; 242  : 		pattern = pattern << 1;
+
+  00602	8b 4d 14	 mov	 ecx, DWORD PTR _pattern$[ebp]
+  00605	d1 e1		 shl	 ecx, 1
+  00607	89 4d 14	 mov	 DWORD PTR _pattern$[ebp], ecx
+
+; 243  : 	}
+
+  0060a	eb b4		 jmp	 SHORT $L58574
+$L58575:
+
+; 244  : 
+; 245  : 	// Calculate the first bitmap pixel address
+; 246  : 	uchar* BMAddr = ((uchar*) memMgr->GetAddr(BM)) + CELHEADERSIZE;
+
+  0060c	8d 4d 18	 lea	 ecx, DWORD PTR _BM$[ebp]
+  0060f	e8 00 00 00 00	 call	 ??BMemID@@QBEGXZ	; MemID::operator unsigned short
+  00614	50		 push	 eax
+  00615	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _memMgr
+  0061b	e8 00 00 00 00	 call	 ?GetAddr@MemoryMgr@@QAEPAXG@Z ; MemoryMgr::GetAddr
+  00620	83 c0 2e	 add	 eax, 46			; 0000002eH
+  00623	89 45 f8	 mov	 DWORD PTR _BMAddr$[ebp], eax
+
+; 247  : 
+; 248  : 	// Optimize for horizontal and vertical lines
+; 249  : 	if ((A.x-B.x) == 0) {
+
+  00626	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0062c	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00632	8b 0a		 mov	 ecx, DWORD PTR [edx]
+  00634	2b 48 08	 sub	 ecx, DWORD PTR [eax+8]
+  00637	85 c9		 test	 ecx, ecx
+  00639	0f 85 24 01 00
+	00		 jne	 $L58580
+
+; 250  : 		// Vertical line
+; 251  : 		pIndex = 0;
+
+  0063f	c7 85 48 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 0
+
+; 252  : 		int yStart = Min(A.y,B.y);
+
+  00649	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0064f	8b 42 0c	 mov	 eax, DWORD PTR [edx+12]
+  00652	50		 push	 eax
+  00653	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00659	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0065c	52		 push	 edx
+  0065d	e8 00 00 00 00	 call	 ?Min@@YAHHH@Z		; Min
+  00662	83 c4 08	 add	 esp, 8
+  00665	89 85 24 ff ff
+	ff		 mov	 DWORD PTR _yStart$58581[ebp], eax
+
+; 253  : 		int yEnd = Max(A.y,B.y);
+
+  0066b	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00671	8b 48 0c	 mov	 ecx, DWORD PTR [eax+12]
+  00674	51		 push	 ecx
+  00675	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0067b	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  0067e	50		 push	 eax
+  0067f	e8 00 00 00 00	 call	 ?Max@@YAHHH@Z		; Max
+  00684	83 c4 08	 add	 esp, 8
+  00687	89 85 20 ff ff
+	ff		 mov	 DWORD PTR _yEnd$58587[ebp], eax
+
+; 254  : 		// Calculate the first line pixel address
+; 255  : 		uchar* pixelAddr = BMAddr + yStart*BMWidth + A.x;
+
+  0068d	8b 8d 24 ff ff
+	ff		 mov	 ecx, DWORD PTR _yStart$58581[ebp]
+  00693	0f af 4d 1c	 imul	 ecx, DWORD PTR _BMWidth$[ebp]
+  00697	8b 55 f8	 mov	 edx, DWORD PTR _BMAddr$[ebp]
+  0069a	03 d1		 add	 edx, ecx
+  0069c	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  006a2	03 10		 add	 edx, DWORD PTR [eax]
+  006a4	89 95 1c ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58593[ebp], edx
+$L58595:
+
+; 256  : 		while (yStart <= yEnd) {
+
+  006aa	8b 8d 24 ff ff
+	ff		 mov	 ecx, DWORD PTR _yStart$58581[ebp]
+  006b0	3b 8d 20 ff ff
+	ff		 cmp	 ecx, DWORD PTR _yEnd$58587[ebp]
+  006b6	0f 8f a2 00 00
+	00		 jg	 $L58596
+
+; 257  : 			if (P[(pIndex++ % 32)]) {
+
+  006bc	8b 95 48 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  006c2	81 e2 1f 00 00
+	80		 and	 edx, -2147483617	; 8000001fH
+  006c8	79 05		 jns	 SHORT $L58773
+  006ca	4a		 dec	 edx
+  006cb	83 ca e0	 or	 edx, -32		; ffffffe0H
+  006ce	42		 inc	 edx
+$L58773:
+  006cf	8b 84 95 78 ff
+	ff ff		 mov	 eax, DWORD PTR _P$[ebp+edx*4]
+  006d6	8b 8d 48 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  006dc	83 c1 01	 add	 ecx, 1
+  006df	89 8d 48 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], ecx
+  006e5	85 c0		 test	 eax, eax
+  006e7	74 52		 je	 SHORT $L58602
+
+; 258  : 				// horizontally thick
+; 259  : 				uchar* writeAddr = pixelAddr - thickness;
+
+  006e9	8b 95 1c ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$58593[ebp]
+  006ef	2b 55 0c	 sub	 edx, DWORD PTR _thickness$[ebp]
+  006f2	89 95 14 ff ff
+	ff		 mov	 DWORD PTR _writeAddr$58598[ebp], edx
+
+; 260  : 				int pixels = 2*thickness + 1;
+
+  006f8	8b 45 0c	 mov	 eax, DWORD PTR _thickness$[ebp]
+  006fb	8d 4c 00 01	 lea	 ecx, DWORD PTR [eax+eax+1]
+  006ff	89 8d 18 ff ff
+	ff		 mov	 DWORD PTR _pixels$58599[ebp], ecx
+
+; 261  : 				for (;pixels>0;--pixels) {
+
+  00705	eb 0f		 jmp	 SHORT $L58600
+$L58601:
+  00707	8b 95 18 ff ff
+	ff		 mov	 edx, DWORD PTR _pixels$58599[ebp]
+  0070d	83 ea 01	 sub	 edx, 1
+  00710	89 95 18 ff ff
+	ff		 mov	 DWORD PTR _pixels$58599[ebp], edx
+$L58600:
+  00716	83 bd 18 ff ff
+	ff 00		 cmp	 DWORD PTR _pixels$58599[ebp], 0
+  0071d	7e 1c		 jle	 SHORT $L58602
+
+; 262  : 					*(writeAddr++) = color;
+
+  0071f	8b 85 14 ff ff
+	ff		 mov	 eax, DWORD PTR _writeAddr$58598[ebp]
+  00725	8a 4d 08	 mov	 cl, BYTE PTR _color$[ebp]
+  00728	88 08		 mov	 BYTE PTR [eax], cl
+  0072a	8b 95 14 ff ff
+	ff		 mov	 edx, DWORD PTR _writeAddr$58598[ebp]
+  00730	83 c2 01	 add	 edx, 1
+  00733	89 95 14 ff ff
+	ff		 mov	 DWORD PTR _writeAddr$58598[ebp], edx
+
+; 263  : 				}	
+
+  00739	eb cc		 jmp	 SHORT $L58601
+$L58602:
+
+; 265  : 			++yStart;
+
+  0073b	8b 85 24 ff ff
+	ff		 mov	 eax, DWORD PTR _yStart$58581[ebp]
+  00741	83 c0 01	 add	 eax, 1
+  00744	89 85 24 ff ff
+	ff		 mov	 DWORD PTR _yStart$58581[ebp], eax
+
+; 266  : 			pixelAddr += BMWidth;
+
+  0074a	8b 8d 1c ff ff
+	ff		 mov	 ecx, DWORD PTR _pixelAddr$58593[ebp]
+  00750	03 4d 1c	 add	 ecx, DWORD PTR _BMWidth$[ebp]
+  00753	89 8d 1c ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58593[ebp], ecx
+
+; 267  : 		}
+
+  00759	e9 4c ff ff ff	 jmp	 $L58595
+$L58596:
+
+; 268  : 		return;
+
+  0075e	e9 3d 06 00 00	 jmp	 $L58563
+$L58580:
+
+; 270  : 	if ((A.y-B.y) == 0) {
+
+  00763	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00769	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  0076f	8b 4a 04	 mov	 ecx, DWORD PTR [edx+4]
+  00772	2b 48 0c	 sub	 ecx, DWORD PTR [eax+12]
+  00775	85 c9		 test	 ecx, ecx
+  00777	0f 85 04 01 00
+	00		 jne	 $L58603
+
+; 271  : 		// Horizontal line
+; 272  : 		pIndex = 0;
+
+  0077d	c7 85 48 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 0
+
+; 273  : 		// Calculate the first line pixel address
+; 274  : 		uchar* pixelAddr = BMAddr + A.y*BMWidth + A.x;
+
+  00787	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0078d	8b 42 04	 mov	 eax, DWORD PTR [edx+4]
+  00790	0f af 45 1c	 imul	 eax, DWORD PTR _BMWidth$[ebp]
+  00794	8b 4d f8	 mov	 ecx, DWORD PTR _BMAddr$[ebp]
+  00797	03 c8		 add	 ecx, eax
+  00799	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0079f	03 0a		 add	 ecx, DWORD PTR [edx]
+  007a1	89 8d 08 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58604[ebp], ecx
+
+; 275  : 		int thickOffset = thickness*BMWidth;
+
+  007a7	8b 45 0c	 mov	 eax, DWORD PTR _thickness$[ebp]
+  007aa	0f af 45 1c	 imul	 eax, DWORD PTR _BMWidth$[ebp]
+  007ae	89 85 0c ff ff
+	ff		 mov	 DWORD PTR _thickOffset$58605[ebp], eax
+
+; 276  : 		int xStart = A.x;
+
+  007b4	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  007ba	8b 11		 mov	 edx, DWORD PTR [ecx]
+  007bc	89 95 10 ff ff
+	ff		 mov	 DWORD PTR _xStart$58606[ebp], edx
+$L58608:
+
+; 277  : 		while (xStart <= B.x) {
+
+  007c2	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  007c8	8b 8d 10 ff ff
+	ff		 mov	 ecx, DWORD PTR _xStart$58606[ebp]
+  007ce	3b 48 08	 cmp	 ecx, DWORD PTR [eax+8]
+  007d1	0f 8f a5 00 00
+	00		 jg	 $L58609
+
+; 278  : 			if (P[(pIndex++ % 32)]) {
+
+  007d7	8b 95 48 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  007dd	81 e2 1f 00 00
+	80		 and	 edx, -2147483617	; 8000001fH
+  007e3	79 05		 jns	 SHORT $L58774
+  007e5	4a		 dec	 edx
+  007e6	83 ca e0	 or	 edx, -32		; ffffffe0H
+  007e9	42		 inc	 edx
+$L58774:
+  007ea	8b 84 95 78 ff
+	ff ff		 mov	 eax, DWORD PTR _P$[ebp+edx*4]
+  007f1	8b 8d 48 ff ff
+	ff		 mov	 ecx, DWORD PTR _pIndex$[ebp]
+  007f7	83 c1 01	 add	 ecx, 1
+  007fa	89 8d 48 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], ecx
+  00800	85 c0		 test	 eax, eax
+  00802	74 55		 je	 SHORT $L58615
+
+; 279  : 				// vertically thick
+; 280  : 				uchar* writeAddr = pixelAddr - thickOffset;
+
+  00804	8b 95 08 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$58604[ebp]
+  0080a	2b 95 0c ff ff
+	ff		 sub	 edx, DWORD PTR _thickOffset$58605[ebp]
+  00810	89 95 00 ff ff
+	ff		 mov	 DWORD PTR _writeAddr$58611[ebp], edx
+
+; 281  : 				int pixels = 2*thickness + 1;
+
+  00816	8b 45 0c	 mov	 eax, DWORD PTR _thickness$[ebp]
+  00819	8d 4c 00 01	 lea	 ecx, DWORD PTR [eax+eax+1]
+  0081d	89 8d 04 ff ff
+	ff		 mov	 DWORD PTR _pixels$58612[ebp], ecx
+
+; 282  : 				for (;pixels>0;--pixels) {
+
+  00823	eb 0f		 jmp	 SHORT $L58613
+$L58614:
+  00825	8b 95 04 ff ff
+	ff		 mov	 edx, DWORD PTR _pixels$58612[ebp]
+  0082b	83 ea 01	 sub	 edx, 1
+  0082e	89 95 04 ff ff
+	ff		 mov	 DWORD PTR _pixels$58612[ebp], edx
+$L58613:
+  00834	83 bd 04 ff ff
+	ff 00		 cmp	 DWORD PTR _pixels$58612[ebp], 0
+  0083b	7e 1c		 jle	 SHORT $L58615
+
+; 283  : 					*(writeAddr) = color;
+
+  0083d	8b 85 00 ff ff
+	ff		 mov	 eax, DWORD PTR _writeAddr$58611[ebp]
+  00843	8a 4d 08	 mov	 cl, BYTE PTR _color$[ebp]
+  00846	88 08		 mov	 BYTE PTR [eax], cl
+
+; 284  : 					writeAddr += BMWidth;
+
+  00848	8b 95 00 ff ff
+	ff		 mov	 edx, DWORD PTR _writeAddr$58611[ebp]
+  0084e	03 55 1c	 add	 edx, DWORD PTR _BMWidth$[ebp]
+  00851	89 95 00 ff ff
+	ff		 mov	 DWORD PTR _writeAddr$58611[ebp], edx
+
+; 285  : 				}	
+
+  00857	eb cc		 jmp	 SHORT $L58614
+$L58615:
+
+; 287  : 			++xStart;
+
+  00859	8b 85 10 ff ff
+	ff		 mov	 eax, DWORD PTR _xStart$58606[ebp]
+  0085f	83 c0 01	 add	 eax, 1
+  00862	89 85 10 ff ff
+	ff		 mov	 DWORD PTR _xStart$58606[ebp], eax
+
+; 288  : 			++pixelAddr;
+
+  00868	8b 8d 08 ff ff
+	ff		 mov	 ecx, DWORD PTR _pixelAddr$58604[ebp]
+  0086e	83 c1 01	 add	 ecx, 1
+  00871	89 8d 08 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$58604[ebp], ecx
+
+; 289  : 		}
+
+  00877	e9 46 ff ff ff	 jmp	 $L58608
+$L58609:
+
+; 290  : 		return;
+
+  0087c	e9 1f 05 00 00	 jmp	 $L58563
+$L58603:
+
+; 292  : 
+; 293  : 	// Aspect ratio
+; 294  : 	#define AspectRatio 3/2
+; 295  : 	
+; 296  : 	Bool thickInX = True;
+
+  00881	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _thickInX$[ebp], 1
+
+; 297  : 	int thickOffset = thickness;
+
+  00888	8b 55 0c	 mov	 edx, DWORD PTR _thickness$[ebp]
+  0088b	89 95 50 ff ff
+	ff		 mov	 DWORD PTR _thickOffset$[ebp], edx
+
+; 298  : 
+; 299  : 	if (Abs(B.y-A.y)*AspectRatio/Abs(B.x-A.x)	< 1) {
+
+  00891	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00897	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  0089d	8b 50 0c	 mov	 edx, DWORD PTR [eax+12]
+  008a0	2b 51 04	 sub	 edx, DWORD PTR [ecx+4]
+  008a3	85 d2		 test	 edx, edx
+  008a5	7d 1c		 jge	 SHORT $L58769
+  008a7	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  008ad	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  008b3	8b 50 0c	 mov	 edx, DWORD PTR [eax+12]
+  008b6	2b 51 04	 sub	 edx, DWORD PTR [ecx+4]
+  008b9	f7 da		 neg	 edx
+  008bb	89 95 d4 fe ff
+	ff		 mov	 DWORD PTR -300+[ebp], edx
+  008c1	eb 18		 jmp	 SHORT $L58770
+$L58769:
+  008c3	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  008c9	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  008cf	8b 50 0c	 mov	 edx, DWORD PTR [eax+12]
+  008d2	2b 51 04	 sub	 edx, DWORD PTR [ecx+4]
+  008d5	89 95 d4 fe ff
+	ff		 mov	 DWORD PTR -300+[ebp], edx
+$L58770:
+  008db	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  008e1	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  008e7	8b 50 08	 mov	 edx, DWORD PTR [eax+8]
+  008ea	2b 11		 sub	 edx, DWORD PTR [ecx]
+  008ec	85 d2		 test	 edx, edx
+  008ee	7d 1b		 jge	 SHORT $L58771
+  008f0	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  008f6	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  008fc	8b 50 08	 mov	 edx, DWORD PTR [eax+8]
+  008ff	2b 11		 sub	 edx, DWORD PTR [ecx]
+  00901	f7 da		 neg	 edx
+  00903	89 95 d0 fe ff
+	ff		 mov	 DWORD PTR -304+[ebp], edx
+  00909	eb 17		 jmp	 SHORT $L58772
+$L58771:
+  0090b	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00911	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00917	8b 50 08	 mov	 edx, DWORD PTR [eax+8]
+  0091a	2b 11		 sub	 edx, DWORD PTR [ecx]
+  0091c	89 95 d0 fe ff
+	ff		 mov	 DWORD PTR -304+[ebp], edx
+$L58772:
+  00922	8b 85 d4 fe ff
+	ff		 mov	 eax, DWORD PTR -300+[ebp]
+  00928	6b c0 03	 imul	 eax, 3
+  0092b	99		 cdq
+  0092c	2b c2		 sub	 eax, edx
+  0092e	d1 f8		 sar	 eax, 1
+  00930	99		 cdq
+  00931	f7 bd d0 fe ff
+	ff		 idiv	 DWORD PTR -304+[ebp]
+  00937	83 f8 01	 cmp	 eax, 1
+  0093a	7d 14		 jge	 SHORT $L58619
+
+; 300  : 		thickOffset = thickness*BMWidth;
+
+  0093c	8b 45 0c	 mov	 eax, DWORD PTR _thickness$[ebp]
+  0093f	0f af 45 1c	 imul	 eax, DWORD PTR _BMWidth$[ebp]
+  00943	89 85 50 ff ff
+	ff		 mov	 DWORD PTR _thickOffset$[ebp], eax
+
+; 301  : 		thickInX = False;
+
+  00949	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _thickInX$[ebp], 0
+$L58619:
+
+; 303  : 
+; 304  : 	// Calculate the first line pixel address
+; 305  : 	uchar* pixelAddr = BMAddr + A.y*BMWidth + A.x;
+
+  00950	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00956	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00959	0f af 55 1c	 imul	 edx, DWORD PTR _BMWidth$[ebp]
+  0095d	8b 45 f8	 mov	 eax, DWORD PTR _BMAddr$[ebp]
+  00960	03 c2		 add	 eax, edx
+  00962	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00968	03 01		 add	 eax, DWORD PTR [ecx]
+  0096a	89 85 28 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$[ebp], eax
+
+; 306  : 
+; 307  : 	// Set up the transformation
+; 308  : 	int T[2][2];
+; 309  : 	T[0][0] = 1;
+
+  00970	c7 85 5c ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _T$[ebp], 1
+
+; 310  : 	T[0][1] = 0;
+
+  0097a	c7 85 60 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _T$[ebp+4], 0
+
+; 311  : 	T[1][0] = 0;
+
+  00984	c7 85 64 ff ff
+	ff 00 00 00 00	 mov	 DWORD PTR _T$[ebp+8], 0
+
+; 312  : 	T[1][1] = 1;
+
+  0098e	c7 85 68 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _T$[ebp+12], 1
+
+; 313  : 
+; 314  : 	if ((B.y-A.y) < 0)
+
+  00998	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  0099e	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  009a4	8b 4a 0c	 mov	 ecx, DWORD PTR [edx+12]
+  009a7	2b 48 04	 sub	 ecx, DWORD PTR [eax+4]
+  009aa	85 c9		 test	 ecx, ecx
+  009ac	7d 0a		 jge	 SHORT $L58622
+
+; 315  : 		T[1][1] = -1;
+
+  009ae	c7 85 68 ff ff
+	ff ff ff ff ff	 mov	 DWORD PTR _T$[ebp+12], -1
+$L58622:
+
+; 316  : 	if (((B.y-A.y)*T[1][1]) > (B.x-A.x)) {
+
+  009b8	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  009be	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  009c4	8b 4a 0c	 mov	 ecx, DWORD PTR [edx+12]
+  009c7	2b 48 04	 sub	 ecx, DWORD PTR [eax+4]
+  009ca	0f af 8d 68 ff
+	ff ff		 imul	 ecx, DWORD PTR _T$[ebp+12]
+  009d1	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  009d7	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  009dd	8b 52 08	 mov	 edx, DWORD PTR [edx+8]
+  009e0	2b 10		 sub	 edx, DWORD PTR [eax]
+  009e2	3b ca		 cmp	 ecx, edx
+  009e4	7e 48		 jle	 SHORT $L58623
+
+; 317  : 		// thickness is horizontal
+; 318  : 		//thickness = -thickness; //I don't think so...(gtp)
+; 319  : 		int t00 = T[0][0];
+
+  009e6	8b 85 5c ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp]
+  009ec	89 85 f8 fe ff
+	ff		 mov	 DWORD PTR _t00$58624[ebp], eax
+
+; 320  : 		int t10 = T[1][0];
+
+  009f2	8b 8d 64 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+8]
+  009f8	89 8d fc fe ff
+	ff		 mov	 DWORD PTR _t10$58625[ebp], ecx
+
+; 321  : 		T[0][0] = T[0][1];
+
+  009fe	8b 95 60 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+4]
+  00a04	89 95 5c ff ff
+	ff		 mov	 DWORD PTR _T$[ebp], edx
+
+; 322  : 		T[1][0] = T[1][1];
+
+  00a0a	8b 85 68 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+12]
+  00a10	89 85 64 ff ff
+	ff		 mov	 DWORD PTR _T$[ebp+8], eax
+
+; 323  : 		T[0][1] = t00;
+
+  00a16	8b 8d f8 fe ff
+	ff		 mov	 ecx, DWORD PTR _t00$58624[ebp]
+  00a1c	89 8d 60 ff ff
+	ff		 mov	 DWORD PTR _T$[ebp+4], ecx
+
+; 324  : 		T[1][1] = t10;
+
+  00a22	8b 95 fc fe ff
+	ff		 mov	 edx, DWORD PTR _t10$58625[ebp]
+  00a28	89 95 68 ff ff
+	ff		 mov	 DWORD PTR _T$[ebp+12], edx
+$L58623:
+
+; 326  : 
+; 327  : 	// transform so that 0 <= Slope <= 1
+; 328  : 	SOL_Point start(T[0][0]*A.x + T[1][0]*A.y,T[0][1]*A.x + T[1][1]*A.y);
+
+  00a2e	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00a34	8b 8d 60 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+4]
+  00a3a	0f af 08	 imul	 ecx, DWORD PTR [eax]
+  00a3d	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00a43	8b 85 68 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+12]
+  00a49	0f af 42 04	 imul	 eax, DWORD PTR [edx+4]
+  00a4d	03 c8		 add	 ecx, eax
+  00a4f	51		 push	 ecx
+  00a50	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a56	8b 95 5c ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp]
+  00a5c	0f af 11	 imul	 edx, DWORD PTR [ecx]
+  00a5f	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00a65	8b 8d 64 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+8]
+  00a6b	0f af 48 04	 imul	 ecx, DWORD PTR [eax+4]
+  00a6f	03 d1		 add	 edx, ecx
+  00a71	52		 push	 edx
+  00a72	8d 8d 3c ff ff
+	ff		 lea	 ecx, DWORD PTR _start$[ebp]
+  00a78	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+
+; 329  : 	SOL_Point end(T[0][0]*B.x + T[1][0]*B.y,T[0][1]*B.x + T[1][1]*B.y);
+
+  00a7d	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00a83	8b 85 60 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+4]
+  00a89	0f af 42 08	 imul	 eax, DWORD PTR [edx+8]
+  00a8d	8b 8d dc fe ff
+	ff		 mov	 ecx, DWORD PTR _this$[ebp]
+  00a93	8b 95 68 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+12]
+  00a99	0f af 51 0c	 imul	 edx, DWORD PTR [ecx+12]
+  00a9d	03 c2		 add	 eax, edx
+  00a9f	50		 push	 eax
+  00aa0	8b 85 dc fe ff
+	ff		 mov	 eax, DWORD PTR _this$[ebp]
+  00aa6	8b 8d 5c ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp]
+  00aac	0f af 48 08	 imul	 ecx, DWORD PTR [eax+8]
+  00ab0	8b 95 dc fe ff
+	ff		 mov	 edx, DWORD PTR _this$[ebp]
+  00ab6	8b 85 64 ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp+8]
+  00abc	0f af 42 0c	 imul	 eax, DWORD PTR [edx+12]
+  00ac0	03 c8		 add	 ecx, eax
+  00ac2	51		 push	 ecx
+  00ac3	8d 8d 6c ff ff
+	ff		 lea	 ecx, DWORD PTR _end$[ebp]
+  00ac9	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+
+; 330  : 
+; 331  : 
+; 332  : 	// Slope is positive less equal to 1
+; 333  : 	int dx = end.x-start.x;
+
+  00ace	8b 8d 6c ff ff
+	ff		 mov	 ecx, DWORD PTR _end$[ebp]
+  00ad4	2b 8d 3c ff ff
+	ff		 sub	 ecx, DWORD PTR _start$[ebp]
+  00ada	89 8d 34 ff ff
+	ff		 mov	 DWORD PTR _dx$[ebp], ecx
+
+; 334  : 	int dy = end.y-start.y;
+
+  00ae0	8b 95 70 ff ff
+	ff		 mov	 edx, DWORD PTR _end$[ebp+4]
+  00ae6	2b 95 40 ff ff
+	ff		 sub	 edx, DWORD PTR _start$[ebp+4]
+  00aec	89 95 2c ff ff
+	ff		 mov	 DWORD PTR _dy$[ebp], edx
+
+; 335  : 
+; 336  : 	int d = 2*dy - dx;		// initial value of d
+
+  00af2	8b 85 2c ff ff
+	ff		 mov	 eax, DWORD PTR _dy$[ebp]
+  00af8	d1 e0		 shl	 eax, 1
+  00afa	2b 85 34 ff ff
+	ff		 sub	 eax, DWORD PTR _dx$[ebp]
+  00b00	89 85 74 ff ff
+	ff		 mov	 DWORD PTR _d$[ebp], eax
+
+; 337  : 	int incrE =2*dy;			// increment for move East
+
+  00b06	8b 8d 2c ff ff
+	ff		 mov	 ecx, DWORD PTR _dy$[ebp]
+  00b0c	d1 e1		 shl	 ecx, 1
+  00b0e	89 8d 38 ff ff
+	ff		 mov	 DWORD PTR _incrE$[ebp], ecx
+
+; 338  : 	int incrNE = 2*(dy-dx);	// increment for move North East
+
+  00b14	8b 95 2c ff ff
+	ff		 mov	 edx, DWORD PTR _dy$[ebp]
+  00b1a	2b 95 34 ff ff
+	ff		 sub	 edx, DWORD PTR _dx$[ebp]
+  00b20	d1 e2		 shl	 edx, 1
+  00b22	89 95 44 ff ff
+	ff		 mov	 DWORD PTR _incrNE$[ebp], edx
+
+; 339  : 	int x = start.x;
+
+  00b28	8b 85 3c ff ff
+	ff		 mov	 eax, DWORD PTR _start$[ebp]
+  00b2e	89 85 54 ff ff
+	ff		 mov	 DWORD PTR _x$[ebp], eax
+
+; 340  : 	int y = start.y;
+
+  00b34	8b 8d 40 ff ff
+	ff		 mov	 ecx, DWORD PTR _start$[ebp+4]
+  00b3a	89 8d 4c ff ff
+	ff		 mov	 DWORD PTR _y$[ebp], ecx
+
+; 341  : 
+; 342  : 	int xOffset = T[0][0] + T[1][0]*BMWidth;
+
+  00b40	8b 95 64 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+8]
+  00b46	0f af 55 1c	 imul	 edx, DWORD PTR _BMWidth$[ebp]
+  00b4a	8b 85 5c ff ff
+	ff		 mov	 eax, DWORD PTR _T$[ebp]
+  00b50	03 c2		 add	 eax, edx
+  00b52	89 85 30 ff ff
+	ff		 mov	 DWORD PTR _xOffset$[ebp], eax
+
+; 343  : 	int yOffset = T[0][1] + T[1][1]*BMWidth;
+
+  00b58	8b 8d 68 ff ff
+	ff		 mov	 ecx, DWORD PTR _T$[ebp+12]
+  00b5e	0f af 4d 1c	 imul	 ecx, DWORD PTR _BMWidth$[ebp]
+  00b62	8b 95 60 ff ff
+	ff		 mov	 edx, DWORD PTR _T$[ebp+4]
+  00b68	03 d1		 add	 edx, ecx
+  00b6a	89 95 58 ff ff
+	ff		 mov	 DWORD PTR _yOffset$[ebp], edx
+
+; 344  : 
+; 345  : 	// Write first pixel
+; 346  : 	if (P[0]) {
+
+  00b70	83 bd 78 ff ff
+	ff 00		 cmp	 DWORD PTR _P$[ebp], 0
+  00b77	0f 84 a5 00 00
+	00		 je	 $L58648
+
+; 347  : 		int pixels = 2*thickness + 1;
+
+  00b7d	8b 45 0c	 mov	 eax, DWORD PTR _thickness$[ebp]
+  00b80	8d 4c 00 01	 lea	 ecx, DWORD PTR [eax+eax+1]
+  00b84	89 8d f4 fe ff
+	ff		 mov	 DWORD PTR _pixels$58638[ebp], ecx
+
+; 348  : 		if (thickInX) {
+
+  00b8a	83 7d fc 00	 cmp	 DWORD PTR _thickInX$[ebp], 0
+  00b8e	74 4a		 je	 SHORT $L58639
+
+; 349  : 			// horizontally thick
+; 350  : 			uchar* writeAddr = pixelAddr - thickOffset;
+
+  00b90	8b 95 28 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$[ebp]
+  00b96	2b 95 50 ff ff
+	ff		 sub	 edx, DWORD PTR _thickOffset$[ebp]
+  00b9c	89 95 f0 fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58640[ebp], edx
+
+; 351  : 			for (;pixels>0;--pixels) {
+
+  00ba2	eb 0f		 jmp	 SHORT $L58641
+$L58642:
+  00ba4	8b 85 f4 fe ff
+	ff		 mov	 eax, DWORD PTR _pixels$58638[ebp]
+  00baa	83 e8 01	 sub	 eax, 1
+  00bad	89 85 f4 fe ff
+	ff		 mov	 DWORD PTR _pixels$58638[ebp], eax
+$L58641:
+  00bb3	83 bd f4 fe ff
+	ff 00		 cmp	 DWORD PTR _pixels$58638[ebp], 0
+  00bba	7e 1c		 jle	 SHORT $L58643
+
+; 352  : 				*(writeAddr++) = color;
+
+  00bbc	8b 8d f0 fe ff
+	ff		 mov	 ecx, DWORD PTR _writeAddr$58640[ebp]
+  00bc2	8a 55 08	 mov	 dl, BYTE PTR _color$[ebp]
+  00bc5	88 11		 mov	 BYTE PTR [ecx], dl
+  00bc7	8b 85 f0 fe ff
+	ff		 mov	 eax, DWORD PTR _writeAddr$58640[ebp]
+  00bcd	83 c0 01	 add	 eax, 1
+  00bd0	89 85 f0 fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58640[ebp], eax
+
+; 353  : 			}	
+
+  00bd6	eb cc		 jmp	 SHORT $L58642
+$L58643:
+
+; 355  : 		else {
+
+  00bd8	eb 48		 jmp	 SHORT $L58648
+$L58639:
+
+; 356  : 			// vertically thick
+; 357  : 			uchar* writeAddr = pixelAddr - thickOffset;
+
+  00bda	8b 8d 28 ff ff
+	ff		 mov	 ecx, DWORD PTR _pixelAddr$[ebp]
+  00be0	2b 8d 50 ff ff
+	ff		 sub	 ecx, DWORD PTR _thickOffset$[ebp]
+  00be6	89 8d ec fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58645[ebp], ecx
+
+; 358  : 			for (;pixels>0;--pixels) {
+
+  00bec	eb 0f		 jmp	 SHORT $L58646
+$L58647:
+  00bee	8b 95 f4 fe ff
+	ff		 mov	 edx, DWORD PTR _pixels$58638[ebp]
+  00bf4	83 ea 01	 sub	 edx, 1
+  00bf7	89 95 f4 fe ff
+	ff		 mov	 DWORD PTR _pixels$58638[ebp], edx
+$L58646:
+  00bfd	83 bd f4 fe ff
+	ff 00		 cmp	 DWORD PTR _pixels$58638[ebp], 0
+  00c04	7e 1c		 jle	 SHORT $L58648
+
+; 359  : 				*(writeAddr) = color;
+
+  00c06	8b 85 ec fe ff
+	ff		 mov	 eax, DWORD PTR _writeAddr$58645[ebp]
+  00c0c	8a 4d 08	 mov	 cl, BYTE PTR _color$[ebp]
+  00c0f	88 08		 mov	 BYTE PTR [eax], cl
+
+; 360  : 				writeAddr += BMWidth;
+
+  00c11	8b 95 ec fe ff
+	ff		 mov	 edx, DWORD PTR _writeAddr$58645[ebp]
+  00c17	03 55 1c	 add	 edx, DWORD PTR _BMWidth$[ebp]
+  00c1a	89 95 ec fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58645[ebp], edx
+
+; 361  : 			}	
+
+  00c20	eb cc		 jmp	 SHORT $L58647
+$L58648:
+
+; 364  : 	// Write the remainder of the line
+; 365  : 	pIndex = 1;
+
+  00c22	c7 85 48 ff ff
+	ff 01 00 00 00	 mov	 DWORD PTR _pIndex$[ebp], 1
+$L58650:
+
+; 366  : 	while (x < end.x) {
+
+  00c2c	8b 85 54 ff ff
+	ff		 mov	 eax, DWORD PTR _x$[ebp]
+  00c32	3b 85 6c ff ff
+	ff		 cmp	 eax, DWORD PTR _end$[ebp]
+  00c38	0f 8d 62 01 00
+	00		 jge	 $L58651
+
+; 367  : 		if (d <= 0) {
+
+  00c3e	83 bd 74 ff ff
+	ff 00		 cmp	 DWORD PTR _d$[ebp], 0
+  00c45	7f 35		 jg	 SHORT $L58652
+
+; 368  : 			d += incrE;
+
+  00c47	8b 8d 74 ff ff
+	ff		 mov	 ecx, DWORD PTR _d$[ebp]
+  00c4d	03 8d 38 ff ff
+	ff		 add	 ecx, DWORD PTR _incrE$[ebp]
+  00c53	89 8d 74 ff ff
+	ff		 mov	 DWORD PTR _d$[ebp], ecx
+
+; 369  : 			++x;
+
+  00c59	8b 95 54 ff ff
+	ff		 mov	 edx, DWORD PTR _x$[ebp]
+  00c5f	83 c2 01	 add	 edx, 1
+  00c62	89 95 54 ff ff
+	ff		 mov	 DWORD PTR _x$[ebp], edx
+
+; 370  : 			pixelAddr += xOffset;
+
+  00c68	8b 85 28 ff ff
+	ff		 mov	 eax, DWORD PTR _pixelAddr$[ebp]
+  00c6e	03 85 30 ff ff
+	ff		 add	 eax, DWORD PTR _xOffset$[ebp]
+  00c74	89 85 28 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$[ebp], eax
+
+; 372  : 		else {
+
+  00c7a	eb 4a		 jmp	 SHORT $L58653
+$L58652:
+
+; 373  : 			d += incrNE;
+
+  00c7c	8b 8d 74 ff ff
+	ff		 mov	 ecx, DWORD PTR _d$[ebp]
+  00c82	03 8d 44 ff ff
+	ff		 add	 ecx, DWORD PTR _incrNE$[ebp]
+  00c88	89 8d 74 ff ff
+	ff		 mov	 DWORD PTR _d$[ebp], ecx
+
+; 374  : 			++x;
+
+  00c8e	8b 95 54 ff ff
+	ff		 mov	 edx, DWORD PTR _x$[ebp]
+  00c94	83 c2 01	 add	 edx, 1
+  00c97	89 95 54 ff ff
+	ff		 mov	 DWORD PTR _x$[ebp], edx
+
+; 375  : 			++y;
+
+  00c9d	8b 85 4c ff ff
+	ff		 mov	 eax, DWORD PTR _y$[ebp]
+  00ca3	83 c0 01	 add	 eax, 1
+  00ca6	89 85 4c ff ff
+	ff		 mov	 DWORD PTR _y$[ebp], eax
+
+; 376  : 			pixelAddr += yOffset + xOffset;
+
+  00cac	8b 8d 58 ff ff
+	ff		 mov	 ecx, DWORD PTR _yOffset$[ebp]
+  00cb2	03 8d 30 ff ff
+	ff		 add	 ecx, DWORD PTR _xOffset$[ebp]
+  00cb8	8b 95 28 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$[ebp]
+  00cbe	03 d1		 add	 edx, ecx
+  00cc0	89 95 28 ff ff
+	ff		 mov	 DWORD PTR _pixelAddr$[ebp], edx
+$L58653:
+
+; 378  : 		// Output new point
+; 379  : 		if (P[(pIndex++ % 32)]) {
+
+  00cc6	8b 85 48 ff ff
+	ff		 mov	 eax, DWORD PTR _pIndex$[ebp]
+  00ccc	25 1f 00 00 80	 and	 eax, -2147483617	; 8000001fH
+  00cd1	79 05		 jns	 SHORT $L58775
+  00cd3	48		 dec	 eax
+  00cd4	83 c8 e0	 or	 eax, -32		; ffffffe0H
+  00cd7	40		 inc	 eax
+$L58775:
+  00cd8	8b 8c 85 78 ff
+	ff ff		 mov	 ecx, DWORD PTR _P$[ebp+eax*4]
+  00cdf	8b 95 48 ff ff
+	ff		 mov	 edx, DWORD PTR _pIndex$[ebp]
+  00ce5	83 c2 01	 add	 edx, 1
+  00ce8	89 95 48 ff ff
+	ff		 mov	 DWORD PTR _pIndex$[ebp], edx
+  00cee	85 c9		 test	 ecx, ecx
+  00cf0	0f 84 a5 00 00
+	00		 je	 $L58665
+
+; 380  : 			int pixels = 2*thickness + 1;
+
+  00cf6	8b 45 0c	 mov	 eax, DWORD PTR _thickness$[ebp]
+  00cf9	8d 4c 00 01	 lea	 ecx, DWORD PTR [eax+eax+1]
+  00cfd	89 8d e8 fe ff
+	ff		 mov	 DWORD PTR _pixels$58655[ebp], ecx
+
+; 381  : 			if (thickInX) {
+
+  00d03	83 7d fc 00	 cmp	 DWORD PTR _thickInX$[ebp], 0
+  00d07	74 4a		 je	 SHORT $L58656
+
+; 382  : 				// horizontally thick
+; 383  : 				uchar* writeAddr = pixelAddr - thickOffset;
+
+  00d09	8b 95 28 ff ff
+	ff		 mov	 edx, DWORD PTR _pixelAddr$[ebp]
+  00d0f	2b 95 50 ff ff
+	ff		 sub	 edx, DWORD PTR _thickOffset$[ebp]
+  00d15	89 95 e4 fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58657[ebp], edx
+
+; 384  : 				for (;pixels>0;--pixels) {
+
+  00d1b	eb 0f		 jmp	 SHORT $L58658
+$L58659:
+  00d1d	8b 85 e8 fe ff
+	ff		 mov	 eax, DWORD PTR _pixels$58655[ebp]
+  00d23	83 e8 01	 sub	 eax, 1
+  00d26	89 85 e8 fe ff
+	ff		 mov	 DWORD PTR _pixels$58655[ebp], eax
+$L58658:
+  00d2c	83 bd e8 fe ff
+	ff 00		 cmp	 DWORD PTR _pixels$58655[ebp], 0
+  00d33	7e 1c		 jle	 SHORT $L58660
+
+; 385  : 					*(writeAddr++) = color;
+
+  00d35	8b 8d e4 fe ff
+	ff		 mov	 ecx, DWORD PTR _writeAddr$58657[ebp]
+  00d3b	8a 55 08	 mov	 dl, BYTE PTR _color$[ebp]
+  00d3e	88 11		 mov	 BYTE PTR [ecx], dl
+  00d40	8b 85 e4 fe ff
+	ff		 mov	 eax, DWORD PTR _writeAddr$58657[ebp]
+  00d46	83 c0 01	 add	 eax, 1
+  00d49	89 85 e4 fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58657[ebp], eax
+
+; 386  : 				}	
+
+  00d4f	eb cc		 jmp	 SHORT $L58659
+$L58660:
+
+; 388  : 			else {
+
+  00d51	eb 48		 jmp	 SHORT $L58665
+$L58656:
+
+; 389  : 				// vertically thick
+; 390  : 				uchar* writeAddr = pixelAddr - thickOffset;
+
+  00d53	8b 8d 28 ff ff
+	ff		 mov	 ecx, DWORD PTR _pixelAddr$[ebp]
+  00d59	2b 8d 50 ff ff
+	ff		 sub	 ecx, DWORD PTR _thickOffset$[ebp]
+  00d5f	89 8d e0 fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58662[ebp], ecx
+
+; 391  : 				for (;pixels>0;--pixels) {
+
+  00d65	eb 0f		 jmp	 SHORT $L58663
+$L58664:
+  00d67	8b 95 e8 fe ff
+	ff		 mov	 edx, DWORD PTR _pixels$58655[ebp]
+  00d6d	83 ea 01	 sub	 edx, 1
+  00d70	89 95 e8 fe ff
+	ff		 mov	 DWORD PTR _pixels$58655[ebp], edx
+$L58663:
+  00d76	83 bd e8 fe ff
+	ff 00		 cmp	 DWORD PTR _pixels$58655[ebp], 0
+  00d7d	7e 1c		 jle	 SHORT $L58665
+
+; 392  : 					*(writeAddr) = color;
+
+  00d7f	8b 85 e0 fe ff
+	ff		 mov	 eax, DWORD PTR _writeAddr$58662[ebp]
+  00d85	8a 4d 08	 mov	 cl, BYTE PTR _color$[ebp]
+  00d88	88 08		 mov	 BYTE PTR [eax], cl
+
+; 393  : 					writeAddr += BMWidth;
+
+  00d8a	8b 95 e0 fe ff
+	ff		 mov	 edx, DWORD PTR _writeAddr$58662[ebp]
+  00d90	03 55 1c	 add	 edx, DWORD PTR _BMWidth$[ebp]
+  00d93	89 95 e0 fe ff
+	ff		 mov	 DWORD PTR _writeAddr$58662[ebp], edx
+
+; 394  : 				}	
+
+  00d99	eb cc		 jmp	 SHORT $L58664
+$L58665:
+
+; 397  : 	}
+
+  00d9b	e9 8c fe ff ff	 jmp	 $L58650
+$L58651:
+$L58563:
+
+; 398  : }
+
+  00da0	8b e5		 mov	 esp, ebp
+  00da2	5d		 pop	 ebp
+  00da3	c2 18 00	 ret	 24			; 00000018H
+?DrawThick@SOL_Line@@QAEXEHHHVMemID@@H@Z ENDP		; SOL_Line::DrawThick
+_TEXT	ENDS
+;	COMDAT ?Min@@YAHHH@Z
+_TEXT	SEGMENT
+_a$ = 8
+_b$ = 12
+?Min@@YAHHH@Z PROC NEAR					; Min, COMDAT
+
+; 102  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+
+; 103  : 	return a < b ? a : b;
+
+  00004	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00007	3b 45 0c	 cmp	 eax, DWORD PTR _b$[ebp]
+  0000a	7d 08		 jge	 SHORT $L58777
+  0000c	8b 4d 08	 mov	 ecx, DWORD PTR _a$[ebp]
+  0000f	89 4d fc	 mov	 DWORD PTR -4+[ebp], ecx
+  00012	eb 06		 jmp	 SHORT $L58778
+$L58777:
+  00014	8b 55 0c	 mov	 edx, DWORD PTR _b$[ebp]
+  00017	89 55 fc	 mov	 DWORD PTR -4+[ebp], edx
+$L58778:
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR -4+[ebp]
+
+; 104  : }
+
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+?Min@@YAHHH@Z ENDP					; Min
+_TEXT	ENDS
+;	COMDAT ?Max@@YAHHH@Z
+_TEXT	SEGMENT
+_a$ = 8
+_b$ = 12
+?Max@@YAHHH@Z PROC NEAR					; Max, COMDAT
+
+; 96   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+
+; 97   : 	return a > b ? a : b;
+
+  00004	8b 45 08	 mov	 eax, DWORD PTR _a$[ebp]
+  00007	3b 45 0c	 cmp	 eax, DWORD PTR _b$[ebp]
+  0000a	7e 08		 jle	 SHORT $L58780
+  0000c	8b 4d 08	 mov	 ecx, DWORD PTR _a$[ebp]
+  0000f	89 4d fc	 mov	 DWORD PTR -4+[ebp], ecx
+  00012	eb 06		 jmp	 SHORT $L58781
+$L58780:
+  00014	8b 55 0c	 mov	 edx, DWORD PTR _b$[ebp]
+  00017	89 55 fc	 mov	 DWORD PTR -4+[ebp], edx
+$L58781:
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR -4+[ebp]
+
+; 98   : }
+
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+?Max@@YAHHH@Z ENDP					; Max
+_TEXT	ENDS
+END

@@ -1,0 +1,5903 @@
+# Microsoft Developer Studio Generated Dependency File, included by Sciw.mak
+
+.\Arglist.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Array.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Breakpt.cpp : \
+	".\Array.hpp"\
+	".\Breakpt.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Debugdsp.hpp"\
+	".\Debugmnu.hpp"\
+	".\Dialog.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Opcodes.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Rect.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sendstac.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Bufferd.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Bufferw.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Celobj.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Celobj1.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Celobj2.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Celobja.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celasm.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Config.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Cursorw.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Debug.cpp : \
+	".\Array.hpp"\
+	".\Breakpt.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Debug.hpp"\
+	".\Debugdsp.hpp"\
+	".\Debugmnu.hpp"\
+	".\Dialog.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Hotkey.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Mss.h"\
+	".\Object.hpp"\
+	".\Objinfo.hpp"\
+	".\Opcodes.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\sciwnd.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sendstac.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\stdafx.h"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	".\Vocab.hpp"\
+	".\Window.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Debugdsp.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Debugdsp.hpp"\
+	".\Dialog.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Objinfo.hpp"\
+	".\Opcodes.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sendstac.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Vocab.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Debugmnu.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Debugmnu.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Dialog.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\BuyDlg.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\chanlist.hpp"\
+	".\charmake.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\ChngPass.hpp"\
+	".\combatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Debug.hpp"\
+	".\Dialog.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\dragworldobject.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\GroupList.hpp"\
+	".\Integ.hpp"\
+	".\inventorydlg.hpp"\
+	".\invlistctrl.hpp"\
+	".\ItemList.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\Line.hpp"\
+	".\List.hpp"\
+	".\LogInDlg.hpp"\
+	".\loginwnd.hpp"\
+	".\LookAt.hpp"\
+	".\mailmgr.hpp"\
+	".\mainpanel.hpp"\
+	".\MakeItemDlg.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\minrestoreclose.hpp"\
+	".\Mouse.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\PatchDlg.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ptrdev.hpp"\
+	".\QuantityDlg.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\RepairDlg.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\sciwnd.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SellDlg.hpp"\
+	".\ServerDlg.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinattr.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\SpellDlg.hpp"\
+	".\stdafx.h"\
+	".\String.hpp"\
+	".\TabCtrl.hpp"\
+	".\TalkDlg.hpp"\
+	".\TeleportDlg.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\Time.hpp"\
+	".\ToonSettings.hpp"\
+	".\TreasureDlg.hpp"\
+	".\VerbDialog.hpp"\
+	".\WhatsNewDlg.hpp"\
+	".\wholist.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Dos.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Drawlist.cpp : \
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Si.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Event.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Eventw.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Eventw.hpp"\
+	".\Hotkey.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kbdmgrw.hpp"\
+	".\Kbdw.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Font.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Globals.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Fonti.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Graph.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Globals.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\Line.hpp"\
+	".\List.hpp"\
+	".\Magnify.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Newroom.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Graphmgr.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Graphmw.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Mousew.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Hotkey.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Graphmgr.hpp"\
+	".\Hotkey.hpp"\
+	".\Integ.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Integ.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Integ.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Kbdmgr.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Point.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Kbdmgrw.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kbdmgrw.hpp"\
+	".\Kbdw.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Point.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Kbdw.cpp : \
+	".\Compiler.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdw.hpp"\
+	".\Sciwin.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Kernel.cpp : \
+	".\Compiler.hpp"\
+	".\Kernel.hpp"\
+	".\Sol.hpp"\
+	
+
+.\Language.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Language.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Line.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Line.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\List.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Longint.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Lzss.cpp : \
+	".\Compiler.hpp"\
+	".\Lzss.hpp"\
+	".\Sol.hpp"\
+	
+
+.\Magnify.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\List.hpp"\
+	".\Magnify.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Math.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Memid.cpp : \
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Memmgr.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Integ.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Newroom.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Memmgre.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Memmgrw.cpp : \
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memmgrw.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Mss.h"\
+	".\Newroom.hpp"\
+	".\Restype.hpp"\
+	".\Sciwin.hpp"\
+	".\Shiftpal.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Memtype.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Graphmgr.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Message.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Message.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Motion.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Globals.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Mouse.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Mousew.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Mousew.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Moview.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Cursor.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Moview.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Time.hpp"\
+	".\Timew.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Msg.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Debug.hpp"\
+	".\Dialog.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Mss.h"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Rect.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Msgw.cpp : \
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Msgw.hpp"\
+	".\Restype.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Networkw.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dialog.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Rect.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Sci.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\Time.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Newroom.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Newroom.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Object.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Objinfo.hpp"\
+	".\Pmachine.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sendstac.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	".\Vocab.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Packdata.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Palette.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Palmgri.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Palmgrt.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Palmgrw.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Picture.cpp : \
+	".\Compiler.hpp"\
+	".\Kernel.hpp"\
+	".\Sol.hpp"\
+	
+
+.\Plane.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Globals.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Platfrmw.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Restype.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Plist.cpp : \
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\PMachine.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Integ.hpp"\
+	".\Kernel.hpp"\
+	".\Language.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Opcodes.hpp"\
+	".\Pmachine.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sendstac.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Polyfuse.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Line.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Polyfuse.hpp"\
+	".\Polygon.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Polygon.cpp : \
+	".\Array.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Math.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Polyfuse.hpp"\
+	".\Polygon.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Ratio.cpp : \
+	".\Compiler.hpp"\
+	".\Ratio.hpp"\
+	".\Sol.hpp"\
+	
+
+.\Rect.cpp : \
+	".\Compiler.hpp"\
+	".\Point.hpp"\
+	".\Rect.hpp"\
+	".\Sol.hpp"\
+	
+
+.\Rectlist.cpp : \
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Msg.hpp"\
+	".\Point.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Remap.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Resource.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Cursor.hpp"\
+	".\Cursord.hpp"\
+	".\Dcomp.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Mss.h"\
+	".\Newroom.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shiftpal.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\Textid.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Restype.cpp : \
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Dcomp.hpp"\
+	".\Dos.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Newroom.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Sciwin.hpp"\
+	".\Sol.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Sci.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Debug.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Newroom.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sci.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Sciw.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Eventw.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\Kbd.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memmgrw.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Mousew.hpp"\
+	".\Msg.hpp"\
+	".\Msgw.hpp"\
+	".\Mss.h"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sci.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\Time.hpp"\
+	".\Timew.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Sciwin.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kbdmgrw.hpp"\
+	".\Kbdw.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memmgrw.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Mousew.hpp"\
+	".\Moview.hpp"\
+	".\Msg.hpp"\
+	".\Mss.h"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sci.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\stdafx.h"\
+	".\Thread.hpp"\
+	".\Time.hpp"\
+	".\Timew.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Screen.cpp : \
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Script.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	".\Vocab.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Sendstac.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Font.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sendstac.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Shiftpal.cpp : \
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\Shiftpal.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Shwstyle.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Si.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Graphmgr.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Silist.cpp : \
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Sound.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Bufferw.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Config.hpp"\
+	".\Cursor.hpp"\
+	".\Cursorw.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Graphmw.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kbdmgrw.hpp"\
+	".\Kbdw.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memmgrw.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Mousew.hpp"\
+	".\Moview.hpp"\
+	".\Msg.hpp"\
+	".\Mss.h"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Palmgr.hpp"\
+	".\Palmgri.hpp"\
+	".\Palmgrt.hpp"\
+	".\Palmgrw.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Restype.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Sci.hpp"\
+	".\Scidlg.hpp"\
+	".\Sciwin.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\Thread.hpp"\
+	".\Time.hpp"\
+	".\Timew.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\stdafx.cpp : \
+	".\library\lib\activeskin.ocx"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\String.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\String.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Table.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Table.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Textid.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Time.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Timew.cpp : \
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Mbox.hpp"\
+	".\Memmgr.hpp"\
+	".\Memmgrw.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Sciwin.hpp"\
+	".\Sol.hpp"\
+	".\Time.hpp"\
+	".\Timew.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Vocab.cpp : \
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Resource.hpp"\
+	".\Restype.hpp"\
+	".\Sol.hpp"\
+	".\Vocab.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Windll.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Mbox.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Window.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Font.hpp"\
+	".\Globals.hpp"\
+	".\Graph.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Time.hpp"\
+	".\Window.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Winfuncs.cpp : \
+	".\Array.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Textid.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Winthunk.cpp : \
+	".\Compiler.hpp"\
+	".\Mbox.hpp"\
+	".\Mss.h"\
+	".\Sciwin.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\W32sut.h"\
+	".\Winodef.hpp"\
+	".\Winthunk.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\arrayC.cpp : \
+	".\arrayC.hpp"\
+	
+
+.\BuyDlg.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\BuyDlg.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\C++SCI.cpp" : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\Table.hpp"\
+	".\Textid.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\chanlist.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chanlist.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\GspSettings.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\charmake.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\charmake.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinattr.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\charsel.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\chatdisplay.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\chatpanel.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatpanel.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ChatSettings.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\ChatSettings.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\chatverbs.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chanlist.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\GroupList.hpp"\
+	".\GroupVerbs.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ChngPass.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\ChngPass.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\combatverbs.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\combatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\ItemList.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\SpellDlg.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\deferredclick.cpp : \
+	".\deferredclick.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\DlgWnd.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chanlist.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\EventVerbs.hpp"\
+	".\Globals.hpp"\
+	".\GspSettings.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\drag-n-drop.cpp" : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\inventorydlg.hpp"\
+	".\invlistctrl.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\dragworldobject.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\dragworldobject.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\EventVerbs.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\ChatSettings.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\EventVerbs.hpp"\
+	".\friendmgr.hpp"\
+	".\GameSettings.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\LookAt.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SkinAlert.hpp"\
+	".\skinattr.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\wholist.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\evict.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\evict.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\friendmgr.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\ServerDlg.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\GameSettings.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\GameSettings.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Mss.h"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\GenericDlg.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\GroupList.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\GroupList.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\GroupVerbs.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\GroupList.hpp"\
+	".\GroupVerbs.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\GspSettings.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\GspSettings.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\HelpVerbs.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\HelpVerbs.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\inventorydlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\inventorydlg.hpp"\
+	".\invlistctrl.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\invlistctrl.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\dragworldobject.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\invlistctrl.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ItemList.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\ItemList.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\LogInDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\LogInDlg.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\loginwnd.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\loginwnd.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\LookAt.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\LookAt.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinattr.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MailMgr.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mailmgr.hpp"\
+	".\MailVerbs.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\ServerDlg.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MailPanel.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mailmgr.hpp"\
+	".\MailPanel.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MailVerbs.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mailmgr.hpp"\
+	".\MailVerbs.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\mainpanel.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chanlist.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatpanel.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Event.hpp"\
+	".\evict.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\GroupVerbs.hpp"\
+	".\HelpVerbs.hpp"\
+	".\inventorydlg.hpp"\
+	".\invlistctrl.hpp"\
+	".\Kbd.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mailmgr.hpp"\
+	".\MailPanel.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\OptionVerbs.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SkinAlert.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\SpellDlg.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\MakeItemDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\MakeItemDlg.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\minrestoreclose.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\minrestoreclose.hpp"\
+	".\Msg.hpp"\
+	".\namehealth.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\mousewheel.cpp : \
+	".\library\lib\activeskin.ocx"\
+	".\mousewheel.hpp"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\msgfunctions.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\namehealth.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\namehealth.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinform.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\OptionVerbs.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\ChatSettings.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\friendmgr.hpp"\
+	".\GameSettings.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\LookAt.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\OptionVerbs.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinattr.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\wholist.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\packdataC.cpp : \
+	".\arrayC.hpp"\
+	".\packdataC.hpp"\
+	
+
+.\PatchDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\PatchDlg.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\PrivateTells.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\friendmgr.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\QuantityDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\QuantityDlg.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\RepairDlg.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\RepairDlg.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\scimfc.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\chanlist.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\combatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\Debug.hpp"\
+	".\deferredclick.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Drawlist.hpp"\
+	".\FGWIN.H"\
+	".\friendmgr.hpp"\
+	".\GameSettings.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Integ.hpp"\
+	".\invlistctrl.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kbdmgrw.hpp"\
+	".\Kbdw.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\LogInDlg.hpp"\
+	".\loginwnd.hpp"\
+	".\mailmgr.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\minrestoreclose.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Mss.h"\
+	".\namehealth.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\sciwnd.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\ServerDlg.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinform.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\SpellDlg.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\Time.hpp"\
+	".\ToonSettings.hpp"\
+	".\TreasureDlg.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\sciwnd.cpp : \
+	".\Array.hpp"\
+	".\Buffer.hpp"\
+	".\Bufferd.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\dragworldobject.hpp"\
+	".\Drawlist.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Graphmgr.hpp"\
+	".\Kbd.hpp"\
+	".\Kbdmgr.hpp"\
+	".\Kbdmgrw.hpp"\
+	".\Kbdw.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Mouse.hpp"\
+	".\Mousew.hpp"\
+	".\Msg.hpp"\
+	".\namehealth.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Plane.hpp"\
+	".\Plist.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ptrdev.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rectlist.hpp"\
+	".\Remap.hpp"\
+	".\Rgb.hpp"\
+	".\Scale.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\sciwnd.hpp"\
+	".\Screen.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\Shwstyle.hpp"\
+	".\Si.hpp"\
+	".\Silist.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SellDlg.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SellDlg.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ServerDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\Pmachine.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\ServerDlg.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SingleInstance.cpp : \
+	".\library\lib\activeskin.ocx"\
+	".\SingleInstance.h"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SkinAlert.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinattr.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinattr.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinbitmap.cpp : \
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Palette.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\Sciwin.hpp"\
+	".\skinbitmap.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinbtn.cpp : \
+	".\library\lib\activeskin.ocx"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinctrl.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinedit.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SkinAlert.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinform.cpp : \
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\Msg.hpp"\
+	".\skinform.hpp"\
+	".\skinobj.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinlistctrl.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinobj.cpp : \
+	".\Compiler.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\Ratio.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinobj.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SkinPassword.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinscroll.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Time.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinspcbtn.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skintglbtn.cpp : \
+	".\library\lib\activeskin.ocx"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skintglbtn.hpp"\
+	".\stdafx.h"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\skinwindow.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinform.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SpellDlg.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\charsel.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\ServerDlg.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\SpellDlg.hpp"\
+	".\SpellVerbs.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\SpellVerbs.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\SpellVerbs.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\TabCtrl.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\TalkDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\drag-n-drop.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\sciwnd.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TalkDlg.hpp"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\TeleportDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\TeleportDlg.hpp"\
+	".\Textid.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\Thread.cpp : \
+	".\library\lib\activeskin.ocx"\
+	".\stdafx.h"\
+	".\Thread.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\ToonSettings.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\DlgWnd.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\GspSettings.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\mainpanel.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Mss.h"\
+	".\Networkw.hpp"\
+	".\Object.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Sciwin.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\Sound.hpp"\
+	".\stdafx.h"\
+	".\TabCtrl.hpp"\
+	".\Textid.hpp"\
+	".\Thread.hpp"\
+	".\ToonSettings.hpp"\
+	".\windowmgr.hpp"\
+	".\Winodef.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\TreasureDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\TreasureDlg.hpp"\
+	".\VerbDialog.hpp"\
+	".\VerbQueue.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\VerbDialog.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Celobj.hpp"\
+	".\chatverbs.hpp"\
+	".\combatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\dlgevents.hpp"\
+	".\Dos.hpp"\
+	".\Event.hpp"\
+	".\Globals.hpp"\
+	".\Kbd.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Palette.hpp"\
+	".\Pmachine.hpp"\
+	".\Point.hpp"\
+	".\Ratio.hpp"\
+	".\Rect.hpp"\
+	".\Rgb.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\Time.hpp"\
+	".\VerbDialog.hpp"\
+	".\VerbQueue.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\VerbQueue.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\Kernel.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\VerbQueue.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\WhatsNewDlg.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\chatdisplay.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\GenericDlg.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\Pmachine.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\SkinPassword.hpp"\
+	".\skinscroll.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\WhatsNewDlg.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\wholist.cpp : \
+	".\Array.hpp"\
+	".\arrayC.hpp"\
+	".\C++SCI.hpp"\
+	".\charsel.hpp"\
+	".\chatdisplay.hpp"\
+	".\chatverbs.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\msgfunctions.hpp"\
+	".\Object.hpp"\
+	".\Packdata.hpp"\
+	".\packdataC.hpp"\
+	".\Pmachine.hpp"\
+	".\PrivateTells.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinlistctrl.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\VerbDialog.hpp"\
+	".\wholist.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\windowmgr.cpp : \
+	".\Array.hpp"\
+	".\C++SCI.hpp"\
+	".\charsel.hpp"\
+	".\Compiler.hpp"\
+	".\Dos.hpp"\
+	".\FGWIN.H"\
+	".\GameSettings.hpp"\
+	".\Globals.hpp"\
+	".\library\lib\activeskin.ocx"\
+	".\List.hpp"\
+	".\Memid.hpp"\
+	".\Memmgr.hpp"\
+	".\Memtype.hpp"\
+	".\minrestoreclose.hpp"\
+	".\mousewheel.hpp"\
+	".\Msg.hpp"\
+	".\Object.hpp"\
+	".\Pmachine.hpp"\
+	".\Ratio.hpp"\
+	".\scimfc.hpp"\
+	".\Script.hpp"\
+	".\Selector.hpp"\
+	".\SingleInstance.h"\
+	".\skinbitmap.hpp"\
+	".\skinbtn.hpp"\
+	".\skinctrl.hpp"\
+	".\skinedit.hpp"\
+	".\skinobj.hpp"\
+	".\skinscroll.hpp"\
+	".\skinspcbtn.hpp"\
+	".\skintglbtn.hpp"\
+	".\skinwindow.hpp"\
+	".\Sol.hpp"\
+	".\stdafx.h"\
+	".\Textid.hpp"\
+	".\ToonSettings.hpp"\
+	".\VerbDialog.hpp"\
+	".\windowmgr.hpp"\
+	"c:\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	

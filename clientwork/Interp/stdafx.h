@@ -26,7 +26,7 @@
 #include <iterator>
 
 // import the ActiveSkin interface...
-#import <ActiveSkin.ocx> raw_interfaces_only, raw_native_types, no_namespace, named_guids 
+#import "Library/lib/ActiveSkin.ocx" raw_interfaces_only, raw_native_types, no_namespace, named_guids 
 
 #include <afxole.h>         // MFC OLE classes
 #include <afxodlgs.h>       // MFC OLE dialog classes

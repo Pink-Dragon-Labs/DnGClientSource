@@ -1,0 +1,3026 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Mousew.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT PARA USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BM@LHED@Instructed?5to?5scale?5to?5zero?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CRT$XCA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCA	ENDS
+CRT$XCU	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCU	ENDS
+CRT$XCL	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCL	ENDS
+CRT$XCC	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCC	ENDS
+CRT$XCZ	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCZ	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SCI_Point@@QAE@ABU0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@NN@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FPoint@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@EEE@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Rgb24@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8Rgb24F@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??D@YAHHABVRatio@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@HH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@VMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Bitmap@@QAE@E@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Type@Bitmap@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObj@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Skip@CelObj@@QBEEXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?RemapState@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Mirrored@CelObj@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObj@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjView@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjView@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjView@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjView@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjMem@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjMem@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjMem@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjMem@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Duplicate@CelObjColor@@UBEPAVCelObj@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CelObjColor@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCelObjColor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CelObjColor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SOL_Cursor@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Cursor@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@HHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@AAVSOL_Point@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Set@SOL_Rect@@QAEXHHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?MakeEmpty@SOL_Rect@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xlen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ylen@SOL_Rect@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHABV1@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8SOL_Rect@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Draw@ScreenItem@@QAEXABVBuffer@@ABVSOL_Rect@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?TopSCIPlane@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Xdim@GraphicsMgr@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Ydim@GraphicsMgr@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1KbdMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GKbdMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1PointerDevice@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GPointerDevice@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1SOL_Mouse@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsSwift@SOL_Mouse@@UBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Vibrate@SOL_Mouse@@UBEXHHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Mouse@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Setup@MouseWin@@UAEXAAVSOL_Cursor@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMouseWin@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_Mouse@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0PointerDevice@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMouseWinClr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7MouseWinClr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MouseWin@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObj@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7Buffer@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjColor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_Cursor@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjView@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7PointerDevice@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7SOL_Mouse@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CelObjMem@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7KbdMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS, CRT$XCA, CRT$XCU, CRT$XCL, CRT$XCC, CRT$XCZ
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?cursor@MouseWin@@1PAVSOL_Cursor@@A		; MouseWin::cursor
+PUBLIC	?restrictFlag@MouseWin@@1HA			; MouseWin::restrictFlag
+PUBLIC	?inCage@MouseWin@@1HA				; MouseWin::inCage
+PUBLIC	?cursor@MouseWinClr@@1PAVSOL_Cursor@@A		; MouseWinClr::cursor
+PUBLIC	?useMouse@MouseWinClr@@1HA			; MouseWinClr::useMouse
+PUBLIC	?isSwift@MouseWinClr@@1HA			; MouseWinClr::isSwift
+PUBLIC	?zaxis@MouseWinClr@@1FA				; MouseWinClr::zaxis
+PUBLIC	?pitch@MouseWinClr@@1FA				; MouseWinClr::pitch
+PUBLIC	?roll@MouseWinClr@@1FA				; MouseWinClr::roll
+PUBLIC	?yaw@MouseWinClr@@1FA				; MouseWinClr::yaw
+PUBLIC	?stackBuff@MouseWinClr@@1PAEA			; MouseWinClr::stackBuff
+PUBLIC	?paintFlag@MouseWinClr@@1HA			; MouseWinClr::paintFlag
+PUBLIC	?clrMouse@@3PAVSOL_Mouse@@A			; clrMouse
+PUBLIC	?winMouse@@3PAVSOL_Mouse@@A			; winMouse
+_BSS	SEGMENT
+?cursor@MouseWin@@1PAVSOL_Cursor@@A DD 01H DUP (?)	; MouseWin::cursor
+?restrictFlag@MouseWin@@1HA DD 01H DUP (?)		; MouseWin::restrictFlag
+?inCage@MouseWin@@1HA DD 01H DUP (?)			; MouseWin::inCage
+?cursor@MouseWinClr@@1PAVSOL_Cursor@@A DD 01H DUP (?)	; MouseWinClr::cursor
+?isSwift@MouseWinClr@@1HA DD 01H DUP (?)		; MouseWinClr::isSwift
+?zaxis@MouseWinClr@@1FA DW 01H DUP (?)			; MouseWinClr::zaxis
+	ALIGN	4
+
+?pitch@MouseWinClr@@1FA DW 01H DUP (?)			; MouseWinClr::pitch
+	ALIGN	4
+
+?roll@MouseWinClr@@1FA DW 01H DUP (?)			; MouseWinClr::roll
+	ALIGN	4
+
+?yaw@MouseWinClr@@1FA DW 01H DUP (?)			; MouseWinClr::yaw
+	ALIGN	4
+
+?stackBuff@MouseWinClr@@1PAEA DD 01H DUP (?)		; MouseWinClr::stackBuff
+?paintFlag@MouseWinClr@@1HA DD 01H DUP (?)		; MouseWinClr::paintFlag
+?clrMouse@@3PAVSOL_Mouse@@A DD 01H DUP (?)		; clrMouse
+?winMouse@@3PAVSOL_Mouse@@A DD 01H DUP (?)		; winMouse
+_exists	DD	01H DUP (?)
+_buttonState DD	01H DUP (?)
+_outOfGame DD	01H DUP (?)
+_BSS	ENDS
+CRT$XCU	SEGMENT
+_$S37	DD	FLAT:_$E36
+_$S40	DD	FLAT:_$E39
+_$S43	DD	FLAT:_$E42
+CRT$XCU	ENDS
+_DATA	SEGMENT
+?useMouse@MouseWinClr@@1HA DD 01H			; MouseWinClr::useMouse
+_DATA	ENDS
+_TEXT	SEGMENT
+_$E36	PROC NEAR
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	e8 00 00 00 00	 call	 _$E35
+  00008	5d		 pop	 ebp
+  00009	c3		 ret	 0
+_$E36	ENDP
+_TEXT	ENDS
+PUBLIC	??0SOL_Rect@@QAE@XZ				; SOL_Rect::SOL_Rect
+_BSS	SEGMENT
+_restrict DB	010H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_$E35	PROC NEAR
+
+; 30   : static	SOL_Rect		restrict;
+
+  0000a	55		 push	 ebp
+  0000b	8b ec		 mov	 ebp, esp
+  0000d	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_restrict
+  00012	e8 00 00 00 00	 call	 ??0SOL_Rect@@QAE@XZ	; SOL_Rect::SOL_Rect
+  00017	5d		 pop	 ebp
+  00018	c3		 ret	 0
+_$E35	ENDP
+_TEXT	ENDS
+PUBLIC	??0SOL_Point@@QAE@XZ				; SOL_Point::SOL_Point
+;	COMDAT ??0SOL_Rect@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Rect@@QAE@XZ PROC NEAR				; SOL_Rect::SOL_Rect, COMDAT
+
+; 13   : 	SOL_Rect()  {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0000f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00012	83 c1 08	 add	 ecx, 8
+  00015	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Rect@@QAE@XZ ENDP				; SOL_Rect::SOL_Rect
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Point@@QAE@XZ PROC NEAR				; SOL_Point::SOL_Point, COMDAT
+
+; 20   : 	SOL_Point() : x(DefaultCoord), y(DefaultCoord) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 ef cd ab
+	89		 mov	 DWORD PTR [eax], -1985229329 ; 89abcdefH
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	c7 41 04 ef cd
+	ab 89		 mov	 DWORD PTR [ecx+4], -1985229329 ; 89abcdefH
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b e5		 mov	 esp, ebp
+  0001f	5d		 pop	 ebp
+  00020	c3		 ret	 0
+??0SOL_Point@@QAE@XZ ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+_TEXT	SEGMENT
+_$E39	PROC NEAR
+  00019	55		 push	 ebp
+  0001a	8b ec		 mov	 ebp, esp
+  0001c	e8 00 00 00 00	 call	 _$E38
+  00021	5d		 pop	 ebp
+  00022	c3		 ret	 0
+_$E39	ENDP
+_TEXT	ENDS
+_BSS	SEGMENT
+_pos	DQ	01H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_$E38	PROC NEAR
+
+; 31   : static	SOL_Point	pos;
+
+  00023	55		 push	 ebp
+  00024	8b ec		 mov	 ebp, esp
+  00026	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_pos
+  0002b	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  00030	5d		 pop	 ebp
+  00031	c3		 ret	 0
+_$E38	ENDP
+_$E42	PROC NEAR
+  00032	55		 push	 ebp
+  00033	8b ec		 mov	 ebp, esp
+  00035	e8 00 00 00 00	 call	 _$E41
+  0003a	5d		 pop	 ebp
+  0003b	c3		 ret	 0
+_$E42	ENDP
+_TEXT	ENDS
+EXTRN	??0SOL_Event@@QAE@XZ:NEAR			; SOL_Event::SOL_Event
+_BSS	SEGMENT
+_event	DB	028H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_$E41	PROC NEAR
+
+; 33   : static	SOL_Event	event;		//  Watcom 9.5 insisted that the interrupt
+
+  0003c	55		 push	 ebp
+  0003d	8b ec		 mov	 ebp, esp
+  0003f	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_event
+  00044	e8 00 00 00 00	 call	 ??0SOL_Event@@QAE@XZ	; SOL_Event::SOL_Event
+  00049	5d		 pop	 ebp
+  0004a	c3		 ret	 0
+_$E41	ENDP
+_TEXT	ENDS
+PUBLIC	??1SOL_Mouse@@UAE@XZ				; SOL_Mouse::~SOL_Mouse
+PUBLIC	?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z		; SOL_Mouse::GetSwiftInfo
+PUBLIC	?IsSwift@SOL_Mouse@@UBEHXZ			; SOL_Mouse::IsSwift
+PUBLIC	?Vibrate@SOL_Mouse@@UBEXHHH@Z			; SOL_Mouse::Vibrate
+PUBLIC	?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z	; SOL_Mouse::SetHotRectangleStatus
+PUBLIC	??0SOL_Mouse@@QAE@XZ				; SOL_Mouse::SOL_Mouse
+PUBLIC	??0MouseWin@@QAE@XZ				; MouseWin::MouseWin
+PUBLIC	?Exists@MouseWin@@UBEHXZ			; MouseWin::Exists
+PUBLIC	?GlobalPos@MouseWin@@UBEHPAVSOL_Point@@@Z	; MouseWin::GlobalPos
+PUBLIC	?GlobalPosSci@MouseWin@@UBEHPAVSOL_Point@@@Z	; MouseWin::GlobalPosSci
+PUBLIC	?SetRestrictRect@MouseWin@@UAEXABVSOL_Rect@@@Z	; MouseWin::SetRestrictRect
+PUBLIC	?ClearRestrictRect@MouseWin@@UAEXXZ		; MouseWin::ClearRestrictRect
+PUBLIC	?SetPos@MouseWin@@UAEXABVSOL_Point@@@Z		; MouseWin::SetPos
+PUBLIC	?Setup@MouseWin@@UAEXAAVSOL_Cursor@@@Z		; MouseWin::Setup
+PUBLIC	??_7MouseWin@@6B@				; MouseWin::`vftable'
+PUBLIC	??_GMouseWin@@UAEPAXI@Z				; MouseWin::`scalar deleting destructor'
+PUBLIC	??_EMouseWin@@UAEPAXI@Z				; MouseWin::`vector deleting destructor'
+EXTRN	__except_list:DWORD
+EXTRN	___CxxFrameHandler:NEAR
+EXTRN	?SetupHotRectangles@SOL_Mouse@@UAEXHVMemID@@@Z:NEAR ; SOL_Mouse::SetupHotRectangles
+EXTRN	?CheckHotRectangles@SOL_Mouse@@UAEXAAVSOL_Point@@@Z:NEAR ; SOL_Mouse::CheckHotRectangles
+EXTRN	__imp__GetSystemMetrics@4:NEAR
+;	COMDAT ??_7MouseWin@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Mousew.cpp
+CONST	SEGMENT
+??_7MouseWin@@6B@ DD FLAT:??_EMouseWin@@UAEPAXI@Z	; MouseWin::`vftable'
+	DD	FLAT:?Exists@MouseWin@@UBEHXZ
+	DD	FLAT:?GlobalPos@MouseWin@@UBEHPAVSOL_Point@@@Z
+	DD	FLAT:?SetRestrictRect@MouseWin@@UAEXABVSOL_Rect@@@Z
+	DD	FLAT:?ClearRestrictRect@MouseWin@@UAEXXZ
+	DD	FLAT:?SetPos@MouseWin@@UAEXABVSOL_Point@@@Z
+	DD	FLAT:?Setup@MouseWin@@UAEXAAVSOL_Cursor@@@Z
+	DD	FLAT:?GlobalPosSci@MouseWin@@UBEHPAVSOL_Point@@@Z
+	DD	FLAT:?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z
+	DD	FLAT:?IsSwift@SOL_Mouse@@UBEHXZ
+	DD	FLAT:?Vibrate@SOL_Mouse@@UBEXHHH@Z
+	DD	FLAT:?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+	DD	FLAT:?SetupHotRectangles@SOL_Mouse@@UAEXHVMemID@@@Z
+	DD	FLAT:?CheckHotRectangles@SOL_Mouse@@UAEXAAVSOL_Point@@@Z
+CONST	ENDS
+xdata$x	SEGMENT
+$T60460	DD	019930520H
+	DD	01H
+	DD	FLAT:$T60463
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T60463	DD	0ffffffffH
+	DD	FLAT:$L60456
+xdata$x	ENDS
+_TEXT	SEGMENT
+__$EHRec$ = -12
+_this$ = -24
+_solPoint$ = -20
+??0MouseWin@@QAE@XZ PROC NEAR				; MouseWin::MouseWin
+
+; 39   : {
+
+  0004b	55		 push	 ebp
+  0004c	8b ec		 mov	 ebp, esp
+  0004e	6a ff		 push	 -1
+  00050	68 00 00 00 00	 push	 $L60461
+  00055	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  0005b	50		 push	 eax
+  0005c	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  00063	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00066	89 4d e8	 mov	 DWORD PTR _this$[ebp], ecx
+  00069	8b 4d e8	 mov	 ecx, DWORD PTR _this$[ebp]
+  0006c	e8 00 00 00 00	 call	 ??0SOL_Mouse@@QAE@XZ	; SOL_Mouse::SOL_Mouse
+  00071	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  00078	8b 45 e8	 mov	 eax, DWORD PTR _this$[ebp]
+  0007b	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7MouseWin@@6B@ ; MouseWin::`vftable'
+
+; 40   : //POINT			winPoint;
+; 41   : SOL_Point	solPoint;
+
+  00081	8d 4d ec	 lea	 ecx, DWORD PTR _solPoint$[ebp]
+  00084	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 42   : 
+; 43   : 	cursor = NULL;
+
+  00089	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?cursor@MouseWin@@1PAVSOL_Cursor@@A, 0 ; MouseWin::cursor
+
+; 44   : 
+; 45   : 	//  set existance flag
+; 46   : 	exists = GetSystemMetrics (SM_MOUSEPRESENT);
+
+  00093	6a 13		 push	 19			; 00000013H
+  00095	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__GetSystemMetrics@4
+  0009b	a3 00 00 00 00	 mov	 DWORD PTR _exists, eax
+
+; 47   : 
+; 48   : 	//  Set initial mouse position to 0, 0
+; 49   : 	solPoint.x = 0;
+
+  000a0	c7 45 ec 00 00
+	00 00		 mov	 DWORD PTR _solPoint$[ebp], 0
+
+; 50   : 	solPoint.y = 0;
+
+  000a7	c7 45 f0 00 00
+	00 00		 mov	 DWORD PTR _solPoint$[ebp+4], 0
+
+; 51   : 	SetPos(solPoint);
+
+  000ae	8d 4d ec	 lea	 ecx, DWORD PTR _solPoint$[ebp]
+  000b1	51		 push	 ecx
+  000b2	8b 4d e8	 mov	 ecx, DWORD PTR _this$[ebp]
+  000b5	e8 00 00 00 00	 call	 ?SetPos@MouseWin@@UAEXABVSOL_Point@@@Z ; MouseWin::SetPos
+
+; 52   : }
+
+  000ba	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  000c1	8b 45 e8	 mov	 eax, DWORD PTR _this$[ebp]
+  000c4	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  000c7	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  000ce	8b e5		 mov	 esp, ebp
+  000d0	5d		 pop	 ebp
+  000d1	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L60456:
+  00000	8b 4d e8	 mov	 ecx, DWORD PTR _this$[ebp]
+  00003	e8 00 00 00 00	 call	 ??1SOL_Mouse@@UAE@XZ	; SOL_Mouse::~SOL_Mouse
+  00008	c3		 ret	 0
+$L60461:
+  00009	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T60460
+  0000e	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+??0MouseWin@@QAE@XZ ENDP				; MouseWin::MouseWin
+PUBLIC	??1PointerDevice@@UAE@XZ			; PointerDevice::~PointerDevice
+PUBLIC	??_7SOL_Mouse@@6B@				; SOL_Mouse::`vftable'
+PUBLIC	??_GSOL_Mouse@@UAEPAXI@Z			; SOL_Mouse::`scalar deleting destructor'
+PUBLIC	??_ESOL_Mouse@@UAEPAXI@Z			; SOL_Mouse::`vector deleting destructor'
+EXTRN	__purecall:NEAR
+;	COMDAT ??_7SOL_Mouse@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\mouse.hpp
+CONST	SEGMENT
+??_7SOL_Mouse@@6B@ DD FLAT:??_ESOL_Mouse@@UAEPAXI@Z	; SOL_Mouse::`vftable'
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z
+	DD	FLAT:?IsSwift@SOL_Mouse@@UBEHXZ
+	DD	FLAT:?Vibrate@SOL_Mouse@@UBEXHHH@Z
+	DD	FLAT:?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+	DD	FLAT:?SetupHotRectangles@SOL_Mouse@@UAEXHVMemID@@@Z
+	DD	FLAT:?CheckHotRectangles@SOL_Mouse@@UAEXAAVSOL_Point@@@Z
+CONST	ENDS
+;	COMDAT ??1SOL_Mouse@@UAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1SOL_Mouse@@UAE@XZ PROC NEAR				; SOL_Mouse::~SOL_Mouse, COMDAT
+
+; 23   : 	virtual ~SOL_Mouse() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7SOL_Mouse@@6B@ ; SOL_Mouse::`vftable'
+  00010	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00013	e8 00 00 00 00	 call	 ??1PointerDevice@@UAE@XZ ; PointerDevice::~PointerDevice
+  00018	8b e5		 mov	 esp, ebp
+  0001a	5d		 pop	 ebp
+  0001b	c3		 ret	 0
+??1SOL_Mouse@@UAE@XZ ENDP				; SOL_Mouse::~SOL_Mouse
+_TEXT	ENDS
+PUBLIC	??_7PointerDevice@@6B@				; PointerDevice::`vftable'
+PUBLIC	??_GPointerDevice@@UAEPAXI@Z			; PointerDevice::`scalar deleting destructor'
+PUBLIC	??_EPointerDevice@@UAEPAXI@Z			; PointerDevice::`vector deleting destructor'
+;	COMDAT ??_7PointerDevice@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\ptrdev.hpp
+CONST	SEGMENT
+??_7PointerDevice@@6B@ DD FLAT:??_EPointerDevice@@UAEPAXI@Z ; PointerDevice::`vftable'
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+	DD	FLAT:__purecall
+CONST	ENDS
+;	COMDAT ??1PointerDevice@@UAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??1PointerDevice@@UAE@XZ PROC NEAR			; PointerDevice::~PointerDevice, COMDAT
+
+; 11   : 	virtual	~PointerDevice() {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7PointerDevice@@6B@ ; PointerDevice::`vftable'
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+??1PointerDevice@@UAE@XZ ENDP				; PointerDevice::~PointerDevice
+_TEXT	ENDS
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+;	COMDAT ??_GPointerDevice@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GPointerDevice@@UAEPAXI@Z PROC NEAR			; PointerDevice::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1PointerDevice@@UAE@XZ ; PointerDevice::~PointerDevice
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L59655
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L59655:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GPointerDevice@@UAEPAXI@Z ENDP			; PointerDevice::`scalar deleting destructor'
+_TEXT	ENDS
+;	COMDAT ?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z
+_TEXT	SEGMENT
+_this$ = -4
+?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z PROC NEAR		; SOL_Mouse::GetSwiftInfo, COMDAT
+
+; 28   : 	virtual	int	GetSwiftInfo(int*, int*, int*, int*) const {return 0;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	33 c0		 xor	 eax, eax
+  00009	8b e5		 mov	 esp, ebp
+  0000b	5d		 pop	 ebp
+  0000c	c2 10 00	 ret	 16			; 00000010H
+?GetSwiftInfo@SOL_Mouse@@UBEHPAH000@Z ENDP		; SOL_Mouse::GetSwiftInfo
+_TEXT	ENDS
+;	COMDAT ?IsSwift@SOL_Mouse@@UBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?IsSwift@SOL_Mouse@@UBEHXZ PROC NEAR			; SOL_Mouse::IsSwift, COMDAT
+
+; 34   : 	virtual	Bool	IsSwift()const {return False;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	33 c0		 xor	 eax, eax
+  00009	8b e5		 mov	 esp, ebp
+  0000b	5d		 pop	 ebp
+  0000c	c3		 ret	 0
+?IsSwift@SOL_Mouse@@UBEHXZ ENDP				; SOL_Mouse::IsSwift
+_TEXT	ENDS
+;	COMDAT ?Vibrate@SOL_Mouse@@UBEXHHH@Z
+_TEXT	SEGMENT
+_this$ = -4
+?Vibrate@SOL_Mouse@@UBEXHHH@Z PROC NEAR			; SOL_Mouse::Vibrate, COMDAT
+
+; 35   : 	virtual	void	Vibrate(int , int = 1, int = 1) const {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c2 0c 00	 ret	 12			; 0000000cH
+?Vibrate@SOL_Mouse@@UBEXHHH@Z ENDP			; SOL_Mouse::Vibrate
+_TEXT	ENDS
+EXTRN	?hotOn@SOL_Mouse@@1HA:DWORD			; SOL_Mouse::hotOn
+;	COMDAT ?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+_TEXT	SEGMENT
+_status$ = 8
+_this$ = -4
+?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z PROC NEAR	; SOL_Mouse::SetHotRectangleStatus, COMDAT
+
+; 37   : 						{hotOn = status;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR _status$[ebp]
+  0000a	a3 00 00 00 00	 mov	 DWORD PTR ?hotOn@SOL_Mouse@@1HA, eax ; SOL_Mouse::hotOn
+  0000f	8b e5		 mov	 esp, ebp
+  00011	5d		 pop	 ebp
+  00012	c2 04 00	 ret	 4
+?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z ENDP		; SOL_Mouse::SetHotRectangleStatus
+_TEXT	ENDS
+;	COMDAT ??_GSOL_Mouse@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GSOL_Mouse@@UAEPAXI@Z PROC NEAR			; SOL_Mouse::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1SOL_Mouse@@UAE@XZ	; SOL_Mouse::~SOL_Mouse
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L59724
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L59724:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GSOL_Mouse@@UAEPAXI@Z ENDP				; SOL_Mouse::`scalar deleting destructor'
+_TEXT	ENDS
+;	COMDAT ?Setup@MouseWin@@UAEXAAVSOL_Cursor@@@Z
+_TEXT	SEGMENT
+_this$ = -4
+?Setup@MouseWin@@UAEXAAVSOL_Cursor@@@Z PROC NEAR	; MouseWin::Setup, COMDAT
+
+; 28   : 	void	Setup(SOL_Cursor&) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b e5		 mov	 esp, ebp
+  00009	5d		 pop	 ebp
+  0000a	c2 04 00	 ret	 4
+?Setup@MouseWin@@UAEXAAVSOL_Cursor@@@Z ENDP		; MouseWin::Setup
+_TEXT	ENDS
+PUBLIC	??1MouseWin@@UAE@XZ				; MouseWin::~MouseWin
+;	COMDAT ??_GMouseWin@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GMouseWin@@UAEPAXI@Z PROC NEAR			; MouseWin::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1MouseWin@@UAE@XZ	; MouseWin::~MouseWin
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L60142
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L60142:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GMouseWin@@UAEPAXI@Z ENDP				; MouseWin::`scalar deleting destructor'
+_TEXT	ENDS
+PUBLIC	??0PointerDevice@@QAE@XZ			; PointerDevice::PointerDevice
+;	COMDAT ??0SOL_Mouse@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0SOL_Mouse@@QAE@XZ PROC NEAR				; SOL_Mouse::SOL_Mouse, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0PointerDevice@@QAE@XZ ; PointerDevice::PointerDevice
+  0000f	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00012	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7SOL_Mouse@@6B@ ; SOL_Mouse::`vftable'
+  00018	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001b	8b e5		 mov	 esp, ebp
+  0001d	5d		 pop	 ebp
+  0001e	c3		 ret	 0
+??0SOL_Mouse@@QAE@XZ ENDP				; SOL_Mouse::SOL_Mouse
+_TEXT	ENDS
+;	COMDAT ??0PointerDevice@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -4
+??0PointerDevice@@QAE@XZ PROC NEAR			; PointerDevice::PointerDevice, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7PointerDevice@@6B@ ; PointerDevice::`vftable'
+  00010	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00013	8b e5		 mov	 esp, ebp
+  00015	5d		 pop	 ebp
+  00016	c3		 ret	 0
+??0PointerDevice@@QAE@XZ ENDP				; PointerDevice::PointerDevice
+_TEXT	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+??1MouseWin@@UAE@XZ PROC NEAR				; MouseWin::~MouseWin
+
+; 56   : {
+
+  000d2	55		 push	 ebp
+  000d3	8b ec		 mov	 ebp, esp
+  000d5	51		 push	 ecx
+  000d6	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  000d9	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  000dc	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7MouseWin@@6B@ ; MouseWin::`vftable'
+
+; 57   : }
+
+  000e2	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  000e5	e8 00 00 00 00	 call	 ??1SOL_Mouse@@UAE@XZ	; SOL_Mouse::~SOL_Mouse
+  000ea	8b e5		 mov	 esp, ebp
+  000ec	5d		 pop	 ebp
+  000ed	c3		 ret	 0
+??1MouseWin@@UAE@XZ ENDP				; MouseWin::~MouseWin
+_TEXT	ENDS
+PUBLIC	??4SOL_Point@@QAEAAV0@ABV0@@Z			; SOL_Point::operator=
+_TEXT	SEGMENT
+_pt$ = 8
+_this$ = -4
+?GlobalPos@MouseWin@@UBEHPAVSOL_Point@@@Z PROC NEAR	; MouseWin::GlobalPos
+
+; 61   : {
+
+  000ee	55		 push	 ebp
+  000ef	8b ec		 mov	 ebp, esp
+  000f1	51		 push	 ecx
+  000f2	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 62   : 	// Return interrupt level position in global coords of mouse in the point
+; 63   : 	*pt = pos;
+
+  000f5	68 00 00 00 00	 push	 OFFSET FLAT:_pos
+  000fa	8b 4d 08	 mov	 ecx, DWORD PTR _pt$[ebp]
+  000fd	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 64   : 	return buttonState;
+
+  00102	a1 00 00 00 00	 mov	 eax, DWORD PTR _buttonState
+
+; 65   : }
+
+  00107	8b e5		 mov	 esp, ebp
+  00109	5d		 pop	 ebp
+  0010a	c2 04 00	 ret	 4
+?GlobalPos@MouseWin@@UBEHPAVSOL_Point@@@Z ENDP		; MouseWin::GlobalPos
+_TEXT	ENDS
+;	COMDAT ??4SOL_Point@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??4SOL_Point@@QAEAAV0@ABV0@@Z PROC NEAR			; SOL_Point::operator=, COMDAT
+
+; 117  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : 	x = p.x;
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+
+; 119  : 	y = p.y;
+
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00017	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0001a	89 50 04	 mov	 DWORD PTR [eax+4], edx
+
+; 120  : 	return *this;
+
+  0001d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+
+; 121  : }
+
+  00020	8b e5		 mov	 esp, ebp
+  00022	5d		 pop	 ebp
+  00023	c2 04 00	 ret	 4
+??4SOL_Point@@QAEAAV0@ABV0@@Z ENDP			; SOL_Point::operator=
+_TEXT	ENDS
+PUBLIC	??0SOL_Point@@QAE@HH@Z				; SOL_Point::SOL_Point
+EXTRN	?graphMgr@@3PAVGraphicsMgr@@A:DWORD		; graphMgr
+_TEXT	SEGMENT
+$T60484 = -8
+_pt$ = 8
+_this$ = -12
+?GlobalPosSci@MouseWin@@UBEHPAVSOL_Point@@@Z PROC NEAR	; MouseWin::GlobalPosSci
+
+; 70   : {
+
+  0010d	55		 push	 ebp
+  0010e	8b ec		 mov	 ebp, esp
+  00110	83 ec 0c	 sub	 esp, 12			; 0000000cH
+  00113	89 4d f4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 71   : 	// Return interrupt level position in global coords of mouse in the point  
+; 72   : 	if (graphMgr) {
+
+  00116	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A, 0 ; graphMgr
+  0011d	74 0f		 je	 SHORT $L60158
+
+; 73   : //		pt->x = pos.x / Ratio(graphMgr->Xdim(), LOWRESX);
+; 74   : //		pt->y = pos.y / Ratio(graphMgr->Ydim(), LOWRESY);
+; 75   : 		// already scaled under Windows
+; 76   : 		*pt = pos;
+
+  0011f	68 00 00 00 00	 push	 OFFSET FLAT:_pos
+  00124	8b 4d 08	 mov	 ecx, DWORD PTR _pt$[ebp]
+  00127	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 78   : 	else
+
+  0012c	eb 15		 jmp	 SHORT $L60159
+$L60158:
+
+; 79   : 		*pt = SOL_Point(0,0);
+
+  0012e	6a 00		 push	 0
+  00130	6a 00		 push	 0
+  00132	8d 4d f8	 lea	 ecx, DWORD PTR $T60484[ebp]
+  00135	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@HH@Z	; SOL_Point::SOL_Point
+  0013a	50		 push	 eax
+  0013b	8b 4d 08	 mov	 ecx, DWORD PTR _pt$[ebp]
+  0013e	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+$L60159:
+
+; 80   : 	return buttonState;
+
+  00143	a1 00 00 00 00	 mov	 eax, DWORD PTR _buttonState
+
+; 81   : }
+
+  00148	8b e5		 mov	 esp, ebp
+  0014a	5d		 pop	 ebp
+  0014b	c2 04 00	 ret	 4
+?GlobalPosSci@MouseWin@@UBEHPAVSOL_Point@@@Z ENDP	; MouseWin::GlobalPosSci
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@HH@Z
+_TEXT	SEGMENT
+_x$ = 8
+_y$ = 12
+_this$ = -4
+??0SOL_Point@@QAE@HH@Z PROC NEAR			; SOL_Point::SOL_Point, COMDAT
+
+; 21   : 	SOL_Point(Coord x, Coord y) : x(x), y(y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _x$[ebp]
+  0000d	89 08		 mov	 DWORD PTR [eax], ecx
+  0000f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00012	8b 45 0c	 mov	 eax, DWORD PTR _y$[ebp]
+  00015	89 42 04	 mov	 DWORD PTR [edx+4], eax
+  00018	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001b	8b e5		 mov	 esp, ebp
+  0001d	5d		 pop	 ebp
+  0001e	c2 08 00	 ret	 8
+??0SOL_Point@@QAE@HH@Z ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+_TEXT	SEGMENT
+_this$ = -4
+?Exists@MouseWin@@UBEHXZ PROC NEAR			; MouseWin::Exists
+
+; 86   : {
+
+  0014e	55		 push	 ebp
+  0014f	8b ec		 mov	 ebp, esp
+  00151	51		 push	 ecx
+  00152	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 87   : 	return exists;
+
+  00155	a1 00 00 00 00	 mov	 eax, DWORD PTR _exists
+
+; 88   : }
+
+  0015a	8b e5		 mov	 esp, ebp
+  0015c	5d		 pop	 ebp
+  0015d	c3		 ret	 0
+?Exists@MouseWin@@UBEHXZ ENDP				; MouseWin::Exists
+_p$ = 8
+_this$ = -4
+?SetPos@MouseWin@@UAEXABVSOL_Point@@@Z PROC NEAR	; MouseWin::SetPos
+
+; 92   : {
+
+  0015e	55		 push	 ebp
+  0015f	8b ec		 mov	 ebp, esp
+  00161	51		 push	 ecx
+  00162	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 93   : 	pos = p;
+
+  00165	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  00168	50		 push	 eax
+  00169	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_pos
+  0016e	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 94   : }
+
+  00173	8b e5		 mov	 esp, ebp
+  00175	5d		 pop	 ebp
+  00176	c2 04 00	 ret	 4
+?SetPos@MouseWin@@UAEXABVSOL_Point@@@Z ENDP		; MouseWin::SetPos
+_TEXT	ENDS
+PUBLIC	??4SOL_Rect@@QAEAAV0@ABV0@@Z			; SOL_Rect::operator=
+_TEXT	SEGMENT
+_r$ = 8
+_this$ = -4
+?SetRestrictRect@MouseWin@@UAEXABVSOL_Rect@@@Z PROC NEAR ; MouseWin::SetRestrictRect
+
+; 99   : {
+
+  00179	55		 push	 ebp
+  0017a	8b ec		 mov	 ebp, esp
+  0017c	51		 push	 ecx
+  0017d	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 100  : 	restrict = r;
+
+  00180	8b 45 08	 mov	 eax, DWORD PTR _r$[ebp]
+  00183	50		 push	 eax
+  00184	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_restrict
+  00189	e8 00 00 00 00	 call	 ??4SOL_Rect@@QAEAAV0@ABV0@@Z ; SOL_Rect::operator=
+
+; 101  : 	restrictFlag = True;
+
+  0018e	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?restrictFlag@MouseWin@@1HA, 1 ; MouseWin::restrictFlag
+
+; 102  : 	inCage = True;
+
+  00198	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?inCage@MouseWin@@1HA, 1 ; MouseWin::inCage
+
+; 103  : }
+
+  001a2	8b e5		 mov	 esp, ebp
+  001a4	5d		 pop	 ebp
+  001a5	c2 04 00	 ret	 4
+?SetRestrictRect@MouseWin@@UAEXABVSOL_Rect@@@Z ENDP	; MouseWin::SetRestrictRect
+_TEXT	ENDS
+;	COMDAT ??4SOL_Rect@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT
+___that$ = 8
+_this$ = -4
+??4SOL_Rect@@QAEAAV0@ABV0@@Z PROC NEAR			; SOL_Rect::operator=, COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 08	 mov	 eax, DWORD PTR ___that$[ebp]
+  0000a	50		 push	 eax
+  0000b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000e	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+  00013	8b 4d 08	 mov	 ecx, DWORD PTR ___that$[ebp]
+  00016	83 c1 08	 add	 ecx, 8
+  00019	51		 push	 ecx
+  0001a	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001d	83 c1 08	 add	 ecx, 8
+  00020	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??4SOL_Rect@@QAEAAV0@ABV0@@Z ENDP			; SOL_Rect::operator=
+_TEXT	ENDS
+EXTRN	?hMyCur@@3PAUHICON__@@A:DWORD			; hMyCur
+EXTRN	?hCurCur@@3PAUHICON__@@A:DWORD			; hCurCur
+EXTRN	__imp__SetCursor@4:NEAR
+_TEXT	SEGMENT
+_this$ = -4
+?ClearRestrictRect@MouseWin@@UAEXXZ PROC NEAR		; MouseWin::ClearRestrictRect
+
+; 107  : {
+
+  001a8	55		 push	 ebp
+  001a9	8b ec		 mov	 ebp, esp
+  001ab	51		 push	 ecx
+  001ac	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 108  : 	restrictFlag = False;
+
+  001af	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?restrictFlag@MouseWin@@1HA, 0 ; MouseWin::restrictFlag
+
+; 109  : 	inCage = False;
+
+  001b9	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?inCage@MouseWin@@1HA, 0 ; MouseWin::inCage
+
+; 110  : 	hCurCur = hMyCur;
+
+  001c3	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hMyCur@@3PAUHICON__@@A ; hMyCur
+  001c8	a3 00 00 00 00	 mov	 DWORD PTR ?hCurCur@@3PAUHICON__@@A, eax ; hCurCur
+
+; 111  : 	SetCursor(hCurCur);
+
+  001cd	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hCurCur@@3PAUHICON__@@A ; hCurCur
+  001d3	51		 push	 ecx
+  001d4	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SetCursor@4
+
+; 112  : }
+
+  001da	8b e5		 mov	 esp, ebp
+  001dc	5d		 pop	 ebp
+  001dd	c3		 ret	 0
+?ClearRestrictRect@MouseWin@@UAEXXZ ENDP		; MouseWin::ClearRestrictRect
+_TEXT	ENDS
+PUBLIC	??0SOL_Point@@QAE@ABV0@@Z			; SOL_Point::SOL_Point
+PUBLIC	?WinMouseButton@MouseWin@@QAEXIABVSOL_Point@@@Z	; MouseWin::WinMouseButton
+PUBLIC	?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z		; SOL_Rect::Intersect
+EXTRN	?gameWidth@@3HA:DWORD				; gameWidth
+EXTRN	?gameHeight@@3HA:DWORD				; gameHeight
+EXTRN	?eventMgr@@3PAUEventMgr@@A:DWORD		; eventMgr
+EXTRN	?kbdMgr@@3PAVKbdMgr@@A:DWORD			; kbdMgr
+_TEXT	SEGMENT
+_iMessage$ = 8
+_p$ = 12
+_this$ = -16
+_tmp$ = -8
+?WinMouseButton@MouseWin@@QAEXIABVSOL_Point@@@Z PROC NEAR ; MouseWin::WinMouseButton
+
+; 117  : {
+
+  001de	55		 push	 ebp
+  001df	8b ec		 mov	 ebp, esp
+  001e1	83 ec 10	 sub	 esp, 16			; 00000010H
+  001e4	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 118  : SOL_Point	tmp;
+
+  001e7	8d 4d f8	 lea	 ecx, DWORD PTR _tmp$[ebp]
+  001ea	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 119  : 
+; 120  : 	tmp = p;
+
+  001ef	8b 45 0c	 mov	 eax, DWORD PTR _p$[ebp]
+  001f2	50		 push	 eax
+  001f3	8d 4d f8	 lea	 ecx, DWORD PTR _tmp$[ebp]
+  001f6	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 121  : 
+; 122  : 	// scale to sci dimensions
+; 123  : //	tmp.x = (tmp.x < gameBorder)? 0: tmp.x - gameBorder; 
+; 124  : //	tmp.y = (tmp.y < gameBorder)? 0: tmp.y - gameBorder; 
+; 125  : 
+; 126  : //	tmp.x -= gameBorderX;
+; 127  : //	tmp.y -= gameBorderY;
+; 128  : 	tmp.x = (tmp.x * SCIRESX) / gameWidth;
+
+  001fb	8b 45 f8	 mov	 eax, DWORD PTR _tmp$[ebp]
+  001fe	69 c0 80 02 00
+	00		 imul	 eax, 640		; 00000280H
+  00204	99		 cdq
+  00205	f7 3d 00 00 00
+	00		 idiv	 DWORD PTR ?gameWidth@@3HA ; gameWidth
+  0020b	89 45 f8	 mov	 DWORD PTR _tmp$[ebp], eax
+
+; 129  : 	tmp.y = (tmp.y * SCIRESY) / gameHeight;
+
+  0020e	8b 45 fc	 mov	 eax, DWORD PTR _tmp$[ebp+4]
+  00211	69 c0 e0 01 00
+	00		 imul	 eax, 480		; 000001e0H
+  00217	99		 cdq
+  00218	f7 3d 00 00 00
+	00		 idiv	 DWORD PTR ?gameHeight@@3HA ; gameHeight
+  0021e	89 45 fc	 mov	 DWORD PTR _tmp$[ebp+4], eax
+
+; 130  : //	tmp.x = (tmp.x > SCIRESX-1)? SCIRESX-1: tmp.x;
+; 131  : //	tmp.y = (tmp.y > SCIRESY-1)? SCIRESY-1: tmp.y;
+; 132  : 
+; 133  : 	// ignore if not within restrict rect
+; 134  : 	if (restrictFlag & !restrict.Intersect(tmp))
+
+  00221	83 ec 08	 sub	 esp, 8
+  00224	8b cc		 mov	 ecx, esp
+  00226	8d 55 f8	 lea	 edx, DWORD PTR _tmp$[ebp]
+  00229	52		 push	 edx
+  0022a	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@ABV0@@Z ; SOL_Point::SOL_Point
+  0022f	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_restrict
+  00234	e8 00 00 00 00	 call	 ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z ; SOL_Rect::Intersect
+  00239	f7 d8		 neg	 eax
+  0023b	1b c0		 sbb	 eax, eax
+  0023d	40		 inc	 eax
+  0023e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?restrictFlag@MouseWin@@1HA ; MouseWin::restrictFlag
+  00244	23 c8		 and	 ecx, eax
+  00246	85 c9		 test	 ecx, ecx
+  00248	74 05		 je	 SHORT $L60182
+
+; 135  : 		return;
+
+  0024a	e9 d0 00 00 00	 jmp	 $L60179
+$L60182:
+
+; 136  : 
+; 137  : 	SetPos(p);
+
+  0024f	8b 55 0c	 mov	 edx, DWORD PTR _p$[ebp]
+  00252	52		 push	 edx
+  00253	8b 45 f0	 mov	 eax, DWORD PTR _this$[ebp]
+  00256	8b 10		 mov	 edx, DWORD PTR [eax]
+  00258	8b 4d f0	 mov	 ecx, DWORD PTR _this$[ebp]
+  0025b	ff 52 14	 call	 DWORD PTR [edx+20]
+
+; 138  : 
+; 139  : //	event.where = pos;
+; 140  : 	event.where = tmp;
+
+  0025e	8d 45 f8	 lea	 eax, DWORD PTR _tmp$[ebp]
+  00261	50		 push	 eax
+  00262	b9 10 00 00 00	 mov	 ecx, OFFSET FLAT:_event+16
+  00267	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 143  : 		 (iMessage == WM_MBUTTONDOWN) ||
+; 144  : 		 (iMessage == WM_RBUTTONDOWN)) {
+
+  0026c	81 7d 08 01 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 513 ; 00000201H
+  00273	74 12		 je	 SHORT $L60184
+  00275	81 7d 08 07 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 519 ; 00000207H
+  0027c	74 09		 je	 SHORT $L60184
+  0027e	81 7d 08 04 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 516 ; 00000204H
+  00285	75 15		 jne	 SHORT $L60183
+$L60184:
+
+; 145  : 		event.type = SOL_Event::MouseDown;
+
+  00287	66 c7 05 00 00
+	00 00 01 00	 mov	 WORD PTR _event, 1
+
+; 146  : 		buttonState = 1;
+
+  00290	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _buttonState, 1
+
+; 147  : 	} else {
+
+  0029a	eb 13		 jmp	 SHORT $L60185
+$L60183:
+
+; 148  : //		if (outOfGame)
+; 149  : //			ReleaseCapture();
+; 150  : 		event.type = SOL_Event::MouseUp;
+
+  0029c	66 c7 05 00 00
+	00 00 02 00	 mov	 WORD PTR _event, 2
+
+; 151  : 		buttonState = 0;
+
+  002a5	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _buttonState, 0
+$L60185:
+
+; 153  : 
+; 154  : 	event.modifiers = kbdMgr->Modifiers();
+
+  002af	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?kbdMgr@@3PAVKbdMgr@@A ; kbdMgr
+  002b5	8b 11		 mov	 edx, DWORD PTR [ecx]
+  002b7	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?kbdMgr@@3PAVKbdMgr@@A ; kbdMgr
+  002bd	ff 52 0c	 call	 DWORD PTR [edx+12]
+  002c0	66 a3 08 00 00
+	00		 mov	 WORD PTR _event+8, ax
+
+; 159  : 		 (iMessage == WM_MBUTTONUP))
+
+  002c6	81 7d 08 07 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 519 ; 00000207H
+  002cd	74 09		 je	 SHORT $L60187
+  002cf	81 7d 08 08 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 520 ; 00000208H
+  002d6	75 0e		 jne	 SHORT $L60186
+$L60187:
+
+; 160  : 		event.modifiers |= Kbd::Ctrl;
+
+  002d8	66 a1 08 00 00
+	00		 mov	 ax, WORD PTR _event+8
+  002de	0c 04		 or	 al, 4
+  002e0	66 a3 08 00 00
+	00		 mov	 WORD PTR _event+8, ax
+$L60186:
+
+; 165  : 		 (iMessage == WM_RBUTTONUP))
+
+  002e6	81 7d 08 04 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 516 ; 00000204H
+  002ed	74 09		 je	 SHORT $L60189
+  002ef	81 7d 08 05 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 517 ; 00000205H
+  002f6	75 11		 jne	 SHORT $L60188
+$L60189:
+
+; 166  : 		event.modifiers |= Kbd::Shift;
+
+  002f8	66 8b 0d 08 00
+	00 00		 mov	 cx, WORD PTR _event+8
+  002ff	80 c9 03	 or	 cl, 3
+  00302	66 89 0d 08 00
+	00 00		 mov	 WORD PTR _event+8, cx
+$L60188:
+
+; 167  : 
+; 168  : 		// Post the event.
+; 169  : 	eventMgr->Post(&event);
+
+  00309	68 00 00 00 00	 push	 OFFSET FLAT:_event
+  0030e	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  00314	8b 02		 mov	 eax, DWORD PTR [edx]
+  00316	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  0031c	ff 50 18	 call	 DWORD PTR [eax+24]
+$L60179:
+
+; 170  : }
+
+  0031f	8b e5		 mov	 esp, ebp
+  00321	5d		 pop	 ebp
+  00322	c2 08 00	 ret	 8
+?WinMouseButton@MouseWin@@QAEXIABVSOL_Point@@@Z ENDP	; MouseWin::WinMouseButton
+_TEXT	ENDS
+;	COMDAT ??0SOL_Point@@QAE@ABV0@@Z
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -4
+??0SOL_Point@@QAE@ABV0@@Z PROC NEAR			; SOL_Point::SOL_Point, COMDAT
+
+; 22   : 	SOL_Point(const SOL_Point& p) : x(p.x), y(p.y) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  0000d	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0000f	89 10		 mov	 DWORD PTR [eax], edx
+  00011	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00014	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00017	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  0001a	89 50 04	 mov	 DWORD PTR [eax+4], edx
+  0001d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00020	8b e5		 mov	 esp, ebp
+  00022	5d		 pop	 ebp
+  00023	c2 04 00	 ret	 4
+??0SOL_Point@@QAE@ABV0@@Z ENDP				; SOL_Point::SOL_Point
+_TEXT	ENDS
+;	COMDAT ?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z
+_TEXT	SEGMENT
+_P$ = 8
+_this$ = -4
+?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z PROC NEAR	; SOL_Rect::Intersect, COMDAT
+
+; 177  : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 178  : 	if (P.x < A.x  ||  P.x > B.x)
+
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _P$[ebp]
+  0000d	3b 08		 cmp	 ecx, DWORD PTR [eax]
+  0000f	7c 0b		 jl	 SHORT $L53899
+  00011	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00014	8b 45 08	 mov	 eax, DWORD PTR _P$[ebp]
+  00017	3b 42 08	 cmp	 eax, DWORD PTR [edx+8]
+  0001a	7e 04		 jle	 SHORT $L53898
+$L53899:
+
+; 179  : 		return False;
+
+  0001c	33 c0		 xor	 eax, eax
+  0001e	eb 1f		 jmp	 SHORT $L53897
+$L53898:
+
+; 180  : 	if (P.y < A.y  ||  P.y > B.y)
+
+  00020	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00023	8b 55 0c	 mov	 edx, DWORD PTR _P$[ebp+4]
+  00026	3b 51 04	 cmp	 edx, DWORD PTR [ecx+4]
+  00029	7c 0b		 jl	 SHORT $L53901
+  0002b	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0002e	8b 4d 0c	 mov	 ecx, DWORD PTR _P$[ebp+4]
+  00031	3b 48 0c	 cmp	 ecx, DWORD PTR [eax+12]
+  00034	7e 04		 jle	 SHORT $L53900
+$L53901:
+
+; 181  : 		return False;
+
+  00036	33 c0		 xor	 eax, eax
+  00038	eb 05		 jmp	 SHORT $L53897
+$L53900:
+
+; 182  : 	return True;
+
+  0003a	b8 01 00 00 00	 mov	 eax, 1
+$L53897:
+
+; 183  : }
+
+  0003f	8b e5		 mov	 esp, ebp
+  00041	5d		 pop	 ebp
+  00042	c2 08 00	 ret	 8
+?Intersect@SOL_Rect@@QBEHVSOL_Point@@@Z ENDP		; SOL_Rect::Intersect
+_TEXT	ENDS
+PUBLIC	??0MouseWinClr@@QAE@XZ				; MouseWinClr::MouseWinClr
+PUBLIC	?Exists@MouseWinClr@@UBEHXZ			; MouseWinClr::Exists
+PUBLIC	?GlobalPos@MouseWinClr@@UBEHPAVSOL_Point@@@Z	; MouseWinClr::GlobalPos
+PUBLIC	?GlobalPosSci@MouseWinClr@@UBEHPAVSOL_Point@@@Z	; MouseWinClr::GlobalPosSci
+PUBLIC	?GetSwiftInfo@MouseWinClr@@UBEHPAH000@Z		; MouseWinClr::GetSwiftInfo
+PUBLIC	?SetRestrictRect@MouseWinClr@@UAEXABVSOL_Rect@@@Z ; MouseWinClr::SetRestrictRect
+PUBLIC	?ClearRestrictRect@MouseWinClr@@UAEXXZ		; MouseWinClr::ClearRestrictRect
+PUBLIC	?SetPos@MouseWinClr@@UAEXABVSOL_Point@@@Z	; MouseWinClr::SetPos
+PUBLIC	?Setup@MouseWinClr@@UAEXAAVSOL_Cursor@@@Z	; MouseWinClr::Setup
+PUBLIC	?IsSwift@MouseWinClr@@UBEHXZ			; MouseWinClr::IsSwift
+PUBLIC	??_7MouseWinClr@@6B@				; MouseWinClr::`vftable'
+PUBLIC	??_GMouseWinClr@@UAEPAXI@Z			; MouseWinClr::`scalar deleting destructor'
+PUBLIC	??_EMouseWinClr@@UAEPAXI@Z			; MouseWinClr::`vector deleting destructor'
+EXTRN	??2@YAPAXI@Z:NEAR				; operator new
+EXTRN	?Fatal@MsgMgr@@QAAXPADZZ:NEAR			; MsgMgr::Fatal
+EXTRN	?msgMgr@@3PAVMsgMgr@@A:DWORD			; msgMgr
+;	COMDAT ??_7MouseWinClr@@6B@
+; File C:\Documents and Settings\don\Desktop\sciw\Interp\Mousew.cpp
+CONST	SEGMENT
+??_7MouseWinClr@@6B@ DD FLAT:??_EMouseWinClr@@UAEPAXI@Z	; MouseWinClr::`vftable'
+	DD	FLAT:?Exists@MouseWinClr@@UBEHXZ
+	DD	FLAT:?GlobalPos@MouseWinClr@@UBEHPAVSOL_Point@@@Z
+	DD	FLAT:?SetRestrictRect@MouseWinClr@@UAEXABVSOL_Rect@@@Z
+	DD	FLAT:?ClearRestrictRect@MouseWinClr@@UAEXXZ
+	DD	FLAT:?SetPos@MouseWinClr@@UAEXABVSOL_Point@@@Z
+	DD	FLAT:?Setup@MouseWinClr@@UAEXAAVSOL_Cursor@@@Z
+	DD	FLAT:?GlobalPosSci@MouseWinClr@@UBEHPAVSOL_Point@@@Z
+	DD	FLAT:?GetSwiftInfo@MouseWinClr@@UBEHPAH000@Z
+	DD	FLAT:?IsSwift@MouseWinClr@@UBEHXZ
+	DD	FLAT:?Vibrate@SOL_Mouse@@UBEXHHH@Z
+	DD	FLAT:?SetHotRectangleStatus@SOL_Mouse@@UAEXH@Z
+	DD	FLAT:?SetupHotRectangles@SOL_Mouse@@UAEXHVMemID@@@Z
+	DD	FLAT:?CheckHotRectangles@SOL_Mouse@@UAEXAAVSOL_Point@@@Z
+CONST	ENDS
+_DATA	SEGMENT
+$SG60210 DB	0aH, 'In MS-DOS this game requires a mouse driver.', 0aH, 'T'
+	DB	'his program could not find a driver that was loaded.', 0aH, 'P'
+	DB	'lease load a mouse driver before launching the game.', 00H
+_DATA	ENDS
+xdata$x	SEGMENT
+$T60499	DD	019930520H
+	DD	01H
+	DD	FLAT:$T60501
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T60501	DD	0ffffffffH
+	DD	FLAT:$L60497
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T60496 = -16
+__$EHRec$ = -12
+_this$ = -20
+??0MouseWinClr@@QAE@XZ PROC NEAR			; MouseWinClr::MouseWinClr
+
+; 208  : {
+
+  00325	55		 push	 ebp
+  00326	8b ec		 mov	 ebp, esp
+  00328	6a ff		 push	 -1
+  0032a	68 00 00 00 00	 push	 $L60500
+  0032f	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  00335	50		 push	 eax
+  00336	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  0033d	83 ec 08	 sub	 esp, 8
+  00340	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+  00343	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00346	e8 00 00 00 00	 call	 ??0SOL_Mouse@@QAE@XZ	; SOL_Mouse::SOL_Mouse
+  0034b	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+  00352	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  00355	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7MouseWinClr@@6B@ ; MouseWinClr::`vftable'
+
+; 209  : 	cursor = NULL;
+
+  0035b	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?cursor@MouseWinClr@@1PAVSOL_Cursor@@A, 0 ; MouseWinClr::cursor
+
+; 210  : 	useMouse = True;
+
+  00365	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR ?useMouse@MouseWinClr@@1HA, 1 ; MouseWinClr::useMouse
+
+; 211  : 
+; 212  : //	InitMouse();
+; 213  : 	//  set existance flag
+; 214  : 	exists = GetSystemMetrics (SM_MOUSEPRESENT);
+
+  0036f	6a 13		 push	 19			; 00000013H
+  00371	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__GetSystemMetrics@4
+  00377	a3 00 00 00 00	 mov	 DWORD PTR _exists, eax
+
+; 215  : 
+; 216  : 	if (Exists())  {
+
+  0037c	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  0037f	e8 00 00 00 00	 call	 ?Exists@MouseWinClr@@UBEHXZ ; MouseWinClr::Exists
+  00384	85 c0		 test	 eax, eax
+  00386	74 23		 je	 SHORT $L60206
+
+; 217  : 		stackBuff = New uchar[15000];
+
+  00388	68 98 3a 00 00	 push	 15000			; 00003a98H
+  0038d	e8 00 00 00 00	 call	 ??2@YAPAXI@Z		; operator new
+  00392	83 c4 04	 add	 esp, 4
+  00395	89 45 f0	 mov	 DWORD PTR $T60496[ebp], eax
+  00398	8b 4d f0	 mov	 ecx, DWORD PTR $T60496[ebp]
+  0039b	89 0d 00 00 00
+	00		 mov	 DWORD PTR ?stackBuff@MouseWinClr@@1PAEA, ecx ; MouseWinClr::stackBuff
+
+; 218  : //		InstallMouseInterrupt();
+; 219  : 		ClearRestrictRect();
+
+  003a1	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  003a4	e8 00 00 00 00	 call	 ?ClearRestrictRect@MouseWinClr@@UAEXXZ ; MouseWinClr::ClearRestrictRect
+
+; 221  : 	else
+
+  003a9	eb 14		 jmp	 SHORT $L60209
+$L60206:
+
+; 222  : 		msgMgr->Fatal("\nIn MS-DOS this game requires a mouse driver.\n"
+; 223  :  						  "This program could not find a driver that was loaded.\n"
+; 224  : 						  "Please load a mouse driver before launching the game.");
+
+  003ab	68 00 00 00 00	 push	 OFFSET FLAT:$SG60210
+  003b0	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?msgMgr@@3PAVMsgMgr@@A ; msgMgr
+  003b6	52		 push	 edx
+  003b7	e8 00 00 00 00	 call	 ?Fatal@MsgMgr@@QAAXPADZZ ; MsgMgr::Fatal
+  003bc	83 c4 08	 add	 esp, 8
+$L60209:
+
+; 225  : 
+; 226  : }
+
+  003bf	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  003c6	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  003c9	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  003cc	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  003d3	8b e5		 mov	 esp, ebp
+  003d5	5d		 pop	 ebp
+  003d6	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L60497:
+  00013	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00016	e8 00 00 00 00	 call	 ??1SOL_Mouse@@UAE@XZ	; SOL_Mouse::~SOL_Mouse
+  0001b	c3		 ret	 0
+$L60500:
+  0001c	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T60499
+  00021	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+??0MouseWinClr@@QAE@XZ ENDP				; MouseWinClr::MouseWinClr
+PUBLIC	??1MouseWinClr@@UAE@XZ				; MouseWinClr::~MouseWinClr
+;	COMDAT ??_GMouseWinClr@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GMouseWinClr@@UAEPAXI@Z PROC NEAR			; MouseWinClr::`scalar deleting destructor', COMDAT
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??1MouseWinClr@@UAE@XZ	; MouseWinClr::~MouseWinClr
+  0000f	8b 45 08	 mov	 eax, DWORD PTR ___flags$[ebp]
+  00012	83 e0 01	 and	 eax, 1
+  00015	85 c0		 test	 eax, eax
+  00017	74 0c		 je	 SHORT $L60214
+  00019	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0001c	51		 push	 ecx
+  0001d	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00022	83 c4 04	 add	 esp, 4
+$L60214:
+  00025	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00028	8b e5		 mov	 esp, ebp
+  0002a	5d		 pop	 ebp
+  0002b	c2 04 00	 ret	 4
+??_GMouseWinClr@@UAEPAXI@Z ENDP				; MouseWinClr::`scalar deleting destructor'
+_TEXT	ENDS
+xdata$x	SEGMENT
+$T60507	DD	019930520H
+	DD	01H
+	DD	FLAT:$T60509
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+$T60509	DD	0ffffffffH
+	DD	FLAT:$L60505
+xdata$x	ENDS
+_TEXT	SEGMENT
+$T60504 = -16
+__$EHRec$ = -12
+_this$ = -20
+??1MouseWinClr@@UAE@XZ PROC NEAR			; MouseWinClr::~MouseWinClr
+
+; 230  : {
+
+  003d7	55		 push	 ebp
+  003d8	8b ec		 mov	 ebp, esp
+  003da	6a ff		 push	 -1
+  003dc	68 00 00 00 00	 push	 $L60508
+  003e1	64 a1 00 00 00
+	00		 mov	 eax, DWORD PTR fs:__except_list
+  003e7	50		 push	 eax
+  003e8	64 89 25 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, esp
+  003ef	83 ec 08	 sub	 esp, 8
+  003f2	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+  003f5	8b 45 ec	 mov	 eax, DWORD PTR _this$[ebp]
+  003f8	c7 00 00 00 00
+	00		 mov	 DWORD PTR [eax], OFFSET FLAT:??_7MouseWinClr@@6B@ ; MouseWinClr::`vftable'
+  003fe	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR __$EHRec$[ebp+8], 0
+
+; 231  : 	if (useMouse)  { // Exists())  {
+
+  00405	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?useMouse@MouseWinClr@@1HA, 0 ; MouseWinClr::useMouse
+  0040c	74 15		 je	 SHORT $L60218
+
+; 232  : //		ReleaseMouseInterrupt();
+; 233  : 		delete stackBuff;
+
+  0040e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?stackBuff@MouseWinClr@@1PAEA ; MouseWinClr::stackBuff
+  00414	89 4d f0	 mov	 DWORD PTR $T60504[ebp], ecx
+  00417	8b 55 f0	 mov	 edx, DWORD PTR $T60504[ebp]
+  0041a	52		 push	 edx
+  0041b	e8 00 00 00 00	 call	 ??3@YAXPAX@Z		; operator delete
+  00420	83 c4 04	 add	 esp, 4
+$L60218:
+
+; 235  : }
+
+  00423	c7 45 fc ff ff
+	ff ff		 mov	 DWORD PTR __$EHRec$[ebp+8], -1
+  0042a	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  0042d	e8 00 00 00 00	 call	 ??1SOL_Mouse@@UAE@XZ	; SOL_Mouse::~SOL_Mouse
+  00432	8b 4d f4	 mov	 ecx, DWORD PTR __$EHRec$[ebp]
+  00435	64 89 0d 00 00
+	00 00		 mov	 DWORD PTR fs:__except_list, ecx
+  0043c	8b e5		 mov	 esp, ebp
+  0043e	5d		 pop	 ebp
+  0043f	c3		 ret	 0
+_TEXT	ENDS
+text$x	SEGMENT
+$L60505:
+  00026	8b 4d ec	 mov	 ecx, DWORD PTR _this$[ebp]
+  00029	e8 00 00 00 00	 call	 ??1SOL_Mouse@@UAE@XZ	; SOL_Mouse::~SOL_Mouse
+  0002e	c3		 ret	 0
+$L60508:
+  0002f	b8 00 00 00 00	 mov	 eax, OFFSET FLAT:$T60507
+  00034	e9 00 00 00 00	 jmp	 ___CxxFrameHandler
+text$x	ENDS
+??1MouseWinClr@@UAE@XZ ENDP				; MouseWinClr::~MouseWinClr
+_TEXT	SEGMENT
+_pt$ = 8
+_this$ = -4
+?GlobalPos@MouseWinClr@@UBEHPAVSOL_Point@@@Z PROC NEAR	; MouseWinClr::GlobalPos
+
+; 240  : {
+
+  00440	55		 push	 ebp
+  00441	8b ec		 mov	 ebp, esp
+  00443	51		 push	 ecx
+  00444	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 241  : 	pt->x = pos.x;
+
+  00447	8b 45 08	 mov	 eax, DWORD PTR _pt$[ebp]
+  0044a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _pos
+  00450	89 08		 mov	 DWORD PTR [eax], ecx
+
+; 242  : 	pt->y = pos.y;
+
+  00452	8b 55 08	 mov	 edx, DWORD PTR _pt$[ebp]
+  00455	a1 04 00 00 00	 mov	 eax, DWORD PTR _pos+4
+  0045a	89 42 04	 mov	 DWORD PTR [edx+4], eax
+
+; 243  : 	return buttonState;
+
+  0045d	a1 00 00 00 00	 mov	 eax, DWORD PTR _buttonState
+
+; 244  : }
+
+  00462	8b e5		 mov	 esp, ebp
+  00464	5d		 pop	 ebp
+  00465	c2 04 00	 ret	 4
+?GlobalPos@MouseWinClr@@UBEHPAVSOL_Point@@@Z ENDP	; MouseWinClr::GlobalPos
+_TEXT	ENDS
+PUBLIC	??0Ratio@@QAE@HH@Z				; Ratio::Ratio
+PUBLIC	??D@YAHHABVRatio@@@Z				; operator*
+PUBLIC	?Xdim@GraphicsMgr@@QBEHXZ			; GraphicsMgr::Xdim
+PUBLIC	?Ydim@GraphicsMgr@@QBEHXZ			; GraphicsMgr::Ydim
+_TEXT	SEGMENT
+$T60512 = -8
+$T60513 = -16
+_pt$ = 8
+_this$ = -20
+?GlobalPosSci@MouseWinClr@@UBEHPAVSOL_Point@@@Z PROC NEAR ; MouseWinClr::GlobalPosSci
+
+; 249  : {
+
+  00468	55		 push	 ebp
+  00469	8b ec		 mov	 ebp, esp
+  0046b	83 ec 14	 sub	 esp, 20			; 00000014H
+  0046e	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 250  : 	pt->x = pos.x * Ratio(SCIRESX, graphMgr->Xdim());
+
+  00471	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00477	e8 00 00 00 00	 call	 ?Xdim@GraphicsMgr@@QBEHXZ ; GraphicsMgr::Xdim
+  0047c	50		 push	 eax
+  0047d	68 80 02 00 00	 push	 640			; 00000280H
+  00482	8d 4d f8	 lea	 ecx, DWORD PTR $T60512[ebp]
+  00485	e8 00 00 00 00	 call	 ??0Ratio@@QAE@HH@Z	; Ratio::Ratio
+  0048a	50		 push	 eax
+  0048b	a1 00 00 00 00	 mov	 eax, DWORD PTR _pos
+  00490	50		 push	 eax
+  00491	e8 00 00 00 00	 call	 ??D@YAHHABVRatio@@@Z	; operator*
+  00496	83 c4 08	 add	 esp, 8
+  00499	8b 4d 08	 mov	 ecx, DWORD PTR _pt$[ebp]
+  0049c	89 01		 mov	 DWORD PTR [ecx], eax
+
+; 251  : 	pt->y = pos.y * Ratio(SCIRESY, graphMgr->Ydim());
+
+  0049e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  004a4	e8 00 00 00 00	 call	 ?Ydim@GraphicsMgr@@QBEHXZ ; GraphicsMgr::Ydim
+  004a9	50		 push	 eax
+  004aa	68 e0 01 00 00	 push	 480			; 000001e0H
+  004af	8d 4d f0	 lea	 ecx, DWORD PTR $T60513[ebp]
+  004b2	e8 00 00 00 00	 call	 ??0Ratio@@QAE@HH@Z	; Ratio::Ratio
+  004b7	50		 push	 eax
+  004b8	8b 15 04 00 00
+	00		 mov	 edx, DWORD PTR _pos+4
+  004be	52		 push	 edx
+  004bf	e8 00 00 00 00	 call	 ??D@YAHHABVRatio@@@Z	; operator*
+  004c4	83 c4 08	 add	 esp, 8
+  004c7	8b 4d 08	 mov	 ecx, DWORD PTR _pt$[ebp]
+  004ca	89 41 04	 mov	 DWORD PTR [ecx+4], eax
+
+; 252  : 	return buttonState;
+
+  004cd	a1 00 00 00 00	 mov	 eax, DWORD PTR _buttonState
+
+; 253  : }
+
+  004d2	8b e5		 mov	 esp, ebp
+  004d4	5d		 pop	 ebp
+  004d5	c2 04 00	 ret	 4
+?GlobalPosSci@MouseWinClr@@UBEHPAVSOL_Point@@@Z ENDP	; MouseWinClr::GlobalPosSci
+_TEXT	ENDS
+;	COMDAT ??0Ratio@@QAE@HH@Z
+_TEXT	SEGMENT
+_num$ = 8
+_denom$ = 12
+_this$ = -4
+??0Ratio@@QAE@HH@Z PROC NEAR				; Ratio::Ratio, COMDAT
+
+; 9    : 	Ratio(int num, int denom)	:	numer(num), denom(denom) {}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 4d 08	 mov	 ecx, DWORD PTR _num$[ebp]
+  0000d	89 08		 mov	 DWORD PTR [eax], ecx
+  0000f	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00012	8b 45 0c	 mov	 eax, DWORD PTR _denom$[ebp]
+  00015	89 42 04	 mov	 DWORD PTR [edx+4], eax
+  00018	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001b	8b e5		 mov	 esp, ebp
+  0001d	5d		 pop	 ebp
+  0001e	c2 08 00	 ret	 8
+??0Ratio@@QAE@HH@Z ENDP					; Ratio::Ratio
+_TEXT	ENDS
+;	COMDAT ??D@YAHHABVRatio@@@Z
+_TEXT	SEGMENT
+_i$ = 8
+_ratio$ = 12
+_total$ = -8
+_val$ = -4
+??D@YAHHABVRatio@@@Z PROC NEAR				; operator*, COMDAT
+
+; 53   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 08	 sub	 esp, 8
+
+; 54   : 	int total = i * ratio.numer;
+
+  00006	8b 45 0c	 mov	 eax, DWORD PTR _ratio$[ebp]
+  00009	8b 4d 08	 mov	 ecx, DWORD PTR _i$[ebp]
+  0000c	0f af 08	 imul	 ecx, DWORD PTR [eax]
+  0000f	89 4d f8	 mov	 DWORD PTR _total$[ebp], ecx
+
+; 55   : 	int val = total / ratio.denom;
+
+  00012	8b 4d 0c	 mov	 ecx, DWORD PTR _ratio$[ebp]
+  00015	8b 45 f8	 mov	 eax, DWORD PTR _total$[ebp]
+  00018	99		 cdq
+  00019	f7 79 04	 idiv	 DWORD PTR [ecx+4]
+  0001c	89 45 fc	 mov	 DWORD PTR _val$[ebp], eax
+
+; 56   : 	if (total > ratio.denom  &&  total % ratio.denom)
+
+  0001f	8b 55 0c	 mov	 edx, DWORD PTR _ratio$[ebp]
+  00022	8b 45 f8	 mov	 eax, DWORD PTR _total$[ebp]
+  00025	3b 42 04	 cmp	 eax, DWORD PTR [edx+4]
+  00028	7e 17		 jle	 SHORT $L52862
+  0002a	8b 4d 0c	 mov	 ecx, DWORD PTR _ratio$[ebp]
+  0002d	8b 45 f8	 mov	 eax, DWORD PTR _total$[ebp]
+  00030	99		 cdq
+  00031	f7 79 04	 idiv	 DWORD PTR [ecx+4]
+  00034	85 d2		 test	 edx, edx
+  00036	74 09		 je	 SHORT $L52862
+
+; 57   : 		val++;
+
+  00038	8b 55 fc	 mov	 edx, DWORD PTR _val$[ebp]
+  0003b	83 c2 01	 add	 edx, 1
+  0003e	89 55 fc	 mov	 DWORD PTR _val$[ebp], edx
+$L52862:
+
+; 58   : 	return val;
+
+  00041	8b 45 fc	 mov	 eax, DWORD PTR _val$[ebp]
+
+; 59   : }
+
+  00044	8b e5		 mov	 esp, ebp
+  00046	5d		 pop	 ebp
+  00047	c3		 ret	 0
+??D@YAHHABVRatio@@@Z ENDP				; operator*
+_TEXT	ENDS
+PUBLIC	?Xdim@Screen@@QBEHXZ				; Screen::Xdim
+;	COMDAT ?Xdim@GraphicsMgr@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Xdim@GraphicsMgr@@QBEHXZ PROC NEAR			; GraphicsMgr::Xdim, COMDAT
+
+; 53   : 	int		Xdim() const							{return next.Xdim();}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	83 c1 14	 add	 ecx, 20			; 00000014H
+  0000d	e8 00 00 00 00	 call	 ?Xdim@Screen@@QBEHXZ	; Screen::Xdim
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+?Xdim@GraphicsMgr@@QBEHXZ ENDP				; GraphicsMgr::Xdim
+_TEXT	ENDS
+;	COMDAT ?Xdim@Screen@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Xdim@Screen@@QBEHXZ PROC NEAR				; Screen::Xdim, COMDAT
+
+; 33   : 	int	Xdim() const						{return xDim;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 80 48 11 00
+	00		 mov	 eax, DWORD PTR [eax+4424]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+?Xdim@Screen@@QBEHXZ ENDP				; Screen::Xdim
+_TEXT	ENDS
+PUBLIC	?Ydim@Screen@@QBEHXZ				; Screen::Ydim
+;	COMDAT ?Ydim@GraphicsMgr@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Ydim@GraphicsMgr@@QBEHXZ PROC NEAR			; GraphicsMgr::Ydim, COMDAT
+
+; 54   : 	int		Ydim() const							{return next.Ydim();}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	83 c1 14	 add	 ecx, 20			; 00000014H
+  0000d	e8 00 00 00 00	 call	 ?Ydim@Screen@@QBEHXZ	; Screen::Ydim
+  00012	8b e5		 mov	 esp, ebp
+  00014	5d		 pop	 ebp
+  00015	c3		 ret	 0
+?Ydim@GraphicsMgr@@QBEHXZ ENDP				; GraphicsMgr::Ydim
+_TEXT	ENDS
+;	COMDAT ?Ydim@Screen@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Ydim@Screen@@QBEHXZ PROC NEAR				; Screen::Ydim, COMDAT
+
+; 34   : 	int	Ydim() const						{return yDim;}
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0000a	8b 80 4c 11 00
+	00		 mov	 eax, DWORD PTR [eax+4428]
+  00010	8b e5		 mov	 esp, ebp
+  00012	5d		 pop	 ebp
+  00013	c3		 ret	 0
+?Ydim@Screen@@QBEHXZ ENDP				; Screen::Ydim
+_TEXT	ENDS
+_TEXT	SEGMENT
+_z$ = 8
+_p$ = 12
+_r$ = 16
+_y$ = 20
+_this$ = -4
+?GetSwiftInfo@MouseWinClr@@UBEHPAH000@Z PROC NEAR	; MouseWinClr::GetSwiftInfo
+
+; 258  : {
+
+  004d8	55		 push	 ebp
+  004d9	8b ec		 mov	 ebp, esp
+  004db	51		 push	 ecx
+  004dc	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 259  : 	// Return interrupt level position in global coords of mouse in the point
+; 260  : 	*z = zaxis;
+
+  004df	0f bf 05 00 00
+	00 00		 movsx	 eax, WORD PTR ?zaxis@MouseWinClr@@1FA ; MouseWinClr::zaxis
+  004e6	8b 4d 08	 mov	 ecx, DWORD PTR _z$[ebp]
+  004e9	89 01		 mov	 DWORD PTR [ecx], eax
+
+; 261  : 	*p = pitch;
+
+  004eb	0f bf 15 00 00
+	00 00		 movsx	 edx, WORD PTR ?pitch@MouseWinClr@@1FA ; MouseWinClr::pitch
+  004f2	8b 45 0c	 mov	 eax, DWORD PTR _p$[ebp]
+  004f5	89 10		 mov	 DWORD PTR [eax], edx
+
+; 262  : 	*r = roll;
+
+  004f7	0f bf 0d 00 00
+	00 00		 movsx	 ecx, WORD PTR ?roll@MouseWinClr@@1FA ; MouseWinClr::roll
+  004fe	8b 55 10	 mov	 edx, DWORD PTR _r$[ebp]
+  00501	89 0a		 mov	 DWORD PTR [edx], ecx
+
+; 263  : 	*y = yaw;
+
+  00503	0f bf 05 00 00
+	00 00		 movsx	 eax, WORD PTR ?yaw@MouseWinClr@@1FA ; MouseWinClr::yaw
+  0050a	8b 4d 14	 mov	 ecx, DWORD PTR _y$[ebp]
+  0050d	89 01		 mov	 DWORD PTR [ecx], eax
+
+; 264  : 	return buttonState;
+
+  0050f	a1 00 00 00 00	 mov	 eax, DWORD PTR _buttonState
+
+; 265  : }
+
+  00514	8b e5		 mov	 esp, ebp
+  00516	5d		 pop	 ebp
+  00517	c2 10 00	 ret	 16			; 00000010H
+?GetSwiftInfo@MouseWinClr@@UBEHPAH000@Z ENDP		; MouseWinClr::GetSwiftInfo
+_this$ = -4
+?Exists@MouseWinClr@@UBEHXZ PROC NEAR			; MouseWinClr::Exists
+
+; 270  : {
+
+  0051a	55		 push	 ebp
+  0051b	8b ec		 mov	 ebp, esp
+  0051d	51		 push	 ecx
+  0051e	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 271  : 	return exists;
+
+  00521	a1 00 00 00 00	 mov	 eax, DWORD PTR _exists
+
+; 272  : }
+
+  00526	8b e5		 mov	 esp, ebp
+  00528	5d		 pop	 ebp
+  00529	c3		 ret	 0
+?Exists@MouseWinClr@@UBEHXZ ENDP			; MouseWinClr::Exists
+_r1$ = 8
+_this$ = -28
+_ratiox$ = -16
+_ratioy$ = -24
+_p$ = -8
+?SetRestrictRect@MouseWinClr@@UAEXABVSOL_Rect@@@Z PROC NEAR ; MouseWinClr::SetRestrictRect
+
+; 277  : {
+
+  0052a	55		 push	 ebp
+  0052b	8b ec		 mov	 ebp, esp
+  0052d	83 ec 1c	 sub	 esp, 28			; 0000001cH
+  00530	89 4d e4	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 278  : 	Ratio ratiox(graphMgr->Xdim(), SCIRESX);
+
+  00533	68 80 02 00 00	 push	 640			; 00000280H
+  00538	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  0053e	e8 00 00 00 00	 call	 ?Xdim@GraphicsMgr@@QBEHXZ ; GraphicsMgr::Xdim
+  00543	50		 push	 eax
+  00544	8d 4d f0	 lea	 ecx, DWORD PTR _ratiox$[ebp]
+  00547	e8 00 00 00 00	 call	 ??0Ratio@@QAE@HH@Z	; Ratio::Ratio
+
+; 279  : 	Ratio ratioy(graphMgr->Ydim(), SCIRESY);
+
+  0054c	68 e0 01 00 00	 push	 480			; 000001e0H
+  00551	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00557	e8 00 00 00 00	 call	 ?Ydim@GraphicsMgr@@QBEHXZ ; GraphicsMgr::Ydim
+  0055c	50		 push	 eax
+  0055d	8d 4d e8	 lea	 ecx, DWORD PTR _ratioy$[ebp]
+  00560	e8 00 00 00 00	 call	 ??0Ratio@@QAE@HH@Z	; Ratio::Ratio
+
+; 280  : 
+; 281  : 	restrict.A.x = r1.A.x * ratiox;
+
+  00565	8d 45 f0	 lea	 eax, DWORD PTR _ratiox$[ebp]
+  00568	50		 push	 eax
+  00569	8b 4d 08	 mov	 ecx, DWORD PTR _r1$[ebp]
+  0056c	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0056e	52		 push	 edx
+  0056f	e8 00 00 00 00	 call	 ??D@YAHHABVRatio@@@Z	; operator*
+  00574	83 c4 08	 add	 esp, 8
+  00577	a3 00 00 00 00	 mov	 DWORD PTR _restrict, eax
+
+; 282  : 	restrict.A.y = r1.A.y * ratioy;
+
+  0057c	8d 45 e8	 lea	 eax, DWORD PTR _ratioy$[ebp]
+  0057f	50		 push	 eax
+  00580	8b 4d 08	 mov	 ecx, DWORD PTR _r1$[ebp]
+  00583	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00586	52		 push	 edx
+  00587	e8 00 00 00 00	 call	 ??D@YAHHABVRatio@@@Z	; operator*
+  0058c	83 c4 08	 add	 esp, 8
+  0058f	a3 04 00 00 00	 mov	 DWORD PTR _restrict+4, eax
+
+; 283  : 	restrict.B.x = r1.B.x * ratiox;
+
+  00594	8d 45 f0	 lea	 eax, DWORD PTR _ratiox$[ebp]
+  00597	50		 push	 eax
+  00598	8b 4d 08	 mov	 ecx, DWORD PTR _r1$[ebp]
+  0059b	8b 51 08	 mov	 edx, DWORD PTR [ecx+8]
+  0059e	52		 push	 edx
+  0059f	e8 00 00 00 00	 call	 ??D@YAHHABVRatio@@@Z	; operator*
+  005a4	83 c4 08	 add	 esp, 8
+  005a7	a3 08 00 00 00	 mov	 DWORD PTR _restrict+8, eax
+
+; 284  : 	restrict.B.y = r1.B.y * ratioy;
+
+  005ac	8d 45 e8	 lea	 eax, DWORD PTR _ratioy$[ebp]
+  005af	50		 push	 eax
+  005b0	8b 4d 08	 mov	 ecx, DWORD PTR _r1$[ebp]
+  005b3	8b 51 0c	 mov	 edx, DWORD PTR [ecx+12]
+  005b6	52		 push	 edx
+  005b7	e8 00 00 00 00	 call	 ??D@YAHHABVRatio@@@Z	; operator*
+  005bc	83 c4 08	 add	 esp, 8
+  005bf	a3 0c 00 00 00	 mov	 DWORD PTR _restrict+12, eax
+
+; 285  : 
+; 286  : //	SOL_Point p = MouseWinClr::pos;
+; 287  : 	SOL_Point p = pos;
+
+  005c4	68 00 00 00 00	 push	 OFFSET FLAT:_pos
+  005c9	8d 4d f8	 lea	 ecx, DWORD PTR _p$[ebp]
+  005cc	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@ABV0@@Z ; SOL_Point::SOL_Point
+
+; 288  : 	if (p.x < restrict.A.x)
+
+  005d1	8b 45 f8	 mov	 eax, DWORD PTR _p$[ebp]
+  005d4	3b 05 00 00 00
+	00		 cmp	 eax, DWORD PTR _restrict
+  005da	7d 09		 jge	 SHORT $L60247
+
+; 289  : 		p.x = restrict.A.x;
+
+  005dc	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _restrict
+  005e2	89 4d f8	 mov	 DWORD PTR _p$[ebp], ecx
+$L60247:
+
+; 290  : 	if (p.x > restrict.B.x)
+
+  005e5	8b 55 f8	 mov	 edx, DWORD PTR _p$[ebp]
+  005e8	3b 15 08 00 00
+	00		 cmp	 edx, DWORD PTR _restrict+8
+  005ee	7e 08		 jle	 SHORT $L60248
+
+; 291  : 		p.x = restrict.B.x;
+
+  005f0	a1 08 00 00 00	 mov	 eax, DWORD PTR _restrict+8
+  005f5	89 45 f8	 mov	 DWORD PTR _p$[ebp], eax
+$L60248:
+
+; 292  : 
+; 293  : 	if (p.y < restrict.A.y)
+
+  005f8	8b 4d fc	 mov	 ecx, DWORD PTR _p$[ebp+4]
+  005fb	3b 0d 04 00 00
+	00		 cmp	 ecx, DWORD PTR _restrict+4
+  00601	7d 09		 jge	 SHORT $L60249
+
+; 294  : 		p.y = restrict.A.y;
+
+  00603	8b 15 04 00 00
+	00		 mov	 edx, DWORD PTR _restrict+4
+  00609	89 55 fc	 mov	 DWORD PTR _p$[ebp+4], edx
+$L60249:
+
+; 295  : 	if (p.y > restrict.B.y)
+
+  0060c	8b 45 fc	 mov	 eax, DWORD PTR _p$[ebp+4]
+  0060f	3b 05 0c 00 00
+	00		 cmp	 eax, DWORD PTR _restrict+12
+  00615	7e 09		 jle	 SHORT $L60250
+
+; 296  : 		p.y = restrict.B.y;
+
+  00617	8b 0d 0c 00 00
+	00		 mov	 ecx, DWORD PTR _restrict+12
+  0061d	89 4d fc	 mov	 DWORD PTR _p$[ebp+4], ecx
+$L60250:
+
+; 297  : 
+; 298  : //	SetMouseDriverPos(p);
+; 299  : }
+
+  00620	8b e5		 mov	 esp, ebp
+  00622	5d		 pop	 ebp
+  00623	c2 04 00	 ret	 4
+?SetRestrictRect@MouseWinClr@@UAEXABVSOL_Rect@@@Z ENDP	; MouseWinClr::SetRestrictRect
+_TEXT	ENDS
+PUBLIC	??0SOL_Rect@@QAE@HHHH@Z				; SOL_Rect::SOL_Rect
+_TEXT	SEGMENT
+$T60524 = -16
+_this$ = -20
+?ClearRestrictRect@MouseWinClr@@UAEXXZ PROC NEAR	; MouseWinClr::ClearRestrictRect
+
+; 303  : {
+
+  00626	55		 push	 ebp
+  00627	8b ec		 mov	 ebp, esp
+  00629	83 ec 14	 sub	 esp, 20			; 00000014H
+  0062c	89 4d ec	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 304  : 	restrict = SOL_Rect(0, 0, graphMgr->Xdim() - 1, graphMgr->Ydim() - 1);
+
+  0062f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00635	e8 00 00 00 00	 call	 ?Ydim@GraphicsMgr@@QBEHXZ ; GraphicsMgr::Ydim
+  0063a	83 e8 01	 sub	 eax, 1
+  0063d	50		 push	 eax
+  0063e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  00644	e8 00 00 00 00	 call	 ?Xdim@GraphicsMgr@@QBEHXZ ; GraphicsMgr::Xdim
+  00649	83 e8 01	 sub	 eax, 1
+  0064c	50		 push	 eax
+  0064d	6a 00		 push	 0
+  0064f	6a 00		 push	 0
+  00651	8d 4d f0	 lea	 ecx, DWORD PTR $T60524[ebp]
+  00654	e8 00 00 00 00	 call	 ??0SOL_Rect@@QAE@HHHH@Z	; SOL_Rect::SOL_Rect
+  00659	50		 push	 eax
+  0065a	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_restrict
+  0065f	e8 00 00 00 00	 call	 ??4SOL_Rect@@QAEAAV0@ABV0@@Z ; SOL_Rect::operator=
+
+; 305  : }
+
+  00664	8b e5		 mov	 esp, ebp
+  00666	5d		 pop	 ebp
+  00667	c3		 ret	 0
+?ClearRestrictRect@MouseWinClr@@UAEXXZ ENDP		; MouseWinClr::ClearRestrictRect
+_TEXT	ENDS
+;	COMDAT ??0SOL_Rect@@QAE@HHHH@Z
+_TEXT	SEGMENT
+_xa$ = 8
+_ya$ = 12
+_xb$ = 16
+_yb$ = 20
+_this$ = -4
+??0SOL_Rect@@QAE@HHHH@Z PROC NEAR			; SOL_Rect::SOL_Rect, COMDAT
+
+; 55   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	51		 push	 ecx
+  00004	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+  00007	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0000a	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+  0000f	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00012	83 c1 08	 add	 ecx, 8
+  00015	e8 00 00 00 00	 call	 ??0SOL_Point@@QAE@XZ	; SOL_Point::SOL_Point
+
+; 56   : 	A.x = xa;
+
+  0001a	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  0001d	8b 4d 08	 mov	 ecx, DWORD PTR _xa$[ebp]
+  00020	89 08		 mov	 DWORD PTR [eax], ecx
+
+; 57   : 	A.y = ya;
+
+  00022	8b 55 fc	 mov	 edx, DWORD PTR _this$[ebp]
+  00025	8b 45 0c	 mov	 eax, DWORD PTR _ya$[ebp]
+  00028	89 42 04	 mov	 DWORD PTR [edx+4], eax
+
+; 58   : 	B.x = xb;
+
+  0002b	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0002e	8b 55 10	 mov	 edx, DWORD PTR _xb$[ebp]
+  00031	89 51 08	 mov	 DWORD PTR [ecx+8], edx
+
+; 59   : 	B.y = yb;
+
+  00034	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00037	8b 4d 14	 mov	 ecx, DWORD PTR _yb$[ebp]
+  0003a	89 48 0c	 mov	 DWORD PTR [eax+12], ecx
+
+; 60   : }
+
+  0003d	8b 45 fc	 mov	 eax, DWORD PTR _this$[ebp]
+  00040	8b e5		 mov	 esp, ebp
+  00042	5d		 pop	 ebp
+  00043	c2 10 00	 ret	 16			; 00000010H
+??0SOL_Rect@@QAE@HHHH@Z ENDP				; SOL_Rect::SOL_Rect
+_TEXT	ENDS
+_TEXT	SEGMENT
+_cur$ = 8
+_this$ = -4
+?Setup@MouseWinClr@@UAEXAAVSOL_Cursor@@@Z PROC NEAR	; MouseWinClr::Setup
+
+; 310  : {
+
+  00668	55		 push	 ebp
+  00669	8b ec		 mov	 ebp, esp
+  0066b	51		 push	 ecx
+  0066c	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 311  : 	cursor = &cur;
+
+  0066f	8b 45 08	 mov	 eax, DWORD PTR _cur$[ebp]
+  00672	a3 00 00 00 00	 mov	 DWORD PTR ?cursor@MouseWinClr@@1PAVSOL_Cursor@@A, eax ; MouseWinClr::cursor
+
+; 312  : }
+
+  00677	8b e5		 mov	 esp, ebp
+  00679	5d		 pop	 ebp
+  0067a	c2 04 00	 ret	 4
+?Setup@MouseWinClr@@UAEXAAVSOL_Cursor@@@Z ENDP		; MouseWinClr::Setup
+_TEXT	ENDS
+EXTRN	?hAltCur@@3PAUHICON__@@A:DWORD			; hAltCur
+EXTRN	?hNullCur@@3PAUHICON__@@A:DWORD			; hNullCur
+EXTRN	?gameBorderX@@3HA:DWORD				; gameBorderX
+EXTRN	?gameBorderY@@3HA:DWORD				; gameBorderY
+_TEXT	SEGMENT
+_p$ = 8
+_this$ = -8
+_outSide$ = -4
+?SetPos@MouseWinClr@@UAEXABVSOL_Point@@@Z PROC NEAR	; MouseWinClr::SetPos
+
+; 317  : {
+
+  0067d	55		 push	 ebp
+  0067e	8b ec		 mov	 ebp, esp
+  00680	83 ec 10	 sub	 esp, 16			; 00000010H
+  00683	89 4d f8	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 318  : Bool	outSide;
+; 319  : 
+; 320  : 	// Must do a SetCursor on every move even if it hasn't changed so that
+; 321  : 	// Windows will change it when entering client area.
+; 322  : 	SetCursor(hCurCur);
+
+  00686	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hCurCur@@3PAUHICON__@@A ; hCurCur
+  0068b	50		 push	 eax
+  0068c	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SetCursor@4
+
+; 326  : 		 (p.y < gameBorderY)	||
+; 327  : 		 (p.x > (gameWidth  + gameBorderX)) ||
+; 328  : 		 (p.y > (gameHeight + gameBorderY)))
+
+  00692	8b 4d 08	 mov	 ecx, DWORD PTR _p$[ebp]
+  00695	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00697	3b 15 00 00 00
+	00		 cmp	 edx, DWORD PTR ?gameBorderX@@3HA ; gameBorderX
+  0069d	7c 35		 jl	 SHORT $L60265
+  0069f	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  006a2	8b 48 04	 mov	 ecx, DWORD PTR [eax+4]
+  006a5	3b 0d 00 00 00
+	00		 cmp	 ecx, DWORD PTR ?gameBorderY@@3HA ; gameBorderY
+  006ab	7c 27		 jl	 SHORT $L60265
+  006ad	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?gameWidth@@3HA ; gameWidth
+  006b3	03 15 00 00 00
+	00		 add	 edx, DWORD PTR ?gameBorderX@@3HA ; gameBorderX
+  006b9	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  006bc	39 10		 cmp	 DWORD PTR [eax], edx
+  006be	7f 14		 jg	 SHORT $L60265
+  006c0	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?gameHeight@@3HA ; gameHeight
+  006c6	03 0d 00 00 00
+	00		 add	 ecx, DWORD PTR ?gameBorderY@@3HA ; gameBorderY
+  006cc	8b 55 08	 mov	 edx, DWORD PTR _p$[ebp]
+  006cf	39 4a 04	 cmp	 DWORD PTR [edx+4], ecx
+  006d2	7e 09		 jle	 SHORT $L60264
+$L60265:
+
+; 329  : 			outSide = True;
+
+  006d4	c7 45 fc 01 00
+	00 00		 mov	 DWORD PTR _outSide$[ebp], 1
+
+; 330  : 	else
+
+  006db	eb 07		 jmp	 SHORT $L60266
+$L60264:
+
+; 331  : 			outSide = False;
+
+  006dd	c7 45 fc 00 00
+	00 00		 mov	 DWORD PTR _outSide$[ebp], 0
+$L60266:
+
+; 332  : 
+; 333  : 	pos = p;
+
+  006e4	8b 45 08	 mov	 eax, DWORD PTR _p$[ebp]
+  006e7	50		 push	 eax
+  006e8	b9 00 00 00 00	 mov	 ecx, OFFSET FLAT:_pos
+  006ed	e8 00 00 00 00	 call	 ??4SOL_Point@@QAEAAV0@ABV0@@Z ; SOL_Point::operator=
+
+; 334  : 	pos.x -= gameBorderX;
+
+  006f2	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR _pos
+  006f8	2b 0d 00 00 00
+	00		 sub	 ecx, DWORD PTR ?gameBorderX@@3HA ; gameBorderX
+  006fe	89 0d 00 00 00
+	00		 mov	 DWORD PTR _pos, ecx
+
+; 335  : 	pos.y -= gameBorderY;
+
+  00704	8b 15 04 00 00
+	00		 mov	 edx, DWORD PTR _pos+4
+  0070a	2b 15 00 00 00
+	00		 sub	 edx, DWORD PTR ?gameBorderY@@3HA ; gameBorderY
+  00710	89 15 04 00 00
+	00		 mov	 DWORD PTR _pos+4, edx
+
+; 336  : 
+; 337  : 	// If in the game window, move the cursor
+; 338  : 	if (!outSide && useMouse && cursor) {
+
+  00716	83 7d fc 00	 cmp	 DWORD PTR _outSide$[ebp], 0
+  0071a	75 5f		 jne	 SHORT $L60268
+  0071c	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?useMouse@MouseWinClr@@1HA, 0 ; MouseWinClr::useMouse
+  00723	74 56		 je	 SHORT $L60268
+  00725	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?cursor@MouseWinClr@@1PAVSOL_Cursor@@A, 0 ; MouseWinClr::cursor
+  0072c	74 4d		 je	 SHORT $L60268
+
+; 339  : //		pos = p;
+; 340  : //		pos.x -= gameBorder;
+; 341  : //		pos.y -= gameBorder;
+; 342  : 		cursor->DeviceMovedTo(pos);
+
+  0072e	68 00 00 00 00	 push	 OFFSET FLAT:_pos
+  00733	a1 00 00 00 00	 mov	 eax, DWORD PTR ?cursor@MouseWinClr@@1PAVSOL_Cursor@@A ; MouseWinClr::cursor
+  00738	8b 10		 mov	 edx, DWORD PTR [eax]
+  0073a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?cursor@MouseWinClr@@1PAVSOL_Cursor@@A ; MouseWinClr::cursor
+  00740	ff 52 18	 call	 DWORD PTR [edx+24]
+
+; 343  : 		// The following bit of kludge code is here because in Phantas, if
+; 344  : 		// the CD drawer is opened causing a "cannot read file, cancel, retry"
+; 345  : 		// message and retry is selected, then the game continues, but the
+; 346  : 		// Windows cursor is left on the screen.  I don't know why this is,
+; 347  : 		// but changing the cursor twice seems to fix the problem.  I do this
+; 348  : 		// on a Windows PAINT message since we always get this when the
+; 349  : 		// Windows dialog box disappears.
+; 350  : 		if (paintFlag) {
+
+  00743	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR ?paintFlag@MouseWinClr@@1HA, 0 ; MouseWinClr::paintFlag
+  0074a	74 2f		 je	 SHORT $L60268
+
+; 351  : 			hCurCur = hAltCur;
+
+  0074c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hAltCur@@3PAUHICON__@@A ; hAltCur
+  00751	a3 00 00 00 00	 mov	 DWORD PTR ?hCurCur@@3PAUHICON__@@A, eax ; hCurCur
+
+; 352  : 			SetCursor(hCurCur);
+
+  00756	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hCurCur@@3PAUHICON__@@A ; hCurCur
+  0075c	51		 push	 ecx
+  0075d	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SetCursor@4
+
+; 353  : 			hCurCur = hNullCur;
+
+  00763	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?hNullCur@@3PAUHICON__@@A ; hNullCur
+  00769	89 15 00 00 00
+	00		 mov	 DWORD PTR ?hCurCur@@3PAUHICON__@@A, edx ; hCurCur
+
+; 354  : 			SetCursor(hCurCur);
+
+  0076f	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hCurCur@@3PAUHICON__@@A ; hCurCur
+  00774	50		 push	 eax
+  00775	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SetCursor@4
+$L60268:
+
+; 357  : 	paintFlag = False;
+
+  0077b	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR ?paintFlag@MouseWinClr@@1HA, 0 ; MouseWinClr::paintFlag
+
+; 358  : 
+; 359  : 	// if we just left the game window, then hide the color cursor, show
+; 360  : 	// the Windows cursor, and do a ReleaseCapture so we don't get mouse
+; 361  : 	// move messages.
+; 362  : 	if (outSide && !outOfGame) {
+
+  00785	83 7d fc 00	 cmp	 DWORD PTR _outSide$[ebp], 0
+  00789	74 49		 je	 SHORT $L60269
+  0078b	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR _outOfGame, 0
+  00792	75 40		 jne	 SHORT $L60269
+
+; 363  : 		outOfGame = True;
+
+  00794	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _outOfGame, 1
+
+; 364  : 		graphMgr->GCursor().Hide();
+
+  0079e	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  007a4	8b 11		 mov	 edx, DWORD PTR [ecx]
+  007a6	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  007ac	ff 52 18	 call	 DWORD PTR [edx+24]
+  007af	89 45 f4	 mov	 DWORD PTR -12+[ebp], eax
+  007b2	8b 45 f4	 mov	 eax, DWORD PTR -12+[ebp]
+  007b5	8b 10		 mov	 edx, DWORD PTR [eax]
+  007b7	8b 4d f4	 mov	 ecx, DWORD PTR -12+[ebp]
+  007ba	ff 52 04	 call	 DWORD PTR [edx+4]
+
+; 365  : 		hCurCur = hAltCur;
+
+  007bd	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hAltCur@@3PAUHICON__@@A ; hAltCur
+  007c2	a3 00 00 00 00	 mov	 DWORD PTR ?hCurCur@@3PAUHICON__@@A, eax ; hCurCur
+
+; 366  : 		SetCursor(hCurCur);
+
+  007c7	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hCurCur@@3PAUHICON__@@A ; hCurCur
+  007cd	51		 push	 ecx
+  007ce	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SetCursor@4
+$L60269:
+
+; 370  : 
+; 371  : 	// if we just entered the game window, then show the color cursor,
+; 372  : 	// hide the Windows cursor, and capture the the mouse so that the
+; 373  : 	// user can't sneak out without us knowing about it.
+; 374  : 	if (!outSide && outOfGame) {
+
+  007d4	83 7d fc 00	 cmp	 DWORD PTR _outSide$[ebp], 0
+  007d8	75 49		 jne	 SHORT $L60270
+  007da	83 3d 00 00 00
+	00 00		 cmp	 DWORD PTR _outOfGame, 0
+  007e1	74 40		 je	 SHORT $L60270
+
+; 375  : 		outOfGame = False;
+
+  007e3	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _outOfGame, 0
+
+; 376  : 		graphMgr->GCursor().UnHide();
+
+  007ed	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  007f3	8b 02		 mov	 eax, DWORD PTR [edx]
+  007f5	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?graphMgr@@3PAVGraphicsMgr@@A ; graphMgr
+  007fb	ff 50 18	 call	 DWORD PTR [eax+24]
+  007fe	89 45 f0	 mov	 DWORD PTR -16+[ebp], eax
+  00801	8b 4d f0	 mov	 ecx, DWORD PTR -16+[ebp]
+  00804	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00806	8b 4d f0	 mov	 ecx, DWORD PTR -16+[ebp]
+  00809	ff 52 08	 call	 DWORD PTR [edx+8]
+
+; 377  : 		hCurCur = hNullCur;
+
+  0080c	a1 00 00 00 00	 mov	 eax, DWORD PTR ?hNullCur@@3PAUHICON__@@A ; hNullCur
+  00811	a3 00 00 00 00	 mov	 DWORD PTR ?hCurCur@@3PAUHICON__@@A, eax ; hCurCur
+
+; 378  : 		SetCursor(hCurCur);
+
+  00816	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?hCurCur@@3PAUHICON__@@A ; hCurCur
+  0081c	51		 push	 ecx
+  0081d	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__SetCursor@4
+$L60270:
+
+; 381  : } 
+
+  00823	8b e5		 mov	 esp, ebp
+  00825	5d		 pop	 ebp
+  00826	c2 04 00	 ret	 4
+?SetPos@MouseWinClr@@UAEXABVSOL_Point@@@Z ENDP		; MouseWinClr::SetPos
+_this$ = -4
+?IsSwift@MouseWinClr@@UBEHXZ PROC NEAR			; MouseWinClr::IsSwift
+
+; 387  : {
+
+  00829	55		 push	 ebp
+  0082a	8b ec		 mov	 ebp, esp
+  0082c	51		 push	 ecx
+  0082d	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 388  : 	return isSwift;
+
+  00830	a1 00 00 00 00	 mov	 eax, DWORD PTR ?isSwift@MouseWinClr@@1HA ; MouseWinClr::isSwift
+
+; 389  : } 
+
+  00835	8b e5		 mov	 esp, ebp
+  00837	5d		 pop	 ebp
+  00838	c3		 ret	 0
+?IsSwift@MouseWinClr@@UBEHXZ ENDP			; MouseWinClr::IsSwift
+_TEXT	ENDS
+PUBLIC	?WinMouseButton@MouseWinClr@@QAEXIABVSOL_Point@@@Z ; MouseWinClr::WinMouseButton
+EXTRN	?mouse@@3PAVSOL_Mouse@@A:DWORD			; mouse
+_TEXT	SEGMENT
+_iMessage$ = 8
+_p$ = 12
+_this$ = -4
+?WinMouseButton@MouseWinClr@@QAEXIABVSOL_Point@@@Z PROC NEAR ; MouseWinClr::WinMouseButton
+
+; 393  : {
+
+  00839	55		 push	 ebp
+  0083a	8b ec		 mov	 ebp, esp
+  0083c	51		 push	 ecx
+  0083d	89 4d fc	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 394  : 
+; 395  : 	SetPos(p);
+
+  00840	8b 45 0c	 mov	 eax, DWORD PTR _p$[ebp]
+  00843	50		 push	 eax
+  00844	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  00847	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00849	8b 4d fc	 mov	 ecx, DWORD PTR _this$[ebp]
+  0084c	ff 52 14	 call	 DWORD PTR [edx+20]
+
+; 396  : 
+; 397  : //	event.where = pos;
+; 398  : //	mouse->GlobalPosSci(&(MouseDOS::event.where));
+; 399  : 	mouse->GlobalPosSci(&event.where);
+
+  0084f	68 10 00 00 00	 push	 OFFSET FLAT:_event+16
+  00854	a1 00 00 00 00	 mov	 eax, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  00859	8b 10		 mov	 edx, DWORD PTR [eax]
+  0085b	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?mouse@@3PAVSOL_Mouse@@A ; mouse
+  00861	ff 52 1c	 call	 DWORD PTR [edx+28]
+
+; 402  : 		 (iMessage == WM_MBUTTONDOWN) ||
+; 403  : 		 (iMessage == WM_RBUTTONDOWN)) {
+
+  00864	81 7d 08 01 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 513 ; 00000201H
+  0086b	74 12		 je	 SHORT $L60280
+  0086d	81 7d 08 07 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 519 ; 00000207H
+  00874	74 09		 je	 SHORT $L60280
+  00876	81 7d 08 04 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 516 ; 00000204H
+  0087d	75 15		 jne	 SHORT $L60279
+$L60280:
+
+; 404  : 		event.type = SOL_Event::MouseDown;
+
+  0087f	66 c7 05 00 00
+	00 00 01 00	 mov	 WORD PTR _event, 1
+
+; 405  : 		buttonState = 1;
+
+  00888	c7 05 00 00 00
+	00 01 00 00 00	 mov	 DWORD PTR _buttonState, 1
+
+; 406  : 	} else {
+
+  00892	eb 13		 jmp	 SHORT $L60281
+$L60279:
+
+; 407  : //		if (outOfGame)
+; 408  : //			ReleaseCapture();
+; 409  : 		event.type = SOL_Event::MouseUp;
+
+  00894	66 c7 05 00 00
+	00 00 02 00	 mov	 WORD PTR _event, 2
+
+; 410  : 		buttonState = 0;
+
+  0089d	c7 05 00 00 00
+	00 00 00 00 00	 mov	 DWORD PTR _buttonState, 0
+$L60281:
+
+; 412  : 
+; 413  : 	event.modifiers = kbdMgr->Modifiers();
+
+  008a7	a1 00 00 00 00	 mov	 eax, DWORD PTR ?kbdMgr@@3PAVKbdMgr@@A ; kbdMgr
+  008ac	8b 10		 mov	 edx, DWORD PTR [eax]
+  008ae	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?kbdMgr@@3PAVKbdMgr@@A ; kbdMgr
+  008b4	ff 52 0c	 call	 DWORD PTR [edx+12]
+  008b7	66 a3 08 00 00
+	00		 mov	 WORD PTR _event+8, ax
+
+; 418  : 		 (iMessage == WM_MBUTTONUP))
+
+  008bd	81 7d 08 07 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 519 ; 00000207H
+  008c4	74 09		 je	 SHORT $L60283
+  008c6	81 7d 08 08 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 520 ; 00000208H
+  008cd	75 0e		 jne	 SHORT $L60282
+$L60283:
+
+; 419  : 		event.modifiers |= Kbd::Ctrl;
+
+  008cf	66 a1 08 00 00
+	00		 mov	 ax, WORD PTR _event+8
+  008d5	0c 04		 or	 al, 4
+  008d7	66 a3 08 00 00
+	00		 mov	 WORD PTR _event+8, ax
+$L60282:
+
+; 424  : 		 (iMessage == WM_RBUTTONUP))
+
+  008dd	81 7d 08 04 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 516 ; 00000204H
+  008e4	74 09		 je	 SHORT $L60285
+  008e6	81 7d 08 05 02
+	00 00		 cmp	 DWORD PTR _iMessage$[ebp], 517 ; 00000205H
+  008ed	75 11		 jne	 SHORT $L60284
+$L60285:
+
+; 425  : 		event.modifiers |= Kbd::Shift;
+
+  008ef	66 8b 0d 08 00
+	00 00		 mov	 cx, WORD PTR _event+8
+  008f6	80 c9 03	 or	 cl, 3
+  008f9	66 89 0d 08 00
+	00 00		 mov	 WORD PTR _event+8, cx
+$L60284:
+
+; 426  : 
+; 427  : 		// Post the event.
+; 428  : 	eventMgr->Post(&event);
+
+  00900	68 00 00 00 00	 push	 OFFSET FLAT:_event
+  00905	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  0090b	8b 02		 mov	 eax, DWORD PTR [edx]
+  0090d	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?eventMgr@@3PAUEventMgr@@A ; eventMgr
+  00913	ff 50 18	 call	 DWORD PTR [eax+24]
+
+; 429  : }
+
+  00916	8b e5		 mov	 esp, ebp
+  00918	5d		 pop	 ebp
+  00919	c2 08 00	 ret	 8
+?WinMouseButton@MouseWinClr@@QAEXIABVSOL_Point@@@Z ENDP	; MouseWinClr::WinMouseButton
+_TEXT	ENDS
+END

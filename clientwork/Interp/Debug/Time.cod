@@ -1,0 +1,566 @@
+	TITLE	C:\Documents and Settings\don\Desktop\sciw\Interp\Time.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_00A@?$AA@
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??8@YAHABU_GUID@@0@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemInfo@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1MemoryMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAddr@MemoryMgr@@QAEPAXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CheckValid@MemoryMgr@@QAEXG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemoryMgr@@QAEHG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GMemoryMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0MemID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@IIIPAUMemClient@@DW4ReservedHandle@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@MemID@@QAEXW4MemType@@V1@III@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsValid@MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??BMemID@@QBEGXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DMemID@@QBEPAXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AMemID@@QBEAADI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??8MemID@@QBEHABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??7MemID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??2@YAPAXIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeArrayID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeArrayID@@QBEPAUArrayHeader@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ArrayID@@QAE@HW4ArrayType@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Get@ArrayID@@QAEXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1Array@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAE?AVMemID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?dataID@Array@@QAEXVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0SOL_List@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?size@SOL_List@@QAEAAHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeSOL_ListID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeDispatchTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeDispatchTblID@@QBEPAUDispatchTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0DispatchTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeScriptEntryID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeScriptEntryID@@QBEPAUScriptEntry@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntry@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0ScriptEntryID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeVariableID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeVariableID@@QBEPAUVariable@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0VariableID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Script@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0Object@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetGraphicsUpdate@Object@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?selectorDict@Object@@QAEPAVSelectorDict@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??AObject@@QAEAAFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddr@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedPropAddr@Object@@QAEPBFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIndexedProperty@Object@@QAEFH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAddrCheck@Object@@QAEPAFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetProperty@Object@@QAEFG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetPropOffset@Object@@QAEIG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetIndexedProperty@Object@@QAEXHF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetPropAtOffset@Object@@QAEAAFI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?SetProperty@Object@@QAEXGF@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeObjectID@@QAE@G@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??CFakeObjectID@@QBEPAUObject@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?AssureValid@ObjectID@@QBEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?IsObject@ObjectID@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0FakeClassTblID@@QAE@ABVMemID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??DFakeClassTblID@@QBEPAUClassTbl@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1TimeMgr@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Reset@TimeMgr@@UAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GTimeMgr@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7MemoryMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7TimeMgr@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?timeMgr@@3PAVTimeMgr@@A			; timeMgr
+_BSS	SEGMENT
+?timeMgr@@3PAVTimeMgr@@A DD 01H DUP (?)			; timeMgr
+_BSS	ENDS
+PUBLIC	?SysTime@TimeMgr@@QAEIH@Z			; TimeMgr::SysTime
+EXTRN	__imp__localtime:NEAR
+EXTRN	__imp__time:NEAR
+_TEXT	SEGMENT
+_func$ = 8
+_this$ = -16
+_newtime$ = -4
+_long_time$ = -8
+_fmtTime$ = -12
+?SysTime@TimeMgr@@QAEIH@Z PROC NEAR			; TimeMgr::SysTime
+
+; 17   : {
+
+  00000	55		 push	 ebp
+  00001	8b ec		 mov	 ebp, esp
+  00003	83 ec 14	 sub	 esp, 20			; 00000014H
+  00006	89 4d f0	 mov	 DWORD PTR _this$[ebp], ecx
+
+; 18   : 	struct tm*	newtime;
+; 19   : 	time_t		long_time;
+; 20   : 	int			fmtTime;
+; 21   : 
+; 22   : 	time(&long_time);
+
+  00009	8d 45 f8	 lea	 eax, DWORD PTR _long_time$[ebp]
+  0000c	50		 push	 eax
+  0000d	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__time
+  00013	83 c4 04	 add	 esp, 4
+
+; 23   : 	newtime = localtime(&long_time);
+
+  00016	8d 4d f8	 lea	 ecx, DWORD PTR _long_time$[ebp]
+  00019	51		 push	 ecx
+  0001a	ff 15 00 00 00
+	00		 call	 DWORD PTR __imp__localtime
+  00020	83 c4 04	 add	 esp, 4
+  00023	89 45 fc	 mov	 DWORD PTR _newtime$[ebp], eax
+
+; 24   : 
+; 25   : 	switch (func) {
+
+  00026	8b 55 08	 mov	 edx, DWORD PTR _func$[ebp]
+  00029	89 55 ec	 mov	 DWORD PTR -20+[ebp], edx
+  0002c	83 7d ec 01	 cmp	 DWORD PTR -20+[ebp], 1
+  00030	74 11		 je	 SHORT $L58390
+  00032	83 7d ec 02	 cmp	 DWORD PTR -20+[ebp], 2
+  00036	74 4b		 je	 SHORT $L58393
+  00038	83 7d ec 03	 cmp	 DWORD PTR -20+[ebp], 3
+  0003c	74 67		 je	 SHORT $L58394
+  0003e	e9 87 00 00 00	 jmp	 $L58395
+$L58390:
+
+; 26   : 
+; 27   : 		case 1:
+; 28   : 			//return packed time
+; 29   : 			//HHHH|MMMM|MMSS|SSSS - (hour 1-12)
+; 30   : 			fmtTime = newtime->tm_hour;
+
+  00043	8b 45 fc	 mov	 eax, DWORD PTR _newtime$[ebp]
+  00046	8b 48 08	 mov	 ecx, DWORD PTR [eax+8]
+  00049	89 4d f4	 mov	 DWORD PTR _fmtTime$[ebp], ecx
+
+; 31   : 			if (fmtTime == 0)
+
+  0004c	83 7d f4 00	 cmp	 DWORD PTR _fmtTime$[ebp], 0
+  00050	75 07		 jne	 SHORT $L58391
+
+; 32   : 				fmtTime = 12;
+
+  00052	c7 45 f4 0c 00
+	00 00		 mov	 DWORD PTR _fmtTime$[ebp], 12 ; 0000000cH
+$L58391:
+
+; 33   : 			if (fmtTime > 12)
+
+  00059	83 7d f4 0c	 cmp	 DWORD PTR _fmtTime$[ebp], 12 ; 0000000cH
+  0005d	7e 09		 jle	 SHORT $L58392
+
+; 34   : 				fmtTime -= 12;
+
+  0005f	8b 55 f4	 mov	 edx, DWORD PTR _fmtTime$[ebp]
+  00062	83 ea 0c	 sub	 edx, 12			; 0000000cH
+  00065	89 55 f4	 mov	 DWORD PTR _fmtTime$[ebp], edx
+$L58392:
+
+; 36   : 						 (newtime->tm_min << 6) |
+; 37   : 						 (newtime->tm_sec);
+
+  00068	8b 45 f4	 mov	 eax, DWORD PTR _fmtTime$[ebp]
+  0006b	c1 e0 0c	 shl	 eax, 12			; 0000000cH
+  0006e	8b 4d fc	 mov	 ecx, DWORD PTR _newtime$[ebp]
+  00071	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00074	c1 e2 06	 shl	 edx, 6
+  00077	0b c2		 or	 eax, edx
+  00079	8b 4d fc	 mov	 ecx, DWORD PTR _newtime$[ebp]
+  0007c	0b 01		 or	 eax, DWORD PTR [ecx]
+  0007e	89 45 f4	 mov	 DWORD PTR _fmtTime$[ebp], eax
+
+; 38   : 			break;
+
+  00081	eb 4e		 jmp	 SHORT $L58387
+$L58393:
+
+; 39   : 
+; 40   : 		case 2:
+; 41   : 			//return packed time
+; 42   : 			//HHHH|HMMM|MMMS|SSSS - (hour 0-24)
+; 43   : 			//* note loss of SECOND resolution in this form
+; 44   : 			fmtTime = (newtime->tm_hour << 11) |
+; 45   : 						 (newtime->tm_min << 5) |
+; 46   : 						 (newtime->tm_sec >> 1);
+
+  00083	8b 55 fc	 mov	 edx, DWORD PTR _newtime$[ebp]
+  00086	8b 42 08	 mov	 eax, DWORD PTR [edx+8]
+  00089	c1 e0 0b	 shl	 eax, 11			; 0000000bH
+  0008c	8b 4d fc	 mov	 ecx, DWORD PTR _newtime$[ebp]
+  0008f	8b 51 04	 mov	 edx, DWORD PTR [ecx+4]
+  00092	c1 e2 05	 shl	 edx, 5
+  00095	0b c2		 or	 eax, edx
+  00097	8b 4d fc	 mov	 ecx, DWORD PTR _newtime$[ebp]
+  0009a	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0009c	d1 fa		 sar	 edx, 1
+  0009e	0b c2		 or	 eax, edx
+  000a0	89 45 f4	 mov	 DWORD PTR _fmtTime$[ebp], eax
+
+; 47   : 			break;
+
+  000a3	eb 2c		 jmp	 SHORT $L58387
+$L58394:
+
+; 48   : 
+; 49   : 		case 3:
+; 50   : 			//return packed calendar date - (years since 1980)
+; 51   : 			//YYYY|YYYM|MMMD|DDDD
+; 52   : 			fmtTime = ((newtime->tm_year - 80) << 9) |
+; 53   : 						 ((newtime->tm_mon + 1) << 5) |
+; 54   : 						 (newtime->tm_mday);
+
+  000a5	8b 45 fc	 mov	 eax, DWORD PTR _newtime$[ebp]
+  000a8	8b 48 14	 mov	 ecx, DWORD PTR [eax+20]
+  000ab	83 e9 50	 sub	 ecx, 80			; 00000050H
+  000ae	c1 e1 09	 shl	 ecx, 9
+  000b1	8b 55 fc	 mov	 edx, DWORD PTR _newtime$[ebp]
+  000b4	8b 42 10	 mov	 eax, DWORD PTR [edx+16]
+  000b7	83 c0 01	 add	 eax, 1
+  000ba	c1 e0 05	 shl	 eax, 5
+  000bd	0b c8		 or	 ecx, eax
+  000bf	8b 55 fc	 mov	 edx, DWORD PTR _newtime$[ebp]
+  000c2	0b 4a 0c	 or	 ecx, DWORD PTR [edx+12]
+  000c5	89 4d f4	 mov	 DWORD PTR _fmtTime$[ebp], ecx
+
+; 55   : 			break;
+
+  000c8	eb 07		 jmp	 SHORT $L58387
+$L58395:
+
+; 56   : 
+; 57   : 		default:
+; 58   : 			fmtTime = 0;
+
+  000ca	c7 45 f4 00 00
+	00 00		 mov	 DWORD PTR _fmtTime$[ebp], 0
+$L58387:
+
+; 61   : 
+; 62   : 	return fmtTime;
+
+  000d1	8b 45 f4	 mov	 eax, DWORD PTR _fmtTime$[ebp]
+
+; 63   : }
+
+  000d4	8b e5		 mov	 esp, ebp
+  000d6	5d		 pop	 ebp
+  000d7	c2 04 00	 ret	 4
+?SysTime@TimeMgr@@QAEIH@Z ENDP				; TimeMgr::SysTime
+_TEXT	ENDS
+PUBLIC	?KGetTime@@YAXPAF@Z				; KGetTime
+EXTRN	?pm@@3VPMachine@@A:BYTE				; pm
+_TEXT	SEGMENT
+_args$ = 8
+?KGetTime@@YAXPAF@Z PROC NEAR				; KGetTime
+
+; 67   : {
+
+  000da	55		 push	 ebp
+  000db	8b ec		 mov	 ebp, esp
+
+; 68   : 	// return low word of system ticks OR packed real time
+; 69   : 
+; 70   : 	if (argCount == 1)
+
+  000dd	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  000e0	0f bf 08	 movsx	 ecx, WORD PTR [eax]
+  000e3	83 f9 01	 cmp	 ecx, 1
+  000e6	75 1a		 jne	 SHORT $L58399
+
+; 71   : 		pm.acc = (Acc) timeMgr->SysTime(arg(1));
+
+  000e8	8b 55 08	 mov	 edx, DWORD PTR _args$[ebp]
+  000eb	0f bf 42 02	 movsx	 eax, WORD PTR [edx+2]
+  000ef	50		 push	 eax
+  000f0	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  000f6	e8 00 00 00 00	 call	 ?SysTime@TimeMgr@@QAEIH@Z ; TimeMgr::SysTime
+  000fb	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 72   : 	else
+
+  00100	eb 16		 jmp	 SHORT $L58401
+$L58399:
+
+; 73   : 		pm.acc = (Acc) timeMgr->GetTickCount();
+
+  00102	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00108	8b 11		 mov	 edx, DWORD PTR [ecx]
+  0010a	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00110	ff 52 04	 call	 DWORD PTR [edx+4]
+  00113	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+$L58401:
+
+; 74   : }
+
+  00118	5d		 pop	 ebp
+  00119	c3		 ret	 0
+?KGetTime@@YAXPAF@Z ENDP				; KGetTime
+_TEXT	ENDS
+PUBLIC	?KWait@@YAXPAF@Z				; KWait
+_BSS	SEGMENT
+_?lastTick@?1??KWait@@YAXPAF@Z@4KA DD 01H DUP (?)
+_BSS	ENDS
+_TEXT	SEGMENT
+_args$ = 8
+_ticks$ = -4
+?KWait@@YAXPAF@Z PROC NEAR				; KWait
+
+; 78   : {
+
+  0011a	55		 push	 ebp
+  0011b	8b ec		 mov	 ebp, esp
+  0011d	51		 push	 ecx
+  0011e	56		 push	 esi
+
+; 79   : 	//	wait the specified number of ticks before returning
+; 80   : 
+; 81   : 	static ulong	lastTick;
+; 82   : 
+; 83   : 	ulong ticks = arg(1);
+
+  0011f	8b 45 08	 mov	 eax, DWORD PTR _args$[ebp]
+  00122	0f bf 48 02	 movsx	 ecx, WORD PTR [eax+2]
+  00126	89 4d fc	 mov	 DWORD PTR _ticks$[ebp], ecx
+
+; 84   : 
+; 85   : 	if (ticks)
+
+  00129	83 7d fc 00	 cmp	 DWORD PTR _ticks$[ebp], 0
+  0012d	74 20		 je	 SHORT $L58412
+$L58411:
+
+; 86   : 		while (ticks + lastTick > timeMgr->GetTickCount())
+
+  0012f	8b 75 fc	 mov	 esi, DWORD PTR _ticks$[ebp]
+  00132	03 35 00 00 00
+	00		 add	 esi, DWORD PTR _?lastTick@?1??KWait@@YAXPAF@Z@4KA
+  00138	8b 15 00 00 00
+	00		 mov	 edx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  0013e	8b 02		 mov	 eax, DWORD PTR [edx]
+  00140	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00146	ff 50 04	 call	 DWORD PTR [eax+4]
+  00149	3b f0		 cmp	 esi, eax
+  0014b	76 02		 jbe	 SHORT $L58412
+
+; 87   : 			;
+
+  0014d	eb e0		 jmp	 SHORT $L58411
+$L58412:
+
+; 88   : 
+; 89   : 	pm.acc = (Acc) (timeMgr->GetTickCount() - lastTick);
+
+  0014f	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00155	8b 11		 mov	 edx, DWORD PTR [ecx]
+  00157	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  0015d	ff 52 04	 call	 DWORD PTR [edx+4]
+  00160	2b 05 00 00 00
+	00		 sub	 eax, DWORD PTR _?lastTick@?1??KWait@@YAXPAF@Z@4KA
+  00166	a3 04 00 00 00	 mov	 DWORD PTR ?pm@@3VPMachine@@A+4, eax
+
+; 90   : 	lastTick = timeMgr->GetTickCount();
+
+  0016b	a1 00 00 00 00	 mov	 eax, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00170	8b 10		 mov	 edx, DWORD PTR [eax]
+  00172	8b 0d 00 00 00
+	00		 mov	 ecx, DWORD PTR ?timeMgr@@3PAVTimeMgr@@A ; timeMgr
+  00178	ff 52 04	 call	 DWORD PTR [edx+4]
+  0017b	a3 00 00 00 00	 mov	 DWORD PTR _?lastTick@?1??KWait@@YAXPAF@Z@4KA, eax
+
+; 91   : }
+
+  00180	5e		 pop	 esi
+  00181	8b e5		 mov	 esp, ebp
+  00183	5d		 pop	 ebp
+  00184	c3		 ret	 0
+?KWait@@YAXPAF@Z ENDP					; KWait
+_TEXT	ENDS
+END

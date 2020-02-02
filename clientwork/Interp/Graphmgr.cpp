@@ -294,7 +294,6 @@ GraphicsMgr::FrameOut(Bool showBits, SOL_Rect dirtyRect)
 {
 	#ifdef DEBUG
 	static int reenter = 0;		//  BUGBUG - DF - Won't work if mult graphmgrs
-	int i;
 	reenter++;
 	if (reenter == 2)
 		msgMgr->Alert("Frameout reentered!");
