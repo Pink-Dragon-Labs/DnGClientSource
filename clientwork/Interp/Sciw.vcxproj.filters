@@ -1145,11 +1145,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="Library\misc.lib">
-      <Filter>Libraries</Filter>
-    </Library>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="Res\do.cur">
       <Filter>New Interface Code\Resource Files</Filter>
     </CustomBuild>
@@ -1183,8 +1178,24 @@
     <CustomBuild Include="Res\walk.cur">
       <Filter>New Interface Code\Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\WINNT\system32\activeskin.ocx">
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Library\misc.lib">
       <Filter>Libraries</Filter>
-    </CustomBuild>
+    </Library>
+    <Library Include="Library\FGWVC32.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+    <Library Include="Library\MSS32.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+    <Library Include="..\..\..\..\..\Desktop\Microsoft Visual C++ 6.0 Standard Edition\VC98\MFC\LIB\EAFXISD.LIB">
+      <Filter>Libraries</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\lib\ActiveSkin.ocx">
+      <Filter>Libraries</Filter>
+    </None>
   </ItemGroup>
 </Project>

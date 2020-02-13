@@ -15,17 +15,18 @@
     <SccLocalPath>.</SccLocalPath>
     <Keyword>MFCProj</Keyword>
     <ProjectGuid>{F5745D4A-ABC0-40C3-9D28-2D708813B2A3}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>Static</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -101,7 +102,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
-      <PreprocessorDefinitions>DEBUG;_DEBUG;WIN32;_WINDOWS;WIN32S;WIN;_VC_;VISUALCPP;NETWORK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>DEBUG;_DEBUG;WIN32;_WINDOWS;WIN32S;WIN;_VC_;VISUALCPP;NETWORK;WINDOWS_IGNORE_PACKING_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
       <PrecompiledHeaderOutputFile>.\Debug\Sciw.pch</PrecompiledHeaderOutputFile>
@@ -129,7 +130,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>.\Debug\Sciw.exe</OutputFile>
-      <AdditionalDependencies>library/fgwvc32.lib;library/mss32.lib;winmm.lib;wsock32.lib;mfc42d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>nafxcwd.lib;libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>nafxcwd.lib;libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/NXCOMPAT:NO %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -855,7 +859,6 @@
     <Image Include="Res\wearing.ico" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\WINNT\system32\activeskin.ocx" />
     <CustomBuild Include="Res\do.cur" />
     <CustomBuild Include="Res\drop.cur" />
     <CustomBuild Include="Res\exitdown.cur" />
@@ -869,7 +872,13 @@
     <CustomBuild Include="Res\walk.cur" />
   </ItemGroup>
   <ItemGroup>
+    <Library Include="..\..\..\..\..\Desktop\Microsoft Visual C++ 6.0 Standard Edition\VC98\MFC\LIB\EAFXISD.LIB" />
+    <Library Include="Library\FGWVC32.LIB" />
     <Library Include="Library\misc.lib" />
+    <Library Include="Library\MSS32.LIB" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\lib\ActiveSkin.ocx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

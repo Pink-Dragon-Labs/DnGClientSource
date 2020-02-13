@@ -450,7 +450,7 @@ Bool
 KernelBreakpoint::Set(Bool sticky)
 {
 	char*	prompt = "Kernel call name or number:";
-	int i;
+	int i = 0;
 	while (1) {
 		IV_Type iv;
 		if (!(iv = InputValue(IV_Number | IV_String, prompt, buf, num)))
@@ -463,9 +463,9 @@ KernelBreakpoint::Set(Bool sticky)
 				break;
 
 		} else {
-			for (int i = 0; i < kernelMax; i++)
-				if (!strcmp(buf, kernelCalls[i].name)) {
-					num = i;
+			for (int j = 0; j < kernelMax; j++)
+				if (!strcmp(buf, kernelCalls[j].name)) {
+					num = j;
 					break;
 				}
 			if (i >= kernelMax)

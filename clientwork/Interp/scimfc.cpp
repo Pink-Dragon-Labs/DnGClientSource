@@ -931,7 +931,7 @@ void CMainWindow::OnActivateApp(BOOL bActive, DWORD hTask)
 		}
 	}
 
-	CWnd::OnActivateApp(bActive, reinterpret_cast<HTASK__ *>(hTask));
+	CWnd::OnActivateApp(bActive, hTask);
 }
 
 // override the enable / disable functionality...

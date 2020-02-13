@@ -185,7 +185,7 @@ public:
 	afx_msg BOOL OnSetCursor ( CWnd *pWnd, UINT nHitTest, UINT message );
 
 	// Set the cursor when over this window
-	afx_msg UINT OnNcHitTest( CPoint point );
+	afx_msg LRESULT OnNcHitTest( CPoint point );
 	//afx_msg LRESULT OnNcHitTest(CPoint point);
 	// Handle a custom draw message
 	afx_msg void OnCustomDraw( NMHDR *pNotifyStruct, LRESULT *pResult );

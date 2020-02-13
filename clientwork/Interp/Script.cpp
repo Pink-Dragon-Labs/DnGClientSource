@@ -448,7 +448,8 @@ LoadScript(unsigned n)
 		//	don't bother with unused slots
 		if (fixee.codeOffset) {
 			//	see if this offset is in the fixups
-			for (int j = 0; j < nFixups; j++)
+			int j = 0;
+			for (j = 0; j < nFixups; j++)
 				if (offset == fixups[j])
 					break;
 			//	wasn't in fixups, therefore offset it
@@ -458,7 +459,7 @@ LoadScript(unsigned n)
 		offset += sizeof(DispatchEntry);
 	}
 	//	offset method dictionaries
-	for (obj = entries.GetFirstObject();
+	for (ObjectID obj = entries.GetFirstObject();
 	  	(int) obj;
 	  	obj = entries.GetNextObject()) {
 
@@ -471,7 +472,7 @@ LoadScript(unsigned n)
 	}
 
 	//	offset method dictionaries
-	for (obj = entries.GetFirstObject();
+	for (ObjectID obj = entries.GetFirstObject();
 	  	(int) obj;
 	  	obj = entries.GetNextObject()) {
 

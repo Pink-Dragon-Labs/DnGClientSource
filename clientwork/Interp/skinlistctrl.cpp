@@ -806,7 +806,7 @@ BOOL CSkinListCtrl::OnSetCursor ( CWnd *pWnd, UINT nHitTest, UINT message )
 
 
 // this member is called when the mouse enters this window
-UINT CSkinListCtrl::OnNcHitTest( CPoint point )
+LRESULT CSkinListCtrl::OnNcHitTest( CPoint point )
 {
 	OnMouseOver( point );
 	return CWnd::OnNcHitTest( point );

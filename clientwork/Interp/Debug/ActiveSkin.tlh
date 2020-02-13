@@ -1,9 +1,9 @@
-// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (fd50d56a).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.24.28316.0 (602f4d44).
 //
-// \\vboxsrv\vagrant\dngclientsource\clientwork\interp\debug\ActiveSkin.tlh
+// C:\Users\cmhul\source\repos\DnGClientSource\clientwork\Interp\Debug\activeskin.tlh
 //
 // C++ source equivalent of Win32 type library Library/lib/ActiveSkin.ocx
-// compiler-generated file created 02/01/20 at 16:07:29 - DO NOT EDIT!
+// compiler-generated file created 02/09/20 at 22:22:08 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
@@ -14,14 +14,25 @@
 // Forward references and typedefs
 //
 
+struct __declspec(uuid("972de6b5-8b09-11d2-b652-a1fd6cc34260"))
+/* LIBID */ __ACTIVESKINLib;
 struct __declspec(uuid("972de6c1-8b09-11d2-b652-a1fd6cc34260"))
 /* dual interface */ ISkinForm;
 struct __declspec(uuid("6cfc9ba1-fe87-11d2-9dcf-ed29fafe371d"))
 /* dual interface */ ISkinObjectDisp;
+enum SkinAlign;
+enum SkinBackAlign;
+enum tagSkinKind;
+enum SkinInsert;
+enum SkinState;
 struct __declspec(uuid("37deb787-2d9b-11d3-9dd0-c423e6542e10"))
 /* dual interface */ ISkinSource;
+enum SkinTextAlign;
+enum SkinPerformance;
+enum SkinWorkMode;
 struct __declspec(uuid("972de6c3-8b09-11d2-b652-a1fd6cc34260"))
 /* dispinterface */ _ISkinFormEvents;
+enum tagSkinKeys;
 struct __declspec(uuid("53fa8d31-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dual interface */ ISkinFormEvents_Sink;
 struct /* coclass */ SkinForm;
@@ -35,6 +46,7 @@ struct __declspec(uuid("83c2d7a0-0de6-11d3-9dcf-9423f1b2561c"))
 /* dual interface */ IComMoveSize;
 struct __declspec(uuid("53fa8d40-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dual interface */ ISkinButton;
+enum SkinButtonType;
 struct /* coclass */ SkinObject;
 struct /* coclass */ COMScript;
 struct /* coclass */ ComMorph;
@@ -44,6 +56,7 @@ struct __declspec(uuid("53fa8d42-2cdd-11d3-9dd0-d3cd4078982a"))
 struct /* coclass */ SkinButton;
 struct __declspec(uuid("53fa8d46-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dual interface */ ISkinPanel;
+enum SkinDefPanelType;
 struct __declspec(uuid("53fa8d48-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dispinterface */ _ISkinPanelEvents;
 struct __declspec(uuid("53fa8d49-2cdd-11d3-9dd0-d3cd4078982a"))
@@ -53,6 +66,7 @@ struct __declspec(uuid("53fa8d4b-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dispinterface */ _ISkinLabelEvents;
 struct __declspec(uuid("53fa8d4c-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dual interface */ ISkinScrollBar;
+enum SkinScrollType;
 struct /* coclass */ SkinLabel;
 struct __declspec(uuid("53fa8d4e-2cdd-11d3-9dd0-d3cd4078982a"))
 /* dispinterface */ _ISkinScrollBarEvents;
@@ -63,6 +77,7 @@ struct __declspec(uuid("ee11629b-36df-11d3-9dd0-89d6dbbba800"))
 /* dual interface */ ISkinStorage;
 struct __declspec(uuid("ca478da0-3920-11d3-9dd0-8067e4a06603"))
 /* dual interface */ ISkinPopup;
+enum SkinMenuAlign;
 struct __declspec(uuid("3c01387a-6ac2-4ef1-bda2-ec5d26e3b065"))
 /* dual interface */ IComTransitions;
 struct __declspec(uuid("55dd814e-a1b7-4808-9625-4f75a3fad8a7"))
@@ -83,370 +98,34 @@ struct /* coclass */ ComFilters;
 // Smart pointer typedef declarations
 //
 
-_COM_SMARTPTR_TYPEDEF(ISkinForm, __uuidof(ISkinForm));
-_COM_SMARTPTR_TYPEDEF(ISkinObjectDisp, __uuidof(ISkinObjectDisp));
-_COM_SMARTPTR_TYPEDEF(ISkinSource, __uuidof(ISkinSource));
-_COM_SMARTPTR_TYPEDEF(_ISkinFormEvents, __uuidof(IDispatch));
-_COM_SMARTPTR_TYPEDEF(ISkinFormEvents_Sink, __uuidof(ISkinFormEvents_Sink));
-_COM_SMARTPTR_TYPEDEF(_ISkinObjectDispEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_ISkinFormEvents, __uuidof(_ISkinFormEvents));
+_COM_SMARTPTR_TYPEDEF(_ISkinObjectDispEvents, __uuidof(_ISkinObjectDispEvents));
 _COM_SMARTPTR_TYPEDEF(ICOMScript, __uuidof(ICOMScript));
 _COM_SMARTPTR_TYPEDEF(IComMorph, __uuidof(IComMorph));
 _COM_SMARTPTR_TYPEDEF(IComMoveSize, __uuidof(IComMoveSize));
-_COM_SMARTPTR_TYPEDEF(ISkinButton, __uuidof(ISkinButton));
-_COM_SMARTPTR_TYPEDEF(_ISkinButtonEvents, __uuidof(IDispatch));
-_COM_SMARTPTR_TYPEDEF(ISkinPanel, __uuidof(ISkinPanel));
-_COM_SMARTPTR_TYPEDEF(_ISkinPanelEvents, __uuidof(IDispatch));
-_COM_SMARTPTR_TYPEDEF(ISkinLabel, __uuidof(ISkinLabel));
-_COM_SMARTPTR_TYPEDEF(_ISkinLabelEvents, __uuidof(IDispatch));
-_COM_SMARTPTR_TYPEDEF(ISkinScrollBar, __uuidof(ISkinScrollBar));
-_COM_SMARTPTR_TYPEDEF(_ISkinScrollBarEvents, __uuidof(IDispatch));
-_COM_SMARTPTR_TYPEDEF(_ISkinSourceEvents, __uuidof(IDispatch));
-_COM_SMARTPTR_TYPEDEF(ISkinStorage, __uuidof(ISkinStorage));
-_COM_SMARTPTR_TYPEDEF(ISkinPopup, __uuidof(ISkinPopup));
+_COM_SMARTPTR_TYPEDEF(_ISkinButtonEvents, __uuidof(_ISkinButtonEvents));
+_COM_SMARTPTR_TYPEDEF(_ISkinPanelEvents, __uuidof(_ISkinPanelEvents));
+_COM_SMARTPTR_TYPEDEF(_ISkinLabelEvents, __uuidof(_ISkinLabelEvents));
+_COM_SMARTPTR_TYPEDEF(_ISkinScrollBarEvents, __uuidof(_ISkinScrollBarEvents));
+_COM_SMARTPTR_TYPEDEF(_ISkinSourceEvents, __uuidof(_ISkinSourceEvents));
 _COM_SMARTPTR_TYPEDEF(IComTransitions, __uuidof(IComTransitions));
 _COM_SMARTPTR_TYPEDEF(ISkinEvent, __uuidof(ISkinEvent));
 _COM_SMARTPTR_TYPEDEF(IComProcTextures, __uuidof(IComProcTextures));
 _COM_SMARTPTR_TYPEDEF(IComFilters, __uuidof(IComFilters));
+_COM_SMARTPTR_TYPEDEF(ISkinForm, __uuidof(ISkinForm));
+_COM_SMARTPTR_TYPEDEF(ISkinObjectDisp, __uuidof(ISkinObjectDisp));
+_COM_SMARTPTR_TYPEDEF(ISkinSource, __uuidof(ISkinSource));
+_COM_SMARTPTR_TYPEDEF(ISkinFormEvents_Sink, __uuidof(ISkinFormEvents_Sink));
+_COM_SMARTPTR_TYPEDEF(ISkinButton, __uuidof(ISkinButton));
+_COM_SMARTPTR_TYPEDEF(ISkinPanel, __uuidof(ISkinPanel));
+_COM_SMARTPTR_TYPEDEF(ISkinLabel, __uuidof(ISkinLabel));
+_COM_SMARTPTR_TYPEDEF(ISkinScrollBar, __uuidof(ISkinScrollBar));
+_COM_SMARTPTR_TYPEDEF(ISkinStorage, __uuidof(ISkinStorage));
+_COM_SMARTPTR_TYPEDEF(ISkinPopup, __uuidof(ISkinPopup));
 
 //
 // Type library items
 //
-
-struct __declspec(uuid("972de6c1-8b09-11d2-b652-a1fd6cc34260"))
-ISkinForm : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall get_SkinPath (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_SkinPath (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Link (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Link (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_ScanControls (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScanControls (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_RName (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_RName (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall putref_SkinObject (
-        struct ISkinObjectDisp * pVal ) = 0;
-    virtual HRESULT __stdcall get_AdjustSize (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_AdjustSize (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_MoveControls (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_MoveControls (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall GetBasePath (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall PutBasePath (
-        BSTR NewPath ) = 0;
-    virtual HRESULT __stdcall ProcessesTick ( ) = 0;
-    virtual HRESULT __stdcall get_SkinSource (
-        struct ISkinSource * * pVal ) = 0;
-    virtual HRESULT __stdcall putref_SkinSource (
-        struct ISkinSource * pVal ) = 0;
-    virtual HRESULT __stdcall get_Performance (
-        enum SkinPerformance * pVal ) = 0;
-    virtual HRESULT __stdcall put_Performance (
-        enum SkinPerformance pVal ) = 0;
-    virtual HRESULT __stdcall get_AnimationSpeed (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_AnimationSpeed (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_AboutSkin (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_AboutSkin (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_ScaleX (
-        float * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScaleX (
-        float pVal ) = 0;
-    virtual HRESULT __stdcall get_ScaleY (
-        float * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScaleY (
-        float pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinClientArea (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_SkinClientArea (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_WorkMode (
-        enum SkinWorkMode * pVal ) = 0;
-    virtual HRESULT __stdcall put_WorkMode (
-        enum SkinWorkMode pVal ) = 0;
-    virtual HRESULT __stdcall get_ShowHints (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_ShowHints (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_NCActivateAware (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_NCActivateAware (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_FullDragEmulation (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_FullDragEmulation (
-        VARIANT_BOOL pVal ) = 0;
-};
-
-struct __declspec(uuid("6cfc9ba1-fe87-11d2-9dcf-ed29fafe371d"))
-ISkinObjectDisp : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall put_BgColor (
-        OLE_COLOR pclr ) = 0;
-    virtual HRESULT __stdcall get_BgColor (
-        OLE_COLOR * pclr ) = 0;
-    virtual HRESULT __stdcall putref_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Font (
-        IFontDisp * * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Color (
-        OLE_COLOR pclr ) = 0;
-    virtual HRESULT __stdcall get_Color (
-        OLE_COLOR * pclr ) = 0;
-    virtual HRESULT __stdcall put_Text (
-        BSTR pstrText ) = 0;
-    virtual HRESULT __stdcall get_Text (
-        BSTR * pstrText ) = 0;
-    virtual HRESULT __stdcall get_LeftString (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_LeftString (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_TopString (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_TopString (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_RightString (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_RightString (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_BottomString (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_BottomString (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_WidthString (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_WidthString (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_HeightString (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_HeightString (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Align (
-        enum SkinAlign * pVal ) = 0;
-    virtual HRESULT __stdcall put_Align (
-        enum SkinAlign pVal ) = 0;
-    virtual HRESULT __stdcall get_BackAlign (
-        enum SkinBackAlign * pVal ) = 0;
-    virtual HRESULT __stdcall put_BackAlign (
-        enum SkinBackAlign pVal ) = 0;
-    virtual HRESULT __stdcall get_Parent (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_FirstChild (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_PreviousSibling (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_NextSibling (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_Class (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Class (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall GetTopObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall GetBottomObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall GetLowerObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall GetUpperObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall GetRefCount (
-        int * pVal ) = 0;
-    virtual HRESULT __stdcall FindObject (
-        BSTR bstrClass,
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_Left (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Left (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Top (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Top (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Width (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Width (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Height (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Height (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Kind (
-        enum tagSkinKind * pVal ) = 0;
-    virtual HRESULT __stdcall put_Kind (
-        enum tagSkinKind pVal ) = 0;
-    virtual HRESULT __stdcall HitTest (
-        long XPos,
-        long YPos,
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall ConvertXToParent (
-        long XPos,
-        struct ISkinObjectDisp * Parent,
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall ConvertYToParent (
-        long YPos,
-        struct ISkinObjectDisp * Parent,
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall Cut ( ) = 0;
-    virtual HRESULT __stdcall Insert (
-        struct ISkinObjectDisp * Relative,
-        enum SkinInsert Relationship ) = 0;
-    virtual HRESULT __stdcall get_Transparency (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Transparency (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall ExecuteScript (
-        BSTR Script ) = 0;
-    virtual HRESULT __stdcall get_XML (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_XML (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Background (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Background (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_TransparencyMap (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_TransparencyMap (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_UsedFiles (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_UsedFiles (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptName (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScriptName (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptBody (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScriptBody (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptCount (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall ScriptAdd (
-        BSTR Name,
-        BSTR Body ) = 0;
-    virtual HRESULT __stdcall ScriptRemove (
-        long Index ) = 0;
-    virtual HRESULT __stdcall get_TransparencyInvert (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_TransparencyInvert (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_hEntireBitmap (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall Refresh (
-        VARIANT_BOOL UpdateRegion ) = 0;
-    virtual HRESULT __stdcall get_BackgroundRect (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_BackgroundRect (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_TransparencyMapRect (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_TransparencyMapRect (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall putref_Parent (
-        struct ISkinObjectDisp * pVal ) = 0;
-    virtual HRESULT __stdcall putref_FirstChild (
-        struct ISkinObjectDisp * pVal ) = 0;
-    virtual HRESULT __stdcall putref_PreviousSibling (
-        struct ISkinObjectDisp * pVal ) = 0;
-    virtual HRESULT __stdcall putref_NextSibling (
-        struct ISkinObjectDisp * pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptState (
-        long Index,
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScriptState (
-        long Index,
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptStateMask (
-        long Index,
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScriptStateMask (
-        long Index,
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptPrevState (
-        long Index,
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScriptPrevState (
-        long Index,
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_ScriptPrevStateMask (
-        long Index,
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScriptPrevStateMask (
-        long Index,
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall put_MouseIcon (
-        IPictureDisp * ppMouseIcon ) = 0;
-    virtual HRESULT __stdcall get_MouseIcon (
-        IPictureDisp * * ppMouseIcon ) = 0;
-    virtual HRESULT __stdcall get_Hint (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Hint (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall Clone (
-        struct ISkinObjectDisp * * NewObject ) = 0;
-    virtual HRESULT __stdcall get_SkinSource (
-        struct ISkinSource * * pVal ) = 0;
-    virtual HRESULT __stdcall put_SkinSource (
-        struct ISkinSource * pVal ) = 0;
-    virtual HRESULT __stdcall PutSkinSource (
-        struct ISkinSource * SkinSource,
-        long Recurse,
-        long ClearBitmaps ) = 0;
-    virtual HRESULT __stdcall get_TextAlign (
-        enum SkinTextAlign * pVal ) = 0;
-    virtual HRESULT __stdcall put_TextAlign (
-        enum SkinTextAlign pVal ) = 0;
-    virtual HRESULT __stdcall get_ColorKey (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ColorKey (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_State (
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_State (
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall SetState (
-        enum SkinState StateOn,
-        enum SkinState StateOff,
-        VARIANT_BOOL Recurse ) = 0;
-    virtual HRESULT __stdcall get_TextData (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_TextData (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_EntirePicture (
-        IPictureDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall ChooseFont ( ) = 0;
-};
 
 enum SkinAlign
 {
@@ -510,143 +189,6 @@ enum SkinState
     skUser2 = 8192
 };
 
-struct __declspec(uuid("37deb787-2d9b-11d3-9dd0-c423e6542e10"))
-ISkinSource : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall put_MouseIcon (
-        IPictureDisp * ppMouseIcon ) = 0;
-    virtual HRESULT __stdcall get_MouseIcon (
-        IPictureDisp * * ppMouseIcon ) = 0;
-    virtual HRESULT __stdcall putref_SkinPicture (
-        IPictureDisp * ppPicture ) = 0;
-    virtual HRESULT __stdcall put_SkinPicture (
-        IPictureDisp * ppPicture ) = 0;
-    virtual HRESULT __stdcall get_SkinPicture (
-        IPictureDisp * * ppPicture ) = 0;
-    virtual HRESULT __stdcall putref_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Font (
-        IFontDisp * * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Artist (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Artist (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Title (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Title (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Info (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Info (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall putref_SkinObject (
-        struct ISkinObjectDisp * pVal ) = 0;
-    virtual HRESULT __stdcall get_Picture (
-        long Index,
-        IPictureDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall putref_Picture (
-        long Index,
-        IPictureDisp * pVal ) = 0;
-    virtual HRESULT __stdcall get_PictureName (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_PictureName (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall PictureAdd (
-        BSTR Name,
-        IPictureDisp * Picture ) = 0;
-    virtual HRESULT __stdcall PictureDelete (
-        long Index ) = 0;
-    virtual HRESULT __stdcall get_PictureCount (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall get_BasePath (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_BasePath (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall GetPicture (
-        BSTR Name,
-        IPictureDisp * * pPicture ) = 0;
-    virtual HRESULT __stdcall LoadSkin (
-        BSTR SkinURL ) = 0;
-    virtual HRESULT __stdcall SaveSkin (
-        BSTR SkinURL ) = 0;
-    virtual HRESULT __stdcall get_TextData (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_TextData (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrWindow (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrWindow (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrWindowText (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrWindowText (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrButton (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrButton (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrButtonText (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrButtonText (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrBackground (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrBackground (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrLabel (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrLabel (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrPanel (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrPanel (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_ClrPanelText (
-        OLE_COLOR * pVal ) = 0;
-    virtual HRESULT __stdcall put_ClrPanelText (
-        OLE_COLOR pVal ) = 0;
-    virtual HRESULT __stdcall get_DataKeyByIndex (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_DataKeyByIndex (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_DataValueByIndex (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_DataValueByIndex (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_DataValue (
-        BSTR Key,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_DataValue (
-        BSTR Key,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_INI (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_INI (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Hue (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Hue (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_DataCount (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall DataDelete (
-        long Index ) = 0;
-};
-
 enum SkinTextAlign
 {
     skLeftTop = 0,
@@ -683,43 +225,14 @@ struct __declspec(uuid("972de6c3-8b09-11d2-b652-a1fd6cc34260"))
 _ISkinFormEvents : IDispatch
 {};
 
-enum tagSkinKeys
+enum __declspec(uuid("66e7d884-7f5e-11d3-9dd0-444553540000"))
+tagSkinKeys
 {
     skControl = 8,
     skLButton = 1,
     skMButton = 16,
     skRButton = 2,
     skShift = 4
-};
-
-struct __declspec(uuid("53fa8d31-2cdd-11d3-9dd0-d3cd4078982a"))
-ISkinFormEvents_Sink : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall MouseHover (
-        struct ISkinObjectDisp * SkinObject,
-        enum tagSkinKeys Keys,
-        short X,
-        short Y ) = 0;
-    virtual HRESULT __stdcall Click (
-        struct ISkinObjectDisp * SkinObject ) = 0;
-    virtual HRESULT __stdcall MouseDown (
-        struct ISkinObjectDisp * SkinObject,
-        enum tagSkinKeys Keys,
-        short X,
-        short Y ) = 0;
-    virtual HRESULT __stdcall MouseUp (
-        struct ISkinObjectDisp * SkinObject,
-        enum tagSkinKeys Keys,
-        short X,
-        short Y ) = 0;
-    virtual HRESULT __stdcall StateChanged (
-        struct ISkinObjectDisp * SkinObject,
-        long State,
-        long PrevState ) = 0;
 };
 
 struct __declspec(uuid("972de6c2-8b09-11d2-b652-a1fd6cc34260"))
@@ -742,48 +255,6 @@ IComMorph : IDispatch
 struct __declspec(uuid("83c2d7a0-0de6-11d3-9dcf-9423f1b2561c"))
 IComMoveSize : IDispatch
 {};
-
-struct __declspec(uuid("53fa8d40-2cdd-11d3-9dd0-d3cd4078982a"))
-ISkinButton : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall putref_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Font (
-        IFontDisp * * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Text (
-        BSTR pstrText ) = 0;
-    virtual HRESULT __stdcall get_Text (
-        BSTR * pstrText ) = 0;
-    virtual HRESULT __stdcall get_SkinForm (
-        struct ISkinForm * * pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_ButtonType (
-        enum SkinButtonType * pVal ) = 0;
-    virtual HRESULT __stdcall put_ButtonType (
-        enum SkinButtonType pVal ) = 0;
-    virtual HRESULT __stdcall ApplySkin (
-        struct ISkinForm * SkinForm,
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall get_Link (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Link (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Pressed (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_Pressed (
-        VARIANT_BOOL pVal ) = 0;
-    virtual HRESULT __stdcall get_Enabled (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_Enabled (
-        VARIANT_BOOL pVal ) = 0;
-};
 
 enum SkinButtonType
 {
@@ -818,46 +289,6 @@ SkinButton;
     // [ default ] interface ISkinButton
     // [ default, source ] dispinterface _ISkinButtonEvents
 
-struct __declspec(uuid("53fa8d46-2cdd-11d3-9dd0-d3cd4078982a"))
-ISkinPanel : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall put_Text (
-        BSTR pstrText ) = 0;
-    virtual HRESULT __stdcall get_Text (
-        BSTR * pstrText ) = 0;
-    virtual HRESULT __stdcall putref_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Font (
-        IFontDisp * * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Link (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Link (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall ApplySkin (
-        struct ISkinForm * SkinForm,
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall get_TextAlign (
-        enum SkinTextAlign * pVal ) = 0;
-    virtual HRESULT __stdcall put_TextAlign (
-        enum SkinTextAlign pVal ) = 0;
-    virtual HRESULT __stdcall get_DefaultPanel (
-        enum SkinDefPanelType * pVal ) = 0;
-    virtual HRESULT __stdcall put_DefaultPanel (
-        enum SkinDefPanelType pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-    virtual HRESULT __stdcall get_AdjustSize (
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall put_AdjustSize (
-        VARIANT_BOOL pVal ) = 0;
-};
-
 enum SkinDefPanelType
 {
     skNoDefault = 0,
@@ -870,34 +301,6 @@ struct __declspec(uuid("53fa8d48-2cdd-11d3-9dd0-d3cd4078982a"))
 _ISkinPanelEvents : IDispatch
 {};
 
-struct __declspec(uuid("53fa8d49-2cdd-11d3-9dd0-d3cd4078982a"))
-ISkinLabel : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall putref_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Font (
-        IFontDisp * ppFont ) = 0;
-    virtual HRESULT __stdcall get_Font (
-        IFontDisp * * ppFont ) = 0;
-    virtual HRESULT __stdcall put_Text (
-        BSTR pstrText ) = 0;
-    virtual HRESULT __stdcall get_Text (
-        BSTR * pstrText ) = 0;
-    virtual HRESULT __stdcall ApplySkin (
-        struct ISkinForm * SkinForm,
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall get_Link (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Link (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-};
-
 struct __declspec(uuid("53fa8d47-2cdd-11d3-9dd0-d3cd4078982a"))
 SkinPanel;
     // [ default ] interface ISkinPanel
@@ -906,48 +309,6 @@ SkinPanel;
 struct __declspec(uuid("53fa8d4b-2cdd-11d3-9dd0-d3cd4078982a"))
 _ISkinLabelEvents : IDispatch
 {};
-
-struct __declspec(uuid("53fa8d4c-2cdd-11d3-9dd0-d3cd4078982a"))
-ISkinScrollBar : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall ApplySkin (
-        struct ISkinForm * SkinForm,
-        VARIANT_BOOL * pVal ) = 0;
-    virtual HRESULT __stdcall get_Link (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Link (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Min (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Min (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Max (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Max (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_SmallChange (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_SmallChange (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_LargeChange (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_LargeChange (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Value (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_Value (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_ScrollType (
-        enum SkinScrollType * pVal ) = 0;
-    virtual HRESULT __stdcall put_ScrollType (
-        enum SkinScrollType pVal ) = 0;
-    virtual HRESULT __stdcall get_SkinObject (
-        struct ISkinObjectDisp * * pVal ) = 0;
-};
 
 enum SkinScrollType
 {
@@ -973,54 +334,6 @@ struct __declspec(uuid("37deb788-2d9b-11d3-9dd0-c423e6542e10"))
 _ISkinSourceEvents : IDispatch
 {};
 
-struct __declspec(uuid("ee11629b-36df-11d3-9dd0-89d6dbbba800"))
-ISkinStorage : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall get_SkinSource (
-        struct ISkinSource * * pVal ) = 0;
-    virtual HRESULT __stdcall putref_SkinSource (
-        struct ISkinSource * pVal ) = 0;
-};
-
-struct __declspec(uuid("ca478da0-3920-11d3-9dd0-8067e4a06603"))
-ISkinPopup : IDispatch
-{
-    //
-    // Raw methods provided by interface
-    //
-
-    virtual HRESULT __stdcall ShowModal (
-        struct ISkinSource * SkinSource,
-        long hWndOwner,
-        long hMenu,
-        long SubMenuIndex,
-        long X,
-        long Y,
-        enum SkinMenuAlign MenuAlign,
-        long * MenuItem ) = 0;
-    virtual HRESULT __stdcall Show (
-        struct ISkinSource * SkinSource,
-        long hWndOwner,
-        long hMenu,
-        long SubMenuIndex,
-        long X,
-        long Y,
-        enum SkinMenuAlign MenuAlign,
-        long * hWnd ) = 0;
-    virtual HRESULT __stdcall get_AnimationSpeed (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall put_AnimationSpeed (
-        long pVal ) = 0;
-    virtual HRESULT __stdcall get_Link (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Link (
-        BSTR pVal ) = 0;
-};
-
 enum SkinMenuAlign
 {
     skMenuLeftTop = 0,
@@ -1045,49 +358,49 @@ ISkinEvent : IDispatch
     // Raw methods provided by interface
     //
 
-    virtual HRESULT __stdcall get_Name (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Name (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_Script (
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Script (
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_State (
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_State (
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_StateMask (
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_StateMask (
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_PrevState (
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_PrevState (
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_PrevStateMask (
-        enum SkinState * pVal ) = 0;
-    virtual HRESULT __stdcall put_PrevStateMask (
-        enum SkinState pVal ) = 0;
-    virtual HRESULT __stdcall get_Effect (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_Effect (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_EffectParams (
-        long Index,
-        BSTR * pVal ) = 0;
-    virtual HRESULT __stdcall put_EffectParams (
-        long Index,
-        BSTR pVal ) = 0;
-    virtual HRESULT __stdcall get_EffectCount (
-        long * pVal ) = 0;
-    virtual HRESULT __stdcall EffectAdd (
-        BSTR Effect,
-        BSTR Params ) = 0;
-    virtual HRESULT __stdcall EffectDelete (
-        long Index ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Script (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Script (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_State (
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_State (
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_StateMask (
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_StateMask (
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_PrevState (
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_PrevState (
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_PrevStateMask (
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_PrevStateMask (
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_Effect (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Effect (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_EffectParams (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_EffectParams (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_EffectCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall EffectAdd (
+        /*[in]*/ BSTR Effect,
+        /*[in]*/ BSTR Params ) = 0;
+      virtual HRESULT __stdcall EffectDelete (
+        /*[in]*/ long Index ) = 0;
 };
 
 struct __declspec(uuid("dce47f78-8a6c-4c6d-a6f7-8be4427127c4"))
@@ -1127,22 +440,717 @@ struct __declspec(uuid("c4d7e3c7-3c26-4052-a993-71e500ea8c05"))
 ComFilters;
     // [ default ] interface IComFilters
 
+struct __declspec(uuid("972de6c1-8b09-11d2-b652-a1fd6cc34260"))
+ISkinForm : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_SkinPath (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_SkinPath (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Link (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Link (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ScanControls (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScanControls (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_RName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_RName (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall putref_SkinObject (
+        /*[in]*/ struct ISkinObjectDisp * pVal ) = 0;
+      virtual HRESULT __stdcall get_AdjustSize (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_AdjustSize (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_MoveControls (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_MoveControls (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall GetBasePath (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall PutBasePath (
+        /*[in]*/ BSTR NewPath ) = 0;
+      virtual HRESULT __stdcall ProcessesTick ( ) = 0;
+      virtual HRESULT __stdcall get_SkinSource (
+        /*[out,retval]*/ struct ISkinSource * * pVal ) = 0;
+      virtual HRESULT __stdcall putref_SkinSource (
+        /*[in]*/ struct ISkinSource * pVal ) = 0;
+      virtual HRESULT __stdcall get_Performance (
+        /*[out,retval]*/ enum SkinPerformance * pVal ) = 0;
+      virtual HRESULT __stdcall put_Performance (
+        /*[in]*/ enum SkinPerformance pVal ) = 0;
+      virtual HRESULT __stdcall get_AnimationSpeed (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_AnimationSpeed (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_AboutSkin (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_AboutSkin (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_ScaleX (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScaleX (
+        /*[in]*/ float pVal ) = 0;
+      virtual HRESULT __stdcall get_ScaleY (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScaleY (
+        /*[in]*/ float pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinClientArea (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_SkinClientArea (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_WorkMode (
+        /*[out,retval]*/ enum SkinWorkMode * pVal ) = 0;
+      virtual HRESULT __stdcall put_WorkMode (
+        /*[in]*/ enum SkinWorkMode pVal ) = 0;
+      virtual HRESULT __stdcall get_ShowHints (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_ShowHints (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_NCActivateAware (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_NCActivateAware (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_FullDragEmulation (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_FullDragEmulation (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+};
+
+struct __declspec(uuid("6cfc9ba1-fe87-11d2-9dcf-ed29fafe371d"))
+ISkinObjectDisp : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_BgColor (
+        /*[in]*/ OLE_COLOR pclr ) = 0;
+      virtual HRESULT __stdcall get_BgColor (
+        /*[out,retval]*/ OLE_COLOR * pclr ) = 0;
+      virtual HRESULT __stdcall putref_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Font (
+        /*[out,retval]*/ IFontDisp * * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Color (
+        /*[in]*/ OLE_COLOR pclr ) = 0;
+      virtual HRESULT __stdcall get_Color (
+        /*[out,retval]*/ OLE_COLOR * pclr ) = 0;
+      virtual HRESULT __stdcall put_Text (
+        /*[in]*/ BSTR pstrText ) = 0;
+      virtual HRESULT __stdcall get_Text (
+        /*[out,retval]*/ BSTR * pstrText ) = 0;
+      virtual HRESULT __stdcall get_LeftString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_LeftString (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_TopString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_TopString (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_RightString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_RightString (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_BottomString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_BottomString (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_WidthString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_WidthString (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_HeightString (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_HeightString (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Align (
+        /*[out,retval]*/ enum SkinAlign * pVal ) = 0;
+      virtual HRESULT __stdcall put_Align (
+        /*[in]*/ enum SkinAlign pVal ) = 0;
+      virtual HRESULT __stdcall get_BackAlign (
+        /*[out,retval]*/ enum SkinBackAlign * pVal ) = 0;
+      virtual HRESULT __stdcall put_BackAlign (
+        /*[in]*/ enum SkinBackAlign pVal ) = 0;
+      virtual HRESULT __stdcall get_Parent (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_FirstChild (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_PreviousSibling (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_NextSibling (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Class (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Class (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall GetTopObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall GetBottomObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall GetLowerObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall GetUpperObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRefCount (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall FindObject (
+        /*[in]*/ BSTR bstrClass,
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Left (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Left (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Top (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Top (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Width (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Height (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Height (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Kind (
+        /*[out,retval]*/ enum tagSkinKind * pVal ) = 0;
+      virtual HRESULT __stdcall put_Kind (
+        /*[in]*/ enum tagSkinKind pVal ) = 0;
+      virtual HRESULT __stdcall HitTest (
+        /*[in]*/ long XPos,
+        /*[in]*/ long YPos,
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall ConvertXToParent (
+        /*[in]*/ long XPos,
+        /*[in]*/ struct ISkinObjectDisp * Parent,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall ConvertYToParent (
+        /*[in]*/ long YPos,
+        /*[in]*/ struct ISkinObjectDisp * Parent,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall Cut ( ) = 0;
+      virtual HRESULT __stdcall Insert (
+        struct ISkinObjectDisp * Relative,
+        enum SkinInsert Relationship ) = 0;
+      virtual HRESULT __stdcall get_Transparency (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Transparency (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall ExecuteScript (
+        BSTR Script ) = 0;
+      virtual HRESULT __stdcall get_XML (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_XML (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Background (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Background (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_TransparencyMap (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_TransparencyMap (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_UsedFiles (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_UsedFiles (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptName (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScriptName (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptBody (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScriptBody (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall ScriptAdd (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ BSTR Body ) = 0;
+      virtual HRESULT __stdcall ScriptRemove (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall get_TransparencyInvert (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_TransparencyInvert (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_hEntireBitmap (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall Refresh (
+        /*[in]*/ VARIANT_BOOL UpdateRegion ) = 0;
+      virtual HRESULT __stdcall get_BackgroundRect (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_BackgroundRect (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_TransparencyMapRect (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_TransparencyMapRect (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall putref_Parent (
+        /*[in]*/ struct ISkinObjectDisp * pVal ) = 0;
+      virtual HRESULT __stdcall putref_FirstChild (
+        /*[in]*/ struct ISkinObjectDisp * pVal ) = 0;
+      virtual HRESULT __stdcall putref_PreviousSibling (
+        /*[in]*/ struct ISkinObjectDisp * pVal ) = 0;
+      virtual HRESULT __stdcall putref_NextSibling (
+        /*[in]*/ struct ISkinObjectDisp * pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptState (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScriptState (
+        /*[in]*/ long Index,
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptStateMask (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScriptStateMask (
+        /*[in]*/ long Index,
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptPrevState (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScriptPrevState (
+        /*[in]*/ long Index,
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall get_ScriptPrevStateMask (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScriptPrevStateMask (
+        /*[in]*/ long Index,
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall put_MouseIcon (
+        /*[in]*/ IPictureDisp * ppMouseIcon ) = 0;
+      virtual HRESULT __stdcall get_MouseIcon (
+        /*[out,retval]*/ IPictureDisp * * ppMouseIcon ) = 0;
+      virtual HRESULT __stdcall get_Hint (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Hint (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall Clone (
+        /*[out,retval]*/ struct ISkinObjectDisp * * NewObject ) = 0;
+      virtual HRESULT __stdcall get_SkinSource (
+        /*[out,retval]*/ struct ISkinSource * * pVal ) = 0;
+      virtual HRESULT __stdcall put_SkinSource (
+        /*[in]*/ struct ISkinSource * pVal ) = 0;
+      virtual HRESULT __stdcall PutSkinSource (
+        /*[in]*/ struct ISkinSource * SkinSource,
+        /*[in]*/ long Recurse,
+        /*[in]*/ long ClearBitmaps ) = 0;
+      virtual HRESULT __stdcall get_TextAlign (
+        /*[out,retval]*/ enum SkinTextAlign * pVal ) = 0;
+      virtual HRESULT __stdcall put_TextAlign (
+        /*[in]*/ enum SkinTextAlign pVal ) = 0;
+      virtual HRESULT __stdcall get_ColorKey (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ColorKey (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_State (
+        /*[out,retval]*/ enum SkinState * pVal ) = 0;
+      virtual HRESULT __stdcall put_State (
+        /*[in]*/ enum SkinState pVal ) = 0;
+      virtual HRESULT __stdcall SetState (
+        /*[in]*/ enum SkinState StateOn,
+        /*[in]*/ enum SkinState StateOff,
+        /*[in]*/ VARIANT_BOOL Recurse ) = 0;
+      virtual HRESULT __stdcall get_TextData (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_TextData (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_EntirePicture (
+        /*[out,retval]*/ IPictureDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall ChooseFont ( ) = 0;
+};
+
+struct __declspec(uuid("37deb787-2d9b-11d3-9dd0-c423e6542e10"))
+ISkinSource : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_MouseIcon (
+        /*[in]*/ IPictureDisp * ppMouseIcon ) = 0;
+      virtual HRESULT __stdcall get_MouseIcon (
+        /*[out,retval]*/ IPictureDisp * * ppMouseIcon ) = 0;
+      virtual HRESULT __stdcall putref_SkinPicture (
+        /*[in]*/ IPictureDisp * ppPicture ) = 0;
+      virtual HRESULT __stdcall put_SkinPicture (
+        /*[in]*/ IPictureDisp * ppPicture ) = 0;
+      virtual HRESULT __stdcall get_SkinPicture (
+        /*[out,retval]*/ IPictureDisp * * ppPicture ) = 0;
+      virtual HRESULT __stdcall putref_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Font (
+        /*[out,retval]*/ IFontDisp * * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Artist (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Artist (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Title (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Title (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Info (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Info (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall putref_SkinObject (
+        /*[in]*/ struct ISkinObjectDisp * pVal ) = 0;
+      virtual HRESULT __stdcall get_Picture (
+        long Index,
+        /*[out,retval]*/ IPictureDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall putref_Picture (
+        long Index,
+        /*[in]*/ IPictureDisp * pVal ) = 0;
+      virtual HRESULT __stdcall get_PictureName (
+        long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_PictureName (
+        long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall PictureAdd (
+        BSTR Name,
+        IPictureDisp * Picture ) = 0;
+      virtual HRESULT __stdcall PictureDelete (
+        long Index ) = 0;
+      virtual HRESULT __stdcall get_PictureCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_BasePath (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_BasePath (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall GetPicture (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ IPictureDisp * * pPicture ) = 0;
+      virtual HRESULT __stdcall LoadSkin (
+        /*[in]*/ BSTR SkinURL ) = 0;
+      virtual HRESULT __stdcall SaveSkin (
+        /*[in]*/ BSTR SkinURL ) = 0;
+      virtual HRESULT __stdcall get_TextData (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_TextData (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrWindow (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrWindow (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrWindowText (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrWindowText (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrButton (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrButton (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrButtonText (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrButtonText (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrBackground (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrBackground (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrLabel (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrLabel (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrPanel (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrPanel (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_ClrPanelText (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ClrPanelText (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_DataKeyByIndex (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataKeyByIndex (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_DataValueByIndex (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataValueByIndex (
+        /*[in]*/ long Index,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_DataValue (
+        /*[in]*/ BSTR Key,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_DataValue (
+        /*[in]*/ BSTR Key,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_INI (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_INI (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Hue (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Hue (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_DataCount (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall DataDelete (
+        /*[in]*/ long Index ) = 0;
+};
+
+struct __declspec(uuid("53fa8d31-2cdd-11d3-9dd0-d3cd4078982a"))
+ISkinFormEvents_Sink : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall MouseHover (
+        struct ISkinObjectDisp * SkinObject,
+        enum tagSkinKeys Keys,
+        short X,
+        short Y ) = 0;
+      virtual HRESULT __stdcall Click (
+        struct ISkinObjectDisp * SkinObject ) = 0;
+      virtual HRESULT __stdcall MouseDown (
+        struct ISkinObjectDisp * SkinObject,
+        enum tagSkinKeys Keys,
+        short X,
+        short Y ) = 0;
+      virtual HRESULT __stdcall MouseUp (
+        struct ISkinObjectDisp * SkinObject,
+        enum tagSkinKeys Keys,
+        short X,
+        short Y ) = 0;
+      virtual HRESULT __stdcall StateChanged (
+        /*[in]*/ struct ISkinObjectDisp * SkinObject,
+        /*[in]*/ long State,
+        /*[in]*/ long PrevState ) = 0;
+};
+
+struct __declspec(uuid("53fa8d40-2cdd-11d3-9dd0-d3cd4078982a"))
+ISkinButton : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall putref_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Font (
+        /*[out,retval]*/ IFontDisp * * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Text (
+        /*[in]*/ BSTR pstrText ) = 0;
+      virtual HRESULT __stdcall get_Text (
+        /*[out,retval]*/ BSTR * pstrText ) = 0;
+      virtual HRESULT __stdcall get_SkinForm (
+        /*[out,retval]*/ struct ISkinForm * * pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ButtonType (
+        /*[out,retval]*/ enum SkinButtonType * pVal ) = 0;
+      virtual HRESULT __stdcall put_ButtonType (
+        /*[in]*/ enum SkinButtonType pVal ) = 0;
+      virtual HRESULT __stdcall ApplySkin (
+        /*[in]*/ struct ISkinForm * SkinForm,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_Link (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Link (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Pressed (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_Pressed (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_Enabled (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_Enabled (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+};
+
+struct __declspec(uuid("53fa8d46-2cdd-11d3-9dd0-d3cd4078982a"))
+ISkinPanel : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_Text (
+        /*[in]*/ BSTR pstrText ) = 0;
+      virtual HRESULT __stdcall get_Text (
+        /*[out,retval]*/ BSTR * pstrText ) = 0;
+      virtual HRESULT __stdcall putref_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Font (
+        /*[out,retval]*/ IFontDisp * * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Link (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Link (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall ApplySkin (
+        /*[in]*/ struct ISkinForm * SkinForm,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_TextAlign (
+        /*[out,retval]*/ enum SkinTextAlign * pVal ) = 0;
+      virtual HRESULT __stdcall put_TextAlign (
+        /*[in]*/ enum SkinTextAlign pVal ) = 0;
+      virtual HRESULT __stdcall get_DefaultPanel (
+        /*[out,retval]*/ enum SkinDefPanelType * pVal ) = 0;
+      virtual HRESULT __stdcall put_DefaultPanel (
+        /*[in]*/ enum SkinDefPanelType pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AdjustSize (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_AdjustSize (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+};
+
+struct __declspec(uuid("53fa8d49-2cdd-11d3-9dd0-d3cd4078982a"))
+ISkinLabel : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall putref_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Font (
+        /*[in]*/ IFontDisp * ppFont ) = 0;
+      virtual HRESULT __stdcall get_Font (
+        /*[out,retval]*/ IFontDisp * * ppFont ) = 0;
+      virtual HRESULT __stdcall put_Text (
+        /*[in]*/ BSTR pstrText ) = 0;
+      virtual HRESULT __stdcall get_Text (
+        /*[out,retval]*/ BSTR * pstrText ) = 0;
+      virtual HRESULT __stdcall ApplySkin (
+        /*[in]*/ struct ISkinForm * SkinForm,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_Link (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Link (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+};
+
+struct __declspec(uuid("53fa8d4c-2cdd-11d3-9dd0-d3cd4078982a"))
+ISkinScrollBar : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall ApplySkin (
+        /*[in]*/ struct ISkinForm * SkinForm,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_Link (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Link (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Min (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Min (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Max (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Max (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_SmallChange (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_SmallChange (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_LargeChange (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_LargeChange (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Value (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_ScrollType (
+        /*[out,retval]*/ enum SkinScrollType * pVal ) = 0;
+      virtual HRESULT __stdcall put_ScrollType (
+        /*[in]*/ enum SkinScrollType pVal ) = 0;
+      virtual HRESULT __stdcall get_SkinObject (
+        /*[out,retval]*/ struct ISkinObjectDisp * * pVal ) = 0;
+};
+
+struct __declspec(uuid("ee11629b-36df-11d3-9dd0-89d6dbbba800"))
+ISkinStorage : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_SkinSource (
+        /*[out,retval]*/ struct ISkinSource * * pVal ) = 0;
+      virtual HRESULT __stdcall putref_SkinSource (
+        /*[in]*/ struct ISkinSource * pVal ) = 0;
+};
+
+struct __declspec(uuid("ca478da0-3920-11d3-9dd0-8067e4a06603"))
+ISkinPopup : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall ShowModal (
+        /*[in]*/ struct ISkinSource * SkinSource,
+        /*[in]*/ long hWndOwner,
+        /*[in]*/ long hMenu,
+        /*[in]*/ long SubMenuIndex,
+        /*[in]*/ long X,
+        /*[in]*/ long Y,
+        /*[in]*/ enum SkinMenuAlign MenuAlign,
+        /*[out,retval]*/ long * MenuItem ) = 0;
+      virtual HRESULT __stdcall Show (
+        /*[in]*/ struct ISkinSource * SkinSource,
+        /*[in]*/ long hWndOwner,
+        /*[in]*/ long hMenu,
+        /*[in]*/ long SubMenuIndex,
+        /*[in]*/ long X,
+        /*[in]*/ long Y,
+        /*[in]*/ enum SkinMenuAlign MenuAlign,
+        /*[out,retval]*/ long * hWnd ) = 0;
+      virtual HRESULT __stdcall get_AnimationSpeed (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_AnimationSpeed (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Link (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Link (
+        /*[in]*/ BSTR pVal ) = 0;
+};
+
 //
 // Named GUID constants initializations
 //
 
 extern "C" const GUID __declspec(selectany) LIBID_ACTIVESKINLib =
     {0x972de6b5,0x8b09,0x11d2,{0xb6,0x52,0xa1,0xfd,0x6c,0xc3,0x42,0x60}};
-extern "C" const GUID __declspec(selectany) IID_ISkinForm =
-    {0x972de6c1,0x8b09,0x11d2,{0xb6,0x52,0xa1,0xfd,0x6c,0xc3,0x42,0x60}};
-extern "C" const GUID __declspec(selectany) IID_ISkinObjectDisp =
-    {0x6cfc9ba1,0xfe87,0x11d2,{0x9d,0xcf,0xed,0x29,0xfa,0xfe,0x37,0x1d}};
-extern "C" const GUID __declspec(selectany) IID_ISkinSource =
-    {0x37deb787,0x2d9b,0x11d3,{0x9d,0xd0,0xc4,0x23,0xe6,0x54,0x2e,0x10}};
 extern "C" const GUID __declspec(selectany) DIID__ISkinFormEvents =
     {0x972de6c3,0x8b09,0x11d2,{0xb6,0x52,0xa1,0xfd,0x6c,0xc3,0x42,0x60}};
-extern "C" const GUID __declspec(selectany) IID_ISkinFormEvents_Sink =
-    {0x53fa8d31,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) CLSID_SkinForm =
     {0x972de6c2,0x8b09,0x11d2,{0xb6,0x52,0xa1,0xfd,0x6c,0xc3,0x42,0x60}};
 extern "C" const GUID __declspec(selectany) DIID__ISkinObjectDispEvents =
@@ -1153,8 +1161,6 @@ extern "C" const GUID __declspec(selectany) IID_IComMorph =
     {0x322982e0,0x0855,0x11d3,{0x9d,0xcf,0xdd,0xfb,0x3a,0xb0,0x9e,0x18}};
 extern "C" const GUID __declspec(selectany) IID_IComMoveSize =
     {0x83c2d7a0,0x0de6,0x11d3,{0x9d,0xcf,0x94,0x23,0xf1,0xb2,0x56,0x1c}};
-extern "C" const GUID __declspec(selectany) IID_ISkinButton =
-    {0x53fa8d40,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) CLSID_SkinObject =
     {0x6cfc9ba2,0xfe87,0x11d2,{0x9d,0xcf,0xed,0x29,0xfa,0xfe,0x37,0x1d}};
 extern "C" const GUID __declspec(selectany) CLSID_COMScript =
@@ -1167,18 +1173,12 @@ extern "C" const GUID __declspec(selectany) DIID__ISkinButtonEvents =
     {0x53fa8d42,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) CLSID_SkinButton =
     {0x53fa8d41,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
-extern "C" const GUID __declspec(selectany) IID_ISkinPanel =
-    {0x53fa8d46,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) DIID__ISkinPanelEvents =
     {0x53fa8d48,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
-extern "C" const GUID __declspec(selectany) IID_ISkinLabel =
-    {0x53fa8d49,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) CLSID_SkinPanel =
     {0x53fa8d47,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) DIID__ISkinLabelEvents =
     {0x53fa8d4b,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
-extern "C" const GUID __declspec(selectany) IID_ISkinScrollBar =
-    {0x53fa8d4c,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) CLSID_SkinLabel =
     {0x53fa8d4a,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) DIID__ISkinScrollBarEvents =
@@ -1187,10 +1187,6 @@ extern "C" const GUID __declspec(selectany) CLSID_SkinScrollBar =
     {0x53fa8d4d,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
 extern "C" const GUID __declspec(selectany) DIID__ISkinSourceEvents =
     {0x37deb788,0x2d9b,0x11d3,{0x9d,0xd0,0xc4,0x23,0xe6,0x54,0x2e,0x10}};
-extern "C" const GUID __declspec(selectany) IID_ISkinStorage =
-    {0xee11629b,0x36df,0x11d3,{0x9d,0xd0,0x89,0xd6,0xdb,0xbb,0xa8,0x00}};
-extern "C" const GUID __declspec(selectany) IID_ISkinPopup =
-    {0xca478da0,0x3920,0x11d3,{0x9d,0xd0,0x80,0x67,0xe4,0xa0,0x66,0x03}};
 extern "C" const GUID __declspec(selectany) IID_IComTransitions =
     {0x3c01387a,0x6ac2,0x4ef1,{0xbd,0xa2,0xec,0x5d,0x26,0xe3,0xb0,0x65}};
 extern "C" const GUID __declspec(selectany) IID_ISkinEvent =
@@ -1213,5 +1209,25 @@ extern "C" const GUID __declspec(selectany) CLSID_ComProcTextures =
     {0xbf1b5d50,0x3c5c,0x48ce,{0xb9,0x91,0x0e,0x86,0xd2,0x6f,0x6f,0x5e}};
 extern "C" const GUID __declspec(selectany) CLSID_ComFilters =
     {0xc4d7e3c7,0x3c26,0x4052,{0xa9,0x93,0x71,0xe5,0x00,0xea,0x8c,0x05}};
+extern "C" const GUID __declspec(selectany) IID_ISkinForm =
+    {0x972de6c1,0x8b09,0x11d2,{0xb6,0x52,0xa1,0xfd,0x6c,0xc3,0x42,0x60}};
+extern "C" const GUID __declspec(selectany) IID_ISkinObjectDisp =
+    {0x6cfc9ba1,0xfe87,0x11d2,{0x9d,0xcf,0xed,0x29,0xfa,0xfe,0x37,0x1d}};
+extern "C" const GUID __declspec(selectany) IID_ISkinSource =
+    {0x37deb787,0x2d9b,0x11d3,{0x9d,0xd0,0xc4,0x23,0xe6,0x54,0x2e,0x10}};
+extern "C" const GUID __declspec(selectany) IID_ISkinFormEvents_Sink =
+    {0x53fa8d31,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_ISkinButton =
+    {0x53fa8d40,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_ISkinPanel =
+    {0x53fa8d46,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_ISkinLabel =
+    {0x53fa8d49,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_ISkinScrollBar =
+    {0x53fa8d4c,0x2cdd,0x11d3,{0x9d,0xd0,0xd3,0xcd,0x40,0x78,0x98,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_ISkinStorage =
+    {0xee11629b,0x36df,0x11d3,{0x9d,0xd0,0x89,0xd6,0xdb,0xbb,0xa8,0x00}};
+extern "C" const GUID __declspec(selectany) IID_ISkinPopup =
+    {0xca478da0,0x3920,0x11d3,{0x9d,0xd0,0x80,0x67,0xe4,0xa0,0x66,0x03}};
 
 #pragma pack(pop)

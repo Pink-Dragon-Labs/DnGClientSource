@@ -173,7 +173,14 @@ tagSkinKind CSkinObj::GetKind ( void )
 // this member sets the hint of this SkinObject
 BOOL CSkinObj::SetHint ( LPCTSTR str )
 {
-	return SetHint ( CString ( str ) );
+	if (!IsValid()) {
+		return FALSE;
+	}
+
+	CComBSTR bstr(str);
+	p_obj->put_Hint(bstr);
+
+	return TRUE;
 }
 
 // this member sets the hint of this SkinObject
@@ -206,7 +213,14 @@ BOOL CSkinObj::SetText ( char* fmt, ...)
 // this member sets the text of this SkinObject
 BOOL CSkinObj::SetText ( LPCTSTR str )
 {
-	return SetText ( CString ( str ) );
+	if (!IsValid()) {
+		return FALSE;
+	}
+
+	CComBSTR bstr( str );
+	p_obj->put_Text(bstr);
+
+	return TRUE;
 }
 
 // this member sets the text of this SkinObject

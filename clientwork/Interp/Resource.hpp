@@ -32,7 +32,7 @@ struct PreLoadObj
 	uint	 offset;
 	const int	 volume;
 };
-#pragma pack
+#pragma pack(8)
 
 class ResourceMgr : public MemClient {
 public:
@@ -121,7 +121,7 @@ struct ResDirEntry {
 	long		volOffset;
 };
 
-#pragma pack
+#pragma pack(8)
 
 extern ResourceMgr*	resMgr;
 extern int				maxVolumes;

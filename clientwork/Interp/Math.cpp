@@ -104,9 +104,12 @@ sqrt(ulong n)
 ulong
 LCGRandom()
 {
-   while(!lcgSeed)
-      time((time_t*) &lcgSeed);
-
+	while (!lcgSeed) {
+		MemoryMgr* tmpMemMgr = memMgr;
+		time((time_t*)&lcgSeed);
+		memMgr = tmpMemMgr;
+	}
+		
    return(lcgSeed = (lcgSeed * Generator + Increment));
 }
 

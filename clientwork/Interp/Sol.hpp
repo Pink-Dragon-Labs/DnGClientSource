@@ -23,7 +23,7 @@
 	#define RB
 	#define AP
 	#define LINE
-	#define MG
+	#define MGN
 	#define MP
 	#define MT
 	#define SS
@@ -41,7 +41,7 @@
 #ifdef LN
 	#define LINE
 #endif
-#ifdef MG
+#ifdef MGN
 	#define MAGNIFY
 #endif
 #ifdef MP

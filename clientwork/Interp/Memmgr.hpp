@@ -474,7 +474,6 @@ public:
 	//	Returns whether handle is valid
 	inline Bool MemoryMgr::IsValid(SOL_Handle theID) {
 		unsigned short tempID = (unsigned short)theID;
-
 		return(
 				(tempID)															&&
 				(tempID < maxDescriptors)									&&

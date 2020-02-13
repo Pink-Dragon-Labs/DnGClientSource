@@ -154,7 +154,7 @@ MemoryMgr::Init(size_t maxMemory)
 	checkVolatile = 0;
 #endif
 	int sysMem = GetSysMemAvail();
-
+	
 	if (sysMem > maxMemory)
 		sysMem = maxMemory;
 
@@ -172,10 +172,10 @@ MemoryMgr::Init(size_t maxMemory)
 	assert (ii == 0);
 
   	char* DescriptorsAddr = (char *)malloc ( theDescriptorsSize + (gBufferOverflow * 2) );
-
+	
 	memset ( DescriptorsAddr, 'S', theDescriptorsSize + (gBufferOverflow * 2));
 	DescriptorsAddr += gBufferOverflow;
-
+	
 	desc = new(DescriptorsAddr) Descriptor;
 	_descTablePtr = desc;
 

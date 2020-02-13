@@ -41,3 +41,15 @@ Interp/Release
 
 # VScode Folder
 .vscode
+
+#vs2019
+*.cod
+*.idb
+*.nativecodeanalysis.sarif
+*.nativecodeanalysis.xml
+*.Settings
+*.ipch
+*.vs
+.vs
+*.pdb
+*.tlog
