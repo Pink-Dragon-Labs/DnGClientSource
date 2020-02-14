@@ -18,11 +18,6 @@
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
 # Fortran module files
 *.mod
 *.smod
@@ -43,13 +38,14 @@
 **Sciw.log
 
 # All Release files
-Interp/Release
+*Sciw.exe
 
 # VScode Folder
 .vscode
 
 #vs2019
 *.cod
+*.sbr
 *.idb
 *.nativecodeanalysis.sarif
 *.nativecodeanalysis.xml

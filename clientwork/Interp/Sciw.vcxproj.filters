@@ -1189,7 +1189,7 @@
     <Library Include="Library\MSS32.LIB">
       <Filter>Libraries</Filter>
     </Library>
-    <Library Include="..\..\..\..\..\Desktop\Microsoft Visual C++ 6.0 Standard Edition\VC98\MFC\LIB\EAFXISD.LIB">
+    <Library Include="Library\EAFXISD.LIB">
       <Filter>Libraries</Filter>
     </Library>
   </ItemGroup>
