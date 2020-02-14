@@ -35,6 +35,12 @@
 # Executables
 *.out
 *.app
+**Activeskin.tlh
+**Sciw.bsc
+**Sciw.exe
+**Sciw.exp
+**Sciw.pdb
+**Sciw.log
 
 # All Release files
 Interp/Release

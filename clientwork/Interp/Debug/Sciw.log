@@ -1,6 +1,0 @@
-﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  Sciw.cpp
-cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  scimfc.cpp
-     Creating library .\Debug\Sciw.lib and object .\Debug\Sciw.exp
-  Sciw.vcxproj -> C:\Users\cmhul\source\repos\DnGClientSource\clientwork\Interp\.\Debug\Sciw.exe
