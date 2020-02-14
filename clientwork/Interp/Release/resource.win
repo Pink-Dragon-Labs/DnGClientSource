@@ -1,0 +1,22 @@
+[Windows]
+title=The Realm
+titleBar=TRUE
+maximized=FALSE
+allowresize=FALSE
+wwidth=640
+wheight=480
+scimink=2300
+reservek=600
+borderpixels=0
+maxcursorsize=1024
+cursorViewAdd=2000
+asyncCheckFreq=60
+hires=640,480
+enableMidi = True
+xmonoDisp = 1
+patchDir = .
+updateServer realmserver.com
+updatePort 6004
+gameServer realmserver.com
+gamePort 6002
+

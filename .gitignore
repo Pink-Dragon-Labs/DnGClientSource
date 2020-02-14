@@ -32,7 +32,7 @@
 *.app
 
 # All Release files
-Interp/Release
+*Sciw.exe
 
 # VScode Folder
 .vscode
