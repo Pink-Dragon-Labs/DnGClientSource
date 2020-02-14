@@ -1259,14 +1259,14 @@ CSkinCtrl *CLookAt::MakeSkinCtrl ( CSkinObj obj ) {
 					pEdit->SetText( "%s", *m_pChar.get_pProfession() );
 					break;
 				case 126:
-					if ( !((CSCI_List) m_pChar.get_pSkillArray()).at( 31 ) )
+					if ( !((CSCI_List) m_pChar.get_pSkillArray()).at( 24 ) )
 						pEdit->SetColor( 0x00808080 );
 
 					pEdit->SetText( "Broadsword" );
 					break;
 				case 127:
-					if ( ((CSCI_List) m_pChar.get_pSkillArray()).at( 31 ) )
-						pEdit->SetText( "%d", ((CSCI_List) m_pChar.get_pSkillArray()).at( 31 ) );
+					if ( ((CSCI_List) m_pChar.get_pSkillArray()).at( 24 ) )
+						pEdit->SetText( "%d", ((CSCI_List) m_pChar.get_pSkillArray()).at( 24 ) );
 					break;
 			};
 		} else {
