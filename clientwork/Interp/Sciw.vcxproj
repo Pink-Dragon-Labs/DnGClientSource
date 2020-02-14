@@ -69,6 +69,7 @@
       <PrecompiledHeaderOutputFile>.\Release\Sciw.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalOptions>/D "WINDOWS_IGNORE_PACKING_MISMATCH" %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -872,7 +873,7 @@
     <CustomBuild Include="Res\walk.cur" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\..\..\..\Desktop\Microsoft Visual C++ 6.0 Standard Edition\VC98\MFC\LIB\EAFXISD.LIB" />
+    <Library Include="Library\EAFXISD.LIB" />
     <Library Include="Library\FGWVC32.LIB" />
     <Library Include="Library\misc.lib" />
     <Library Include="Library\MSS32.LIB" />

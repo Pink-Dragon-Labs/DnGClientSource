@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 14.24.28316.0 (602f4d44).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.24.28316.0 (8234615f).
 //
-// C:\Users\cmhul\source\repos\DnGClientSource\clientwork\Interp\Debug\activeskin.tlh
+// C:\Users\Zachary\source\repos\DnGClientSource\clientwork\Interp\Debug\activeskin.tlh
 //
 // C++ source equivalent of Win32 type library Library/lib/ActiveSkin.ocx
-// compiler-generated file created 02/09/20 at 22:22:08 - DO NOT EDIT!
+// compiler-generated file created 02/13/20 at 19:56:34 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
