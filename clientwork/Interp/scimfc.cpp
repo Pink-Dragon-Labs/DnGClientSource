@@ -789,7 +789,8 @@ CMainWindow::CMainWindow()
 	CreateClassPopup ( app->m_pSingleInstance->GetClassName(), "MP_Frame.skn", "The Realm Online", CRect ( 0, 0, 640, 480 ), FALSE, TRUE );
 
 	m_pSCIWnd = new CSCIWnd;
-	m_pSCIWnd->Create ( this, CRect ( 0, 0, 640, 480 ) );
+    CRect rect = CRect(0, 0, 640, 480);
+    m_pSCIWnd->Create (this, rect);
 
 	// get the client rectangle of our window
 	CRect myRect;

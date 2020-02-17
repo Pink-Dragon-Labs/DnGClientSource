@@ -279,7 +279,7 @@ BOOL CSkinWnd::CreatePopup ( LPCTSTR lpszSkinPath, LPCTSTR lpszCaption, const CR
 //
 BOOL CSkinWnd::CreateClassPopup ( LPCTSTR lpszWndClass, LPCTSTR lpszSkinPath, LPCTSTR lpszCaption, const CRect &rect, BOOL bAllowResize, BOOL bCreateControls, BOOL bAlert )
 {
-	DWORD dwStyle = WS_OVERLAPPEDWINDOW & (~WS_SYSMENU);
+	DWORD dwStyle = WS_OVERLAPPEDWINDOW & (~WS_SYSMENU) & WS_CAPTION;
 
 	BOOL created = CreateEx ( 0, lpszWndClass, lpszCaption, dwStyle, rect.left, rect.top, rect.Width(), rect.Height(), g_pMainWindow? g_pMainWindow->GetSafeHwnd() : NULL, NULL );
 
