@@ -55,3 +55,7 @@
 .vs
 *.pdb
 *.tlog
+
+#Realm ignore
+login.lst
+realm.windows.cfg

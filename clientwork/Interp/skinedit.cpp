@@ -23,7 +23,7 @@ char defaultFont[30] = "Verdana";				//	The default font for the edit field.
 char wingdingFont[30] = "RealmEmotes";		//	The default font for the emotes of the edit field.
 
 char EmoteToChar [ 128 ] = {
-	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', 'i', 'j', 'g', 0,   0, 
+	'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', 'i', 'j', 'g', 0,   0,
 	0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
 	0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 
@@ -267,7 +267,6 @@ BOOL CSkinEdit::AddText ( LPCTSTR text )
 		}
 
 		specialChar = *pPtr;
-		*pPtr = 0;
 
 		nStart = SetFont ( defaultFont );
 
