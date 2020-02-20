@@ -17,7 +17,7 @@
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 #ifdef _WIN32
-LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US;
 #pragma code_page(1252)
 #endif //_WIN32
 
@@ -54,38 +54,38 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_MAINFRAME           ICON    DISCARDABLE     "res\\Realm.ico"
-IDI_FRIEND_STOP         ICON    DISCARDABLE     "res\\FriendStop.ico"
-IDI_FRIEND_GO           ICON    DISCARDABLE     "res\\FriendGo.ico"
-IDI_FRIEND_BUSY         ICON    DISCARDABLE     "res\\FriendBusy.ico"
-IDI_INV_BLANK           ICON    DISCARDABLE     "res\\blank.ico"
-IDI_INV_WORN            ICON    DISCARDABLE     "res\\wearing.ico"
-IDI_ENEMY_PERMENANT     ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_MAINFRAME           ICON    DISCARDABLE     "Res\\Realm.ico"
+IDI_FRIEND_STOP         ICON    DISCARDABLE     "Res\\FriendStop.ico"
+IDI_FRIEND_GO           ICON    DISCARDABLE     "Res\\FriendGo.ico"
+IDI_FRIEND_BUSY         ICON    DISCARDABLE     "Res\\FriendBusy.ico"
+IDI_INV_BLANK           ICON    DISCARDABLE     "Res\\blank.ico"
+IDI_INV_WORN            ICON    DISCARDABLE     "Res\\wearing.ico"
+IDI_ENEMY_PERMENANT     ICON    DISCARDABLE     "Res\\icon1.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Bitmap
 //
 
-IDB_SPELL_LIST          BITMAP  DISCARDABLE     "res\\spelliconbar.bmp"
-IDB_BUY_LIST            BITMAP  DISCARDABLE     "res\\gobuttons.bmp"
+IDB_SPELL_LIST          BITMAP  DISCARDABLE     "Res\\spelliconbar.bmp"
+IDB_BUY_LIST            BITMAP  DISCARDABLE     "Res\\gobuttons.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Cursor
 //
 
-IDC_WALK                CURSOR  DISCARDABLE     "res\\walk.cur"
-IDC_PUTIN               CURSOR  DISCARDABLE     "res\\putin.cur"
-IDC_DROP                CURSOR  DISCARDABLE     "res\\drop.cur"
-IDC_DO                  CURSOR  DISCARDABLE     "res\\do.cur"
-IDC_SPELL               CURSOR  DISCARDABLE     "res\\spell.cur"
-IDC_SWORD               CURSOR  DISCARDABLE     "res\\sword.cur"
-IDC_EXITLEFT            CURSOR  DISCARDABLE     "res\\exitleft.cur"
-IDC_EXITRIGHT           CURSOR  DISCARDABLE     "res\\exitlright.cur"
-IDC_EXITUP              CURSOR  DISCARDABLE     "res\\exitup.cur"
-IDC_EXITDOWN            CURSOR  DISCARDABLE     "res\\exitdown.cur"
-IDC_VERB                CURSOR  DISCARDABLE     "res\\verb.cur"
+IDC_WALK                CURSOR  DISCARDABLE     "Res\\walk.cur"
+IDC_PUTIN               CURSOR  DISCARDABLE     "Res\\putin.cur"
+IDC_DROP                CURSOR  DISCARDABLE     "Res\\drop.cur"
+IDC_DO                  CURSOR  DISCARDABLE     "Res\\do.cur"
+IDC_SPELL               CURSOR  DISCARDABLE     "Res\\spell.cur"
+IDC_SWORD               CURSOR  DISCARDABLE     "Res\\sword.cur"
+IDC_EXITLEFT            CURSOR  DISCARDABLE     "Res\\exitleft.cur"
+IDC_EXITRIGHT           CURSOR  DISCARDABLE     "Res\\exitlright.cur"
+IDC_EXITUP              CURSOR  DISCARDABLE     "Res\\exitup.cur"
+IDC_EXITDOWN            CURSOR  DISCARDABLE     "Res\\exitdown.cur"
+IDC_VERB                CURSOR  DISCARDABLE     "Res\\verb.cur"
 #endif    // English (U.S.) resources
 /////////////////////////////////////////////////////////////////////////////
 
