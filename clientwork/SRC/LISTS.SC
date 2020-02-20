@@ -391,8 +391,8 @@
 				SRepel
 				SSummonDragon
 				SImmolationCold
-				SImmolationAcid
-				SImmolationPoison
+				SVitality
+				SEnlightenment
 				SImmolationLightning
 		)
 

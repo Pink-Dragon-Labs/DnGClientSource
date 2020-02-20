@@ -171,11 +171,10 @@
 	SSummonSeraph				138
 	SSummonDragon				143
 	SImmolationCold				144
-	SImmolationAcid				145
-	SImmolationPoison			146
+	SVitality					145
+	SEnlightenment				146
 	SImmolationLightning		147
 	SRepel						148
-	SRemote						149
 )
 
 (local
@@ -2847,32 +2846,32 @@
 		int 	pIcon	5
 	)
 )
-(instance SImmolationAcid of Spell
+(instance SVitality of Spell
 	(properties
-		int	pCircle	_SKILL_ELEMENTALISM
+		int	pCircle	_SKILL_THAUMATURGY
 		int	pSkill	_SKILL_GRAND_MASTER
-		int	pID	_SPELL_IMMOLATION_ACID
+		int	pID	_SPELL_VITALITY
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
-		id	pText	"Immolation Acid"
-		int	view	vElementalSpell
+		id	pText	"Vitality"
+		int	view	vThaumaturgySpell
 		int	loop	4
-		int 	pCost	250
-		int 	pIcon	5
+		int 	pCost	1500
+		int 	pIcon	44
 	)
 )
-(instance SImmolationPoison of Spell
+(instance SEnlightenment of Spell
 	(properties
-		int	pCircle	_SKILL_ELEMENTALISM
+		int	pCircle	_SKILL_THAUMATURGY
 		int	pSkill	_SKILL_GRAND_MASTER
-		int	pID	_SPELL_IMMOLATION_POISON
+		int	pID	_SPELL_ENLIGHTENMENT
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
-		id	pText	"Immolation Poison"
-		int	view	vElementalSpell
+		id	pText	"Enlightenment"
+		int	view	vThaumaturgySpell
 		int	loop	4
-		int 	pCost	250
-		int 	pIcon	5
+		int 	pCost	1500
+		int 	pIcon	2
 	)
 )
 (instance SImmolationLightning of Spell
