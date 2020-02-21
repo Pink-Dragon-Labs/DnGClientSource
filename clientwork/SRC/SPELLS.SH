@@ -139,8 +139,8 @@
 (define SSummonSeraph			(ModuleID SPELLS 138))
 (define SSummonDragon			(ModuleID SPELLS 143))
 (define SImmolationCold			(ModuleID SPELLS 144))
-(define SVitality   			(ModuleID SPELLS 145))
-(define SEnlightenment		    (ModuleID SPELLS 146))
+(define SImmolationAcid 		(ModuleID SPELLS 145))
+(define SImmolationPoison	    (ModuleID SPELLS 146))
 (define SImmolationLightning	(ModuleID SPELLS 147))
 (define SRepel              	(ModuleID SPELLS 148))
 

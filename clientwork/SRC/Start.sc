@@ -134,8 +134,8 @@
 		(= lLoginErrorStr (String new:))
 
 		;; normal routing server
-        (= lRoutingServer (String format: "damiena.xyz"))
-        (= lRoutingPort (String format: "7002")) 
+        (= lRoutingServer (String format: "45.76.65.56"))
+        (= lRoutingPort (String format: "20004")) 
 
 		;; check for a command line argument
 		(for ((= tArg 1)) (< tArg (KArgList ArgGetCount)) ((++ tArg))

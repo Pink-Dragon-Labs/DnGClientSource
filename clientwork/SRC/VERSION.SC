@@ -44,6 +44,6 @@
 (class GameVersion of RootObj
 	(properties
 		int	pMajorVersion 3
-		int pMinorVersion 448
+		int pMinorVersion 451
 	)
 )
