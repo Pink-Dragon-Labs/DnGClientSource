@@ -58,7 +58,6 @@ CLookAt* g_pLookAtScreen[ MAX_SCREEN_PAGES ] = { NULL, NULL, NULL, NULL, NULL, N
 CLookAtFiller*		g_pLookAtFiller		=	NULL;
 
 char gNormalAffectTbl[88][50] = {
-		"",
 		"Unarmed Attack + Fire",
 		"Unarmed Attack + Cold",
 		"Unarmed Attack + Lightning",
