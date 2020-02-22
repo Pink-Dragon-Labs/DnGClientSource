@@ -360,6 +360,7 @@ set(New_Interface_Code__Header_Files_No._1
     "mainpanel.hpp"
     "MakeItemDlg.hpp"
     "minrestoreclose.hpp"
+    "Motion.hpp"
     "mousewheel.hpp"
     "msgfunctions.hpp"
     "namehealth.hpp"

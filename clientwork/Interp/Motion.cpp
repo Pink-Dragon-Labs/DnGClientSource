@@ -5,6 +5,7 @@
 
 #include "sol.hpp"
 
+#include "motion.hpp"
 #include "graph.hpp"
 #include "kernel.hpp"
 #include "math.hpp"
@@ -29,6 +30,8 @@ const uint	setNSRect   = 0x8000;
 
 static void	DirLoop(ObjectID, int);
 static void	GetCelRect(int view,int loop,int cel,int x,int y,int z,SOL_Rect& rect);
+
+signed short ADDITIONAL_INCREMENT = 0;
 
 void
 KBaseSetter(argList)
@@ -251,6 +254,17 @@ KDoBresen(argList)
 	int dx		= (signed short)motion.GetIndexedProperty(motDX);
 	int dy		= (signed short)motion.GetIndexedProperty(motDY);
 	int incr		= (signed short)motion.GetIndexedProperty(motIncr);
+
+	if (dx > 0) {
+	  dx += ADDITIONAL_INCREMENT;
+	} else if (dx < 0 ){
+	  dx -= ADDITIONAL_INCREMENT;
+	}
+	if (dy > 0) {
+	  dy += ADDITIONAL_INCREMENT;
+	} else if (dy < 0) {
+	  dy -= ADDITIONAL_INCREMENT;
+	}
 //	uint cSignal = client.GetIndexedProperty(actSignal);
 
 //	if (cSignal & setBaseRect){
@@ -329,6 +343,7 @@ KDoBresen(argList)
 		motion.SetIndexedProperty(motI2, (Property) i2);
 		motion.SetIndexedProperty(motDI, (Property) di);
 	}
+
 	if (x == toX && y == toY)
 		// MUST be cast as short or else CPP converts them signed (Bryan Waters)
 		invokeMethod(motion, s_moveDone, 0, pm.StackPtr);
