@@ -949,10 +949,10 @@ LRESULT CMainWindow::OnDisplayChange(WPARAM wParam, LPARAM lParam)
 {
 	if (g_bExpectDisplayChange == false) {
 		::MessageBox(::GetFocus(), "Your display settings have been changed.  The Realm Online must be restarted to handle this.  Restart the game to continue playing with your new settings.", "Display Changed", MB_TASKMODAL);
-		CloseSelf();
+		//CloseSelf();
 	}
 
-	g_bExpectDisplayChange = false;
+	//g_bExpectDisplayChange = false;
 	return 1;
 }
 /*

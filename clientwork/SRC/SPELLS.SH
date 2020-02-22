@@ -143,6 +143,9 @@
 (define SEnlightenment		    (ModuleID SPELLS 146))
 (define SImmolationLightning	(ModuleID SPELLS 147))
 (define SRepel              	(ModuleID SPELLS 148))
+(define SImpInvulnerability     (ModuleID SPELLS 139))
+(define SSummonMist             (ModuleID SPELLS 140))
+
 
 (define _SEDeathCloud	0)
 (define _SEFlameOrb		1)

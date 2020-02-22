@@ -394,6 +394,8 @@
 				SVitality
 				SEnlightenment
 				SImmolationLightning
+				SImpInvulnerability
+				SSummonMist
 		)
 
 		(self eachElementDo: #init)

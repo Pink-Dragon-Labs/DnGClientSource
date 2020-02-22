@@ -2884,8 +2884,36 @@
 		id	pText	"Immolation Lightning"
 		int	view	vElementalSpell
 		int	loop	4
-		int 	pCost	250
-		int 	pIcon	5
+		int pCost	250
+		int pIcon	5
+	)
+)
+(instance SImpInvulnerability of Spell
+	(properties
+		int	pCircle	_SKILL_THAUMATURGY
+		int	pSkill	_SKILL_GRAND_MASTER
+		int	pID		_SPELL_IMP_INVULNERABILITY
+		int	pType   (| fSpellAnywhere fSpellFriendly)
+
+		id	pText   "Imp Invul"
+		int	view	vThaumaturgySpell
+		int	loop	4
+		int pCost	115
+		int pIcon	2
+	)
+)
+(instance SSummonMist of Spell
+	(properties
+		int	pCircle	_SKILL_NECROMANCY
+		int	pSkill	_SKILL_GRAND_MASTER
+		int	pID		_SPELL_SUMMON_MIST
+		int	pType   (| fSpellCombat fSpellArea)
+
+		id	pText   "Summon Mists"
+		int	view	vNecromancySpell
+		int	loop	4
+		int pCost	500
+		int pIcon	2
 	)
 )
 ;----------------------------------------------------

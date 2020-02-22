@@ -56,7 +56,9 @@
 .vs
 *.pdb
 *.tlog
+Inter/out
 
 #Realm ignore
 login.lst
 realm.windows.cfg
+clientwork/Interp/Debug/fatal.log
