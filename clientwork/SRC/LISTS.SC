@@ -385,10 +385,10 @@
 				SSummonOgre
 				SSummonTroll
 				SSummonSeraph
+				SRepel
 				SCancel ;;minotaur spells
 				SCancel
 				SCancel
-				SRepel
 				SSummonDragon
 				SImmolationCold
 				SVitality

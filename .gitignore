@@ -56,9 +56,22 @@
 .vs
 *.pdb
 *.tlog
-Inter/out
+Interp/out
 
 #Realm ignore
 login.lst
 realm.windows.cfg
 clientwork/Interp/Debug/fatal.log
+resources
+vocabs
+scripts
+*.Settings
+*.rtp
+
+#CLion
+*.idea
+*cmake-build-*
+*SCI
+*.manifest
+clientwork/Interp/Debug/Sciw.lib
+clientwork/Interp/Release/Sciw.lib

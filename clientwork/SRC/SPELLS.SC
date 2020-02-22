@@ -169,12 +169,14 @@
 	SSummonOgre					136
 	SSummonTroll				137
 	SSummonSeraph				138
+	SRepel      				139
 	SSummonDragon				143
 	SImmolationCold				144
 	SVitality					145
 	SEnlightenment				146
 	SImmolationLightning		147
-	SRepel						148
+	SImpInvulnerability         148
+	SSummonMist                 149
 )
 
 (local
@@ -2884,10 +2886,11 @@
 		id	pText	"Immolation Lightning"
 		int	view	vElementalSpell
 		int	loop	4
-		int pCost	250
-		int pIcon	5
+		int 	pCost	250
+		int 	pIcon	5
 	)
 )
+
 (instance SImpInvulnerability of Spell
 	(properties
 		int	pCircle	_SKILL_THAUMATURGY
@@ -2916,6 +2919,7 @@
 		int pIcon	2
 	)
 )
+
 ;----------------------------------------------------
 (instance SCancel of Spell
 	(properties
