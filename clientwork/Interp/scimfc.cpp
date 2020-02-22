@@ -48,6 +48,7 @@
 #include "SkinAlert.hpp"
 
 #include "SpellDlg.hpp"
+#include "inventorydlg.hpp"
 #include "TreasureDlg.hpp"
 #include "ServerDlg.hpp"
 #include "ToonSettings.hpp"
@@ -634,7 +635,7 @@ int CSciApp::Run()
 				} else if ( m_msgCur.wParam == 'S' ) {
 					::GetMessage ( &m_msgCur, NULL, 0, 0 );
 
-					if ( m_msgCur.lParam & 0x20000000 ) 
+					if ( m_msgCur.lParam & 0x20000000 )
                     {
 						if ( g_pSpellListDialog == NULL &&  g_pWindowMgr && ( g_pWindowMgr->GetGameModal(gmCombatModal) == 0 ) && g_pMainPanelWnd && g_pMainPanelWnd->Spells() )
                         {
@@ -645,7 +646,28 @@ int CSciApp::Run()
 
 						continue;
 					}
-				} else if ( g_pToonSettings && g_pToonSettings->get_TabDisplay() ) {
+				} else if ( m_msgCur.wParam == 'I' ) {
+          ::GetMessage ( &m_msgCur, NULL, 0, 0 );
+
+          if ( m_msgCur.lParam & 0x20000000 )
+          {
+            if ( g_pWindowMgr && ( g_pWindowMgr->GetGameModal(gmCombatModal) == 0 ) && g_pMainPanelWnd )
+            {
+              g_pWindowMgr->CloseAllTransientWindows();
+
+              CSCI_WorldEgo hEgo = pm.GetGlobal ( gSCI_ego );
+
+              CInventoryDlg *pDialog = CInventoryDlg::FromObject ( hEgo );
+
+              if ( !pDialog ) {
+                pDialog = new CInventoryDlg;
+                pDialog->Create ( (SOL_Handle)hEgo );
+              }
+            }
+
+            continue;
+          }
+        } else if ( g_pToonSettings && g_pToonSettings->get_TabDisplay() ) {
 					switch ( m_msgCur.wParam ) {
 						case VK_F10:
 							if ( g_pHost )
