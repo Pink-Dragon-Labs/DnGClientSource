@@ -493,6 +493,7 @@ int CSciApp::Run() {
 
   // acquire and dispatch messages until a WM_QUIT message is received.
   for (;;) {
+    Sleep(1);
     if (g_pTrackingWindow) {
       g_pTrackingWindow->UpdateTracking();
     }
@@ -750,7 +751,8 @@ int CSciApp::Run() {
 
     // let SCI do it's thing...
     if (pm.game && g_pMainWindow && ::IsWindow(g_pMainWindow->m_hWnd)) {
-      g_pSCIWnd->SendToBack();
+      // This line causes a huge cpu usage; commenting out doesn't seem to break anyything - Elpha
+      //g_pSCIWnd->SendToBack();
 
       if ((timeMgr->GetMilliSec() - lastDoitTime) > 9) {
         invokeMethod(pm.game, s_doit, 0, pm.StackPtr);

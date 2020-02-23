@@ -54,9 +54,14 @@
 *.ipch
 *.vs
 .vs
-*.pdb
 *.tlog
 clientwork/Interp/out
+**.ilk
+**.idb
+**.pdb
+**CppClean.log
+**.nativecodeanalysis.*
+**diagsession
 
 #Realm ignore
 login.lst
