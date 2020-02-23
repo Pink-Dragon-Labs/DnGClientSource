@@ -2851,7 +2851,7 @@
 (instance SVitality of Spell
 	(properties
 		int	pCircle	_SKILL_THAUMATURGY
-		int	pSkill	_SKILL_GRAND_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID	_SPELL_VITALITY
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
@@ -2865,7 +2865,7 @@
 (instance SEnlightenment of Spell
 	(properties
 		int	pCircle	_SKILL_THAUMATURGY
-		int	pSkill	_SKILL_GRAND_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID	_SPELL_ENLIGHTENMENT
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
