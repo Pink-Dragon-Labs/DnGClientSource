@@ -56,7 +56,7 @@
 .vs
 *.pdb
 *.tlog
-Interp/out
+clientwork/Interp/out
 
 #Realm ignore
 login.lst

@@ -2894,29 +2894,30 @@
 (instance SImpInvulnerability of Spell
 	(properties
 		int	pCircle	_SKILL_THAUMATURGY
-		int	pSkill	_SKILL_GRAND_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_IMP_INVULNERABILITY
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
-		id	pText   "Imp Invul"
+		id	pText   "Imp. Invulnerability"
 		int	view	vThaumaturgySpell
-		int	loop	4
+		int	loop	12
 		int pCost	115
-		int pIcon	2
+		int pIcon	73
 	)
 )
+
 (instance SSummonMist of Spell
 	(properties
-		int	pCircle	_SKILL_NECROMANCY
-		int	pSkill	_SKILL_GRAND_MASTER
+		int	pCircle	_SKILL_MYSTICISM
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_SUMMON_MIST
 		int	pType   (| fSpellCombat fSpellArea)
 
-		id	pText   "Summon Mists"
-		int	view	vNecromancySpell
-		int	loop	4
+		id	pText   "Summon the Mist"
+		int	view	vMysticismSpell
+		int	loop	7
 		int pCost	500
-		int pIcon	2
+		int pIcon	48
 	)
 )
 
