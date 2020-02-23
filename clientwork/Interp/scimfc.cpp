@@ -491,8 +491,10 @@ int CSciApp::Run() {
   // track when to run the doit method...
   int lastDoitTime = timeMgr->GetMilliSec();
 
+
   // acquire and dispatch messages until a WM_QUIT message is received.
   for (;;) {
+    // Sleep should be imperceptable to a human, but it stops this loop from busy spinning
     Sleep(1);
     if (g_pTrackingWindow) {
       g_pTrackingWindow->UpdateTracking();
