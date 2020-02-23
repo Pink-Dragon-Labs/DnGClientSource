@@ -678,14 +678,14 @@ int CSciApp::Run() {
           }
         } else if (m_msgCur.wParam == 'W') {
           ::GetMessage(&m_msgCur, NULL, 0, 0);
-          if (ADDITIONAL_INCREMENT < MAXSHORT) {
-            ADDITIONAL_INCREMENT += 10;
+          if (ADDITIONAL_INCREMENT < 30) {
+            ADDITIONAL_INCREMENT += 1;
           }
           continue;
         } else if (m_msgCur.wParam == 'Q') {
           ::GetMessage(&m_msgCur, NULL, 0, 0);
           if (ADDITIONAL_INCREMENT > 0) {
-            ADDITIONAL_INCREMENT -= 10;
+            ADDITIONAL_INCREMENT -= 1;
           }
           continue;
         } else if (g_pToonSettings && g_pToonSettings->get_TabDisplay()) {

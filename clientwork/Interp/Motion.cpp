@@ -255,16 +255,12 @@ KDoBresen(argList)
 	int dy		= (signed short)motion.GetIndexedProperty(motDY);
 	int incr		= (signed short)motion.GetIndexedProperty(motIncr);
 
-	if (dx > 0) {
-	  dx += ADDITIONAL_INCREMENT;
-	} else if (dx < 0 ){
-	  dx -= ADDITIONAL_INCREMENT;
-	}
-	if (dy > 0) {
-	  dy += ADDITIONAL_INCREMENT;
-	} else if (dy < 0) {
-	  dy -= ADDITIONAL_INCREMENT;
-	}
+//	 Change the speed in steps of 20%
+  double modifier = .2 * ADDITIONAL_INCREMENT;
+  double percent_change = 1 + modifier;
+  dx = int(dx * percent_change);
+	dy = int(dy * percent_change);
+	
 //	uint cSignal = client.GetIndexedProperty(actSignal);
 
 //	if (cSignal & setBaseRect){
