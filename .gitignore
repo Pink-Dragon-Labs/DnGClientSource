@@ -65,8 +65,8 @@ clientwork/Interp/out
 
 #Realm ignore
 login.lst
-realm.windows.cfg
-clientwork/Interp/Debug/fatal.log
+**realm.windows.cfg
+clientwork/Interp/*/fatal.log
 resources
 vocabs
 scripts
@@ -78,6 +78,5 @@ scripts
 *cmake-build-*
 *SCI
 *.manifest
-clientwork/Interp/Debug/Sciw.lib
-clientwork/Interp/Release/Sciw.lib
+clientwork/Interp/*/Sciw.lib
 **Sciw.map

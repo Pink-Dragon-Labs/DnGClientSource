@@ -229,12 +229,12 @@ set(Header_Files
 source_group("Header Files" FILES ${Header_Files})
 
 set(Libraries
-    "Library/lib/ActiveSkin.ocx"
-    "Library/EAFXISD.LIB"
-    "Library/FGWVC32.LIB"
-    "Library/misc.lib"
-    "Library/MSS32.LIB"
-)
+        "Library/lib/ActiveSkin.ocx"
+        "Library/FGWVC32.LIB"
+        "Library/misc.lib"
+        "Library/MSS32.LIB"
+        )
+
 source_group("Libraries" FILES ${Libraries})
 
 set(New_Interface_Code
@@ -540,12 +540,12 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 target_compile_definitions(${PROJECT_NAME} PRIVATE
     "$<$<CONFIG:Debug>:"
         "DEBUG;"
-        "_DEBUG;"
-        "WINDOWS_IGNORE_PACKING_MISMATCH"
+        "_DEBUG"
     ">"
     "$<$<CONFIG:Release>:"
         "NDEBUG"
     ">"
+    "WINDOWS_IGNORE_PACKING_MISMATCH;"
     "WIN32;"
     "_WINDOWS;"
     "WIN32S;"
@@ -819,19 +819,17 @@ if(MSVC)
         $<$<CONFIG:Debug>:
             /RTC1;
             /MTd;
+            /Od;
             /w
         >
         $<$<CONFIG:Release>:
+            /Ox;
             /Ob2;
             /Oi;
-            /Oy;
-            /MD;
-            /FAcs;
             /Ot;
-            /D;
-            "WINDOWS_IGNORE_PACKING_MISMATCH"
+            /Oy;
+            /RTC1
         >
-        /Od;
         /Gy;
         ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
         ${DEFAULT_CXX_EXCEPTION_HANDLING}
@@ -1355,8 +1353,11 @@ if(MSVC)
             /NXCOMPAT:NO
         >
         $<$<CONFIG:Release>:
-            /DEBUG:FULL;
-            /mapinfo:lines
+            /NODEFAULTLIB:nafxcw.lib;
+            /NODEFAULTLIB:libcmt.lib;
+            /NDEBUG;
+            /SAFESEH:NO;
+            /NXCOMPAT:NO
         >
         /NOLOGO;
         /SUBSYSTEM:WINDOWS;
