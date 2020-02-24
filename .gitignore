@@ -80,3 +80,4 @@ scripts
 *.manifest
 clientwork/Interp/Debug/Sciw.lib
 clientwork/Interp/Release/Sciw.lib
+**Sciw.map

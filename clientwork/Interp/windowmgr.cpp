@@ -676,85 +676,83 @@ int CWindowMgr::WindowCount( void )
 }
 
 // Set / Un-Set full screen mode
-void CWindowMgr::SetFullScreen( BOOL boSetFullScreen)
-{
-	if ( !g_bForceFullScreen && !m_bFullScreenAllowed ) {
-		if ( boSetFullScreen ) {
-			AfxMessageBox (	"Sorry, your video driver will not allow you to change resolutions without rebooting your computer.  Full screen mode is not supported with such video drivers.", 0, 0 );
-		}
-
-		return;
-	}
-
-    if ( boSetFullScreen == m_bFullScreen )
-        return;
-
-	if ( g_bForceFullScreen )
-		g_pMinRestoreClose->Show();
-
-	if ( boSetFullScreen ) {
-		if ( !g_bForceFullScreen )
-			g_bExpectDisplayChange = true;
-
-		if ( g_bForceFullScreen || !fg_modeset( 640, 480, fg_colors(), 1 ) ) {
-			g_pMinRestoreClose->Show();
-			m_bFullScreen   = true;
-            
-            // Update toon settings and switch to tabbed mode if we have to
-			if ( g_pToonSettings ) {
-                m_bWindowedMode = !g_pToonSettings->get_TabDisplay();
-				g_pToonSettings->setVideo_Fullscreen( true );
-                g_pToonSettings->set_TabDisplay( true );
-            }
-
-            // Update the game settings if its open
-            if ( g_pGameSettings ) {
-                g_pGameSettings->EnableTabOption( false );
-                g_pGameSettings->SetFullScreenOption( true );
-            }
-
-            if ( g_pMainWindow ) {
-			    g_pMainWindow->CenterOnDisplay();
-                CascadePopup( g_pMainWindow );
-            }
-        } else {
-			g_bExpectDisplayChange = false;
-		}
-	} else {
-		if ( !g_bForceFullScreen )
-			g_bExpectDisplayChange = true;
-
-		if ( g_bForceFullScreen || !fg_modeset( 640, 480, 0, 1 ) ) {
-			if ( g_bForceFullScreen == false )
-				g_pMinRestoreClose->Hide();
-
-			m_bFullScreen = false;
-
-			if ( g_pToonSettings )
-            {
-				g_pToonSettings->setVideo_Fullscreen( false );
-                
-                // Resore windowed mode if thats what we went into full screen with
-                if ( m_bWindowedMode )
-                {
-                    g_pToonSettings->set_TabDisplay( false );
-                }
-            }
-
-            // Update the game settings if its open
-            if (g_pGameSettings)
-            {
-                g_pGameSettings->EnableTabOption( true );
-                g_pGameSettings->SetFullScreenOption( false );
-            }
-
-            // Restore main window location
-            if ( !g_bForceFullScreen && g_pMainWindow )
-			    g_pMainWindow->RestoreLocation();
-        } else {
-			g_bExpectDisplayChange = false;
-		}
+void CWindowMgr::SetFullScreen(BOOL boSetFullScreen) {
+  if (!g_bForceFullScreen && !m_bFullScreenAllowed) {
+    if (boSetFullScreen) {
+      AfxMessageBox(
+          "Sorry, your video driver will not allow you to change resolutions without rebooting your computer.  Full screen mode is not supported with such video drivers.",
+          0, 0);
     }
+
+    return;
+  }
+
+  if (boSetFullScreen == m_bFullScreen)
+    return;
+
+  if (g_bForceFullScreen)
+    g_pMinRestoreClose->Show();
+
+  if (boSetFullScreen) {
+    if (!g_bForceFullScreen)
+      g_bExpectDisplayChange = true;
+
+    if (g_bForceFullScreen || !fg_modeset(640, 480, fg_colors(), 1)) {
+      g_pMinRestoreClose->Show();
+      m_bFullScreen = true;
+
+      // Update toon settings and switch to tabbed mode if we have to
+      if (g_pToonSettings) {
+        m_bWindowedMode = !g_pToonSettings->get_TabDisplay();
+        g_pToonSettings->setVideo_Fullscreen(true);
+        g_pToonSettings->set_TabDisplay(true);
+      }
+
+      // Update the game settings if its open
+      if (g_pGameSettings) {
+        g_pGameSettings->EnableTabOption(false);
+        g_pGameSettings->SetFullScreenOption(true);
+      }
+
+      if (g_pMainWindow) {
+        g_pMainWindow->CenterOnDisplay();
+        CascadePopup(g_pMainWindow);
+      }
+    } else {
+      g_bExpectDisplayChange = false;
+    }
+  } else {
+    if (!g_bForceFullScreen)
+      g_bExpectDisplayChange = true;
+
+    if (g_bForceFullScreen || !fg_modeset(640, 480, 0, 1)) {
+      if (g_bForceFullScreen == false)
+        g_pMinRestoreClose->Hide();
+
+      m_bFullScreen = false;
+
+      if (g_pToonSettings) {
+        g_pToonSettings->setVideo_Fullscreen(false);
+
+        // Resore windowed mode if thats what we went into full screen with
+        if (m_bWindowedMode) {
+          g_pToonSettings->set_TabDisplay(false);
+        }
+      }
+
+      // Update the game settings if its open
+      if (g_pGameSettings) {
+        g_pGameSettings->EnableTabOption(true);
+        g_pGameSettings->SetFullScreenOption(false);
+      }
+
+      // Restore main window location
+      if (!g_bForceFullScreen && g_pMainWindow)
+        g_pMainWindow->RestoreLocation();
+    } else {
+      g_bExpectDisplayChange = false;
+    }
+  }
 }
 
 // Place all popup windows in the window area

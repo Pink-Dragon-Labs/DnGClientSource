@@ -61,11 +61,11 @@ public:
 	virtual void OnActivate ( short x, short y );
 };
 
-// CFullScreenBtn: This class represents the actual button to be clicked to toggle full screen display on/off
-class CFullScreenBtn : public CSkinToggleBtn
+// CFullScreenToggle: This class represents the actual button to be clicked to toggle full screen display on/off
+class CFullScreenToggle : public CSkinToggleBtn
 {
 public:
-	CFullScreenBtn ( CSkinObj obj, CSkinWnd *pParent );
+	CFullScreenToggle (CSkinObj obj, CSkinWnd *pParent );
 
 	// this member is called when this button is activated
 	virtual void OnActivate ( short x, short y );
@@ -129,7 +129,7 @@ protected:
 
     // Pointers to the check boxes
     CTabDispBtn*    m_pTabDispBtn;
-    CFullScreenBtn* m_pFullScreenBtn;
+    CFullScreenToggle* m_pFullScreenBtn;
 
 public:
 	CGameSettingsDlg();

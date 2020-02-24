@@ -13,6 +13,7 @@
 #include "skinctrl.hpp"
 #include "skinbtn.hpp"
 #include "skinspcbtn.hpp"
+#include "GameSettings.hpp"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -143,7 +144,7 @@ CSkinCtrl *CMinRestoreClose::MakeSkinCtrl ( CSkinObj obj )
 	}
 
 	// handle restore...
-	else if ( id == "pb_restore" ) {
+	if ( id == "pb_restore" ) {
 		return new CMRCRestoreBtn ( obj, this );
 	}
 
@@ -152,6 +153,27 @@ CSkinCtrl *CMinRestoreClose::MakeSkinCtrl ( CSkinObj obj )
 		return CSkinWnd::MakeSkinCtrl ( obj );
 	}
 }
+
+
+// CFullScreenToggle: This class represents the actual button to be clicked to toggle fullscreen display on/off
+CFullScreenBtn::CFullScreenBtn(CSkinObj obj, CSkinWnd *pParent ) : CSkinBtn(obj, pParent )
+{
+  if ( g_pWindowMgr )
+    m_state[sknCtrlActivated] = g_pWindowMgr->GetFullScreen();
+  else
+    m_state[sknCtrlActivated] = false;
+
+  Refresh();
+}
+
+void CFullScreenBtn::OnActivate(short x, short y )
+{
+  AddToRefreshList();
+  if (g_pWindowMgr) {
+    g_pWindowMgr->SetFullScreen( TRUE );
+  }
+}
+
 
 
 

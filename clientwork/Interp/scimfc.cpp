@@ -139,7 +139,7 @@ BOOL CSciApp::InitInstance(void) {
 
   // make sure only one instance of the game is running at a time...
   m_pSingleInstance = new
-  CSingleInstance();
+      CSingleInstance();
 
   if (!m_pSingleInstance->Create("RealmGame3")) {
     return FALSE;
@@ -186,7 +186,7 @@ BOOL CSciApp::InitInstance(void) {
   }
 
   gArgv = (char **) new
-  int[gArgc];
+      int[gArgc];
 
   gArgv[0] = "sciw.exe";
 
@@ -277,34 +277,27 @@ BOOL CSciApp::InitInstance(void) {
   CheckConfig();
 
   // create the global verb list
-  g_pVerbList = new
-  CVerbList;
+  g_pVerbList = new CVerbList;
 
   // create the global window manager
-  g_pWindowMgr = new
-  CWindowMgr;
+  g_pWindowMgr = new CWindowMgr;
 
   // create the main window...
-  m_pMainWnd = g_pMainWindow = new
-  CMainWindow;
+  m_pMainWnd = g_pMainWindow = new CMainWindow;
 
   // create the global full-screen min/restore/close buttons...
-  g_pMinRestoreClose = new
-  CMinRestoreClose;
+  g_pMinRestoreClose = new CMinRestoreClose;
 
   // create the global name / health display...
-  g_pNameHealthDisplay = new
-  CNameHealthDisplay;
+  g_pNameHealthDisplay = new CNameHealthDisplay;
 
-  pSplash = new
-  CSplashDlg;
+  pSplash = new CSplashDlg;
   pSplash->Create(m_pMainWnd);
 
   pSplash->UpdateWindow();
 
   // create the global drag and drop manager
-  g_pDragDropMgr = new
-  CDragDropMgr;
+  g_pDragDropMgr = new CDragDropMgr;
 
   pSplash->UpdateWindow();
 
@@ -431,7 +424,7 @@ BOOL CSciApp::InitInstance(void) {
 
   // init the sound system
   soundMgr = new
-  SoundMgr;
+      SoundMgr;
 
   return TRUE;
 }
@@ -506,7 +499,7 @@ int CSciApp::Run() {
 
         // handle universal tab direction support...
         if (m_msgCur.wParam == VK_TAB) {
-          ::GetMessage((LPMSG) & m_msgCur, NULL, 0, 0);
+          ::GetMessage((LPMSG) &m_msgCur, NULL, 0, 0);
 
           int advanceDirection = (GetKeyState(VK_SHIFT) < 0) ? TRUE : FALSE;
 
@@ -654,7 +647,7 @@ int CSciApp::Run() {
               g_pWindowMgr->CloseAllTransientWindows();
 
               (new
-              CSpellListDlg(0, 0))->Create(m_pMainWnd);
+                  CSpellListDlg(0, 0))->Create(m_pMainWnd);
             }
 
             continue;
@@ -672,7 +665,7 @@ int CSciApp::Run() {
 
               if (!pDialog) {
                 pDialog = new
-                CInventoryDlg;
+                    CInventoryDlg;
                 pDialog->Create((SOL_Handle) hEgo);
               }
             }
@@ -805,23 +798,23 @@ BOOL CSciApp::OnIdle(LONG lCount) {
 // CMainDialog message map...
 //
 
-BEGIN_MESSAGE_MAP ( CMainWindow, CSkinWnd
+BEGIN_MESSAGE_MAP (CMainWindow, CSkinWnd
 )
 
-ON_WM_SETFOCUS()
+          ON_WM_SETFOCUS()
 
-ON_WM_CHAR()
+          ON_WM_CHAR()
 
-ON_WM_GETMINMAXINFO()
+          ON_WM_GETMINMAXINFO()
 
-ON_WM_CLOSE()
+          ON_WM_CLOSE()
 
-ON_WM_SYSCOMMAND()
+          ON_WM_SYSCOMMAND()
 
-ON_WM_ACTIVATEAPP()
+          ON_WM_ACTIVATEAPP()
 
-ON_MESSAGE(WM_DISPLAYCHANGE, OnDisplayChange
-)
+          ON_MESSAGE(WM_DISPLAYCHANGE, OnDisplayChange
+          )
 
 END_MESSAGE_MAP()
 
@@ -844,7 +837,7 @@ CMainWindow::CMainWindow() {
                    FALSE, TRUE);
 
   m_pSCIWnd = new
-  CSCIWnd;
+      CSCIWnd;
   CRect rect = CRect(0, 0, 640, 480);
   m_pSCIWnd->Create(this, rect);
 
