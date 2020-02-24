@@ -746,7 +746,7 @@ int CSciApp::Run() {
 
     // let SCI do it's thing...
     if (pm.game && g_pMainWindow && ::IsWindow(g_pMainWindow->m_hWnd)) {
-      // This line causes a huge cpu usage; commenting out doesn't seem to break anyything - Elpha
+      // This line causes a huge cpu usage; commenting out doesn't seem to break anything - Elpha
       //g_pSCIWnd->SendToBack();
 
       if ((timeMgr->GetMilliSec() - lastDoitTime) > 9) {

@@ -1039,7 +1039,7 @@ CSkinCtrl *CMainPanelWnd::MakeSkinCtrl ( CSkinObj obj ) {
     }
 
 	if ( "ef" == id ) {
-		return m_pChatLine = new CChatLine ( obj, this, 665, CSkinEdit::AUTOHSCROLL );
+		return m_pChatLine = new CChatLine ( obj, this, 665, CSkinEdit::TABSTOP | CSkinEdit::AUTOHSCROLL );
 	}
 
 	if ( "btn" == id ) {
