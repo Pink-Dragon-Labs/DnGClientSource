@@ -104,7 +104,8 @@ BOOL CSkinListCtrl::Create ( CSkinObj container, CSkinWnd *pParent, UINT nID, bo
 	p_obj = container;
 
 	// create the CListCtrl object...
-	CListCtrl::Create ( LVS_REPORT | LVS_NOCOLUMNHEADER | LVS_SINGLESEL, theRect, (CWnd *)pParent, nID );
+  CListCtrl::Create ( LVS_REPORT | LVS_NOCOLUMNHEADER | LVS_SINGLESEL, theRect, (CWnd *)pParent, nID );
+  ::SetWindowTheme(GetSafeHwnd(), L" ", L" ");
 
 	// make sure the mouse wheel manager sees us!
 	CMouseWheelable::LinkToWindow ( GetSafeHwnd() );
