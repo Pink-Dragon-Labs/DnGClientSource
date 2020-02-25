@@ -1522,12 +1522,12 @@
 (instance SHeadOfDeath of Spell
 	(properties
 		int	pCircle	_SKILL_ELEMENTALISM
-		int	pSkill	_SKILL_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_HEAD_OF_DEATH
 		int	pType   (| fSpellAnywhere fSpellNonFriendly)
 
-		id	pText   "Head Of Death"
-		int	view	vMysticismSpell
+		id	pText   "Godly Smite"
+		int	view	vElementalSpell
 		int	loop	16
 		int pCost	1
 		int pIcon	97
@@ -2918,6 +2918,21 @@
 		int	loop	7
 		int pCost	500
 		int pIcon	48
+	)
+)
+
+(instance SApocalypse of Spell
+	(properties
+		int	pCircle	_SKILL_NECROMANCY
+		int	pSkill	_SKILL_PARAGON
+		int	pID		_SPELL_APOCALYPSE
+		int	pType   (| fSpellCombat fSpellNonFriendly)
+
+		id	pText   "Apocalypse"
+		int	view	vNecromancySpell
+		int	loop	14
+		int pCost	2000
+		int pIcon	55
 	)
 )
 
