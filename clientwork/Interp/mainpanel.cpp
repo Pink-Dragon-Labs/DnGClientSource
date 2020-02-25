@@ -312,8 +312,8 @@ BOOL CMainPanelWnd::Create ( CWnd *pParentWnd, CString &strRoom, int nHealth, in
 		if ( g_pToonSettings->getRights( CToonSettings::trImplementor | CToonSettings::trPublicRelations | CToonSettings::trModerator | CToonSettings::trGuide ) ) {
 			(new CGuideDlg ())->Create( "Mentor Chat" );
 
-			if ( !g_pCombined )
-				(new CCombinedDlg())->Create( "Classic Mode" );
+			//if ( !g_pCombined )
+				//(new CCombinedDlg())->Create( "Classic Mode" );
 		} else
 			g_pMainPanelWnd->HideTab( TID_GUIDE, true );
 
@@ -368,8 +368,8 @@ BOOL CMainPanelWnd::Create ( CWnd *pParentWnd, CString &strRoom, int nHealth, in
 		if ( g_pToonSettings->getRights( CToonSettings::trGuide ) ) {
 			(new CGuideDlg ())->Create( "Mentor Chat" );
 
-			if ( !g_pCombined )
-				(new CCombinedDlg())->Create( "Classic Mode" );
+			//if ( !g_pCombined )
+				//(new CCombinedDlg())->Create( "Classic Mode" );
 		} else
 			g_pMainPanelWnd->HideTab( TID_GUIDE, true );
 

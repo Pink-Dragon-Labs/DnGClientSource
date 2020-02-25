@@ -145,7 +145,7 @@
 (define SImmolationLightning	(ModuleID SPELLS 147))
 (define SImpInvulnerability     (ModuleID SPELLS 148))
 (define SSummonMist             (ModuleID SPELLS 149))
-(define SApocalypse             (ModuleID SPELLS 150))
+(define SDamnation              (ModuleID SPELLS 150))
 
 (define _SEDeathCloud	0)
 (define _SEFlameOrb		1)

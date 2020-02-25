@@ -396,7 +396,7 @@
 				SImmolationLightning
 				SImpInvulnerability
 				SSummonMist
-				SApocalypse
+				SDamnation
 		)
 
 		(self eachElementDo: #init)

@@ -177,6 +177,7 @@
 	SImmolationLightning		147
 	SImpInvulnerability         148
 	SSummonMist                 149
+	SDamnation					150
 )
 
 (local
@@ -2267,7 +2268,7 @@
 		int	pID		_SPELL_WRATH_OF_THE_GODS
 		int	pType   (| fSpellCombat fSpellCaster)
 
-		id	pText       "Wrath of the Gods"
+		id	pText   "Salvation"
 		int	view	vThaumaturgySpell
 		int	loop	11
 		int pCost	15
@@ -2921,18 +2922,18 @@
 	)
 )
 
-(instance SApocalypse of Spell
+(instance SDamnation of Spell
 	(properties
 		int	pCircle	_SKILL_NECROMANCY
-		int	pSkill	_SKILL_PARAGON
-		int	pID		_SPELL_APOCALYPSE
-		int	pType   (| fSpellCombat fSpellNonFriendly)
+		int	pSkill	_SKILL_MASTER
+		int	pID		_SPELL_DAMNATION
+		int	pType   (| fSpellCombat fSpellCaster)
 
-		id	pText   "Apocalypse"
+		id	pText   "Damnation"
 		int	view	vNecromancySpell
-		int	loop	14
-		int pCost	2000
-		int pIcon	55
+		int	loop	13
+		int pCost	15
+		int pIcon	54
 	)
 )
 
