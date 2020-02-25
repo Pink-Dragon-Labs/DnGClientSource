@@ -10,6 +10,7 @@
 #define _MINRESTORECLOSE_HPP_
 
 #include "skinwindow.hpp"
+#include "skinbtn.hpp"
 
 //
 // CMinRestoreClose: This class contains the fullscreen min/restore/close buttons.
@@ -36,5 +37,16 @@ public:
 
 // global pointer to the min/restore/close dialog...
 extern CMinRestoreClose *g_pMinRestoreClose;
+
+
+// CFullScreenToggle: This class represents the actual button to be clicked to toggle full screen display on/off
+class CFullScreenBtn : public CSkinBtn
+{
+public:
+    CFullScreenBtn (CSkinObj obj, CSkinWnd *pParent );
+
+    // this member is called when this button is activated
+    virtual void OnActivate ( short x, short y );
+};
 
 #endif

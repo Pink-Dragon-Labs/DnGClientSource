@@ -155,8 +155,8 @@ void CAltEnterBtn::OnActivate( short x, short y )
 	}
 }
 
-// CFullScreenBtn: This class represents the actual button to be clicked to toggle fullscreen display on/off
-CFullScreenBtn::CFullScreenBtn( CSkinObj obj, CSkinWnd *pParent ) : CSkinToggleBtn( obj, pParent )
+// CFullScreenToggle: This class represents the actual button to be clicked to toggle fullscreen display on/off
+CFullScreenToggle::CFullScreenToggle(CSkinObj obj, CSkinWnd *pParent ) : CSkinToggleBtn(obj, pParent )
 {
     if ( g_pWindowMgr )
 	    m_state[sknCtrlActivated] = g_pWindowMgr->GetFullScreen();
@@ -166,7 +166,7 @@ CFullScreenBtn::CFullScreenBtn( CSkinObj obj, CSkinWnd *pParent ) : CSkinToggleB
     Refresh();
 }
 
-void CFullScreenBtn::OnActivate( short x, short y )
+void CFullScreenToggle::OnActivate(short x, short y )
 {
 	// toggle the activated bit
 	m_state.flip ( sknCtrlActivated );
@@ -312,7 +312,7 @@ CSkinCtrl* CGameSettingsDlg::MakeSkinCtrl ( CSkinObj obj )
 		return new CAltEnterBtn( obj, this );
 	
 	if ( "ft" == id )
-		return m_pFullScreenBtn = new CFullScreenBtn( obj, this );
+		return m_pFullScreenBtn = new CFullScreenToggle(obj, this );
 	
 	if ( "st" == id )
 		return new CSfxBtn( obj, this );

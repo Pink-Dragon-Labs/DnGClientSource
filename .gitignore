@@ -54,9 +54,29 @@
 *.ipch
 *.vs
 .vs
-*.pdb
 *.tlog
+clientwork/Interp/out
+**.ilk
+**.idb
+**.pdb
+**CppClean.log
+**.nativecodeanalysis.*
+**diagsession
 
 #Realm ignore
 login.lst
-realm.windows.cfg
+**realm.windows.cfg
+clientwork/Interp/*/fatal.log
+resources
+vocabs
+scripts
+*.Settings
+*.rtp
+
+#CLion
+*.idea
+*cmake-build-*
+*SCI
+*.manifest
+clientwork/Interp/*/Sciw.lib
+**Sciw.map

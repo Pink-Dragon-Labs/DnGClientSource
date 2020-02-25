@@ -20,6 +20,7 @@
 #include <strstream>
 
 #include "sciwin.hpp"
+#include "minrestoreclose.hpp"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -532,6 +533,9 @@ CSkinCtrl *CSkinWnd::MakeSkinCtrl ( CSkinObj obj )
 
 	// handle push button
 	if ( id == "pb" ) {
+	  if ( name == "pb_max") {
+	    return new CFullScreenBtn(obj, this);
+	  }
 		return new CSkinBtn ( obj, this );
 	}
 

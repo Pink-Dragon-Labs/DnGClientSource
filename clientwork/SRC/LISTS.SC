@@ -385,15 +385,18 @@
 				SSummonOgre
 				SSummonTroll
 				SSummonSeraph
+				SRepel
 				SCancel ;;minotaur spells
 				SCancel
 				SCancel
-				SRepel
 				SSummonDragon
 				SImmolationCold
 				SVitality
 				SEnlightenment
 				SImmolationLightning
+				SImpInvulnerability
+				SSummonMist
+				SDamnation
 		)
 
 		(self eachElementDo: #init)

@@ -169,12 +169,15 @@
 	SSummonOgre					136
 	SSummonTroll				137
 	SSummonSeraph				138
+	SRepel      				139
 	SSummonDragon				143
 	SImmolationCold				144
 	SVitality					145
 	SEnlightenment				146
 	SImmolationLightning		147
-	SRepel						148
+	SImpInvulnerability         148
+	SSummonMist                 149
+	SDamnation					150
 )
 
 (local
@@ -1520,12 +1523,12 @@
 (instance SHeadOfDeath of Spell
 	(properties
 		int	pCircle	_SKILL_ELEMENTALISM
-		int	pSkill	_SKILL_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_HEAD_OF_DEATH
 		int	pType   (| fSpellAnywhere fSpellNonFriendly)
 
-		id	pText   "Head Of Death"
-		int	view	vMysticismSpell
+		id	pText   "Godly Smite"
+		int	view	vElementalSpell
 		int	loop	16
 		int pCost	1
 		int pIcon	97
@@ -2265,7 +2268,7 @@
 		int	pID		_SPELL_WRATH_OF_THE_GODS
 		int	pType   (| fSpellCombat fSpellCaster)
 
-		id	pText       "Wrath of the Gods"
+		id	pText   "Salvation"
 		int	view	vThaumaturgySpell
 		int	loop	11
 		int pCost	15
@@ -2849,7 +2852,7 @@
 (instance SVitality of Spell
 	(properties
 		int	pCircle	_SKILL_THAUMATURGY
-		int	pSkill	_SKILL_GRAND_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID	_SPELL_VITALITY
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
@@ -2863,7 +2866,7 @@
 (instance SEnlightenment of Spell
 	(properties
 		int	pCircle	_SKILL_THAUMATURGY
-		int	pSkill	_SKILL_GRAND_MASTER
+		int	pSkill	_SKILL_PARAGON
 		int	pID	_SPELL_ENLIGHTENMENT
 		int	pType   (| fSpellAnywhere fSpellFriendly)
 
@@ -2888,6 +2891,52 @@
 		int 	pIcon	5
 	)
 )
+
+(instance SImpInvulnerability of Spell
+	(properties
+		int	pCircle	_SKILL_THAUMATURGY
+		int	pSkill	_SKILL_PARAGON
+		int	pID		_SPELL_IMP_INVULNERABILITY
+		int	pType   (| fSpellAnywhere fSpellFriendly)
+
+		id	pText   "Imp. Invulnerability"
+		int	view	vThaumaturgySpell
+		int	loop	12
+		int pCost	115
+		int pIcon	73
+	)
+)
+
+(instance SSummonMist of Spell
+	(properties
+		int	pCircle	_SKILL_MYSTICISM
+		int	pSkill	_SKILL_PARAGON
+		int	pID		_SPELL_SUMMON_MIST
+		int	pType   (| fSpellCombat fSpellArea)
+
+		id	pText   "Summon the Mist"
+		int	view	vMysticismSpell
+		int	loop	7
+		int pCost	500
+		int pIcon	48
+	)
+)
+
+(instance SDamnation of Spell
+	(properties
+		int	pCircle	_SKILL_NECROMANCY
+		int	pSkill	_SKILL_MASTER
+		int	pID		_SPELL_DAMNATION
+		int	pType   (| fSpellCombat fSpellCaster)
+
+		id	pText   "Damnation"
+		int	view	vNecromancySpell
+		int	loop	13
+		int pCost	15
+		int pIcon	54
+	)
+)
+
 ;----------------------------------------------------
 (instance SCancel of Spell
 	(properties
