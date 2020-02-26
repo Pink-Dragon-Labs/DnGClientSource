@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Mar 21 03:15:11 2018)
+;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
 ;;
 
 (module# STOCKOBJ5)
@@ -16,6 +16,111 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJGiftBox4 of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GiftBox4", 
+			pName: "Gift Box",
+			loop: 0,
+			pBaseView: 62758,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 3,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 1,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 0,
+			pBulkCap: 0,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGiftBox5 of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GiftBox5", 
+			pName: "Gift Box",
+			loop: 0,
+			pBaseView: 62759,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 3,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 1,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 0,
+			pBulkCap: 0,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGiftBox6 of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GiftBox6", 
+			pName: "Gift Box",
+			loop: 0,
+			pBaseView: 62760,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 3,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 1,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 0,
+			pBulkCap: 0,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJGiftBox7 of Code
 	(properties
@@ -747,7 +852,7 @@
 			pClutStart: 11,
 			pColor: 84,
 			pBaseBitsLo: 2057,
-			pBaseBitsHi: 192,
+			pBaseBitsHi: 64,
 		)
 
 		(aWhatObj setAction: (aWhatObj pAction?))
@@ -765,10 +870,6 @@
 		)
 
 		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 0,
-		)
 
 		(aWhatObj addBase: BShop)
 	)
@@ -7965,98 +8066,11 @@
 	)
 )
 
-(instance SOBJqAldonzoDagger of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "qAldonzoDagger", 
-			pName: "Aldonzo's Dagger",
-			loop: 0,
-			pBaseView: 15300,
-			pAction: 29,
-			pClutStart: 0,
-			pColor: 0,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 4,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJqPetrifiedWood of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "qPetrifiedWood", 
-			pName: "Petrified Wood",
-			loop: 0,
-			pBaseView: 58150,
-			pAction: 29,
-			pClutStart: 0,
-			pColor: 0,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 4,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJqMishaBelt of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "qMishaBelt", 
-			pName: "Misha's Belt",
-			loop: 0,
-			pBaseView: 10200,
-			pAction: 29,
-			pClutStart: 78,
-			pColor: 79,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 4,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter5 of Code
 	(method (doit)
+		(StockObjList add: SOBJGiftBox4)
+		(StockObjList add: SOBJGiftBox5)
+		(StockObjList add: SOBJGiftBox6)
 		(StockObjList add: SOBJGiftBox7)
 		(StockObjList add: SOBJGiftBox8)
 		(StockObjList add: SOBJGiftBox9)
@@ -8304,8 +8318,5 @@
 		(StockObjList add: SOBJqSharpeningStone)
 		(StockObjList add: SOBJqRatlingToenail)
 		(StockObjList add: SOBJqFossilizedToad)
-		(StockObjList add: SOBJqAldonzoDagger)
-		(StockObjList add: SOBJqPetrifiedWood)
-		(StockObjList add: SOBJqMishaBelt)
 	)
 )

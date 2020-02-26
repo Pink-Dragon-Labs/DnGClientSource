@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Mar 21 03:15:11 2018)
+;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
 ;;
 
 (module# STOCKOBJ2)
@@ -16,6 +16,78 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJIronLargeShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "IronLargeShield", 
+			pName: "Iron Tower Shield",
+			loop: 0,
+			pBaseView: 16800,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 104,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 165,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJSteelLargeShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "SteelLargeShield", 
+			pName: "Steel Tower Shield",
+			loop: 0,
+			pBaseView: 16800,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 99,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 130,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJTemperedSteelLargeShield of Code
 	(properties
@@ -292,7 +364,7 @@
 
 		((aWhatObj addBase: BCarryable)
 			pBulk: 0,
-			pWeight: 5,
+			pWeight: 0,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -1385,7 +1457,7 @@
 			pClutStart: 11,
 			pColor: 58,
 			pBaseBitsLo: 9,
-			pBaseBitsHi: 192,
+			pBaseBitsHi: 64,
 		)
 
 		(aWhatObj setAction: (aWhatObj pAction?))
@@ -1403,10 +1475,6 @@
 		)
 
 		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 0,
-		)
 	)
 )
 
@@ -2419,6 +2487,7 @@
 		(aWhatObj
 			name: "ThistlebarkA", 
 			pName: "Thistlebark",
+			pIDName: "Sacred Temple Sash",
 			loop: 0,
 			pBaseView: 10950,
 			pAction: 29,
@@ -6823,7 +6892,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7293,7 +7362,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -8702,72 +8771,10 @@
 	)
 )
 
-(instance SOBJskbClubII of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbClubII", 
-			pName: "Club Proficiency",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbClubIII of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbClubIII", 
-			pName: "Expertise with Clubs",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
 (instance StockObjInitter2 of Code
 	(method (doit)
+		(StockObjList add: SOBJIronLargeShield)
+		(StockObjList add: SOBJSteelLargeShield)
 		(StockObjList add: SOBJTemperedSteelLargeShield)
 		(StockObjList add: SOBJMythrilLargeShield)
 		(StockObjList add: SOBJObsidianiteLargeShield)
@@ -9016,7 +9023,5 @@
 		(StockObjList add: SOBJskbAxeV)
 		(StockObjList add: SOBJskbClub)
 		(StockObjList add: SOBJskbClubI)
-		(StockObjList add: SOBJskbClubII)
-		(StockObjList add: SOBJskbClubIII)
 	)
 )

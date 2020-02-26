@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Mar 21 03:15:11 2018)
+;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
 ;;
 
 (module# STOCKOBJ0)
@@ -6173,6 +6173,43 @@
 	)
 )
 
+(instance SOBJSkullHood of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "SkullHood", 
+			pName: "Clothing",
+			pIDName: "Skull Hood",
+			loop: 0,
+			pBaseView: 17051,
+			pAction: 29,
+			pClutStart: 63,
+			pColor: -1,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 20,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 0,
+			pAreaWorn: 0,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
 (instance SOBJShiftHood of Code
 	(properties
 		name ""
@@ -7384,7 +7421,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7420,7 +7457,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7456,7 +7493,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -2,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7492,7 +7529,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -2,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7528,7 +7565,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7564,7 +7601,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7600,7 +7637,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -2,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7636,7 +7673,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -2,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7672,7 +7709,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7708,7 +7745,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7744,7 +7781,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7780,7 +7817,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7816,7 +7853,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7852,7 +7889,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7888,7 +7925,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7925,7 +7962,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7962,7 +7999,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -7998,7 +8035,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -2,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -8034,7 +8071,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -8070,7 +8107,7 @@
 		((aWhatObj addBase: BWearable)
 			pLayer: 20,
 			pAreaWorn: 7,
-			pMask: -1,
+			pMask: -3,
 		)
 
 		(aWhatObj addBase: BDescribed)
@@ -8329,42 +8366,6 @@
 	)
 )
 
-(instance SOBJTemperedSteelCowl of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "TemperedSteelCowl", 
-			pName: "Tempered Steel Cowl",
-			loop: 0,
-			pBaseView: 13500,
-			pAction: 29,
-			pClutStart: 93,
-			pColor: 100,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 50,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 70,
-			pAreaWorn: 3,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjList of Set
 	(method (init)
 		(self add: SOBJPlayer)
@@ -8557,6 +8558,7 @@
 		(self add: SOBJBandanna)
 		(self add: SOBJThiefMask)
 		(self add: SOBJHood)
+		(self add: SOBJSkullHood)
 		(self add: SOBJShiftHood)
 		(self add: SOBJVikingHelmet)
 		(self add: SOBJBerserkHelmet)
@@ -8616,6 +8618,5 @@
 		(self add: SOBJChainCowl)
 		(self add: SOBJIronCowl)
 		(self add: SOBJSteelCowl)
-		(self add: SOBJTemperedSteelCowl)
 	)
 )

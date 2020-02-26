@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Mar 21 03:15:11 2018)
+;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
 ;;
 
 (module# STOCKOBJ9)
@@ -16,6 +16,183 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJSwimsuit of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Swimsuit", 
+			pName: "Swimsuit",
+			loop: 0,
+			pBaseView: 10550,
+			pAction: 29,
+			pClutStart: 73,
+			pColor: 100,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 0,
+			pAreaWorn: 6,
+			pMask: -3,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJLizard of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Lizard", 
+			pName: "Lizard",
+			loop: 2,
+			pBaseView: 42500,
+			pAction: 1,
+			pClutStart: 104,
+			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJBunny of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Bunny", 
+			pName: "Bunny",
+			loop: 2,
+			pBaseView: 42550,
+			pAction: 1,
+			pClutStart: 104,
+			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJhornedHelm of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hornedHelm", 
+			pName: "Helmet",
+			pIDName: "Horned Helmet",
+			loop: 0,
+			pBaseView: 32084,
+			pAction: 29,
+			pClutStart: 63,
+			pColor: 83,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 25,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 0,
+			pAreaWorn: 0,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJSlime of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Slime", 
+			pName: "Slime",
+			loop: 2,
+			pBaseView: 41700,
+			pAction: 1,
+			pClutStart: 104,
+			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJSlimeA of Code
 	(properties
@@ -1327,45 +1504,13 @@
 	)
 )
 
-(instance SOBJhornedHelm of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hornedHelm", 
-			pName: "Helmet",
-			pIDName: "Horned Helmet",
-			loop: 0,
-			pBaseView: 32084,
-			pAction: 29,
-			pClutStart: 63,
-			pColor: 83,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 25,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 0,
-			pAreaWorn: 0,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter9 of Code
 	(method (doit)
+		(StockObjList add: SOBJSwimsuit)
+		(StockObjList add: SOBJLizard)
+		(StockObjList add: SOBJBunny)
+		(StockObjList add: SOBJhornedHelm)
+		(StockObjList add: SOBJSlime)
 		(StockObjList add: SOBJSlimeA)
 		(StockObjList add: SOBJSlimeB)
 		(StockObjList add: SOBJSlimeC)
@@ -1405,6 +1550,5 @@
 		(StockObjList add: SOBJHibiscusPink)
 		(StockObjList add: SOBJHibiscusPurple)
 		(StockObjList add: SOBJHibiscusYellow)
-		(StockObjList add: SOBJhornedHelm)
 	)
 )

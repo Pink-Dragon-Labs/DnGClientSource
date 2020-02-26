@@ -1660,45 +1660,45 @@
 
 (instance SMonsterSummoningI of Spell
 	(properties
-		int	pCircle	_SKILL_SORCERY
-		int	pSkill	_SKILL_PROFICIENT
+		int	pCircle	_SKILL_NECROMANCY
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_MONSTER_SUMMONING_I
 		int	pType   (| fSpellCombat fSpellArea)
 
-		id	pText   "Summon Monster I"
+		id	pText   "Summon Hell Soul"
 		int	view	vNecromancySpell
 		int	loop	7
-		int pCost	10
+		int pCost	200
 		int pIcon	48
 	)				 
 )
 
 (instance SMonsterSummoningII of Spell
 	(properties
-		int	pCircle	_SKILL_SORCERY
-		int	pSkill	_SKILL_PROFICIENT
+		int	pCircle	_SKILL_MYSTICISM
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_MONSTER_SUMMONING_II
 		int	pType   (| fSpellCombat fSpellArea)
 
-		id	pText   "Summon Monster II"
-		int	view	vNecromancySpell
+		id	pText   "Summon Avalon"
+		int	view	vMysticismSpell
 		int	loop	7
-		int pCost	20
+		int pCost	200
 		int pIcon	48
 	)
 )
 
 (instance SMonsterSummoningIII of Spell
 	(properties
-		int	pCircle	_SKILL_SORCERY
-		int	pSkill	_SKILL_PROFICIENT
+		int	pCircle	_SKILL_ELEMENTALISM
+		int	pSkill	_SKILL_PARAGON
 		int	pID		_SPELL_MONSTER_SUMMONING_III
 		int	pType   (| fSpellCombat fSpellArea)
 
-		id	pText   "Summon Monster III"
-		int	view	vNecromancySpell
+		id	pText   "Summon Watcher"
+		int	view	vElementalSpell
 		int	loop	7
-		int pCost	30
+		int pCost	300
 		int pIcon	48
 	)
 )
@@ -2827,15 +2827,15 @@
 (instance SSummonDragon of Spell
 	(properties
 		int	pCircle	_SKILL_ELEMENTALISM
-		int	pSkill	_SKILL_GRAND_MASTER
-		int	pID	_SPELL_SUMMON_DRAGON
+		int	pSkill	_SKILL_PARAGON
+		int	pID		_SPELL_SUMMON_DRAGON
 		int	pType   (| fSpellCombat fSpellArea)
 
-		id	pText       "Summon Dragon"
+		id	pText   "Summon Dragon"
 		int	view	vElementalSpell
 		int	loop	13
-		int 	pCost	400
-		int 	pIcon	74
+		int pCost	400
+		int pIcon	74
 	)
 )
 (instance SImmolationCold of Spell

@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Mar 21 03:15:11 2018)
+;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
 ;;
 
 (module# STOCKOBJ3)
@@ -16,6 +16,70 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJskbClubII of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbClubII", 
+			pName: "Club Proficiency",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbClubIII of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbClubIII", 
+			pName: "Expertise with Clubs",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
 
 (instance SOBJskbClubIV of Code
 	(properties
@@ -7191,7 +7255,7 @@
 	(method (doit aWhatObj)
 		(aWhatObj
 			name: "spbWrathOfTheGods", 
-			pName: "Spellbook of Wrath of the Gods",
+			pName: "Spellbook of Salvation",
 			loop: 0,
 			pBaseView: 51050,
 			pAction: 29,
@@ -7951,72 +8015,10 @@
 	)
 )
 
-(instance SOBJspbPoisonCurse of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbPoisonCurse", 
-			pName: "Spellbook of Poison Curse",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbAcidCurse of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbAcidCurse", 
-			pName: "Spellbook of Acid Curse",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
 (instance StockObjInitter3 of Code
 	(method (doit)
+		(StockObjList add: SOBJskbClubII)
+		(StockObjList add: SOBJskbClubIII)
 		(StockObjList add: SOBJskbClubIV)
 		(StockObjList add: SOBJskbClubV)
 		(StockObjList add: SOBJskbMace)
@@ -8265,7 +8267,5 @@
 		(StockObjList add: SOBJspbVenom)
 		(StockObjList add: SOBJspbSummonUndead)
 		(StockObjList add: SOBJspbAcidRain)
-		(StockObjList add: SOBJspbPoisonCurse)
-		(StockObjList add: SOBJspbAcidCurse)
 	)
 )
