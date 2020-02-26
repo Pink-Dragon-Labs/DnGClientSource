@@ -16,19 +16,19 @@
 
 			;;	adventurer profession
 
-			0		0		0		0		0		0		0
+			7		6		6		0		6		0		0
 
 			;;	warrior profession
 
-			2		1		-4		0		1		0		0
+			9		7		2		0		7		0		0
 
 			;;	wizard profession
 
-			-4		1		4		0		-1		0		0
+			3		7		10		0		5		0		0
 
 			;;	thief profession
 
-			-1		3		-2		0		0		0		0
+			6		9		4		0		6		0		0
 
 	]
 
@@ -38,19 +38,19 @@
 
 			;; human
 
-			10	10	10	10	10	0	0
+			0	0	0	0	0	0	0
 
 			;; orc
 
-			11	10	8	10	11	0	0
+			0	0	0	0	0	0	0
 
 			;; elf
 
-			7	14	13	10	6	0	0
+			0	0	0	0	0	0	0
 
 			;; giant
 
-			14	6	6	10	14	0	0
+			0	0	0	0	0	0	0
 	]
 
 ;** They're all the same anyhow - per PCPeople LOL!
@@ -256,7 +256,7 @@
 		(if
 			(and
 				lPointPool
-				(> (lPointPool pDelta?) 8)
+				(> (lPointPool pDelta?) 23)
 			)
 
 			(NBody
@@ -871,7 +871,7 @@
 
 (procedure (SetPointPool)
 	(return ((AttributeObj new:)
-			scratch: 8,
+			scratch: 23,
 			yourself:,
 		)
 	)

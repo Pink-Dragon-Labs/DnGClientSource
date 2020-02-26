@@ -680,32 +680,32 @@ int CToonAttributeWnd::s_nProfTable [ 4 ][ 4 ] = {
 //			Str		Dex		Int		Endu	
 
 			//	adventurer profession
-	{		0,		0,		0,		0,		},
+	{		7,		6,		6,		6,		},
 
 			//	warrior profession
-	{		2,		1,		-4,		1,		},
+	{		9,		7,		2,		7,		},
 
 			//	wizard profession
-	{		-4,		1,		4,		-1,		},
+	{		2,		7,		10,		5,		},
 
 			//	thief profession
-	{		-1,		3,		-2,		0,		},
+	{		6,		9,		4,		6,		},
 };
 
 // race base values for attributes
 int CToonAttributeWnd::s_nRaceBase [ 4 ][ 4 ] = {
 
 			// human
-	{		10,	10,	10,	10,	},
+	{		0,	0,	0,	0,	},
 
 			// orc
-	{		11,	10,	8,	11,	},
+	{		0,	0,	0,	0,	},
 
 			// giant
-	{		14,	6,	6,	14,	},
+	{		0,	0,	0,	0,	},
 
 			// elf
-	{		7,	14,	13,	6, 	},
+	{		0,	0,	0,	0, 	},
 
 };
 
@@ -764,7 +764,7 @@ void CToonAttributeWnd::UpdateStats ( )
 
 	int nCurrent;
 
-	m_nAvailbleStats = 8;
+	m_nAvailbleStats = 23;
 
 	if ( nCurrent = m_pStrength->SetCurrent ( nStrength ) ) {
 		m_nAvailbleStats -= nCurrent;

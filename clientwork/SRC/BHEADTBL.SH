@@ -498,7 +498,7 @@
 	]
 
 	int lHairColorTable = [
-		252
+		172
 		cLightRed										;; 1
 		cRed											;; 2
 		cLightGrey										;; 3
@@ -670,91 +670,11 @@
 		cBlackLittleBrown
 		cGrayLittleBlack
 		cLightGray
-		cShiftingWhiteLines
-		cShiftingWhite
-		cShiftingAllWhite
-		cShiftingLightGray
-		cShiftingGray
-		cShiftingDarkGray
-		cShiftingDarkerGray
-		cShiftingDarkestGray
-		cShiftingBlack
-		cShiftingBlackGlow
-		cShiftingStarkBlack
-		cShiftingStarkWhite
-		cShiftingLightestRosyBrown
-		cShiftingLightRosyBrown
-		cShiftingRosyBrown
-		cShiftingDarkRosyBrown
-		cShiftingDarkerRosyBrown
-		cShiftingDarkestRosyBrown
-		cShiftingDarkRosyBrownGlow
-		cShiftingOffWhite
-		cShiftingLightCream
-		cShiftingCream
-		cShiftingBronzeOlive
-		cShiftingDarkBronzeGlow
-		cShiftingOrangeBrown
-		cShiftingOrangeBrownGlow
-		cShiftingWhiteOrange
-		cShiftingLightestChrome
-		cShiftingLighterChrome
-		cShiftingLightChrome
-		cShiftingChrome
-		cShiftingDarkChrome
-		cShiftingDarkerChrome
-		cShiftingDarkestChrome
-		cShiftingDarkBrown
-		cShiftingLightestVanilla
-		cShiftingLighterVanilla
-		cShiftingLightVanilla
-		cShiftingVanilla
-		cShiftingDarkVanilla
-		cShiftingDarkerVanilla
-		cShiftingDarkestVanilla
-		cShiftingCoffeeGlow
-		cShiftingOffWhiteLines
-		cShiftingDarkGreenGlow
-		cShiftingGreenGlow
-		cShiftingOlive
-		cShiftingLime
-		cShiftingWhiteGreen
-		cShiftingGrayLime
-		cShiftingLighterFossil
-		cShiftingLightFossil
-		cShiftingFossil
-		cShiftingDarkFossil
-		cShiftingDarkerFossil
-		cShiftingBlackGreenGlow
-		cShiftingLightGreen
-		cDarkGreenGlow
-		cLightGreenInvisibleLines
-		cInvisibleLightGreen
-		cInvisibleLightGreenLines
-		cCompletelyInvisible
-		cInvisibleBlackOutlined
-		cInvisibleClearSpots
-		cDarkInvisible
-		cNormalInvisible
-		cAlmostInvisible
-		cAlmostInvisibleLines
-		cNearInvisibleLines
-		cSecondCompletelyInvisible
-		cThirdCompletelyInvisible
-		cForthCompletelyInvisible
-		cFithCompletelyInvisible
-		cSixthCompletelyInvisible
-		cSeventhCompletelyInvisible
-		cEighthCompletelyInvisible
-		cNinthCompletelyInvisible
-		cTenthCompletelyInvisible
-		cInvisibleBlackLines
-		cBlackInvisibleLines
 		cDarkNaturalBrown
 	]
 
 	int lEyeColorTable = [
-		9
+		13
 		cBlue
 		cLightBlue
 		cBrown
@@ -764,48 +684,88 @@
 		cAqua
 		cLightAqua
 		cDarkGrey
+		cLightRed
+		cRed
+		cLightPurple
+		cPurple
 	]
 
 	int lHumanSkinColorTable = [
-		4
+		10
 		cLightFlesh
 		cFlesh
 		cLightBrown
-		cBrown
+		cDarkFlesh
+		cTanFlesh
+		cNaturalBrown
+		cYellow
+		cGreen
+		cDarkGrey
+		cGrey
 	]
 
 	int lOrcSkinColorTable = [
-		6
+		13
 		cGrey
 		cDarkGrey
 		cLightBrown
 		cBrown
 		cLightGreen
 		cGreen
-		;cLightBlue
-		;cBlue
-		;cLightRed
-		;cRed
-		;cLightPurple
-		;cPurple
+		cLightBlue
+		cBlue
+		cLightRed
+		cRed
+		cLightPurple
+		cPurple
+		cWhite
 	]
 
 	int lGiantSkinColorTable = [
-		4
+		21
 		cLightFlesh
 		cFlesh
 		cLightBrown
-		cBrown
+		cDarkFlesh
+		cTanFlesh
+		cNaturalBrown
+		cGrey
+		cDarkGrey
+		cLightGreen
+		cGreen
+		cLightBlue
+		cBlue
+		cLightRed
+		cRed
+		cLightPurple
+		cPurple
+		cBabyPink
+		cWhite
+		cDarkNaturalBrown
+		cCadetBlue
+		cLightCyan
 	]
 
 	int lElfSkinColorTable = [
-		6
+		18
 		cLightFlesh
 		cFlesh
 		cLightBrown
-		cBrown
+		cGrey
+		cDarkGrey
+		cDarkFlesh
+		cTanFlesh
+		cNaturalBrown
 		(+ cLightGreen 1)
 		cLightBlue
+		cBlue
+		cLightRed
+		cRed
+		cLightPurple
+		cPurple
+		cBabyPink
+		cCadetBlue
+		cLightCyan
 	]
 
 	int lFeatureToProperty = [
