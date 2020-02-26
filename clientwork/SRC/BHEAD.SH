@@ -36,7 +36,7 @@
 (enum
 	1
 	_BH_HUMAN 
-	_BH_DWARF
+	_BH_ORC
 	_BH_GIANT
 	_BH_ELF
 )

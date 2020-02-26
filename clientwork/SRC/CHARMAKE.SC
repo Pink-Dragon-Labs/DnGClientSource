@@ -12,10 +12,12 @@
 
 (local
 	NBodyMaleHuman		=	0
+	NBodyMaleOrc		=	0
 	NBodyMaleGiant		=	0
 	NBodyMaleElf		=	0
-	NBodyFemaleHuman	=	0
-	NBodyFemaleGiant	=	0
+	NBodyFemaleHuman		=	0
+	NBodyFemaleOrc		=	0
+	NBodyFemaleGiant		=	0
 	NBodyFemaleElf		=	0
 )
 
@@ -50,9 +52,11 @@
 
 		( KDialog DialogCharCreation dtmCreate 
 			NBodyMaleHuman		
+			NBodyMaleOrc
 			NBodyMaleGiant		
 			NBodyMaleElf		
 			NBodyFemaleHuman	
+			NBodyFemaleOrc
 			NBodyFemaleGiant	
 			NBodyFemaleElf		
 		)
@@ -110,6 +114,33 @@
 			setRace:		_BH_HUMAN,
 		)
 
+;; ---- Setup the male orc ----
+		(= NBodyMaleOrc	(fNBody new:))
+
+		(NBodyMaleOrc
+			name:				"NBodyMaleOrc",
+			loop:				2,
+			signal:				(& (NBodyMaleOrc signal?) (~ viewHidden)),
+			setSex:				_WA_SEX_MALE,
+			setRace:			_WA_RACE_ORC,
+			setView:			MALE_V,
+			pStrength:			11,
+			pDexterity:			10,
+			pIntelligence:		8,
+			pEndurance:			11,
+			pPeaceful:			TRUE,
+			pAlignment:			128,
+			scratch:			8,
+			xScaleAdj:			110,
+			yScaleAdj:			105,
+		)
+
+		(= tBase ((NBodyMaleOrc pHead?) getBase: BHead))
+		(tBase 
+			setSex:		_BH_MALE,
+			setRace:	_BH_ORC,
+		)
+
 ;; ---- Setup the male giant ----
 		(= NBodyMaleGiant	(fNBody new:))
 
@@ -164,7 +195,7 @@
 			setRace:	_BH_ELF,
 		)
 
-;; ---- Setup the male human ----
+;; ---- Setup the female human ----
 		(= NBodyFemaleHuman   (fNBody new:))
 
 		(NBodyFemaleHuman
@@ -191,7 +222,34 @@
 			setRace:	_BH_HUMAN,
 		)
 
-;; ---- Setup the male giant ----
+;; ---- Setup the female orc ----
+		(= NBodyFemaleOrc	(fNBody new:))
+
+		(NBodyFemaleOrc
+			name:				"NBodyFemaleOrc",
+			loop:				2,
+			signal:				(& (NBodyFemaleOrc signal?) (~ viewHidden)),
+			setSex:				_WA_SEX_FEMALE,
+			setRace:			_WA_RACE_ORC,
+			setView:			FEMALE_V,
+			pStrength:			11,
+			pDexterity:			10,
+			pIntelligence:		8,
+			pEndurance:			11,
+			pPeaceful:			TRUE,
+			pAlignment:			128,
+			scratch:			8,
+			xScaleAdj:			110,
+			yScaleAdj:			105,
+		)
+
+		(= tBase ((NBodyFemaleOrc pHead?) getBase: BHead))
+		(tBase 
+			setSex:		_BH_FEMALE,
+			setRace:	_BH_ORC,
+		)
+
+;; ---- Setup the female giant ----
 		(= NBodyFemaleGiant	(fNBody new:))
 
 		(NBodyFemaleGiant
@@ -218,7 +276,7 @@
 			setRace:	_BH_GIANT,
 		)
 
-;; ---- Setup the male elf ----
+;; ---- Setup the female elf ----
 		(= NBodyFemaleElf	(fNBody new:))
 
 		(NBodyFemaleElf
@@ -252,9 +310,11 @@
 
 	(method (dispose &tmp i tTime)
 		(NBodyMaleHuman dispose:)
+		(NBodyMaleOrc dispose:)
 		(NBodyMaleGiant dispose:)
 		(NBodyMaleElf dispose:)
 		(NBodyFemaleHuman dispose:)
+		(NBodyFemaleOrc dispose:)
 		(NBodyFemaleGiant dispose:)
 		(NBodyFemaleElf dispose:)
 

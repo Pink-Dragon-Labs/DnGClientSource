@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
+;; Author: SPARCStation (Wed Feb 26 15:27:47 2020)
 ;;
 
 (module# STOCKOBJ9)
@@ -16,41 +16,6 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
-
-(instance SOBJLizard of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "Lizard", 
-			pName: "Lizard",
-			loop: 2,
-			pBaseView: 42500,
-			pAction: 1,
-			pClutStart: 104,
-			pColor: 104,
-			pBaseBitsLo: 4162,
-			pBaseBitsHi: 64,
-			pSoundGroup: 10,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BCharacter)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 1400,
-			pBulkCap: 2000,
-		)
-
-		(aWhatObj addBase: BNPC)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
 
 (instance SOBJBunny of Code
 	(properties
@@ -1470,7 +1435,6 @@
 
 (instance StockObjInitter9 of Code
 	(method (doit)
-		(StockObjList add: SOBJLizard)
 		(StockObjList add: SOBJBunny)
 		(StockObjList add: SOBJhornedHelm)
 		(StockObjList add: SOBJSlime)

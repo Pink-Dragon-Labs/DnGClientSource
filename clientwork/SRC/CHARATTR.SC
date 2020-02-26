@@ -40,9 +40,9 @@
 
 			10	10	10	10	10	0	0
 
-			;; dwarf
+			;; orc
 
-			10  10	10	10	10	0	0
+			11	10	8	10	11	0	0
 
 			;; elf
 
@@ -392,7 +392,7 @@
 			(_WA_RACE_HUMAN
 				(= tRace 0)
 			)
-			(_WA_RACE_DWARF
+			(_WA_RACE_ORC
 				(= tRace 1)
 			)
 			(_WA_RACE_ELF

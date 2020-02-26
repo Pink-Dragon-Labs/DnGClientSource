@@ -77,8 +77,8 @@
 ;**		%0000000010000000 %0000000000000000		;; head 1: 8
 ;**		%0000000010000001 %0000000000010000		;; head 5: 1, 8, 21
 
-		;; DWARF
-		5000	1
+		;; ORC
+		5000	7
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -113,8 +113,8 @@
 ;**		%0000000000010001 %0000000000000000		;; hair 8 : 1, 5
 ;**		%0000000000010000 %0000000000000000		;; hair 21: 5
 
-		;; DWARF
-		5060	15
+		;; ORC
+		5030	8
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -139,8 +139,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5120	15
+		;; ORC
+		5060	8
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -165,8 +165,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5180	8
+		;; ORC
+		5090	7
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -191,8 +191,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5240	18
+		;; ORC
+		5120	5
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -217,8 +217,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5300	6
+		;; ORC
+		5140	7
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -230,7 +230,7 @@
 		_EXCL_NONE
 
 		;; ELF
-		6100	3
+		6100	6
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -243,8 +243,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5360	1
+		;; ORC
+		5170	5
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -269,8 +269,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5420	18
+		;; ORC
+		0	0
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -282,7 +282,7 @@
 		_EXCL_NONE
 
 		;; ELF
-		0		0
+		0	0
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -295,8 +295,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5480	9
+		;; ORC
+		5200	7
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -320,8 +320,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5540	18
+		;; ORC
+		5230	8
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -346,8 +346,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5600	7
+		;; ORC
+		5260	8
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -372,8 +372,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5660	8
+		;; ORC
+		5290	7
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -398,8 +398,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5720	11
+		;; ORC
+		5320	5
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -424,8 +424,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5780	6
+		;; ORC
+		5340	7
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -450,8 +450,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5840	11
+		;; ORC
+		5370	5
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -478,8 +478,8 @@
 		;; define which types of exclusions are set
 		_EXCL_NONE
 
-		;; DWARF
-		5900	15
+		;; ORC
+		0	0
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -766,12 +766,46 @@
 		cDarkGrey
 	]
 
-	int lSkinColorTable = [
+	int lHumanSkinColorTable = [
 		4
 		cLightFlesh
 		cFlesh
 		cLightBrown
 		cBrown
+	]
+
+	int lOrcSkinColorTable = [
+		6
+		cGrey
+		cDarkGrey
+		cLightBrown
+		cBrown
+		cLightGreen
+		cGreen
+		;cLightBlue
+		;cBlue
+		;cLightRed
+		;cRed
+		;cLightPurple
+		;cPurple
+	]
+
+	int lGiantSkinColorTable = [
+		4
+		cLightFlesh
+		cFlesh
+		cLightBrown
+		cBrown
+	]
+
+	int lElfSkinColorTable = [
+		6
+		cLightFlesh
+		cFlesh
+		cLightBrown
+		cBrown
+		(+ cLightGreen 1)
+		cLightBlue
 	]
 
 	int lFeatureToProperty = [

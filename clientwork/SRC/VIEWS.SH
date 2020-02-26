@@ -216,13 +216,13 @@
 ; character race base view defines
 
 (define MALE_HUMAN_V	 	   	0)
-(define FEMALE_HUMAN_V	    480)	
-(define MALE_DWARF_V		   1000)	
-(define FEMALE_DWARF_V	   1480)	
-(define MALE_GIANT_V		   2000)	
-(define FEMALE_GIANT_V	   2480)	
-(define MALE_ELF_V		   3000)	
-(define FEMALE_ELF_V		   3480)	
+(define FEMALE_HUMAN_V		    480)	
+(define MALE_ORC_V		   		1000)	
+(define FEMALE_ORC_V		   	1480)	
+(define MALE_GIANT_V		   	2000)	
+(define FEMALE_GIANT_V		   	2480)	
+(define MALE_ELF_V		   		3000)	
+(define FEMALE_ELF_V		   	3480)	
 
 ;; heraldry base view defines
 

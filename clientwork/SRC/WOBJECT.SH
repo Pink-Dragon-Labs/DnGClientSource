@@ -129,7 +129,7 @@
 
 (enum
 	_WA_RACE_HUMAN
-	_WA_RACE_DWARF
+	_WA_RACE_ORC
 	_WA_RACE_GIANT
 	_WA_RACE_ELF
 )
@@ -141,8 +141,8 @@
 (define _WA_HEIGHT_ELF		-9)		;; 9% shorter
 (define _WA_WIDTH_ELF		-15)		;; 15% skinnier
 
-(define _WA_HEIGHT_DWARF	-25)		;; 25% shorter
-(define _WA_WIDTH_DWARF		5)		;; 5% fatter
+(define _WA_HEIGHT_ORC		5)		;; 5% taller
+(define _WA_WIDTH_ORC		10)		;; 10% thicker
 
 (define _WA_HEIGHT_GIANT	25)		;; 25% taller
 (define _WA_WIDTH_GIANT		15)		;; 15% fatter

@@ -405,7 +405,7 @@
 
 	lReScaleTable = [
 		100 100	; regular
-		100  80	; dwarf
+		125  125	; orc
 		 75  90	; elf
 		150 150	; giant
 		50  50	; pixie

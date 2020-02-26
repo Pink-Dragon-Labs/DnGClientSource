@@ -28,10 +28,10 @@
 
 (define HUMAN_VARY_X			-8) 
 (define HUMAN_VARY_Y			-8)
-(define DWARF_VARY_X			-8)
-(define DWARF_VARY_Y			-8)
-(define ELF_VARY_X			-8)
-(define ELF_VARY_Y			-8)
+(define ORC_VARY_X				-10)
+(define ORC_VARY_Y				-10)
+(define ELF_VARY_X				-8)
+(define ELF_VARY_Y				-8)
 (define GIANT_VARY_X			-10)
 (define GIANT_VARY_Y			-10)
 

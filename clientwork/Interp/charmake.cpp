@@ -68,7 +68,7 @@ char *CToonMakeWnd::nSexes[2] = {
 
 char* nRaces[4] = {
 	"Human",
-	"",
+	"Orc",
 	"Giant",
 	"Elf"
 };
@@ -78,8 +78,8 @@ int	nSizes [4][4] = {
 //	HUMAN		minGirth	maxGirth	minHeight	MaxHeight
 			{	90,			110,		90,			110	},
 
-//	DWARF		minGirth	maxGirth	minHeight	MaxHeight
-			{	0,			0,			0,			0	},
+//	ORC		minGirth	maxGirth	minHeight	MaxHeight
+			{	100,		120,		95,			115	},
 			
 //	GIANT		minGirth	maxGirth	minHeight	MaxHeight
 			{	100,		120,		100,		120	},
@@ -696,8 +696,8 @@ int CToonAttributeWnd::s_nRaceBase [ 4 ][ 4 ] = {
 			// human
 	{		10,	10,	10,	10,	},
 
-			// dwarf
-	{		10,	10,	10,	10,	},
+			// orc
+	{		11,	10,	8,	11,	},
 
 			// giant
 	{		14,	6,	6,	14,	},

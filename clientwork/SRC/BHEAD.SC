@@ -674,8 +674,24 @@
 	;; pSkinColor property of self.
 	;;
 	(method (setSkinColor aColor &tmp tObj)
-		(= aColor (umod aColor [lSkinColorTable 0]))
-		(= pSkinColor aColor)
+		(switch pRace
+			(_BH_HUMAN
+				(= aColor (umod aColor [lHumanSkinColorTable 0]))
+				(= pSkinColor aColor)
+			)
+			(_BH_ORC
+				(= aColor (umod aColor [lOrcSkinColorTable 0]))
+				(= pSkinColor aColor)
+			)
+			(_BH_GIANT
+				(= aColor (umod aColor [lGiantSkinColorTable 0]))
+				(= pSkinColor aColor)
+			)
+			(_BH_ELF
+				(= aColor (umod aColor [lElfSkinColorTable 0]))
+				(= pSkinColor aColor)
+			)
+		)
 
 		(= tObj (pSelf getBaseOwner:))
 
@@ -731,7 +747,20 @@
 			)
 			
 			(else
-				(pSelf setColor: [lSkinColorTable (+ aColor 1)] 104)  		;; 104 is the clut start for skin
+				(switch pRace
+					(_BH_HUMAN
+						(pSelf setColor: [lHumanSkinColorTable (+ aColor 1)] 104)  		;; 104 is the clut start for skin
+					)
+					(_BH_ORC
+						(pSelf setColor: [lOrcSkinColorTable (+ aColor 1)] 104)  		;; 104 is the clut start for skin
+					)
+					(_BH_GIANT
+						(pSelf setColor: [lGiantSkinColorTable (+ aColor 1)] 104)  		;; 104 is the clut start for skin
+					)
+					(_BH_ELF
+						(pSelf setColor: [lElfSkinColorTable (+ aColor 1)] 104)  		;; 104 is the clut start for skin
+					)
+				)
 			)
 		)
 	)
@@ -803,7 +832,20 @@
 		else 
 			(switch aFeature
 				(_FEATURE_SKIN_COLOR
-					(= tCount [lSkinColorTable 0])
+					(switch pRace
+						(_BH_HUMAN
+							(= tCount [lHumanSkinColorTable 0])
+						)
+						(_BH_ORC
+							(= tCount [lOrcSkinColorTable 0])
+						)
+						(_BH_GIANT
+							(= tCount [lGiantSkinColorTable 0])
+						)
+						(_BH_ELF
+							(= tCount [lElfSkinColorTable 0])
+						)
+					)
 				)
 
 				(_FEATURE_HAIR_COLOR
