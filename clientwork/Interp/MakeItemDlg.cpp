@@ -119,6 +119,8 @@ item_t gItemNames2[] = {
 	{18, 5, "Admantium Short Sword"},
 	{18, 5, "Admantium Throwing Dagger"},
 	{18, 5, "Admantium Two-Handed Sword"},
+	{18, 6, "The Wrath"},
+	{18, 6, "The Wrath +Fire"},
 	{19, 1, "Belt"},
 	{19, 1, "Cowl"},
 	{19, 1, "Doublet"},

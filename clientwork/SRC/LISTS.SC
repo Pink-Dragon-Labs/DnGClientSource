@@ -397,6 +397,9 @@
 				SImpInvulnerability
 				SSummonMist
 				SDamnation
+				SImmolationAcid
+				SImmolationPoison
+				SAcidBlade
 		)
 
 		(self eachElementDo: #init)

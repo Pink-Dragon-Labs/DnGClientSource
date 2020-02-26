@@ -178,6 +178,9 @@
 	SImpInvulnerability         148
 	SSummonMist                 149
 	SDamnation					150
+	SImmolationAcid				151
+	SImmolationPoison			152
+	SAcidBlade					153
 )
 
 (local
@@ -1186,7 +1189,7 @@
 		int	pID		_SPELL_ELPHAMES_JUSTICE
 		int	pType	(| fSpellCombat fSpellCaster)
 
-		id	pText	"Elphame's Justice"
+		id	pText	"Elphame's Blessing"
 		int	view	vSorcerySpell
 		int	loop	12
 		int pCost	20
@@ -2937,6 +2940,48 @@
 	)
 )
 
+(instance SImmolationAcid of Spell
+	(properties
+		int	pCircle	_SKILL_ELEMENTALISM
+		int	pSkill	_SKILL_GRAND_MASTER
+		int	pID		_SPELL_IMMOLATION_ACID
+		int	pType   (| fSpellAnywhere fSpellFriendly)
+
+		id	pText	"Immolation Acid"
+		int	view	vElementalSpell
+		int	loop	4
+		int 	pCost	250
+		int 	pIcon	5
+	)
+)
+(instance SImmolationPoison of Spell
+	(properties
+		int	pCircle	_SKILL_ELEMENTALISM
+		int	pSkill	_SKILL_GRAND_MASTER
+		int	pID		_SPELL_IMMOLATION_POISON
+		int	pType   (| fSpellAnywhere fSpellFriendly)
+
+		id	pText	"Immolation Poison"
+		int	view	vElementalSpell
+		int	loop	4
+		int 	pCost	250
+		int 	pIcon	5
+	)
+)
+(instance SAcidBlade of Spell
+	(properties
+		int	pCircle	_SKILL_NECROMANCY
+		int	pSkill	_SKILL_PROFICIENT
+		int	pID		_SPELL_ACID_BLADE
+		int	pType   (| fSpellAnywhere fSpellFriendly)
+
+		id	pText	"Acid Blade"
+		int	view	vNecromancySpell
+		int	loop	12
+		int pCost	3
+		int pIcon	53
+	)
+)
 ;----------------------------------------------------
 (instance SCancel of Spell
 	(properties

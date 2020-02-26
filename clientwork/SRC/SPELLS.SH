@@ -146,6 +146,10 @@
 (define SImpInvulnerability     (ModuleID SPELLS 148))
 (define SSummonMist             (ModuleID SPELLS 149))
 (define SDamnation              (ModuleID SPELLS 150))
+(define SImmolationAcid     	(ModuleID SPELLS 151))
+(define SImmolationPoison   	(ModuleID SPELLS 152))
+(define SAcidBlade             	(ModuleID SPELLS 153))
+
 
 (define _SEDeathCloud	0)
 (define _SEFlameOrb		1)
