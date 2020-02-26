@@ -293,18 +293,20 @@ CToonMakeWnd::CToonMakeWnd()
 	srand( (unsigned)time( NULL ) );
 }
 
-CToonMakeWnd::CToonMakeWnd( ObjectID nBody1, ObjectID nBody2, ObjectID nBody3, ObjectID nBody4, ObjectID nBody5, ObjectID nBody6 )
+CToonMakeWnd::CToonMakeWnd( ObjectID nBody1, ObjectID nBody2, ObjectID nBody3, ObjectID nBody4, ObjectID nBody5, ObjectID nBody6, ObjectID nBody7, ObjectID nBody8)
 {
 	m_sName = "???";
 	m_sTitle = "???";
 	m_sBio = "Enter personal information about your character here.";
 
-	m_Bodies[0]	=	nBody1;
-	m_Bodies[2]	=	nBody2;
-	m_Bodies[3]	=	nBody3;
-	m_Bodies[4]	=	nBody4;
-	m_Bodies[6]	=	nBody5;
-	m_Bodies[7]	=	nBody6;
+	m_Bodies[0] = nBody1;
+	m_Bodies[1] = nBody2;
+	m_Bodies[2] = nBody3;
+	m_Bodies[3] = nBody4;
+	m_Bodies[4] = nBody5;
+	m_Bodies[5] = nBody6;
+	m_Bodies[6] = nBody7;
+	m_Bodies[7] = nBody8;
 
 	srand( (unsigned)time( NULL ) );
 }
@@ -354,28 +356,28 @@ BOOL CToonMakeWnd::Create ()
 	return TRUE;
 }
 
-void CToonMakeWnd::UpdateStats ()
+void CToonMakeWnd::UpdateStats()
 {
 	int nSex = m_nCurBody >> 2;
 	int nRace = m_nCurBody & 0x00000003;
 
-	if ( nSex == _WA_SEX_FEMALE || nRace == _WA_RACE_ELF) {
+	if (nSex == _WA_SEX_FEMALE || nRace == _WA_RACE_ORC || nRace == _WA_RACE_ELF) {
 		beardUpObj->Disable();
 		beardDownObj->Disable();
-	} else {
+	}
+	else {
 		beardUpObj->Enable();
 		beardDownObj->Enable();
 	}
 
 	ProcessRefreshList();
 
-	sexObj.SetText ( CToonMakeWnd::nSexes[ nSex ] );
-	raceObj.SetText ( nRaces[ nRace ] );
+	sexObj.SetText(CToonMakeWnd::nSexes[nSex]);
+	raceObj.SetText(nRaces[nRace]);
 
-	m_pGirth->SetCurrent ( m_Bodies [ m_nCurBody ].get_xScaleAdj(), false );
-	m_pHeight->SetCurrent ( m_Bodies [ m_nCurBody ].get_yScaleAdj(), false );
+	m_pGirth->SetCurrent(m_Bodies[m_nCurBody].get_xScaleAdj(), false);
+	m_pHeight->SetCurrent(m_Bodies[m_nCurBody].get_yScaleAdj(), false);
 }
-
 void CToonMakeWnd::UpdateBitmaps ()
 {
 	CelObjMem bitmapToon ( m_Bodies[ m_nCurBody ].getStanceBitmap ( CSCI_fNBody::_WOA_STAND ) );
@@ -473,8 +475,8 @@ void CToonMakeWnd::RaceUp ()
 
 	m_nCurBody++;
 
-	if ( m_nCurBody == 1 )	//	Can not get to, it is an unimp'd race
-		m_nCurBody++;
+	//if ( m_nCurBody == 1 )	//	Can not get to, it is an unimp'd race
+	//	m_nCurBody++;
 
 	m_nCurBody &= 0x00000003;
 
@@ -498,8 +500,8 @@ void CToonMakeWnd::RaceDown ()
 
 	m_nCurBody--;
 
-	if ( m_nCurBody == 1 )	//	Can not get to, it is an unimp'd race
-		m_nCurBody--;
+	//if ( m_nCurBody == 1 )	//	Can not get to, it is an unimp'd race
+	//	m_nCurBody--;
 
 	m_nCurBody &= 0x00000003;
 

@@ -25,7 +25,7 @@ enum {
 
 enum {
 	_WA_RACE_HUMAN,
-	_WA_RACE_DWARF,
+	_WA_RACE_ORC,
 	_WA_RACE_GIANT,
 	_WA_RACE_ELF,
 	_WA_RACE_MAX
@@ -114,7 +114,7 @@ class CToonMakeWnd : public CToonMakeWndBase
 {
 public:
 	CToonMakeWnd();
-	CToonMakeWnd( ObjectID nBody1, ObjectID nBody2, ObjectID nBody3, ObjectID nBody4, ObjectID nBody5, ObjectID nBody6 );
+	CToonMakeWnd( ObjectID nBody1, ObjectID nBody2, ObjectID nBody3, ObjectID nBody4, ObjectID nBody5, ObjectID nBody6, ObjectID nBody7, ObjectID nBody8);
 
 	// this member instantiates this character selection window
 	BOOL Create ();

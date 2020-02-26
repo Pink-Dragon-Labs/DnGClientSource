@@ -2215,7 +2215,7 @@ KDialog(argList)
 			switch ( arg(2) ) {
 				case dtmCreate: {
 					// create the window...
-					(new CToonMakeWnd ( (ObjectID) arg(3), (ObjectID) arg(4), (ObjectID) arg(5), (ObjectID) arg(6), (ObjectID) arg(7), (ObjectID) arg(8) ))->Create();
+					(new CToonMakeWnd((ObjectID)arg(3), (ObjectID)arg(4), (ObjectID)arg(5), (ObjectID)arg(6), (ObjectID)arg(7), (ObjectID)arg(8), (ObjectID)arg(9), (ObjectID)arg(10)))->Create();
 				}
 
 				break;
