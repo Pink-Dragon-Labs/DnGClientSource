@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
+;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
 ;;
 
 (module# STOCKOBJ8)
@@ -16,40 +16,6 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
-
-(instance SOBJhdDarkBlackGlow of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hdDarkBlackGlow", 
-			pName: "Bottle of Dark Black Glow Dye",
-			loop: 0,
-			pBaseView: 51550,
-			pAction: 29,
-			pClutStart: 68,
-			pColor: 97,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 192,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 99,
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-	)
-)
 
 (instance SOBJhdBrighterWhite of Code
 	(properties
@@ -8590,9 +8556,44 @@
 	)
 )
 
+(instance SOBJSwimsuit of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Swimsuit", 
+			pName: "Swimsuit",
+			loop: 0,
+			pBaseView: 10550,
+			pAction: 29,
+			pClutStart: 73,
+			pColor: 100,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 0,
+			pAreaWorn: 6,
+			pMask: -3,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
 (instance StockObjInitter8 of Code
 	(method (doit)
-		(StockObjList add: SOBJhdDarkBlackGlow)
 		(StockObjList add: SOBJhdBrighterWhite)
 		(StockObjList add: SOBJhdSaddleBrown)
 		(StockObjList add: SOBJhdDarkBrownGlow)
@@ -8842,5 +8843,6 @@
 		(StockObjList add: SOBJmwFafnirFang)
 		(StockObjList add: SOBJBeanie)
 		(StockObjList add: SOBJBikini)
+		(StockObjList add: SOBJSwimsuit)
 	)
 )

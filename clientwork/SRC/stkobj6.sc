@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
+;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
 ;;
 
 (module# STOCKOBJ6)
@@ -16,36 +16,6 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
-
-(instance SOBJqAldonzoDagger of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "qAldonzoDagger", 
-			pName: "Aldonzo's Dagger",
-			loop: 0,
-			pBaseView: 15300,
-			pAction: 29,
-			pClutStart: 0,
-			pColor: 0,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 4,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
 
 (instance SOBJqPetrifiedWood of Code
 	(properties
@@ -7824,9 +7794,47 @@
 	)
 )
 
+(instance SOBJGMPurpleEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GMPurpleEasterEgg", 
+			pName: "Purple GM Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 94,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
 (instance StockObjInitter6 of Code
 	(method (doit)
-		(StockObjList add: SOBJqAldonzoDagger)
 		(StockObjList add: SOBJqPetrifiedWood)
 		(StockObjList add: SOBJqMishaBelt)
 		(StockObjList add: SOBJqSpecialOrder)
@@ -8076,5 +8084,6 @@
 		(StockObjList add: SOBJGMOrangeEasterEgg)
 		(StockObjList add: SOBJGMAmberEasterEgg)
 		(StockObjList add: SOBJGMRoyalEasterEgg)
+		(StockObjList add: SOBJGMPurpleEasterEgg)
 	)
 )

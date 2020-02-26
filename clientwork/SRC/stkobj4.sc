@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
+;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
 ;;
 
 (module# STOCKOBJ4)
@@ -16,38 +16,6 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
-
-(instance SOBJspbPoisonCurse of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbPoisonCurse", 
-			pName: "Spellbook of Poison Curse",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
 
 (instance SOBJspbAcidCurse of Code
 	(properties
@@ -8656,9 +8624,43 @@
 	)
 )
 
+(instance SOBJGiftBox4 of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GiftBox4", 
+			pName: "Gift Box",
+			loop: 0,
+			pBaseView: 62758,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 3,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 1,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 0,
+			pBulkCap: 0,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
 (instance StockObjInitter4 of Code
 	(method (doit)
-		(StockObjList add: SOBJspbPoisonCurse)
 		(StockObjList add: SOBJspbAcidCurse)
 		(StockObjList add: SOBJspbFireCurse)
 		(StockObjList add: SOBJspbColdCurse)
@@ -8908,5 +8910,6 @@
 		(StockObjList add: SOBJGiftBox1)
 		(StockObjList add: SOBJGiftBox2)
 		(StockObjList add: SOBJGiftBox3)
+		(StockObjList add: SOBJGiftBox4)
 	)
 )

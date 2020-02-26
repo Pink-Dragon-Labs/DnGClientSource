@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
+;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
 ;;
 
 (module# STOCKOBJ5)
@@ -16,41 +16,6 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
-
-(instance SOBJGiftBox4 of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GiftBox4", 
-			pName: "Gift Box",
-			loop: 0,
-			pBaseView: 62758,
-			pAction: 29,
-			pClutStart: 0,
-			pColor: 0,
-			pBaseBitsLo: 3,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 1,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 0,
-			pBulkCap: 0,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
 
 (instance SOBJGiftBox5 of Code
 	(properties
@@ -8066,9 +8031,38 @@
 	)
 )
 
+(instance SOBJqAldonzoDagger of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qAldonzoDagger", 
+			pName: "Aldonzo's Dagger",
+			loop: 0,
+			pBaseView: 15300,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
 (instance StockObjInitter5 of Code
 	(method (doit)
-		(StockObjList add: SOBJGiftBox4)
 		(StockObjList add: SOBJGiftBox5)
 		(StockObjList add: SOBJGiftBox6)
 		(StockObjList add: SOBJGiftBox7)
@@ -8318,5 +8312,6 @@
 		(StockObjList add: SOBJqSharpeningStone)
 		(StockObjList add: SOBJqRatlingToenail)
 		(StockObjList add: SOBJqFossilizedToad)
+		(StockObjList add: SOBJqAldonzoDagger)
 	)
 )

@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
+;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
 ;;
 
 (module# STOCKOBJ7)
@@ -16,45 +16,6 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
-
-(instance SOBJGMPurpleEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMPurpleEasterEgg", 
-			pName: "Purple GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 94,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
 
 (instance SOBJGMLightPurpleEasterEgg of Code
 	(properties
@@ -7970,9 +7931,42 @@
 	)
 )
 
+(instance SOBJhdDarkBlackGlow of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdDarkBlackGlow", 
+			pName: "Bottle of Dark Black Glow Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 97,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 99,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
+
 (instance StockObjInitter7 of Code
 	(method (doit)
-		(StockObjList add: SOBJGMPurpleEasterEgg)
 		(StockObjList add: SOBJGMLightPurpleEasterEgg)
 		(StockObjList add: SOBJGMPurpleBlackEasterEgg)
 		(StockObjList add: SOBJGMBlackEasterEgg)
@@ -8222,5 +8216,6 @@
 		(StockObjList add: SOBJhdDarkPurpleGlow)
 		(StockObjList add: SOBJhdLightPurpleC)
 		(StockObjList add: SOBJhdDarkPuple)
+		(StockObjList add: SOBJhdDarkBlackGlow)
 	)
 )

@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 05:56:59 2020)
+;; Author: SPARCStation (Wed Feb 26 07:19:03 2020)
 ;;
 
 (module# STOCKOBJ1)
@@ -7686,41 +7686,6 @@
 	)
 )
 
-(instance SOBJmwSabre of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "mwSabre", 
-			pName: "Two Handed Sword",
-			pIDName: "The Sabre",
-			loop: 0,
-			pBaseView: 15020,
-			pAction: 29,
-			pClutStart: 29,
-			pColor: 93,
-			pBaseBitsLo: 513,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 300,
-		)
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BWeapon)
-			pDamageType: 2,
-		)
-	)
-)
-
 (instance SOBJmwDefender of Code
 	(properties
 		name ""
@@ -8802,6 +8767,42 @@
 	)
 )
 
+(instance SOBJIronLargeShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "IronLargeShield", 
+			pName: "Iron Tower Shield",
+			loop: 0,
+			pBaseView: 16800,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 104,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 165,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
 (instance StockObjInitter1 of Code
 	(method (doit)
 		(StockObjList add: SOBJTemperedSteelCowl)
@@ -9023,7 +9024,6 @@
 		(StockObjList add: SOBJmwVulcanEdge)
 		(StockObjList add: SOBJmwNullsword)
 		(StockObjList add: SOBJmwWrath)
-		(StockObjList add: SOBJmwSabre)
 		(StockObjList add: SOBJmwDefender)
 		(StockObjList add: SOBJmwUnholyClub)
 		(StockObjList add: SOBJmwMaceOfVirtue)
@@ -9054,5 +9054,6 @@
 		(StockObjList add: SOBJObsidianiteRoundShield)
 		(StockObjList add: SOBJAdmantiumRoundShield)
 		(StockObjList add: SOBJWoodLargeShield)
+		(StockObjList add: SOBJIronLargeShield)
 	)
 )
