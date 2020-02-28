@@ -131,7 +131,7 @@ BOOL CSplashDlg::Create ( CWnd *pParent )
 	SetAllowMove( false );
 	SetAllowResize( false );
 
-	ShowWindow( SW_SHOW );
+	//ShowWindow( SW_SHOW );
 	UpdateWindow();
 
 	return bCreated;

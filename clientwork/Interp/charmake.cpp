@@ -690,6 +690,7 @@ int CToonAttributeWnd::s_nProfTable [ 4 ][ 4 ] = {
 
 			//	thief profession
 	{		6,		9,		4,		6,		},
+
 };
 
 // race base values for attributes

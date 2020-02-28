@@ -181,6 +181,8 @@
 	SImmolationAcid				151
 	SImmolationPoison			152
 	SAcidBlade					153
+	SSummonSnake				154
+	SSummonHolyWarrior			155
 )
 
 (local
@@ -2980,6 +2982,34 @@
 		int	loop	12
 		int pCost	3
 		int pIcon	53
+	)
+)
+(instance SSummonSnake of Spell
+	(properties
+		int	pCircle	_SKILL_NECROMANCY
+		int	pSkill	_SKILL_FAMILIAR
+		int	pID		_SPELL_SUMMON_SNAKE
+		int	pType   (| fSpellCombat fSpellArea)
+
+		id	pText   "Summon Serpent"
+		int	view	vNecromancySpell
+		int	loop	7
+		int pCost	25
+		int pIcon	48
+	)
+)
+(instance SSummonHolyWarrior of Spell
+	(properties
+		int	pCircle	_SKILL_THAUMATURGY
+		int	pSkill	_SKILL_FAMILIAR
+		int	pID		_SPELL_SUMMON_HOLY_WARRIOR
+		int	pType   (| fSpellCombat fSpellArea)
+
+		id	pText   "Holy Warrior"
+		int	view	vThaumaturgySpell
+		int	loop	7
+		int pCost	25
+		int pIcon	68
 	)
 )
 ;----------------------------------------------------

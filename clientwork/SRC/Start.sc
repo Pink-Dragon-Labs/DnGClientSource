@@ -1,4 +1,3 @@
-
 ;;
 ;;	START.SC
 ;;	(c) Sierra On-Line, Inc, 1995

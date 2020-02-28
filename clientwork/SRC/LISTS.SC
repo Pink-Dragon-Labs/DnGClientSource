@@ -400,6 +400,8 @@
 				SImmolationAcid
 				SImmolationPoison
 				SAcidBlade
+				SSummonSnake
+				SSummonHolyWarrior
 		)
 
 		(self eachElementDo: #init)

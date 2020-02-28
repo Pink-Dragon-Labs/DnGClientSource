@@ -149,6 +149,8 @@
 (define SImmolationAcid     	(ModuleID SPELLS 151))
 (define SImmolationPoison   	(ModuleID SPELLS 152))
 (define SAcidBlade             	(ModuleID SPELLS 153))
+(define SSummonSnake           	(ModuleID SPELLS 154))
+(define SSummonHolyWarrior     	(ModuleID SPELLS 155))
 
 
 (define _SEDeathCloud	0)
