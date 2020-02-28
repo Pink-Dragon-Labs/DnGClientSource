@@ -826,6 +826,16 @@ void CToonAttributeWnd::UpdateText ( )
 	CString sMessage;
 
 	sMessage.Format( "\
+|c67|Current Racial Passives;|c43|\n\
+Human - |c67|Extra Attack|c43|\n\
+Giant - |c67|Encumberance|c43|\n\
+Elf - |c67|Quickness|c43|\n\
+Orc - |c67|Fire Immolation|c43|\n\n\
+|c67|Current Class Passives;|c43|\n\
+Warrior - |c67|Empowered|c43|\n\
+Adventurer - |c67|Spell Extension|c43|\n\
+Wizard - |c67|See Invisble|c43|\n\
+Thief - |c67|Extra Dodge|c43|\n\n\
 As %s |c67|%s %s|c43|, your base attributes are set at Strength: |c67|%d|c43|, Dexterity: |c67|%d|c43|, Intelligence: |c67|%d|c43|, and Endurance: |c67|%d|c43|.  Your attribute points may be divided in any way among your four base attributes.\n\n\
 A strength of |c67|%d|c43| is considered |c67|%s|c43|. Your strength directly affects your carrying capacity and the amount of melee damage you can inflict.  A higher strength will also make the following skills easier to master: short sword, long sword, two-handed sword, club, axe, maul, mace, unarmed combat, shield use, weaponsmith, and armorsmith.\n\n\
 A dexterity of |c67|%d|c43| is considered |c67|%s|c43|. Your dexterity directly affects your movement rate and the amount of throwing weapon damage you can inflict.  A higher dexterity will also make the following skills easier to master: short sword, long sword, mace, unarmed combat, dagger, throwing weapons, shield use, critical striking, acrobatics, detect/disarm traps, pick pockets, pick locks, weaponsmith, and armorsmith.\n\n\

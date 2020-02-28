@@ -230,7 +230,7 @@
 		_EXCL_NONE
 
 		;; ELF
-		6100	6
+		6100	3
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -282,7 +282,7 @@
 		_EXCL_NONE
 
 		;; ELF
-		0	0
+		0		0
 
 		;; define which types of exclusions are set
 		_EXCL_NONE
@@ -705,7 +705,7 @@
 	]
 
 	int lOrcSkinColorTable = [
-		13
+		12
 		cGrey
 		cDarkGrey
 		cLightBrown
@@ -718,7 +718,6 @@
 		cRed
 		cLightPurple
 		cPurple
-		cWhite
 	]
 
 	int lGiantSkinColorTable = [
