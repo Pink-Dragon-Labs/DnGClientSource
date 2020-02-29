@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ2)
@@ -16,6 +16,42 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJRoundShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "RoundShield", 
+			pName: "Bronze Shield",
+			loop: 0,
+			pBaseView: 16500,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 63,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 100,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJLargeShield of Code
 	(properties
@@ -8779,40 +8815,9 @@
 	)
 )
 
-(instance SOBJskbDaggerIII of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbDaggerIII", 
-			pName: "Expertise with Daggers",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
 (instance StockObjInitter2 of Code
 	(method (doit)
+		(StockObjList add: SOBJRoundShield)
 		(StockObjList add: SOBJLargeShield)
 		(StockObjList add: SOBJKnightsShield)
 		(StockObjList add: SOBJWoodRoundShield)
@@ -9062,6 +9067,5 @@
 		(StockObjList add: SOBJskbDagger)
 		(StockObjList add: SOBJskbDaggerI)
 		(StockObjList add: SOBJskbDaggerII)
-		(StockObjList add: SOBJskbDaggerIII)
 	)
 )

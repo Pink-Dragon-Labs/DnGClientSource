@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ9)
@@ -16,6 +16,78 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJNoidHat of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "NoidHat", 
+			pName: "Clothing",
+			pIDName: "Noid's Hat",
+			loop: 0,
+			pBaseView: 32000,
+			pAction: 29,
+			pClutStart: 63,
+			pColor: 58,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 0,
+			pAreaWorn: 0,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJRandomSewerNPC of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "RandomSewerNPC", 
+			pName: "<bad engrave>",
+			loop: 2,
+			pBaseView: 100,
+			pAction: 1,
+			pClutStart: 104,
+			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+
+	)
+)
 
 (instance SOBJRandomSewerNPCa of Code
 	(properties
@@ -2067,6 +2139,8 @@
 
 (instance StockObjInitter9 of Code
 	(method (doit)
+		(StockObjList add: SOBJNoidHat)
+		(StockObjList add: SOBJRandomSewerNPC)
 		(StockObjList add: SOBJRandomSewerNPCa)
 		(StockObjList add: SOBJmwOdinsEdge)
 		(StockObjList add: SOBJmwIronwoodCudgel)

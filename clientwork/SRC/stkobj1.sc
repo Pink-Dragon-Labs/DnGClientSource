@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ1)
@@ -16,6 +16,43 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJbClumsiness of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "bClumsiness", 
+			pName: "High Boots",
+			pIDName: "Boots of Tripping",
+			loop: 0,
+			pBaseView: 10600,
+			pAction: 29,
+			pClutStart: 58,
+			pColor: -1,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 20,
+			pAreaWorn: 7,
+			pMask: -3,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJNewbieBoots of Code
 	(properties
@@ -8765,44 +8802,9 @@
 	)
 )
 
-(instance SOBJRoundShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "RoundShield", 
-			pName: "Bronze Shield",
-			loop: 0,
-			pBaseView: 16500,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 63,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 100,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter1 of Code
 	(method (doit)
+		(StockObjList add: SOBJbClumsiness)
 		(StockObjList add: SOBJNewbieBoots)
 		(StockObjList add: SOBJNewbieLeatherBoots)
 		(StockObjList add: SOBJNewbieSollerets)
@@ -9052,6 +9054,5 @@
 		(StockObjList add: SOBJmaInvulPlate)
 		(StockObjList add: SOBJShield)
 		(StockObjList add: SOBJWoodShield)
-		(StockObjList add: SOBJRoundShield)
 	)
 )

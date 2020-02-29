@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ0)
@@ -801,6 +801,38 @@
 		(if gWObjectLite (return))
 
 		(aWhatObj addBase: BEntry)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJSkullChest of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "SkullChest", 
+			pName: "Skull Chest",
+			loop: 0,
+			pBaseView: 55535,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 18,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 25000,
+			pBulkCap: 10000,
+		)
+
+		(aWhatObj addBase: BOpenable)
 
 		(aWhatObj addBase: BDescribed)
 	)
@@ -8329,43 +8361,6 @@
 	)
 )
 
-(instance SOBJbClumsiness of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "bClumsiness", 
-			pName: "High Boots",
-			pIDName: "Boots of Tripping",
-			loop: 0,
-			pBaseView: 10600,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 20,
-			pAreaWorn: 7,
-			pMask: -3,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjList of Set
 	(method (init)
 		(self add: SOBJPlayer)
@@ -8394,6 +8389,7 @@
 		(self add: SOBJFountainA)
 		(self add: SOBJGargoyleFountain)
 		(self add: SOBJLadder)
+		(self add: SOBJSkullChest)
 		(self add: SOBJSittingStump)
 		(self add: SOBJSittingRock)
 		(self add: SOBJLockedChestIron)
@@ -8617,6 +8613,5 @@
 		(self add: SOBJObsidianiteSollerets)
 		(self add: SOBJAdmantiumSollerets)
 		(self add: SOBJbDexterity)
-		(self add: SOBJbClumsiness)
 	)
 )

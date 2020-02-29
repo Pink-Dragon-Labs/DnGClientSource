@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ5)
@@ -16,6 +16,45 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJPurpleEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "PurpleEasterEgg", 
+			pName: "Purple Ratling Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 94,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJLightPurpleEasterEgg of Code
 	(properties
@@ -1522,6 +1561,31 @@
 			pName: "Event Marker",
 			loop: 0,
 			pBaseView: 59450,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 0,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJFlowerEventMarker of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "FlowerEventMarker", 
+			pName: "Spring Marker",
+			loop: 0,
+			pBaseView: 59484,
 			pAction: 29,
 			pClutStart: 0,
 			pColor: 0,
@@ -8071,68 +8135,9 @@
 	)
 )
 
-(instance SOBJqAmuletNemor of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "qAmuletNemor", 
-			pName: "Amulet of Nemor",
-			loop: 0,
-			pBaseView: 51500,
-			pAction: 29,
-			pClutStart: 122,
-			pColor: 78,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 4,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJqJelliedBerries of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "qJelliedBerries", 
-			pName: "Jellied Berries",
-			loop: 0,
-			pBaseView: 59400,
-			pAction: 29,
-			pClutStart: 0,
-			pColor: 0,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 4,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter5 of Code
 	(method (doit)
+		(StockObjList add: SOBJPurpleEasterEgg)
 		(StockObjList add: SOBJLightPurpleEasterEgg)
 		(StockObjList add: SOBJPurpleBlackEasterEgg)
 		(StockObjList add: SOBJBlackEasterEgg)
@@ -8177,6 +8182,7 @@
 		(StockObjList add: SOBJHowlJackolantern)
 		(StockObjList add: SOBJWheatbale)
 		(StockObjList add: SOBJEventMarker)
+		(StockObjList add: SOBJFlowerEventMarker)
 		(StockObjList add: SOBJCandyHeal)
 		(StockObjList add: SOBJCandySeeInvis)
 		(StockObjList add: SOBJCandyInvis)
@@ -8381,7 +8387,5 @@
 		(StockObjList add: SOBJqAmuletNemat)
 		(StockObjList add: SOBJqStenchTools)
 		(StockObjList add: SOBJqFembrelWrench)
-		(StockObjList add: SOBJqAmuletNemor)
-		(StockObjList add: SOBJqJelliedBerries)
 	)
 )

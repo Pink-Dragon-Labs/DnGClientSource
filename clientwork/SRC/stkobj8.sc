@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ8)
@@ -16,6 +16,74 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJhdDarkBrownMagentaGlow of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdDarkBrownMagentaGlow", 
+			pName: "Bottle of Dark Brown Magenta Glow Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 72,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 87,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
+
+(instance SOBJhdCyprus of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdCyprus", 
+			pName: "Bottle of Cyprus Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 76,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 88,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
 
 (instance SOBJhdDeepSeaGlow of Code
 	(properties
@@ -8507,80 +8575,10 @@
 	)
 )
 
-(instance SOBJNoidHat of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "NoidHat", 
-			pName: "Clothing",
-			pIDName: "Noid's Hat",
-			loop: 0,
-			pBaseView: 32000,
-			pAction: 29,
-			pClutStart: 63,
-			pColor: 58,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 0,
-			pAreaWorn: 0,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJRandomSewerNPC of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "RandomSewerNPC", 
-			pName: "<bad engrave>",
-			loop: 2,
-			pBaseView: 100,
-			pAction: 1,
-			pClutStart: 104,
-			pColor: 104,
-			pBaseBitsLo: 4162,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BCharacter)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 1400,
-			pBulkCap: 2000,
-		)
-
-		(aWhatObj addBase: BNPC)
-
-		(aWhatObj addBase: BDescribed)
-
-	)
-)
-
 (instance StockObjInitter8 of Code
 	(method (doit)
+		(StockObjList add: SOBJhdDarkBrownMagentaGlow)
+		(StockObjList add: SOBJhdCyprus)
 		(StockObjList add: SOBJhdDeepSeaGlow)
 		(StockObjList add: SOBJhdForestGreen)
 		(StockObjList add: SOBJhdForestGreenGlow)
@@ -8829,7 +8827,5 @@
 		(StockObjList add: SOBJSNSCloset)
 		(StockObjList add: SOBJSNSBigStrongBox)
 		(StockObjList add: SOBJCopperShop)
-		(StockObjList add: SOBJNoidHat)
-		(StockObjList add: SOBJRandomSewerNPC)
 	)
 )

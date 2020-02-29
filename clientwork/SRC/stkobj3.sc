@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ3)
@@ -16,6 +16,38 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJskbDaggerIII of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbDaggerIII", 
+			pName: "Expertise with Daggers",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
 
 (instance SOBJskbDaggerIV of Code
 	(properties
@@ -7983,40 +8015,9 @@
 	)
 )
 
-(instance SOBJspbAcidSphere of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbAcidSphere", 
-			pName: "Spellbook of Acid Sphere",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
 (instance StockObjInitter3 of Code
 	(method (doit)
+		(StockObjList add: SOBJskbDaggerIII)
 		(StockObjList add: SOBJskbDaggerIV)
 		(StockObjList add: SOBJskbDaggerV)
 		(StockObjList add: SOBJskbAxe)
@@ -8266,6 +8267,5 @@
 		(StockObjList add: SOBJspbEnidsBlessing)
 		(StockObjList add: SOBJspbBanishment)
 		(StockObjList add: SOBJspbSummonFaeryQueen)
-		(StockObjList add: SOBJspbAcidSphere)
 	)
 )

@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
+;; Author: SPARCStation (Sat Feb 29 05:04:29 2020)
 ;;
 
 (module# STOCKOBJ4)
@@ -16,6 +16,38 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJspbAcidSphere of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "spbAcidSphere", 
+			pName: "Spellbook of Acid Sphere",
+			loop: 0,
+			pBaseView: 51050,
+			pAction: 29,
+			pClutStart: 58,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
 
 (instance SOBJspbVenomousTouch of Code
 	(properties
@@ -8572,47 +8604,9 @@
 	)
 )
 
-(instance SOBJPurpleEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "PurpleEasterEgg", 
-			pName: "Purple Ratling Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 94,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter4 of Code
 	(method (doit)
+		(StockObjList add: SOBJspbAcidSphere)
 		(StockObjList add: SOBJspbVenomousTouch)
 		(StockObjList add: SOBJspbClumsiness)
 		(StockObjList add: SOBJspbPoisonBolt)
@@ -8862,6 +8856,5 @@
 		(StockObjList add: SOBJOrangeEasterEgg)
 		(StockObjList add: SOBJAmberEasterEgg)
 		(StockObjList add: SOBJRoyalEasterEgg)
-		(StockObjList add: SOBJPurpleEasterEgg)
 	)
 )
