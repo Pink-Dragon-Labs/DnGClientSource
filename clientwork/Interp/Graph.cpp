@@ -53,7 +53,7 @@ void ValidateViews ( char *file, int line ) ;
 //
 enum {
 	_BH_HUMAN = 1,
-	_BH_DWARF,
+	_BH_ORC,
 	_BH_GIANT,
 	_BH_ELF,
 };
@@ -1427,6 +1427,12 @@ KBitmap(argList)
 							pHelmetView += 2;
 
 						break;
+
+					case _BH_ORC:
+						if (head.get_pSex() == _BH_MALE)
+							pHelmetView += 8;
+						else
+							pHelmetView += 6;
 
 					case _BH_GIANT:
 						if ( head.get_pSex() ==  _BH_MALE )
