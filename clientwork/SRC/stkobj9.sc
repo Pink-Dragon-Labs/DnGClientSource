@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 02:26:51 2020)
+;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
 ;;
 
 (module# STOCKOBJ9)
@@ -16,6 +16,249 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJRandomSewerNPCa of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "RandomSewerNPCa", 
+			pName: "<bad engrave>",
+			loop: 2,
+			pBaseView: 100,
+			pAction: 1,
+			pClutStart: 104,
+			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+
+	)
+)
+
+(instance SOBJmwOdinsEdge of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "mwOdinsEdge", 
+			pName: "Two Handed Sword",
+			pIDName: "Odins Anger",
+			loop: 0,
+			pBaseView: 15500,
+			pAction: 29,
+			pClutStart: 29,
+			pColor: 16,
+			pBaseBitsLo: 513,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 200,
+		)
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BWeapon)
+			pDamageType: 2,
+		)
+	)
+)
+
+(instance SOBJmwIronwoodCudgel of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "mwIronwoodCudgel", 
+			pName: "Club",
+			pIDName: "Ironwood Cudgel",
+			loop: 0,
+			pBaseView: 15550,
+			pAction: 29,
+			pClutStart: 29,
+			pColor: 104,
+			pBaseBitsLo: 513,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 130,
+		)
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BWeapon)
+			pDamageType: 2,
+		)
+	)
+)
+
+(instance SOBJmwHarbringer of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "mwHarbringer", 
+			pName: "Harbringer of Doom",
+			loop: 0,
+			pBaseView: 15750,
+			pAction: 29,
+			pClutStart: 29,
+			pColor: 93,
+			pBaseBitsLo: 513,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 230,
+		)
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BWeapon)
+			pDamageType: 1,
+		)
+	)
+)
+
+(instance SOBJmwGram of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "mwGram", 
+			pName: "Gram",
+			loop: 0,
+			pBaseView: 15050,
+			pAction: 29,
+			pClutStart: 29,
+			pColor: 16,
+			pBaseBitsLo: 513,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 200,
+		)
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BWeapon)
+			pDamageType: 2,
+		)
+	)
+)
+
+(instance SOBJmwWyrd of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "mwWyrd", 
+			pName: "Throwing Dagger",
+			pIDName: "Wyrd Dagger",
+			loop: 0,
+			pBaseView: 15600,
+			pAction: 29,
+			pClutStart: 29,
+			pColor: 16,
+			pBaseBitsLo: 513,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BWeapon)
+			pDamageType: 0,
+		)
+	)
+)
+
+(instance SOBJmwEnidsNeedle of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "mwEnidsNeedle", 
+			pName: "Throwing Dagger",
+			pIDName: "Enid's Needle",
+			loop: 0,
+			pBaseView: 15650,
+			pAction: 29,
+			pClutStart: 29,
+			pColor: 16,
+			pBaseBitsLo: 513,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BWeapon)
+			pDamageType: 0,
+		)
+	)
+)
 
 (instance SOBJmwFafnirFang of Code
 	(properties
@@ -1824,6 +2067,13 @@
 
 (instance StockObjInitter9 of Code
 	(method (doit)
+		(StockObjList add: SOBJRandomSewerNPCa)
+		(StockObjList add: SOBJmwOdinsEdge)
+		(StockObjList add: SOBJmwIronwoodCudgel)
+		(StockObjList add: SOBJmwHarbringer)
+		(StockObjList add: SOBJmwGram)
+		(StockObjList add: SOBJmwWyrd)
+		(StockObjList add: SOBJmwEnidsNeedle)
 		(StockObjList add: SOBJmwFafnirFang)
 		(StockObjList add: SOBJBeanie)
 		(StockObjList add: SOBJBikini)

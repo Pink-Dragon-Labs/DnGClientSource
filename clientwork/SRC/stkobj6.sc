@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 02:26:51 2020)
+;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
 ;;
 
 (module# STOCKOBJ6)
@@ -16,6 +16,216 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJqGrainBread of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qGrainBread", 
+			pName: "Grain Bread of Murias",
+			loop: 0,
+			pBaseView: 52050,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJqAmuletRomen of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qAmuletRomen", 
+			pName: "Amulet of Romen",
+			loop: 0,
+			pBaseView: 51500,
+			pAction: 29,
+			pClutStart: 122,
+			pColor: 84,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJqNewPattern of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qNewPattern", 
+			pName: "New Pattern",
+			loop: 0,
+			pBaseView: 58800,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJqWoolSkein of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qWoolSkein", 
+			pName: "Wool Skeins",
+			loop: 0,
+			pBaseView: 58900,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJqDariaBelt of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qDariaBelt", 
+			pName: "Daria's Belt",
+			loop: 0,
+			pBaseView: 10200,
+			pAction: 29,
+			pClutStart: 78,
+			pColor: 94,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJqAmuletBaroq of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qAmuletBaroq", 
+			pName: "Amulet of Baroq",
+			loop: 0,
+			pBaseView: 51500,
+			pAction: 29,
+			pClutStart: 122,
+			pColor: 49,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJqCarvedStork of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "qCarvedStork", 
+			pName: "Carved Stork",
+			loop: 0,
+			pBaseView: 59300,
+			pAction: 29,
+			pClutStart: 0,
+			pColor: 0,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 4,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJqSharpeningStone of Code
 	(properties
@@ -7524,281 +7734,15 @@
 	)
 )
 
-(instance SOBJGMTanAquaEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMTanAquaEasterEgg", 
-			pName: "Tan Aqua GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 76,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJGMAquaEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMAquaEasterEgg", 
-			pName: "Aqua GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 78,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJGMTealEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMTealEasterEgg", 
-			pName: "Teal GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 79,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJGMLightTealEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMLightTealEasterEgg", 
-			pName: "Light Teal GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 80,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJGMTealGreenEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMTealGreenEasterEgg", 
-			pName: "Teal Green GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 82,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJGMGreenEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMGreenEasterEgg", 
-			pName: "Green GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 83,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJGMJadeEasterEgg of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "GMJadeEasterEgg", 
-			pName: "Jade GM Egg",
-			loop: 0,
-			pBaseView: 62650,
-			pAction: 29,
-			pClutStart: 89,
-			pColor: 84,
-			pBaseBitsLo: 8195,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BConsume)
-			pState: _STATE_SOLID, 
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 10,
-			pWeight: 1,
-		)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 200,
-			pBulkCap: 10,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter6 of Code
 	(method (doit)
+		(StockObjList add: SOBJqGrainBread)
+		(StockObjList add: SOBJqAmuletRomen)
+		(StockObjList add: SOBJqNewPattern)
+		(StockObjList add: SOBJqWoolSkein)
+		(StockObjList add: SOBJqDariaBelt)
+		(StockObjList add: SOBJqAmuletBaroq)
+		(StockObjList add: SOBJqCarvedStork)
 		(StockObjList add: SOBJqSharpeningStone)
 		(StockObjList add: SOBJqRatlingToenail)
 		(StockObjList add: SOBJqFossilizedToad)
@@ -8042,12 +7986,5 @@
 		(StockObjList add: SOBJGMBrownEasterEgg)
 		(StockObjList add: SOBJGMTanEasterEgg)
 		(StockObjList add: SOBJGMLightTanEasterEgg)
-		(StockObjList add: SOBJGMTanAquaEasterEgg)
-		(StockObjList add: SOBJGMAquaEasterEgg)
-		(StockObjList add: SOBJGMTealEasterEgg)
-		(StockObjList add: SOBJGMLightTealEasterEgg)
-		(StockObjList add: SOBJGMTealGreenEasterEgg)
-		(StockObjList add: SOBJGMGreenEasterEgg)
-		(StockObjList add: SOBJGMJadeEasterEgg)
 	)
 )

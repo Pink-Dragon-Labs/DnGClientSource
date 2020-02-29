@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 02:26:51 2020)
+;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
 ;;
 
 (module# STOCKOBJ2)
@@ -16,6 +16,258 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJLargeShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "LargeShield", 
+			pName: "Large Shield",
+			loop: 0,
+			pBaseView: 16800,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 99,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 150,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJKnightsShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "KnightsShield", 
+			pName: "Knight's Shield",
+			loop: 0,
+			pBaseView: 16800,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 63,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 220,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJWoodRoundShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "WoodRoundShield", 
+			pName: "Wooden Round Shield",
+			loop: 0,
+			pBaseView: 16500,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 105,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 70,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJIronRoundShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "IronRoundShield", 
+			pName: "Iron Round Shield",
+			loop: 0,
+			pBaseView: 16500,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 104,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 110,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJSteelRoundShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "SteelRoundShield", 
+			pName: "Steel Round Shield",
+			loop: 0,
+			pBaseView: 16500,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 99,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 85,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJTemperedSteelRoundShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "TemperedSteelRoundShield", 
+			pName: "Tempered Steel Round Shield",
+			loop: 0,
+			pBaseView: 16500,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 100,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 100,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJMythrilRoundShield of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "MythrilRoundShield", 
+			pName: "Mythril Round Shield",
+			loop: 0,
+			pBaseView: 16500,
+			pAction: 29,
+			pClutStart: 48,
+			pColor: 83,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 75,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 5,
+			pAreaWorn: 17,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJObsidianiteRoundShield of Code
 	(properties
@@ -8559,232 +8811,15 @@
 	)
 )
 
-(instance SOBJskbDaggerIV of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbDaggerIV", 
-			pName: "Dagger Mastery",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbDaggerV of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbDaggerV", 
-			pName: "Dagger Grand-Mastery",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbAxe of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbAxe", 
-			pName: "Book",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbAxeI of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbAxeI", 
-			pName: "Familiarity with Axes",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbAxeII of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbAxeII", 
-			pName: "Axe Proficiency",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbAxeIII of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbAxeIII", 
-			pName: "Expertise with Axes",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJskbAxeIV of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "skbAxeIV", 
-			pName: "Axe Mastery",
-			loop: 0,
-			pBaseView: 51150,
-			pAction: 29,
-			pClutStart: 83,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
 (instance StockObjInitter2 of Code
 	(method (doit)
+		(StockObjList add: SOBJLargeShield)
+		(StockObjList add: SOBJKnightsShield)
+		(StockObjList add: SOBJWoodRoundShield)
+		(StockObjList add: SOBJIronRoundShield)
+		(StockObjList add: SOBJSteelRoundShield)
+		(StockObjList add: SOBJTemperedSteelRoundShield)
+		(StockObjList add: SOBJMythrilRoundShield)
 		(StockObjList add: SOBJObsidianiteRoundShield)
 		(StockObjList add: SOBJAdmantiumRoundShield)
 		(StockObjList add: SOBJWoodLargeShield)
@@ -9028,12 +9063,5 @@
 		(StockObjList add: SOBJskbDaggerI)
 		(StockObjList add: SOBJskbDaggerII)
 		(StockObjList add: SOBJskbDaggerIII)
-		(StockObjList add: SOBJskbDaggerIV)
-		(StockObjList add: SOBJskbDaggerV)
-		(StockObjList add: SOBJskbAxe)
-		(StockObjList add: SOBJskbAxeI)
-		(StockObjList add: SOBJskbAxeII)
-		(StockObjList add: SOBJskbAxeIII)
-		(StockObjList add: SOBJskbAxeIV)
 	)
 )

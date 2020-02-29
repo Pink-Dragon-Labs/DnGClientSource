@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 02:26:51 2020)
+;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
 ;;
 
 (module# STOCKOBJ1)
@@ -16,6 +16,258 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJNewbieBoots of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "NewbieBoots", 
+			pName: "Starting Boots",
+			loop: 0,
+			pBaseView: 10700,
+			pAction: 29,
+			pClutStart: 58,
+			pColor: 99,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 6,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 20,
+			pAreaWorn: 7,
+			pMask: -2,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJNewbieLeatherBoots of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "NewbieLeatherBoots", 
+			pName: "Newbie Leather Boots",
+			loop: 0,
+			pBaseView: 10600,
+			pAction: 29,
+			pClutStart: 58,
+			pColor: 99,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 13,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 20,
+			pAreaWorn: 7,
+			pMask: -3,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJNewbieSollerets of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "NewbieSollerets", 
+			pName: "Newbie Sollerets",
+			loop: 0,
+			pBaseView: 10600,
+			pAction: 29,
+			pClutStart: 58,
+			pColor: 99,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 50,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 20,
+			pAreaWorn: 7,
+			pMask: -3,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJCowl of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Cowl", 
+			pName: "Cowl",
+			loop: 0,
+			pBaseView: 10000,
+			pAction: 29,
+			pClutStart: 93,
+			pColor: 93,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 2,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 70,
+			pAreaWorn: 3,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJExoticCowl of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "ExoticCowl", 
+			pName: "Cowl",
+			loop: 0,
+			pBaseView: 10000,
+			pAction: 29,
+			pClutStart: 93,
+			pColor: 93,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 2,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 70,
+			pAreaWorn: 3,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJLeatherCowl of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "LeatherCowl", 
+			pName: "Leather Cowl",
+			loop: 0,
+			pBaseView: 10000,
+			pAction: 29,
+			pClutStart: 93,
+			pColor: 73,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 70,
+			pAreaWorn: 3,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJTrollCowl of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "TrollCowl", 
+			pName: "Troll Leather Cowl",
+			loop: 0,
+			pBaseView: 10000,
+			pAction: 29,
+			pClutStart: 93,
+			pColor: 73,
+			pBaseBitsLo: 9,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 16,
+		)
+
+		((aWhatObj addBase: BWearable)
+			pLayer: 70,
+			pAreaWorn: 3,
+			pMask: -1,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJChainCowl of Code
 	(properties
@@ -8549,260 +8801,15 @@
 	)
 )
 
-(instance SOBJLargeShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "LargeShield", 
-			pName: "Large Shield",
-			loop: 0,
-			pBaseView: 16800,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 99,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 150,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJKnightsShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "KnightsShield", 
-			pName: "Knight's Shield",
-			loop: 0,
-			pBaseView: 16800,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 63,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 220,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJWoodRoundShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "WoodRoundShield", 
-			pName: "Wooden Round Shield",
-			loop: 0,
-			pBaseView: 16500,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 105,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 70,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJIronRoundShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "IronRoundShield", 
-			pName: "Iron Round Shield",
-			loop: 0,
-			pBaseView: 16500,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 104,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 110,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJSteelRoundShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "SteelRoundShield", 
-			pName: "Steel Round Shield",
-			loop: 0,
-			pBaseView: 16500,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 99,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 85,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJTemperedSteelRoundShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "TemperedSteelRoundShield", 
-			pName: "Tempered Steel Round Shield",
-			loop: 0,
-			pBaseView: 16500,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 100,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 100,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJMythrilRoundShield of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "MythrilRoundShield", 
-			pName: "Mythril Round Shield",
-			loop: 0,
-			pBaseView: 16500,
-			pAction: 29,
-			pClutStart: 48,
-			pColor: 83,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 75,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 5,
-			pAreaWorn: 17,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter1 of Code
 	(method (doit)
+		(StockObjList add: SOBJNewbieBoots)
+		(StockObjList add: SOBJNewbieLeatherBoots)
+		(StockObjList add: SOBJNewbieSollerets)
+		(StockObjList add: SOBJCowl)
+		(StockObjList add: SOBJExoticCowl)
+		(StockObjList add: SOBJLeatherCowl)
+		(StockObjList add: SOBJTrollCowl)
 		(StockObjList add: SOBJChainCowl)
 		(StockObjList add: SOBJIronCowl)
 		(StockObjList add: SOBJSteelCowl)
@@ -9046,12 +9053,5 @@
 		(StockObjList add: SOBJShield)
 		(StockObjList add: SOBJWoodShield)
 		(StockObjList add: SOBJRoundShield)
-		(StockObjList add: SOBJLargeShield)
-		(StockObjList add: SOBJKnightsShield)
-		(StockObjList add: SOBJWoodRoundShield)
-		(StockObjList add: SOBJIronRoundShield)
-		(StockObjList add: SOBJSteelRoundShield)
-		(StockObjList add: SOBJTemperedSteelRoundShield)
-		(StockObjList add: SOBJMythrilRoundShield)
 	)
 )

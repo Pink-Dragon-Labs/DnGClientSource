@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 02:26:51 2020)
+;; Author: SPARCStation (Sat Feb 29 04:01:15 2020)
 ;;
 
 (module# STOCKOBJ3)
@@ -16,6 +16,230 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJskbDaggerIV of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbDaggerIV", 
+			pName: "Dagger Mastery",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbDaggerV of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbDaggerV", 
+			pName: "Dagger Grand-Mastery",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbAxe of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbAxe", 
+			pName: "Book",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbAxeI of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbAxeI", 
+			pName: "Familiarity with Axes",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbAxeII of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbAxeII", 
+			pName: "Axe Proficiency",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbAxeIII of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbAxeIII", 
+			pName: "Expertise with Axes",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
+
+(instance SOBJskbAxeIV of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "skbAxeIV", 
+			pName: "Axe Mastery",
+			loop: 0,
+			pBaseView: 51150,
+			pAction: 29,
+			pClutStart: 83,
+			pColor: -1,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 66,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 10,
+		)
+
+		(aWhatObj addBase: BScroll)
+	)
+)
 
 (instance SOBJskbAxeV of Code
 	(properties
@@ -7791,232 +8015,15 @@
 	)
 )
 
-(instance SOBJspbVenomousTouch of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbVenomousTouch", 
-			pName: "Spellbook of Venomous Touch",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbClumsiness of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbClumsiness", 
-			pName: "Spellbook of Curse of Clumsiness",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbPoisonBolt of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbPoisonBolt", 
-			pName: "Spellbook of Poison Bolt",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbEnfeeble of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbEnfeeble", 
-			pName: "Spellbook of Enfeeble",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbDrainLife of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbDrainLife", 
-			pName: "Spellbook of Drain Life",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbAcidCloud of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbAcidCloud", 
-			pName: "Spellbook of Acid Cloud",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
-(instance SOBJspbSummonZombie of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "spbSummonZombie", 
-			pName: "Spellbook of Summon Zombie",
-			loop: 0,
-			pBaseView: 51050,
-			pAction: 29,
-			pClutStart: 58,
-			pColor: -1,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 66,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		(aWhatObj addBase: BScroll)
-	)
-)
-
 (instance StockObjInitter3 of Code
 	(method (doit)
+		(StockObjList add: SOBJskbDaggerIV)
+		(StockObjList add: SOBJskbDaggerV)
+		(StockObjList add: SOBJskbAxe)
+		(StockObjList add: SOBJskbAxeI)
+		(StockObjList add: SOBJskbAxeII)
+		(StockObjList add: SOBJskbAxeIII)
+		(StockObjList add: SOBJskbAxeIV)
 		(StockObjList add: SOBJskbAxeV)
 		(StockObjList add: SOBJskbClub)
 		(StockObjList add: SOBJskbClubI)
@@ -8260,12 +8267,5 @@
 		(StockObjList add: SOBJspbBanishment)
 		(StockObjList add: SOBJspbSummonFaeryQueen)
 		(StockObjList add: SOBJspbAcidSphere)
-		(StockObjList add: SOBJspbVenomousTouch)
-		(StockObjList add: SOBJspbClumsiness)
-		(StockObjList add: SOBJspbPoisonBolt)
-		(StockObjList add: SOBJspbEnfeeble)
-		(StockObjList add: SOBJspbDrainLife)
-		(StockObjList add: SOBJspbAcidCloud)
-		(StockObjList add: SOBJspbSummonZombie)
 	)
 )
