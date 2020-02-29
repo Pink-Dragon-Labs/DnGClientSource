@@ -151,6 +151,7 @@
 (define SAcidBlade             	(ModuleID SPELLS 153))
 (define SSummonSnake           	(ModuleID SPELLS 154))
 (define SSummonHolyWarrior     	(ModuleID SPELLS 155))
+(define SRage                  	(ModuleID SPELLS 156))
 
 
 (define _SEDeathCloud	0)

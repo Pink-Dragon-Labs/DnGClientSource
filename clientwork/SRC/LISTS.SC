@@ -402,6 +402,7 @@
 				SAcidBlade
 				SSummonSnake
 				SSummonHolyWarrior
+				SRage
 		)
 
 		(self eachElementDo: #init)

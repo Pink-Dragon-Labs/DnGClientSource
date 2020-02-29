@@ -183,6 +183,7 @@
 	SAcidBlade					153
 	SSummonSnake				154
 	SSummonHolyWarrior			155
+	SRage 						156
 )
 
 (local
@@ -3010,6 +3011,20 @@
 		int	loop	7
 		int pCost	25
 		int pIcon	68
+	)
+)
+(instance SRage of Spell
+	(properties
+		int	pCircle	_SKILL_MYSTICISM
+		int	pSkill	_SKILL_FAMILIAR
+		int	pID		_SPELL_RAGE
+		int	pType	(| fSpellAnywhere fSpellCaster)
+
+		id	pText	"Rage"
+		int	view	vMysticismSpell
+		int	loop	1
+		int pCost	0
+		int pIcon	42
 	)
 )
 ;----------------------------------------------------
