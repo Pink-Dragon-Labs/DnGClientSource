@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 15:27:47 2020)
+;; Author: SPARCStation (Sat Feb 29 01:55:09 2020)
 ;;
 
 (module# STOCKOBJ8)
@@ -16,6 +16,176 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJhdDarkPurpleGlow of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdDarkPurpleGlow", 
+			pName: "Bottle of Dark Purple Glow Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 92,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 96,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
+
+(instance SOBJhdLightPurpleC of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdLightPurpleC", 
+			pName: "Bottle of Alternate Light Purple Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 95,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 97,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
+
+(instance SOBJhdDarkPuple of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdDarkPuple", 
+			pName: "Bottle of Dark Puple Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 96,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 98,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
+
+(instance SOBJhdDarkBlackGlow of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdDarkBlackGlow", 
+			pName: "Bottle of Dark Black Glow Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 97,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 99,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
+
+(instance SOBJhdBrighterWhite of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "hdBrighterWhite", 
+			pName: "Bottle of Brighter White Dye",
+			loop: 0,
+			pBaseView: 51550,
+			pAction: 29,
+			pClutStart: 68,
+			pColor: 101,
+			pBaseBitsLo: 1,
+			pBaseBitsHi: 192,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BDescribed)
+
+		((aWhatObj addBase: BDye)
+			pHairDye: 100,
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 0,
+			pWeight: 5,
+		)
+	)
+)
 
 (instance SOBJhdSaddleBrown of Code
 	(properties
@@ -8414,187 +8584,13 @@
 	)
 )
 
-(instance SOBJmwFafnirFang of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "mwFafnirFang", 
-			pName: "Dagger",
-			pIDName: "Fafnir Fang",
-			loop: 0,
-			pBaseView: 15450,
-			pAction: 29,
-			pClutStart: 29,
-			pColor: 16,
-			pBaseBitsLo: 513,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 300,
-		)
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BWeapon)
-			pDamageType: 0,
-		)
-	)
-)
-
-(instance SOBJBeanie of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "Beanie", 
-			pName: "Clothing",
-			pIDName: "Beanie",
-			loop: 0,
-			pBaseView: 31450,
-			pAction: 29,
-			pClutStart: 63,
-			pColor: -1,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 10,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 0,
-			pAreaWorn: 0,
-			pMask: -1,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJBikini of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "Bikini", 
-			pName: "Bikini",
-			loop: 0,
-			pBaseView: 10650,
-			pAction: 29,
-			pClutStart: 73,
-			pColor: 100,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 0,
-			pAreaWorn: 6,
-			pMask: -2,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJSwimsuit of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "Swimsuit", 
-			pName: "Swimsuit",
-			loop: 0,
-			pBaseView: 10550,
-			pAction: 29,
-			pClutStart: 73,
-			pColor: 100,
-			pBaseBitsLo: 9,
-			pBaseBitsHi: 64,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-
-		((aWhatObj addBase: BWearable)
-			pLayer: 0,
-			pAreaWorn: 6,
-			pMask: -3,
-		)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
-(instance SOBJLizard of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "Lizard", 
-			pName: "Lizard",
-			loop: 2,
-			pBaseView: 42500,
-			pAction: 1,
-			pClutStart: 104,
-			pColor: 104,
-			pBaseBitsLo: 4162,
-			pBaseBitsHi: 64,
-			pSoundGroup: 10,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BCharacter)
-
-		((aWhatObj addBase: BContainer)
-			pWeightCap: 1400,
-			pBulkCap: 2000,
-		)
-
-		(aWhatObj addBase: BNPC)
-
-		(aWhatObj addBase: BDescribed)
-	)
-)
-
 (instance StockObjInitter8 of Code
 	(method (doit)
+		(StockObjList add: SOBJhdDarkPurpleGlow)
+		(StockObjList add: SOBJhdLightPurpleC)
+		(StockObjList add: SOBJhdDarkPuple)
+		(StockObjList add: SOBJhdDarkBlackGlow)
+		(StockObjList add: SOBJhdBrighterWhite)
 		(StockObjList add: SOBJhdSaddleBrown)
 		(StockObjList add: SOBJhdDarkBrownGlow)
 		(StockObjList add: SOBJhdDarkFlesh)
@@ -8840,10 +8836,5 @@
 		(StockObjList add: SOBJmwGram)
 		(StockObjList add: SOBJmwWyrd)
 		(StockObjList add: SOBJmwEnidsNeedle)
-		(StockObjList add: SOBJmwFafnirFang)
-		(StockObjList add: SOBJBeanie)
-		(StockObjList add: SOBJBikini)
-		(StockObjList add: SOBJSwimsuit)
-		(StockObjList add: SOBJLizard)
 	)
 )

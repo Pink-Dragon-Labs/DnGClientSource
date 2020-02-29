@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Wed Feb 26 15:27:47 2020)
+;; Author: SPARCStation (Sat Feb 29 01:55:09 2020)
 ;;
 
 (module# STOCKOBJ7)
@@ -16,6 +16,201 @@
 (define StockObjList (ModuleID STOCKOBJ0 0))
 
 (include "wobject.sh")
+
+(instance SOBJGMOrangeEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GMOrangeEasterEgg", 
+			pName: "Orange GM Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 88,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGMAmberEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GMAmberEasterEgg", 
+			pName: "Amber GM Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 89,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGMRoyalEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GMRoyalEasterEgg", 
+			pName: "Royal GM Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 93,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGMPurpleEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GMPurpleEasterEgg", 
+			pName: "Purple GM Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 94,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGMLightPurpleEasterEgg of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GMLightPurpleEasterEgg", 
+			pName: "Light Purple GM Egg",
+			loop: 0,
+			pBaseView: 62650,
+			pAction: 29,
+			pClutStart: 89,
+			pColor: 95,
+			pBaseBitsLo: 8195,
+			pBaseBitsHi: 64,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		((aWhatObj addBase: BConsume)
+			pState: _STATE_SOLID, 
+		)
+
+		((aWhatObj addBase: BCarryable)
+			pBulk: 10,
+			pWeight: 1,
+		)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 200,
+			pBulkCap: 10,
+		)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
 
 (instance SOBJGMPurpleBlackEasterEgg of Code
 	(properties
@@ -7790,178 +7985,13 @@
 	)
 )
 
-(instance SOBJhdDarkPurpleGlow of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hdDarkPurpleGlow", 
-			pName: "Bottle of Dark Purple Glow Dye",
-			loop: 0,
-			pBaseView: 51550,
-			pAction: 29,
-			pClutStart: 68,
-			pColor: 92,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 192,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 96,
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-	)
-)
-
-(instance SOBJhdLightPurpleC of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hdLightPurpleC", 
-			pName: "Bottle of Alternate Light Purple Dye",
-			loop: 0,
-			pBaseView: 51550,
-			pAction: 29,
-			pClutStart: 68,
-			pColor: 95,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 192,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 97,
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-	)
-)
-
-(instance SOBJhdDarkPuple of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hdDarkPuple", 
-			pName: "Bottle of Dark Puple Dye",
-			loop: 0,
-			pBaseView: 51550,
-			pAction: 29,
-			pClutStart: 68,
-			pColor: 96,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 192,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 98,
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-	)
-)
-
-(instance SOBJhdDarkBlackGlow of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hdDarkBlackGlow", 
-			pName: "Bottle of Dark Black Glow Dye",
-			loop: 0,
-			pBaseView: 51550,
-			pAction: 29,
-			pClutStart: 68,
-			pColor: 97,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 192,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 99,
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-	)
-)
-
-(instance SOBJhdBrighterWhite of Code
-	(properties
-		name ""
-	)
-
-	(method (doit aWhatObj)
-		(aWhatObj
-			name: "hdBrighterWhite", 
-			pName: "Bottle of Brighter White Dye",
-			loop: 0,
-			pBaseView: 51550,
-			pAction: 29,
-			pClutStart: 68,
-			pColor: 101,
-			pBaseBitsLo: 1,
-			pBaseBitsHi: 192,
-		)
-
-		(aWhatObj setAction: (aWhatObj pAction?))
-		(if gWObjectLite (return))
-
-		(aWhatObj addBase: BDescribed)
-
-		((aWhatObj addBase: BDye)
-			pHairDye: 100,
-		)
-
-		((aWhatObj addBase: BCarryable)
-			pBulk: 0,
-			pWeight: 5,
-		)
-	)
-)
-
 (instance StockObjInitter7 of Code
 	(method (doit)
+		(StockObjList add: SOBJGMOrangeEasterEgg)
+		(StockObjList add: SOBJGMAmberEasterEgg)
+		(StockObjList add: SOBJGMRoyalEasterEgg)
+		(StockObjList add: SOBJGMPurpleEasterEgg)
+		(StockObjList add: SOBJGMLightPurpleEasterEgg)
 		(StockObjList add: SOBJGMPurpleBlackEasterEgg)
 		(StockObjList add: SOBJGMBlackEasterEgg)
 		(StockObjList add: SOBJGMGrayEasterEgg)
@@ -8207,10 +8237,5 @@
 		(StockObjList add: SOBJhdDarkBurntOrange)
 		(StockObjList add: SOBJhdDarkOrangeGlow)
 		(StockObjList add: SOBJhdDarkPurpleOrange)
-		(StockObjList add: SOBJhdDarkPurpleGlow)
-		(StockObjList add: SOBJhdLightPurpleC)
-		(StockObjList add: SOBJhdDarkPuple)
-		(StockObjList add: SOBJhdDarkBlackGlow)
-		(StockObjList add: SOBJhdBrighterWhite)
 	)
 )
