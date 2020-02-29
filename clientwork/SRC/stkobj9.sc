@@ -7,7 +7,7 @@
 ;; modify this file for ANY reason.  The system will most probably cease
 ;; to function if you did.
 ;;
-;; Author: SPARCStation (Sat Feb 29 01:55:09 2020)
+;; Author: SPARCStation (Sat Feb 29 02:26:51 2020)
 ;;
 
 (module# STOCKOBJ9)
@@ -210,6 +210,216 @@
 			pAction: 1,
 			pClutStart: 104,
 			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGreyBunny of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GreyBunny", 
+			pName: "Bunny",
+			loop: 2,
+			pBaseView: 42550,
+			pAction: 1,
+			pClutStart: -1,
+			pColor: 120,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJBrownBunny of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "BrownBunny", 
+			pName: "Bunny",
+			loop: 2,
+			pBaseView: 42550,
+			pAction: 1,
+			pClutStart: -1,
+			pColor: 121,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJPinkBunny of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "PinkBunny", 
+			pName: "Bunny",
+			loop: 2,
+			pBaseView: 42550,
+			pAction: 1,
+			pClutStart: -1,
+			pColor: 122,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJBlueBunny of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "BlueBunny", 
+			pName: "Bunny",
+			loop: 2,
+			pBaseView: 42550,
+			pAction: 1,
+			pClutStart: -1,
+			pColor: 123,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJSquirrel of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "Squirrel", 
+			pName: "Squirrel",
+			loop: 2,
+			pBaseView: 30050,
+			pAction: 1,
+			pClutStart: 104,
+			pColor: 104,
+			pBaseBitsLo: 4162,
+			pBaseBitsHi: 64,
+			pSoundGroup: 10,
+		)
+
+		(aWhatObj setAction: (aWhatObj pAction?))
+		(if gWObjectLite (return))
+
+		(aWhatObj addBase: BCharacter)
+
+		((aWhatObj addBase: BContainer)
+			pWeightCap: 1400,
+			pBulkCap: 2000,
+		)
+
+		(aWhatObj addBase: BNPC)
+
+		(aWhatObj addBase: BDescribed)
+	)
+)
+
+(instance SOBJGreySquirrel of Code
+	(properties
+		name ""
+	)
+
+	(method (doit aWhatObj)
+		(aWhatObj
+			name: "GreySquirrel", 
+			pName: "Grey Squirrel",
+			loop: 2,
+			pBaseView: 30050,
+			pAction: 1,
+			pClutStart: -1,
+			pColor: 0,
 			pBaseBitsLo: 4162,
 			pBaseBitsHi: 64,
 			pSoundGroup: 10,
@@ -1620,6 +1830,12 @@
 		(StockObjList add: SOBJSwimsuit)
 		(StockObjList add: SOBJLizard)
 		(StockObjList add: SOBJBunny)
+		(StockObjList add: SOBJGreyBunny)
+		(StockObjList add: SOBJBrownBunny)
+		(StockObjList add: SOBJPinkBunny)
+		(StockObjList add: SOBJBlueBunny)
+		(StockObjList add: SOBJSquirrel)
+		(StockObjList add: SOBJGreySquirrel)
 		(StockObjList add: SOBJhornedHelm)
 		(StockObjList add: SOBJSlime)
 		(StockObjList add: SOBJSlimeA)
